@@ -251,6 +251,7 @@
     "diseases": {
       "primary_hyperparathyroidism": { "lr_positive": 8.0, "lr_negative": 0.02 },
       "hypercalcemia_of_malignancy": { "lr_positive": 5.0, "lr_negative": 0.05 },
+      "multiple_myeloma": { "lr_positive": 3.5, "lr_negative": 0.60 },
       "sarcoidosis": { "lr_positive": 3.0, "lr_negative": 0.75 },
       "vitamin_d_toxicity": { "lr_positive": 3.5, "lr_negative": 0.80 }
     }
@@ -1287,7 +1288,27 @@
     "diseases": {
       "chronic_kidney_disease": { "lr_positive": 8.0, "lr_negative": 0.15 },
       "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "multiple_myeloma": { "lr_positive": 2.5, "lr_negative": 0.65 },
+      "tumor_lysis_syndrome": { "lr_positive": 3.0, "lr_negative": 0.40 },
       "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.60 }
+    }
+  },
+  "erythrocyte_sedimentation_rate_elevated": {
+    "description": "ESR above upper limit of normal (fallback finding for moderate elevation)",
+    "diseases": {
+      "multiple_myeloma": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.55 },
+      "preclinical_sle": { "lr_positive": 2.0, "lr_negative": 0.60 }
+    }
+  },
+  "hemoglobin_low": {
+    "description": "Hemoglobin below lower limit of normal (anemia)",
+    "diseases": {
+      "iron_deficiency_anemia": { "lr_positive": 3.0, "lr_negative": 0.30 },
+      "vitamin_b12_deficiency": { "lr_positive": 2.5, "lr_negative": 0.50 },
+      "hemolytic_anemia": { "lr_positive": 3.0, "lr_negative": 0.25 },
+      "multiple_myeloma": { "lr_positive": 2.0, "lr_negative": 0.60 },
+      "chronic_kidney_disease": { "lr_positive": 2.0, "lr_negative": 0.55 }
     }
   },
   "calcium_low": {
