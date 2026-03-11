@@ -609,7 +609,7 @@
       "multiple_myeloma": { "lr_positive": 15.0, "lr_negative": 0.25 },
       "waldenstrom_macroglobulinemia": { "lr_positive": 8.0, "lr_negative": 0.40 },
       "chronic_infection": { "lr_positive": 2.5, "lr_negative": 0.65 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
     }
   },
   "m_spike_on_spep": {
@@ -1403,7 +1403,8 @@
     "diseases": {
       "multiple_myeloma": { "lr_positive": 3.0, "lr_negative": 0.50 },
       "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.55 },
-      "preclinical_sle": { "lr_positive": 2.0, "lr_negative": 0.60 }
+      "preclinical_sle": { "lr_positive": 2.0, "lr_negative": 0.60 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "hemoglobin_low": {
