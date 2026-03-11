@@ -338,6 +338,13 @@
       "hepatocellular_injury": { "lr_positive": 3.0, "lr_negative": 0.45 }
     }
   },
+  "gamma_glutamyl_transferase_elevated": {
+    "description": "GGT above upper limit of normal",
+    "diseases": {
+      "cholestatic_liver_disease": { "lr_positive": 6.0, "lr_negative": 0.25 },
+      "hepatocellular_injury": { "lr_positive": 2.0, "lr_negative": 0.50 }
+    }
+  },
   "alkaline_phosphatase_elevated": {
     "description": "Alkaline phosphatase above upper limit of normal",
     "diseases": {
