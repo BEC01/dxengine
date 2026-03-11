@@ -1202,5 +1202,75 @@
       "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
       "heart_failure": { "lr_positive": 2.5, "lr_negative": 0.60 }
     }
+  },
+  "creatine_kinase_elevated": {
+    "description": "Creatine kinase above upper limit of normal (fallback finding)",
+    "diseases": {
+      "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.05 },
+      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "hypothyroidism": { "lr_positive": 2.0, "lr_negative": 0.70 }
+    }
+  },
+  "aspartate_aminotransferase_elevated": {
+    "description": "AST above upper limit of normal (fallback finding)",
+    "diseases": {
+      "hepatocellular_injury": { "lr_positive": 6.0, "lr_negative": 0.20 },
+      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
+      "cholestatic_liver_disease": { "lr_positive": 2.0, "lr_negative": 0.60 },
+      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 }
+    }
+  },
+  "alanine_aminotransferase_elevated": {
+    "description": "ALT above upper limit of normal (fallback finding)",
+    "diseases": {
+      "hepatocellular_injury": { "lr_positive": 7.0, "lr_negative": 0.15 },
+      "cholestatic_liver_disease": { "lr_positive": 2.5, "lr_negative": 0.50 },
+      "rhabdomyolysis": { "lr_positive": 2.0, "lr_negative": 0.60 }
+    }
+  },
+  "potassium_elevated": {
+    "description": "Serum potassium above upper limit of normal (hyperkalemia)",
+    "diseases": {
+      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.40 },
+      "addison_disease": { "lr_positive": 5.0, "lr_negative": 0.35 },
+      "rhabdomyolysis": { "lr_positive": 3.5, "lr_negative": 0.50 },
+      "tumor_lysis_syndrome": { "lr_positive": 5.0, "lr_negative": 0.30 },
+      "diabetic_ketoacidosis": { "lr_positive": 3.0, "lr_negative": 0.50 }
+    }
+  },
+  "phosphorus_elevated": {
+    "description": "Serum phosphorus above upper limit of normal (hyperphosphatemia)",
+    "diseases": {
+      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
+      "tumor_lysis_syndrome": { "lr_positive": 6.0, "lr_negative": 0.25 },
+      "hypoparathyroidism": { "lr_positive": 5.0, "lr_negative": 0.30 }
+    }
+  },
+  "creatinine_elevated": {
+    "description": "Serum creatinine above upper limit of normal (elevated GFR marker)",
+    "diseases": {
+      "chronic_kidney_disease": { "lr_positive": 8.0, "lr_negative": 0.15 },
+      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.60 }
+    }
+  },
+  "calcium_low": {
+    "description": "Serum calcium below lower limit of normal (hypocalcemia)",
+    "diseases": {
+      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
+      "chronic_kidney_disease": { "lr_positive": 3.5, "lr_negative": 0.45 },
+      "hypoparathyroidism": { "lr_positive": 8.0, "lr_negative": 0.10 },
+      "vitamin_d_deficiency": { "lr_positive": 3.0, "lr_negative": 0.50 }
+    }
+  },
+  "uric_acid_elevated": {
+    "description": "Serum uric acid above upper limit of normal (hyperuricemia)",
+    "diseases": {
+      "tumor_lysis_syndrome": { "lr_positive": 8.0, "lr_negative": 0.15 },
+      "chronic_kidney_disease": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "gout": { "lr_positive": 4.0, "lr_negative": 0.30 }
+    }
   }
 }
