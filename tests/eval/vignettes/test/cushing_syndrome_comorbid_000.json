@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "id": "cushing_syndrome_comorbid_000",
+    "category": "endocrine",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "cushing_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "central obesity",
+    "symptoms": [
+      "central obesity",
+      "moon facies",
+      "buffalo hump",
+      "abdominal striae (purple, wide >1cm)",
+      "proximal muscle weakness"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 105.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 10.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 139.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 22.7,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 5.1,
+            "unit": "%"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.1,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cushing_syndrome",
+    "acceptable_alternatives": [
+      "diabetic_ketoacidosis"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "cushing_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

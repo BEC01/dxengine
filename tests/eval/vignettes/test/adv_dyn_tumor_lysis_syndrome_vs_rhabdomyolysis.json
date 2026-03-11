@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "id": "adv_dyn_tumor_lysis_syndrome_vs_rhabdomyolysis",
+    "category": "oncologic_emergency",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "tumor_lysis_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "nausea/vomiting",
+    "symptoms": [
+      "nausea/vomiting",
+      "diarrhea",
+      "muscle cramps/tetany (hypocalcemia)",
+      "cardiac arrhythmias (hyperkalemia)",
+      "seizures"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "phosphorus",
+            "value": 4.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 295.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 7.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 18.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "myoglobin",
+            "value": 50.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 173.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 25.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "tumor_lysis_syndrome",
+    "acceptable_alternatives": [
+      "rhabdomyolysis"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "tumor_lysis_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

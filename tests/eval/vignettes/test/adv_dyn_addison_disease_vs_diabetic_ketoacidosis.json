@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "id": "adv_dyn_addison_disease_vs_diabetic_ketoacidosis",
+    "category": "endocrine",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "addison_disease",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "weight loss",
+      "hyperpigmentation (palmar creases, buccal mucosa, scars)",
+      "hypotension/orthostatic hypotension",
+      "salt craving"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "sodium",
+            "value": 137.3,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 92.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 22.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 17.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 4.9,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 80.1,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "eosinophils_absolute",
+            "value": 0.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 4.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "addison_disease",
+    "acceptable_alternatives": [
+      "diabetic_ketoacidosis"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "addison_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}

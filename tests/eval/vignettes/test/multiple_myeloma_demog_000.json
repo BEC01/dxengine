@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "id": "multiple_myeloma_demog_000",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "multiple_myeloma",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "bone pain (especially back)",
+    "symptoms": [
+      "bone pain (especially back)",
+      "pathologic fractures",
+      "fatigue/anemia",
+      "recurrent infections",
+      "renal insufficiency"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "total_protein",
+            "value": 9.2,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 35.0,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 90.0,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.6,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "multiple_myeloma",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "multiple_myeloma"
+    ],
+    "cant_miss_diseases": []
+  }
+}

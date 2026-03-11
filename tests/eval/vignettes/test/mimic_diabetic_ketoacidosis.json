@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_diabetic_ketoacidosis",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "polyuria",
+    "symptoms": [
+      "polyuria",
+      "polydipsia"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 138.5,
+            "unit": "mEq/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

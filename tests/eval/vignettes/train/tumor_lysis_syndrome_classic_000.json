@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "tumor_lysis_syndrome_classic_000",
-    "category": "oncologic",
+    "category": "oncologic_emergency",
     "difficulty": "classic",
     "split": "train",
     "source": "synthetic",

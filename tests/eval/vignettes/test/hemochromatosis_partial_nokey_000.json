@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "hemochromatosis_partial_nokey_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hemochromatosis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias (especially 2nd/3rd MCP joints)",
+      "skin bronzing/hyperpigmentation",
+      "hepatomegaly",
+      "diabetes mellitus ('bronze diabetes')"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 455.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 200.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 265.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 45.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 32.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 96.2,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemochromatosis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemochromatosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "hemolytic_anemia_partial_screen_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hemolytic_anemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "pallor",
+      "fatigue",
+      "dark urine (intravascular hemolysis)",
+      "splenomegaly"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 95.0,
+            "unit": "fL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemolytic_anemia",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemolytic_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

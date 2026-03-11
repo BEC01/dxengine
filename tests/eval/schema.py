@@ -77,9 +77,13 @@ class SuiteResult(BaseModel):
     # Negative case metrics
     negative_pass_rate: float = 0.0
     false_positive_rate: float = 0.0
+    # Confidence
+    mean_gold_posterior: float = 0.0
     # Composite
     weighted_score: float = 0.0
     by_category: dict[str, dict] = Field(default_factory=dict)
     by_difficulty: dict[str, dict] = Field(default_factory=dict)
+    by_disease: dict[str, dict] = Field(default_factory=dict)
     failures: list[str] = []
     regressions: list[dict] = []
+    soft_regressions: list[dict] = []

@@ -30,32 +30,32 @@
         "values": [
           {
             "test_name": "haptoglobin",
-            "value": 18.3,
+            "value": 33.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 278.2,
+            "value": 267.8,
             "unit": "U/L"
           },
           {
             "test_name": "bilirubin_total",
-            "value": 1.1,
+            "value": 1.0,
             "unit": "mg/dL"
           },
           {
             "test_name": "reticulocyte_count",
-            "value": 2.5,
+            "value": 2.3,
             "unit": "%"
           },
           {
             "test_name": "hemoglobin",
-            "value": 13.9,
+            "value": 14.1,
             "unit": "g/dL"
           },
           {
             "test_name": "mean_corpuscular_volume",
-            "value": 93.2,
+            "value": 92.8,
             "unit": "fL"
           },
           {

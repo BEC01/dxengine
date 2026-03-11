@@ -14,15 +14,16 @@ from tests.eval.schema import SuiteResult
 from tests.eval.scorer import detect_regressions
 
 
-def compare(baseline_path: str, current_path: str) -> dict:
+def compare(baseline_path: str, current_path: str, expand_mode: bool = False) -> dict:
     """Compare baseline and current eval results.
 
     Returns delta, regressions, improvements, and verdict.
+    When expand_mode=True, compare only on vignettes common to both.
     """
     baseline = SuiteResult(**json.loads(Path(baseline_path).read_text(encoding="utf-8")))
     current = SuiteResult(**json.loads(Path(current_path).read_text(encoding="utf-8")))
 
-    regressions = detect_regressions(baseline, current)
+    hard_regressions, soft_regressions = detect_regressions(baseline, current)
 
     # Compute deltas for key metrics
     deltas = {
@@ -32,6 +33,7 @@ def compare(baseline_path: str, current_path: str) -> dict:
         "top_5_accuracy": current.top_5_accuracy - baseline.top_5_accuracy,
         "mrr": current.mrr - baseline.mrr,
         "mean_brier": current.mean_brier - baseline.mean_brier,  # lower is better
+        "mean_gold_posterior": current.mean_gold_posterior - baseline.mean_gold_posterior,
         "negative_pass_rate": current.negative_pass_rate - baseline.negative_pass_rate,
         "false_positive_rate": current.false_positive_rate - baseline.false_positive_rate,
     }
@@ -44,17 +46,30 @@ def compare(baseline_path: str, current_path: str) -> dict:
         if bc and not bc.is_negative_case and not bc.in_top_3 and c.in_top_3:
             improvements.append(c.vignette_id)
 
+    # New vignettes not in baseline (informational for expand-mode)
+    baseline_ids = {c.vignette_id for c in baseline.cases}
+    new_vignettes = [c.vignette_id for c in current.cases if c.vignette_id not in baseline_ids]
+
     # Verdict
-    score_improved = deltas["weighted_score"] > 0.001
-    no_regressions = len(regressions) == 0
+    no_hard_regressions = len(hard_regressions) == 0
     no_new_fps = deltas["false_positive_rate"] <= 0.01
 
-    if score_improved and no_regressions and no_new_fps:
+    if expand_mode:
+        # Expand mode: accept if score held steady (allow tiny float noise)
+        score_ok = deltas["weighted_score"] >= -0.001
+    else:
+        # Improve mode: require improvement
+        score_ok = deltas["weighted_score"] > 0.001
+
+    if score_ok and no_hard_regressions and no_new_fps:
         verdict = "ACCEPT"
-    elif not score_improved:
-        verdict = "REJECT (score not improved)"
-    elif not no_regressions:
-        verdict = f"REJECT ({len(regressions)} regressions)"
+    elif not score_ok:
+        if expand_mode:
+            verdict = "REJECT (score dropped)"
+        else:
+            verdict = "REJECT (score not improved)"
+    elif not no_hard_regressions:
+        verdict = f"REJECT ({len(hard_regressions)} regressions)"
     else:
         verdict = "REJECT (increased false positive rate)"
 
@@ -62,8 +77,10 @@ def compare(baseline_path: str, current_path: str) -> dict:
         "baseline_score": baseline.weighted_score,
         "current_score": current.weighted_score,
         "deltas": deltas,
-        "regressions": regressions,
+        "regressions": hard_regressions,
+        "soft_regressions": soft_regressions,
         "improvements": improvements,
+        "new_vignettes": new_vignettes,
         "verdict": verdict,
     }
 
@@ -73,9 +90,11 @@ def main():
     parser.add_argument("baseline", help="Path to baseline results JSON")
     parser.add_argument("current", help="Path to current results JSON")
     parser.add_argument("--output", default=None, help="Path to write comparison JSON")
+    parser.add_argument("--expand-mode", action="store_true",
+                        help="Compare only common vignettes; accept if score held steady")
     args = parser.parse_args()
 
-    result = compare(args.baseline, args.current)
+    result = compare(args.baseline, args.current, expand_mode=args.expand_mode)
 
     if args.output:
         Path(args.output).write_text(json.dumps(result, indent=2), encoding="utf-8")
@@ -85,8 +104,16 @@ def main():
     print(f"Baseline: {result['baseline_score']:.4f}  Current: {result['current_score']:.4f}  "
           f"Delta: {d['weighted_score']:+.4f}")
     print(f"Top-3: {d['top_3_accuracy']:+.1%}  Top-1: {d['top_1_accuracy']:+.1%}  "
-          f"Neg Pass: {d['negative_pass_rate']:+.1%}")
-    print(f"Regressions: {len(result['regressions'])}  Improvements: {len(result['improvements'])}")
+          f"Neg Pass: {d['negative_pass_rate']:+.1%}  "
+          f"Mean P(gold): {d['mean_gold_posterior']:+.4f}")
+    print(f"Regressions: {len(result['regressions'])}  "
+          f"Soft warnings: {len(result['soft_regressions'])}  "
+          f"Improvements: {len(result['improvements'])}")
+    if result["new_vignettes"]:
+        print(f"New vignettes: {len(result['new_vignettes'])}")
+    if result["soft_regressions"]:
+        for sr in result["soft_regressions"][:5]:
+            print(f"  WARN: {sr['type']} — {sr}")
     print(f"VERDICT: {result['verdict']}")
 
 

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_iron_deficiency_anemia",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "pallor"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 180.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 310.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 23.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "iron",
+            "value": 65.6,
+            "unit": "mcg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

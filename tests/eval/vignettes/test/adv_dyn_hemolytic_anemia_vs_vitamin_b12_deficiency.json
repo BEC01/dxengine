@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hemolytic_anemia_vs_vitamin_b12_deficiency",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hemolytic_anemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "pallor",
+      "fatigue",
+      "dark urine (intravascular hemolysis)",
+      "splenomegaly"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 271.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.1,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 96.1,
+            "unit": "fL"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 10.0,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "vitamin_b12",
+            "value": 550.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "methylmalonic_acid",
+            "value": 172.0,
+            "unit": "nmol/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemolytic_anemia",
+    "acceptable_alternatives": [
+      "vitamin_b12_deficiency"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemolytic_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

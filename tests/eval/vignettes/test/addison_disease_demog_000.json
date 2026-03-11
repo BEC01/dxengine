@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "addison_disease_demog_000",
+    "category": "endocrine",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "addison_disease",
+    "variant": 0
+  },
+  "patient": {
+    "age": 38,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "weight loss",
+      "hyperpigmentation (palmar creases, buccal mucosa, scars)",
+      "hypotension/orthostatic hypotension",
+      "salt craving"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "cortisol_am",
+            "value": 2.9,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 91.3,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 134.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 70.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 22.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 18.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "eosinophils_absolute",
+            "value": 0.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "addison_disease",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "addison_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -30,37 +30,37 @@
         "values": [
           {
             "test_name": "cortisol_am",
-            "value": 6.4,
+            "value": 7.4,
             "unit": "mcg/dL"
           },
           {
             "test_name": "adrenocorticotropic_hormone",
-            "value": 71.7,
+            "value": 66.1,
             "unit": "pg/mL"
           },
           {
             "test_name": "sodium",
-            "value": 136.8,
+            "value": 137.4,
             "unit": "mEq/L"
           },
           {
             "test_name": "potassium",
-            "value": 4.9,
+            "value": 4.8,
             "unit": "mEq/L"
           },
           {
             "test_name": "glucose",
-            "value": 75.2,
+            "value": 76.8,
             "unit": "mg/dL"
           },
           {
             "test_name": "bicarbonate",
-            "value": 23.8,
+            "value": 24.1,
             "unit": "mEq/L"
           },
           {
             "test_name": "blood_urea_nitrogen",
-            "value": 16.7,
+            "value": 16.2,
             "unit": "mg/dL"
           },
           {

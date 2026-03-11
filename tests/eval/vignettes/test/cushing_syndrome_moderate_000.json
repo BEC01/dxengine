@@ -30,12 +30,12 @@
         "values": [
           {
             "test_name": "cortisol_am",
-            "value": 19.2,
+            "value": 18.2,
             "unit": "mcg/dL"
           },
           {
             "test_name": "glucose",
-            "value": 94.8,
+            "value": 93.2,
             "unit": "mg/dL"
           },
           {
@@ -45,17 +45,17 @@
           },
           {
             "test_name": "bicarbonate",
-            "value": 27.2,
+            "value": 26.9,
             "unit": "mEq/L"
           },
           {
             "test_name": "white_blood_cells",
-            "value": 9.3,
+            "value": 9.1,
             "unit": "x10^9/L"
           },
           {
             "test_name": "lymphocytes_absolute",
-            "value": 2.0,
+            "value": 2.1,
             "unit": "x10^9/L"
           },
           {

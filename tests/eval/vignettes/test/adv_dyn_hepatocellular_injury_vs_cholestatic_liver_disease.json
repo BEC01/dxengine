@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hepatocellular_injury_vs_cholestatic_liver_disease",
+    "category": "hepatic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hepatocellular_injury",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "right upper quadrant pain",
+      "nausea/vomiting",
+      "fatigue",
+      "dark urine"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 145.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 59.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 39.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 266.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 100.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 34.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hepatocellular_injury",
+    "acceptable_alternatives": [
+      "cholestatic_liver_disease"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hepatocellular_injury"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -30,42 +30,42 @@
         "values": [
           {
             "test_name": "calcium",
-            "value": 10.3,
+            "value": 10.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "parathyroid_hormone",
-            "value": 64.4,
+            "value": 60.6,
             "unit": "pg/mL"
           },
           {
             "test_name": "phosphorus",
-            "value": 2.9,
+            "value": 3.0,
             "unit": "mg/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
-            "value": 120.6,
+            "value": 116.7,
             "unit": "U/L"
           },
           {
             "test_name": "chloride",
-            "value": 104.0,
+            "value": 103.7,
             "unit": "mEq/L"
           },
           {
             "test_name": "bicarbonate",
-            "value": 24.4,
+            "value": 24.5,
             "unit": "mEq/L"
           },
           {
             "test_name": "uric_acid",
-            "value": 4.8,
+            "value": 4.7,
             "unit": "mg/dL"
           },
           {
             "test_name": "vitamin_d_25_hydroxy",
-            "value": 47.9,
+            "value": 50.6,
             "unit": "ng/mL"
           }
         ]

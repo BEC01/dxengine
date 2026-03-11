@@ -30,7 +30,7 @@
         "values": [
           {
             "test_name": "haptoglobin",
-            "value": -33.8,
+            "value": 0.0,
             "unit": "mg/dL"
           },
           {

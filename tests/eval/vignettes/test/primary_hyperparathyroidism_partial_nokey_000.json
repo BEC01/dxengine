@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "primary_hyperparathyroidism_partial_nokey_000",
+    "category": "endocrine",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "primary_hyperparathyroidism",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "often asymptomatic (incidental hypercalcemia)",
+    "symptoms": [
+      "often asymptomatic (incidental hypercalcemia)",
+      "stones (nephrolithiasis)",
+      "bones (osteoporosis, fractures)",
+      "groans (abdominal pain, constipation, pancreatitis)",
+      "moans (depression, cognitive dysfunction)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 77.5,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 2.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 134.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 105.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 23.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 38.8,
+            "unit": "ng/mL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "primary_hyperparathyroidism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "primary_hyperparathyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

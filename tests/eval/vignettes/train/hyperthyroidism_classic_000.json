@@ -32,7 +32,7 @@
         "values": [
           {
             "test_name": "thyroid_stimulating_hormone",
-            "value": -1.9,
+            "value": 0.0,
             "unit": "mIU/L"
           },
           {

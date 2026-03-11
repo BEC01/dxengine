@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_chronic_kidney_disease",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "male",
+    "chief_complaint": "often asymptomatic until advanced (stage 4-5)",
+    "symptoms": [
+      "often asymptomatic until advanced (stage 4-5)",
+      "fatigue"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 1.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 90.0,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 22.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 4.2,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

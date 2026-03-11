@@ -29,8 +29,14 @@ class TestPositiveCases:
         )
 
     def test_cant_miss_above_95(self, eval_result):
+        """Safety check: can't-miss coverage (not in weighted score, but still monitored)."""
         assert eval_result.mean_cant_miss_coverage >= 0.95, (
             f"Can't-miss coverage {eval_result.mean_cant_miss_coverage:.1%} < 95%"
+        )
+
+    def test_mean_gold_posterior_above_20(self, eval_result):
+        assert eval_result.mean_gold_posterior >= 0.20, (
+            f"Mean gold posterior {eval_result.mean_gold_posterior:.4f} < 0.20"
         )
 
     def test_weighted_score_above_50(self, eval_result):
@@ -63,26 +69,26 @@ class TestFixtureRegression:
         )
 
 
-class TestPerturbationRobustness:
-    def test_perturbed_within_15pct_of_canonical(self, eval_result):
-        """Perturbation variants should not drop more than 15% from canonical."""
+class TestDiversityRobustness:
+    def test_partial_panel_within_30pct_of_canonical(self, eval_result):
+        """Partial panel variants should not drop more than 30% from canonical top-3."""
         canonical = [
             c for c in eval_result.cases
-            if not c.is_negative_case and c.variant == 0 and c.error is None
+            if not c.is_negative_case and "classic_000" in c.vignette_id and c.error is None
         ]
-        perturbed = [
+        partial = [
             c for c in eval_result.cases
-            if not c.is_negative_case and c.variant > 0 and c.error is None
+            if not c.is_negative_case and ("partial_screen" in c.vignette_id or "partial_nokey" in c.vignette_id) and c.error is None
         ]
 
-        if not canonical or not perturbed:
-            pytest.skip("Not enough cases for perturbation comparison")
+        if not canonical or not partial:
+            pytest.skip("Not enough cases for diversity comparison")
 
         canon_top3 = sum(1 for c in canonical if c.in_top_3) / len(canonical)
-        perturb_top3 = sum(1 for c in perturbed if c.in_top_3) / len(perturbed)
-        gap = canon_top3 - perturb_top3
+        partial_top3 = sum(1 for c in partial if c.in_top_3) / len(partial)
+        gap = canon_top3 - partial_top3
 
-        assert gap <= 0.15, (
-            f"Perturbation gap too large: canonical={canon_top3:.1%}, "
-            f"perturbed={perturb_top3:.1%}, gap={gap:.1%}"
+        assert gap <= 0.30, (
+            f"Partial panel gap too large: canonical={canon_top3:.1%}, "
+            f"partial={partial_top3:.1%}, gap={gap:.1%}"
         )

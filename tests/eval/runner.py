@@ -22,6 +22,7 @@ from dxengine.finding_mapper import map_labs_to_findings
 from dxengine.bayesian_updater import (
     generate_initial_hypotheses,
     update_all,
+    apply_evidence_caps,
     normalize_posteriors,
     rank_hypotheses,
 )
@@ -191,6 +192,7 @@ class EvalRunner:
 
             # 6. Apply evidence via Bayesian update
             hypotheses = update_all(hypotheses, findings)
+            hypotheses = apply_evidence_caps(hypotheses)
             hypotheses = rank_hypotheses(hypotheses)
 
             # 7. Compute entropy
@@ -302,8 +304,10 @@ class EvalRunner:
         suite.mean_entropy = metrics.get("mean_entropy", 0.0)
         suite.negative_pass_rate = metrics.get("negative_pass_rate", 0.0)
         suite.false_positive_rate = metrics.get("false_positive_rate", 0.0)
+        suite.mean_gold_posterior = metrics.get("mean_gold_posterior", 0.0)
         suite.by_category = metrics.get("by_category", {})
         suite.by_difficulty = metrics.get("by_difficulty", {})
+        suite.by_disease = metrics.get("by_disease", {})
         suite.failures = metrics.get("failures", [])
         suite.weighted_score = compute_weighted_score(metrics)
 

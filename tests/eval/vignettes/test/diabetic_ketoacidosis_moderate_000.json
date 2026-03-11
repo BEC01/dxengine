@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "diabetic_ketoacidosis_moderate_000",
-    "category": "metabolic",
+    "category": "endocrine",
     "difficulty": "moderate",
     "split": "test",
     "source": "synthetic",
@@ -30,12 +30,12 @@
         "values": [
           {
             "test_name": "glucose",
-            "value": 109.4,
+            "value": 105.6,
             "unit": "mg/dL"
           },
           {
             "test_name": "bicarbonate",
-            "value": 20.9,
+            "value": 21.6,
             "unit": "mEq/L"
           },
           {
@@ -45,12 +45,12 @@
           },
           {
             "test_name": "sodium",
-            "value": 138.3,
+            "value": 138.6,
             "unit": "mEq/L"
           },
           {
             "test_name": "blood_urea_nitrogen",
-            "value": 17.7,
+            "value": 17.1,
             "unit": "mg/dL"
           },
           {
@@ -60,17 +60,17 @@
           },
           {
             "test_name": "phosphorus",
-            "value": 3.0,
+            "value": 3.1,
             "unit": "mg/dL"
           },
           {
             "test_name": "white_blood_cells",
-            "value": 9.9,
+            "value": 9.5,
             "unit": "x10^9/L"
           },
           {
             "test_name": "hemoglobin_a1c",
-            "value": 5.6,
+            "value": 5.5,
             "unit": "%"
           }
         ]

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_tumor_lysis_syndrome",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "nausea/vomiting",
+    "symptoms": [
+      "nausea/vomiting",
+      "diarrhea"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 4.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.8,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

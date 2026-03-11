@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "preclinical_sle_borderline_000",
+    "category": "rheumatologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "preclinical_sle",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias without frank arthritis",
+      "intermittent rash",
+      "Raynaud phenomenon",
+      "subtle hair thinning"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 14.9,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 113.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 17.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 234.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.3,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 0.8,
+            "unit": "titer"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 25.2,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 1.7,
+            "unit": "mg/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "preclinical_sle",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "preclinical_sle"
+    ],
+    "cant_miss_diseases": []
+  }
+}

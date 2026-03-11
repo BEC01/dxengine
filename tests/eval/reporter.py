@@ -27,6 +27,7 @@ def format_suite_result(suite: SuiteResult) -> str:
     lines.append(f"  Pattern Recall: {suite.mean_pattern_recall:.1%}")
     lines.append(f"  Can't-Miss:     {suite.mean_cant_miss_coverage:.1%}")
     lines.append(f"  Mean Entropy:   {suite.mean_entropy:.4f}")
+    lines.append(f"  Mean P(gold):   {suite.mean_gold_posterior:.4f}")
 
     # Negative cases
     if suite.total_negative > 0:
@@ -65,16 +66,18 @@ def format_suite_result(suite: SuiteResult) -> str:
             else:
                 lines.append(f"  {diff:30s}  neg_pass={m.get('neg_pass_rate', 0):.0%}  n={m['count']}")
 
-    # By variant (canonical vs perturbed)
-    canonical = [c for c in suite.cases if not c.is_negative_case and c.variant == 0 and c.error is None]
-    perturbed = [c for c in suite.cases if not c.is_negative_case and c.variant > 0 and c.error is None]
-    if canonical and perturbed:
+    # By disease
+    if suite.by_disease:
         lines.append("")
-        lines.append("BY VARIANT:")
-        c_top3 = sum(1 for c in canonical if c.in_top_3)
-        p_top3 = sum(1 for c in perturbed if c.in_top_3)
-        lines.append(f"  canonical:  top3={c_top3/len(canonical):.1%} ({c_top3}/{len(canonical)})")
-        lines.append(f"  perturbed:  top3={p_top3/len(perturbed):.1%} ({p_top3}/{len(perturbed)})")
+        lines.append("BY DISEASE:")
+        for disease, m in sorted(suite.by_disease.items()):
+            top3_pct = m.get("top_3", 0.0)
+            mean_p = m.get("mean_posterior", 0.0)
+            n = m.get("count", 0)
+            flag = ""
+            if mean_p < 0.20 or top3_pct < 0.80:
+                flag = "  ** LOW"
+            lines.append(f"  {disease:40s}  top3={top3_pct:4.0%}  mean_p={mean_p:.2f}  n={n}{flag}")
 
     # Failures
     if suite.failures:
@@ -85,6 +88,13 @@ def format_suite_result(suite: SuiteResult) -> str:
             if c:
                 top3 = [rh["disease"] for rh in c.ranked_hypotheses[:3]]
                 lines.append(f"  {vid}: gold={c.gold_diagnosis}, top3={top3}")
+
+    # Soft regressions
+    if suite.soft_regressions:
+        lines.append("")
+        lines.append(f"SOFT WARNINGS ({len(suite.soft_regressions)}):")
+        for sr in suite.soft_regressions:
+            lines.append(f"  {sr.get('type', '?')}: {sr}")
 
     # Errors
     error_cases = [c for c in suite.cases if c.error is not None]

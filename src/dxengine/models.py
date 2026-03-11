@@ -187,6 +187,7 @@ class Hypothesis(BaseModel):
     key_findings: list[str] = Field(default_factory=list)
     orphan_findings: list[str] = Field(default_factory=list)  # Findings not explained
     confidence_note: str = ""
+    n_informative_lr: int = 0  # Count of non-neutral LR applications for this disease
     iteration_added: int = 0
     iterations_stable: int = 0
 

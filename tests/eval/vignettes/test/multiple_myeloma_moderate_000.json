@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "multiple_myeloma_moderate_000",
-    "category": "oncologic",
+    "category": "hematologic",
     "difficulty": "moderate",
     "split": "test",
     "source": "synthetic",
@@ -30,27 +30,27 @@
         "values": [
           {
             "test_name": "total_protein",
-            "value": 8.5,
+            "value": 8.3,
             "unit": "g/dL"
           },
           {
             "test_name": "albumin",
-            "value": 3.9,
+            "value": 4.0,
             "unit": "g/dL"
           },
           {
             "test_name": "erythrocyte_sedimentation_rate",
-            "value": 19.7,
+            "value": 17.8,
             "unit": "mm/hr"
           },
           {
             "test_name": "calcium",
-            "value": 10.3,
+            "value": 10.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin",
-            "value": 13.9,
+            "value": 14.1,
             "unit": "g/dL"
           },
           {
@@ -60,12 +60,12 @@
           },
           {
             "test_name": "glomerular_filtration_rate",
-            "value": 95.2,
+            "value": 96.8,
             "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "uric_acid",
-            "value": 6.1,
+            "value": 5.9,
             "unit": "mg/dL"
           }
         ]

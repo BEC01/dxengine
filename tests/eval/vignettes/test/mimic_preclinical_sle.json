@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_preclinical_sle",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias without frank arthritis"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 12.5,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 0.5,
+            "unit": "titer"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 114.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 18.2,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

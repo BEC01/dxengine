@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "id": "rhabdomyolysis_partial_screen_000",
+    "category": "metabolic_toxic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "rhabdomyolysis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "muscle pain/tenderness/swelling",
+    "symptoms": [
+      "muscle pain/tenderness/swelling",
+      "dark brown urine (myoglobinuria \u2014 dipstick positive for blood but no RBCs on microscopy)",
+      "weakness",
+      "nausea/vomiting",
+      "fever"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "potassium",
+            "value": 5.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 47.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 56.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "rhabdomyolysis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "rhabdomyolysis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

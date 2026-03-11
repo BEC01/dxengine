@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "id": "adv_dyn_diabetic_ketoacidosis_vs_cushing_syndrome",
+    "category": "endocrine",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "diabetic_ketoacidosis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "polyuria",
+    "symptoms": [
+      "polyuria",
+      "polydipsia",
+      "nausea/vomiting",
+      "abdominal pain",
+      "Kussmaul respirations (deep, rapid)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "potassium",
+            "value": 4.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 9.7,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 103.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 2.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 5.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 18.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 12.8,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.9,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "diabetic_ketoacidosis",
+    "acceptable_alternatives": [
+      "cushing_syndrome"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "diabetic_ketoacidosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

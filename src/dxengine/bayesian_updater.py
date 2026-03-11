@@ -108,6 +108,10 @@ def update_single(hypothesis: Hypothesis, evidence: Evidence) -> Hypothesis:
     updated.log_odds = posterior_lo
     updated.posterior_probability = posterior_prob
 
+    # Track whether this LR was informative (not neutral 1.0)
+    if abs(math.log(lr)) > 0.01:
+        updated.n_informative_lr += 1
+
     if evidence.supports:
         updated.evidence_for.append(evidence)
     else:
@@ -207,6 +211,64 @@ def normalize_posteriors(
         h.log_odds = probability_to_log_odds(h.posterior_probability)
 
     return normalized
+
+
+# ── Evidence-based confidence ceiling ────────────────────────────────────────
+
+# When diagnostic evidence is sparse, the Bayesian posterior can be
+# artificially inflated by normalization over a small hypothesis pool.
+# E.g., 2 hypotheses + 1 weak finding → top disease gets 85%+ by arithmetic.
+#
+# The ceiling is based on the BEST-evidenced hypothesis in the pool (max
+# n_informative_lr), ensuring the same cap applies to all hypotheses and
+# ranking order is preserved.  Excess mass implicitly goes to "other
+# diagnoses not yet considered."
+
+_EVIDENCE_CEILING = {
+    0: 0.20,   # No curated evidence for any disease → highly uncertain
+    1: 0.38,   # One informative finding → insufficient for confidence
+    2: 0.60,   # Two informative findings → moderate confidence
+    3: 0.80,   # Three informative findings → good evidence base
+}
+# 4+ informative LR applications → no ceiling (full Bayesian confidence)
+
+
+def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
+    """Apply global evidence-based ceiling to prevent overconfidence.
+
+    When few informative likelihood ratios have been applied across the
+    hypothesis pool, posteriors are capped to prevent normalization
+    artifacts from producing unwarranted diagnostic confidence.
+
+    A "informative" LR is one where |log(LR)| > 0.01 — i.e., the curated
+    data actually says something about this disease-finding pair, rather
+    than defaulting to neutral (1.0, 1.0).
+
+    The ceiling is global (same for all hypotheses), determined by the
+    best-evidenced hypothesis.  This preserves ranking order while
+    limiting absolute confidence.
+    """
+    if not hypotheses:
+        return hypotheses
+
+    max_informative = max(h.n_informative_lr for h in hypotheses)
+
+    ceiling = _EVIDENCE_CEILING.get(max_informative)
+    if ceiling is None:
+        # 4+ informative → no cap needed
+        return hypotheses
+
+    result = [h.model_copy(deep=True) for h in hypotheses]
+    for h in result:
+        if h.posterior_probability > ceiling:
+            h.posterior_probability = ceiling
+            h.log_odds = probability_to_log_odds(ceiling)
+            h.confidence_note = (
+                f"Capped at {ceiling:.0%}: only {max_informative} informative "
+                f"finding(s) across hypothesis pool"
+            )
+
+    return result
 
 
 # ── Ranking ──────────────────────────────────────────────────────────────────

@@ -32,12 +32,12 @@
         "values": [
           {
             "test_name": "platelets",
-            "value": 153.1,
+            "value": 171.9,
             "unit": "x10^9/L"
           },
           {
             "test_name": "prothrombin_time",
-            "value": 13.5,
+            "value": 13.3,
             "unit": "seconds"
           },
           {
@@ -47,32 +47,32 @@
           },
           {
             "test_name": "partial_thromboplastin_time",
-            "value": 34.1,
+            "value": 33.4,
             "unit": "seconds"
           },
           {
             "test_name": "d_dimer",
-            "value": 0.7,
+            "value": 0.6,
             "unit": "mcg/mL FEU"
           },
           {
             "test_name": "fibrinogen",
-            "value": 202.5,
+            "value": 217.5,
             "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin",
-            "value": 14.2,
+            "value": 14.4,
             "unit": "g/dL"
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 266.9,
+            "value": 258.1,
             "unit": "U/L"
           },
           {
             "test_name": "haptoglobin",
-            "value": 59.8,
+            "value": 68.2,
             "unit": "mg/dL"
           }
         ]

@@ -26,7 +26,7 @@ from dxengine.preprocessor import preprocess_patient_labs
 from dxengine.lab_analyzer import analyze_panel, analyze_trends
 from dxengine.pattern_detector import run_full_pattern_analysis
 from dxengine.finding_mapper import map_labs_to_findings
-from dxengine.bayesian_updater import generate_initial_hypotheses, update_all, rank_hypotheses
+from dxengine.bayesian_updater import generate_initial_hypotheses, update_all, apply_evidence_caps, rank_hypotheses
 from dxengine.info_gain import current_entropy, suggest_tests
 from dxengine.utils import load_likelihood_ratios
 
@@ -172,6 +172,7 @@ def run_phase1_pipeline(
     # ── Step 6: Bayesian update ─────────────────────────────────────────
     if new_findings and state.hypotheses:
         state.hypotheses = update_all(state.hypotheses, new_findings)
+        state.hypotheses = apply_evidence_caps(state.hypotheses)
         state.hypotheses = rank_hypotheses(state.hypotheses)
 
     # ── Step 7: Entropy ─────────────────────────────────────────────────

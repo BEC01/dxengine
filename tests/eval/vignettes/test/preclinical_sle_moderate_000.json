@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "preclinical_sle_moderate_000",
-    "category": "autoimmune",
+    "category": "rheumatologic",
     "difficulty": "moderate",
     "split": "test",
     "source": "synthetic",
@@ -30,27 +30,27 @@
         "values": [
           {
             "test_name": "erythrocyte_sedimentation_rate",
-            "value": 14.9,
+            "value": 14.1,
             "unit": "mm/hr"
           },
           {
             "test_name": "complement_c3",
-            "value": 113.1,
+            "value": 116.4,
             "unit": "mg/dL"
           },
           {
             "test_name": "complement_c4",
-            "value": 17.7,
+            "value": 18.8,
             "unit": "mg/dL"
           },
           {
             "test_name": "platelets",
-            "value": 234.4,
+            "value": 240.6,
             "unit": "x10^9/L"
           },
           {
             "test_name": "lymphocytes_absolute",
-            "value": 2.3,
+            "value": 2.4,
             "unit": "x10^9/L"
           },
           {
@@ -60,12 +60,12 @@
           },
           {
             "test_name": "anti_dsdna_antibody",
-            "value": 20.6,
+            "value": 19.4,
             "unit": "IU/mL"
           },
           {
             "test_name": "hemoglobin",
-            "value": 13.3,
+            "value": 13.4,
             "unit": "g/dL"
           },
           {

@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "id": "adv_dyn_iron_deficiency_anemia_vs_hemochromatosis",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "iron_deficiency_anemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "pallor",
+      "dyspnea on exertion",
+      "pica (ice chewing/pagophagia)",
+      "koilonychia (spoon nails)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "iron",
+            "value": 118.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 207.3,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 37.6,
+            "unit": "%"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.9,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 14.2,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 82.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 332.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 25.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "iron_deficiency_anemia",
+    "acceptable_alternatives": [
+      "hemochromatosis"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "iron_deficiency_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

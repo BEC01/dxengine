@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "tumor_lysis_syndrome_moderate_000",
-    "category": "oncologic",
+    "category": "oncologic_emergency",
     "difficulty": "moderate",
     "split": "train",
     "source": "synthetic",
@@ -30,27 +30,27 @@
         "values": [
           {
             "test_name": "uric_acid",
-            "value": 7.5,
+            "value": 7.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "potassium",
-            "value": 5.0,
+            "value": 4.9,
             "unit": "mEq/L"
           },
           {
             "test_name": "phosphorus",
-            "value": 4.5,
+            "value": 4.3,
             "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
-            "value": 8.7,
+            "value": 8.8,
             "unit": "mg/dL"
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 301.0,
+            "value": 287.0,
             "unit": "U/L"
           },
           {
@@ -60,7 +60,7 @@
           },
           {
             "test_name": "blood_urea_nitrogen",
-            "value": 17.7,
+            "value": 17.1,
             "unit": "mg/dL"
           }
         ]

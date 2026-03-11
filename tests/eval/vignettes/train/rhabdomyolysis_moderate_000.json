@@ -1,7 +1,7 @@
 {
   "metadata": {
     "id": "rhabdomyolysis_moderate_000",
-    "category": "musculoskeletal",
+    "category": "metabolic_toxic",
     "difficulty": "moderate",
     "split": "train",
     "source": "synthetic",
@@ -30,22 +30,22 @@
         "values": [
           {
             "test_name": "creatine_kinase",
-            "value": 435.8,
+            "value": 395.4,
             "unit": "U/L"
           },
           {
             "test_name": "myoglobin",
-            "value": 85.8,
+            "value": 80.2,
             "unit": "ng/mL"
           },
           {
             "test_name": "potassium",
-            "value": 4.9,
+            "value": 4.8,
             "unit": "mEq/L"
           },
           {
             "test_name": "phosphorus",
-            "value": 4.3,
+            "value": 4.2,
             "unit": "mg/dL"
           },
           {
@@ -55,27 +55,27 @@
           },
           {
             "test_name": "calcium",
-            "value": 8.8,
+            "value": 8.9,
             "unit": "mg/dL"
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 278.2,
+            "value": 267.8,
             "unit": "U/L"
           },
           {
             "test_name": "uric_acid",
-            "value": 6.4,
+            "value": 6.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "aspartate_aminotransferase",
-            "value": 39.6,
+            "value": 37.4,
             "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
-            "value": 47.4,
+            "value": 45.0,
             "unit": "U/L"
           }
         ]

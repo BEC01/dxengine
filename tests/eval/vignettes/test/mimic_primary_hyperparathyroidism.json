@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_primary_hyperparathyroidism",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "often asymptomatic (incidental hypercalcemia)",
+    "symptoms": [
+      "often asymptomatic (incidental hypercalcemia)",
+      "stones (nephrolithiasis)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 2.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 118.7,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

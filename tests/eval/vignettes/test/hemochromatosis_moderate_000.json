@@ -30,37 +30,37 @@
         "values": [
           {
             "test_name": "ferritin",
-            "value": 351.4,
+            "value": 321.8,
             "unit": "ng/mL"
           },
           {
             "test_name": "iron",
-            "value": 168.5,
+            "value": 159.5,
             "unit": "mcg/dL"
           },
           {
             "test_name": "transferrin_saturation",
-            "value": 52.4,
+            "value": 49.3,
             "unit": "%"
           },
           {
             "test_name": "total_iron_binding_capacity",
-            "value": 280.8,
+            "value": 285.2,
             "unit": "mcg/dL"
           },
           {
             "test_name": "alanine_aminotransferase",
-            "value": 38.4,
+            "value": 36.5,
             "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
-            "value": 28.0,
+            "value": 26.8,
             "unit": "U/L"
           },
           {
             "test_name": "glucose",
-            "value": 92.3,
+            "value": 91.2,
             "unit": "mg/dL"
           }
         ]

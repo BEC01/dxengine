@@ -37,22 +37,22 @@
           },
           {
             "test_name": "glomerular_filtration_rate",
-            "value": 55.9,
+            "value": 61.1,
             "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "blood_urea_nitrogen",
-            "value": 22.8,
+            "value": 21.7,
             "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
-            "value": 4.3,
+            "value": 4.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
-            "value": 8.7,
+            "value": 8.8,
             "unit": "mg/dL"
           },
           {
@@ -62,27 +62,27 @@
           },
           {
             "test_name": "bicarbonate",
-            "value": 23.8,
+            "value": 24.1,
             "unit": "mEq/L"
           },
           {
             "test_name": "hemoglobin",
-            "value": 12.9,
+            "value": 13.1,
             "unit": "g/dL"
           },
           {
             "test_name": "parathyroid_hormone",
-            "value": 64.4,
+            "value": 60.6,
             "unit": "pg/mL"
           },
           {
             "test_name": "uric_acid",
-            "value": 5.8,
+            "value": 5.6,
             "unit": "mg/dL"
           },
           {
             "test_name": "albumin",
-            "value": 3.8,
+            "value": 3.9,
             "unit": "g/dL"
           }
         ]

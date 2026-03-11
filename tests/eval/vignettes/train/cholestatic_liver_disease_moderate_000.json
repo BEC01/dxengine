@@ -30,12 +30,12 @@
         "values": [
           {
             "test_name": "alkaline_phosphatase",
-            "value": 162.4,
+            "value": 152.2,
             "unit": "U/L"
           },
           {
             "test_name": "gamma_glutamyl_transferase",
-            "value": 40.7,
+            "value": 37.5,
             "unit": "U/L"
           },
           {
@@ -45,22 +45,22 @@
           },
           {
             "test_name": "bilirubin_total",
-            "value": 1.2,
+            "value": 1.1,
             "unit": "mg/dL"
           },
           {
             "test_name": "alanine_aminotransferase",
-            "value": 35.3,
+            "value": 33.8,
             "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
-            "value": 26.1,
+            "value": 25.2,
             "unit": "U/L"
           },
           {
             "test_name": "total_cholesterol",
-            "value": 148.8,
+            "value": 141.2,
             "unit": "mg/dL"
           }
         ]

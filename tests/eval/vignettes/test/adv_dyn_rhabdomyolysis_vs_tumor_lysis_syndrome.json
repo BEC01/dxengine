@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "id": "adv_dyn_rhabdomyolysis_vs_tumor_lysis_syndrome",
+    "category": "metabolic_toxic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "rhabdomyolysis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "muscle pain/tenderness/swelling",
+    "symptoms": [
+      "muscle pain/tenderness/swelling",
+      "dark brown urine (myoglobinuria \u2014 dipstick positive for blood but no RBCs on microscopy)",
+      "weakness",
+      "nausea/vomiting",
+      "fever"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "phosphorus",
+            "value": 4.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 295.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 7.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "myoglobin",
+            "value": 94.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 496.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 43.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 51.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "rhabdomyolysis",
+    "acceptable_alternatives": [
+      "tumor_lysis_syndrome"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "rhabdomyolysis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

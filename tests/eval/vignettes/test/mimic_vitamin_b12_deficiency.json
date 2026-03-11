@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_vitamin_b12_deficiency",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "macrocytic anemia"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "vitamin_b12",
+            "value": 550.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "methylmalonic_acid",
+            "value": 172.0,
+            "unit": "nmol/L"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 13.8,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 97.5,
+            "unit": "fL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

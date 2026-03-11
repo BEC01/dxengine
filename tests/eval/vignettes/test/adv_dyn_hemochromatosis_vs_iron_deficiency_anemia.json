@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hemochromatosis_vs_iron_deficiency_anemia",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hemochromatosis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias (especially 2nd/3rd MCP joints)",
+      "skin bronzing/hyperpigmentation",
+      "hepatomegaly",
+      "diabetes mellitus ('bronze diabetes')"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "iron",
+            "value": 115.2,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 184.9,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 35.6,
+            "unit": "%"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 41.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 29.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 94.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemochromatosis",
+    "acceptable_alternatives": [
+      "iron_deficiency_anemia"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemochromatosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}
