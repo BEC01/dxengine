@@ -206,6 +206,7 @@
   "cortisol_am_greater_than_18": {
     "description": "Morning cortisol above 18 mcg/dL, essentially excludes adrenal insufficiency",
     "diseases": {
+      "cushing_syndrome": { "lr_positive": 10.0, "lr_negative": 0.20 },
       "addison_disease": { "lr_positive": 0.02, "lr_negative": 5.0 },
       "secondary_adrenal_insufficiency": { "lr_positive": 0.03, "lr_negative": 4.0 }
     }
@@ -1264,7 +1265,7 @@
     "diseases": {
       "diabetic_ketoacidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
       "type_2_diabetes": { "lr_positive": 4.0, "lr_negative": 0.20 },
-      "cushing_syndrome": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "cushing_syndrome": { "lr_positive": 3.5, "lr_negative": 0.40 },
       "hyperosmolar_hyperglycemic_state": { "lr_positive": 5.0, "lr_negative": 0.10 }
     }
   },
@@ -1294,6 +1295,20 @@
     "diseases": {
       "type_2_diabetes": { "lr_positive": 8.0, "lr_negative": 0.10 },
       "diabetic_ketoacidosis": { "lr_positive": 4.0, "lr_negative": 0.30 }
+    }
+  },
+  "potassium_low": {
+    "description": "Serum potassium below lower limit of normal (hypokalemia)",
+    "diseases": {
+      "cushing_syndrome": { "lr_positive": 7.0, "lr_negative": 0.30 },
+      "primary_hyperparathyroidism": { "lr_positive": 2.5, "lr_negative": 0.60 }
+    }
+  },
+  "bicarbonate_elevated": {
+    "description": "Serum bicarbonate above upper limit of normal (metabolic alkalosis)",
+    "diseases": {
+      "cushing_syndrome": { "lr_positive": 5.0, "lr_negative": 0.35 },
+      "primary_hyperparathyroidism": { "lr_positive": 2.5, "lr_negative": 0.55 }
     }
   },
   "glomerular_filtration_rate_low": {
