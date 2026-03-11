@@ -377,7 +377,8 @@
   "haptoglobin_borderline_low": {
     "description": "Haptoglobin in low-normal range (31-50 mg/dL), suspicious for subclinical hemolysis",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 6.0, "lr_negative": 1.0 }
+      "hemolytic_anemia": { "lr_positive": 6.0, "lr_negative": 1.0 },
+      "iron_deficiency_anemia": { "lr_positive": 0.3, "lr_negative": 1.2 }
     }
   },
   "complement_c4_borderline_low": {
