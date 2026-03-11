@@ -534,7 +534,8 @@
   "ana_positive_high_titer": {
     "description": "ANA positive at high titer (≥1:640)",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 15.0, "lr_negative": 0.20 }
+      "systemic_lupus_erythematosus": { "lr_positive": 15.0, "lr_negative": 0.20 },
+      "preclinical_sle": { "lr_positive": 10.0, "lr_negative": 0.25 }
     }
   },
   "anti_dsdna_positive": {
@@ -547,8 +548,8 @@
   "anti_dsdna_borderline_high": {
     "description": "Anti-dsDNA antibody in upper normal range (15-25 IU/mL), suggestive of early autoimmune process",
     "diseases": {
-      "preclinical_sle": { "lr_positive": 5.0, "lr_negative": 0.6 },
-      "systemic_lupus_erythematosus": { "lr_positive": 3.0, "lr_negative": 0.5 },
+      "preclinical_sle": { "lr_positive": 7.0, "lr_negative": 0.6 },
+      "systemic_lupus_erythematosus": { "lr_positive": 1.0, "lr_negative": 0.5 },
       "iron_deficiency_anemia": { "lr_positive": 0.3, "lr_negative": 1.0 },
       "disseminated_intravascular_coagulation": { "lr_positive": 0.3, "lr_negative": 1.0 },
       "multiple_myeloma": { "lr_positive": 0.5, "lr_negative": 1.0 }
