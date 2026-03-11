@@ -1176,7 +1176,9 @@
     "description": "ACTH elevated above upper limit of normal, suggesting primary adrenal insufficiency",
     "diseases": {
       "addison_disease": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "congenital_adrenal_hyperplasia": { "lr_positive": 8.0, "lr_negative": 0.25 }
+      "congenital_adrenal_hyperplasia": { "lr_positive": 8.0, "lr_negative": 0.25 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "primary_hyperparathyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "glucose_low": {

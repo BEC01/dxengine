@@ -85,6 +85,8 @@
     { "finding_key": "sodium_less_than_130",              "test": "sodium", "operator": "lt", "threshold": 130.0 },
     { "finding_key": "cortisol_am_greater_than_18",       "test": "cortisol_am", "operator": "gt", "threshold": 18.0 },
     { "finding_key": "cortisol_am_less_than_3",           "test": "cortisol_am", "operator": "lt", "threshold": 3.0 },
+    { "finding_key": "cortisol_am_low",                   "test": "cortisol_am", "operator": "below_lln" },
+    { "finding_key": "adrenocorticotropic_hormone_elevated", "test": "adrenocorticotropic_hormone", "operator": "above_uln" },
     { "finding_key": "b12_less_than_200",                 "test": "vitamin_b12", "operator": "lt", "threshold": 200.0 },
     { "finding_key": "psa_4_to_10",                       "test": "prostate_specific_antigen", "operator": "between", "low": 4.0, "high": 10.0 },
     { "finding_key": "psa_greater_than_10",               "test": "prostate_specific_antigen", "operator": "gt", "threshold": 10.0 },
