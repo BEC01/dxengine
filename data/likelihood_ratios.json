@@ -15,7 +15,8 @@
     "description": "Serum ferritin above 100 ng/mL, essentially excludes iron deficiency",
     "diseases": {
       "iron_deficiency_anemia": { "lr_positive": 0.08, "lr_negative": 2.0 },
-      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.50 }
+      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.50 },
+      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "ferritin_greater_than_300": {
