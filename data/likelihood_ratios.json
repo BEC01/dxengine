@@ -1233,8 +1233,30 @@
     "description": "BUN above upper limit of normal, suggesting prerenal azotemia or renal dysfunction",
     "diseases": {
       "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.25 },
+      "tumor_lysis_syndrome": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.55 },
+      "multiple_myeloma": { "lr_positive": 2.0, "lr_negative": 0.65 },
       "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
       "heart_failure": { "lr_positive": 2.5, "lr_negative": 0.60 }
+    }
+  },
+  "bicarbonate_low": {
+    "description": "Serum bicarbonate below lower limit of normal (metabolic acidosis)",
+    "diseases": {
+      "diabetic_ketoacidosis": { "lr_positive": 6.0, "lr_negative": 0.10 },
+      "chronic_kidney_disease": { "lr_positive": 2.5, "lr_negative": 0.55 },
+      "lactic_acidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
+      "addison_disease": { "lr_positive": 2.0, "lr_negative": 0.65 }
+    }
+  },
+  "sodium_low": {
+    "description": "Serum sodium below lower limit of normal (hyponatremia)",
+    "diseases": {
+      "siadh": { "lr_positive": 6.0, "lr_negative": 0.20 },
+      "addison_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "heart_failure": { "lr_positive": 3.0, "lr_negative": 0.50 },
+      "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.60 },
+      "hypothyroidism": { "lr_positive": 1.5, "lr_negative": 0.80 }
     }
   },
   "creatine_kinase_elevated": {
