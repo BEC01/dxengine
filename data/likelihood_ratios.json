@@ -429,7 +429,8 @@
     "diseases": {
       "disseminated_intravascular_coagulation": { "lr_positive": 4.0, "lr_negative": 0.05 },
       "pulmonary_embolism": { "lr_positive": 1.8, "lr_negative": 0.08 },
-      "deep_vein_thrombosis": { "lr_positive": 1.7, "lr_negative": 0.10 }
+      "deep_vein_thrombosis": { "lr_positive": 1.7, "lr_negative": 0.10 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "d_dimer_normal": {
