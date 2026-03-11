@@ -119,6 +119,13 @@
       "thyroiditis_subacute": { "lr_positive": 6.0, "lr_negative": 0.30 }
     }
   },
+  "free_triiodothyronine_elevated": {
+    "description": "Free T3 (triiodothyronine) above normal range",
+    "diseases": {
+      "hyperthyroidism": { "lr_positive": 10.0, "lr_negative": 0.15 },
+      "hypothyroidism": { "lr_positive": 0.05, "lr_negative": 1.2 }
+    }
+  },
   "free_t4_decreased": {
     "description": "Free thyroxine below normal range",
     "diseases": {
