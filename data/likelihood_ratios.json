@@ -257,7 +257,8 @@
       "hypercalcemia_of_malignancy": { "lr_positive": 5.0, "lr_negative": 0.05 },
       "multiple_myeloma": { "lr_positive": 3.5, "lr_negative": 0.60 },
       "sarcoidosis": { "lr_positive": 3.0, "lr_negative": 0.75 },
-      "vitamin_d_toxicity": { "lr_positive": 3.5, "lr_negative": 0.80 }
+      "vitamin_d_toxicity": { "lr_positive": 3.5, "lr_negative": 0.80 },
+      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
     }
   },
   "calcium_elevated_with_pth_elevated": {
@@ -349,7 +350,8 @@
       "tumor_lysis_syndrome": { "lr_positive": 4.5, "lr_negative": 0.10 },
       "pulmonary_embolism": { "lr_positive": 2.5, "lr_negative": 0.50 },
       "myocardial_infarction": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.25 }
+      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.25 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "reticulocyte_count_elevated": {
@@ -605,7 +607,8 @@
     "diseases": {
       "multiple_myeloma": { "lr_positive": 15.0, "lr_negative": 0.25 },
       "waldenstrom_macroglobulinemia": { "lr_positive": 8.0, "lr_negative": 0.40 },
-      "chronic_infection": { "lr_positive": 2.5, "lr_negative": 0.65 }
+      "chronic_infection": { "lr_positive": 2.5, "lr_negative": 0.65 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "m_spike_on_spep": {
