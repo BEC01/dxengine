@@ -42,76 +42,77 @@
   },
 
   "single_rules": [
-    { "finding_key": "ferritin_less_than_15",            "test": "ferritin", "operator": "lt", "threshold": 15.0 },
-    { "finding_key": "ferritin_less_than_45",            "test": "ferritin", "operator": "lt", "threshold": 45.0 },
-    { "finding_key": "ferritin_greater_than_100",        "test": "ferritin", "operator": "gt", "threshold": 100.0 },
-    { "finding_key": "ferritin_greater_than_1000",       "test": "ferritin", "operator": "gt", "threshold": 1000.0 },
-    { "finding_key": "transferrin_saturation_less_than_16",    "test": "transferrin_saturation", "operator": "lt", "threshold": 16.0 },
-    { "finding_key": "transferrin_saturation_greater_than_45", "test": "transferrin_saturation", "operator": "gt", "threshold": 45.0 },
-    { "finding_key": "mcv_less_than_80",                 "test": "mean_corpuscular_volume", "operator": "lt", "threshold": 80.0 },
-    { "finding_key": "mcv_greater_than_100",             "test": "mean_corpuscular_volume", "operator": "gt", "threshold": 100.0 },
-    { "finding_key": "tsh_elevated",                     "test": "thyroid_stimulating_hormone", "operator": "above_uln" },
-    { "finding_key": "tsh_greater_than_10",              "test": "thyroid_stimulating_hormone", "operator": "gt", "threshold": 10.0 },
-    { "finding_key": "tsh_suppressed",                   "test": "thyroid_stimulating_hormone", "operator": "below_lln" },
-    { "finding_key": "free_t4_decreased",                "test": "free_thyroxine", "operator": "below_lln" },
-    { "finding_key": "free_t4_elevated",                 "test": "free_thyroxine", "operator": "above_uln" },
-    { "finding_key": "haptoglobin_low",                  "test": "haptoglobin", "operator": "below_lln" },
-    { "finding_key": "haptoglobin_undetectable",         "test": "haptoglobin", "operator": "lt", "threshold": 10.0 },
-    { "finding_key": "ldh_elevated",                     "test": "lactate_dehydrogenase", "operator": "above_uln" },
-    { "finding_key": "direct_bilirubin_elevated",        "test": "bilirubin_direct", "operator": "above_uln" },
-    { "finding_key": "reticulocyte_count_elevated",      "test": "reticulocyte_count", "operator": "above_uln" },
-    { "finding_key": "d_dimer_elevated",                 "test": "d_dimer", "operator": "above_uln" },
-    { "finding_key": "d_dimer_normal",                   "test": "d_dimer", "operator": "within_range" },
-    { "finding_key": "troponin_elevated",                "test": "troponin_i", "operator": "above_uln" },
-    { "finding_key": "bnp_greater_than_500",             "test": "b_type_natriuretic_peptide", "operator": "gt", "threshold": 500.0 },
-    { "finding_key": "bnp_less_than_100",                "test": "b_type_natriuretic_peptide", "operator": "lt", "threshold": 100.0 },
-    { "finding_key": "nt_probnp_greater_than_900",       "test": "nt_pro_bnp", "operator": "gt", "threshold": 900.0 },
-    { "finding_key": "nt_probnp_less_than_300",          "test": "nt_pro_bnp", "operator": "lt", "threshold": 300.0 },
-    { "finding_key": "crp_greater_than_10",              "test": "c_reactive_protein", "operator": "gt", "threshold": 10.0 },
-    { "finding_key": "esr_greater_than_100",             "test": "erythrocyte_sedimentation_rate", "operator": "gt", "threshold": 100.0 },
-    { "finding_key": "procalcitonin_greater_than_2",     "test": "procalcitonin", "operator": "gt", "threshold": 2.0 },
-    { "finding_key": "procalcitonin_less_than_0_25",     "test": "procalcitonin", "operator": "lt", "threshold": 0.25 },
-    { "finding_key": "alt_greater_than_10x_uln",         "test": "alanine_aminotransferase", "operator": "gt_mult_uln", "multiplier": 10.0 },
-    { "finding_key": "amylase_greater_than_3x_uln",      "test": "amylase", "operator": "gt_mult_uln", "multiplier": 3.0 },
-    { "finding_key": "lipase_greater_than_3x_uln",       "test": "lipase", "operator": "gt_mult_uln", "multiplier": 3.0 },
-    { "finding_key": "ck_greater_than_5x_uln",           "test": "creatine_kinase", "operator": "gt_mult_uln", "multiplier": 5.0 },
-    { "finding_key": "ck_greater_than_10x_uln",          "test": "creatine_kinase", "operator": "gt_mult_uln", "multiplier": 10.0 },
-    { "finding_key": "glucose_greater_than_250",          "test": "glucose", "operator": "gt", "threshold": 250.0 },
-    { "finding_key": "glucose_greater_than_600",          "test": "glucose", "operator": "gt", "threshold": 600.0 },
-    { "finding_key": "hba1c_5_7_to_6_4",                 "test": "hemoglobin_a1c", "operator": "between", "low": 5.7, "high": 6.4 },
-    { "finding_key": "hba1c_greater_than_6_5",            "test": "hemoglobin_a1c", "operator": "gt", "threshold": 6.5 },
-    { "finding_key": "gfr_less_than_15",                  "test": "glomerular_filtration_rate", "operator": "lt", "threshold": 15.0 },
-    { "finding_key": "gfr_less_than_60",                  "test": "glomerular_filtration_rate", "operator": "lt", "threshold": 60.0 },
-    { "finding_key": "sodium_less_than_130",              "test": "sodium", "operator": "lt", "threshold": 130.0 },
-    { "finding_key": "cortisol_am_greater_than_18",       "test": "cortisol_am", "operator": "gt", "threshold": 18.0 },
-    { "finding_key": "cortisol_am_less_than_3",           "test": "cortisol_am", "operator": "lt", "threshold": 3.0 },
-    { "finding_key": "cortisol_am_low",                   "test": "cortisol_am", "operator": "below_lln" },
-    { "finding_key": "adrenocorticotropic_hormone_elevated", "test": "adrenocorticotropic_hormone", "operator": "above_uln" },
-    { "finding_key": "b12_less_than_200",                 "test": "vitamin_b12", "operator": "lt", "threshold": 200.0 },
-    { "finding_key": "psa_4_to_10",                       "test": "prostate_specific_antigen", "operator": "between", "low": 4.0, "high": 10.0 },
-    { "finding_key": "psa_greater_than_10",               "test": "prostate_specific_antigen", "operator": "gt", "threshold": 10.0 },
-    { "finding_key": "ammonia_elevated",                  "test": "ammonia", "operator": "above_uln" },
-    { "finding_key": "uric_acid_greater_than_10",         "test": "uric_acid", "operator": "gt", "threshold": 10.0 },
-    { "finding_key": "lactate_greater_than_4",            "test": "lactate", "operator": "gt", "threshold": 4.0 },
-    { "finding_key": "fibrinogen_low",                    "test": "fibrinogen", "operator": "below_lln" },
-    { "finding_key": "pth_elevated",                      "test": "parathyroid_hormone", "operator": "above_uln" },
-    { "finding_key": "calcium_elevated",                  "test": "calcium", "operator": "above_uln" },
-    { "finding_key": "myoglobin_elevated",                "test": "myoglobin", "operator": "above_uln" },
-    { "finding_key": "platelets_less_than_50000",         "test": "platelets", "operator": "lt", "threshold": 50.0 },
-    { "finding_key": "prolonged_pt_inr",                  "test": "international_normalized_ratio", "operator": "gt", "threshold": 1.5 },
-    { "finding_key": "afp_elevated",                      "test": "alpha_fetoprotein", "operator": "above_uln" },
-    { "finding_key": "ca_125_elevated",                   "test": "cancer_antigen_125", "operator": "above_uln" },
-    { "finding_key": "cea_elevated",                      "test": "carcinoembryonic_antigen", "operator": "above_uln" },
-    { "finding_key": "elevated_homocysteine",             "test": "homocysteine", "operator": "above_uln" },
-    { "finding_key": "elevated_methylmalonic_acid",       "test": "methylmalonic_acid", "operator": "above_uln" },
-    { "finding_key": "anti_dsdna_positive",               "test": "anti_dsdna_antibody", "operator": "above_uln" },
-    { "finding_key": "ana_positive",                      "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 40.0 },
-    { "finding_key": "ana_positive_high_titer",           "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 160.0 }
+    { "finding_key": "ferritin_less_than_15",            "test": "ferritin", "operator": "lt", "threshold": 15.0, "importance": 5 },
+    { "finding_key": "ferritin_less_than_45",            "test": "ferritin", "operator": "lt", "threshold": 45.0, "importance": 4 },
+    { "finding_key": "ferritin_greater_than_100",        "test": "ferritin", "operator": "gt", "threshold": 100.0, "importance": 2 },
+    { "finding_key": "ferritin_greater_than_1000",       "test": "ferritin", "operator": "gt", "threshold": 1000.0, "importance": 4 },
+    { "finding_key": "transferrin_saturation_less_than_16",    "test": "transferrin_saturation", "operator": "lt", "threshold": 16.0, "importance": 3 },
+    { "finding_key": "transferrin_saturation_greater_than_45", "test": "transferrin_saturation", "operator": "gt", "threshold": 45.0, "importance": 3 },
+    { "finding_key": "mcv_less_than_80",                 "test": "mean_corpuscular_volume", "operator": "lt", "threshold": 80.0, "importance": 2 },
+    { "finding_key": "mcv_greater_than_100",             "test": "mean_corpuscular_volume", "operator": "gt", "threshold": 100.0, "importance": 2 },
+    { "finding_key": "tsh_elevated",                     "test": "thyroid_stimulating_hormone", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "tsh_greater_than_10",              "test": "thyroid_stimulating_hormone", "operator": "gt", "threshold": 10.0, "importance": 4 },
+    { "finding_key": "tsh_suppressed",                   "test": "thyroid_stimulating_hormone", "operator": "below_lln", "importance": 3 },
+    { "finding_key": "free_t4_decreased",                "test": "free_thyroxine", "operator": "below_lln", "importance": 3 },
+    { "finding_key": "free_t4_elevated",                 "test": "free_thyroxine", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "haptoglobin_low",                  "test": "haptoglobin", "operator": "below_lln", "importance": 3 },
+    { "finding_key": "haptoglobin_undetectable",         "test": "haptoglobin", "operator": "lt", "threshold": 10.0, "importance": 5 },
+    { "finding_key": "ldh_elevated",                     "test": "lactate_dehydrogenase", "operator": "above_uln", "importance": 2 },
+    { "finding_key": "direct_bilirubin_elevated",        "test": "bilirubin_direct", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "reticulocyte_count_elevated",      "test": "reticulocyte_count", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "d_dimer_elevated",                 "test": "d_dimer", "operator": "above_uln", "importance": 2 },
+    { "finding_key": "d_dimer_normal",                   "test": "d_dimer", "operator": "within_range", "importance": 4 },
+    { "finding_key": "troponin_elevated",                "test": "troponin_i", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "bnp_greater_than_500",             "test": "b_type_natriuretic_peptide", "operator": "gt", "threshold": 500.0, "importance": 4 },
+    { "finding_key": "bnp_less_than_100",                "test": "b_type_natriuretic_peptide", "operator": "lt", "threshold": 100.0, "importance": 4 },
+    { "finding_key": "nt_probnp_greater_than_900",       "test": "nt_pro_bnp", "operator": "gt", "threshold": 900.0, "importance": 4 },
+    { "finding_key": "nt_probnp_less_than_300",          "test": "nt_pro_bnp", "operator": "lt", "threshold": 300.0, "importance": 4 },
+    { "finding_key": "crp_greater_than_10",              "test": "c_reactive_protein", "operator": "gt", "threshold": 10.0, "importance": 2 },
+    { "finding_key": "esr_greater_than_100",             "test": "erythrocyte_sedimentation_rate", "operator": "gt", "threshold": 100.0, "importance": 3 },
+    { "finding_key": "procalcitonin_greater_than_2",     "test": "procalcitonin", "operator": "gt", "threshold": 2.0, "importance": 4 },
+    { "finding_key": "procalcitonin_less_than_0_25",     "test": "procalcitonin", "operator": "lt", "threshold": 0.25, "importance": 4 },
+    { "finding_key": "alt_greater_than_10x_uln",         "test": "alanine_aminotransferase", "operator": "gt_mult_uln", "multiplier": 10.0, "importance": 4 },
+    { "finding_key": "amylase_greater_than_3x_uln",      "test": "amylase", "operator": "gt_mult_uln", "multiplier": 3.0, "importance": 4 },
+    { "finding_key": "lipase_greater_than_3x_uln",       "test": "lipase", "operator": "gt_mult_uln", "multiplier": 3.0, "importance": 4 },
+    { "finding_key": "ck_greater_than_5x_uln",           "test": "creatine_kinase", "operator": "gt_mult_uln", "multiplier": 5.0, "importance": 3 },
+    { "finding_key": "ck_greater_than_10x_uln",          "test": "creatine_kinase", "operator": "gt_mult_uln", "multiplier": 10.0, "importance": 4 },
+    { "finding_key": "glucose_greater_than_250",          "test": "glucose", "operator": "gt", "threshold": 250.0, "importance": 4 },
+    { "finding_key": "glucose_greater_than_600",          "test": "glucose", "operator": "gt", "threshold": 600.0, "importance": 5 },
+    { "finding_key": "hba1c_5_7_to_6_4",                 "test": "hemoglobin_a1c", "operator": "between", "low": 5.7, "high": 6.4, "importance": 3 },
+    { "finding_key": "hba1c_greater_than_6_5",            "test": "hemoglobin_a1c", "operator": "gt", "threshold": 6.5, "importance": 4 },
+    { "finding_key": "gfr_less_than_15",                  "test": "glomerular_filtration_rate", "operator": "lt", "threshold": 15.0, "importance": 5 },
+    { "finding_key": "gfr_less_than_60",                  "test": "glomerular_filtration_rate", "operator": "lt", "threshold": 60.0, "importance": 3 },
+    { "finding_key": "sodium_less_than_130",              "test": "sodium", "operator": "lt", "threshold": 130.0, "importance": 3 },
+    { "finding_key": "cortisol_am_greater_than_18",       "test": "cortisol_am", "operator": "gt", "threshold": 18.0, "importance": 3 },
+    { "finding_key": "cortisol_am_less_than_3",           "test": "cortisol_am", "operator": "lt", "threshold": 3.0, "importance": 5 },
+    { "finding_key": "cortisol_am_low",                   "test": "cortisol_am", "operator": "below_lln", "importance": 3 },
+    { "finding_key": "adrenocorticotropic_hormone_elevated", "test": "adrenocorticotropic_hormone", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "b12_less_than_200",                 "test": "vitamin_b12", "operator": "lt", "threshold": 200.0, "importance": 4 },
+    { "finding_key": "psa_4_to_10",                       "test": "prostate_specific_antigen", "operator": "between", "low": 4.0, "high": 10.0, "importance": 3 },
+    { "finding_key": "psa_greater_than_10",               "test": "prostate_specific_antigen", "operator": "gt", "threshold": 10.0, "importance": 4 },
+    { "finding_key": "ammonia_elevated",                  "test": "ammonia", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "uric_acid_greater_than_10",         "test": "uric_acid", "operator": "gt", "threshold": 10.0, "importance": 3 },
+    { "finding_key": "lactate_greater_than_4",            "test": "lactate", "operator": "gt", "threshold": 4.0, "importance": 4 },
+    { "finding_key": "fibrinogen_low",                    "test": "fibrinogen", "operator": "below_lln", "importance": 3 },
+    { "finding_key": "pth_elevated",                      "test": "parathyroid_hormone", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "calcium_elevated",                  "test": "calcium", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "myoglobin_elevated",                "test": "myoglobin", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "platelets_less_than_50000",         "test": "platelets", "operator": "lt", "threshold": 50.0, "importance": 4 },
+    { "finding_key": "prolonged_pt_inr",                  "test": "international_normalized_ratio", "operator": "gt", "threshold": 1.5, "importance": 3 },
+    { "finding_key": "afp_elevated",                      "test": "alpha_fetoprotein", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "ca_125_elevated",                   "test": "cancer_antigen_125", "operator": "above_uln", "importance": 2 },
+    { "finding_key": "cea_elevated",                      "test": "carcinoembryonic_antigen", "operator": "above_uln", "importance": 2 },
+    { "finding_key": "elevated_homocysteine",             "test": "homocysteine", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "elevated_methylmalonic_acid",       "test": "methylmalonic_acid", "operator": "above_uln", "importance": 4 },
+    { "finding_key": "anti_dsdna_positive",               "test": "anti_dsdna_antibody", "operator": "above_uln", "importance": 4 },
+    { "finding_key": "ana_positive",                      "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 40.0, "importance": 2 },
+    { "finding_key": "ana_positive_high_titer",           "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 160.0, "importance": 3 }
   ],
 
   "composite_rules": [
     {
       "finding_key": "calcium_elevated_with_pth_elevated",
+      "importance": 4,
       "conditions": [
         { "test": "calcium", "operator": "above_uln" },
         { "test": "parathyroid_hormone", "operator": "above_uln" }
@@ -119,6 +120,7 @@
     },
     {
       "finding_key": "calcium_elevated_with_pth_suppressed",
+      "importance": 4,
       "conditions": [
         { "test": "calcium", "operator": "above_uln" },
         { "test": "parathyroid_hormone", "operator": "below_lln" }
@@ -126,6 +128,7 @@
     },
     {
       "finding_key": "alp_elevated_with_elevated_ggt",
+      "importance": 3,
       "conditions": [
         { "test": "alkaline_phosphatase", "operator": "above_uln" },
         { "test": "gamma_glutamyl_transferase", "operator": "above_uln" }
@@ -133,6 +136,7 @@
     },
     {
       "finding_key": "alp_elevated_with_normal_ggt",
+      "importance": 3,
       "conditions": [
         { "test": "alkaline_phosphatase", "operator": "above_uln" },
         { "test": "gamma_glutamyl_transferase", "operator": "within_range" }
@@ -140,6 +144,7 @@
     },
     {
       "finding_key": "low_complement_c3_c4",
+      "importance": 4,
       "conditions": [
         { "test": "complement_c3", "operator": "below_lln" },
         { "test": "complement_c4", "operator": "below_lln" }
@@ -147,6 +152,7 @@
     },
     {
       "finding_key": "low_c3_normal_c4",
+      "importance": 3,
       "conditions": [
         { "test": "complement_c3", "operator": "below_lln" },
         { "test": "complement_c4", "operator": "within_range" }
@@ -154,6 +160,7 @@
     },
     {
       "finding_key": "hyperkalemia_with_hyperphosphatemia_and_hypocalcemia",
+      "importance": 4,
       "conditions": [
         { "test": "potassium", "operator": "above_uln" },
         { "test": "phosphorus", "operator": "above_uln" },
@@ -162,6 +169,7 @@
     },
     {
       "finding_key": "pancytopenia",
+      "importance": 4,
       "conditions": [
         { "test": "white_blood_cells", "operator": "below_lln" },
         { "test": "hemoglobin", "operator": "below_lln" },
@@ -174,6 +182,7 @@
     {
       "finding_key": "ast_alt_ratio_greater_than_2",
       "type": "ratio",
+      "importance": 3,
       "numerator": "aspartate_aminotransferase",
       "denominator": "alanine_aminotransferase",
       "operator": "gt",
@@ -182,6 +191,7 @@
     {
       "finding_key": "lipase_to_amylase_ratio_greater_than_2",
       "type": "ratio",
+      "importance": 3,
       "numerator": "lipase",
       "denominator": "amylase",
       "operator": "gt",
@@ -190,6 +200,7 @@
     {
       "finding_key": "high_anion_gap_metabolic_acidosis",
       "type": "anion_gap",
+      "importance": 4,
       "tests": ["sodium", "chloride", "bicarbonate"],
       "operator": "gt",
       "threshold": 12.0
@@ -197,12 +208,14 @@
     {
       "finding_key": "non_anion_gap_metabolic_acidosis",
       "type": "non_anion_gap",
+      "importance": 4,
       "tests": ["sodium", "chloride", "bicarbonate"],
       "anion_gap_threshold": 12.0
     },
     {
       "finding_key": "protein_gap_elevated",
       "type": "difference",
+      "importance": 4,
       "minuend": "total_protein",
       "subtrahend": "albumin",
       "operator": "gt",
@@ -211,6 +224,7 @@
     {
       "finding_key": "indirect_bilirubin_elevated",
       "type": "difference",
+      "importance": 3,
       "minuend": "bilirubin_total",
       "subtrahend": "bilirubin_direct",
       "operator": "gt",
@@ -219,6 +233,7 @@
     {
       "finding_key": "elevated_osmolal_gap",
       "type": "osmolal_gap",
+      "importance": 4,
       "tests": ["osmolality_serum", "sodium", "glucose", "blood_urea_nitrogen"],
       "operator": "gt",
       "threshold": 10.0

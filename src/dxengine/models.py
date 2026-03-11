@@ -8,6 +8,11 @@ from pydantic import BaseModel, Field
 import uuid
 
 
+class ComplexityLevel(str, Enum):
+    STANDARD = "standard"   # 1 pass, no adversarial
+    COMPLEX = "complex"     # up to 3 iterations, full debate
+
+
 class Sex(str, Enum):
     MALE = "male"
     FEMALE = "female"
@@ -140,6 +145,35 @@ class LabPatternMatch(BaseModel):
     joint_probability: Optional[float] = None
 
 
+class LabSummary(BaseModel):
+    """Summarized lab result for the structured briefing."""
+    test_name: str
+    value: float
+    unit: str
+    z_score: Optional[float] = None
+    severity: Severity = Severity.NORMAL
+    is_critical: bool = False
+    reference_low: Optional[float] = None
+    reference_high: Optional[float] = None
+
+
+class FindingSummary(BaseModel):
+    """Summarized finding for the structured briefing."""
+    finding_key: str
+    reasoning: str
+    strength: float = 0.5
+    has_curated_lr: bool = True
+    diseases_with_lr: list[str] = Field(default_factory=list)
+
+
+class RatioResult(BaseModel):
+    """A computed diagnostic ratio result."""
+    name: str
+    value: float
+    normal_range: tuple[float, float]
+    interpretation: str
+
+
 class Hypothesis(BaseModel):
     """A diagnostic hypothesis with probability and evidence."""
     disease: str
@@ -181,6 +215,67 @@ class LoopIteration(BaseModel):
     notes: str = ""
 
 
+class StructuredBriefing(BaseModel):
+    """Snapshot of all deterministic analysis for LLM consumption."""
+    patient: PatientProfile = Field(default_factory=PatientProfile)
+    problem_representation: ProblemRepresentation = Field(default_factory=ProblemRepresentation)
+    analyzed_labs: list[LabSummary] = Field(default_factory=list)
+    abnormal_labs: list[LabSummary] = Field(default_factory=list)
+    critical_labs: list[LabSummary] = Field(default_factory=list)
+    known_patterns: list[LabPatternMatch] = Field(default_factory=list)
+    collectively_abnormal: list[LabPatternMatch] = Field(default_factory=list)
+    diagnostic_ratios: list[RatioResult] = Field(default_factory=list)
+    mapped_findings: list[FindingSummary] = Field(default_factory=list)
+    fallback_findings: list[FindingSummary] = Field(default_factory=list)
+    engine_hypotheses: list[Hypothesis] = Field(default_factory=list)
+    engine_entropy: float = 0.0
+    engine_recommended_tests: list[RecommendedTest] = Field(default_factory=list)
+    preprocessing_warnings: list[str] = Field(default_factory=list)
+
+
+class LiteratureFinding(BaseModel):
+    """A finding from literature search (raw, before Bayesian integration)."""
+    finding_description: str
+    finding_type: FindingType = FindingType.LAB
+    source: str = ""
+    quality: EvidenceQuality = EvidenceQuality.MODERATE
+    reported_lr_positive: Optional[float] = None
+    reported_lr_negative: Optional[float] = None
+    relevant_diseases: list[str] = Field(default_factory=list)
+    supports_disease: Optional[str] = None
+    opposes_disease: Optional[str] = None
+    raw_text: str = ""
+
+
+class LabClaimCheck(BaseModel):
+    """Verification of a single LLM lab interpretation claim."""
+    claim: str
+    test_name: str
+    llm_interpretation: str
+    engine_z_score: Optional[float] = None
+    engine_severity: Optional[Severity] = None
+    consistent: bool = True
+    discrepancy: str = ""
+
+
+class LRSourceCheck(BaseModel):
+    """Verification of a single LR source and value."""
+    finding: str
+    disease: str
+    lr_value: float
+    source: str = ""  # "curated" | "literature" | "llm_estimated"
+    capped: bool = False
+
+
+class VerificationResult(BaseModel):
+    """Result of deterministic verification of LLM claims."""
+    lab_claim_checks: list[LabClaimCheck] = Field(default_factory=list)
+    lr_source_checks: list[LRSourceCheck] = Field(default_factory=list)
+    inconsistencies_found: int = 0
+    warnings: list[str] = Field(default_factory=list)
+    overall_consistent: bool = True
+
+
 class DiagnosticState(BaseModel):
     """Complete diagnostic session state — the master state object."""
     session_id: str = Field(default_factory=lambda: uuid.uuid4().hex[:12])
@@ -201,3 +296,10 @@ class DiagnosticState(BaseModel):
     should_widen_search: bool = False
     reasoning_trace: list[str] = Field(default_factory=list)
     errors: list[str] = Field(default_factory=list)
+    # V3 extensions
+    complexity: ComplexityLevel = ComplexityLevel.COMPLEX
+    structured_briefing: Optional[StructuredBriefing] = None
+    literature_findings: list[LiteratureFinding] = Field(default_factory=list)
+    verification_result: Optional[VerificationResult] = None
+    knowledge_gaps: list[str] = Field(default_factory=list)
+    unexplained_findings: list[str] = Field(default_factory=list)

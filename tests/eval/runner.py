@@ -154,7 +154,7 @@ class EvalRunner:
             state, warnings = preprocess_patient_labs(state)
             result.preprocessing_warnings = warnings
 
-            # 2. Analyze labs
+            # 2. Analyze labs (skip values with invalid units, e.g. % for absolute-count tests)
             age = patient.age
             sex = patient.sex
             all_labs = []
@@ -162,6 +162,7 @@ class EvalRunner:
                 raw_labs = [
                     {"test_name": lv.test_name, "value": lv.value, "unit": lv.unit}
                     for lv in panel.values
+                    if "invalid for analysis" not in (lv.unit or "")
                 ]
                 analyzed = analyze_panel(raw_labs, age=age, sex=sex)
                 all_labs.extend(analyzed)

@@ -82,13 +82,39 @@ For each pair of top-3 hypotheses:
 - What is the ONE test that would most change the relative probability?
 - Search for this specific distinguishing feature's sensitivity/specificity.
 
+## Self-Reflection (MANDATORY for top 3)
+
+For each top-3 disease in the differential, perform structured self-reflection:
+
+### Evidence Inventory
+- List every piece of evidence cited for this disease
+- Verify each one is ACTUALLY present in the patient's data (not inferred or assumed)
+- Flag any "phantom evidence" — findings cited but not in the data
+
+### Counter-Assessment
+- "If this patient does NOT have [disease], what explains ALL the findings?"
+- Propose at least one alternative explanation for EACH supporting finding
+- Consider if a combination of two other diseases explains everything better
+
+### Probability Reassessment
+- After inventory and counter-assessment, does this disease still deserve its probability?
+- If evidence was phantom or easily explained by alternatives, propose a revised probability
+- State your revised probability with explicit reasoning
+
 ## Output Format
 Return JSON with:
 - `challenges`: list of specific challenges to current hypotheses
 - `mimics_to_consider`: diseases that mimic current top hypotheses
 - `orphan_findings`: findings unexplained by current differential
 - `cant_miss_additions`: dangerous diagnoses to add
-- `bias_warnings`: cognitive biases detected
+- `bias_warnings`: cognitive biases detected (from checklist above)
+- `self_reflection`: list of self-reflection results for top 3:
+  - `disease`: disease name
+  - `evidence_verified`: list of [finding, present_in_data: bool]
+  - `phantom_evidence`: list of findings cited but not in data
+  - `counter_diagnoses`: alternative explanations
+  - `revised_probability`: float
+  - `reasoning`: why probability should change (or stay)
 - `block_convergence`: boolean — true if challenges are severe enough to prevent loop termination
 - `block_reason`: why convergence should be blocked
 

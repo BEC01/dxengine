@@ -1,6 +1,7 @@
 {
   "hypothyroidism": {
     "category": "endocrine",
+    "disease_importance": 3,
     "epidemiology": "Women > men (5-8:1). Peak age 30-50. Risk factors: family history of autoimmune disease, prior thyroid surgery/radiation, lithium or amiodarone use, iodine deficiency.",
     "pathophysiology": "Most commonly autoimmune destruction of thyroid (Hashimoto thyroiditis) with lymphocytic infiltration and anti-TPO antibodies. Decreased T4/T3 production leads to increased TSH via loss of negative feedback. Results in decreased basal metabolic rate affecting all organ systems.",
     "classic_presentation": ["fatigue", "weight gain", "cold intolerance", "constipation", "dry skin", "hair loss", "bradycardia", "delayed relaxation of deep tendon reflexes", "periorbital edema", "menstrual irregularities", "depression", "cognitive slowing"],
@@ -12,6 +13,7 @@
   },
   "hyperthyroidism": {
     "category": "endocrine",
+    "disease_importance": 4,
     "epidemiology": "Women > men (5-10:1). Graves disease peaks age 20-40. Toxic multinodular goiter more common in elderly. Prevalence ~1%.",
     "pathophysiology": "Graves disease: TSH receptor-stimulating antibodies cause unregulated thyroid hormone production. Toxic nodular goiter: autonomous thyroid hormone secretion from hyperplastic nodules. Excess T3/T4 increases basal metabolic rate, beta-adrenergic sensitivity, and bone turnover.",
     "classic_presentation": ["weight loss despite increased appetite", "heat intolerance", "tremor", "palpitations", "tachycardia", "anxiety", "insomnia", "frequent bowel movements", "lid lag", "exophthalmos (Graves)", "pretibial myxedema (Graves)", "diffuse goiter"],
@@ -23,6 +25,7 @@
   },
   "cushing_syndrome": {
     "category": "endocrine",
+    "disease_importance": 4,
     "epidemiology": "Most cases iatrogenic (exogenous glucocorticoids). Endogenous: 2-3 per million/year. Women > men (3:1) for pituitary-dependent. Peak age 25-40.",
     "pathophysiology": "Chronic cortisol excess from exogenous steroids, pituitary ACTH-secreting adenoma (Cushing disease, 70%), ectopic ACTH (15%), or adrenal tumor (15%). Cortisol excess causes protein catabolism, gluconeogenesis, lipogenesis, immunosuppression, and mineralocorticoid effects.",
     "classic_presentation": ["central obesity", "moon facies", "buffalo hump", "abdominal striae (purple, wide >1cm)", "proximal muscle weakness", "easy bruising", "thin skin", "hirsutism", "acne", "hypertension", "hyperglycemia", "osteoporosis", "depression/psychosis"],
@@ -34,6 +37,7 @@
   },
   "addison_disease": {
     "category": "endocrine",
+    "disease_importance": 5,
     "epidemiology": "Prevalence ~1 in 10,000. Peak age 30-50. Women slightly more affected. Most common cause in developed world: autoimmune adrenalitis (80%). Developing world: tuberculosis.",
     "pathophysiology": "Destruction of >90% of adrenal cortex leading to deficiency of cortisol, aldosterone, and adrenal androgens. Autoimmune adrenalitis involves T-cell mediated destruction. Loss of cortisol removes negative feedback, causing ACTH elevation (and hyperpigmentation via MSH co-secretion). Aldosterone deficiency causes sodium wasting and potassium retention.",
     "classic_presentation": ["fatigue", "weight loss", "hyperpigmentation (palmar creases, buccal mucosa, scars)", "hypotension/orthostatic hypotension", "salt craving", "nausea", "abdominal pain", "myalgias", "hyponatremia", "hyperkalemia"],
@@ -45,6 +49,7 @@
   },
   "diabetic_ketoacidosis": {
     "category": "endocrine",
+    "disease_importance": 5,
     "epidemiology": "Annual incidence 4-8 per 1000 persons with diabetes. More common in type 1 diabetes but occurs in type 2 (especially in African Americans, Hispanic). Common precipitants: infection, insulin omission, new-onset T1DM, MI, medications (SGLT2 inhibitors).",
     "pathophysiology": "Absolute or relative insulin deficiency with counter-regulatory hormone excess leads to hyperglycemia (hepatic gluconeogenesis, decreased glucose uptake), lipolysis, and hepatic ketogenesis (beta-hydroxybutyrate, acetoacetate). Ketoacids consume bicarbonate causing high anion gap metabolic acidosis. Osmotic diuresis causes volume depletion and electrolyte losses.",
     "classic_presentation": ["polyuria", "polydipsia", "nausea/vomiting", "abdominal pain", "Kussmaul respirations (deep, rapid)", "fruity breath odor", "dehydration", "altered mental status", "tachycardia", "hypotension"],
@@ -56,6 +61,7 @@
   },
   "hyperosmolar_hyperglycemic_state": {
     "category": "endocrine",
+    "disease_importance": 5,
     "epidemiology": "Typically type 2 diabetes, elderly. Mortality 5-20% (higher than DKA). Precipitants: infection, stroke, MI, medications (steroids, thiazides).",
     "pathophysiology": "Relative insulin deficiency sufficient to prevent ketosis but insufficient to prevent hyperglycemia. Severe hyperglycemia causes profound osmotic diuresis, dehydration, and hyperosmolality (>320 mOsm/kg). Average fluid deficit 8-10 liters.",
     "classic_presentation": ["altered mental status", "profound dehydration", "severe hyperglycemia (often >600 mg/dL)", "polyuria progressing to oliguria", "weakness", "seizures", "focal neurologic deficits", "no Kussmaul breathing"],
@@ -67,6 +73,7 @@
   },
   "pheochromocytoma": {
     "category": "endocrine",
+    "disease_importance": 4,
     "epidemiology": "Rare, 2-8 per million/year. Peak age 40-50. Rule of 10s: 10% bilateral, 10% extra-adrenal (paraganglioma), 10% malignant, 10% familial. Associated with MEN2, VHL, NF1, SDH mutations.",
     "pathophysiology": "Catecholamine-secreting tumor of chromaffin cells (adrenal medulla or extra-adrenal paraganglia). Episodic or sustained release of epinephrine/norepinephrine causes paroxysmal hypertension, tachycardia, and metabolic effects.",
     "classic_presentation": ["episodic hypertension (paroxysms)", "headache", "palpitations", "diaphoresis", "classic triad: headache + sweating + tachycardia", "anxiety/panic", "pallor", "weight loss", "hyperglycemia", "tremor"],
@@ -78,6 +85,7 @@
   },
   "primary_hyperparathyroidism": {
     "category": "endocrine",
+    "disease_importance": 3,
     "epidemiology": "Prevalence 1-2 per 1000. Women > men (3:1). Peak age 50-60 (postmenopausal women). 85% single adenoma, 15% hyperplasia, <1% carcinoma.",
     "pathophysiology": "Autonomous PTH secretion from parathyroid adenoma (most common) causes increased bone resorption, increased renal calcium reabsorption, increased 1,25-dihydroxyvitamin D synthesis (increasing intestinal calcium absorption), and renal phosphorus wasting.",
     "classic_presentation": ["often asymptomatic (incidental hypercalcemia)", "stones (nephrolithiasis)", "bones (osteoporosis, fractures)", "groans (abdominal pain, constipation, pancreatitis)", "moans (depression, cognitive dysfunction)", "polyuria/polydipsia"],
@@ -89,6 +97,7 @@
   },
   "hypoparathyroidism": {
     "category": "endocrine",
+    "disease_importance": 3,
     "epidemiology": "Most common cause: surgical (post-thyroidectomy or parathyroidectomy). Autoimmune rare. Prevalence ~37 per 100,000.",
     "pathophysiology": "Insufficient PTH leads to decreased bone resorption, decreased renal calcium reabsorption, decreased 1,25-dihydroxyvitamin D synthesis. Results in hypocalcemia and hyperphosphatemia.",
     "classic_presentation": ["perioral numbness/tingling", "paresthesias (hands/feet)", "muscle cramps/spasms", "carpopedal spasm", "Chvostek sign", "Trousseau sign", "seizures", "prolonged QT interval", "cataracts (chronic)", "basal ganglia calcifications (chronic)"],
@@ -100,6 +109,7 @@
   },
   "siadh": {
     "category": "endocrine",
+    "disease_importance": 4,
     "epidemiology": "Common cause of euvolemic hyponatremia. Causes: CNS disorders (stroke, trauma, infection), pulmonary disease (pneumonia, TB), malignancy (small cell lung cancer), medications (SSRIs, carbamazepine, cyclophosphamide), postoperative state.",
     "pathophysiology": "Inappropriate continued secretion of ADH despite low serum osmolality, causing free water retention, dilutional hyponatremia, and concentrated urine. Euvolemic because excess water is partially excreted via pressure natriuresis.",
     "classic_presentation": ["often asymptomatic if mild", "nausea", "headache", "confusion", "lethargy", "seizures (severe)", "coma (severe)", "no edema", "no signs of volume depletion"],
@@ -111,6 +121,7 @@
   },
   "diabetes_insipidus": {
     "category": "endocrine",
+    "disease_importance": 3,
     "epidemiology": "Central DI: pituitary surgery, head trauma, tumors, idiopathic (30%), autoimmune. Nephrogenic DI: lithium (most common drug cause), hypercalcemia, hypokalemia, hereditary (X-linked).",
     "pathophysiology": "Central: insufficient ADH production/secretion. Nephrogenic: renal resistance to ADH. Both cause inability to concentrate urine, leading to polyuria (3-20 L/day) and compensatory polydipsia.",
     "classic_presentation": ["polyuria (large volumes, dilute urine)", "polydipsia", "nocturia", "dehydration if unable to drink", "hypernatremia if water intake insufficient"],
@@ -122,6 +133,7 @@
   },
   "acromegaly": {
     "category": "endocrine",
+    "disease_importance": 3,
     "epidemiology": "Rare, prevalence ~60 per million. Equal sex distribution. Mean age at diagnosis 40-45 (delayed 5-10 years from symptom onset). >95% pituitary GH-secreting adenoma.",
     "pathophysiology": "Excess growth hormone stimulates hepatic IGF-1 production, causing soft tissue, bone, and organ growth. GH also has diabetogenic effects (insulin resistance) and causes sodium/water retention.",
     "classic_presentation": ["coarsened facial features (frontal bossing, prognathism)", "enlarged hands and feet (ring/shoe size increase)", "macroglossia", "deepening voice", "hyperhidrosis", "carpal tunnel syndrome", "arthralgia", "headache", "visual field defects (bitemporal hemianopia)", "hypertension", "sleep apnea"],
@@ -133,6 +145,7 @@
   },
   "iron_deficiency_anemia": {
     "category": "hematologic",
+    "disease_importance": 3,
     "epidemiology": "Most common anemia worldwide. Premenopausal women (menstrual losses), children (rapid growth, dietary insufficiency), elderly (GI blood loss, poor absorption). Prevalence ~15% of world population.",
     "pathophysiology": "Iron depletion progresses through stages: depleted stores (low ferritin) → iron-deficient erythropoiesis (low transferrin saturation, rising TIBC) → iron deficiency anemia (microcytic hypochromic RBCs, low hemoglobin). Causes: blood loss (GI, menstrual), decreased absorption (celiac, gastric bypass), increased demand (pregnancy, growth).",
     "classic_presentation": ["fatigue", "pallor", "dyspnea on exertion", "pica (ice chewing/pagophagia)", "koilonychia (spoon nails)", "glossitis", "angular cheilitis", "restless legs syndrome", "tachycardia", "flow murmur"],
@@ -144,6 +157,7 @@
   },
   "vitamin_b12_deficiency": {
     "category": "hematologic",
+    "disease_importance": 3,
     "epidemiology": "Prevalence 3-5% in adults, up to 20% in elderly. Causes: pernicious anemia (autoimmune gastritis), malabsorption (celiac, Crohn's, gastric bypass), strict veganism, medications (metformin, PPIs).",
     "pathophysiology": "B12 is required for methionine synthase (homocysteine→methionine) and methylmalonyl-CoA mutase (methylmalonyl-CoA→succinyl-CoA). Deficiency impairs DNA synthesis causing megaloblastic anemia and demyelination of dorsal columns and corticospinal tracts (subacute combined degeneration).",
     "classic_presentation": ["fatigue", "macrocytic anemia", "glossitis (smooth tongue)", "paresthesias", "peripheral neuropathy", "ataxia (posterior column)", "cognitive impairment", "depression", "hypersegmented neutrophils on smear"],
@@ -155,6 +169,7 @@
   },
   "folate_deficiency": {
     "category": "hematologic",
+    "disease_importance": 2,
     "epidemiology": "Causes: dietary insufficiency (alcoholism, poverty), malabsorption (celiac, tropical sprue), increased demand (pregnancy, hemolytic anemias), medications (methotrexate, trimethoprim, phenytoin).",
     "pathophysiology": "Folate is essential for one-carbon transfer reactions in DNA/RNA synthesis. Deficiency causes megaloblastic changes in rapidly dividing cells. Unlike B12 deficiency, does not cause neurologic damage.",
     "classic_presentation": ["fatigue", "macrocytic anemia", "glossitis", "no neurologic symptoms (distinguishes from B12)", "diarrhea"],
@@ -166,6 +181,7 @@
   },
   "hemolytic_anemia": {
     "category": "hematologic",
+    "disease_importance": 4,
     "epidemiology": "Diverse causes: autoimmune (warm AIHA, cold agglutinin), hereditary (sickle cell, thalassemia, G6PD, spherocytosis), microangiopathic (TTP/HUS, DIC), mechanical (prosthetic valves), medications, infections (malaria).",
     "pathophysiology": "Accelerated RBC destruction (intravascular or extravascular) exceeding bone marrow compensatory capacity. Extravascular: RBC destruction in spleen/liver (spherocytes, positive DAT in AIHA). Intravascular: RBC lysis in circulation (hemoglobinuria, schistocytes in TMA).",
     "classic_presentation": ["jaundice", "pallor", "fatigue", "dark urine (intravascular hemolysis)", "splenomegaly", "tachycardia", "gallstones (chronic)"],
@@ -177,6 +193,7 @@
   },
   "disseminated_intravascular_coagulation": {
     "category": "hematologic",
+    "disease_importance": 5,
     "epidemiology": "Occurs in setting of underlying disease: sepsis (most common), trauma, malignancy (acute promyelocytic leukemia, solid tumors), obstetric complications (placental abruption, amniotic fluid embolism), transfusion reactions.",
     "pathophysiology": "Systemic activation of coagulation via tissue factor exposure, leading to widespread fibrin deposition in microvasculature (organ damage), consumption of platelets and clotting factors (bleeding), and secondary fibrinolysis (elevated D-dimer, FDPs).",
     "classic_presentation": ["bleeding from multiple sites (venipuncture, surgical, mucosal)", "petechiae", "purpura", "organ dysfunction (renal, hepatic, pulmonary)", "acral ischemia/gangrene (purpura fulminans)", "signs of underlying trigger"],
@@ -188,6 +205,7 @@
   },
   "ttp_hus": {
     "category": "hematologic",
+    "disease_importance": 5,
     "epidemiology": "TTP: rare (3-4 per million/year), women > men, peak age 30-50. Acquired (autoantibody to ADAMTS13, 95%) or hereditary. HUS: typical/STEC-HUS in children (E. coli O157:H7), atypical HUS from complement dysregulation.",
     "pathophysiology": "TTP: ADAMTS13 deficiency causes inability to cleave ultra-large von Willebrand factor multimers, leading to platelet-rich microthrombi. HUS: endothelial injury (Shiga toxin or complement-mediated) causes microangiopathic hemolytic anemia and renal injury.",
     "classic_presentation": ["microangiopathic hemolytic anemia (schistocytes)", "severe thrombocytopenia", "renal impairment", "neurologic symptoms (TTP: confusion, seizures, stroke)", "fever", "diarrhea (bloody, preceding STEC-HUS)"],
@@ -199,6 +217,7 @@
   },
   "multiple_myeloma": {
     "category": "hematologic",
+    "disease_importance": 4,
     "epidemiology": "Median age at diagnosis 69. More common in males, African Americans (2:1). Prevalence ~30 per 100,000. Preceded by MGUS (1%/year progression to myeloma).",
     "pathophysiology": "Clonal plasma cell proliferation in bone marrow producing monoclonal immunoglobulin (M-protein). Causes bone destruction (RANK-L mediated osteoclast activation), renal failure (light chain cast nephropathy), bone marrow failure (anemia), and immunodeficiency (suppression of normal immunoglobulins).",
     "classic_presentation": ["bone pain (especially back)", "pathologic fractures", "fatigue/anemia", "recurrent infections", "renal insufficiency", "hypercalcemia symptoms", "CRAB criteria: Calcium elevation, Renal insufficiency, Anemia, Bone lesions"],
@@ -210,6 +229,7 @@
   },
   "polycythemia_vera": {
     "category": "hematologic",
+    "disease_importance": 4,
     "epidemiology": "Incidence 2 per 100,000/year. Median age 60. Slight male predominance. JAK2 V617F mutation present in >95%.",
     "pathophysiology": "Myeloproliferative neoplasm with JAK2 mutation causing erythropoietin-independent erythropoiesis. Increased RBC mass leads to hyperviscosity. Also increased WBC and platelets in many cases. Risk of thrombosis and transformation to myelofibrosis or AML.",
     "classic_presentation": ["plethora (ruddy complexion)", "pruritus (especially aquagenic/post-shower)", "headache", "dizziness", "visual disturbances", "erythromelalgia (burning pain in hands/feet)", "splenomegaly", "thrombosis (DVT, PE, Budd-Chiari, stroke)", "gout"],
@@ -221,6 +241,7 @@
   },
   "aplastic_anemia": {
     "category": "hematologic",
+    "disease_importance": 5,
     "epidemiology": "Rare (2 per million/year in Western countries, higher in Asia). Bimodal age distribution (15-25 and >60). Causes: idiopathic (most), autoimmune, medications (chloramphenicol, NSAIDs, carbamazepine), toxins (benzene), viral (hepatitis, EBV, parvovirus), inherited (Fanconi anemia).",
     "pathophysiology": "Immune-mediated (T-cell) destruction of hematopoietic stem cells leading to bone marrow failure and pancytopenia. Bone marrow becomes hypocellular (<25% cellularity) with fat replacement.",
     "classic_presentation": ["fatigue (anemia)", "infections (neutropenia)", "bleeding/bruising (thrombocytopenia)", "pallor", "no hepatosplenomegaly (distinguishes from leukemia)", "no lymphadenopathy"],
@@ -232,6 +253,7 @@
   },
   "hemochromatosis": {
     "category": "hematologic",
+    "disease_importance": 3,
     "epidemiology": "Most common genetic disorder in Caucasians. HFE C282Y homozygosity: 1 in 200-300 Northern Europeans. Clinical penetrance much lower (10-25%). Men present earlier (40-60) than women (after menopause).",
     "pathophysiology": "HFE gene mutations cause decreased hepcidin production leading to unregulated intestinal iron absorption. Iron deposits in hepatocytes, pancreatic islets, cardiac myocytes, joints, and pituitary. Excess iron generates free radicals causing oxidative tissue damage.",
     "classic_presentation": ["fatigue", "arthralgias (especially 2nd/3rd MCP joints)", "skin bronzing/hyperpigmentation", "hepatomegaly", "diabetes mellitus ('bronze diabetes')", "cardiomyopathy", "hypogonadism (pituitary iron deposition)", "erectile dysfunction", "cirrhosis"],
@@ -243,6 +265,7 @@
   },
   "sickle_cell_disease": {
     "category": "hematologic",
+    "disease_importance": 4,
     "epidemiology": "~100,000 Americans affected. Most common in African Americans (1 in 365), also Mediterranean, Middle Eastern, Indian populations. Sickle trait (heterozygous HbAS): 1 in 13 African Americans.",
     "pathophysiology": "Point mutation in beta-globin gene (Glu→Val at position 6) produces hemoglobin S. HbS polymerizes when deoxygenated, deforming RBCs into sickle shape. Sickled cells cause vaso-occlusion (pain crises, organ infarction), chronic hemolytic anemia, and endothelial damage.",
     "classic_presentation": ["vaso-occlusive pain crises", "chronic hemolytic anemia", "acute chest syndrome", "splenic sequestration (children)", "stroke", "avascular necrosis (hip)", "priapism", "leg ulcers", "functional asplenia", "gallstones"],
@@ -254,6 +277,7 @@
   },
   "hepatocellular_injury": {
     "category": "hepatic",
+    "disease_importance": 3,
     "epidemiology": "Common. Acute causes: viral hepatitis (A, B, C, E), drug-induced (acetaminophen most common), ischemic hepatitis, autoimmune hepatitis. Chronic causes: NAFLD/NASH (most common in Western world), chronic viral hepatitis, alcohol.",
     "pathophysiology": "Hepatocyte damage from direct toxic injury, immune-mediated destruction, or ischemia releases intracellular enzymes (ALT, AST) into blood. ALT is more liver-specific than AST. Pattern of ALT >> AST suggests hepatocellular etiology vs AST >> ALT in alcoholic hepatitis (2:1 ratio).",
     "classic_presentation": ["jaundice", "right upper quadrant pain", "nausea/vomiting", "fatigue", "dark urine", "pale stools", "hepatomegaly", "AST/ALT markedly elevated (>10x ULN in acute)"],
@@ -265,6 +289,7 @@
   },
   "cholestatic_liver_disease": {
     "category": "hepatic",
+    "disease_importance": 3,
     "epidemiology": "Extrahepatic: gallstones (most common), pancreatic head mass, cholangiocarcinoma. Intrahepatic: primary biliary cholangitis (women 90%, anti-mitochondrial antibodies), primary sclerosing cholangitis (men, associated with IBD), drug-induced (amoxicillin-clavulanate, anabolic steroids).",
     "pathophysiology": "Impaired bile flow from intrahepatic or extrahepatic obstruction causes accumulation of bile constituents (bilirubin, bile acids) in liver and blood. ALP and GGT are released from damaged bile duct epithelium. Direct (conjugated) bilirubin elevation predominates.",
     "classic_presentation": ["jaundice", "pruritus (bile salt deposition in skin)", "pale/clay-colored stools (acholic)", "dark urine (bilirubinuria)", "right upper quadrant pain (if gallstones)", "hepatomegaly", "xanthomas (chronic)"],
@@ -276,6 +301,7 @@
   },
   "cirrhosis": {
     "category": "hepatic",
+    "disease_importance": 4,
     "epidemiology": "End-stage of chronic liver disease. Most common causes: alcohol (30%), NAFLD/NASH (25%), hepatitis C (20%), hepatitis B (15%). Prevalence 600,000-1 million in US. Leading cause of liver transplantation.",
     "pathophysiology": "Chronic hepatic injury causes progressive fibrosis replacing normal parenchyma. Portal hypertension develops from increased intrahepatic resistance. Synthetic failure (albumin, clotting factors) and detoxification failure (ammonia, bilirubin) result. Compensated → decompensated (ascites, variceal bleeding, encephalopathy, jaundice).",
     "classic_presentation": ["ascites", "jaundice", "spider angiomata", "palmar erythema", "caput medusae", "splenomegaly", "gynecomastia", "testicular atrophy", "easy bruising", "hepatic encephalopathy", "asterixis", "variceal bleeding", "muscle wasting"],
@@ -287,6 +313,7 @@
   },
   "wilson_disease": {
     "category": "hepatic",
+    "disease_importance": 4,
     "epidemiology": "Autosomal recessive. Prevalence 1 in 30,000. ATP7B gene mutation. Typically presents age 5-35. If >40, more likely neuropsychiatric presentation.",
     "pathophysiology": "Impaired biliary copper excretion and impaired incorporation of copper into ceruloplasmin leads to copper accumulation in liver, brain (basal ganglia), cornea (Kayser-Fleischer rings), and kidneys.",
     "classic_presentation": ["hepatitis or cirrhosis in young patient", "Kayser-Fleischer rings (slit lamp exam)", "neurologic symptoms (tremor, dysarthria, dystonia, parkinsonism)", "psychiatric symptoms (depression, personality changes)", "Coombs-negative hemolytic anemia (acute presentation)", "renal tubular dysfunction"],
@@ -298,6 +325,7 @@
   },
   "autoimmune_hepatitis": {
     "category": "hepatic",
+    "disease_importance": 4,
     "epidemiology": "Prevalence ~17 per 100,000. Female predominance (4:1). Type 1 (ANA/anti-SMA positive): any age. Type 2 (anti-LKM1 positive): mainly children/young adults. Often associated with other autoimmune diseases.",
     "pathophysiology": "T-cell mediated destruction of hepatocytes with interface hepatitis on biopsy. Genetic susceptibility (HLA-DR3, DR4) plus environmental triggers. Characterized by elevated IgG and autoantibodies.",
     "classic_presentation": ["fatigue", "jaundice", "arthralgias", "hepatomegaly", "amenorrhea", "acne", "may present as acute hepatitis or insidious chronic disease", "other autoimmune features (thyroiditis, UC, celiac)"],
@@ -309,6 +337,7 @@
   },
   "chronic_kidney_disease": {
     "category": "renal",
+    "disease_importance": 3,
     "epidemiology": "Prevalence ~15% of US adults (37 million). Leading causes: diabetes (44%), hypertension (28%), glomerulonephritis (7%). More common in elderly, African Americans, and those with family history.",
     "pathophysiology": "Progressive loss of nephrons from any cause leads to reduced GFR, retention of uremic toxins, impaired acid-base/electrolyte regulation, and loss of endocrine functions (EPO, active vitamin D). Remaining nephrons hyperfiltrate, accelerating injury. CKD stages by GFR: G1 ≥90, G2 60-89, G3a 45-59, G3b 30-44, G4 15-29, G5 <15.",
     "classic_presentation": ["often asymptomatic until advanced (stage 4-5)", "fatigue", "anorexia", "nausea", "pruritus", "restless legs", "edema", "hypertension", "nocturia (early)", "oliguria (late)", "uremic frost (rare, severe)", "pericarditis (uremia)", "peripheral neuropathy"],
@@ -320,6 +349,7 @@
   },
   "nephrotic_syndrome": {
     "category": "renal",
+    "disease_importance": 3,
     "epidemiology": "Children: minimal change disease most common (77%). Adults: membranous nephropathy, focal segmental glomerulosclerosis (FSGS), diabetic nephropathy. Secondary causes: diabetes, SLE, amyloidosis, medications (NSAIDs).",
     "pathophysiology": "Damaged glomerular filtration barrier (podocyte injury) allows massive protein loss in urine (>3.5 g/day). Hypoalbuminemia reduces oncotic pressure causing edema. Liver compensatory protein synthesis includes lipoproteins (hyperlipidemia) and clotting factors (hypercoagulability). Loss of antithrombin III and immunoglobulins increases thrombosis and infection risk.",
     "classic_presentation": ["periorbital edema (morning)", "dependent edema", "ascites", "pleural effusions", "foamy urine", "weight gain", "fatigue"],
@@ -331,6 +361,7 @@
   },
   "nephritic_syndrome": {
     "category": "renal",
+    "disease_importance": 4,
     "epidemiology": "Post-streptococcal GN: children 5-12 years (most common in developing countries). IgA nephropathy: most common GN worldwide, young males. Lupus nephritis: follows SLE demographics. ANCA vasculitis: older adults.",
     "pathophysiology": "Inflammatory damage to glomeruli causing disruption of glomerular basement membrane. Red blood cells, white blood cells, and protein leak into urine. Decreased GFR causes fluid retention (edema, hypertension) and azotemia. Complement activation and immune complex deposition are common mechanisms.",
     "classic_presentation": ["hematuria (cola/tea-colored urine)", "proteinuria (subnephrotic usually)", "hypertension", "edema", "oliguria", "RBC casts on urinalysis (pathognomonic)"],
@@ -342,6 +373,7 @@
   },
   "renal_tubular_acidosis": {
     "category": "renal",
+    "disease_importance": 3,
     "epidemiology": "Type 1 (distal): autoimmune (Sjogren's), medications (amphotericin B, lithium), hereditary. Type 2 (proximal): Fanconi syndrome, multiple myeloma, carbonic anhydrase inhibitors. Type 4 (hyperkalemic): diabetes, aldosterone deficiency/resistance, ACEi/ARB/K-sparing diuretics.",
     "pathophysiology": "Type 1: impaired distal H+ secretion → inability to acidify urine (pH >5.5), hypokalemia, nephrocalcinosis. Type 2: impaired proximal bicarbonate reabsorption → bicarbonate wasting, hypokalemia. Type 4: aldosterone deficiency/resistance → hyperkalemia, mild acidosis.",
     "classic_presentation": ["non-anion gap metabolic acidosis (normal anion gap)", "Type 1: kidney stones, nephrocalcinosis, growth failure in children", "Type 2: osteomalacia, rickets in children, Fanconi syndrome features", "Type 4: often asymptomatic, mild acidosis with hyperkalemia"],
@@ -353,6 +385,7 @@
   },
   "systemic_lupus_erythematosus": {
     "category": "rheumatologic",
+    "disease_importance": 4,
     "epidemiology": "Prevalence ~20-150 per 100,000. Women:men 9:1. Peak onset 15-45 years. More common and severe in African Americans, Hispanics, Asians. Genetic (HLA-DR2, DR3) + environmental (UV light, infections, estrogen) triggers.",
     "pathophysiology": "Loss of immune tolerance to self-antigens with production of pathogenic autoantibodies (anti-dsDNA, anti-Smith). Immune complex deposition in tissues causes complement activation and inflammation affecting skin, joints, kidneys, serosal surfaces, blood cells, and CNS.",
     "classic_presentation": ["malar (butterfly) rash", "photosensitivity", "oral ulcers", "arthritis (non-erosive)", "serositis (pleuritis, pericarditis)", "proteinuria/nephritis", "seizures/psychosis", "cytopenias", "fatigue", "fever", "Raynaud phenomenon", "alopecia", "discoid rash"],
@@ -364,6 +397,7 @@
   },
   "rheumatoid_arthritis": {
     "category": "rheumatologic",
+    "disease_importance": 3,
     "epidemiology": "Prevalence 0.5-1%. Women:men 3:1. Peak onset 40-60 years. Risk factors: smoking, family history (HLA-DR4), female sex.",
     "pathophysiology": "Autoimmune synovitis with pannus formation causing cartilage and bone erosion. CD4+ T cells, macrophages, and fibroblast-like synoviocytes produce TNF-alpha, IL-1, IL-6 driving chronic inflammation. Citrullinated protein antibodies (ACPA/anti-CCP) are pathogenic.",
     "classic_presentation": ["symmetric polyarthritis (MCP, PIP, wrist, MTP joints)", "morning stiffness >1 hour", "boggy joint swelling", "swan-neck and boutonniere deformities (late)", "ulnar deviation (late)", "rheumatoid nodules", "fatigue", "extra-articular: interstitial lung disease, pericarditis, scleritis, vasculitis"],
@@ -375,6 +409,7 @@
   },
   "tumor_lysis_syndrome": {
     "category": "oncologic_emergency",
+    "disease_importance": 5,
     "epidemiology": "Risk factors: high tumor burden, rapidly proliferating tumors (Burkitt lymphoma highest risk, ALL, AML), high WBC count, pre-existing renal insufficiency, elevated baseline LDH/uric acid. Can be spontaneous or treatment-induced.",
     "pathophysiology": "Rapid lysis of tumor cells releases intracellular contents: potassium (hyperkalemia), phosphorus (hyperphosphatemia → calcium phosphate precipitation → hypocalcemia), nucleic acids (metabolized to uric acid → hyperuricemia → uric acid nephropathy). Acute kidney injury from uric acid and calcium phosphate crystal deposition in tubules.",
     "classic_presentation": ["nausea/vomiting", "diarrhea", "muscle cramps/tetany (hypocalcemia)", "cardiac arrhythmias (hyperkalemia)", "seizures", "oliguria/anuria", "occurs 12-72 hours after chemotherapy initiation"],
@@ -386,6 +421,7 @@
   },
   "hypercalcemia_of_malignancy": {
     "category": "oncologic_emergency",
+    "disease_importance": 5,
     "epidemiology": "Occurs in 10-30% of cancer patients. Most common: squamous cell cancers (lung, head/neck), breast, renal, multiple myeloma. PTHrP-mediated (80%), osteolytic metastases (20%), 1,25-dihydroxyvitamin D production (lymphomas, <1%).",
     "pathophysiology": "PTHrP mimics PTH action: increases bone resorption and renal calcium reabsorption. Unlike primary hyperparathyroidism, PTH itself is suppressed. In myeloma/breast: direct bone destruction by metastases with local cytokine release. In lymphomas: tumor 1,25-dihydroxyvitamin D production.",
     "classic_presentation": ["confusion/lethargy", "polyuria/polydipsia", "constipation", "nausea/vomiting", "bone pain", "weakness", "shortened QT interval", "coma (severe)", "usually indicates advanced/poor prognosis malignancy"],
@@ -397,6 +433,7 @@
   },
   "acute_myocardial_infarction": {
     "category": "cardiac",
+    "disease_importance": 5,
     "epidemiology": "Leading cause of death worldwide. Risk factors: age (men >45, women >55), hypertension, diabetes, smoking, dyslipidemia, family history, obesity. Annual incidence ~550,000 new + ~200,000 recurrent in US.",
     "pathophysiology": "STEMI: complete thrombotic occlusion of coronary artery, usually from ruptured atherosclerotic plaque. NSTEMI: subtotal occlusion or microembolization. Myocardial necrosis from prolonged ischemia. Type 1 MI (plaque rupture) vs Type 2 MI (supply-demand mismatch).",
     "classic_presentation": ["substernal chest pressure/tightness", "radiation to left arm, jaw, back", "diaphoresis", "dyspnea", "nausea/vomiting", "sense of doom", "atypical: women/diabetics/elderly may present with fatigue, dyspnea, or epigastric discomfort without chest pain"],
@@ -408,6 +445,7 @@
   },
   "heart_failure": {
     "category": "cardiac",
+    "disease_importance": 4,
     "epidemiology": "Prevalence 6.2 million US adults. Incidence increases with age. HFrEF (EF ≤40%): CAD most common cause. HFpEF (EF ≥50%): hypertension, obesity, aging. Risk factors: hypertension, CAD, diabetes, obesity, valvular disease, cardiotoxic drugs.",
     "pathophysiology": "HFrEF: reduced contractility (systolic failure) from myocardial damage. Neurohormonal activation (RAAS, sympathetic) initially compensatory but ultimately maladaptive (remodeling, fibrosis). HFpEF: impaired relaxation/filling (diastolic failure) from myocardial stiffness. Both lead to congestion and inadequate cardiac output.",
     "classic_presentation": ["dyspnea on exertion", "orthopnea", "paroxysmal nocturnal dyspnea", "lower extremity edema", "fatigue", "elevated JVP", "S3 gallop (HFrEF)", "hepatojugular reflux", "crackles", "weight gain", "abdominal distension (ascites)"],
@@ -419,6 +457,7 @@
   },
   "myocarditis": {
     "category": "cardiac",
+    "disease_importance": 5,
     "epidemiology": "Often underdiagnosed. Most common cause: viral (coxsackievirus B, adenovirus, parvovirus B19, SARS-CoV-2). Also autoimmune, drug-induced (immune checkpoint inhibitors), giant cell myocarditis (fulminant). Young adults, male predominance.",
     "pathophysiology": "Viral myocardial invasion with direct cytotoxicity and/or immune-mediated myocyte damage. Inflammation causes myocyte necrosis, edema, and potential electrical instability. May progress to dilated cardiomyopathy. Giant cell myocarditis: aggressive lymphocytic infiltration with multinucleated giant cells.",
     "classic_presentation": ["recent viral prodrome (1-2 weeks prior)", "chest pain (sharp, pleuritic — pericardial involvement)", "dyspnea", "palpitations", "heart failure symptoms", "syncope", "sudden cardiac death (arrhythmic)"],
@@ -430,6 +469,7 @@
   },
   "rhabdomyolysis": {
     "category": "metabolic_toxic",
+    "disease_importance": 5,
     "epidemiology": "Causes: trauma/crush injury, extreme exertion, statins + fibrates, seizures, ischemia (compartment syndrome), drugs/toxins (cocaine, alcohol), hyperthermia (NMS, malignant hyperthermia), infections, metabolic myopathies. ~26,000 cases/year in US.",
     "pathophysiology": "Skeletal muscle necrosis releases intracellular contents: CK (diagnostic marker), myoglobin (nephrotoxic), potassium, phosphorus, uric acid, LDH. Myoglobin precipitates in renal tubules causing pigment nephropathy. Acute kidney injury from tubular obstruction, direct tubular toxicity, and renal vasoconstriction.",
     "classic_presentation": ["muscle pain/tenderness/swelling", "dark brown urine (myoglobinuria — dipstick positive for blood but no RBCs on microscopy)", "weakness", "nausea/vomiting", "fever", "altered mental status (severe)", "oliguria/anuria (AKI)", "compartment syndrome (tight swollen limb)"],
@@ -441,6 +481,7 @@
   },
   "methanol_ethylene_glycol_poisoning": {
     "category": "metabolic_toxic",
+    "disease_importance": 5,
     "epidemiology": "Methanol: found in windshield washer fluid, fuel additives, moonshine. Ethylene glycol: found in antifreeze, de-icing solutions. Both can be ingested accidentally (children) or intentionally (suicide, alcohol substitution). Lethal dose: methanol ~1 mL/kg, ethylene glycol ~1.5 mL/kg.",
     "pathophysiology": "Parent compounds have low toxicity. Alcohol dehydrogenase converts them to toxic metabolites. Methanol → formaldehyde → formic acid (retinal toxicity, optic nerve damage). Ethylene glycol → glycolaldehyde → glycolic acid → oxalic acid (renal tubular damage, calcium oxalate crystal deposition). Both cause severe high anion gap metabolic acidosis.",
     "classic_presentation": ["Methanol: visual disturbances (blurred vision, blindness), headache, nausea/vomiting, abdominal pain, CNS depression", "Ethylene glycol: stages — CNS (inebriation, 0-12h) → cardiopulmonary (tachycardia, pulmonary edema, 12-24h) → renal (flank pain, oliguria, AKI, 24-72h)", "Both: inebriation early, then severe metabolic acidosis"],
@@ -452,6 +493,7 @@
   },
   "lactic_acidosis": {
     "category": "metabolic_toxic",
+    "disease_importance": 5,
     "epidemiology": "Type A (hypoxic, most common): shock, sepsis, cardiac arrest, severe anemia, CO poisoning, mesenteric ischemia. Type B (non-hypoxic): liver failure, malignancy (Warburg effect), medications (metformin, NRTIs, linezolid), thiamine deficiency, mitochondrial myopathies. D-lactic acidosis: short bowel syndrome.",
     "pathophysiology": "Type A: tissue hypoperfusion or hypoxemia causes anaerobic glycolysis with pyruvate reduction to lactate. Normal lactate production ~1500 mmol/day, cleared by liver/kidneys. In shock, production exceeds clearance. Type B: impaired mitochondrial function or hepatic clearance without tissue hypoxia.",
     "classic_presentation": ["tachypnea/Kussmaul breathing (compensatory)", "signs of underlying cause (shock, sepsis)", "altered mental status", "hypotension", "cool/mottled extremities (Type A)"],
@@ -463,6 +505,7 @@
   },
   "sepsis": {
     "category": "infectious",
+    "disease_importance": 5,
     "epidemiology": "1.7 million cases/year in US. Mortality 15-30% (sepsis), 40-50% (septic shock). Risk factors: extremes of age, immunosuppression, diabetes, chronic organ disease, invasive devices, recent surgery. Most common sources: pneumonia (35%), intra-abdominal (25%), UTI (15%).",
     "pathophysiology": "Dysregulated host immune response to infection causing organ dysfunction. Pathogen-associated molecular patterns activate innate immunity → cytokine storm (TNF, IL-1, IL-6) → endothelial dysfunction → vasodilation (distributive shock) → microvascular thrombosis → organ ischemia. Coagulopathy (DIC) may develop.",
     "classic_presentation": ["fever or hypothermia", "tachycardia", "tachypnea", "hypotension (septic shock)", "altered mental status", "warm extremities early (vasodilation) → cold/mottled late", "source-specific: cough (pneumonia), abdominal pain (intra-abdominal), dysuria (UTI)", "rigors"],
@@ -474,6 +517,7 @@
   },
   "infective_endocarditis": {
     "category": "infectious",
+    "disease_importance": 5,
     "epidemiology": "Incidence 3-10 per 100,000/year. Risk factors: prosthetic valves, previous endocarditis, congenital heart disease, IV drug use (right-sided), poor dentition, hemodialysis. Causative organisms: Staphylococcus aureus (most common overall and in IVDU), viridans streptococci (native valve), enterococci, HACEK organisms.",
     "pathophysiology": "Bacteria adhere to damaged or prosthetic endocardium forming infected vegetations (fibrin-platelet-bacterial mass). Continuous bacteremia. Complications from: local tissue destruction (valve destruction, abscess), embolic events (stroke, septic pulmonary emboli, mycotic aneurysms), immune complex deposition (glomerulonephritis, vasculitis).",
     "classic_presentation": ["fever (most common)", "new or changing murmur", "constitutional symptoms (fatigue, malaise, weight loss, night sweats)", "embolic phenomena: stroke, Janeway lesions (painless palmar/plantar macules), splinter hemorrhages", "immunologic phenomena: Osler nodes (painful fingertip nodules), Roth spots (retinal hemorrhages), glomerulonephritis", "splenomegaly", "IV drug use: right-sided (tricuspid) with septic pulmonary emboli"],
@@ -485,6 +529,7 @@
   },
   "acute_pancreatitis": {
     "category": "gastrointestinal",
+    "disease_importance": 4,
     "epidemiology": "Incidence ~35 per 100,000/year (increasing). Causes: gallstones (40%), alcohol (30%), hypertriglyceridemia (>1000 mg/dL), ERCP, medications (azathioprine, valproic acid), idiopathic (15-25%). Peak age 30-70.",
     "pathophysiology": "Premature activation of pancreatic enzymes (trypsinogen → trypsin) within acinar cells causing autodigestion. Inflammatory cascade leads to local (peripancreatic necrosis, fluid collections) and systemic (SIRS, organ failure) complications. Severe pancreatitis: necrotizing with multi-organ failure.",
     "classic_presentation": ["severe epigastric pain radiating to back", "worse with eating", "better sitting up and leaning forward", "nausea/vomiting", "abdominal distension", "tachycardia", "fever", "Cullen sign (periumbilical ecchymosis) and Grey Turner sign (flank ecchymosis) in severe hemorrhagic pancreatitis"],
@@ -496,6 +541,7 @@
   },
   "celiac_disease": {
     "category": "gastrointestinal",
+    "disease_importance": 3,
     "epidemiology": "Prevalence ~1% worldwide. Peak diagnosis: childhood and 30-50 years. Strongly associated with HLA-DQ2 (95%) and HLA-DQ8. Risk factors: family history (10% first-degree relatives), other autoimmune diseases (type 1 diabetes, thyroiditis, IgA deficiency).",
     "pathophysiology": "Immune-mediated enteropathy triggered by gluten (gliadin) in genetically susceptible individuals. Tissue transglutaminase deamidates gliadin, creating neoepitopes presented by HLA-DQ2/DQ8 to T cells. Resulting immune response damages small bowel villous architecture (villous atrophy, crypt hyperplasia), causing malabsorption.",
     "classic_presentation": ["chronic diarrhea", "steatorrhea", "abdominal bloating/distension", "weight loss", "fatigue", "iron deficiency anemia (refractory to oral iron)", "osteoporosis", "dermatitis herpetiformis (pathognomonic skin rash)", "failure to thrive (children)", "many patients have subtle or extra-intestinal symptoms only"],
@@ -507,6 +553,7 @@
   },
   "preclinical_sle": {
     "category": "rheumatologic",
+    "disease_importance": 3,
     "epidemiology": "Preclinical phase may precede full SLE by years. Same demographics as SLE: women 9:1, peak 15-45, more common in African Americans, Hispanics, Asians. ANA positivity may precede clinical disease by >5 years.",
     "pathophysiology": "Early autoimmune dysregulation with autoantibody production and subtle complement consumption before sufficient immune complex deposition to cause overt organ damage. Characterized by individually borderline lab values that collectively suggest evolving autoimmunity.",
     "classic_presentation": ["fatigue", "arthralgias without frank arthritis", "intermittent rash", "Raynaud phenomenon", "subtle hair thinning", "nonspecific constitutional symptoms", "may be entirely asymptomatic with incidental lab findings"],
@@ -518,6 +565,7 @@
   },
   "nephrotic_syndrome_minimal_change": {
     "category": "renal",
+    "disease_importance": 3,
     "epidemiology": "Most common cause of nephrotic syndrome in children (77%). Less common in adults (10-15%). Associated with atopy, NSAIDs, lithium, Hodgkin lymphoma. Peak age in children: 2-6 years.",
     "pathophysiology": "Podocyte foot process effacement (seen on electron microscopy) without inflammatory changes on light microscopy. Likely T-cell mediated circulating permeability factor damages podocyte slit diaphragms. Selective proteinuria (primarily albumin).",
     "classic_presentation": ["sudden onset edema (periorbital, peripheral)", "foamy urine", "weight gain", "fatigue", "often preceded by URI or allergic reaction", "ascites in severe cases"],
@@ -529,6 +577,7 @@
   },
   "gout": {
     "category": "rheumatologic",
+    "disease_importance": 2,
     "epidemiology": "Prevalence ~4% of US adults. Men >> women (until menopause). Peak onset 40-60 in men, post-menopause in women. Risk factors: hyperuricemia, obesity, alcohol (beer), purine-rich diet, CKD, diuretics, organ transplant (cyclosporine).",
     "pathophysiology": "Monosodium urate (MSU) crystal deposition in joints from chronic hyperuricemia (serum urate >6.8 mg/dL). Crystal phagocytosis by neutrophils triggers NLRP3 inflammasome activation and IL-1beta release causing intense acute inflammation. Chronic tophaceous gout: granulomatous inflammation around crystal deposits.",
     "classic_presentation": ["acute onset monoarthritis (first MTP most classic = podagra)", "excruciating pain, swelling, erythema", "nocturnal onset", "peak intensity at 12-24 hours", "self-limited (resolves in 7-14 days untreated)", "fever may be present", "tophi in chronic disease (ear helix, olecranon bursa, Achilles tendon)"],
@@ -540,6 +589,7 @@
   },
   "pulmonary_embolism": {
     "category": "cardiovascular",
+    "disease_importance": 5,
     "epidemiology": "Third most common cardiovascular cause of death. Incidence ~60-70 per 100,000/year. Risk factors (Virchow's triad): stasis (immobilization, long travel), endothelial injury (surgery, trauma), hypercoagulability (cancer, OCP, pregnancy, factor V Leiden, antiphospholipid syndrome).",
     "pathophysiology": "Thrombus (usually from deep leg veins) embolizes to pulmonary vasculature. Obstruction increases pulmonary vascular resistance and right ventricular afterload. Large PE: acute right heart failure and hemodynamic collapse. V/Q mismatch causes hypoxemia. In situ thrombosis can also occur.",
     "classic_presentation": ["acute dyspnea (most common)", "pleuritic chest pain", "tachycardia", "tachypnea", "hypoxemia", "hemoptysis (pulmonary infarction)", "syncope (massive PE)", "unilateral leg swelling (concurrent DVT)", "may be asymptomatic"],
@@ -551,6 +601,7 @@
   },
   "deep_vein_thrombosis": {
     "category": "cardiovascular",
+    "disease_importance": 4,
     "epidemiology": "Incidence ~100 per 100,000/year. Same risk factors as PE (Virchow's triad). ~50% of proximal DVTs will embolize to lungs if untreated. Recurrence rate 30% at 10 years.",
     "pathophysiology": "Thrombus formation in deep veins, usually lower extremities (iliac, femoral, popliteal). Initiated by venous stasis, endothelial injury, or hypercoagulable state. Proximal DVT (above knee) carries higher PE risk than distal (calf) DVT.",
     "classic_presentation": ["unilateral leg swelling", "pain/tenderness along deep veins", "warmth", "erythema", "positive Homans sign (unreliable)", "palpable cord", "may be asymptomatic", "phlegmasia cerulea dolens (massive — blue, painful, swollen leg with arterial compromise)"],

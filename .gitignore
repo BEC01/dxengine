@@ -4,7 +4,6 @@ __pycache__/
 dist/
 build/
 .venv/
-*.lock
 
 # Runtime state and generated reports
 state/sessions/
@@ -13,3 +12,10 @@ sandbox/
 
 # Environment
 .env
+
+# User-specific settings (keep .mcp.json.example as template)
+.mcp.json
+.claude/settings.local.json
+
+# Backup files
+*.bak

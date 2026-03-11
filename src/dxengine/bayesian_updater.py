@@ -145,22 +145,65 @@ def update_all(
 def normalize_posteriors(
     hypotheses: list[Hypothesis],
 ) -> list[Hypothesis]:
-    """Normalize posterior probabilities to sum to 1.0.
+    """Normalize posterior probabilities with graduated floors.
 
-    Preserves a minimum 5 % "other" mass for undiscovered diagnoses.
+    Diseases with higher importance get higher probability floors:
+    - importance 5: 8% floor (life-threatening)
+    - importance 4: 5% floor (serious if delayed)
+    - importance 3: 2% floor (significant morbidity)
+    - importance 2-1: no floor
+
+    Preserves a minimum 5% "other" mass for undiscovered diagnoses.
     """
     if not hypotheses:
         return []
 
+    illness_scripts = load_illness_scripts()
+
     OTHER_RESERVE = 0.05
     available = 1.0 - OTHER_RESERVE
 
+    # Determine floors based on disease importance
+    FLOOR_MAP = {5: 0.08, 4: 0.05, 3: 0.02}
+    floors: list[float] = []
+    for h in hypotheses:
+        script = illness_scripts.get(h.disease, {})
+        importance = script.get("disease_importance", 0)
+        floors.append(FLOOR_MAP.get(importance, 0.0))
+
+    # If total floors exceed available mass, scale all floors down proportionally
+    total_floors = sum(floors)
+    if total_floors > available:
+        scale = available / total_floors
+        floors = [f * scale for f in floors]
+
+    # First normalize raw probabilities to the available mass
     raw = [max(h.posterior_probability, 1e-10) for h in hypotheses]
     total = sum(raw)
+    scaled = [(r / total) * available for r in raw]
+
+    # Apply floors — boost any hypothesis below its floor
+    total_floor_boost = 0.0
+    for i, (s, f) in enumerate(zip(scaled, floors)):
+        if s < f:
+            total_floor_boost += f - s
+            scaled[i] = f
+
+    # Re-normalize non-floored hypotheses to give back the borrowed mass
+    if total_floor_boost > 0:
+        non_floored_total = sum(
+            s for i, s in enumerate(scaled) if scaled[i] > floors[i]
+        )
+        if non_floored_total > 0:
+            reduction_factor = 1.0 - total_floor_boost / non_floored_total
+            reduction_factor = max(reduction_factor, 0.01)  # safety
+            for i in range(len(scaled)):
+                if scaled[i] > floors[i]:
+                    scaled[i] *= reduction_factor
 
     normalized = [h.model_copy(deep=True) for h in hypotheses]
     for i, h in enumerate(normalized):
-        h.posterior_probability = (raw[i] / total) * available
+        h.posterior_probability = scaled[i]
         h.log_odds = probability_to_log_odds(h.posterior_probability)
 
     return normalized

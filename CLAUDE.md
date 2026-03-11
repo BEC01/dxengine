@@ -17,12 +17,12 @@ uv run pytest tests/ -v
 
 ## Project Structure
 
-- `src/dxengine/` — Core analysis engine (models, preprocessor, lab analyzer, finding mapper, pattern detector, Bayesian updater, info gain, convergence)
-- `data/` — Reference data (lab ranges, disease patterns, illness scripts, likelihood ratios, LOINC mappings)
-- `.claude/skills/diagnose/` — /diagnose skill with orchestrator and CLI scripts
-- `.claude/agents/` — Specialized diagnostic agents (intake, literature, lab-pattern, hypothesis, adversarial)
+- `src/dxengine/` — Core analysis engine (models, preprocessor, lab analyzer, finding mapper, pattern detector, Bayesian updater, info gain, convergence, **pipeline**, **verifier**)
+- `data/` — Reference data (lab ranges, disease patterns, illness scripts, likelihood ratios, LOINC mappings, finding rules with importance)
+- `.claude/skills/diagnose/` — /diagnose skill with v3 hybrid orchestrator and CLI scripts
+- `.claude/agents/` — Specialized diagnostic agents (intake, **diagnostician**, literature, adversarial)
 - `mcp_servers/` — Custom MCP servers for lab references and medical knowledge base (PubMed replaced by external MCPs)
-- `tests/` — Unit tests and clinical test fixtures
+- `tests/` — Unit tests, clinical test fixtures, pipeline equivalence tests, verifier tests
 - `tests/eval/` — Evaluation harness: vignette generator, runner, scorer, reporter
 
 ## Commands
@@ -41,11 +41,9 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 ## Agents
 
 - `dx-intake` — Structures raw patient data into PatientProfile
-- `dx-preprocessor` — Normalizes test names, converts units, validates values, deduplicates labs
-- `dx-literature` — Searches medical literature for evidence
-- `dx-lab-pattern` — Runs statistical lab pattern analysis
-- `dx-hypothesis` — Manages differential with Bayesian reasoning
-- `dx-adversarial` — Challenges hypotheses to prevent cognitive biases
+- `dx-diagnostician` — Primary LLM diagnostic reasoning (replaces dx-hypothesis; reasons from full clinical picture + engine briefing)
+- `dx-literature` — Searches medical literature for evidence (returns LiteratureFinding objects)
+- `dx-adversarial` — Challenges hypotheses with cognitive bias checklist + self-reflection
 
 ## Key Conventions
 
@@ -53,7 +51,7 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 - State is managed via JSON files in `state/sessions/{id}/`
 - Scripts in `.claude/skills/diagnose/scripts/` are thin CLI wrappers around src modules
 - Probabilities use log-odds internally for numerical stability
-- "Can't miss" diagnoses maintain minimum 5% probability floor
+- Graduated probability floors based on disease_importance: 5→8%, 4→5%, 3→2%, 1-2→none
 - System always outputs a differential (never a single diagnosis)
 - Clinical correlation is always recommended
 - Finding mapper uses subsumption to prevent double-counting (e.g., ferritin<15 suppresses ferritin<45)
@@ -61,36 +59,54 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 - Collectively-abnormal detection: weighted directional sum S = Σ(√w_i · z_i · sign_i), test statistic T = S²/Σw_i, p-value from chi²(df=1). See memory/v2_roadmap.md for details.
 - REJECTED integrations (do NOT re-propose): LOINC2HPO+PyHPO pipeline, Mahalanobis distance, formal EIG→literature pipeline. See memory/rejected_integrations.md for detailed reasons.
 
-## Architecture
+## Architecture (v3 Hybrid)
 
 ```
-/diagnose invocation
-    |
-Phase 1: Intake -> structure patient data -> preprocess labs -> analyze labs
-    |
-Phase 2: Loop (max 5 iterations)
-    |-- Pattern detection (known + collectively abnormal)
-    |-- Finding mapping (lab values → LR finding keys via finding_rules.json)
-    |-- Literature search (evidence for/against)
-    |-- Bayesian update (posterior probabilities)
-    |-- Information gain (recommended tests)
-    |-- Adversarial challenge (bias check)
-    +-- Convergence check (stability + concentration)
-    |
-Phase 3: Output -> ranked differential + evidence chains + recommended tests
+Patient Data (full clinical picture)
+    │
+PHASE 0: INTAKE + TRIAGE
+    Claude structures data → classify STANDARD | COMPLEX
+    │
+PHASE 1: DETERMINISTIC PIPELINE (run_pipeline.py, ~5ms)
+    preprocessor → lab_analyzer → pattern_detector
+    → finding_mapper → bayesian_updater → info_gain
+    Output: StructuredBriefing
+    │
+PHASE 2: LLM DIAGNOSTIC REASONING
+    ┌─ Diagnostician (1st pass) ─ full clinical reasoning
+    │  with StructuredBriefing as context
+    │
+    ├─ [COMPLEX] Literature Agent → raw findings
+    ├─ [COMPLEX] Diagnostician (2nd pass) with literature
+    │
+    ├─ Verification (deterministic) → check lab claims + LR sources
+    │
+    ├─ [COMPLEX] Adversarial + Self-Reflection
+    │  (can block convergence → loop back, max 3 iterations)
+    │
+PHASE 3: OUTPUT
+    Ranked differential + evidence chains + verification annotations
+    + collectively-abnormal findings + divergence flags + recommended tests
 ```
 
-## V2 Roadmap
+STANDARD path: Phase 0 → 1 → Diagnostician → Verify → Output
+COMPLEX path: Phase 0 → 1 → Diagnostician → Literature → Diagnostician(2) → Verify → Adversarial → Output
 
-See `memory/v2_roadmap.md` for the full implementation roadmap. Priority order:
-1. ~~Fix collectively-abnormal detection (weighted directional projection)~~ — DONE (directional projection + S>0 gate)
-1b. ~~Build evaluation harness + /improve skill~~ — DONE (130 vignettes, baseline score=0.615)
-2. ~~Improve dx-literature.md prompt (uncertainty-directed search)~~ — DONE
-3. ~~Structured adversarial bias checklist~~ — DONE
-4. Expand curated data files (patterns 18→100, LRs 169→500+) — days-weeks
-5. Add published pairwise lab correlations — hours
-6. Remaining system analysis items (StateManager, log-transform Z-scores, tests)
+## V3 — Hybrid Architecture (CURRENT)
 
+v3 inverts control: Claude is the primary diagnostician, deterministic engine is verification/safety layer.
+- Consolidated pipeline module (`pipeline.py`) replaces 5+ sequential script calls
+- Verifier module (`verifier.py`) checks LLM lab claims against engine z-scores, caps uncurated LRs
+- `dx-diagnostician` agent replaces `dx-hypothesis` (full clinical reasoning, not just Bayesian)
+- STANDARD/COMPLEX triage routes simple cases through fast path
+- Graduated probability floors based on disease importance (5→8%, 4→5%, 3→2%)
+- Self-reflection in adversarial agent (DeepRare pattern)
+- Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
+- 310 tests passing, eval score >= 0.50 with no fixture regressions
+
+## Prior Roadmap (v2, completed)
+
+See `memory/v2_roadmap.md` for the v2 roadmap (all items completed or superseded by v3).
 See `memory/rejected_integrations.md` for integrations that were analyzed and rejected.
 
 ## Data Files
@@ -101,7 +117,7 @@ See `memory/rejected_integrations.md` for integrations that were analyzed and re
 | disease_lab_patterns.json | Disease-lab signatures | 18 patterns |
 | illness_scripts.json | Structured illness scripts | 50+ diseases |
 | likelihood_ratios.json | LR+/LR- for finding-disease pairs | 200+ entries |
-| finding_rules.json | Lab-to-finding mapping rules (single, composite, computed) | 79 rules |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed) | 80 rules |
 | loinc_mappings.json | LOINC code <-> common name mappings | 80+ codes |
 
 ## MCP Servers

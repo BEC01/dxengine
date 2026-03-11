@@ -1,22 +1,31 @@
 """DxEngine: Medical Diagnostic Reasoning Engine."""
 
 from dxengine.models import (
+    ComplexityLevel,
     DiagnosticState,
     Evidence,
     FindingType,
+    FindingSummary,
     Hypothesis,
     HypothesisCategory,
+    LabClaimCheck,
     LabPanel,
     LabPatternMatch,
+    LabSummary,
     LabTrend,
     LabValue,
+    LiteratureFinding,
     LoopIteration,
+    LRSourceCheck,
     PatientProfile,
     ProblemRepresentation,
+    RatioResult,
     RecommendedTest,
     SemanticQualifier,
     Severity,
     Sex,
+    StructuredBriefing,
+    VerificationResult,
 )
 from dxengine.lab_analyzer import analyze_panel, analyze_single_lab, compute_z_score, normalize_test_name
 from dxengine.pattern_detector import (
@@ -34,24 +43,35 @@ from dxengine.info_gain import current_entropy, suggest_tests
 from dxengine.convergence import should_converge, should_widen_search
 from dxengine.preprocessor import preprocess_patient_labs
 from dxengine.finding_mapper import FindingMapper, map_labs_to_findings
+from dxengine.pipeline import run_phase1_pipeline
+from dxengine.verifier import run_verification, verify_lab_claims, verify_lr_sources
 
 __all__ = [
+    "ComplexityLevel",
     "DiagnosticState",
     "Evidence",
     "FindingType",
+    "FindingSummary",
     "Hypothesis",
     "HypothesisCategory",
+    "LabClaimCheck",
     "LabPanel",
     "LabPatternMatch",
+    "LabSummary",
     "LabTrend",
     "LabValue",
+    "LiteratureFinding",
     "LoopIteration",
+    "LRSourceCheck",
     "PatientProfile",
     "ProblemRepresentation",
+    "RatioResult",
     "RecommendedTest",
     "SemanticQualifier",
     "Severity",
     "Sex",
+    "StructuredBriefing",
+    "VerificationResult",
     "analyze_panel",
     "analyze_single_lab",
     "compute_z_score",
@@ -70,4 +90,8 @@ __all__ = [
     "preprocess_patient_labs",
     "FindingMapper",
     "map_labs_to_findings",
+    "run_phase1_pipeline",
+    "run_verification",
+    "verify_lab_claims",
+    "verify_lr_sources",
 ]

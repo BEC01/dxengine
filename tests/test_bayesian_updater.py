@@ -179,6 +179,31 @@ class TestNormalizePosteriors:
         # log_odds should be updated (not zero)
         assert normalized[0].log_odds != 0.0
 
+    def test_graduated_floors_applied(self):
+        """Importance-5 diseases should get 8% floor."""
+        hypotheses = [
+            Hypothesis(disease="hypothyroidism", posterior_probability=0.8),  # imp 3
+            Hypothesis(disease="pulmonary_embolism", posterior_probability=0.01),  # imp 5
+        ]
+        normalized = normalize_posteriors(hypotheses)
+        pe = next(h for h in normalized if h.disease == "pulmonary_embolism")
+        # PE (importance 5) should have at least 8% floor
+        assert pe.posterior_probability >= 0.08 - 0.001
+
+    def test_floor_overflow_capped(self):
+        """When many high-importance diseases exist, floors must not exceed available mass."""
+        # Use 16 importance-5 diseases (floors would sum to 1.28 without cap)
+        import json
+        from pathlib import Path
+        scripts = json.loads((Path(__file__).parent.parent / "data" / "illness_scripts.json").read_text())
+        imp5 = [d for d in scripts if scripts[d].get("disease_importance") == 5]
+        assert len(imp5) >= 12, "Need enough importance-5 diseases for this test"
+
+        hypotheses = [Hypothesis(disease=d, posterior_probability=0.01) for d in imp5]
+        normalized = normalize_posteriors(hypotheses)
+        total = sum(h.posterior_probability for h in normalized)
+        assert total <= 0.96, f"Posterior sum {total} exceeds 0.96 (floor overflow)"
+
 
 # ── rank_hypotheses ─────────────────────────────────────────────────────────
 

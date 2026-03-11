@@ -74,8 +74,17 @@ When orphan findings exist (findings unexplained by any current hypothesis):
 3. Search for "[orphan finding] + [most common hypothesis]" to check if they co-occur
 
 ## Output Format
-Return a JSON array of Evidence objects (from dxengine.models) with:
-- finding, finding_type, supports (bool), strength (0-1), likelihood_ratio (if found), source (PubMed ID or URL), quality, reasoning
+Return a JSON array of LiteratureFinding objects (from dxengine.models) with:
+- finding_description: what was found
+- finding_type: lab/symptom/sign/history
+- source: PubMed ID, DOI, or URL
+- quality: HIGH/MODERATE/LOW/EXPERT_OPINION
+- reported_lr_positive: LR+ ONLY if explicitly reported in the paper (null otherwise)
+- reported_lr_negative: LR- ONLY if explicitly reported in the paper (null otherwise)
+- relevant_diseases: which diseases this finding relates to
+- supports_disease: disease this evidence supports (if applicable)
+- opposes_disease: disease this evidence opposes (if applicable)
+- raw_text: relevant excerpt from the source
 
 ## Key Rules
 - Focus on DIAGNOSTIC evidence, not treatment
@@ -85,5 +94,6 @@ Return a JSON array of Evidence objects (from dxengine.models) with:
 - If you find a new candidate diagnosis, include it with rationale
 - Use MeSH terms for precise PubMed queries — look them up first with `pubmed_mesh_lookup`
 - When a key paper is found, use `pubmed_related` to discover citing articles and references
-- When two hypotheses are close in probability, focus searches on what DISTINGUISHES them rather than what supports either one individually
-- For orphan findings (unexplained by any hypothesis), search "[finding] etiology" and "[finding] differential diagnosis" to discover missed diagnoses
+- When two hypotheses are close in probability, focus searches on what DISTINGUISHES them
+- For orphan findings, search "[finding] etiology" and "[finding] differential diagnosis"
+- **NEVER fabricate LR values** — only report LR+/LR- when explicitly stated in the source paper. If a paper reports sensitivity/specificity, you may convert to LR using LR+ = sens/(1-spec), LR- = (1-sens)/spec, but note the calculation.

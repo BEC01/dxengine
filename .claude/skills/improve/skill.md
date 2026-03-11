@@ -19,7 +19,6 @@ Each cycle: analyze failures → propose data fix → evaluate → auto-merge if
 
 1. Ensure you're on `master` branch:
    ```bash
-   cd C:/Users/berna/claude-work/dxengine
    git checkout master 2>/dev/null || true
    ```
 
