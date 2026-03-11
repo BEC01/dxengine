@@ -1164,5 +1164,43 @@
       "hyperthyroidism": { "lr_positive": 5.0, "lr_negative": 0.45 },
       "hypothyroidism": { "lr_positive": 3.0, "lr_negative": 0.60 }
     }
+  },
+  "cortisol_am_low": {
+    "description": "Morning cortisol below lower limit of normal (fallback finding)",
+    "diseases": {
+      "addison_disease": { "lr_positive": 10.0, "lr_negative": 0.15 },
+      "secondary_adrenal_insufficiency": { "lr_positive": 8.0, "lr_negative": 0.20 }
+    }
+  },
+  "adrenocorticotropic_hormone_elevated": {
+    "description": "ACTH elevated above upper limit of normal, suggesting primary adrenal insufficiency",
+    "diseases": {
+      "addison_disease": { "lr_positive": 15.0, "lr_negative": 0.10 },
+      "congenital_adrenal_hyperplasia": { "lr_positive": 8.0, "lr_negative": 0.25 }
+    }
+  },
+  "glucose_low": {
+    "description": "Blood glucose below lower limit of normal (hypoglycemia)",
+    "diseases": {
+      "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.70 },
+      "insulinoma": { "lr_positive": 10.0, "lr_negative": 0.20 },
+      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.2 }
+    }
+  },
+  "eosinophils_absolute_elevated": {
+    "description": "Absolute eosinophil count above upper limit of normal",
+    "diseases": {
+      "addison_disease": { "lr_positive": 4.0, "lr_negative": 0.50 },
+      "parasitic_infection": { "lr_positive": 5.0, "lr_negative": 0.30 },
+      "allergic_conditions": { "lr_positive": 3.0, "lr_negative": 0.50 }
+    }
+  },
+  "blood_urea_nitrogen_elevated": {
+    "description": "BUN above upper limit of normal, suggesting prerenal azotemia or renal dysfunction",
+    "diseases": {
+      "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.25 },
+      "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
+      "heart_failure": { "lr_positive": 2.5, "lr_negative": 0.60 }
+    }
   }
 }
