@@ -276,7 +276,8 @@
     "description": "Parathyroid hormone above 65 pg/mL",
     "diseases": {
       "primary_hyperparathyroidism": { "lr_positive": 10.0, "lr_negative": 0.10 },
-      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.35 }
+      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "hyperthyroidism": { "lr_positive": 0.1, "lr_negative": 1.5 }
     }
   },
   "alt_greater_than_10x_uln": {
