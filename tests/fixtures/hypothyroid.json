@@ -1,0 +1,36 @@
+{
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "Fatigue, weight gain, and constipation for 4 months",
+    "symptoms": ["fatigue", "weight gain", "constipation", "cold intolerance", "dry skin", "hair loss", "depression"],
+    "signs": ["bradycardia", "periorbital edema", "dry skin", "delayed relaxation of deep tendon reflexes"],
+    "medical_history": [],
+    "medications": [],
+    "family_history": ["mother with hypothyroidism"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Thyroid + Metabolic",
+        "values": [
+          {"test_name": "thyroid_stimulating_hormone", "value": 12.5, "unit": "mIU/L"},
+          {"test_name": "free_thyroxine", "value": 0.6, "unit": "ng/dL"},
+          {"test_name": "total_cholesterol", "value": 280.0, "unit": "mg/dL"},
+          {"test_name": "creatine_kinase", "value": 350.0, "unit": "U/L"},
+          {"test_name": "lactate_dehydrogenase", "value": 250.0, "unit": "U/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 55,
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 85,
+      "temperature": 36.2
+    }
+  },
+  "expected_diagnosis": "hypothyroidism",
+  "expected_in_top_3": ["hypothyroidism"],
+  "expected_patterns": ["hypothyroidism"],
+  "description": "Classic hypothyroidism: 45-year-old female with fatigue, weight gain, constipation, cold intolerance, dry skin, and bradycardia. Labs show elevated TSH, low free T4, elevated cholesterol, elevated CK, and mildly elevated LDH."
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dxengine"
+version = "0.1.0"
+description = "Medical Diagnostic Reasoning Engine — literature-based reasoning with data-driven lab pattern discovery"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.0",
+    "scipy>=1.12",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "ruptures>=1.1",
+    "pymannkendall>=1.4",
+    "httpx>=0.27",
+    "biopython>=1.83",
+    "mcp>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "id": "adv_dka_rhabdo",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 25,
+    "sex": "male",
+    "chief_complaint": "Altered mental status",
+    "symptoms": [
+      "altered mental status",
+      "nausea",
+      "vomiting",
+      "muscle pain"
+    ],
+    "signs": [
+      "Kussmaul respirations",
+      "dehydration"
+    ],
+    "medical_history": [
+      "type 1 diabetes"
+    ],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 520.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 10.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 6.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 130.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 2.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 12000.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 6.5,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "diabetic_ketoacidosis",
+    "acceptable_alternatives": [
+      "rhabdomyolysis"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "diabetic_ketoacidosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

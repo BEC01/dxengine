@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "id": "adv_ferritin_mimic",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 55,
+    "sex": "male",
+    "chief_complaint": "Fever and malaise",
+    "symptoms": [
+      "fever",
+      "malaise",
+      "joint pain"
+    ],
+    "signs": [
+      "fever"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 850.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 65.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 85.0,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 75.0,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 14.5,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

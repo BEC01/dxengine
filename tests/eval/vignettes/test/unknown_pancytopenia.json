@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "id": "unknown_pancytopenia",
+    "category": "negative",
+    "difficulty": "negative",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 55,
+    "sex": "male",
+    "chief_complaint": "Fatigue and easy bruising",
+    "symptoms": [
+      "fatigue",
+      "easy bruising",
+      "recurrent infections"
+    ],
+    "signs": [
+      "petechiae"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 8.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 2.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 45.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.3,
+            "unit": "%"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 102.0,
+            "unit": "fL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

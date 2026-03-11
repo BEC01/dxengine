@@ -1,0 +1,38 @@
+{
+  "patient": {
+    "age": 22,
+    "sex": "male",
+    "chief_complaint": "Nausea, vomiting, and abdominal pain for 1 day",
+    "symptoms": ["polyuria", "polydipsia", "nausea", "vomiting", "abdominal pain"],
+    "signs": ["Kussmaul respirations", "dehydration", "tachycardia", "fruity breath odor"],
+    "medical_history": ["type 1 diabetes mellitus"],
+    "medications": ["insulin glargine", "insulin lispro"],
+    "family_history": ["type 1 diabetes mellitus"],
+    "social_history": ["college student"],
+    "lab_panels": [
+      {
+        "panel_name": "BMP + Additional",
+        "values": [
+          {"test_name": "glucose", "value": 450.0, "unit": "mg/dL"},
+          {"test_name": "bicarbonate", "value": 10.0, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 5.8, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 28.0, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.8, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 130.0, "unit": "mEq/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 120,
+      "blood_pressure_systolic": 95,
+      "blood_pressure_diastolic": 60,
+      "respiratory_rate": 28,
+      "temperature": 37.2
+    }
+  },
+  "expected_diagnosis": "diabetic_ketoacidosis",
+  "expected_in_top_3": ["diabetic_ketoacidosis"],
+  "expected_patterns": ["diabetic_ketoacidosis"],
+  "description": "Classic DKA: 22-year-old male with known T1DM presenting with polyuria, polydipsia, abdominal pain, and Kussmaul breathing. Labs show severe hyperglycemia, low bicarbonate, hyperkalemia, and elevated BUN/creatinine."
+}

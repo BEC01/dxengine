@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "id": "hyperthyroidism_classic_000",
+    "category": "endocrine",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hyperthyroidism",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "female",
+    "chief_complaint": "weight loss despite increased appetite",
+    "symptoms": [
+      "weight loss despite increased appetite",
+      "heat intolerance",
+      "tremor",
+      "palpitations",
+      "tachycardia"
+    ],
+    "signs": [
+      "pretibial myxedema (Graves)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": -1.9,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "free_thyroxine",
+            "value": 2.0,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "free_triiodothyronine",
+            "value": 4.7,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 25.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 146.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.8,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hyperthyroidism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hyperthyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

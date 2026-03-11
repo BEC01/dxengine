@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "id": "adv_elderly_ranges",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 78,
+    "sex": "male",
+    "chief_complaint": "Weakness",
+    "symptoms": [
+      "weakness",
+      "fatigue"
+    ],
+    "signs": [],
+    "medical_history": [
+      "hypertension"
+    ],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 1.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 28.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 138.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 110.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

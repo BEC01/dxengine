@@ -1,0 +1,360 @@
+{
+  "iron_deficiency_anemia": {
+    "description": "Anemia resulting from insufficient iron stores to support normal erythropoiesis, the most common cause of anemia worldwide.",
+    "pattern": {
+      "ferritin": { "direction": "decreased", "typical_z_score": -3.0, "weight": 0.95 },
+      "iron": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.80 },
+      "total_iron_binding_capacity": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.85 },
+      "transferrin_saturation": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.85 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.80 },
+      "mean_corpuscular_volume": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.75 },
+      "red_cell_distribution_width": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.65 },
+      "platelets": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "reticulocyte_count": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.40 }
+    },
+    "key_ratios": [
+      {
+        "name": "transferrin_saturation",
+        "numerator": "iron",
+        "denominator": "total_iron_binding_capacity",
+        "expected_direction": "decreased"
+      }
+    ],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 8"
+  },
+  "vitamin_b12_deficiency": {
+    "description": "Megaloblastic anemia caused by insufficient vitamin B12 leading to impaired DNA synthesis in rapidly dividing cells.",
+    "pattern": {
+      "vitamin_b12": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.95 },
+      "mean_corpuscular_volume": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.80 },
+      "homocysteine": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.85 },
+      "methylmalonic_acid": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.90 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.60 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.50 },
+      "reticulocyte_count": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.40 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 31"
+  },
+  "hemochromatosis": {
+    "description": "Iron overload disorder (usually hereditary HFE mutations) leading to excessive iron deposition in organs including liver, pancreas, and heart.",
+    "pattern": {
+      "ferritin": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.90 },
+      "iron": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.80 },
+      "transferrin_saturation": { "direction": "increased", "typical_z_score": 3.5, "weight": 0.95 },
+      "total_iron_binding_capacity": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.50 },
+      "alanine_aminotransferase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.60 },
+      "aspartate_aminotransferase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.55 },
+      "glucose": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 }
+    },
+    "key_ratios": [
+      {
+        "name": "transferrin_saturation",
+        "numerator": "iron",
+        "denominator": "total_iron_binding_capacity",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 200"
+  },
+  "hypothyroidism": {
+    "description": "Thyroid hormone deficiency leading to decreased metabolic rate, most commonly from autoimmune thyroiditis (Hashimoto's disease).",
+    "pattern": {
+      "thyroid_stimulating_hormone": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.95 },
+      "free_thyroxine": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.90 },
+      "total_cholesterol": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.50 },
+      "ldl_cholesterol": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.45 },
+      "creatine_kinase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.40 },
+      "sodium": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.25 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.20 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 50"
+  },
+  "hyperthyroidism": {
+    "description": "Excess thyroid hormone production leading to hypermetabolic state, most commonly from Graves' disease or toxic multinodular goiter.",
+    "pattern": {
+      "thyroid_stimulating_hormone": { "direction": "decreased", "typical_z_score": -4.0, "weight": 0.95 },
+      "free_thyroxine": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.90 },
+      "free_triiodothyronine": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.85 },
+      "total_cholesterol": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.40 },
+      "alkaline_phosphatase": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "calcium": { "direction": "increased", "typical_z_score": 1.0, "weight": 0.25 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 100"
+  },
+  "diabetic_ketoacidosis": {
+    "description": "Life-threatening complication of diabetes characterized by hyperglycemia, metabolic acidosis, and ketonemia from absolute or relative insulin deficiency.",
+    "pattern": {
+      "glucose": { "direction": "increased", "typical_z_score": 5.0, "weight": 0.95 },
+      "bicarbonate": { "direction": "decreased", "typical_z_score": -4.0, "weight": 0.90 },
+      "potassium": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.60 },
+      "sodium": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.50 },
+      "blood_urea_nitrogen": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.40 },
+      "creatinine": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.35 },
+      "phosphorus": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.30 },
+      "white_blood_cells": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.30 },
+      "hemoglobin_a1c": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.50 }
+    },
+    "key_ratios": [
+      {
+        "name": "anion_gap",
+        "numerator": "sodium",
+        "denominator": "chloride_plus_bicarbonate",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500"
+  },
+  "cushing_syndrome": {
+    "description": "Chronic cortisol excess from any cause (exogenous glucocorticoids, pituitary adenoma, adrenal tumor, ectopic ACTH) leading to central obesity, hyperglycemia, and metabolic derangements.",
+    "pattern": {
+      "cortisol_am": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.95 },
+      "glucose": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.60 },
+      "potassium": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.55 },
+      "bicarbonate": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.45 },
+      "white_blood_cells": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.35 },
+      "lymphocytes_absolute": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.30 },
+      "calcium": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.20 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 26000"
+  },
+  "addison_disease": {
+    "description": "Primary adrenal insufficiency from destruction of the adrenal cortex, resulting in deficiency of cortisol, aldosterone, and adrenal androgens.",
+    "pattern": {
+      "cortisol_am": { "direction": "decreased", "typical_z_score": -3.0, "weight": 0.95 },
+      "adrenocorticotropic_hormone": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.90 },
+      "sodium": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.80 },
+      "potassium": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.75 },
+      "glucose": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.55 },
+      "bicarbonate": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.35 },
+      "blood_urea_nitrogen": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "eosinophils_absolute": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "calcium": { "direction": "increased", "typical_z_score": 1.0, "weight": 0.25 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 10000"
+  },
+  "hepatocellular_injury": {
+    "description": "Liver cell damage from viral hepatitis, drug toxicity, ischemia, or autoimmune hepatitis, characterized by predominant aminotransferase elevation.",
+    "pattern": {
+      "alanine_aminotransferase": { "direction": "increased", "typical_z_score": 5.0, "weight": 0.95 },
+      "aspartate_aminotransferase": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.85 },
+      "bilirubin_total": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.65 },
+      "alkaline_phosphatase": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "albumin": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.40 },
+      "international_normalized_ratio": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.45 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.35 }
+    },
+    "key_ratios": [
+      {
+        "name": "ALT_to_AST_ratio",
+        "numerator": "alanine_aminotransferase",
+        "denominator": "aspartate_aminotransferase",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 25"
+  },
+  "cholestatic_liver_disease": {
+    "description": "Impaired bile flow from intrahepatic or extrahepatic obstruction, characterized by predominant elevation of alkaline phosphatase and GGT.",
+    "pattern": {
+      "alkaline_phosphatase": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.95 },
+      "gamma_glutamyl_transferase": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.90 },
+      "bilirubin_direct": { "direction": "increased", "typical_z_score": 3.5, "weight": 0.85 },
+      "bilirubin_total": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.75 },
+      "alanine_aminotransferase": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "aspartate_aminotransferase": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.25 },
+      "total_cholesterol": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 }
+    },
+    "key_ratios": [
+      {
+        "name": "ALP_to_ALT_ratio",
+        "numerator": "alkaline_phosphatase",
+        "denominator": "alanine_aminotransferase",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 100"
+  },
+  "disseminated_intravascular_coagulation": {
+    "description": "Systemic activation of coagulation leading to widespread microvascular thrombosis and consumptive coagulopathy, usually triggered by sepsis, trauma, malignancy, or obstetric complications.",
+    "pattern": {
+      "platelets": { "direction": "decreased", "typical_z_score": -3.0, "weight": 0.90 },
+      "prothrombin_time": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.85 },
+      "international_normalized_ratio": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.85 },
+      "partial_thromboplastin_time": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.70 },
+      "d_dimer": { "direction": "increased", "typical_z_score": 5.0, "weight": 0.90 },
+      "fibrinogen": { "direction": "decreased", "typical_z_score": -3.0, "weight": 0.85 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.40 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.40 },
+      "haptoglobin": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.35 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 1000"
+  },
+  "chronic_kidney_disease": {
+    "description": "Progressive irreversible decline in kidney function over months to years, classified by GFR and albuminuria, leading to retention of uremic toxins and metabolic derangements.",
+    "pattern": {
+      "creatinine": { "direction": "increased", "typical_z_score": 3.5, "weight": 0.95 },
+      "glomerular_filtration_rate": { "direction": "decreased", "typical_z_score": -3.5, "weight": 0.95 },
+      "blood_urea_nitrogen": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.80 },
+      "phosphorus": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.70 },
+      "calcium": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.60 },
+      "potassium": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.65 },
+      "bicarbonate": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.50 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.55 },
+      "parathyroid_hormone": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.60 },
+      "uric_acid": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 },
+      "albumin": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.30 }
+    },
+    "key_ratios": [
+      {
+        "name": "BUN_to_creatinine_ratio",
+        "numerator": "blood_urea_nitrogen",
+        "denominator": "creatinine",
+        "expected_direction": "normal_or_decreased"
+      }
+    ],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 7"
+  },
+  "multiple_myeloma": {
+    "description": "Clonal plasma cell neoplasm producing monoclonal immunoglobulin, causing bone destruction, renal impairment, anemia, and hypercalcemia (CRAB criteria).",
+    "pattern": {
+      "total_protein": { "direction": "increased", "typical_z_score": 3.5, "weight": 0.90 },
+      "albumin": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.70 },
+      "erythrocyte_sedimentation_rate": { "direction": "increased", "typical_z_score": 5.0, "weight": 0.80 },
+      "calcium": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.75 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.75 },
+      "creatinine": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.55 },
+      "glomerular_filtration_rate": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.50 },
+      "uric_acid": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.30 }
+    },
+    "key_ratios": [
+      {
+        "name": "protein_gap",
+        "numerator": "total_protein",
+        "denominator": "albumin",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 13200"
+  },
+  "primary_hyperparathyroidism": {
+    "description": "Excessive PTH secretion usually from a parathyroid adenoma, causing hypercalcemia, hypophosphatemia, and increased bone resorption.",
+    "pattern": {
+      "calcium": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.95 },
+      "parathyroid_hormone": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.95 },
+      "phosphorus": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.80 },
+      "alkaline_phosphatase": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.40 },
+      "chloride": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.35 },
+      "bicarbonate": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.25 },
+      "uric_acid": { "direction": "increased", "typical_z_score": 1.0, "weight": 0.20 },
+      "vitamin_d_25_hydroxy": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.30 }
+    },
+    "key_ratios": [
+      {
+        "name": "calcium_phosphorus_product",
+        "numerator": "calcium",
+        "denominator": "phosphorus",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 500"
+  },
+  "hemolytic_anemia": {
+    "description": "Accelerated red blood cell destruction exceeding bone marrow compensatory capacity, from intrinsic RBC defects or extrinsic factors.",
+    "pattern": {
+      "haptoglobin": { "direction": "decreased", "typical_z_score": -3.5, "weight": 0.95 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.85 },
+      "bilirubin_total": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.75 },
+      "reticulocyte_count": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.90 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.80 },
+      "mean_corpuscular_volume": { "direction": "increased", "typical_z_score": 1.0, "weight": 0.30 },
+      "bilirubin_direct": { "direction": "normal", "typical_z_score": 0.0, "weight": 0.40 }
+    },
+    "key_ratios": [
+      {
+        "name": "indirect_bilirubin",
+        "numerator": "bilirubin_total",
+        "denominator": "bilirubin_direct",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 2000"
+  },
+  "preclinical_sle": {
+    "description": "Early systemic lupus erythematosus before full clinical manifestation, characterized by subtle laboratory trends that individually may be borderline but collectively suggest immune dysregulation.",
+    "pattern": {
+      "erythrocyte_sedimentation_rate": { "direction": "increased", "typical_z_score": 1.5, "weight": 0.60 },
+      "complement_c3": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.75 },
+      "complement_c4": { "direction": "decreased", "typical_z_score": -1.5, "weight": 0.75 },
+      "platelets": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.55 },
+      "lymphocytes_absolute": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.55 },
+      "antinuclear_antibody_titer": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.80 },
+      "anti_dsdna_antibody": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.85 },
+      "hemoglobin": { "direction": "decreased", "typical_z_score": -1.0, "weight": 0.40 },
+      "c_reactive_protein": { "direction": "normal", "typical_z_score": 0.5, "weight": 0.30 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": true,
+    "prevalence": "1 in 1000"
+  },
+  "tumor_lysis_syndrome": {
+    "description": "Oncologic emergency from rapid lysis of tumor cells (spontaneous or treatment-induced) releasing intracellular contents, causing hyperuricemia, hyperkalemia, hyperphosphatemia, and hypocalcemia.",
+    "pattern": {
+      "uric_acid": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.90 },
+      "potassium": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.90 },
+      "phosphorus": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.85 },
+      "calcium": { "direction": "decreased", "typical_z_score": -2.5, "weight": 0.80 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 4.0, "weight": 0.80 },
+      "creatinine": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.60 },
+      "blood_urea_nitrogen": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.45 }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 5000"
+  },
+  "rhabdomyolysis": {
+    "description": "Skeletal muscle breakdown releasing intracellular contents (CK, myoglobin, potassium, phosphorus) into circulation, risking acute kidney injury from myoglobin-induced tubular damage.",
+    "pattern": {
+      "creatine_kinase": { "direction": "increased", "typical_z_score": 6.0, "weight": 0.95 },
+      "myoglobin": { "direction": "increased", "typical_z_score": 5.0, "weight": 0.90 },
+      "potassium": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.70 },
+      "phosphorus": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.65 },
+      "creatinine": { "direction": "increased", "typical_z_score": 2.5, "weight": 0.70 },
+      "calcium": { "direction": "decreased", "typical_z_score": -2.0, "weight": 0.50 },
+      "lactate_dehydrogenase": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.55 },
+      "uric_acid": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.40 },
+      "aspartate_aminotransferase": { "direction": "increased", "typical_z_score": 3.0, "weight": 0.45 },
+      "alanine_aminotransferase": { "direction": "increased", "typical_z_score": 2.0, "weight": 0.35 }
+    },
+    "key_ratios": [
+      {
+        "name": "AST_to_ALT_ratio",
+        "numerator": "aspartate_aminotransferase",
+        "denominator": "alanine_aminotransferase",
+        "expected_direction": "increased"
+      }
+    ],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 6000"
+  }
+}

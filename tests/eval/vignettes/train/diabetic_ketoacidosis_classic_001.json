@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "diabetic_ketoacidosis_classic_001",
+    "category": "metabolic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "diabetic_ketoacidosis",
+    "variant": 1
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "polyuria",
+    "symptoms": [
+      "polyuria",
+      "polydipsia",
+      "nausea/vomiting",
+      "abdominal pain",
+      "Kussmaul respirations (deep, rapid)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 140.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 16.3,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 155.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 20.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 2.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 11.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 6.2,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "diabetic_ketoacidosis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "diabetic_ketoacidosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

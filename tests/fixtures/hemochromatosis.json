@@ -1,0 +1,36 @@
+{
+  "patient": {
+    "age": 55,
+    "sex": "male",
+    "chief_complaint": "Fatigue, joint pain, and skin darkening for 1 year",
+    "symptoms": ["fatigue", "joint pain", "skin darkening", "decreased libido"],
+    "signs": ["bronze skin", "hepatomegaly", "arthropathy of second and third MCP joints"],
+    "medical_history": [],
+    "medications": [],
+    "family_history": ["brother with hemochromatosis"],
+    "social_history": ["non-drinker"],
+    "lab_panels": [
+      {
+        "panel_name": "Iron Studies + LFTs",
+        "values": [
+          {"test_name": "ferritin", "value": 1200.0, "unit": "ng/mL"},
+          {"test_name": "iron", "value": 220.0, "unit": "mcg/dL"},
+          {"test_name": "transferrin_saturation", "value": 75.0, "unit": "%"},
+          {"test_name": "alanine_aminotransferase", "value": 85.0, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 72.0, "unit": "U/L"},
+          {"test_name": "glucose", "value": 145.0, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 72,
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 80
+    }
+  },
+  "expected_diagnosis": "hemochromatosis",
+  "expected_in_top_3": ["hemochromatosis"],
+  "expected_patterns": ["hemochromatosis"],
+  "description": "Classic hemochromatosis: 55-year-old male with fatigue, joint pain, bronze skin, and hepatomegaly. Labs show markedly elevated ferritin, elevated iron, high transferrin saturation (75%), mildly elevated transaminases, and hyperglycemia."
+}

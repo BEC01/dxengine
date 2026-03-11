@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "id": "adv_ida_hypothyroid",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 38,
+    "sex": "female",
+    "chief_complaint": "Fatigue and hair loss",
+    "symptoms": [
+      "fatigue",
+      "hair loss",
+      "cold intolerance",
+      "constipation"
+    ],
+    "signs": [
+      "pale conjunctivae",
+      "dry skin"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 8.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 25.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 450.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 72.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 8.5,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "free_thyroxine",
+            "value": 0.7,
+            "unit": "ng/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "iron_deficiency_anemia",
+    "acceptable_alternatives": [
+      "hypothyroidism"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "iron_deficiency_anemia",
+      "hypothyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

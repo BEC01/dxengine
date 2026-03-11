@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "id": "chronic_kidney_disease_classic_002",
+    "category": "renal",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "chronic_kidney_disease",
+    "variant": 2
+  },
+  "patient": {
+    "age": 75,
+    "sex": "male",
+    "chief_complaint": "often asymptomatic until advanced (stage 4-5)",
+    "symptoms": [
+      "often asymptomatic until advanced (stage 4-5)",
+      "fatigue",
+      "anorexia",
+      "nausea",
+      "pruritus"
+    ],
+    "signs": [
+      "edema"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 34.6,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 22.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 5.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 7.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 21.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.7,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 84.7,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 6.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.9,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "chronic_kidney_disease",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "chronic_kidney_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}

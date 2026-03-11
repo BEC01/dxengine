@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "id": "unknown_paget",
+    "category": "negative",
+    "difficulty": "negative",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 65,
+    "sex": "male",
+    "chief_complaint": "Bone pain",
+    "symptoms": [
+      "bone pain"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 450.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 28.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 35.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

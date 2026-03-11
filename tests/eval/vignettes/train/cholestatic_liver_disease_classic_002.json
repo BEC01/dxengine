@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "cholestatic_liver_disease_classic_002",
+    "category": "hepatic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "cholestatic_liver_disease",
+    "variant": 2
+  },
+  "patient": {
+    "age": 52,
+    "sex": "female",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "pruritus (bile salt deposition in skin)",
+      "pale/clay-colored stools (acholic)",
+      "dark urine (bilirubinuria)",
+      "right upper quadrant pain (if gallstones)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 176.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 45.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 41.9,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 32.9,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 167.9,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cholestatic_liver_disease",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "cholestatic_liver_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}

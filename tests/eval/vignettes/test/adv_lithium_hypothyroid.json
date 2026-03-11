@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "id": "adv_lithium_hypothyroid",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "Weight gain and fatigue",
+    "symptoms": [
+      "fatigue",
+      "weight gain",
+      "constipation"
+    ],
+    "signs": [],
+    "medical_history": [
+      "bipolar disorder"
+    ],
+    "medications": [
+      "lithium"
+    ],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 9.5,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "free_thyroxine",
+            "value": 0.8,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 245.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 200.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypothyroidism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hypothyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

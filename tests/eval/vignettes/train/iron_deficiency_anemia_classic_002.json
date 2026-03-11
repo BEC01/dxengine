@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "iron_deficiency_anemia_classic_002",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "iron_deficiency_anemia",
+    "variant": 2
+  },
+  "patient": {
+    "age": 75,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "pallor",
+      "dyspnea on exertion",
+      "pica (ice chewing/pagophagia)",
+      "koilonychia (spoon nails)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": -56.2,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 35.7,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 403.2,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 18.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.2,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 80.5,
+            "unit": "fL"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 307.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.8,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "iron_deficiency_anemia",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "iron_deficiency_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

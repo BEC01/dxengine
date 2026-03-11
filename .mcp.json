@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "biomcp": {
+      "command": "uvx",
+      "args": ["--from", "biomcp-cli", "biomcp", "serve"],
+      "env": {
+        "NCBI_API_KEY": "${NCBI_API_KEY}"
+      }
+    },
+    "pubmed": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@cyanheads/pubmed-mcp-server@latest"],
+      "env": {
+        "MCP_TRANSPORT_TYPE": "stdio",
+        "NCBI_API_KEY": "${NCBI_API_KEY}"
+      }
+    },
+    "lab-reference": {
+      "command": "uv",
+      "args": ["run", "python", "mcp_servers/lab_reference_server.py"],
+      "cwd": "C:\\Users\\berna\\claude-work\\dxengine"
+    },
+    "medical-kb": {
+      "command": "uv",
+      "args": ["run", "python", "mcp_servers/medical_kb_server.py"],
+      "cwd": "C:\\Users\\berna\\claude-work\\dxengine"
+    }
+  }
+}

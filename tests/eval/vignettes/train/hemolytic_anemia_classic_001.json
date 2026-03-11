@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "hemolytic_anemia_classic_001",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hemolytic_anemia",
+    "variant": 1
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "pallor",
+      "fatigue",
+      "dark urine (intravascular hemolysis)",
+      "splenomegaly"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "haptoglobin",
+            "value": -33.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 348.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 2.6,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 105.7,
+            "unit": "fL"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemolytic_anemia",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemolytic_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "hepatocellular_injury_classic_002",
+    "category": "hepatic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hepatocellular_injury",
+    "variant": 2
+  },
+  "patient": {
+    "age": 52,
+    "sex": "male",
+    "chief_complaint": "jaundice",
+    "symptoms": [
+      "jaundice",
+      "right upper quadrant pain",
+      "nausea/vomiting",
+      "fatigue",
+      "dark urine"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 94.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 55.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 132.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.6,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 276.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hepatocellular_injury",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hepatocellular_injury"
+    ],
+    "cant_miss_diseases": []
+  }
+}

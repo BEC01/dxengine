@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "id": "healthy_004",
+    "category": "negative",
+    "difficulty": "negative",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 63,
+    "sex": "male",
+    "chief_complaint": "Annual checkup",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Annual Labs",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 14.7,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 9.1,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 188.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 94.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 104.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 23.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 12.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 77.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 5.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 7.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 49.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 25.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 88.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 0.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 2.6,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "iron",
+            "value": 141.4,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 212.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 316.8,
+            "unit": "mcg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_high_entropy": true,
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

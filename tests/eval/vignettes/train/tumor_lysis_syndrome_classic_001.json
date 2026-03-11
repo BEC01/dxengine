@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "tumor_lysis_syndrome_classic_001",
+    "category": "oncologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "tumor_lysis_syndrome",
+    "variant": 1
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "nausea/vomiting",
+    "symptoms": [
+      "nausea/vomiting",
+      "diarrhea",
+      "muscle cramps/tetany (hypocalcemia)",
+      "cardiac arrhythmias (hyperkalemia)",
+      "seizures"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "uric_acid",
+            "value": 9.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 5.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 7.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 371.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 22.9,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "tumor_lysis_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "tumor_lysis_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

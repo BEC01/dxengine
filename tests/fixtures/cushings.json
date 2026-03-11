@@ -1,0 +1,35 @@
+{
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "Weight gain and easy bruising for 6 months",
+    "symptoms": ["weight gain", "easy bruising", "proximal muscle weakness", "mood changes"],
+    "signs": ["central obesity", "moon facies", "purple striae", "easy bruising", "hypertension", "buffalo hump"],
+    "medical_history": ["hypertension"],
+    "medications": ["lisinopril"],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Endocrine + Metabolic",
+        "values": [
+          {"test_name": "cortisol_am", "value": 35.0, "unit": "mcg/dL"},
+          {"test_name": "glucose", "value": 180.0, "unit": "mg/dL"},
+          {"test_name": "potassium", "value": 3.1, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 30.0, "unit": "mEq/L"},
+          {"test_name": "white_blood_cells", "value": 12.0, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 82,
+      "blood_pressure_systolic": 155,
+      "blood_pressure_diastolic": 95
+    }
+  },
+  "expected_diagnosis": "cushing_syndrome",
+  "expected_in_top_3": ["cushing_syndrome"],
+  "expected_patterns": ["cushing_syndrome"],
+  "description": "Classic Cushing syndrome: 42-year-old female with central weight gain, moon facies, purple striae, easy bruising, and hypertension. Labs show elevated AM cortisol, hyperglycemia, hypokalemia, metabolic alkalosis, and leukocytosis."
+}

@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "id": "disseminated_intravascular_coagulation_classic_000",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "disseminated_intravascular_coagulation",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "bleeding from multiple sites (venipuncture, surgical, mucosal)",
+    "symptoms": [
+      "bleeding from multiple sites (venipuncture, surgical, mucosal)",
+      "petechiae",
+      "purpura",
+      "organ dysfunction (renal, hepatic, pulmonary)",
+      "acral ischemia/gangrene (purpura fulminans)"
+    ],
+    "signs": [
+      "signs of underlying trigger"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 87.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "prothrombin_time",
+            "value": 14.1,
+            "unit": "seconds"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.2,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "partial_thromboplastin_time",
+            "value": 36.2,
+            "unit": "seconds"
+          },
+          {
+            "test_name": "d_dimer",
+            "value": 0.9,
+            "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "fibrinogen",
+            "value": 150.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 297.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 30.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "disseminated_intravascular_coagulation",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "disseminated_intravascular_coagulation"
+    ],
+    "cant_miss_diseases": []
+  }
+}

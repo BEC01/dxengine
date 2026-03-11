@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "hemochromatosis_classic_001",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hemochromatosis",
+    "variant": 1
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias (especially 2nd/3rd MCP joints)",
+      "skin bronzing/hyperpigmentation",
+      "hepatomegaly",
+      "diabetes mellitus ('bronze diabetes')"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 446.7,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 173.6,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 62.2,
+            "unit": "%"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 284.6,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 48.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 27.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 105.4,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemochromatosis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemochromatosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

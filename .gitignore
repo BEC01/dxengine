@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+*.lock
+
+# Runtime state and generated reports
+state/sessions/
+state/eval/
+sandbox/
+
+# Environment
+.env

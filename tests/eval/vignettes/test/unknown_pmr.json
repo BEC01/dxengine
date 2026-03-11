@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "unknown_pmr",
+    "category": "negative",
+    "difficulty": "negative",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 72,
+    "sex": "female",
+    "chief_complaint": "Shoulder and hip stiffness",
+    "symptoms": [
+      "shoulder stiffness",
+      "hip stiffness",
+      "morning stiffness"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Panel",
+        "values": [
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 85.0,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 45.0,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.2,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

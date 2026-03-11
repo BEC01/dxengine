@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "id": "hypothyroidism_moderate_001",
+    "category": "endocrine",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hypothyroidism",
+    "variant": 1
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "weight gain",
+      "cold intolerance",
+      "constipation",
+      "dry skin"
+    ],
+    "signs": [
+      "delayed relaxation of deep tendon reflexes",
+      "periorbital edema"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 4.6,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "free_thyroxine",
+            "value": 0.8,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 131.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "ldl_cholesterol",
+            "value": 71.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 164.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 135.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.1,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypothyroidism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hypothyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

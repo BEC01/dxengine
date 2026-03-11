@@ -1,0 +1,37 @@
+{
+  "patient": {
+    "age": 28,
+    "sex": "female",
+    "chief_complaint": "Fatigue and pallor for 3 months",
+    "symptoms": ["fatigue", "pallor", "pica", "dyspnea on exertion"],
+    "signs": ["pallor", "koilonychia", "tachycardia"],
+    "medical_history": ["heavy menstrual periods"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["vegetarian diet"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC + Iron Studies",
+        "values": [
+          {"test_name": "hemoglobin", "value": 9.5, "unit": "g/dL"},
+          {"test_name": "mean_corpuscular_volume", "value": 72.0, "unit": "fL"},
+          {"test_name": "ferritin", "value": 8.0, "unit": "ng/mL"},
+          {"test_name": "iron", "value": 30.0, "unit": "mcg/dL"},
+          {"test_name": "total_iron_binding_capacity", "value": 450.0, "unit": "mcg/dL"},
+          {"test_name": "red_cell_distribution_width", "value": 18.5, "unit": "%"},
+          {"test_name": "transferrin_saturation", "value": 6.7, "unit": "%"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 98,
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 70
+    }
+  },
+  "expected_diagnosis": "iron_deficiency_anemia",
+  "expected_in_top_3": ["iron_deficiency_anemia"],
+  "expected_patterns": ["iron_deficiency_anemia"],
+  "description": "Classic iron deficiency anemia: 28-year-old female with fatigue, pallor, pica, and heavy menstrual periods. Labs show microcytic anemia with low ferritin, low iron, elevated TIBC, and elevated RDW."
+}
