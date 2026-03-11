@@ -329,6 +329,14 @@
       "hepatocellular_injury": { "lr_positive": 3.0, "lr_negative": 0.45 }
     }
   },
+  "bilirubin_total_elevated": {
+    "description": "Total bilirubin above upper limit of normal (>1.2 mg/dL)",
+    "diseases": {
+      "hemolytic_anemia": { "lr_positive": 5.0, "lr_negative": 0.4 },
+      "hepatocellular_injury": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "cholestatic_liver_disease": { "lr_positive": 5.0, "lr_negative": 0.3 }
+    }
+  },
   "indirect_bilirubin_elevated": {
     "description": "Unconjugated (indirect) bilirubin elevated",
     "diseases": {
