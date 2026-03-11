@@ -1435,5 +1435,23 @@
       "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
       "gout": { "lr_positive": 4.0, "lr_negative": 0.30 }
     }
+  },
+  "prothrombin_time_elevated": {
+    "description": "Prothrombin time prolonged above upper limit of normal",
+    "diseases": {
+      "disseminated_intravascular_coagulation": { "lr_positive": 3.0, "lr_negative": 0.40 },
+      "cirrhosis": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "hepatocellular_injury": { "lr_positive": 1.5, "lr_negative": 0.70 },
+      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
+    }
+  },
+  "international_normalized_ratio_elevated": {
+    "description": "INR above 1.1, indicating prolonged coagulation",
+    "diseases": {
+      "disseminated_intravascular_coagulation": { "lr_positive": 3.0, "lr_negative": 0.40 },
+      "cirrhosis": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "hepatocellular_injury": { "lr_positive": 1.5, "lr_negative": 0.70 },
+      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
+    }
   }
 }
