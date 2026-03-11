@@ -23,7 +23,8 @@
     "description": "Serum ferritin above 300 ng/mL, suggestive of iron overload",
     "diseases": {
       "hemochromatosis": { "lr_positive": 4.5, "lr_negative": 0.25 },
-      "adult_onset_stills_disease": { "lr_positive": 3.0, "lr_negative": 0.60 }
+      "adult_onset_stills_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "transferrin_saturation_less_than_16": {
@@ -43,7 +44,8 @@
     "description": "Serum iron above upper limit of normal",
     "diseases": {
       "hemochromatosis": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 }
+      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "ferritin_greater_than_1000": {
@@ -771,6 +773,7 @@
     "description": "HbA1c between 5.7% and 6.4%, indicating prediabetes",
     "diseases": {
       "prediabetes": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.7 },
       "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
