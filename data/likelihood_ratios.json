@@ -497,6 +497,7 @@
     "description": "Antinuclear antibody test positive (≥1:80 titer)",
     "diseases": {
       "systemic_lupus_erythematosus": { "lr_positive": 4.5, "lr_negative": 0.05 },
+      "preclinical_sle": { "lr_positive": 3.5, "lr_negative": 0.15 },
       "drug_induced_lupus": { "lr_positive": 3.0, "lr_negative": 0.10 },
       "scleroderma": { "lr_positive": 3.0, "lr_negative": 0.15 },
       "sjogren_syndrome": { "lr_positive": 2.5, "lr_negative": 0.20 },
@@ -512,7 +513,22 @@
   "anti_dsdna_positive": {
     "description": "Anti-double-stranded DNA antibody positive",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 25.0, "lr_negative": 0.40 }
+      "systemic_lupus_erythematosus": { "lr_positive": 25.0, "lr_negative": 0.40 },
+      "preclinical_sle": { "lr_positive": 12.0, "lr_negative": 0.50 }
+    }
+  },
+  "antinuclear_antibody_titer_elevated": {
+    "description": "Antinuclear antibody titer at or above upper limit of normal (borderline positive)",
+    "diseases": {
+      "preclinical_sle": { "lr_positive": 3.0, "lr_negative": 0.30 },
+      "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.15 }
+    }
+  },
+  "anti_dsdna_antibody_elevated": {
+    "description": "Anti-dsDNA antibody at or above upper limit of normal (borderline positive)",
+    "diseases": {
+      "preclinical_sle": { "lr_positive": 6.0, "lr_negative": 0.40 },
+      "systemic_lupus_erythematosus": { "lr_positive": 8.0, "lr_negative": 0.45 }
     }
   },
   "anti_smith_positive": {
