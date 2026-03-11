@@ -14,7 +14,15 @@
   "ferritin_greater_than_100": {
     "description": "Serum ferritin above 100 ng/mL, essentially excludes iron deficiency",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 0.08, "lr_negative": 2.0 }
+      "iron_deficiency_anemia": { "lr_positive": 0.08, "lr_negative": 2.0 },
+      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.50 }
+    }
+  },
+  "ferritin_greater_than_300": {
+    "description": "Serum ferritin above 300 ng/mL, suggestive of iron overload",
+    "diseases": {
+      "hemochromatosis": { "lr_positive": 4.5, "lr_negative": 0.25 },
+      "adult_onset_stills_disease": { "lr_positive": 3.0, "lr_negative": 0.60 }
     }
   },
   "transferrin_saturation_less_than_16": {
@@ -27,6 +35,13 @@
     "description": "Transferrin saturation above 45%, screening threshold for iron overload",
     "diseases": {
       "hemochromatosis": { "lr_positive": 8.5, "lr_negative": 0.10 }
+    }
+  },
+  "iron_elevated": {
+    "description": "Serum iron above upper limit of normal",
+    "diseases": {
+      "hemochromatosis": { "lr_positive": 5.0, "lr_negative": 0.30 },
+      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 }
     }
   },
   "ferritin_greater_than_1000": {
@@ -1234,6 +1249,7 @@
     "diseases": {
       "hepatocellular_injury": { "lr_positive": 6.0, "lr_negative": 0.20 },
       "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
+      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.65 },
       "cholestatic_liver_disease": { "lr_positive": 2.0, "lr_negative": 0.60 },
       "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 }
     }
@@ -1242,6 +1258,7 @@
     "description": "ALT above upper limit of normal (fallback finding)",
     "diseases": {
       "hepatocellular_injury": { "lr_positive": 7.0, "lr_negative": 0.15 },
+      "hemochromatosis": { "lr_positive": 2.5, "lr_negative": 0.55 },
       "cholestatic_liver_disease": { "lr_positive": 2.5, "lr_negative": 0.50 },
       "rhabdomyolysis": { "lr_positive": 2.0, "lr_negative": 0.60 }
     }

@@ -45,6 +45,7 @@
     { "finding_key": "ferritin_less_than_15",            "test": "ferritin", "operator": "lt", "threshold": 15.0, "importance": 5 },
     { "finding_key": "ferritin_less_than_45",            "test": "ferritin", "operator": "lt", "threshold": 45.0, "importance": 4 },
     { "finding_key": "ferritin_greater_than_100",        "test": "ferritin", "operator": "gt", "threshold": 100.0, "importance": 2 },
+    { "finding_key": "ferritin_greater_than_300",        "test": "ferritin", "operator": "gt", "threshold": 300.0, "importance": 3 },
     { "finding_key": "ferritin_greater_than_1000",       "test": "ferritin", "operator": "gt", "threshold": 1000.0, "importance": 4 },
     { "finding_key": "transferrin_saturation_less_than_16",    "test": "transferrin_saturation", "operator": "lt", "threshold": 16.0, "importance": 3 },
     { "finding_key": "transferrin_saturation_greater_than_45", "test": "transferrin_saturation", "operator": "gt", "threshold": 45.0, "importance": 3 },
