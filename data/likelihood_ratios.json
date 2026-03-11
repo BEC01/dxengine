@@ -35,7 +35,8 @@
   "transferrin_saturation_greater_than_45": {
     "description": "Transferrin saturation above 45%, screening threshold for iron overload",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 8.5, "lr_negative": 0.10 }
+      "hemochromatosis": { "lr_positive": 8.5, "lr_negative": 0.10 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "iron_elevated": {
