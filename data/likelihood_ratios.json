@@ -351,7 +351,7 @@
       "pulmonary_embolism": { "lr_positive": 2.5, "lr_negative": 0.50 },
       "myocardial_infarction": { "lr_positive": 2.0, "lr_negative": 0.60 },
       "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.25 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
     }
   },
   "reticulocyte_count_elevated": {
