@@ -58,6 +58,7 @@
     { "finding_key": "free_t4_elevated",                 "test": "free_thyroxine", "operator": "above_uln", "importance": 3 },
     { "finding_key": "haptoglobin_low",                  "test": "haptoglobin", "operator": "below_lln", "importance": 3 },
     { "finding_key": "haptoglobin_undetectable",         "test": "haptoglobin", "operator": "lt", "threshold": 10.0, "importance": 5 },
+    { "finding_key": "haptoglobin_borderline_low",       "test": "haptoglobin", "operator": "between", "low": 31.0, "high": 50.0, "importance": 2 },
     { "finding_key": "ldh_elevated",                     "test": "lactate_dehydrogenase", "operator": "above_uln", "importance": 2 },
     { "finding_key": "direct_bilirubin_elevated",        "test": "bilirubin_direct", "operator": "above_uln", "importance": 3 },
     { "finding_key": "reticulocyte_count_elevated",      "test": "reticulocyte_count", "operator": "above_uln", "importance": 3 },
