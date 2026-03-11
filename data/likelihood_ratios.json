@@ -457,7 +457,8 @@
     "description": "Creatine kinase elevated more than 10 times upper limit of normal",
     "diseases": {
       "rhabdomyolysis": { "lr_positive": 25.0, "lr_negative": 0.05 },
-      "myositis": { "lr_positive": 8.0, "lr_negative": 0.15 }
+      "myositis": { "lr_positive": 8.0, "lr_negative": 0.15 },
+      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
     }
   },
   "ck_greater_than_5x_uln": {
@@ -740,7 +741,8 @@
   "hba1c_5_7_to_6_4": {
     "description": "HbA1c between 5.7% and 6.4%, indicating prediabetes",
     "diseases": {
-      "prediabetes": { "lr_positive": 4.0, "lr_negative": 0.35 }
+      "prediabetes": { "lr_positive": 4.0, "lr_negative": 0.35 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "sodium_less_than_130": {
@@ -1308,7 +1310,8 @@
     "description": "WBC count above upper limit of normal (leukocytosis)",
     "diseases": {
       "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.50 },
-      "cushing_syndrome": { "lr_positive": 2.0, "lr_negative": 0.65 }
+      "cushing_syndrome": { "lr_positive": 2.0, "lr_negative": 0.65 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "hemoglobin_a1c_elevated": {
