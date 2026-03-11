@@ -1,11 +1,8 @@
 ---
 name: improve
-description: Run DxEngine self-improvement loop — evaluate, identify failures, propose targeted fixes to data files
+description: Run perpetual DxEngine self-improvement loop — evaluate, fix, auto-merge, repeat until interrupted
 user_invocable: true
 arguments:
-  - name: iterations
-    description: Max improvement iterations (default 5)
-    required: false
   - name: focus
     description: Optional focus area (e.g. "hematologic", "lr_coverage", "patterns", "negatives")
     required: false
@@ -13,17 +10,17 @@ arguments:
 
 # DxEngine Self-Improvement Loop
 
-You are running the DxEngine self-improvement loop. This is a Karpathy-autoresearch-style loop:
-propose data file change → evaluate → keep or revert.
+You are running a **perpetual** self-improvement loop. This runs indefinitely until the user interrupts.
+Each cycle: analyze failures → propose data fix → evaluate → auto-merge if improved → repeat.
 
 **IMPORTANT**: You may ONLY modify data files (`data/*.json`). Never modify Python code, test vignettes, or evaluation harness code.
 
-## Phase 0: Setup
+## Phase 0: Setup (once)
 
-1. Create a git branch for this improvement session:
+1. Ensure you're on `master` branch:
    ```bash
    cd C:/Users/berna/claude-work/dxengine
-   git checkout -b improve/$(date +%Y-%m-%d-%H%M)
+   git checkout master 2>/dev/null || true
    ```
 
 2. Ensure vignettes exist:
@@ -41,34 +38,31 @@ propose data file change → evaluate → keep or revert.
    uv run python .claude/skills/improve/scripts/evaluate.py --output state/eval/baseline.json
    ```
 
-## Phase 1: Analysis
+4. Initialize iteration counter: `N=0`
+5. Initialize consecutive rejection counter: `rejections=0`
 
-1. Analyze failures in the baseline:
-   ```bash
-   uv run python .claude/skills/improve/scripts/analyze_failures.py state/eval/baseline.json --output state/eval/analysis.json
-   ```
+## Phase 1: Perpetual Loop
 
-2. Read the analysis output to understand:
-   - Which diseases are failing (positive case failures)
-   - Which healthy/unknown cases are false-positive (negative case failures)
-   - Coverage gaps (diseases with sparse LR data)
-   - Priority fix types (missing_lr, sparse_lr, weak_lr, missing_pattern)
+**Repeat the following forever.** Do NOT stop, do NOT ask the user anything, do NOT present a summary and wait. Just keep going.
 
-3. If `$ARGUMENTS.focus` is set, filter to only fixes matching that focus area.
+### Step 1: Analyze
+```bash
+uv run python .claude/skills/improve/scripts/analyze_failures.py state/eval/baseline.json --output state/eval/analysis.json
+```
+Read the analysis. If `$ARGUMENTS.focus` is set, filter to matching fixes only.
 
-## Phase 2: Improvement Loop
-
-For each iteration (max `$ARGUMENTS.iterations` or 5):
-
-### Step 1: Pick the highest-impact fix
-From the analysis, pick the fix that would affect the most vignettes. Priority order:
+### Step 2: Pick the highest-impact fix
+Priority order:
 1. **missing_lr**: Add LR entries for findings that fire but have no LR for the gold disease
 2. **sparse_lr**: Add more LR entries for diseases with <3 total
 3. **weak_lr**: Strengthen LR values for diseases being beaten by competitors
-4. **missing_pattern**: Add disease patterns (rare — our 18 patterns cover most cases)
+4. **missing_pattern**: Add disease patterns
+5. **negative_fp**: Reduce false positives on negative cases (tune LR- values, add specificity constraints)
 
-### Step 2: Apply the fix
-Edit the appropriate data file:
+Pick the fix that would affect the most failing vignettes. **Never repeat a fix you already tried and rejected.**
+
+### Step 3: Apply the fix
+Edit the appropriate data file directly on `master`:
 - `data/likelihood_ratios.json` — for LR additions/modifications
 - `data/disease_lab_patterns.json` — for pattern additions
 - `data/finding_rules.json` — for finding rule additions
@@ -79,55 +73,46 @@ Edit the appropriate data file:
 - Values must be clinically plausible
 - Use medical literature (PubMed MCP or BioMCP) to verify LR values when possible
 
-### Step 3: Run unit tests
+### Step 4: Unit tests
 ```bash
 uv run pytest tests/ -x -q
 ```
-If any test fails, revert and try a different fix.
+If any test fails, revert (`git checkout -- data/`) and go back to Step 2 with a different fix.
 
-### Step 4: Evaluate
+### Step 5: Evaluate
 ```bash
-uv run python .claude/skills/improve/scripts/evaluate.py --output state/eval/iter_N.json --quiet
+N=$((N+1))
+uv run python .claude/skills/improve/scripts/evaluate.py --output state/eval/iter_${N}.json --quiet
 ```
 
-### Step 5: Compare
+### Step 6: Compare
 ```bash
-uv run python .claude/skills/improve/scripts/compare_scores.py state/eval/baseline.json state/eval/iter_N.json
+uv run python .claude/skills/improve/scripts/compare_scores.py state/eval/baseline.json state/eval/iter_${N}.json
 ```
 
-### Step 6: Accept or Reject
-- **ACCEPT** if: weighted_score improved AND no regressions AND no new FPs on negatives
-  ```bash
-  git add data/
-  git commit -m "improve: [description] (score X.XXXX → Y.YYYY)"
-  ```
-  Update baseline for next iteration:
-  ```bash
-  cp state/eval/iter_N.json state/eval/baseline.json
-  ```
+### Step 7: Auto-merge or revert
 
-- **REJECT** if: score didn't improve OR regressions detected OR new FPs
-  ```bash
-  git checkout -- data/
-  ```
+**If ACCEPT** (score improved AND no regressions AND no new FPs):
+```bash
+git add data/
+git commit -m "improve: [description] (score X.XXXX → Y.YYYY)"
+cp state/eval/iter_${N}.json state/eval/baseline.json
+```
+Reset `rejections=0`. Print a one-line status: `✓ Iteration N: [description] (score X.XXXX → Y.YYYY)`.
 
-### Step 7: Early stop
-Stop the loop if:
-- 3 consecutive rejections (diminishing returns)
-- Weighted score > 0.85 (excellent)
-- No more fixes to try
+**If REJECT** (score didn't improve OR regressions OR new FPs):
+```bash
+git checkout -- data/
+```
+Increment `rejections`. Print: `✗ Iteration N: [description] — REJECTED ([reason])`.
 
-## Phase 3: Report
+### Step 8: Continue or pause
 
-After the loop, present a summary:
-1. Starting score vs final score
-2. Number of accepted changes
-3. List of each accepted change and its delta
-4. Any remaining failures for future work
-5. Offer to merge the branch:
-   ```
-   "Shall I merge improve/YYYY-MM-DD-HHMM into the main branch?"
-   ```
+**Pause conditions** (print status and pause for next `/improve` invocation):
+- `rejections >= 5` consecutive — print "Paused: 5 consecutive rejections, diminishing returns. Re-run /improve to continue with fresh analysis."
+- No more distinct fixes to try — print "Paused: exhausted all identified fixes. Add more vignettes or data and re-run /improve."
+
+**Otherwise: go back to Step 1 immediately.** Do not stop. Do not summarize. Do not ask the user. Just keep improving.
 
 ## Safety Rules
 
@@ -137,6 +122,8 @@ After the loop, present a summary:
 - **Negative case gate**: Accepted changes must not increase false positive rate
 - **Cache invalidation**: Each eval script runs as a subprocess, so the data cache resets automatically
 - **Git safety**: Always commit accepted changes individually with descriptive messages
+- **Auto-merge**: Commit directly to `master`. No branches, no merge questions.
+- **No human interaction**: Never ask the user for confirmation mid-loop. Just run.
 
 ## Data File Formats
 
