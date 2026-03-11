@@ -1296,7 +1296,7 @@
     "description": "Serum bicarbonate below lower limit of normal (metabolic acidosis)",
     "diseases": {
       "diabetic_ketoacidosis": { "lr_positive": 6.0, "lr_negative": 0.10 },
-      "chronic_kidney_disease": { "lr_positive": 2.5, "lr_negative": 0.55 },
+      "chronic_kidney_disease": { "lr_positive": 1.5, "lr_negative": 0.7 },
       "lactic_acidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
       "addison_disease": { "lr_positive": 2.0, "lr_negative": 0.65 }
     }
