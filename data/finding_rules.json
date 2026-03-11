@@ -106,8 +106,9 @@
     { "finding_key": "elevated_homocysteine",             "test": "homocysteine", "operator": "above_uln", "importance": 3 },
     { "finding_key": "elevated_methylmalonic_acid",       "test": "methylmalonic_acid", "operator": "above_uln", "importance": 4 },
     { "finding_key": "anti_dsdna_positive",               "test": "anti_dsdna_antibody", "operator": "above_uln", "importance": 4 },
-    { "finding_key": "ana_positive",                      "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 40.0, "importance": 2 },
-    { "finding_key": "ana_positive_high_titer",           "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 160.0, "importance": 3 }
+    { "finding_key": "anti_dsdna_borderline_high",        "test": "anti_dsdna_antibody", "operator": "between", "low": 15.0, "high": 25.0, "finding_key": "anti_dsdna_borderline_high", "importance": 3 },
+    { "finding_key": "ana_positive",                      "test": "antinuclear_antibody_titer", "operator": "gte", "threshold": 0.8, "importance": 2 },
+    { "finding_key": "ana_positive_high_titer",           "test": "antinuclear_antibody_titer", "operator": "gt", "threshold": 1.0, "importance": 3 }
   ],
 
   "composite_rules": [
