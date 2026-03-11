@@ -158,7 +158,8 @@
     "description": "Blood glucose above 250 mg/dL",
     "diseases": {
       "diabetic_ketoacidosis": { "lr_positive": 12.0, "lr_negative": 0.02 },
-      "hyperosmolar_hyperglycemic_state": { "lr_positive": 10.0, "lr_negative": 0.01 }
+      "hyperosmolar_hyperglycemic_state": { "lr_positive": 10.0, "lr_negative": 0.01 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "glucose_greater_than_600": {
@@ -1282,7 +1283,8 @@
       "diabetic_ketoacidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
       "type_2_diabetes": { "lr_positive": 4.0, "lr_negative": 0.20 },
       "cushing_syndrome": { "lr_positive": 3.5, "lr_negative": 0.40 },
-      "hyperosmolar_hyperglycemic_state": { "lr_positive": 5.0, "lr_negative": 0.10 }
+      "hyperosmolar_hyperglycemic_state": { "lr_positive": 5.0, "lr_negative": 0.10 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "chloride_elevated": {
