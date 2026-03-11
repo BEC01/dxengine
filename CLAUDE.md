@@ -56,8 +56,8 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 - Clinical correlation is always recommended
 - Finding mapper uses subsumption to prevent double-counting (e.g., ferritin<15 suppresses ferritin<45)
 - Pattern detector uses cosine similarity for known patterns + weighted directional projection for collectively-abnormal detection
-- Collectively-abnormal detection: weighted directional sum S = Σ(√w_i · z_i · sign_i), test statistic T = S²/Σw_i, p-value from chi²(df=1). See memory/v2_roadmap.md for details.
-- REJECTED integrations (do NOT re-propose): LOINC2HPO+PyHPO pipeline, Mahalanobis distance, formal EIG→literature pipeline. See memory/rejected_integrations.md for detailed reasons.
+- Collectively-abnormal detection: weighted directional sum S = Σ(√w_i · z_i · sign_i), test statistic T = S²/Σw_i, p-value from chi²(df=1).
+- REJECTED integrations (do NOT re-propose): LOINC2HPO+PyHPO pipeline, Mahalanobis distance, formal EIG→literature pipeline. See auto-memory `rejected_integrations.md` for detailed reasons.
 
 ## Architecture (v3 Hybrid)
 
@@ -102,23 +102,23 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Graduated probability floors based on disease importance (5→8%, 4→5%, 3→2%)
 - Self-reflection in adversarial agent (DeepRare pattern)
 - Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
-- 310 tests passing, eval score >= 0.50 with no fixture regressions
+- 312 tests passing, eval score >= 0.50 with no fixture regressions
 
 ## Prior Roadmap (v2, completed)
 
-See `memory/v2_roadmap.md` for the v2 roadmap (all items completed or superseded by v3).
-See `memory/rejected_integrations.md` for integrations that were analyzed and rejected.
+v2 roadmap items are all completed or superseded by v3. See auto-memory `v2_roadmap.md` for history.
+See auto-memory `rejected_integrations.md` for integrations that were analyzed and rejected.
 
 ## Data Files
 
 | File | Contents | Entries |
 |------|----------|---------|
-| lab_ranges.json | Age/sex-adjusted reference ranges | 80+ analytes |
-| disease_lab_patterns.json | Disease-lab signatures | 18 patterns |
-| illness_scripts.json | Structured illness scripts | 50+ diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 200+ entries |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed) | 80 rules |
-| loinc_mappings.json | LOINC code <-> common name mappings | 80+ codes |
+| lab_ranges.json | Age/sex-adjusted reference ranges | 91 analytes |
+| disease_lab_patterns.json | Disease-lab signatures (10 with collectively-abnormal) | 18 patterns |
+| illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 186 findings, 379 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed) | 81 rules + 39 aliases |
+| loinc_mappings.json | LOINC code <-> common name mappings | 91 codes, 283 aliases |
 
 ## MCP Servers
 

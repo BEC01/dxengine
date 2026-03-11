@@ -125,14 +125,14 @@ PHASE 3: OUTPUT
 - **Collectively-abnormal detection** -- identifies labs individually within normal range but collectively statistically significant, using weighted directional projection with chi-squared testing
 - **Weighted cosine similarity** for disease pattern matching against 18 curated lab signatures
 - **Three-pass finding mapping** with subsumption to prevent likelihood ratio double-counting (e.g., ferritin<15 suppresses ferritin<45)
-- **Age/sex-adjusted reference ranges** for 80+ analytes with critical value thresholds
+- **Age/sex-adjusted reference ranges** for 91 analytes with critical value thresholds
 - **CBC percentage vs absolute count validation** during preprocessing
 - **Bayesian updating with log-odds** for numerical stability, clamped to [-20, 20]
 - **Evidence provenance tracking** with LR source annotation (curated, literature, estimated) and uncurated LR capping
 - **Graduated probability floors** based on disease importance (can't-miss diagnoses maintain minimum 5-8%)
 - **Self-improvement loop** (`/improve`) with automated evaluation harness, train/test split, and auto-merge on improvement
 - **Deterministic verification** of LLM lab claims against engine z-scores
-- **18 disease patterns**, **50+ illness scripts**, **200+ likelihood ratio entries**, **80 finding rules**
+- **18 disease patterns**, **51 illness scripts**, **379 likelihood ratio pairs**, **81 finding rules**
 
 ## Running Tests
 
@@ -151,12 +151,12 @@ uv run python .claude/skills/improve/scripts/evaluate.py
 
 | File | Contents | Entries |
 |------|----------|---------|
-| `lab_ranges.json` | Age/sex-adjusted reference ranges with critical thresholds | 80+ analytes |
-| `disease_lab_patterns.json` | Disease-specific lab signatures with weights and directions | 18 patterns |
-| `illness_scripts.json` | Structured illness scripts (epidemiology, presentation, labs, criteria, mimics) | 50+ diseases |
-| `likelihood_ratios.json` | LR+/LR- for finding-disease pairs | ~130 findings, ~320 LR pairs |
-| `finding_rules.json` | Lab-to-finding mapping rules (single, composite, computed) with importance | 80 rules |
-| `loinc_mappings.json` | LOINC code to common name mappings and aliases | 80+ codes, ~250 aliases |
+| `lab_ranges.json` | Age/sex-adjusted reference ranges with critical thresholds | 91 analytes |
+| `disease_lab_patterns.json` | Disease-specific lab signatures with weights and directions | 18 patterns (10 with collectively-abnormal) |
+| `illness_scripts.json` | Structured illness scripts (epidemiology, presentation, labs, criteria, mimics) | 51 diseases |
+| `likelihood_ratios.json` | LR+/LR- for finding-disease pairs | 186 findings, 379 LR pairs |
+| `finding_rules.json` | Lab-to-finding mapping rules (single, composite, computed) with importance | 81 rules + 39 aliases |
+| `loinc_mappings.json` | LOINC code to common name mappings and aliases | 91 codes, 283 aliases |
 
 ## MCP Servers
 
