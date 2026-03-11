@@ -1259,6 +1259,50 @@
       "hypothyroidism": { "lr_positive": 1.5, "lr_negative": 0.80 }
     }
   },
+  "glucose_elevated": {
+    "description": "Blood glucose above upper limit of normal (hyperglycemia)",
+    "diseases": {
+      "diabetic_ketoacidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
+      "type_2_diabetes": { "lr_positive": 4.0, "lr_negative": 0.20 },
+      "cushing_syndrome": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "hyperosmolar_hyperglycemic_state": { "lr_positive": 5.0, "lr_negative": 0.10 }
+    }
+  },
+  "chloride_elevated": {
+    "description": "Serum chloride above upper limit of normal (hyperchloremia)",
+    "diseases": {
+      "primary_hyperparathyroidism": { "lr_positive": 4.0, "lr_negative": 0.40 }
+    }
+  },
+  "phosphorus_low": {
+    "description": "Serum phosphorus below lower limit of normal (hypophosphatemia)",
+    "diseases": {
+      "primary_hyperparathyroidism": { "lr_positive": 5.0, "lr_negative": 0.30 },
+      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.60 },
+      "vitamin_d_deficiency": { "lr_positive": 2.0, "lr_negative": 0.65 }
+    }
+  },
+  "white_blood_cells_elevated": {
+    "description": "WBC count above upper limit of normal (leukocytosis)",
+    "diseases": {
+      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.50 },
+      "cushing_syndrome": { "lr_positive": 2.0, "lr_negative": 0.65 }
+    }
+  },
+  "hemoglobin_a1c_elevated": {
+    "description": "HbA1c above upper limit of normal (suggesting chronic hyperglycemia)",
+    "diseases": {
+      "type_2_diabetes": { "lr_positive": 8.0, "lr_negative": 0.10 },
+      "diabetic_ketoacidosis": { "lr_positive": 4.0, "lr_negative": 0.30 }
+    }
+  },
+  "glomerular_filtration_rate_low": {
+    "description": "GFR below lower limit of normal (fallback finding for mild impairment)",
+    "diseases": {
+      "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.20 },
+      "multiple_myeloma": { "lr_positive": 2.0, "lr_negative": 0.65 }
+    }
+  },
   "creatine_kinase_elevated": {
     "description": "Creatine kinase above upper limit of normal (fallback finding)",
     "diseases": {
@@ -1338,6 +1382,7 @@
     "diseases": {
       "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
       "chronic_kidney_disease": { "lr_positive": 3.5, "lr_negative": 0.45 },
+      "tumor_lysis_syndrome": { "lr_positive": 4.0, "lr_negative": 0.35 },
       "hypoparathyroidism": { "lr_positive": 8.0, "lr_negative": 0.10 },
       "vitamin_d_deficiency": { "lr_positive": 3.0, "lr_negative": 0.50 }
     }
