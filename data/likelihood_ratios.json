@@ -283,6 +283,13 @@
       "hyperthyroidism": { "lr_positive": 0.1, "lr_negative": 1.5 }
     }
   },
+  "pth_high_normal": {
+    "description": "PTH in upper normal range (50-65 pg/mL), inappropriately normal if calcium is high-normal",
+    "diseases": {
+      "primary_hyperparathyroidism": { "lr_positive": 4.0, "lr_negative": 0.50 },
+      "hyperthyroidism": { "lr_positive": 0.3, "lr_negative": 1.0 }
+    }
+  },
   "alt_greater_than_10x_uln": {
     "description": "ALT elevated more than 10 times the upper limit of normal",
     "diseases": {

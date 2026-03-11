@@ -96,6 +96,7 @@
     { "finding_key": "lactate_greater_than_4",            "test": "lactate", "operator": "gt", "threshold": 4.0, "importance": 4 },
     { "finding_key": "fibrinogen_low",                    "test": "fibrinogen", "operator": "below_lln", "importance": 3 },
     { "finding_key": "pth_elevated",                      "test": "parathyroid_hormone", "operator": "above_uln", "importance": 3 },
+    { "finding_key": "pth_high_normal",                   "test": "parathyroid_hormone", "operator": "between", "low": 50.0, "high": 65.0, "importance": 2 },
     { "finding_key": "calcium_elevated",                  "test": "calcium", "operator": "above_uln", "importance": 3 },
     { "finding_key": "myoglobin_elevated",                "test": "myoglobin", "operator": "above_uln", "importance": 3 },
     { "finding_key": "platelets_less_than_50000",         "test": "platelets", "operator": "lt", "threshold": 50.0, "importance": 4 },
