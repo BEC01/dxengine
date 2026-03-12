@@ -31,11 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 13.9,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "albumin",
             "value": 4.0,
             "unit": "g/dL"
@@ -49,6 +44,11 @@
             "test_name": "glomerular_filtration_rate",
             "value": 90.6,
             "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.9,
+            "unit": "g/dL"
           },
           {
             "test_name": "uric_acid",
@@ -71,16 +71,6 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.2,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
@@ -93,6 +83,16 @@
           {
             "test_name": "bicarbonate",
             "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.2,
             "unit": "mEq/L"
           }
         ]

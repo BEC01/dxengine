@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "id": "infective_endocarditis_moderate_000",
+    "category": "infectious",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "infective_endocarditis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "fever (most common)",
+    "symptoms": [
+      "fever (most common)",
+      "constitutional symptoms (fatigue, malaise, weight loss, night sweats)",
+      "IV drug use: right-sided (tricuspid) with septic pulmonary emboli"
+    ],
+    "signs": [
+      "new or changing murmur",
+      "embolic phenomena: stroke, Janeway lesions (painless palmar/plantar macules), splinter hemorrhages",
+      "immunologic phenomena: Osler nodes (painful fingertip nodules), Roth spots (retinal hemorrhages), glomerulonephritis",
+      "splenomegaly"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "c_reactive_protein",
+            "value": 3.2,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 14.7,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.4,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 9.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 110.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 18.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 287.2,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "infective_endocarditis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "infective_endocarditis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

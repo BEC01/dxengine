@@ -692,6 +692,18 @@
       "test": "glomerular_filtration_rate",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "complement_c3_low",
+      "test": "complement_c3",
+      "operator": "below_lln",
+      "importance": 3
+    },
+    {
+      "finding_key": "complement_c4_low",
+      "test": "complement_c4",
+      "operator": "below_lln",
+      "importance": 3
     }
   ],
   "composite_rules": [

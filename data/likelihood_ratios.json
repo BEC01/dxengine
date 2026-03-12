@@ -2,1543 +2,3085 @@
   "ferritin_less_than_15": {
     "description": "Serum ferritin below 15 ng/mL, indicating depleted iron stores",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 51.8, "lr_negative": 0.46 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 51.8,
+        "lr_negative": 0.46
+      }
     }
   },
   "ferritin_less_than_45": {
     "description": "Serum ferritin below 45 ng/mL",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 8.8, "lr_negative": 0.11 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 8.8,
+        "lr_negative": 0.11
+      }
     }
   },
   "ferritin_greater_than_100": {
     "description": "Serum ferritin above 100 ng/mL, essentially excludes iron deficiency",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 0.08, "lr_negative": 2.0 },
-      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.50 },
-      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.08,
+        "lr_negative": 2.0
+      },
+      "hemochromatosis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "ferritin_greater_than_300": {
     "description": "Serum ferritin above 300 ng/mL, suggestive of iron overload",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 4.5, "lr_negative": 0.25 },
-      "adult_onset_stills_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "hemochromatosis": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.25
+      },
+      "adult_onset_stills_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "transferrin_saturation_less_than_16": {
     "description": "Transferrin saturation below 16%, indicating insufficient iron delivery to marrow",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 10.0, "lr_negative": 0.30 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "transferrin_saturation_greater_than_45": {
     "description": "Transferrin saturation above 45%, screening threshold for iron overload",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 8.5, "lr_negative": 0.10 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "hemochromatosis": {
+        "lr_positive": 8.5,
+        "lr_negative": 0.1
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "iron_elevated": {
     "description": "Serum iron above upper limit of normal",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "hemochromatosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "ferritin_greater_than_1000": {
     "description": "Markedly elevated ferritin above 1000 ng/mL",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 7.0, "lr_negative": 0.35 },
-      "adult_onset_stills_disease": { "lr_positive": 5.0, "lr_negative": 0.50 },
-      "hemophagocytic_lymphohistiocytosis": { "lr_positive": 6.0, "lr_negative": 0.40 }
+      "hemochromatosis": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.35
+      },
+      "adult_onset_stills_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      },
+      "hemophagocytic_lymphohistiocytosis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "mcv_less_than_80": {
-    "description": "Microcytosis — MCV below 80 fL",
+    "description": "Microcytosis \u00e2\u20ac\u201d MCV below 80 fL",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 8.0, "lr_negative": 0.32 },
-      "thalassemia_trait": { "lr_positive": 7.5, "lr_negative": 0.25 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.32
+      },
+      "thalassemia_trait": {
+        "lr_positive": 7.5,
+        "lr_negative": 0.25
+      }
     }
   },
   "mcv_greater_than_100": {
-    "description": "Macrocytosis — MCV above 100 fL",
+    "description": "Macrocytosis \u00e2\u20ac\u201d MCV above 100 fL",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 6.5, "lr_negative": 0.35 },
-      "folate_deficiency": { "lr_positive": 5.5, "lr_negative": 0.40 },
-      "myelodysplastic_syndrome": { "lr_positive": 3.5, "lr_negative": 0.65 },
-      "hypothyroidism": { "lr_positive": 2.0, "lr_negative": 0.80 },
-      "liver_disease": { "lr_positive": 2.5, "lr_negative": 0.75 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 6.5,
+        "lr_negative": 0.35
+      },
+      "folate_deficiency": {
+        "lr_positive": 5.5,
+        "lr_negative": 0.4
+      },
+      "myelodysplastic_syndrome": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.65
+      },
+      "hypothyroidism": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.8
+      },
+      "liver_disease": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.75
+      }
     }
   },
   "elevated_methylmalonic_acid": {
     "description": "Methylmalonic acid elevated, specific for B12 deficiency",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 20.0, "lr_negative": 0.10 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "elevated_homocysteine": {
     "description": "Serum homocysteine elevated above normal range",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "folate_deficiency": { "lr_positive": 5.0, "lr_negative": 0.25 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "folate_deficiency": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "b12_less_than_200": {
     "description": "Serum vitamin B12 below 200 pg/mL",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 15.0, "lr_negative": 0.30 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "tsh_elevated": {
     "description": "TSH above upper limit of normal (>4.0 mIU/L)",
     "diseases": {
-      "hypothyroidism": { "lr_positive": 18.0, "lr_negative": 0.02 }
+      "hypothyroidism": {
+        "lr_positive": 18.0,
+        "lr_negative": 0.02
+      }
     }
   },
   "tsh_greater_than_10": {
     "description": "TSH markedly elevated above 10 mIU/L, indicating overt hypothyroidism",
     "diseases": {
-      "hypothyroidism": { "lr_positive": 45.0, "lr_negative": 0.10 }
+      "hypothyroidism": {
+        "lr_positive": 45.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "tsh_suppressed": {
     "description": "TSH below lower limit of normal (<0.1 mIU/L)",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 25.0, "lr_negative": 0.02 },
-      "thyroiditis_subacute": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "exogenous_thyroid_hormone": { "lr_positive": 10.0, "lr_negative": 0.05 }
+      "hyperthyroidism": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.02
+      },
+      "thyroiditis_subacute": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "exogenous_thyroid_hormone": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "free_t4_elevated": {
     "description": "Free thyroxine above normal range",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "thyroiditis_subacute": { "lr_positive": 6.0, "lr_negative": 0.30 }
+      "hyperthyroidism": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      },
+      "thyroiditis_subacute": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "free_triiodothyronine_elevated": {
     "description": "Free T3 (triiodothyronine) above normal range",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 10.0, "lr_negative": 0.15 },
-      "hypothyroidism": { "lr_positive": 0.05, "lr_negative": 1.2 }
+      "hyperthyroidism": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.15
+      },
+      "hypothyroidism": {
+        "lr_positive": 0.05,
+        "lr_negative": 1.2
+      }
     }
   },
   "free_t4_decreased": {
     "description": "Free thyroxine below normal range",
     "diseases": {
-      "hypothyroidism": { "lr_positive": 12.0, "lr_negative": 0.15 },
-      "sick_euthyroid_syndrome": { "lr_positive": 3.0, "lr_negative": 0.60 }
+      "hypothyroidism": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.15
+      },
+      "sick_euthyroid_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "lid_lag": {
     "description": "Upper eyelid lags behind globe during downward gaze",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 17.6, "lr_negative": 0.55 }
+      "hyperthyroidism": {
+        "lr_positive": 17.6,
+        "lr_negative": 0.55
+      }
     }
   },
   "exophthalmos": {
     "description": "Protrusion of the eyeball from the orbit",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 31.5, "lr_negative": 0.64 }
+      "hyperthyroidism": {
+        "lr_positive": 31.5,
+        "lr_negative": 0.64
+      }
     }
   },
   "tremor_fine": {
     "description": "Fine postural tremor of outstretched hands",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 11.4, "lr_negative": 0.40 }
+      "hyperthyroidism": {
+        "lr_positive": 11.4,
+        "lr_negative": 0.4
+      }
     }
   },
   "pretibial_myxedema": {
     "description": "Non-pitting edema of anterior lower legs, specific to Graves disease",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 40.0, "lr_negative": 0.90 }
+      "hyperthyroidism": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.9
+      }
     }
   },
   "delayed_ankle_reflex": {
     "description": "Prolonged relaxation phase of ankle deep tendon reflex",
     "diseases": {
-      "hypothyroidism": { "lr_positive": 6.5, "lr_negative": 0.60 }
+      "hypothyroidism": {
+        "lr_positive": 6.5,
+        "lr_negative": 0.6
+      }
     }
   },
   "glucose_greater_than_250": {
     "description": "Blood glucose above 250 mg/dL",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 12.0, "lr_negative": 0.02 },
-      "hyperosmolar_hyperglycemic_state": { "lr_positive": 10.0, "lr_negative": 0.01 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.02
+      },
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.01
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "glucose_greater_than_600": {
     "description": "Blood glucose above 600 mg/dL",
     "diseases": {
-      "hyperosmolar_hyperglycemic_state": { "lr_positive": 25.0, "lr_negative": 0.15 },
-      "diabetic_ketoacidosis": { "lr_positive": 4.0, "lr_negative": 0.65 }
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.15
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.65
+      }
     }
   },
   "ketonemia": {
     "description": "Elevated serum ketones (beta-hydroxybutyrate)",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 20.0, "lr_negative": 0.05 },
-      "alcoholic_ketoacidosis": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "starvation_ketosis": { "lr_positive": 3.0, "lr_negative": 0.40 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.05
+      },
+      "alcoholic_ketoacidosis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "starvation_ketosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "high_anion_gap_metabolic_acidosis": {
     "description": "Anion gap >12 mEq/L with metabolic acidosis",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "lactic_acidosis": { "lr_positive": 6.0, "lr_negative": 0.15 },
-      "methanol_ethylene_glycol_poisoning": { "lr_positive": 5.0, "lr_negative": 0.08 },
-      "chronic_kidney_disease": { "lr_positive": 3.0, "lr_negative": 0.40 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "lactic_acidosis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.15
+      },
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.08
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "elevated_osmolal_gap": {
     "description": "Difference between measured and calculated osmolality >10 mOsm/kg",
     "diseases": {
-      "methanol_ethylene_glycol_poisoning": { "lr_positive": 15.0, "lr_negative": 0.20 },
-      "isopropanol_ingestion": { "lr_positive": 10.0, "lr_negative": 0.25 }
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.2
+      },
+      "isopropanol_ingestion": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "calcium_oxalate_crystals_in_urine": {
     "description": "Calcium oxalate crystals seen on urinalysis",
     "diseases": {
-      "methanol_ethylene_glycol_poisoning": { "lr_positive": 35.0, "lr_negative": 0.60 }
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 35.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "cortisol_am_less_than_3": {
     "description": "Morning cortisol below 3 mcg/dL",
     "diseases": {
-      "addison_disease": { "lr_positive": 40.0, "lr_negative": 0.10 },
-      "secondary_adrenal_insufficiency": { "lr_positive": 30.0, "lr_negative": 0.15 }
+      "addison_disease": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.1
+      },
+      "secondary_adrenal_insufficiency": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "cortisol_am_greater_than_18": {
     "description": "Morning cortisol above 18 mcg/dL, essentially excludes adrenal insufficiency",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 10.0, "lr_negative": 0.20 },
-      "addison_disease": { "lr_positive": 0.02, "lr_negative": 5.0 },
-      "secondary_adrenal_insufficiency": { "lr_positive": 0.03, "lr_negative": 4.0 }
+      "cushing_syndrome": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.2
+      },
+      "addison_disease": {
+        "lr_positive": 0.02,
+        "lr_negative": 5.0
+      },
+      "secondary_adrenal_insufficiency": {
+        "lr_positive": 0.03,
+        "lr_negative": 4.0
+      }
     }
   },
   "failed_cosyntropin_stimulation": {
     "description": "Cortisol fails to rise above 18 mcg/dL at 30-60 minutes after cosyntropin injection",
     "diseases": {
-      "addison_disease": { "lr_positive": 30.0, "lr_negative": 0.05 }
+      "addison_disease": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "failed_dexamethasone_suppression": {
     "description": "Morning cortisol >1.8 mcg/dL after 1mg overnight dexamethasone",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 12.0, "lr_negative": 0.05 }
+      "cushing_syndrome": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "elevated_24h_urine_free_cortisol": {
     "description": "24-hour urine free cortisol above upper limit of normal",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 10.0, "lr_negative": 0.08 }
+      "cushing_syndrome": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.08
+      }
     }
   },
   "elevated_midnight_salivary_cortisol": {
     "description": "Late-night salivary cortisol above normal, indicating loss of diurnal rhythm",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 14.0, "lr_negative": 0.07 }
+      "cushing_syndrome": {
+        "lr_positive": 14.0,
+        "lr_negative": 0.07
+      }
     }
   },
   "hyperpigmentation": {
     "description": "Darkening of skin, especially in palmar creases, buccal mucosa, and scars",
     "diseases": {
-      "addison_disease": { "lr_positive": 8.0, "lr_negative": 0.45 }
+      "addison_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.45
+      }
     }
   },
   "purple_striae": {
     "description": "Wide (>1 cm) purple/violaceous striae on abdomen, axillae, or thighs",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 15.0, "lr_negative": 0.55 }
+      "cushing_syndrome": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "calcium_elevated": {
     "description": "Serum calcium above 10.5 mg/dL",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 8.0, "lr_negative": 0.02 },
-      "hypercalcemia_of_malignancy": { "lr_positive": 5.0, "lr_negative": 0.05 },
-      "multiple_myeloma": { "lr_positive": 3.5, "lr_negative": 0.60 },
-      "sarcoidosis": { "lr_positive": 3.0, "lr_negative": 0.75 },
-      "vitamin_d_toxicity": { "lr_positive": 3.5, "lr_negative": 0.80 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.02
+      },
+      "hypercalcemia_of_malignancy": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.05
+      },
+      "multiple_myeloma": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.6
+      },
+      "sarcoidosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.75
+      },
+      "vitamin_d_toxicity": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.8
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "calcium_elevated_with_pth_elevated": {
     "description": "Elevated calcium with simultaneously elevated or inappropriately normal PTH",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 35.0, "lr_negative": 0.05 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 35.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "calcium_elevated_with_pth_suppressed": {
     "description": "Elevated calcium with appropriately suppressed PTH (<20 pg/mL)",
     "diseases": {
-      "hypercalcemia_of_malignancy": { "lr_positive": 25.0, "lr_negative": 0.15 },
-      "vitamin_d_toxicity": { "lr_positive": 10.0, "lr_negative": 0.50 },
-      "sarcoidosis": { "lr_positive": 8.0, "lr_negative": 0.60 }
+      "hypercalcemia_of_malignancy": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.15
+      },
+      "vitamin_d_toxicity": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.5
+      },
+      "sarcoidosis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "pth_elevated": {
     "description": "Parathyroid hormone above 65 pg/mL",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 10.0, "lr_negative": 0.10 },
-      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "hyperthyroidism": { "lr_positive": 0.1, "lr_negative": 1.5 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.1
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "hyperthyroidism": {
+        "lr_positive": 0.1,
+        "lr_negative": 1.5
+      }
     }
   },
   "pth_high_normal": {
     "description": "PTH in upper normal range (50-65 pg/mL), inappropriately normal if calcium is high-normal",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 4.0, "lr_negative": 0.50 },
-      "hyperthyroidism": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      },
+      "hyperthyroidism": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "alt_greater_than_10x_uln": {
     "description": "ALT elevated more than 10 times the upper limit of normal",
     "diseases": {
-      "hepatocellular_injury": { "lr_positive": 25.0, "lr_negative": 0.30 },
-      "acetaminophen_toxicity": { "lr_positive": 12.0, "lr_negative": 0.40 },
-      "ischemic_hepatitis": { "lr_positive": 10.0, "lr_negative": 0.50 },
-      "acute_viral_hepatitis": { "lr_positive": 8.0, "lr_negative": 0.35 }
+      "hepatocellular_injury": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.3
+      },
+      "acetaminophen_toxicity": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      },
+      "ischemic_hepatitis": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.5
+      },
+      "acute_viral_hepatitis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "ast_alt_ratio_greater_than_2": {
     "description": "AST to ALT ratio greater than 2:1",
     "diseases": {
-      "alcoholic_hepatitis": { "lr_positive": 17.0, "lr_negative": 0.30 },
-      "cirrhosis": { "lr_positive": 4.0, "lr_negative": 0.50 },
-      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.60 }
+      "alcoholic_hepatitis": {
+        "lr_positive": 17.0,
+        "lr_negative": 0.3
+      },
+      "cirrhosis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "alp_elevated_with_normal_ggt": {
     "description": "Elevated alkaline phosphatase with normal GGT, suggesting bone origin",
     "diseases": {
-      "paget_disease_of_bone": { "lr_positive": 12.0, "lr_negative": 0.40 },
-      "osteomalacia": { "lr_positive": 6.0, "lr_negative": 0.55 }
+      "paget_disease_of_bone": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      },
+      "osteomalacia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "alp_elevated_with_elevated_ggt": {
     "description": "Elevated ALP with elevated GGT, confirming hepatobiliary origin",
     "diseases": {
-      "cholestatic_liver_disease": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "biliary_obstruction": { "lr_positive": 12.0, "lr_negative": 0.15 }
+      "cholestatic_liver_disease": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      },
+      "biliary_obstruction": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "direct_bilirubin_elevated": {
     "description": "Conjugated (direct) bilirubin elevated, indicating impaired excretion",
     "diseases": {
-      "cholestatic_liver_disease": { "lr_positive": 8.0, "lr_negative": 0.20 },
-      "biliary_obstruction": { "lr_positive": 7.0, "lr_negative": 0.25 },
-      "hepatocellular_injury": { "lr_positive": 3.0, "lr_negative": 0.45 }
+      "cholestatic_liver_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.2
+      },
+      "biliary_obstruction": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.25
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
+      }
     }
   },
   "gamma_glutamyl_transferase_elevated": {
     "description": "GGT above upper limit of normal",
     "diseases": {
-      "cholestatic_liver_disease": { "lr_positive": 6.0, "lr_negative": 0.25 },
-      "hepatocellular_injury": { "lr_positive": 2.0, "lr_negative": 0.50 }
+      "cholestatic_liver_disease": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "alkaline_phosphatase_elevated": {
     "description": "Alkaline phosphatase above upper limit of normal",
     "diseases": {
-      "cholestatic_liver_disease": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "hepatocellular_injury": { "lr_positive": 0.8, "lr_negative": 1.0 }
+      "cholestatic_liver_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.8,
+        "lr_negative": 1.0
+      }
     }
   },
   "bilirubin_total_elevated": {
     "description": "Total bilirubin above upper limit of normal (>1.2 mg/dL)",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 5.0, "lr_negative": 0.4 },
-      "hepatocellular_injury": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "cholestatic_liver_disease": { "lr_positive": 5.0, "lr_negative": 0.3 }
+      "hemolytic_anemia": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.4
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "cholestatic_liver_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "indirect_bilirubin_elevated": {
     "description": "Unconjugated (indirect) bilirubin elevated",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 8.0, "lr_negative": 0.25 },
-      "gilbert_syndrome": { "lr_positive": 6.0, "lr_negative": 0.30 },
-      "ineffective_erythropoiesis": { "lr_positive": 4.0, "lr_negative": 0.50 }
+      "hemolytic_anemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.25
+      },
+      "gilbert_syndrome": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      },
+      "ineffective_erythropoiesis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "haptoglobin_undetectable": {
     "description": "Haptoglobin below detectable limit (<10 mg/dL)",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 30.0, "lr_negative": 0.12 },
-      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hypothyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "hemolytic_anemia": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.12
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hypothyroidism": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "haptoglobin_borderline_low": {
     "description": "Haptoglobin in low-normal range (31-50 mg/dL), suspicious for subclinical hemolysis",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 6.0, "lr_negative": 1.0 },
-      "iron_deficiency_anemia": { "lr_positive": 0.3, "lr_negative": 1.2 }
+      "hemolytic_anemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 1.0
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.2
+      }
     }
   },
   "complement_c4_borderline_low": {
     "description": "Complement C4 in low-normal range (10-16 mg/dL), suggestive of early classical pathway consumption",
     "diseases": {
-      "preclinical_sle": { "lr_positive": 4.0, "lr_negative": 1.0 },
-      "systemic_lupus_erythematosus": { "lr_positive": 3.0, "lr_negative": 0.8 }
+      "preclinical_sle": {
+        "lr_positive": 4.0,
+        "lr_negative": 1.0
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.8
+      }
     }
   },
   "haptoglobin_low": {
     "description": "Haptoglobin below 30 mg/dL",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 12.0, "lr_negative": 0.15 },
-      "disseminated_intravascular_coagulation": { "lr_positive": 4.0, "lr_negative": 0.40 }
+      "hemolytic_anemia": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.15
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "ldh_elevated": {
     "description": "Lactate dehydrogenase above upper limit of normal",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "tumor_lysis_syndrome": { "lr_positive": 4.5, "lr_negative": 0.10 },
-      "pulmonary_embolism": { "lr_positive": 2.5, "lr_negative": 0.50 },
-      "myocardial_infarction": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.25 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "hemolytic_anemia": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.1
+      },
+      "pulmonary_embolism": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
+      },
+      "myocardial_infarction": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.25
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "reticulocyte_count_elevated": {
     "description": "Reticulocyte count above 2.5%, indicating marrow erythropoietic response",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 10.0, "lr_negative": 0.15 },
-      "acute_blood_loss": { "lr_positive": 6.0, "lr_negative": 0.25 },
-      "recovery_from_iron_therapy": { "lr_positive": 4.0, "lr_negative": 0.50 }
+      "hemolytic_anemia": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.15
+      },
+      "acute_blood_loss": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      },
+      "recovery_from_iron_therapy": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "schistocytes_on_smear": {
     "description": "Fragmented red blood cells seen on peripheral blood smear",
     "diseases": {
-      "ttp_hus": { "lr_positive": 30.0, "lr_negative": 0.25 },
-      "disseminated_intravascular_coagulation": { "lr_positive": 15.0, "lr_negative": 0.35 },
-      "hellp_syndrome": { "lr_positive": 12.0, "lr_negative": 0.40 },
-      "mechanical_heart_valve_hemolysis": { "lr_positive": 8.0, "lr_negative": 0.55 }
+      "ttp_hus": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.25
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.35
+      },
+      "hellp_syndrome": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      },
+      "mechanical_heart_valve_hemolysis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "positive_direct_coombs_test": {
     "description": "Direct antiglobulin test positive, indicating antibody/complement on RBC surface",
     "diseases": {
-      "autoimmune_hemolytic_anemia": { "lr_positive": 35.0, "lr_negative": 0.10 },
-      "drug_induced_hemolytic_anemia": { "lr_positive": 15.0, "lr_negative": 0.30 }
+      "autoimmune_hemolytic_anemia": {
+        "lr_positive": 35.0,
+        "lr_negative": 0.1
+      },
+      "drug_induced_hemolytic_anemia": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "platelets_less_than_50000": {
     "description": "Severe thrombocytopenia with platelets below 50 x10^9/L",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "ttp_hus": { "lr_positive": 6.0, "lr_negative": 0.15 },
-      "aplastic_anemia": { "lr_positive": 5.0, "lr_negative": 0.25 },
-      "immune_thrombocytopenia": { "lr_positive": 4.0, "lr_negative": 0.20 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "ttp_hus": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.15
+      },
+      "aplastic_anemia": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.25
+      },
+      "immune_thrombocytopenia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      }
     }
   },
   "d_dimer_elevated": {
     "description": "D-dimer above 0.5 mcg/mL FEU",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 4.0, "lr_negative": 0.05 },
-      "pulmonary_embolism": { "lr_positive": 1.8, "lr_negative": 0.08 },
-      "deep_vein_thrombosis": { "lr_positive": 1.7, "lr_negative": 0.10 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.05
+      },
+      "pulmonary_embolism": {
+        "lr_positive": 1.8,
+        "lr_negative": 0.08
+      },
+      "deep_vein_thrombosis": {
+        "lr_positive": 1.7,
+        "lr_negative": 0.1
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "d_dimer_normal": {
     "description": "D-dimer within normal range (<0.5 mcg/mL FEU)",
     "diseases": {
-      "pulmonary_embolism": { "lr_positive": 0.08, "lr_negative": 12.0 },
-      "deep_vein_thrombosis": { "lr_positive": 0.10, "lr_negative": 10.0 },
-      "disseminated_intravascular_coagulation": { "lr_positive": 0.05, "lr_negative": 8.0 }
+      "pulmonary_embolism": {
+        "lr_positive": 0.08,
+        "lr_negative": 12.0
+      },
+      "deep_vein_thrombosis": {
+        "lr_positive": 0.1,
+        "lr_negative": 10.0
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 0.05,
+        "lr_negative": 8.0
+      }
     }
   },
   "fibrinogen_low": {
     "description": "Fibrinogen below 200 mg/dL",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 12.0, "lr_negative": 0.30 },
-      "severe_liver_disease": { "lr_positive": 4.0, "lr_negative": 0.55 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.3
+      },
+      "severe_liver_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "prolonged_pt_inr": {
     "description": "Prothrombin time/INR prolonged above normal",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 4.0, "lr_negative": 0.25 },
-      "liver_disease": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "warfarin_effect": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "vitamin_k_deficiency": { "lr_positive": 6.0, "lr_negative": 0.25 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.25
+      },
+      "liver_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "warfarin_effect": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "vitamin_k_deficiency": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "troponin_elevated": {
     "description": "Cardiac troponin I or T above 99th percentile URL with rise/fall pattern",
     "diseases": {
-      "acute_myocardial_infarction": { "lr_positive": 20.0, "lr_negative": 0.06 },
-      "myocarditis": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "pulmonary_embolism": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "heart_failure": { "lr_positive": 2.0, "lr_negative": 0.50 },
-      "sepsis": { "lr_positive": 2.5, "lr_negative": 0.55 }
+      "acute_myocardial_infarction": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.06
+      },
+      "myocarditis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "pulmonary_embolism": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "heart_failure": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "sepsis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      }
     }
   },
   "bnp_greater_than_500": {
     "description": "BNP above 500 pg/mL, strongly suggests heart failure",
     "diseases": {
-      "heart_failure": { "lr_positive": 18.0, "lr_negative": 0.10 }
+      "heart_failure": {
+        "lr_positive": 18.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "bnp_less_than_100": {
     "description": "BNP below 100 pg/mL, essentially excludes heart failure",
     "diseases": {
-      "heart_failure": { "lr_positive": 0.11, "lr_negative": 5.0 }
+      "heart_failure": {
+        "lr_positive": 0.11,
+        "lr_negative": 5.0
+      }
     }
   },
   "nt_probnp_greater_than_900": {
     "description": "NT-proBNP above 900 pg/mL in adults under 75",
     "diseases": {
-      "heart_failure": { "lr_positive": 15.0, "lr_negative": 0.08 }
+      "heart_failure": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.08
+      }
     }
   },
   "nt_probnp_less_than_300": {
     "description": "NT-proBNP below 300 pg/mL, strong negative predictor for acute HF",
     "diseases": {
-      "heart_failure": { "lr_positive": 0.06, "lr_negative": 8.0 }
+      "heart_failure": {
+        "lr_positive": 0.06,
+        "lr_negative": 8.0
+      }
     }
   },
   "ck_greater_than_10x_uln": {
     "description": "Creatine kinase elevated more than 10 times upper limit of normal",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 25.0, "lr_negative": 0.05 },
-      "myositis": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "rhabdomyolysis": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.05
+      },
+      "myositis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "ck_greater_than_5x_uln": {
     "description": "Creatine kinase elevated more than 5 times upper limit of normal",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 12.0, "lr_negative": 0.08 },
-      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.40 },
-      "hypothyroidism": { "lr_positive": 3.5, "lr_negative": 0.70 }
+      "rhabdomyolysis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.08
+      },
+      "myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      },
+      "hypothyroidism": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.7
+      }
     }
   },
   "myoglobin_elevated": {
     "description": "Serum myoglobin above upper limit of normal",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.45 },
-      "tumor_lysis_syndrome": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "rhabdomyolysis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      },
+      "myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "addison_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "esr_greater_than_100": {
     "description": "Erythrocyte sedimentation rate above 100 mm/hr",
     "diseases": {
-      "multiple_myeloma": { "lr_positive": 8.0, "lr_negative": 0.30 },
-      "temporal_arteritis": { "lr_positive": 6.5, "lr_negative": 0.20 },
-      "infective_endocarditis": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "osteomyelitis": { "lr_positive": 4.5, "lr_negative": 0.40 },
-      "systemic_lupus_erythematosus": { "lr_positive": 3.5, "lr_negative": 0.45 }
+      "multiple_myeloma": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.3
+      },
+      "temporal_arteritis": {
+        "lr_positive": 6.5,
+        "lr_negative": 0.2
+      },
+      "infective_endocarditis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "osteomyelitis": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.4
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.45
+      }
     }
   },
   "crp_greater_than_10": {
     "description": "C-reactive protein above 10 mg/L, suggesting significant inflammation or infection",
     "diseases": {
-      "sepsis": { "lr_positive": 3.5, "lr_negative": 0.15 },
-      "bacterial_infection": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "rheumatoid_arthritis_flare": { "lr_positive": 3.0, "lr_negative": 0.30 }
+      "sepsis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.15
+      },
+      "bacterial_infection": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "rheumatoid_arthritis_flare": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "procalcitonin_greater_than_2": {
     "description": "Procalcitonin above 2 ng/mL, high likelihood of bacterial sepsis",
     "diseases": {
-      "sepsis": { "lr_positive": 15.0, "lr_negative": 0.15 },
-      "bacterial_infection": { "lr_positive": 12.0, "lr_negative": 0.20 }
+      "sepsis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.15
+      },
+      "bacterial_infection": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.2
+      }
     }
   },
   "procalcitonin_less_than_0_25": {
     "description": "Procalcitonin below 0.25 ng/mL, bacterial infection unlikely",
     "diseases": {
-      "bacterial_infection": { "lr_positive": 0.10, "lr_negative": 6.0 },
-      "sepsis": { "lr_positive": 0.15, "lr_negative": 5.0 }
+      "bacterial_infection": {
+        "lr_positive": 0.1,
+        "lr_negative": 6.0
+      },
+      "sepsis": {
+        "lr_positive": 0.15,
+        "lr_negative": 5.0
+      }
     }
   },
   "lactate_greater_than_4": {
     "description": "Serum lactate above 4 mmol/L",
     "diseases": {
-      "sepsis": { "lr_positive": 7.0, "lr_negative": 0.30 },
-      "lactic_acidosis": { "lr_positive": 15.0, "lr_negative": 0.05 },
-      "mesenteric_ischemia": { "lr_positive": 6.0, "lr_negative": 0.25 },
-      "shock": { "lr_positive": 8.0, "lr_negative": 0.15 }
+      "sepsis": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.3
+      },
+      "lactic_acidosis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.05
+      },
+      "mesenteric_ischemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      },
+      "shock": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "ana_positive": {
-    "description": "Antinuclear antibody test positive (≥1:80 titer)",
+    "description": "Antinuclear antibody test positive (\u00e2\u2030\u00a51:80 titer)",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 4.5, "lr_negative": 0.05 },
-      "preclinical_sle": { "lr_positive": 3.5, "lr_negative": 0.15 },
-      "drug_induced_lupus": { "lr_positive": 3.0, "lr_negative": 0.10 },
-      "scleroderma": { "lr_positive": 3.0, "lr_negative": 0.15 },
-      "sjogren_syndrome": { "lr_positive": 2.5, "lr_negative": 0.20 },
-      "autoimmune_hepatitis": { "lr_positive": 3.0, "lr_negative": 0.25 },
-      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "disseminated_intravascular_coagulation": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "multiple_myeloma": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.05
+      },
+      "preclinical_sle": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.15
+      },
+      "drug_induced_lupus": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.1
+      },
+      "scleroderma": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.15
+      },
+      "sjogren_syndrome": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.2
+      },
+      "autoimmune_hepatitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.25
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "multiple_myeloma": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "ana_positive_high_titer": {
-    "description": "ANA positive at high titer (≥1:640)",
+    "description": "ANA positive at high titer (\u00e2\u2030\u00a51:640)",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 15.0, "lr_negative": 0.20 },
-      "preclinical_sle": { "lr_positive": 10.0, "lr_negative": 0.25 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.2
+      },
+      "preclinical_sle": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "anti_dsdna_positive": {
     "description": "Anti-double-stranded DNA antibody positive",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 25.0, "lr_negative": 0.40 },
-      "preclinical_sle": { "lr_positive": 12.0, "lr_negative": 0.50 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.4
+      },
+      "preclinical_sle": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "anti_dsdna_borderline_high": {
     "description": "Anti-dsDNA antibody in upper normal range (15-25 IU/mL), suggestive of early autoimmune process",
     "diseases": {
-      "preclinical_sle": { "lr_positive": 7.0, "lr_negative": 0.6 },
-      "systemic_lupus_erythematosus": { "lr_positive": 1.0, "lr_negative": 0.5 },
-      "iron_deficiency_anemia": { "lr_positive": 0.3, "lr_negative": 1.0 },
-      "disseminated_intravascular_coagulation": { "lr_positive": 0.3, "lr_negative": 1.0 },
-      "multiple_myeloma": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "preclinical_sle": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.6
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 1.0,
+        "lr_negative": 0.5
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      },
+      "multiple_myeloma": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "antinuclear_antibody_titer_elevated": {
     "description": "Antinuclear antibody titer at or above upper limit of normal (borderline positive)",
     "diseases": {
-      "preclinical_sle": { "lr_positive": 3.0, "lr_negative": 0.30 },
-      "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.15 }
+      "preclinical_sle": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.15
+      }
     }
   },
   "anti_dsdna_antibody_elevated": {
     "description": "Anti-dsDNA antibody at or above upper limit of normal (borderline positive)",
     "diseases": {
-      "preclinical_sle": { "lr_positive": 6.0, "lr_negative": 0.40 },
-      "systemic_lupus_erythematosus": { "lr_positive": 8.0, "lr_negative": 0.45 }
+      "preclinical_sle": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.4
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.45
+      }
     }
   },
   "anti_smith_positive": {
     "description": "Anti-Smith antibody positive, highly specific for SLE",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 50.0, "lr_negative": 0.70 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 50.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "low_complement_c3_c4": {
     "description": "Both complement C3 and C4 low, indicating classical pathway activation",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 8.0, "lr_negative": 0.35 },
-      "cryoglobulinemia": { "lr_positive": 6.0, "lr_negative": 0.50 },
-      "post_infectious_glomerulonephritis": { "lr_positive": 5.0, "lr_negative": 0.40 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.35
+      },
+      "cryoglobulinemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.5
+      },
+      "post_infectious_glomerulonephritis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "low_c3_normal_c4": {
     "description": "Low C3 with normal C4, suggesting alternative pathway activation",
     "diseases": {
-      "membranoproliferative_glomerulonephritis": { "lr_positive": 8.0, "lr_negative": 0.40 },
-      "atypical_hus": { "lr_positive": 5.0, "lr_negative": 0.50 }
+      "membranoproliferative_glomerulonephritis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.4
+      },
+      "atypical_hus": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "anti_ccp_positive": {
     "description": "Anti-cyclic citrullinated peptide antibody positive",
     "diseases": {
-      "rheumatoid_arthritis": { "lr_positive": 25.0, "lr_negative": 0.30 }
+      "rheumatoid_arthritis": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "rheumatoid_factor_positive": {
     "description": "Rheumatoid factor positive",
     "diseases": {
-      "rheumatoid_arthritis": { "lr_positive": 4.5, "lr_negative": 0.40 },
-      "sjogren_syndrome": { "lr_positive": 2.5, "lr_negative": 0.55 },
-      "infective_endocarditis": { "lr_positive": 1.8, "lr_negative": 0.80 }
+      "rheumatoid_arthritis": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.4
+      },
+      "sjogren_syndrome": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      },
+      "infective_endocarditis": {
+        "lr_positive": 1.8,
+        "lr_negative": 0.8
+      }
     }
   },
   "protein_gap_elevated": {
     "description": "Total protein minus albumin >4 g/dL (globulin gap), suggesting monoclonal protein",
     "diseases": {
-      "multiple_myeloma": { "lr_positive": 15.0, "lr_negative": 0.25 },
-      "waldenstrom_macroglobulinemia": { "lr_positive": 8.0, "lr_negative": 0.40 },
-      "chronic_infection": { "lr_positive": 2.5, "lr_negative": 0.65 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "multiple_myeloma": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.25
+      },
+      "waldenstrom_macroglobulinemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.4
+      },
+      "chronic_infection": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.65
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "m_spike_on_spep": {
     "description": "Monoclonal spike on serum protein electrophoresis",
     "diseases": {
-      "multiple_myeloma": { "lr_positive": 30.0, "lr_negative": 0.20 },
-      "mgus": { "lr_positive": 15.0, "lr_negative": 0.25 },
-      "waldenstrom_macroglobulinemia": { "lr_positive": 20.0, "lr_negative": 0.30 }
+      "multiple_myeloma": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.2
+      },
+      "mgus": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.25
+      },
+      "waldenstrom_macroglobulinemia": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "gfr_less_than_15": {
     "description": "GFR below 15 mL/min/1.73m2, indicating kidney failure (CKD stage 5)",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 40.0, "lr_negative": 0.30 }
+      "chronic_kidney_disease": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "gfr_less_than_60": {
     "description": "GFR below 60 mL/min/1.73m2, indicating at least CKD stage 3",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 10.0, "lr_negative": 0.10 },
-      "tumor_lysis_syndrome": { "lr_positive": 0.8, "lr_negative": 1.0 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "cholestatic_liver_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hyperthyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hypothyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "chronic_kidney_disease": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.1
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 0.8,
+        "lr_negative": 1.0
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "cholestatic_liver_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hyperthyroidism": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hypothyroidism": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "proteinuria_nephrotic_range": {
     "description": "Urine protein >3.5 g/day or urine protein:creatinine ratio >3.5",
     "diseases": {
-      "nephrotic_syndrome": { "lr_positive": 35.0, "lr_negative": 0.05 },
-      "diabetic_nephropathy": { "lr_positive": 8.0, "lr_negative": 0.20 },
-      "membranous_nephropathy": { "lr_positive": 10.0, "lr_negative": 0.25 }
+      "nephrotic_syndrome": {
+        "lr_positive": 35.0,
+        "lr_negative": 0.05
+      },
+      "diabetic_nephropathy": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.2
+      },
+      "membranous_nephropathy": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "rbc_casts_in_urine": {
     "description": "Red blood cell casts seen on urinalysis, pathognomonic for glomerulonephritis",
     "diseases": {
-      "nephritic_syndrome": { "lr_positive": 45.0, "lr_negative": 0.40 },
-      "systemic_lupus_erythematosus": { "lr_positive": 10.0, "lr_negative": 0.65 },
-      "iga_nephropathy": { "lr_positive": 8.0, "lr_negative": 0.50 }
+      "nephritic_syndrome": {
+        "lr_positive": 45.0,
+        "lr_negative": 0.4
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.65
+      },
+      "iga_nephropathy": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "uric_acid_greater_than_10": {
     "description": "Serum uric acid above 10 mg/dL",
     "diseases": {
-      "tumor_lysis_syndrome": { "lr_positive": 12.0, "lr_negative": 0.15 },
-      "gout": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "chronic_kidney_disease": { "lr_positive": 3.0, "lr_negative": 0.55 }
+      "tumor_lysis_syndrome": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.15
+      },
+      "gout": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "hyperkalemia_with_hyperphosphatemia_and_hypocalcemia": {
     "description": "Combined hyperkalemia, hyperphosphatemia, and hypocalcemia",
     "diseases": {
-      "tumor_lysis_syndrome": { "lr_positive": 25.0, "lr_negative": 0.10 },
-      "rhabdomyolysis": { "lr_positive": 10.0, "lr_negative": 0.25 },
-      "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.35 }
+      "tumor_lysis_syndrome": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.1
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.25
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "psa_greater_than_10": {
     "description": "PSA above 10 ng/mL",
     "diseases": {
-      "prostate_cancer": { "lr_positive": 7.0, "lr_negative": 0.50 }
+      "prostate_cancer": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "psa_4_to_10": {
     "description": "PSA in 4-10 ng/mL range (diagnostic gray zone)",
     "diseases": {
-      "prostate_cancer": { "lr_positive": 2.5, "lr_negative": 0.70 },
-      "benign_prostatic_hyperplasia": { "lr_positive": 2.0, "lr_negative": 0.60 }
+      "prostate_cancer": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
+      },
+      "benign_prostatic_hyperplasia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "ca_125_elevated": {
     "description": "CA-125 above 35 U/mL",
     "diseases": {
-      "ovarian_cancer": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "endometriosis": { "lr_positive": 2.5, "lr_negative": 0.60 },
-      "pelvic_inflammatory_disease": { "lr_positive": 2.0, "lr_negative": 0.70 }
+      "ovarian_cancer": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "endometriosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "pelvic_inflammatory_disease": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "afp_elevated": {
     "description": "Alpha-fetoprotein above 10 ng/mL",
     "diseases": {
-      "hepatocellular_carcinoma": { "lr_positive": 6.0, "lr_negative": 0.40 },
-      "hepatic_cirrhosis": { "lr_positive": 2.0, "lr_negative": 0.70 },
-      "germ_cell_tumor": { "lr_positive": 5.0, "lr_negative": 0.50 }
+      "hepatocellular_carcinoma": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.4
+      },
+      "hepatic_cirrhosis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      },
+      "germ_cell_tumor": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "cea_elevated": {
     "description": "Carcinoembryonic antigen above 3 ng/mL",
     "diseases": {
-      "colorectal_cancer": { "lr_positive": 4.0, "lr_negative": 0.45 },
-      "pancreatic_cancer": { "lr_positive": 3.0, "lr_negative": 0.55 },
-      "smoking": { "lr_positive": 2.0, "lr_negative": 0.75 }
+      "colorectal_cancer": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.45
+      },
+      "pancreatic_cancer": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.55
+      },
+      "smoking": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.75
+      }
     }
   },
   "lipase_greater_than_3x_uln": {
     "description": "Lipase elevated more than 3 times upper limit of normal",
     "diseases": {
-      "acute_pancreatitis": { "lr_positive": 30.0, "lr_negative": 0.05 }
+      "acute_pancreatitis": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "amylase_greater_than_3x_uln": {
     "description": "Amylase elevated more than 3 times upper limit of normal",
     "diseases": {
-      "acute_pancreatitis": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "parotitis": { "lr_positive": 3.0, "lr_negative": 0.60 }
+      "acute_pancreatitis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      },
+      "parotitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "lipase_to_amylase_ratio_greater_than_2": {
     "description": "Lipase to amylase ratio greater than 2, more specific for pancreatitis",
     "diseases": {
-      "alcoholic_pancreatitis": { "lr_positive": 5.0, "lr_negative": 0.40 }
+      "alcoholic_pancreatitis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "ttg_iga_positive": {
     "description": "Tissue transglutaminase IgA antibody positive",
     "diseases": {
-      "celiac_disease": { "lr_positive": 40.0, "lr_negative": 0.06 }
+      "celiac_disease": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.06
+      }
     }
   },
   "ttg_iga_greater_than_10x_uln": {
     "description": "tTG-IgA elevated more than 10 times upper limit of normal",
     "diseases": {
-      "celiac_disease": { "lr_positive": 100.0, "lr_negative": 0.25 }
+      "celiac_disease": {
+        "lr_positive": 100.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "hba1c_greater_than_6_5": {
     "description": "HbA1c at or above 6.5%, diagnostic of diabetes mellitus",
     "diseases": {
-      "diabetes_mellitus": { "lr_positive": 18.0, "lr_negative": 0.12 }
+      "diabetes_mellitus": {
+        "lr_positive": 18.0,
+        "lr_negative": 0.12
+      }
     }
   },
   "hba1c_5_7_to_6_4": {
     "description": "HbA1c between 5.7% and 6.4%, indicating prediabetes",
     "diseases": {
-      "prediabetes": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.7 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "prediabetes": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "sodium_less_than_130": {
     "description": "Serum sodium below 130 mEq/L, moderate hyponatremia",
     "diseases": {
-      "siadh": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "heart_failure": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "cirrhosis": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "addison_disease": { "lr_positive": 4.0, "lr_negative": 0.40 }
+      "siadh": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "heart_failure": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "addison_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "urine_sodium_greater_than_40_with_hyponatremia": {
     "description": "Urine sodium >40 mEq/L in setting of hyponatremia, suggesting renal sodium wasting",
     "diseases": {
-      "siadh": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "addison_disease": { "lr_positive": 6.0, "lr_negative": 0.30 },
-      "cerebral_salt_wasting": { "lr_positive": 5.0, "lr_negative": 0.35 }
+      "siadh": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "addison_disease": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      },
+      "cerebral_salt_wasting": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "urine_osmolality_greater_than_100_with_low_serum_osm": {
     "description": "Inappropriately concentrated urine (>100 mOsm/kg) in setting of low serum osmolality",
     "diseases": {
-      "siadh": { "lr_positive": 12.0, "lr_negative": 0.08 }
+      "siadh": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.08
+      }
     }
   },
   "adamts13_less_than_10": {
     "description": "ADAMTS13 activity below 10%, diagnostic of TTP",
     "diseases": {
-      "ttp_hus": { "lr_positive": 50.0, "lr_negative": 0.05 }
+      "ttp_hus": {
+        "lr_positive": 50.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "jak2_v617f_positive": {
     "description": "JAK2 V617F mutation detected",
     "diseases": {
-      "polycythemia_vera": { "lr_positive": 45.0, "lr_negative": 0.05 },
-      "essential_thrombocythemia": { "lr_positive": 10.0, "lr_negative": 0.40 },
-      "primary_myelofibrosis": { "lr_positive": 8.0, "lr_negative": 0.45 }
+      "polycythemia_vera": {
+        "lr_positive": 45.0,
+        "lr_negative": 0.05
+      },
+      "essential_thrombocythemia": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.4
+      },
+      "primary_myelofibrosis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.45
+      }
     }
   },
   "plasma_free_metanephrines_elevated": {
     "description": "Plasma free metanephrines above upper limit of normal",
     "diseases": {
-      "pheochromocytoma": { "lr_positive": 12.0, "lr_negative": 0.02 }
+      "pheochromocytoma": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.02
+      }
     }
   },
   "plasma_free_metanephrines_greater_than_3x_uln": {
     "description": "Plasma free metanephrines above 3 times upper limit of normal",
     "diseases": {
-      "pheochromocytoma": { "lr_positive": 50.0, "lr_negative": 0.10 }
+      "pheochromocytoma": {
+        "lr_positive": 50.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "igf1_elevated": {
     "description": "Insulin-like growth factor 1 elevated for age/sex",
     "diseases": {
-      "acromegaly": { "lr_positive": 25.0, "lr_negative": 0.05 }
+      "acromegaly": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.05
+      }
     }
   },
   "growth_hormone_not_suppressed_by_ogtt": {
     "description": "Growth hormone fails to suppress below 1 ng/mL after 75g oral glucose load",
     "diseases": {
-      "acromegaly": { "lr_positive": 40.0, "lr_negative": 0.03 }
+      "acromegaly": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.03
+      }
     }
   },
   "low_ceruloplasmin": {
     "description": "Ceruloplasmin below 20 mg/dL",
     "diseases": {
-      "wilson_disease": { "lr_positive": 15.0, "lr_negative": 0.10 }
+      "wilson_disease": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "kayser_fleischer_rings": {
     "description": "Golden-brown copper deposits in Descemet membrane of cornea on slit-lamp examination",
     "diseases": {
-      "wilson_disease": { "lr_positive": 60.0, "lr_negative": 0.40 }
+      "wilson_disease": {
+        "lr_positive": 60.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "elevated_24h_urine_copper": {
     "description": "24-hour urine copper excretion above 100 mcg/day",
     "diseases": {
-      "wilson_disease": { "lr_positive": 20.0, "lr_negative": 0.15 }
+      "wilson_disease": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "anti_mitochondrial_antibody_positive": {
     "description": "Anti-mitochondrial antibody (AMA) positive, highly specific for PBC",
     "diseases": {
-      "primary_biliary_cholangitis": { "lr_positive": 50.0, "lr_negative": 0.08 }
+      "primary_biliary_cholangitis": {
+        "lr_positive": 50.0,
+        "lr_negative": 0.08
+      }
     }
   },
   "malar_rash": {
     "description": "Butterfly-shaped erythematous rash over malar eminences sparing nasolabial folds",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 12.0, "lr_negative": 0.55 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "oral_ulcers": {
     "description": "Usually painless oral or nasopharyngeal ulcers",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 5.0, "lr_negative": 0.70 },
-      "behcet_disease": { "lr_positive": 4.0, "lr_negative": 0.30 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.7
+      },
+      "behcet_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "photosensitivity_rash": {
     "description": "Skin rash developing after sun exposure disproportionate to normal sunburn",
     "diseases": {
-      "systemic_lupus_erythematosus": { "lr_positive": 6.0, "lr_negative": 0.60 }
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "morning_stiffness_greater_than_1_hour": {
     "description": "Joint stiffness lasting more than 1 hour after waking, improving with activity",
     "diseases": {
-      "rheumatoid_arthritis": { "lr_positive": 4.5, "lr_negative": 0.35 }
+      "rheumatoid_arthritis": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.35
+      }
     }
   },
   "symmetric_polyarthritis_small_joints": {
     "description": "Symmetric inflammation of small joints (MCPs, PIPs, wrists, MTPs)",
     "diseases": {
-      "rheumatoid_arthritis": { "lr_positive": 8.0, "lr_negative": 0.25 }
+      "rheumatoid_arthritis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.25
+      }
     }
   },
   "rheumatoid_nodules": {
     "description": "Subcutaneous nodules, typically over extensor surfaces/pressure points",
     "diseases": {
-      "rheumatoid_arthritis": { "lr_positive": 15.0, "lr_negative": 0.70 }
+      "rheumatoid_arthritis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "janeway_lesions": {
     "description": "Painless erythematous macules on palms and soles from septic microemboli",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 25.0, "lr_negative": 0.85 }
+      "infective_endocarditis": {
+        "lr_positive": 25.0,
+        "lr_negative": 0.85
+      }
     }
   },
   "osler_nodes": {
     "description": "Painful, raised violaceous nodules on fingertips from immune-complex vasculitis",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 20.0, "lr_negative": 0.80 }
+      "infective_endocarditis": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.8
+      }
     }
   },
   "splinter_hemorrhages": {
     "description": "Linear red-brown streaks under the fingernails",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 3.0, "lr_negative": 0.75 }
+      "infective_endocarditis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.75
+      }
     }
   },
   "new_murmur_with_fever": {
     "description": "New or changing cardiac murmur in setting of persistent fever",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 12.0, "lr_negative": 0.30 }
+      "infective_endocarditis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "blood_cultures_positive_typical_organism": {
     "description": "Blood cultures positive for typical endocarditis organism (S. aureus, viridans strep, enterococcus, HACEK) in multiple sets",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 18.0, "lr_negative": 0.15 }
+      "infective_endocarditis": {
+        "lr_positive": 18.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "vegetation_on_echo": {
     "description": "Oscillating intracardiac mass on valve or supporting structures on echocardiography",
     "diseases": {
-      "infective_endocarditis": { "lr_positive": 30.0, "lr_negative": 0.20 }
+      "infective_endocarditis": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.2
+      }
     }
   },
   "chvostek_sign": {
     "description": "Facial muscle twitching when tapping over facial nerve anterior to ear",
     "diseases": {
-      "hypocalcemia": { "lr_positive": 4.0, "lr_negative": 0.60 }
+      "hypocalcemia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "trousseau_sign": {
     "description": "Carpopedal spasm after inflating BP cuff above systolic pressure for 3 minutes",
     "diseases": {
-      "hypocalcemia": { "lr_positive": 12.0, "lr_negative": 0.40 }
+      "hypocalcemia": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "kussmaul_breathing": {
     "description": "Deep, rapid labored breathing pattern",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 10.0, "lr_negative": 0.40 },
-      "metabolic_acidosis": { "lr_positive": 6.0, "lr_negative": 0.35 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.4
+      },
+      "metabolic_acidosis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "fruity_breath": {
     "description": "Fruity or acetone odor on breath",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 15.0, "lr_negative": 0.55 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "dark_urine_with_positive_dipstick_blood_no_rbcs": {
     "description": "Dark brown urine testing positive for blood on dipstick but no RBCs on microscopy",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 20.0, "lr_negative": 0.30 },
-      "tumor_lysis_syndrome": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "rhabdomyolysis": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.3
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "addison_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "urine_dipstick_blood_positive_no_rbcs": {
     "description": "Urine dipstick positive for blood without RBCs on microscopy (myoglobinuria or hemoglobinuria)",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.30 },
-      "intravascular_hemolysis": { "lr_positive": 12.0, "lr_negative": 0.40 }
+      "rhabdomyolysis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.3
+      },
+      "intravascular_hemolysis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "pica_pagophagia": {
     "description": "Craving and chewing ice (pagophagia), a specific form of pica",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 10.0, "lr_negative": 0.80 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.8
+      }
     }
   },
   "koilonychia": {
     "description": "Spoon-shaped nails, concave nail surface",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 8.0, "lr_negative": 0.85 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.85
+      }
     }
   },
   "glossitis": {
     "description": "Smooth, swollen, tender tongue with loss of papillae",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 4.0, "lr_negative": 0.70 },
-      "vitamin_b12_deficiency": { "lr_positive": 4.5, "lr_negative": 0.65 },
-      "folate_deficiency": { "lr_positive": 3.5, "lr_negative": 0.75 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.7
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 4.5,
+        "lr_negative": 0.65
+      },
+      "folate_deficiency": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.75
+      }
     }
   },
   "subacute_combined_degeneration": {
     "description": "Combined dorsal column and corticospinal tract dysfunction (loss of proprioception/vibration + upper motor neuron signs)",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 35.0, "lr_negative": 0.80 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 35.0,
+        "lr_negative": 0.8
+      }
     }
   },
   "hypersegmented_neutrophils": {
-    "description": "Neutrophils with ≥5 lobes (or any with ≥6 lobes) on peripheral blood smear",
+    "description": "Neutrophils with \u00e2\u2030\u00a55 lobes (or any with \u00e2\u2030\u00a56 lobes) on peripheral blood smear",
     "diseases": {
-      "vitamin_b12_deficiency": { "lr_positive": 12.0, "lr_negative": 0.40 },
-      "folate_deficiency": { "lr_positive": 10.0, "lr_negative": 0.45 }
+      "vitamin_b12_deficiency": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.4
+      },
+      "folate_deficiency": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.45
+      }
     }
   },
   "acanthosis_nigricans": {
     "description": "Dark, velvety skin thickening, typically in skin folds (neck, axillae)",
     "diseases": {
-      "insulin_resistance": { "lr_positive": 6.0, "lr_negative": 0.65 },
-      "type_2_diabetes": { "lr_positive": 4.0, "lr_negative": 0.70 },
-      "gastric_malignancy": { "lr_positive": 3.0, "lr_negative": 0.90 }
+      "insulin_resistance": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.65
+      },
+      "type_2_diabetes": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.7
+      },
+      "gastric_malignancy": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.9
+      }
     }
   },
   "asterixis": {
     "description": "Flapping tremor of outstretched hands, negative myoclonus",
     "diseases": {
-      "hepatic_encephalopathy": { "lr_positive": 15.0, "lr_negative": 0.40 },
-      "uremic_encephalopathy": { "lr_positive": 8.0, "lr_negative": 0.55 }
+      "hepatic_encephalopathy": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.4
+      },
+      "uremic_encephalopathy": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "spider_angiomata": {
     "description": "Central arteriole with radiating vessels, blanches and refills from center",
     "diseases": {
-      "cirrhosis": { "lr_positive": 5.0, "lr_negative": 0.50 }
+      "cirrhosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "caput_medusae": {
     "description": "Dilated periumbilical veins radiating from umbilicus",
     "diseases": {
-      "cirrhosis": { "lr_positive": 20.0, "lr_negative": 0.85 }
+      "cirrhosis": {
+        "lr_positive": 20.0,
+        "lr_negative": 0.85
+      }
     }
   },
   "palmar_erythema": {
     "description": "Reddening of the palms, especially thenar and hypothenar eminences",
     "diseases": {
-      "cirrhosis": { "lr_positive": 4.0, "lr_negative": 0.60 },
-      "hyperthyroidism": { "lr_positive": 2.0, "lr_negative": 0.80 }
+      "cirrhosis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.6
+      },
+      "hyperthyroidism": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.8
+      }
     }
   },
   "periorbital_edema_morning": {
     "description": "Puffiness around eyes, worse in morning, improving throughout day",
     "diseases": {
-      "nephrotic_syndrome": { "lr_positive": 8.0, "lr_negative": 0.45 },
-      "hypothyroidism": { "lr_positive": 3.0, "lr_negative": 0.65 }
+      "nephrotic_syndrome": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.45
+      },
+      "hypothyroidism": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.65
+      }
     }
   },
   "dermatitis_herpetiformis": {
     "description": "Intensely pruritic papulovesicular eruption on extensor surfaces, symmetric",
     "diseases": {
-      "celiac_disease": { "lr_positive": 50.0, "lr_negative": 0.90 }
+      "celiac_disease": {
+        "lr_positive": 50.0,
+        "lr_negative": 0.9
+      }
     }
   },
   "cullen_sign": {
     "description": "Periumbilical ecchymosis suggesting retroperitoneal hemorrhage",
     "diseases": {
-      "acute_pancreatitis": { "lr_positive": 15.0, "lr_negative": 0.92 }
+      "acute_pancreatitis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.92
+      }
     }
   },
   "grey_turner_sign": {
     "description": "Flank ecchymosis suggesting retroperitoneal hemorrhage",
     "diseases": {
-      "acute_pancreatitis": { "lr_positive": 15.0, "lr_negative": 0.92 }
+      "acute_pancreatitis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.92
+      }
     }
   },
   "epigastric_pain_radiating_to_back": {
     "description": "Epigastric abdominal pain with radiation to the back",
     "diseases": {
-      "acute_pancreatitis": { "lr_positive": 6.0, "lr_negative": 0.30 },
-      "aortic_dissection": { "lr_positive": 2.5, "lr_negative": 0.60 },
-      "peptic_ulcer_disease": { "lr_positive": 3.0, "lr_negative": 0.55 }
+      "acute_pancreatitis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      },
+      "aortic_dissection": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "peptic_ulcer_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "chest_pain_substernal_pressure": {
     "description": "Substernal chest pressure or tightness, especially with exertion",
     "diseases": {
-      "acute_myocardial_infarction": { "lr_positive": 4.0, "lr_negative": 0.30 },
-      "unstable_angina": { "lr_positive": 3.5, "lr_negative": 0.35 }
+      "acute_myocardial_infarction": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      },
+      "unstable_angina": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.35
+      }
     }
   },
   "chest_pain_pleuritic": {
     "description": "Sharp chest pain worsening with inspiration",
     "diseases": {
-      "pulmonary_embolism": { "lr_positive": 2.5, "lr_negative": 0.55 },
-      "pericarditis": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "pneumonia": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "myocarditis": { "lr_positive": 3.0, "lr_negative": 0.50 }
+      "pulmonary_embolism": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      },
+      "pericarditis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "pneumonia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "myocarditis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "s3_gallop": {
     "description": "Third heart sound, a low-pitched sound in early diastole",
     "diseases": {
-      "heart_failure": { "lr_positive": 11.0, "lr_negative": 0.88 }
+      "heart_failure": {
+        "lr_positive": 11.0,
+        "lr_negative": 0.88
+      }
     }
   },
   "elevated_jvp": {
     "description": "Jugular venous pressure elevated above 4 cm above sternal angle",
     "diseases": {
-      "heart_failure": { "lr_positive": 5.0, "lr_negative": 0.55 },
-      "pericardial_tamponade": { "lr_positive": 6.0, "lr_negative": 0.30 },
-      "constrictive_pericarditis": { "lr_positive": 5.0, "lr_negative": 0.35 }
+      "heart_failure": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.55
+      },
+      "pericardial_tamponade": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      },
+      "constrictive_pericarditis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "hepatojugular_reflux": {
     "description": "Sustained JVP elevation >3 cm with 30 seconds of right upper quadrant abdominal pressure",
     "diseases": {
-      "heart_failure": { "lr_positive": 8.0, "lr_negative": 0.50 }
+      "heart_failure": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "paroxysmal_nocturnal_dyspnea": {
     "description": "Waking from sleep with acute dyspnea, relieved by sitting upright",
     "diseases": {
-      "heart_failure": { "lr_positive": 7.5, "lr_negative": 0.70 }
+      "heart_failure": {
+        "lr_positive": 7.5,
+        "lr_negative": 0.7
+      }
     }
   },
   "orthopnea": {
     "description": "Dyspnea when lying flat, relieved by sitting up",
     "diseases": {
-      "heart_failure": { "lr_positive": 4.0, "lr_negative": 0.40 }
+      "heart_failure": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "ammonia_elevated": {
     "description": "Serum ammonia above upper limit of normal",
     "diseases": {
-      "hepatic_encephalopathy": { "lr_positive": 5.0, "lr_negative": 0.25 },
-      "urea_cycle_disorder": { "lr_positive": 10.0, "lr_negative": 0.10 }
+      "hepatic_encephalopathy": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.25
+      },
+      "urea_cycle_disorder": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "st_elevation_on_ecg": {
     "description": "ST segment elevation in contiguous leads on electrocardiogram",
     "diseases": {
-      "acute_myocardial_infarction": { "lr_positive": 12.0, "lr_negative": 0.30 },
-      "pericarditis": { "lr_positive": 5.0, "lr_negative": 0.40 },
-      "left_ventricular_aneurysm": { "lr_positive": 3.0, "lr_negative": 0.70 }
+      "acute_myocardial_infarction": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.3
+      },
+      "pericarditis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.4
+      },
+      "left_ventricular_aneurysm": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "new_lbbb_with_chest_pain": {
     "description": "New left bundle branch block in setting of chest pain",
     "diseases": {
-      "acute_myocardial_infarction": { "lr_positive": 8.0, "lr_negative": 0.60 }
+      "acute_myocardial_infarction": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "rouleaux_formation": {
     "description": "Red blood cells stacked like coins on peripheral blood smear",
     "diseases": {
-      "multiple_myeloma": { "lr_positive": 10.0, "lr_negative": 0.50 },
-      "waldenstrom_macroglobulinemia": { "lr_positive": 6.0, "lr_negative": 0.55 }
+      "multiple_myeloma": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.5
+      },
+      "waldenstrom_macroglobulinemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "howell_jolly_bodies": {
     "description": "Nuclear remnants in red blood cells, indicating functional asplenia",
     "diseases": {
-      "sickle_cell_disease": { "lr_positive": 8.0, "lr_negative": 0.40 },
-      "post_splenectomy": { "lr_positive": 15.0, "lr_negative": 0.10 }
+      "sickle_cell_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.4
+      },
+      "post_splenectomy": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "target_cells": {
     "description": "Red blood cells with central and peripheral hemoglobin and a ring of pallor between them",
     "diseases": {
-      "thalassemia": { "lr_positive": 6.0, "lr_negative": 0.50 },
-      "liver_disease": { "lr_positive": 3.0, "lr_negative": 0.65 },
-      "hemoglobin_c_disease": { "lr_positive": 8.0, "lr_negative": 0.55 }
+      "thalassemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.5
+      },
+      "liver_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.65
+      },
+      "hemoglobin_c_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.55
+      }
     }
   },
   "non_anion_gap_metabolic_acidosis": {
     "description": "Metabolic acidosis with normal anion gap (hyperchloremic)",
     "diseases": {
-      "renal_tubular_acidosis": { "lr_positive": 6.0, "lr_negative": 0.25 },
-      "diarrhea": { "lr_positive": 4.0, "lr_negative": 0.30 }
+      "renal_tubular_acidosis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      },
+      "diarrhea": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "urine_ph_greater_than_5_5_with_acidosis": {
     "description": "Urine pH >5.5 in setting of systemic metabolic acidosis, indicating impaired urinary acidification",
     "diseases": {
-      "renal_tubular_acidosis_type_1": { "lr_positive": 18.0, "lr_negative": 0.15 }
+      "renal_tubular_acidosis_type_1": {
+        "lr_positive": 18.0,
+        "lr_negative": 0.15
+      }
     }
   },
   "pancytopenia": {
     "description": "Simultaneous decrease in all three blood cell lineages",
     "diseases": {
-      "aplastic_anemia": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "myelodysplastic_syndrome": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "vitamin_b12_deficiency": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.60 },
-      "hairy_cell_leukemia": { "lr_positive": 6.0, "lr_negative": 0.40 }
+      "aplastic_anemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "myelodysplastic_syndrome": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "hairy_cell_leukemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "erythrocytosis": {
     "description": "Elevated hemoglobin/hematocrit above age/sex-adjusted normal",
     "diseases": {
-      "polycythemia_vera": { "lr_positive": 8.0, "lr_negative": 0.05 },
-      "secondary_polycythemia": { "lr_positive": 4.0, "lr_negative": 0.30 },
-      "relative_polycythemia": { "lr_positive": 2.0, "lr_negative": 0.50 }
+      "polycythemia_vera": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.05
+      },
+      "secondary_polycythemia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      },
+      "relative_polycythemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "low_epo_with_erythrocytosis": {
     "description": "Low erythropoietin level in setting of elevated hemoglobin/hematocrit",
     "diseases": {
-      "polycythemia_vera": { "lr_positive": 30.0, "lr_negative": 0.10 }
+      "polycythemia_vera": {
+        "lr_positive": 30.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "aquagenic_pruritus": {
     "description": "Pruritus triggered by contact with water, especially warm water",
     "diseases": {
-      "polycythemia_vera": { "lr_positive": 15.0, "lr_negative": 0.75 }
+      "polycythemia_vera": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.75
+      }
     }
   },
   "erythromelalgia": {
     "description": "Burning pain and redness of extremities, especially hands and feet",
     "diseases": {
-      "polycythemia_vera": { "lr_positive": 12.0, "lr_negative": 0.80 },
-      "essential_thrombocythemia": { "lr_positive": 8.0, "lr_negative": 0.85 }
+      "polycythemia_vera": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.8
+      },
+      "essential_thrombocythemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.85
+      }
     }
   },
   "foamy_urine": {
     "description": "Urine that appears foamy or frothy, suggesting proteinuria",
     "diseases": {
-      "nephrotic_syndrome": { "lr_positive": 5.0, "lr_negative": 0.50 }
+      "nephrotic_syndrome": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "bronze_skin": {
     "description": "Bronze or slate-gray skin discoloration from iron deposition",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 10.0, "lr_negative": 0.75 }
+      "hemochromatosis": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.75
+      }
     }
   },
   "second_third_mcp_arthropathy": {
     "description": "Arthropathy predominantly affecting 2nd and 3rd metacarpophalangeal joints",
     "diseases": {
-      "hemochromatosis": { "lr_positive": 12.0, "lr_negative": 0.70 }
+      "hemochromatosis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "sickle_cells_on_smear": {
     "description": "Sickle-shaped (crescent) red blood cells on peripheral blood smear",
     "diseases": {
-      "sickle_cell_disease": { "lr_positive": 40.0, "lr_negative": 0.10 }
+      "sickle_cell_disease": {
+        "lr_positive": 40.0,
+        "lr_negative": 0.1
+      }
     }
   },
   "weight_loss_with_polydipsia_polyuria": {
     "description": "Unintentional weight loss combined with increased thirst and urination",
     "diseases": {
-      "diabetes_mellitus_type_1": { "lr_positive": 12.0, "lr_negative": 0.30 },
-      "diabetic_ketoacidosis": { "lr_positive": 8.0, "lr_negative": 0.35 }
+      "diabetes_mellitus_type_1": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.3
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.35
+      }
     }
   },
   "diffuse_goiter": {
     "description": "Uniform enlargement of entire thyroid gland",
     "diseases": {
-      "hyperthyroidism": { "lr_positive": 5.0, "lr_negative": 0.45 },
-      "hypothyroidism": { "lr_positive": 3.0, "lr_negative": 0.60 }
+      "hyperthyroidism": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.45
+      },
+      "hypothyroidism": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "cortisol_am_low": {
     "description": "Morning cortisol below lower limit of normal (fallback finding)",
     "diseases": {
-      "addison_disease": { "lr_positive": 10.0, "lr_negative": 0.15 },
-      "secondary_adrenal_insufficiency": { "lr_positive": 8.0, "lr_negative": 0.20 }
+      "addison_disease": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.15
+      },
+      "secondary_adrenal_insufficiency": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.2
+      }
     }
   },
   "adrenocorticotropic_hormone_elevated": {
     "description": "ACTH elevated above upper limit of normal, suggesting primary adrenal insufficiency",
     "diseases": {
-      "addison_disease": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "congenital_adrenal_hyperplasia": { "lr_positive": 8.0, "lr_negative": 0.25 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "primary_hyperparathyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "addison_disease": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.1
+      },
+      "congenital_adrenal_hyperplasia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.25
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "primary_hyperparathyroidism": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "glucose_low": {
     "description": "Blood glucose below lower limit of normal (hypoglycemia)",
     "diseases": {
-      "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.70 },
-      "insulinoma": { "lr_positive": 10.0, "lr_negative": 0.20 },
-      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.2 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "addison_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.7
+      },
+      "insulinoma": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.2
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.2
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "eosinophils_absolute_elevated": {
     "description": "Absolute eosinophil count above upper limit of normal",
     "diseases": {
-      "addison_disease": { "lr_positive": 4.0, "lr_negative": 0.50 },
-      "parasitic_infection": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "allergic_conditions": { "lr_positive": 3.0, "lr_negative": 0.50 }
+      "addison_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      },
+      "parasitic_infection": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "allergic_conditions": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "blood_urea_nitrogen_elevated": {
     "description": "BUN above upper limit of normal, suggesting prerenal azotemia or renal dysfunction",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.25 },
-      "tumor_lysis_syndrome": { "lr_positive": 3.5, "lr_negative": 0.40 },
-      "diabetic_ketoacidosis": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "multiple_myeloma": { "lr_positive": 2.5, "lr_negative": 0.60 },
-      "addison_disease": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "heart_failure": { "lr_positive": 2.5, "lr_negative": 0.60 }
+      "chronic_kidney_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.25
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.4
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "multiple_myeloma": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "addison_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "heart_failure": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      }
     }
   },
   "bicarbonate_low": {
     "description": "Serum bicarbonate below lower limit of normal (metabolic acidosis)",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 6.0, "lr_negative": 0.10 },
-      "chronic_kidney_disease": { "lr_positive": 1.5, "lr_negative": 0.7 },
-      "lactic_acidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
-      "addison_disease": { "lr_positive": 2.0, "lr_negative": 0.65 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.1
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
+      },
+      "lactic_acidosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.15
+      },
+      "addison_disease": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.65
+      }
     }
   },
   "sodium_low": {
     "description": "Serum sodium below lower limit of normal (hyponatremia)",
     "diseases": {
-      "siadh": { "lr_positive": 6.0, "lr_negative": 0.20 },
-      "addison_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "heart_failure": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "diabetic_ketoacidosis": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "hypothyroidism": { "lr_positive": 1.5, "lr_negative": 0.80 },
-      "chronic_kidney_disease": { "lr_positive": 0.3, "lr_negative": 1.0 }
+      "siadh": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.2
+      },
+      "addison_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "heart_failure": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      },
+      "hypothyroidism": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.3,
+        "lr_negative": 1.0
+      }
     }
   },
   "glucose_elevated": {
     "description": "Blood glucose above upper limit of normal (hyperglycemia)",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 5.0, "lr_negative": 0.15 },
-      "type_2_diabetes": { "lr_positive": 4.0, "lr_negative": 0.20 },
-      "cushing_syndrome": { "lr_positive": 3.5, "lr_negative": 0.40 },
-      "hyperosmolar_hyperglycemic_state": { "lr_positive": 5.0, "lr_negative": 0.10 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.15
+      },
+      "type_2_diabetes": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      },
+      "cushing_syndrome": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.4
+      },
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.1
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "chloride_elevated": {
     "description": "Serum chloride above upper limit of normal (hyperchloremia)",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 4.0, "lr_negative": 0.40 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      }
     }
   },
   "phosphorus_low": {
     "description": "Serum phosphorus below lower limit of normal (hypophosphatemia)",
     "diseases": {
-      "primary_hyperparathyroidism": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.60 },
-      "vitamin_d_deficiency": { "lr_positive": 2.0, "lr_negative": 0.65 }
+      "primary_hyperparathyroidism": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "vitamin_d_deficiency": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.65
+      }
     }
   },
   "white_blood_cells_elevated": {
     "description": "WBC count above upper limit of normal (leukocytosis)",
     "diseases": {
-      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.50 },
-      "cushing_syndrome": { "lr_positive": 2.0, "lr_negative": 0.65 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "diabetic_ketoacidosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
+      },
+      "cushing_syndrome": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.65
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "infective_endocarditis": {
+        "lr_positive": 1.2,
+        "lr_negative": 0.85
+      }
     }
   },
   "hemoglobin_a1c_elevated": {
     "description": "HbA1c above upper limit of normal (suggesting chronic hyperglycemia)",
     "diseases": {
-      "type_2_diabetes": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "diabetic_ketoacidosis": { "lr_positive": 4.0, "lr_negative": 0.30 }
+      "type_2_diabetes": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "potassium_low": {
     "description": "Serum potassium below lower limit of normal (hypokalemia)",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 7.0, "lr_negative": 0.30 },
-      "primary_hyperparathyroidism": { "lr_positive": 2.5, "lr_negative": 0.60 }
+      "cushing_syndrome": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.3
+      },
+      "primary_hyperparathyroidism": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      }
     }
   },
   "bicarbonate_elevated": {
     "description": "Serum bicarbonate above upper limit of normal (metabolic alkalosis)",
     "diseases": {
-      "cushing_syndrome": { "lr_positive": 5.0, "lr_negative": 0.35 },
-      "primary_hyperparathyroidism": { "lr_positive": 2.5, "lr_negative": 0.55 }
+      "cushing_syndrome": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.35
+      },
+      "primary_hyperparathyroidism": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      }
     }
   },
   "glomerular_filtration_rate_low": {
     "description": "GFR below lower limit of normal (fallback finding for mild impairment)",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 5.0, "lr_negative": 0.20 },
-      "multiple_myeloma": { "lr_positive": 2.0, "lr_negative": 0.65 }
+      "chronic_kidney_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.2
+      },
+      "multiple_myeloma": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.65
+      }
     }
   },
   "creatine_kinase_elevated": {
     "description": "Creatine kinase above upper limit of normal (fallback finding)",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.05 },
-      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "hypothyroidism": { "lr_positive": 2.0, "lr_negative": 0.70 },
-      "tumor_lysis_syndrome": { "lr_positive": 0.8, "lr_negative": 1.0 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "cholestatic_liver_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.0 },
-      "multiple_myeloma": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "rhabdomyolysis": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.05
+      },
+      "myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "hypothyroidism": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 0.8,
+        "lr_negative": 1.0
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "cholestatic_liver_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "iron_deficiency_anemia": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "addison_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "multiple_myeloma": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "aspartate_aminotransferase_elevated": {
     "description": "AST above upper limit of normal (fallback finding)",
     "diseases": {
-      "hepatocellular_injury": { "lr_positive": 6.0, "lr_negative": 0.20 },
-      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
-      "hemochromatosis": { "lr_positive": 2.0, "lr_negative": 0.65 },
-      "cholestatic_liver_disease": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "hemolytic_anemia": { "lr_positive": 2.0, "lr_negative": 0.70 }
+      "hepatocellular_injury": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.2
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      },
+      "hemochromatosis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.65
+      },
+      "cholestatic_liver_disease": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      }
     }
   },
   "alanine_aminotransferase_elevated": {
     "description": "ALT above upper limit of normal (fallback finding)",
     "diseases": {
-      "hepatocellular_injury": { "lr_positive": 7.0, "lr_negative": 0.15 },
-      "hemochromatosis": { "lr_positive": 2.5, "lr_negative": 0.55 },
-      "cholestatic_liver_disease": { "lr_positive": 2.5, "lr_negative": 0.50 },
-      "rhabdomyolysis": { "lr_positive": 2.0, "lr_negative": 0.60 }
+      "hepatocellular_injury": {
+        "lr_positive": 7.0,
+        "lr_negative": 0.15
+      },
+      "hemochromatosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      },
+      "cholestatic_liver_disease": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      }
     }
   },
   "potassium_elevated": {
     "description": "Serum potassium above upper limit of normal (hyperkalemia)",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.40 },
-      "addison_disease": { "lr_positive": 5.0, "lr_negative": 0.35 },
-      "rhabdomyolysis": { "lr_positive": 3.5, "lr_negative": 0.50 },
-      "tumor_lysis_syndrome": { "lr_positive": 5.0, "lr_negative": 0.30 },
-      "diabetic_ketoacidosis": { "lr_positive": 3.0, "lr_negative": 0.50 }
+      "chronic_kidney_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      },
+      "addison_disease": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.35
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.5
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "phosphorus_elevated": {
     "description": "Serum phosphorus above upper limit of normal (hyperphosphatemia)",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
-      "tumor_lysis_syndrome": { "lr_positive": 6.0, "lr_negative": 0.25 },
-      "hypoparathyroidism": { "lr_positive": 5.0, "lr_negative": 0.30 }
+      "chronic_kidney_disease": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.25
+      },
+      "hypoparathyroidism": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "creatinine_elevated": {
     "description": "Serum creatinine above upper limit of normal (elevated GFR marker)",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "multiple_myeloma": { "lr_positive": 3.0, "lr_negative": 0.60 },
-      "tumor_lysis_syndrome": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "diabetic_ketoacidosis": { "lr_positive": 2.5, "lr_negative": 0.55 }
+      "chronic_kidney_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "multiple_myeloma": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "diabetic_ketoacidosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      },
+      "infective_endocarditis": {
+        "lr_positive": 1.8,
+        "lr_negative": 0.8
+      }
     }
   },
   "erythrocyte_sedimentation_rate_elevated": {
     "description": "ESR above upper limit of normal (fallback finding for moderate elevation)",
     "diseases": {
-      "multiple_myeloma": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "systemic_lupus_erythematosus": { "lr_positive": 2.5, "lr_negative": 0.55 },
-      "preclinical_sle": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "multiple_myeloma": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
+      },
+      "preclinical_sle": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      },
+      "infective_endocarditis": {
+        "lr_positive": 1.3,
+        "lr_negative": 0.12
+      }
     }
   },
   "hemoglobin_low": {
     "description": "Hemoglobin below lower limit of normal (anemia)",
     "diseases": {
-      "iron_deficiency_anemia": { "lr_positive": 3.0, "lr_negative": 0.30 },
-      "vitamin_b12_deficiency": { "lr_positive": 2.5, "lr_negative": 0.50 },
-      "hemolytic_anemia": { "lr_positive": 3.0, "lr_negative": 0.25 },
-      "multiple_myeloma": { "lr_positive": 2.0, "lr_negative": 0.60 },
-      "chronic_kidney_disease": { "lr_positive": 2.0, "lr_negative": 0.55 }
+      "iron_deficiency_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.25
+      },
+      "multiple_myeloma": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.55
+      },
+      "infective_endocarditis": {
+        "lr_positive": 1.3,
+        "lr_negative": 0.45
+      }
     }
   },
   "calcium_low": {
     "description": "Serum calcium below lower limit of normal (hypocalcemia)",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 4.0, "lr_negative": 0.40 },
-      "chronic_kidney_disease": { "lr_positive": 3.5, "lr_negative": 0.45 },
-      "tumor_lysis_syndrome": { "lr_positive": 4.0, "lr_negative": 0.35 },
-      "hypoparathyroidism": { "lr_positive": 8.0, "lr_negative": 0.10 },
-      "vitamin_d_deficiency": { "lr_positive": 3.0, "lr_negative": 0.50 }
+      "rhabdomyolysis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.4
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.45
+      },
+      "tumor_lysis_syndrome": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.35
+      },
+      "hypoparathyroidism": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
+      },
+      "vitamin_d_deficiency": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
     }
   },
   "uric_acid_elevated": {
     "description": "Serum uric acid above upper limit of normal (hyperuricemia)",
     "diseases": {
-      "tumor_lysis_syndrome": { "lr_positive": 8.0, "lr_negative": 0.15 },
-      "chronic_kidney_disease": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "rhabdomyolysis": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "gout": { "lr_positive": 4.0, "lr_negative": 0.30 }
+      "tumor_lysis_syndrome": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.15
+      },
+      "chronic_kidney_disease": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "rhabdomyolysis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "gout": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
     }
   },
   "prothrombin_time_elevated": {
     "description": "Prothrombin time prolonged above upper limit of normal",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 3.0, "lr_negative": 0.40 },
-      "cirrhosis": { "lr_positive": 3.0, "lr_negative": 0.45 },
-      "hepatocellular_injury": { "lr_positive": 1.5, "lr_negative": 0.70 },
-      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
     }
   },
   "international_normalized_ratio_elevated": {
     "description": "INR above 1.1, indicating prolonged coagulation",
     "diseases": {
-      "disseminated_intravascular_coagulation": { "lr_positive": 3.0, "lr_negative": 0.40 },
-      "cirrhosis": { "lr_positive": 3.0, "lr_negative": 0.45 },
-      "hepatocellular_injury": { "lr_positive": 1.5, "lr_negative": 0.70 },
-      "vitamin_b12_deficiency": { "lr_positive": 0.5, "lr_negative": 1.0 }
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 0.5,
+        "lr_negative": 1.0
+      }
+    }
+  },
+  "complement_c3_low": {
+    "finding_key": "complement_c3_low",
+    "description": "Complement C3 below lower limit of normal",
+    "diseases": {
+      "infective_endocarditis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.8
+      }
+    }
+  },
+  "complement_c4_low": {
+    "finding_key": "complement_c4_low",
+    "description": "Complement C4 below lower limit of normal",
+    "diseases": {
+      "infective_endocarditis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.85
+      }
     }
   }
 }

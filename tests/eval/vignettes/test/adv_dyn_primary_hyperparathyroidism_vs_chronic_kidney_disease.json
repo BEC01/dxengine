@@ -34,18 +34,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 66.2,
-            "unit": "pg/mL"
+            "test_name": "phosphorus",
+            "value": 3.6,
+            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
             "value": 5.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.6,
             "unit": "mg/dL"
           },
           {
@@ -54,14 +49,14 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "parathyroid_hormone",
+            "value": 66.2,
+            "unit": "pg/mL"
+          },
+          {
             "test_name": "alkaline_phosphatase",
             "value": 126.4,
             "unit": "U/L"
-          },
-          {
-            "test_name": "chloride",
-            "value": 104.4,
-            "unit": "mEq/L"
           },
           {
             "test_name": "vitamin_d_25_hydroxy",
@@ -69,9 +64,9 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
+            "test_name": "chloride",
+            "value": 104.4,
+            "unit": "mEq/L"
           },
           {
             "test_name": "albumin",
@@ -84,14 +79,19 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "potassium",
-            "value": 4.2,
-            "unit": "mEq/L"
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.2,
+            "unit": "mEq/L"
           },
           {
             "test_name": "creatinine",
