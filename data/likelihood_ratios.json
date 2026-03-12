@@ -371,7 +371,11 @@
   "haptoglobin_undetectable": {
     "description": "Haptoglobin below detectable limit (<10 mg/dL)",
     "diseases": {
-      "hemolytic_anemia": { "lr_positive": 30.0, "lr_negative": 0.12 }
+      "hemolytic_anemia": { "lr_positive": 30.0, "lr_negative": 0.12 },
+      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hypothyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "haptoglobin_borderline_low": {
@@ -526,7 +530,13 @@
     "description": "Serum myoglobin above upper limit of normal",
     "diseases": {
       "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.10 },
-      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.45 }
+      "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.45 },
+      "tumor_lysis_syndrome": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "esr_greater_than_100": {
@@ -683,7 +693,14 @@
   "gfr_less_than_60": {
     "description": "GFR below 60 mL/min/1.73m2, indicating at least CKD stage 3",
     "diseases": {
-      "chronic_kidney_disease": { "lr_positive": 10.0, "lr_negative": 0.10 }
+      "chronic_kidney_disease": { "lr_positive": 10.0, "lr_negative": 0.10 },
+      "tumor_lysis_syndrome": { "lr_positive": 0.8, "lr_negative": 1.0 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "cholestatic_liver_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hyperthyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hypothyroidism": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "proteinuria_nephrotic_range": {
@@ -986,7 +1003,11 @@
   "dark_urine_with_positive_dipstick_blood_no_rbcs": {
     "description": "Dark brown urine testing positive for blood on dipstick but no RBCs on microscopy",
     "diseases": {
-      "rhabdomyolysis": { "lr_positive": 20.0, "lr_negative": 0.30 }
+      "rhabdomyolysis": { "lr_positive": 20.0, "lr_negative": 0.30 },
+      "tumor_lysis_syndrome": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "urine_dipstick_blood_positive_no_rbcs": {
@@ -1404,7 +1425,16 @@
     "diseases": {
       "rhabdomyolysis": { "lr_positive": 15.0, "lr_negative": 0.05 },
       "myocardial_infarction": { "lr_positive": 3.0, "lr_negative": 0.50 },
-      "hypothyroidism": { "lr_positive": 2.0, "lr_negative": 0.70 }
+      "hypothyroidism": { "lr_positive": 2.0, "lr_negative": 0.70 },
+      "tumor_lysis_syndrome": { "lr_positive": 0.8, "lr_negative": 1.0 },
+      "chronic_kidney_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hepatocellular_injury": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "cholestatic_liver_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "hemolytic_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "iron_deficiency_anemia": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "addison_disease": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "diabetic_ketoacidosis": { "lr_positive": 0.5, "lr_negative": 1.0 },
+      "multiple_myeloma": { "lr_positive": 0.5, "lr_negative": 1.0 }
     }
   },
   "aspartate_aminotransferase_elevated": {
