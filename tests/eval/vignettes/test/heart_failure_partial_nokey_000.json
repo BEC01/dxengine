@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "id": "heart_failure_partial_nokey_000",
+    "category": "cardiac",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "heart_failure",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "dyspnea on exertion",
+    "symptoms": [
+      "dyspnea on exertion",
+      "orthopnea",
+      "paroxysmal nocturnal dyspnea",
+      "fatigue",
+      "elevated JVP"
+    ],
+    "signs": [
+      "lower extremity edema",
+      "S3 gallop (HFrEF)",
+      "abdominal distension (ascites)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 23.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "heart_failure",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "heart_failure"
+    ],
+    "cant_miss_diseases": []
+  }
+}

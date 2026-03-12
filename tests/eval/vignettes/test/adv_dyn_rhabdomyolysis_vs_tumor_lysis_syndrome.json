@@ -34,19 +34,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.5,
-            "unit": "mg/dL"
+            "test_name": "lactate_dehydrogenase",
+            "value": 295.8,
+            "unit": "U/L"
           },
           {
             "test_name": "potassium",
             "value": 5.0,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 295.8,
-            "unit": "U/L"
           },
           {
             "test_name": "calcium",
@@ -59,8 +54,18 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "phosphorus",
+            "value": 4.5,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "alanine_aminotransferase",
             "value": 51.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 496.3,
             "unit": "U/L"
           },
           {
@@ -71,11 +76,6 @@
           {
             "test_name": "aspartate_aminotransferase",
             "value": 43.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 496.3,
             "unit": "U/L"
           },
           {

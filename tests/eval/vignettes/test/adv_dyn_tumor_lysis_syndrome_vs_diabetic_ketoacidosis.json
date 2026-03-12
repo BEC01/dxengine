@@ -34,9 +34,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
+            "test_name": "phosphorus",
+            "value": 3.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "blood_urea_nitrogen",
@@ -44,9 +44,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.8,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -69,8 +69,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 140.5,
+            "test_name": "bicarbonate",
+            "value": 25.5,
             "unit": "mEq/L"
           },
           {
@@ -79,14 +79,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "hemoglobin_a1c",
             "value": 4.8,
             "unit": "%"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           }
         ]
       }

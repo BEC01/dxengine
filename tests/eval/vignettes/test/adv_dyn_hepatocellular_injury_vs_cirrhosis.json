@@ -32,6 +32,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
+          },
+          {
             "test_name": "albumin",
             "value": 3.6,
             "unit": "g/dL"
@@ -40,11 +45,6 @@
             "test_name": "bilirubin_total",
             "value": 1.3,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.1,
-            "unit": "ratio"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -72,14 +72,14 @@
             "unit": "mcmol/L"
           },
           {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
           }
         ]
       }

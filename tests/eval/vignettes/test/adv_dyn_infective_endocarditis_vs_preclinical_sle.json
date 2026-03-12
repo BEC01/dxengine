@@ -32,9 +32,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 14.4,
-            "unit": "g/dL"
+            "test_name": "complement_c4",
+            "value": 17.1,
+            "unit": "mg/dL"
           },
           {
             "test_name": "erythrocyte_sedimentation_rate",
@@ -52,18 +52,8 @@
             "unit": "mg/L"
           },
           {
-            "test_name": "complement_c4",
-            "value": 17.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "procalcitonin",
-            "value": 0.1,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 3.7,
+            "test_name": "hemoglobin",
+            "value": 14.4,
             "unit": "g/dL"
           },
           {
@@ -82,13 +72,18 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "anti_dsdna_antibody",
-            "value": 12.5,
-            "unit": "IU/mL"
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "platelets",
-            "value": 275.0,
+            "test_name": "albumin",
+            "value": 3.7,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.9,
             "unit": "x10^9/L"
           },
           {
@@ -97,8 +92,13 @@
             "unit": "titer"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.9,
+            "test_name": "anti_dsdna_antibody",
+            "value": 12.5,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
             "unit": "x10^9/L"
           }
         ]

@@ -1137,5 +1137,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 400"
+  },
+  "heart_failure": {
+    "description": "Cardiac pump failure (systolic or diastolic) causing congestion and inadequate output. Defining lab pattern: markedly elevated BNP/NT-proBNP (most specific marker), with dilutional hyponatremia and cardiorenal syndrome (elevated BUN, creatinine). Troponin mildly elevated from myocardial stress. BNP <100 pg/mL has strong rule-out power (LR- 0.11).",
+    "pattern": {
+      "b_type_natriuretic_peptide": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9
+      },
+      "blood_urea_nitrogen": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.4
+      },
+      "creatinine": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.35
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 33"
   }
 }
