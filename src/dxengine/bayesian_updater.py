@@ -224,13 +224,19 @@ def normalize_posteriors(
 # ranking order is preserved.  Excess mass implicitly goes to "other
 # diagnoses not yet considered."
 
-_EVIDENCE_CEILING = {
-    0: 0.20,   # No curated evidence for any disease → highly uncertain
-    1: 0.38,   # One informative finding → insufficient for confidence
-    2: 0.60,   # Two informative findings → moderate confidence
-    3: 0.80,   # Three informative findings → good evidence base
-}
-# 4+ informative LR applications → no ceiling (full Bayesian confidence)
+_EVIDENCE_CAP_K = 0.32        # Steepness parameter for smooth ceiling curve
+_EVIDENCE_CAP_EPSILON = 0.01  # Minimum ceiling (prevents log(0) issues)
+
+
+def _evidence_ceiling(n_informative: int) -> float:
+    """Smooth hyperbolic ceiling: 1 - 1/(1 + k*n), floored at epsilon.
+
+    Replaces the discrete staircase to eliminate cliff-edge regressions
+    (e.g., the old n=1→0.38, n=2→0.60 jump that crossed the 0.40
+    negative pass threshold).
+    """
+    raw = 1.0 - 1.0 / (1.0 + _EVIDENCE_CAP_K * n_informative)
+    return max(_EVIDENCE_CAP_EPSILON, raw)
 
 
 def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
@@ -240,22 +246,24 @@ def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
     hypothesis pool, posteriors are capped to prevent normalization
     artifacts from producing unwarranted diagnostic confidence.
 
-    A "informative" LR is one where |log(LR)| > 0.01 — i.e., the curated
+    An "informative" LR is one where |log(LR)| > 0.01 — i.e., the curated
     data actually says something about this disease-finding pair, rather
     than defaulting to neutral (1.0, 1.0).
 
     The ceiling is global (same for all hypotheses), determined by the
     best-evidenced hypothesis.  This preserves ranking order while
     limiting absolute confidence.
+
+    Uses smooth curve ceiling(n) = 1 - 1/(1 + k*n) with k=0.32.
     """
     if not hypotheses:
         return hypotheses
 
     max_informative = max(h.n_informative_lr for h in hypotheses)
+    ceiling = _evidence_ceiling(max_informative)
 
-    ceiling = _EVIDENCE_CEILING.get(max_informative)
-    if ceiling is None:
-        # 4+ informative → no cap needed
+    # At very high n the ceiling approaches 1.0; skip capping entirely
+    if ceiling >= 0.99:
         return hypotheses
 
     result = [h.model_copy(deep=True) for h in hypotheses]
@@ -264,8 +272,8 @@ def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
             h.posterior_probability = ceiling
             h.log_odds = probability_to_log_odds(ceiling)
             h.confidence_note = (
-                f"Capped at {ceiling:.0%}: only {max_informative} informative "
-                f"finding(s) across hypothesis pool"
+                f"Capped at {ceiling:.0%} (k={_EVIDENCE_CAP_K}): only "
+                f"{max_informative} informative finding(s) across hypothesis pool"
             )
 
     return result

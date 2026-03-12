@@ -5,6 +5,8 @@ from __future__ import annotations
 import pytest
 
 from dxengine.bayesian_updater import (
+    _evidence_ceiling,
+    apply_evidence_caps,
     generate_initial_hypotheses,
     normalize_posteriors,
     rank_hypotheses,
@@ -369,3 +371,99 @@ class TestRelevantDiseasesFiltering:
         assert u2.posterior_probability > 0.3
         # Non-relevant should stay near original
         assert abs(u3.posterior_probability - 0.2) < 0.05
+
+
+# ── _evidence_ceiling ──────────────────────────────────────────────────────
+
+
+class TestEvidenceCeiling:
+    def test_ceiling_at_zero_returns_epsilon(self):
+        assert _evidence_ceiling(0) == 0.01
+
+    def test_ceiling_monotonically_increasing(self):
+        for n in range(50):
+            assert _evidence_ceiling(n + 1) > _evidence_ceiling(n)
+
+    def test_ceiling_below_one(self):
+        for n in [0, 1, 10, 100, 1000]:
+            assert _evidence_ceiling(n) < 1.0
+
+    def test_ceiling_above_epsilon(self):
+        for n in range(100):
+            assert _evidence_ceiling(n) >= 0.01
+
+    def test_known_values_at_k_032(self):
+        # ceiling(n) = 1 - 1/(1 + 0.32*n)
+        assert _evidence_ceiling(1) == pytest.approx(0.242, abs=0.01)
+        assert _evidence_ceiling(4) == pytest.approx(0.561, abs=0.01)
+        assert _evidence_ceiling(8) == pytest.approx(0.719, abs=0.01)
+        assert _evidence_ceiling(12) == pytest.approx(0.793, abs=0.01)
+        assert _evidence_ceiling(20) == pytest.approx(0.865, abs=0.01)
+
+    def test_negative_safe_zone(self):
+        """Ceiling stays below 0.40 for n in 0..2 (negative cases typically have 0-2 informative LRs)."""
+        for n in range(3):
+            assert _evidence_ceiling(n) < 0.40, f"ceiling({n})={_evidence_ceiling(n)} >= 0.40"
+
+
+# ── apply_evidence_caps ────────────────────────────────────────────────────
+
+
+class TestApplyEvidenceCaps:
+    def test_empty_list_returns_empty(self):
+        assert apply_evidence_caps([]) == []
+
+    def test_no_cap_when_below_ceiling(self):
+        """Posteriors below ceiling should be untouched."""
+        h = Hypothesis(disease="test", posterior_probability=0.05, n_informative_lr=2)
+        result = apply_evidence_caps([h])
+        assert result[0].posterior_probability == 0.05
+        assert result[0].confidence_note == ""
+
+    def test_cap_applied_when_above_ceiling(self):
+        """Posterior above ceiling should be clamped."""
+        h = Hypothesis(disease="test", posterior_probability=0.80, n_informative_lr=1)
+        result = apply_evidence_caps([h])
+        ceiling = _evidence_ceiling(1)
+        assert result[0].posterior_probability == pytest.approx(ceiling, abs=0.001)
+        assert "Capped" in result[0].confidence_note
+
+    def test_global_ceiling_from_max_informative(self):
+        """Ceiling should be based on the max n_informative_lr across all hypotheses."""
+        h1 = Hypothesis(disease="a", posterior_probability=0.90, n_informative_lr=8)
+        h2 = Hypothesis(disease="b", posterior_probability=0.90, n_informative_lr=1)
+        result = apply_evidence_caps([h1, h2])
+        # Both should use ceiling(8), not ceiling(1)
+        ceiling_8 = _evidence_ceiling(8)
+        assert result[1].posterior_probability == pytest.approx(ceiling_8, abs=0.001)
+
+    def test_ranking_order_preserved(self):
+        """Relative ordering should be unchanged after capping."""
+        h1 = Hypothesis(disease="a", posterior_probability=0.60, n_informative_lr=2)
+        h2 = Hypothesis(disease="b", posterior_probability=0.40, n_informative_lr=2)
+        h3 = Hypothesis(disease="c", posterior_probability=0.10, n_informative_lr=2)
+        result = apply_evidence_caps([h1, h2, h3])
+        assert result[0].posterior_probability >= result[1].posterior_probability
+        assert result[1].posterior_probability >= result[2].posterior_probability
+
+    def test_log_odds_updated_when_capped(self):
+        """log_odds should match the capped posterior."""
+        from dxengine.utils import probability_to_log_odds
+        h = Hypothesis(disease="test", posterior_probability=0.90, n_informative_lr=2)
+        result = apply_evidence_caps([h])
+        ceiling = _evidence_ceiling(2)
+        expected_lo = probability_to_log_odds(ceiling)
+        assert result[0].log_odds == pytest.approx(expected_lo, abs=0.001)
+
+    def test_does_not_mutate_input(self):
+        """Input hypotheses should not be modified."""
+        h = Hypothesis(disease="test", posterior_probability=0.90, n_informative_lr=1)
+        original_prob = h.posterior_probability
+        apply_evidence_caps([h])
+        assert h.posterior_probability == original_prob
+
+    def test_zero_informative_caps_to_epsilon(self):
+        """n=0 for all hypotheses → cap at epsilon (0.01)."""
+        h = Hypothesis(disease="test", posterior_probability=0.50, n_informative_lr=0)
+        result = apply_evidence_caps([h])
+        assert result[0].posterior_probability == pytest.approx(0.01, abs=0.001)

@@ -23,7 +23,7 @@ from dxengine.preprocessor import preprocess_patient_labs
 from dxengine.lab_analyzer import analyze_panel
 from dxengine.pattern_detector import run_full_pattern_analysis
 from dxengine.finding_mapper import map_labs_to_findings
-from dxengine.bayesian_updater import generate_initial_hypotheses, update_all, rank_hypotheses
+from dxengine.bayesian_updater import apply_evidence_caps, generate_initial_hypotheses, update_all, rank_hypotheses
 from dxengine.info_gain import current_entropy
 
 
@@ -82,6 +82,7 @@ def _run_manual_pipeline(patient_data: dict) -> dict:
     hypotheses = generate_initial_hypotheses(patient, all_patterns)
     if hypotheses:
         hypotheses = update_all(hypotheses, findings)
+        hypotheses = apply_evidence_caps(hypotheses)
         hypotheses = rank_hypotheses(hypotheses)
 
     entropy = current_entropy(hypotheses) if hypotheses else 0.0

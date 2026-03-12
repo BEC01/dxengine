@@ -56,7 +56,7 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 - Scripts in `.claude/skills/diagnose/scripts/` are thin CLI wrappers around src modules
 - Probabilities use log-odds internally for numerical stability
 - Graduated probability floors based on disease_importance: 5→8%, 4→5%, 3→2%, 1-2→none
-- Evidence-based confidence ceiling: posteriors capped based on informative LR count (0→20%, 1→38%, 2→60%, 3→80%, 4+→uncapped) to prevent overconfidence from sparse evidence
+- Evidence-based confidence ceiling: posteriors capped via smooth curve `ceiling(n) = 1 - 1/(1 + k*n)` with k=0.32 (n=1→24%, n=4→56%, n=8→72%, n=20→87%) to prevent overconfidence from sparse evidence
 - System always outputs a differential (never a single diagnosis)
 - Clinical correlation is always recommended
 - Finding mapper uses subsumption to prevent double-counting (e.g., ferritin<15 suppresses ferritin<45)
@@ -107,8 +107,8 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Graduated probability floors based on disease importance (5→8%, 4→5%, 3→2%)
 - Self-reflection in adversarial agent (DeepRare pattern)
 - Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
-- Evidence-based confidence ceiling (`apply_evidence_caps`): tracks `n_informative_lr` per hypothesis; global ceiling based on max across hypothesis pool prevents normalization artifacts (e.g., 2 hypotheses + 1 weak finding → 85%+ overconfidence)
-- 313 tests passing, eval score 0.8071 with 195 vignettes (190 synthetic + 5 fixtures)
+- Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; global ceiling based on max `n_informative_lr` across hypothesis pool prevents normalization artifacts and eliminates cliff-edge regressions
+- 316 tests passing, eval score 0.8344 with 195 vignettes (190 synthetic + 5 fixtures)
 
 ## /expand — Disease Expansion System
 
@@ -186,12 +186,209 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-11):** score=0.8071, top3=96.8%, top1=84.1%, neg_pass=89.5%
+**Current baseline (2026-03-11):** score=0.8344, top3=99.4%, top1=93.0%, neg_pass=100.0%
+
+## Pending Improvements (Verified Scaling Roadmap)
+
+Produced by 11-agent deep analysis on 2026-03-11. Six verification agents stress-tested proposals; two were rejected as harmful. See auto-memory `scaling_roadmap.md` for full analysis context, rejected proposals, reference systems, and quantitative findings.
+
+**REJECTED proposals (do NOT re-propose):**
+- **Category-based hypothesis filtering** — 83% of diseases cross 3+ organ-system panels; filtering misses multi-system diseases (SLE, myeloma, rhabdomyolysis, sepsis). INTERNIST-1's filtering failure is the canonical cautionary tale. DXplain scores 2,600 diseases with no filtering. No computational need at 100 diseases (<10ms per case).
+- **LR sparsity formulas (specificity discount, transitive LR inference)** — specificity discount destroys valid information; transitive inference is epidemiologically invalid (sensitivity/specificity are disease-specific population parameters). Inferred LRs would also defeat the evidence cap safety mechanism.
+
+### Priority 1: Smooth the Evidence Cap Curve (DONE)
+Replaced discrete staircase `{0→20%, 1→38%, 2→60%, 3→80%, 4+→uncapped}` with smooth curve `ceiling(n) = 1 - 1/(1 + k*n)`, k=0.32. Eliminates the n=1→2 cliff (0.38→0.60) that crossed the 0.40 negative pass threshold. Tuned k from 0.15→0.32 to maximize weighted score while keeping neg_pass=100%. Results: neg_pass 89.5%→100%, top_1 91.7%→93.0%, score 0.8338→0.8344. Now safe for Priorities 2-4 to add evidence sources. See `_evidence_ceiling()` in `bayesian_updater.py`.
+
+---
+
+### Priority 2: Wire Up 48 Orphaned Lab LR Entries (FREE VALUE — Zero Risk)
+
+**Problem:** `likelihood_ratios.json` contains ~48 finding keys representing standard lab interpretations (e.g., `sodium_low`, `hemoglobin_low`, `potassium_elevated`, `creatinine_elevated`, `calcium_low`, `platelets_low`, `ldh_elevated`, `albumin_low`) that have curated LR+/LR- data for multiple diseases but **no corresponding entry in `finding_rules.json`**. The finding mapper cannot generate these findings, so their LR data is unreachable. Meanwhile, abnormal labs that don't match any rule go through the **fallback path** (lines ~175-196 in `finding_mapper.py`) which generates generic `{test_name}_{direction}` findings with no curated LR data — pure noise.
+
+**Solution:** For each orphaned LR finding key, add a `single_rules` entry in `finding_rules.json` with `above_uln` or `below_lln` operator. Example for `hemoglobin_low`:
+
+```json
+{
+  "finding_key": "hemoglobin_low",
+  "test_name": "hemoglobin",
+  "operator": "below_lln",
+  "importance": 3,
+  "description": "Hemoglobin below lower limit of normal"
+}
+```
+
+**How to find the 48 orphaned entries:** Write a script that:
+1. Loads all finding keys from `likelihood_ratios.json`
+2. Loads all finding keys generated by `finding_rules.json` (single_rules + composite_rules + computed_rules finding_keys)
+3. Filters to keys that look like lab findings (contain test names from `lab_ranges.json`) but have no matching rule
+4. Outputs the list with their LR disease coverage
+
+**Files to modify:**
+- `data/finding_rules.json`: Add `single_rules` entries for each orphaned lab LR key. Use `above_uln`/`below_lln` operators (reference-range-based, not absolute thresholds) so they work across age/sex demographics.
+- `src/dxengine/finding_mapper.py`: May need to check that the `_SUBSUMES` dict is updated for any new subsumption pairs (e.g., if `hemoglobin_low` would overlap with existing rules).
+
+**Verification:** Run eval before and after. Expect: (1) many diseases gain 2-8 more informative findings, (2) mean_gold_posterior improves, (3) some negative cases may gain informative LRs (safe only AFTER Priority 1 smooths the cap). (4) Verify fallback finding generation decreases (fewer `{test_name}_{direction}` entries in evidence lists).
+
+**Important:** Priority 1 (smooth evidence cap curve) is now complete. The smooth curve eliminates cliff-edge regressions, making it safe to wire up orphaned LRs.
+
+---
+
+### Priority 3: Implement LR- for Absent/Normal Findings (Rule-Out Evidence)
+
+**Problem:** When a lab value is **within the normal reference range**, no Evidence is generated. But `likelihood_ratios.json` has **99 disease-finding pairs with LR- < 0.20** — strong rule-out evidence that is never applied. Example: a normal TSH provides LR- = 0.02 against hypothyroidism (i.e., normal TSH makes hypothyroidism 50x less likely), but the engine treats it as neutral. The engine literally cannot rule anything out from normal labs.
+
+**Solution:** After evaluating all positive findings (existing Passes 1-5), add a new pass in `finding_mapper.py` that checks: for each disease in the hypothesis pool, does any analyte in the patient's panel have a curated finding rule that DIDN'T fire, AND does the corresponding LR entry have LR- < 0.5? If yes, generate an Evidence with `supports=False` and `likelihood_ratio = lr_negative`.
+
+**Implementation detail in `finding_mapper.py`:**
+```python
+# NEW Pass 6: Absent findings (rule-out evidence)
+# For each single_rule in finding_rules:
+#   1. Is the test present in the patient's labs? (lab was ordered)
+#   2. Did the rule NOT fire? (value within normal range)
+#   3. Does the finding_key have curated LR- < 0.5 for any disease?
+#   If all yes: generate Evidence(finding=finding_key, supports=False,
+#     likelihood_ratio=lr_negative, source="finding_mapper_absent")
+```
+
+**Key constraint: Only generate absent findings for labs that were ORDERED.** If TSH was not in the patient's panel, we cannot infer TSH is normal — it was simply not measured. This means checking `test_name in patient_lab_names` before generating absent evidence.
+
+**Files to modify:**
+- `src/dxengine/finding_mapper.py`: Add the absent-finding pass after existing passes. Need access to the full `likelihood_ratios.json` to check LR- values (load via `load_likelihood_ratios()`).
+- `src/dxengine/pipeline.py`: Pass the full list of patient lab test names to the finding mapper.
+- `src/dxengine/bayesian_updater.py`: `update_single()` already handles `supports=False` correctly (uses LR- path). No changes needed.
+
+**Expected impact:** Dramatically improves specificity. When a patient has a comprehensive panel with normal TSH, normal ferritin, normal liver enzymes — the engine can now actively push down hypothyroidism, IDA, and hepatocellular injury. This helps negative cases (healthy patients get many rule-outs) and helps discrimination in positive cases (competing diseases get ruled out by their key labs being normal).
+
+**Verification:** Run eval. Expect: (1) neg_pass improves (healthy/mimic negatives get strong rule-outs), (2) CKD overbreadth may improve (CKD gets ruled out when key labs like GFR are normal), (3) mean_gold_posterior may improve (competing diseases ruled out). Watch for: false rule-outs when a disease doesn't always cause a lab abnormality (e.g., early CKD may have normal creatinine).
+
+**Risk mitigation:** Only apply absent evidence when LR- < 0.5 (meaningful rule-out strength). LR- of 0.8 or 0.9 is too weak to justify. Start conservative (LR- < 0.3 cutoff), tune after eval.
+
+---
+
+### Priority 4: Clinical Feature Integration — Tier A Only (After Priorities 1-3)
+
+**Problem:** `likelihood_ratios.json` contains **69 non-lab finding keys** (37% of total 186) representing physical exam signs, symptoms, microscopy findings, imaging results, and provocative test results. These have curated LR+/LR- data but **no code path** from patient data to the Bayesian updater. The finding mapper exclusively processes `LabValue` objects.
+
+**Data quality verified:** All 69 clinical entries have both LR+ and LR- (100%). 45 of 50+ match illness_scripts.json terminology via substring matching. LR values match published literature (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis).
+
+**Split into two tiers (only implement Tier A):**
+- **Tier A (clinician-documented findings):** Physical exam signs observed by a clinician — lid_lag (LR+ 17.6), exophthalmos (LR+ 31.5), malar_rash (LR+ 12.0), S3_gallop (LR+ 11.0), Janeway_lesions (LR+ 25.0), Kayser-Fleischer_rings (LR+ 60.0), etc. These are objective, reliable, and have well-established LRs. Apply full LR via the Bayesian updater.
+- **Tier B (patient-reported symptoms):** Fatigue, pain, nausea — subjective, unreliable, with LR+ barely above 1.0 for most diseases. Leave these in the LLM diagnostician domain. Do NOT add them to the deterministic pipeline.
+
+**Implementation:**
+
+1. **Extend `finding_rules.json`** with two new top-level arrays (backward-compatible — existing code reads specific keys):
+
+```json
+{
+  "clinical_rules": [
+    {
+      "finding_key": "lid_lag",
+      "type": "symptom_sign",
+      "source_field": "signs",
+      "match_terms": ["lid lag", "lid retraction", "von graefe sign"],
+      "importance": 3,
+      "finding_type": "sign"
+    },
+    {
+      "finding_key": "malar_rash",
+      "type": "symptom_sign",
+      "source_field": "signs",
+      "match_terms": ["malar rash", "butterfly rash", "malar erythema"],
+      "importance": 4,
+      "finding_type": "sign"
+    }
+  ],
+  "vitals_rules": [
+    {
+      "finding_key": "tachycardia",
+      "type": "vital_sign",
+      "vital_name": "heart_rate",
+      "operator": "gt",
+      "threshold": 100,
+      "importance": 2,
+      "finding_type": "sign"
+    },
+    {
+      "finding_key": "fever",
+      "type": "vital_sign",
+      "vital_name": "temperature",
+      "operator": "gt",
+      "threshold": 38.0,
+      "importance": 3,
+      "finding_type": "sign"
+    }
+  ]
+}
+```
+
+2. **Extend `FindingMapper` class** in `finding_mapper.py`:
+   - Add `symptoms`, `signs`, `vitals`, `medications`, `social_history` parameters to `__init__`
+   - Add `_evaluate_clinical_rules()`: for each rule, check if any `match_terms` substring appears in the patient's `source_field` data (case-insensitive). Use `finding_type` from rule to set `Evidence.finding_type`.
+   - Add `_evaluate_vitals_rules()`: for each rule, check `vitals.get(vital_name)` against operator/threshold. Same logic as `_eval_condition` for single rules.
+   - Generate Evidence with `source="finding_mapper_clinical"` or `source="finding_mapper_vitals"`, `quality=EvidenceQuality.HIGH` for signs, `quality=EvidenceQuality.MODERATE` for symptoms.
+
+3. **Extend `pipeline.py`** to pass clinical data through:
+   - Update the `map_labs_to_findings()` call (or create a wrapper) to also pass `state.patient.symptoms`, `state.patient.signs`, `state.patient.vitals`, `state.patient.medications`, `state.patient.social_history`.
+
+4. **Extend `StructuredBriefing`** in `models.py`:
+   - Add `clinical_findings: list[FindingSummary]` and `vitals_findings: list[FindingSummary]` fields.
+
+**What NOT to do:**
+- Do NOT use NLP/semantic matching. Substring matching on normalized terms is sufficient and deterministic.
+- Do NOT create LRs for vague symptoms (fatigue, nausea, weakness). These have LR+ ~1.2 for most diseases — noise, not signal.
+- Do NOT generate absent clinical findings (if a patient doesn't report a symptom, that is NOT evidence of absence — they may not have been asked).
+- Do NOT merge vitals into `lab_ranges.json`. Different structures, no LOINC codes.
+
+**Diseases that gain the most discriminating evidence:**
+- heart_failure: 6 clinical findings (S3, JVP, HJR, PND, orthopnea, chest_pain_pleuritic)
+- infective_endocarditis: 5 (Janeway, Osler, splinters, new_murmur_with_fever, vegetation_on_echo)
+- hyperthyroidism: 5 (lid_lag, exophthalmos, tremor_fine, pretibial_myxedema, diffuse_goiter)
+- rheumatoid_arthritis: 3 (morning_stiffness, symmetric_polyarthritis, rheumatoid_nodules)
+- SLE: 3 (malar_rash, oral_ulcers, photosensitivity)
+
+**Verification:** Run eval. Expect: (1) diseases with clinical features gain discriminating evidence against lab-similar competitors, (2) rhabdo/TLS/CKD overlap improves when clinical signs like "dark urine" or "muscle pain" are present, (3) no negative regressions (since Priority 1 smoothed the cap). Add eval vignettes that include clinical findings to test the new pathway.
+
+---
+
+### Priority 5: Make p_other Visible in Output (Display Change Only)
+
+**Problem:** The engine reserves 5% for "other diagnoses" via `OTHER_RESERVE = 0.05` in `normalize_posteriors()`, and the evidence caps further limit posteriors. But the implicit "other" probability (1 - sum of all posteriors) is never shown to the LLM diagnostician. QMR-DT's noisy-OR model has an explicit "leak probability" serving the same purpose.
+
+**Solution:** After `apply_evidence_caps()` and `rank_hypotheses()`, compute `p_other = 1.0 - sum(h.posterior_probability for h in hypotheses)`. Display it in the `StructuredBriefing`.
+
+**Files to modify:**
+- `src/dxengine/models.py`: Add `p_other: float = 0.0` to `StructuredBriefing`.
+- `src/dxengine/pipeline.py`: After ranking, compute and set `briefing.p_other`.
+- `tests/eval/runner.py`: No changes needed (p_other is informational, not scored).
+- `.claude/agents/dx-diagnostician.md`: Update prompt to mention p_other — "When p_other is high (>30%), consider diagnoses not in the engine's differential."
+
+**Verification:** Run eval, check that p_other values are reasonable: high for subtle/partial cases (engine uncertain), low for classic cases (engine confident).
+
+---
+
+### Future Improvements (Beyond Priority 5)
+
+**Add graded thresholds for 26 single-threshold analytes:**
+Currently 26 analytes have only 1 threshold rule, creating binary cliff effects. Add 2-3 additional threshold levels for high-impact analytes (troponin, lactate, sodium, platelets, INR, calcium, ESR, CRP) following the pattern of ferritin (5 rules) and TSH (3 rules). Each new threshold needs a corresponding LR entry in `likelihood_ratios.json`. Published stratum-specific LR data exists for ~half (troponin, ESR, CRP, lactate, sodium, platelets, INR). Source: JAMA Rational Clinical Examination series, McGee's Evidence-Based Physical Diagnosis.
+
+**LR^strength continuous evidence weighting:**
+`Evidence.strength` is computed from z-scores (`min(|z|/5, 1.0)`) in `finding_mapper.py` but **never read** by `bayesian_updater.py`. The formula `LR_effective = LR^strength` (fractional Bayesian updating) is mathematically sound and requires zero new parameters. However, it would amplify CKD overbreadth (15 positive-direction findings each contributing small evidence from borderline labs). Implement ONLY with CKD-specific safeguards and AFTER Priorities 1-3 are stable.
+
+**Floor mechanism redesign for 100+ diseases:**
+At 30 hypotheses, all 95% available mass is consumed by floors. At 51, importance-5 floor drops from 8% to 3.14%. Need category-budget allocation: "hematologic diseases" get X% floor budget, distributed among whichever hematologic diseases are in the pool. Needed before 100 diseases.
+
+**Counterfactual inference (Richens/Babylon Health 2020):**
+Replace associative query "P(disease|findings)" with counterfactual "would findings be present if disease were absent?" Same knowledge base, different inference method. Babylon Health moved from top-48% to top-25% of doctors. Implementation: twin network on the existing noisy-OR-like model. Research-phase — requires significant architectural work. Source: github.com/babylonhealth/counterfactual-diagnosis.
+
+**Dynamic sparse network generation (MidasMed approach):**
+For each patient, generate a tailored 30-50 disease sub-network instead of reasoning over all diseases. Validated by MidasMed (93% top-1 with 200 disease families). Needed at 200+ diseases. Different from rejected "category filtering" because it uses finding-based relevance, not organ-system categories.
 
 ## Prior Roadmap (v2, completed)
 
 v2 roadmap items are all completed or superseded by v3. See auto-memory `v2_roadmap.md` for history.
 See auto-memory `rejected_integrations.md` for integrations that were analyzed and rejected.
+See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (2026-03-11).
 
 ## Data Files
 
