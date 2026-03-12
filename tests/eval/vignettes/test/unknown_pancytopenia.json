@@ -50,7 +50,7 @@
           },
           {
             "test_name": "mean_corpuscular_volume",
-            "value": 95.0,
+            "value": 102.0,
             "unit": "fL"
           }
         ]

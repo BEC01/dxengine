@@ -14,12 +14,15 @@
     "chief_complaint": "fatigue",
     "symptoms": [
       "fatigue",
-      "pallor",
       "dyspnea on exertion",
       "pica (ice chewing/pagophagia)",
-      "koilonychia (spoon nails)"
+      "koilonychia (spoon nails)",
+      "glossitis"
     ],
-    "signs": [],
+    "signs": [
+      "pallor",
+      "flow murmur"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

@@ -19,7 +19,9 @@
       "recurrent infections",
       "renal insufficiency"
     ],
-    "signs": [],
+    "signs": [
+      "CRAB criteria: Calcium elevation, Renal insufficiency, Anemia, Bone lesions"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -29,13 +31,33 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "glomerular_filtration_rate",
+            "value": 86.6,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 16.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.2,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "albumin",
             "value": 3.6,
             "unit": "g/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 6.5,
+            "test_name": "calcium",
+            "value": 10.1,
             "unit": "mg/dL"
           },
           {
@@ -49,14 +71,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.7,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
+            "test_name": "total_protein",
+            "value": 9.2,
+            "unit": "g/dL"
           },
           {
             "test_name": "parathyroid_hormone",
@@ -64,34 +81,19 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.9,
+            "test_name": "uric_acid",
+            "value": 6.5,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 10.1,
+            "test_name": "creatinine",
+            "value": 1.4,
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.2,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 86.6,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 9.2,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 16.4,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 24.7,
+            "unit": "mEq/L"
           }
         ]
       }

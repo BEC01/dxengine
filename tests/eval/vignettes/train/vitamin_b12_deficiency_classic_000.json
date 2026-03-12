@@ -19,7 +19,9 @@
       "paresthesias",
       "peripheral neuropathy"
     ],
-    "signs": [],
+    "signs": [
+      "hypersegmented neutrophils on smear"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

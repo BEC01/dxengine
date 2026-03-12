@@ -11,15 +11,18 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "right upper quadrant pain",
     "symptoms": [
-      "jaundice",
       "right upper quadrant pain",
       "nausea/vomiting",
       "fatigue",
-      "dark urine"
+      "dark urine",
+      "pale stools"
     ],
-    "signs": [],
+    "signs": [
+      "jaundice",
+      "hepatomegaly"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

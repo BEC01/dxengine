@@ -11,15 +11,18 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "pruritus (bile salt deposition in skin)",
     "symptoms": [
-      "jaundice",
       "pruritus (bile salt deposition in skin)",
       "pale/clay-colored stools (acholic)",
       "dark urine (bilirubinuria)",
-      "right upper quadrant pain (if gallstones)"
+      "right upper quadrant pain (if gallstones)",
+      "xanthomas (chronic)"
     ],
-    "signs": [],
+    "signs": [
+      "jaundice",
+      "hepatomegaly"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -29,39 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 33.4,
-            "unit": "U/L"
-          },
-          {
             "test_name": "albumin",
             "value": 4.3,
             "unit": "g/dL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 179.2,
+            "test_name": "aspartate_aminotransferase",
+            "value": 33.4,
             "unit": "U/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 50.2,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 231.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 51.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "bilirubin_direct",
-            "value": 0.4,
-            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_total",
@@ -77,6 +55,31 @@
             "test_name": "international_normalized_ratio",
             "value": 1.0,
             "unit": "ratio"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 51.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 179.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 50.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 231.0,
+            "unit": "U/L"
           }
         ]
       }

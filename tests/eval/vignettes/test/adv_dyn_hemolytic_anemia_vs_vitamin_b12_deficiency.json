@@ -11,15 +11,18 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "fatigue",
     "symptoms": [
-      "jaundice",
-      "pallor",
       "fatigue",
       "dark urine (intravascular hemolysis)",
+      "tachycardia",
+      "gallstones (chronic)"
+    ],
+    "signs": [
+      "jaundice",
+      "pallor",
       "splenomegaly"
     ],
-    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -28,6 +31,11 @@
       {
         "panel_name": "Eval Panel",
         "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 14.1,
+            "unit": "g/dL"
+          },
           {
             "test_name": "lactate_dehydrogenase",
             "value": 271.2,
@@ -39,14 +47,14 @@
             "unit": "%"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.1,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 96.1,
             "unit": "fL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_direct",
@@ -56,11 +64,6 @@
           {
             "test_name": "haptoglobin",
             "value": 0.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bilirubin_total",
-            "value": 1.2,
             "unit": "mg/dL"
           },
           {

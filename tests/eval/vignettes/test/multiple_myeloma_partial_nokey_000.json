@@ -19,7 +19,9 @@
       "recurrent infections",
       "renal insufficiency"
     ],
-    "signs": [],
+    "signs": [
+      "CRAB criteria: Calcium elevation, Renal insufficiency, Anemia, Bone lesions"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

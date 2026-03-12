@@ -16,10 +16,12 @@
       "fatigue",
       "arthralgias (especially 2nd/3rd MCP joints)",
       "skin bronzing/hyperpigmentation",
-      "hepatomegaly",
-      "diabetes mellitus ('bronze diabetes')"
+      "diabetes mellitus ('bronze diabetes')",
+      "cardiomyopathy"
     ],
-    "signs": [],
+    "signs": [
+      "hepatomegaly"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -49,13 +51,13 @@
             "unit": "%"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 41.2,
+            "test_name": "aspartate_aminotransferase",
+            "value": 29.7,
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 29.7,
+            "test_name": "alanine_aminotransferase",
+            "value": 41.2,
             "unit": "U/L"
           },
           {
@@ -64,9 +66,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 1.5,
-            "unit": "%"
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
           },
           {
             "test_name": "red_cell_distribution_width",
@@ -74,14 +76,14 @@
             "unit": "%"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 90.0,
             "unit": "fL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
           },
           {
             "test_name": "platelets",

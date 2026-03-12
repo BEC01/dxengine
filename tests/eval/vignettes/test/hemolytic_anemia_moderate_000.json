@@ -11,15 +11,18 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "fatigue",
     "symptoms": [
-      "jaundice",
-      "pallor",
       "fatigue",
       "dark urine (intravascular hemolysis)",
+      "tachycardia",
+      "gallstones (chronic)"
+    ],
+    "signs": [
+      "jaundice",
+      "pallor",
       "splenomegaly"
     ],
-    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],

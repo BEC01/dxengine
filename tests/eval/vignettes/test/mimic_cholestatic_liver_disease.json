@@ -11,10 +11,10 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "pruritus (bile salt deposition in skin)",
     "symptoms": [
-      "jaundice",
-      "pruritus (bile salt deposition in skin)"
+      "pruritus (bile salt deposition in skin)",
+      "pale/clay-colored stools (acholic)"
     ],
     "signs": [],
     "medical_history": [],

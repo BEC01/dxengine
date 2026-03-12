@@ -16,10 +16,12 @@
       "central obesity",
       "moon facies",
       "buffalo hump",
-      "abdominal striae (purple, wide >1cm)",
-      "proximal muscle weakness"
+      "proximal muscle weakness",
+      "easy bruising"
     ],
-    "signs": [],
+    "signs": [
+      "abdominal striae (purple, wide >1cm)"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

@@ -140,8 +140,14 @@ def _demographics_from_script(disease: str) -> dict:
         age = 35
 
     classic = script.get("classic_presentation", [])
-    symptoms = [s for s in classic if not any(w in s.lower() for w in ["sign", "reflex", "edema"])][:5]
-    signs = [s for s in classic if any(w in s.lower() for w in ["sign", "reflex", "edema"])][:3]
+    _SIGN_INDICATORS = [
+        "sign", "reflex", "edema", "rash", "nodule", "gallop", "murmur",
+        "lag", "proptosis", "exophthalmos", "goiter", "striae", "angiomata",
+        "lesion", "hemorrhage", "casts", "smear", "splenomegaly", "hepatomegaly",
+        "ascites", "jaundice", "cyanosis", "pallor", "asterixis", "tremor",
+    ]
+    signs = [s for s in classic if any(w in s.lower() for w in _SIGN_INDICATORS)][:5]
+    symptoms = [s for s in classic if s not in signs][:5]
 
     return {
         "age": age,

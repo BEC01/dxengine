@@ -2,7 +2,7 @@
 
 import pytest
 
-from dxengine.models import Evidence, FindingType, LabValue, Severity, Sex
+from dxengine.models import Evidence, EvidenceQuality, FindingType, LabValue, Severity, Sex
 from dxengine.finding_mapper import FindingMapper, map_labs_to_findings
 
 
@@ -933,3 +933,137 @@ class TestAbsentFindings:
         results = map_labs_to_findings([])
         absent = [e for e in results if e.source == "finding_mapper_absent"]
         assert len(absent) == 0
+
+
+# ── TestClinicalRules ────────────────────────────────────────────────────
+
+
+class TestClinicalRules:
+    """Tests for Pass 7: clinical rule matching (signs, symptoms, imaging, etc.)."""
+
+    def test_sign_matches_exact_term(self):
+        """'lid lag' in signs → lid_lag fires."""
+        results = map_labs_to_findings([], signs=["lid lag"])
+        assert "lid_lag" in finding_keys(results)
+
+    def test_sign_matches_synonym(self):
+        """'von graefe' in signs → lid_lag fires."""
+        results = map_labs_to_findings([], signs=["von graefe sign noted"])
+        assert "lid_lag" in finding_keys(results)
+
+    def test_case_insensitive(self):
+        """'Malar Rash' → malar_rash fires (pool is lowercased)."""
+        results = map_labs_to_findings([], signs=["Malar Rash present"])
+        assert "malar_rash" in finding_keys(results)
+
+    def test_negated_no_prefix(self):
+        """'no malar rash' → malar_rash does NOT fire."""
+        results = map_labs_to_findings([], signs=["no malar rash"])
+        assert "malar_rash" not in finding_keys(results)
+
+    def test_negated_denies(self):
+        """'denies orthopnea' → orthopnea does NOT fire."""
+        results = map_labs_to_findings([], symptoms=["denies orthopnea"])
+        assert "orthopnea" not in finding_keys(results)
+
+    def test_negated_without(self):
+        """'without lid lag' → lid_lag does NOT fire."""
+        results = map_labs_to_findings([], signs=["without lid lag"])
+        assert "lid_lag" not in finding_keys(results)
+
+    def test_symptom_from_symptoms_list(self):
+        """symptoms=['kussmaul breathing'] → kussmaul_breathing fires."""
+        results = map_labs_to_findings([], symptoms=["kussmaul breathing"])
+        assert "kussmaul_breathing" in finding_keys(results)
+
+    def test_imaging_match(self):
+        """imaging=['ST elevation on ECG'] → st_elevation_on_ecg fires."""
+        results = map_labs_to_findings([], imaging=["ST elevation on ECG"])
+        assert "st_elevation_on_ecg" in finding_keys(results)
+
+    def test_specialized_test_text(self):
+        """signs=['schistocytes on peripheral smear'] → schistocytes_on_smear fires."""
+        results = map_labs_to_findings([], signs=["schistocytes on peripheral smear"])
+        assert "schistocytes_on_smear" in finding_keys(results)
+
+    def test_finding_type_sign(self):
+        """Sign rules produce FindingType.SIGN."""
+        results = map_labs_to_findings([], signs=["lid lag"])
+        ev = evidence_by_key(results, "lid_lag")
+        assert ev is not None
+        assert ev.finding_type == FindingType.SIGN
+
+    def test_finding_type_symptom(self):
+        """Symptom rules produce FindingType.SYMPTOM."""
+        results = map_labs_to_findings([], symptoms=["orthopnea"])
+        ev = evidence_by_key(results, "orthopnea")
+        assert ev is not None
+        assert ev.finding_type == FindingType.SYMPTOM
+
+    def test_source_tag(self):
+        """Clinical evidence has source='finding_mapper_clinical'."""
+        results = map_labs_to_findings([], signs=["lid lag"])
+        ev = evidence_by_key(results, "lid_lag")
+        assert ev is not None
+        assert ev.source == "finding_mapper_clinical"
+
+    def test_quality_high_for_signs(self):
+        """Physical signs have quality=HIGH."""
+        results = map_labs_to_findings([], signs=["lid lag"])
+        ev = evidence_by_key(results, "lid_lag")
+        assert ev is not None
+        assert ev.quality == EvidenceQuality.HIGH
+
+    def test_quality_moderate_for_symptoms(self):
+        """Specific symptoms have quality=MODERATE."""
+        results = map_labs_to_findings([], symptoms=["orthopnea"])
+        ev = evidence_by_key(results, "orthopnea")
+        assert ev is not None
+        assert ev.quality == EvidenceQuality.MODERATE
+
+    def test_lab_rule_priority_over_clinical(self):
+        """Lab finding fires → clinical text for same key skipped."""
+        # TSH elevated fires from lab; if 'tsh elevated' also in signs, lab wins
+        labs = [make_lv("thyroid_stimulating_hormone", 12.5, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=9.4, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs, signs=["tsh elevated"])
+        tsh_ev = [e for e in results if e.finding == "tsh_greater_than_10"]
+        assert len(tsh_ev) == 1
+        assert tsh_ev[0].source == "finding_mapper"
+
+    def test_no_clinical_data_no_crash(self):
+        """map_labs_to_findings([]) with no clinical data works fine."""
+        results = map_labs_to_findings([])
+        assert isinstance(results, list)
+
+    def test_clinical_combined_with_labs(self):
+        """Both lab and clinical Evidence appear in same result."""
+        labs = [make_lv("thyroid_stimulating_hormone", 0.05, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=-3.0, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs, signs=["lid lag", "exophthalmos"])
+        keys = finding_keys(results)
+        assert "tsh_suppressed" in keys  # from lab
+        assert "lid_lag" in keys  # from clinical
+        assert "exophthalmos" in keys  # from clinical
+
+    def test_substring_in_longer_text(self):
+        """'lid lag present on exam' still matches 'lid lag'."""
+        results = map_labs_to_findings([], signs=["lid lag present on exam"])
+        assert "lid_lag" in finding_keys(results)
+
+    def test_medical_history_match(self):
+        """medical_history=['positive direct coombs test'] → positive_direct_coombs_test fires."""
+        results = map_labs_to_findings([], medical_history=["positive direct coombs test"])
+        assert "positive_direct_coombs_test" in finding_keys(results)
+
+    def test_multiple_clinical_findings(self):
+        """Multiple clinical findings fire from different sources."""
+        results = map_labs_to_findings(
+            [],
+            signs=["malar rash", "oral ulcers"],
+            symptoms=["photosensitivity"],
+        )
+        keys = finding_keys(results)
+        assert "malar_rash" in keys
+        assert "oral_ulcers" in keys
+        assert "photosensitivity_rash" in keys

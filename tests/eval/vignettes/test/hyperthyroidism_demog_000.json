@@ -15,12 +15,16 @@
     "symptoms": [
       "weight loss despite increased appetite",
       "heat intolerance",
-      "tremor",
       "palpitations",
-      "tachycardia"
+      "tachycardia",
+      "anxiety"
     ],
     "signs": [
-      "pretibial myxedema (Graves)"
+      "tremor",
+      "lid lag",
+      "exophthalmos (Graves)",
+      "pretibial myxedema (Graves)",
+      "diffuse goiter"
     ],
     "medical_history": [],
     "medications": [],

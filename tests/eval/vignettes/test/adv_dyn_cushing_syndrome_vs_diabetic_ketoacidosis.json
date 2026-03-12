@@ -16,10 +16,12 @@
       "central obesity",
       "moon facies",
       "buffalo hump",
-      "abdominal striae (purple, wide >1cm)",
-      "proximal muscle weakness"
+      "proximal muscle weakness",
+      "easy bruising"
     ],
-    "signs": [],
+    "signs": [
+      "abdominal striae (purple, wide >1cm)"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -49,6 +51,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "calcium",
+            "value": 9.1,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "cortisol_am",
             "value": 20.7,
             "unit": "mcg/dL"
@@ -59,19 +66,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "calcium",
-            "value": 9.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin_a1c",
@@ -84,8 +86,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
+            "test_name": "phosphorus",
+            "value": 3.5,
             "unit": "mg/dL"
           }
         ]

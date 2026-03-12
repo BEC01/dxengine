@@ -15,12 +15,16 @@
     "symptoms": [
       "weight loss despite increased appetite",
       "heat intolerance",
-      "tremor",
       "palpitations",
-      "tachycardia"
+      "tachycardia",
+      "anxiety"
     ],
     "signs": [
-      "pretibial myxedema (Graves)"
+      "tremor",
+      "lid lag",
+      "exophthalmos (Graves)",
+      "pretibial myxedema (Graves)",
+      "diffuse goiter"
     ],
     "medical_history": [],
     "medications": [],
@@ -31,9 +35,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "free_thyroxine",
-            "value": 1.3,
-            "unit": "ng/dL"
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 2.7,
+            "unit": "mIU/L"
           },
           {
             "test_name": "total_cholesterol",
@@ -41,9 +45,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 2.7,
-            "unit": "mIU/L"
+            "test_name": "free_thyroxine",
+            "value": 1.3,
+            "unit": "ng/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -61,24 +65,24 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "creatine_kinase",
-            "value": 167.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 14.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "ldl_cholesterol",
-            "value": 50.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "sodium",
             "value": 139.5,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 167.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "ldl_cholesterol",
+            "value": 50.0,
+            "unit": "mg/dL"
           }
         ]
       }

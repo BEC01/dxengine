@@ -176,8 +176,14 @@ class EvalRunner:
 
             result.patterns_matched = [p.disease for p in all_patterns]
 
-            # 4. Finding mapping
-            findings = map_labs_to_findings(all_labs, age=age, sex=sex)
+            # 4. Finding mapping (labs + clinical features)
+            findings = map_labs_to_findings(
+                all_labs, age=age, sex=sex,
+                symptoms=patient.symptoms,
+                signs=patient.signs,
+                imaging=patient.imaging,
+                medical_history=patient.medical_history,
+            )
             result.findings_fired = [f.finding for f in findings]
 
             # 5. Generate hypotheses

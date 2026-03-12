@@ -196,6 +196,8 @@ For each hypothesis (top 10 or all with >1% probability):
    Divergence: [if diagnostician disagrees with engine, explain why]
 ```
 
+Other unlisted diagnoses: [p_other]% (residual probability mass not assigned to any hypothesis)
+
 ### Collectively Abnormal Findings
 If any collectively-abnormal patterns were detected:
 ```

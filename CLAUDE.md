@@ -109,7 +109,8 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
 - Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; global ceiling based on max `n_informative_lr` across hypothesis pool prevents normalization artifacts and eliminates cliff-edge regressions. Absent-finding evidence excluded from `n_informative_lr` to prevent ceiling inflation.
 - Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
-- 347 tests passing, eval score 0.8307 with 195 vignettes (190 synthetic + 5 fixtures)
+- Clinical feature integration (Pass 7): evaluates 90 `clinical_rules` in `finding_rules.json` against patient text fields (signs, symptoms, imaging, medical_history). Substring matching with negation prefix guard. Finding types: sign, symptom, imaging, lab. Generates `source="finding_mapper_clinical"` Evidence. Lab rules take priority over clinical text for same finding_key.
+- 383 tests passing, eval score 0.8504 with 195 vignettes (190 synthetic + 5 fixtures)
 
 ## /expand — Disease Expansion System
 
@@ -187,7 +188,7 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-11):** score=0.8307, top3=98.7%, top1=92.4%, neg_pass=100.0%
+**Current baseline (2026-03-12):** score=0.8504, top3=98.7%, top1=94.3%, neg_pass=100.0%
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -227,9 +228,9 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 
 ---
 
-### Priority 4: Clinical Feature Integration — Tier A Only (After Priorities 1-3)
+### Priority 4: Clinical Feature Integration — Tier A Only (DONE)
 
-**Problem:** `likelihood_ratios.json` contains **69 non-lab finding keys** (37% of total 186) representing physical exam signs, symptoms, microscopy findings, imaging results, and provocative test results. These have curated LR+/LR- data but **no code path** from patient data to the Bayesian updater. The finding mapper exclusively processes `LabValue` objects.
+**Problem:** `likelihood_ratios.json` contained **90 non-lab finding keys** (43% of total 208) representing physical exam signs, symptoms, microscopy findings, imaging results, and provocative test results. These had curated LR+/LR- data but **no code path** from patient data to the Bayesian updater. The finding mapper exclusively processed `LabValue` objects.
 
 **Data quality verified:** All 69 clinical entries have both LR+ and LR- (100%). 45 of 50+ match illness_scripts.json terminology via substring matching. LR values match published literature (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis).
 
@@ -309,23 +310,39 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 - rheumatoid_arthritis: 3 (morning_stiffness, symmetric_polyarthritis, rheumatoid_nodules)
 - SLE: 3 (malar_rash, oral_ulcers, photosensitivity)
 
-**Verification:** Run eval. Expect: (1) diseases with clinical features gain discriminating evidence against lab-similar competitors, (2) rhabdo/TLS/CKD overlap improves when clinical signs like "dark urine" or "muscle pain" are present, (3) no negative regressions (since Priority 1 smoothed the cap). Add eval vignettes that include clinical findings to test the new pathway.
+**Implementation (2026-03-12):**
+- Added 90 `clinical_rules` to `finding_rules.json` (33 signs, 18 symptoms, 20 specialized tests, 10 microscopy, 4 ECG/imaging, 5 provocative tests) + empty `vitals_rules` array
+- Extended `FindingMapper.__init__` with `symptoms`, `signs`, `imaging`, `medical_history` params; builds lowercase `clinical_text_pool`
+- `_evaluate_clinical_rules()`: substring matching with `_NEGATION_PREFIXES` guard (9 patterns: "no ", "denies ", "without ", etc.)
+- `_make_clinical_evidence()`: maps `finding_type`/`quality` from rule to `FindingType`/`EvidenceQuality` enums
+- Pass 7 in `map_to_findings()`: iterates clinical rules after absent findings, skips if lab rule already fired (lab priority)
+- Updated `pipeline.py` to pass clinical data and route `source=="finding_mapper_clinical"` to `briefing.clinical_findings`
+- Updated `runner.py` to pass clinical data to `map_labs_to_findings()`
+- Updated `generate_vignettes.py` sign/symptom classifier with 26 sign indicators
+- Updated `dx-diagnostician.md` to mention clinical findings in engine analysis review
+- 3 findings intentionally excluded: `antinuclear_antibody_titer_elevated`, `anti_dsdna_antibody_elevated`, `erythrocytosis`
+
+**Results:** score=0.8504 (baseline 0.8344, **+0.016**), top1=94.3% (+1.3%), top3=98.7%, neg_pass=100%, 380 tests. 57 cases improved gold posteriors (iron_deficiency +0.48, B12_deficiency +0.38, hyperthyroidism +0.37). 1 pre-existing top-3 regression (fires zero clinical rules — from vignette regen, not P4). Mean gold posterior 0.3155→0.3672 (+0.05).
+
+**Files changed:** `finding_rules.json` (+90 clinical rules), `finding_mapper.py` (+80 lines), `models.py` (+1 line), `pipeline.py` (+15 lines), `runner.py` (+6 lines), `test_finding_mapper.py` (+21 tests), `test_pipeline.py` (+2 tests), `generate_vignettes.py` (+10 lines), `dx-diagnostician.md` (+2 lines)
 
 ---
 
-### Priority 5: Make p_other Visible in Output (Display Change Only)
+### Priority 5: Make p_other Visible in Output (DONE)
 
 **Problem:** The engine reserves 5% for "other diagnoses" via `OTHER_RESERVE = 0.05` in `normalize_posteriors()`, and the evidence caps further limit posteriors. But the implicit "other" probability (1 - sum of all posteriors) is never shown to the LLM diagnostician. QMR-DT's noisy-OR model has an explicit "leak probability" serving the same purpose.
 
-**Solution:** After `apply_evidence_caps()` and `rank_hypotheses()`, compute `p_other = 1.0 - sum(h.posterior_probability for h in hypotheses)`. Display it in the `StructuredBriefing`.
+**Implementation (2026-03-12):**
+- Added `p_other: float = 0.0` to `StructuredBriefing` in `models.py` (backward-compatible default)
+- Computed `p_other = max(0.0, 1.0 - sum(posteriors))` in `pipeline.py` after briefing construction
+- Added `p_other` to CLI summary in `run_pipeline.py`
+- Added diagnostician guidance: note p_other in engine review, rule 9 for high p_other (>30%) awareness
+- Added p_other display line in `skill.md` output template
+- 3 new tests: p_other consistency with posteriors, empty patient (p_other=1.0), p_other >= OTHER_RESERVE
 
-**Files to modify:**
-- `src/dxengine/models.py`: Add `p_other: float = 0.0` to `StructuredBriefing`.
-- `src/dxengine/pipeline.py`: After ranking, compute and set `briefing.p_other`.
-- `tests/eval/runner.py`: No changes needed (p_other is informational, not scored).
-- `.claude/agents/dx-diagnostician.md`: Update prompt to mention p_other — "When p_other is high (>30%), consider diagnoses not in the engine's differential."
+**Files changed:** `models.py` (+1 line), `pipeline.py` (+4 lines), `run_pipeline.py` (+1 line), `dx-diagnostician.md` (+2 bullets), `skill.md` (+1 line), `test_pipeline.py` (+3 tests)
 
-**Verification:** Run eval, check that p_other values are reasonable: high for subtle/partial cases (engine uncertain), low for classic cases (engine confident).
+**Results:** Display-only change. 383 tests passing (380 existing + 3 new), zero eval impact.
 
 ---
 
@@ -360,7 +377,7 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 | disease_lab_patterns.json | Disease-lab signatures (10 with collectively-abnormal) | 18 patterns |
 | illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
 | likelihood_ratios.json | LR+/LR- for finding-disease pairs | 186 findings, 379 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed) | 111 rules + 39 aliases |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 111 lab rules + 90 clinical rules + 39 aliases |
 | loinc_mappings.json | LOINC code <-> common name mappings | 91 codes, 283 aliases |
 
 ## MCP Servers

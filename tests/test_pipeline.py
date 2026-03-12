@@ -76,7 +76,11 @@ def _run_manual_pipeline(patient_data: dict) -> dict:
     all_patterns = known + ca
 
     # Findings
-    findings = map_labs_to_findings(all_labs, age=patient.age, sex=patient.sex)
+    findings = map_labs_to_findings(
+        all_labs, age=patient.age, sex=patient.sex,
+        symptoms=patient.symptoms, signs=patient.signs,
+        imaging=patient.imaging, medical_history=patient.medical_history,
+    )
 
     # Hypotheses
     hypotheses = generate_initial_hypotheses(patient, all_patterns)
@@ -107,7 +111,7 @@ def _run_pipeline_module(patient_data: dict) -> dict:
     return {
         "num_analyzed": len(briefing.analyzed_labs),
         "num_patterns": len(briefing.known_patterns) + len(briefing.collectively_abnormal),
-        "num_findings": len(briefing.mapped_findings) + len(briefing.fallback_findings) + len(briefing.absent_findings),
+        "num_findings": len(briefing.mapped_findings) + len(briefing.fallback_findings) + len(briefing.absent_findings) + len(briefing.clinical_findings),
         "num_hypotheses": len(briefing.engine_hypotheses),
         "top_diseases": [h.disease for h in briefing.engine_hypotheses[:5]],
         "entropy": round(briefing.engine_entropy, 4),
@@ -224,3 +228,70 @@ class TestPipelineBriefing:
         state, briefing = run_phase1_pipeline(state)
         assert len(briefing.analyzed_labs) == 0
         assert len(briefing.engine_hypotheses) == 0
+
+    def test_briefing_p_other_present(self):
+        """p_other is computed and consistent with posteriors."""
+        data = _load_fixture("hypothyroid")
+        patient = _build_patient(data["patient"])
+        state = DiagnosticState(patient=patient)
+        state, briefing = run_phase1_pipeline(state)
+        assert 0.0 <= briefing.p_other <= 1.0
+        expected = 1.0 - sum(h.posterior_probability for h in briefing.engine_hypotheses)
+        assert briefing.p_other == pytest.approx(expected, abs=1e-9)
+
+    def test_briefing_p_other_empty_patient(self):
+        """Empty patient has p_other = 1.0 (no hypotheses)."""
+        state = DiagnosticState()
+        state, briefing = run_phase1_pipeline(state)
+        assert briefing.p_other == pytest.approx(1.0)
+
+    def test_briefing_p_other_at_least_reserve(self):
+        """p_other >= OTHER_RESERVE (0.05) when hypotheses exist."""
+        data = _load_fixture("hypothyroid")
+        patient = _build_patient(data["patient"])
+        state = DiagnosticState(patient=patient)
+        state, briefing = run_phase1_pipeline(state)
+        if briefing.engine_hypotheses:
+            assert briefing.p_other >= 0.05 - 1e-9
+
+
+class TestPipelineClinicalFindings:
+    """Verify clinical findings flow through the pipeline."""
+
+    def test_clinical_findings_in_briefing(self):
+        """Signs matching clinical_rules appear in briefing.clinical_findings."""
+        patient = PatientProfile(
+            age=35,
+            sex=Sex.FEMALE,
+            signs=["malar rash", "oral ulcers"],
+            symptoms=["photosensitivity"],
+            lab_panels=[LabPanel(
+                panel_name="CBC",
+                values=[LabValue(test_name="hemoglobin", value=10.0, unit="g/dL")],
+            )],
+        )
+        state = DiagnosticState(patient=patient)
+        state, briefing = run_phase1_pipeline(state)
+        clinical_keys = {f.finding_key for f in briefing.clinical_findings}
+        assert "malar_rash" in clinical_keys
+        assert "oral_ulcers" in clinical_keys
+
+    def test_clinical_evidence_in_state(self):
+        """Clinical evidence appears in state.all_evidence."""
+        patient = PatientProfile(
+            age=40,
+            sex=Sex.MALE,
+            signs=["lid lag", "exophthalmos"],
+            lab_panels=[LabPanel(
+                panel_name="Thyroid",
+                values=[
+                    LabValue(test_name="thyroid_stimulating_hormone", value=0.05, unit="mIU/L"),
+                ],
+            )],
+        )
+        state = DiagnosticState(patient=patient)
+        state, briefing = run_phase1_pipeline(state)
+        clinical_ev = [e for e in state.all_evidence if e.source == "finding_mapper_clinical"]
+        clinical_keys = {e.finding for e in clinical_ev}
+        assert "lid_lag" in clinical_keys
+        assert "exophthalmos" in clinical_keys

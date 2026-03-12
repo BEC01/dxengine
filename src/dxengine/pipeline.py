@@ -141,11 +141,19 @@ def run_phase1_pipeline(
             state.pattern_matches.append(match)
 
     # ── Step 4: Finding mapping ─────────────────────────────────────────
-    if analyzed:
+    has_clinical = (
+        state.patient.symptoms or state.patient.signs
+        or state.patient.imaging or state.patient.medical_history
+    )
+    if analyzed or has_clinical:
         findings = map_labs_to_findings(
             analyzed,
             age=state.patient.age,
             sex=state.patient.sex,
+            symptoms=state.patient.symptoms,
+            signs=state.patient.signs,
+            imaging=state.patient.imaging,
+            medical_history=state.patient.medical_history,
         )
 
         # Avoid duplicates: only add findings not already present
@@ -197,6 +205,7 @@ def run_phase1_pipeline(
     mapped_findings = []
     fallback_findings = []
     absent_findings = []
+    clinical_findings = []
     for ev in new_findings:
         # Check if this finding has curated LR data
         lr_entry = lr_data.get(ev.finding, {})
@@ -215,6 +224,8 @@ def run_phase1_pipeline(
             mapped_findings.append(fs)
         elif ev.source == "finding_mapper_absent":
             absent_findings.append(fs)
+        elif ev.source == "finding_mapper_clinical":
+            clinical_findings.append(fs)
         else:
             fallback_findings.append(fs)
 
@@ -230,11 +241,17 @@ def run_phase1_pipeline(
         mapped_findings=mapped_findings,
         fallback_findings=fallback_findings,
         absent_findings=absent_findings,
+        clinical_findings=clinical_findings,
         engine_hypotheses=state.hypotheses,
         engine_entropy=entropy,
         engine_recommended_tests=recommended,
         preprocessing_warnings=warnings,
     )
+
+    # Residual probability mass for unlisted diagnoses
+    briefing.p_other = max(0.0, 1.0 - sum(
+        h.posterior_probability for h in briefing.engine_hypotheses
+    ))
 
     state.structured_briefing = briefing
     return state, briefing

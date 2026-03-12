@@ -11,15 +11,18 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "jaundice",
+    "chief_complaint": "pruritus (bile salt deposition in skin)",
     "symptoms": [
-      "jaundice",
       "pruritus (bile salt deposition in skin)",
       "pale/clay-colored stools (acholic)",
       "dark urine (bilirubinuria)",
-      "right upper quadrant pain (if gallstones)"
+      "right upper quadrant pain (if gallstones)",
+      "xanthomas (chronic)"
     ],
-    "signs": [],
+    "signs": [
+      "jaundice",
+      "hepatomegaly"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

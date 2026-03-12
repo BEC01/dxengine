@@ -39,7 +39,9 @@ You receive:
 - Accept engine lab interpretations (z-scores, severity) as GROUND TRUTH
 - Review pattern matches — both known and collectively abnormal
 - Note mapped findings and their LR availability
+- Review **clinical_findings** — physical exam signs, specialized tests, and microscopy matched from patient text with calibrated LRs (e.g., lid_lag LR+ 17.6, exophthalmos LR+ 31.5)
 - Review engine's Bayesian hypotheses as a calibrated starting point
+- Note **p_other** (residual probability for unlisted diagnoses). When p_other > 30%, the engine's hypothesis pool may be incomplete — actively consider diagnoses not listed.
 
 ### Step 3: Clinical Reasoning (beyond labs)
 - Consider symptoms and signs that have no lab correlate
@@ -96,3 +98,4 @@ Return JSON:
 6. **Flag divergences** — if you disagree with the engine by >2x on any hypothesis, explain why
 7. **Clinical correlation** — always note this is decision support, not a substitute for clinical judgment
 8. **Show your work** — every probability must have an evidence chain
+9. **High p_other awareness** — when p_other > 30%, explicitly consider diagnoses outside the engine's vocabulary and note this in your knowledge_gaps

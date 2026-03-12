@@ -15,11 +15,13 @@
     "symptoms": [
       "fatigue",
       "arthralgias without frank arthritis",
-      "intermittent rash",
       "Raynaud phenomenon",
-      "subtle hair thinning"
+      "subtle hair thinning",
+      "nonspecific constitutional symptoms"
     ],
-    "signs": [],
+    "signs": [
+      "intermittent rash"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],

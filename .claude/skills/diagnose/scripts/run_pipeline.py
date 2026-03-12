@@ -33,6 +33,7 @@ def main():
         "engine_hypotheses": len(briefing.engine_hypotheses),
         "engine_entropy": round(briefing.engine_entropy, 4),
         "recommended_tests": len(briefing.engine_recommended_tests),
+        "p_other": round(briefing.p_other, 4),
         "preprocessing_warnings": briefing.preprocessing_warnings,
     }
     print(json.dumps(summary, indent=2))

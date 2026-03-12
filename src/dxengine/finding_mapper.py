@@ -1,15 +1,21 @@
-"""DxEngine finding mapper — bridges lab values to LR finding keys.
+"""DxEngine finding mapper — bridges lab values and clinical features to LR finding keys.
 
 Maps LabValue objects (with canonical test names like 'thyroid_stimulating_hormone')
 to clinical finding keys (like 'tsh_elevated') that match entries in
 likelihood_ratios.json, enabling the Bayesian updater to apply real LR values.
 
-Three-pass evaluation:
+Also evaluates clinical rules against patient text fields (signs, symptoms,
+imaging, medical_history) for non-lab findings like physical exam signs,
+specialized test results, and microscopy findings.
+
+Seven-pass evaluation:
 1. Single-analyte rules — one lab → one or more findings
 2. Composite rules — multiple labs → one finding
 3. Computed rules — ratios, gaps, formulas → one finding
-
-Unmapped abnormal labs get fallback Evidence so they still appear in reasoning.
+4. Subsumption — remove double-counted findings
+5. Fallback — generic evidence for uncovered abnormal labs
+6. Absent findings — rule-out evidence for normal labs
+7. Clinical rules — signs, symptoms, imaging, specialized tests
 """
 
 from __future__ import annotations
@@ -173,15 +179,27 @@ _ABSENT_SUBSUMES: dict[str, list[str]] = {
 # unaffected by absent findings while pushing others down.
 _LR_NEG_THRESHOLD = 0.1
 
+# Negation prefixes — if a clinical text item starts with one of these,
+# the finding is negated and should NOT fire. Safety net against intake
+# agent putting "no malar rash" into the signs list.
+_NEGATION_PREFIXES = (
+    "no ", "not ", "without ", "absent ", "denies ", "denied ",
+    "negative for ", "ruled out ", "no evidence of ",
+)
+
 
 class FindingMapper:
-    """Maps lab values to clinical finding keys for Bayesian updating."""
+    """Maps lab values and clinical features to finding keys for Bayesian updating."""
 
     def __init__(
         self,
         lab_values: list[LabValue],
         age: int | None = None,
         sex: Sex | None = None,
+        symptoms: list[str] | None = None,
+        signs: list[str] | None = None,
+        imaging: list[str] | None = None,
+        medical_history: list[str] | None = None,
     ):
         self.lab_values = lab_values
         self.age = age
@@ -193,6 +211,12 @@ class FindingMapper:
         self.lab_map: dict[str, LabValue] = {}
         for lv in lab_values:
             self.lab_map[lv.test_name] = lv
+
+        # Build clinical text pool — lowercase all items from all text fields
+        self.clinical_text_pool: list[str] = []
+        for source in (symptoms, signs, imaging, medical_history):
+            if source:
+                self.clinical_text_pool.extend(item.lower() for item in source)
 
     def _strength_from_z(self, lv: LabValue) -> float:
         """Compute evidence strength from Z-score: min(|z|/5, 1.0)."""
@@ -467,6 +491,64 @@ class FindingMapper:
 
         return evidence_list
 
+    # ── Clinical rule evaluation ────────────────────────────────────────
+
+    def _evaluate_clinical_rules(self) -> list[tuple[str, str, dict]]:
+        """Evaluate clinical rules against patient text fields.
+
+        Returns (finding_key, matched_text, rule) tuples for each match.
+        """
+        results: list[tuple[str, str, dict]] = []
+        if not self.clinical_text_pool:
+            return results
+
+        for rule in self.rules.get("clinical_rules", []):
+            finding_key = rule["finding_key"]
+            match_terms = rule.get("match_terms", [])
+            if not match_terms:
+                continue
+
+            for text_item in self.clinical_text_pool:
+                # Skip negated items
+                if text_item.startswith(_NEGATION_PREFIXES):
+                    continue
+
+                # Check if any match term is a substring of this text item
+                for term in match_terms:
+                    if term in text_item:
+                        results.append((finding_key, text_item, rule))
+                        break  # Found a match for this rule in this text item
+                else:
+                    continue
+                break  # Found a match for this rule, move to next rule
+
+        return results
+
+    def _make_clinical_evidence(
+        self, finding_key: str, matched_text: str, rule: dict
+    ) -> Evidence:
+        """Create Evidence from a matched clinical rule."""
+        ft_map = {
+            "sign": FindingType.SIGN,
+            "symptom": FindingType.SYMPTOM,
+            "imaging": FindingType.IMAGING,
+            "lab": FindingType.LAB,
+            "history": FindingType.HISTORY,
+        }
+        q_map = {
+            "high": EvidenceQuality.HIGH,
+            "moderate": EvidenceQuality.MODERATE,
+        }
+        return Evidence(
+            finding=finding_key,
+            finding_type=ft_map.get(rule.get("finding_type", "sign"), FindingType.SIGN),
+            supports=True,
+            strength=1.0,
+            source="finding_mapper_clinical",
+            quality=q_map.get(rule.get("quality", "high"), EvidenceQuality.HIGH),
+            reasoning=f"Clinical: '{matched_text}' → {finding_key}",
+        )
+
     # ── Main entry point ────────────────────────────────────────────────
 
     def map_to_findings(self) -> list[Evidence]:
@@ -537,6 +619,15 @@ class FindingMapper:
         absent_evidence = self._evaluate_absent_findings(covered_tests, seen_findings)
         evidence_list.extend(absent_evidence)
 
+        # Pass 7: clinical rules (signs, symptoms, imaging, specialized tests)
+        for finding_key, matched_text, rule in self._evaluate_clinical_rules():
+            if finding_key in seen_findings:
+                continue  # Lab rule already fired — lab takes priority
+            seen_findings.add(finding_key)
+            evidence_list.append(
+                self._make_clinical_evidence(finding_key, matched_text, rule)
+            )
+
         return evidence_list
 
 
@@ -547,7 +638,15 @@ def map_labs_to_findings(
     lab_values: list[LabValue],
     age: int | None = None,
     sex: Sex | None = None,
+    symptoms: list[str] | None = None,
+    signs: list[str] | None = None,
+    imaging: list[str] | None = None,
+    medical_history: list[str] | None = None,
 ) -> list[Evidence]:
-    """Map lab values to clinical findings for Bayesian updating."""
-    mapper = FindingMapper(lab_values, age, sex)
+    """Map lab values and clinical features to findings for Bayesian updating."""
+    mapper = FindingMapper(
+        lab_values, age, sex,
+        symptoms=symptoms, signs=signs,
+        imaging=imaging, medical_history=medical_history,
+    )
     return mapper.map_to_findings()

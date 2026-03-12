@@ -16,10 +16,12 @@
       "fatigue",
       "arthralgias (especially 2nd/3rd MCP joints)",
       "skin bronzing/hyperpigmentation",
-      "hepatomegaly",
-      "diabetes mellitus ('bronze diabetes')"
+      "diabetes mellitus ('bronze diabetes')",
+      "cardiomyopathy"
     ],
-    "signs": [],
+    "signs": [
+      "hepatomegaly"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
