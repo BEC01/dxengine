@@ -990,5 +990,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "3-10 per 100,000 per year"
+  },
+  "acute_pancreatitis": {
+    "description": "Premature activation of pancreatic enzymes (trypsinogen to trypsin) within acinar cells causing autodigestion and inflammatory cascade. Defining lab feature is massively elevated lipase (>3x ULN), supported by elevated amylase. Severity markers include hypocalcemia (Ranson criteria, fatty saponification), elevated CRP (>150 mg/L at 48h predicts severe), and elevated ALT (suggests biliary cause). Hypertriglyceridemia (>500-1000 mg/dL) indicates triglyceride-mediated pancreatitis.",
+    "pattern": {
+      "lipase": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.95
+      },
+      "amylase": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.7
+      },
+      "calcium": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.4
+      },
+      "alanine_aminotransferase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.35
+      },
+      "triglycerides": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.35
+      },
+      "c_reactive_protein": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.25
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "34 per 100,000 per year"
   }
 }

@@ -108,7 +108,7 @@
     }
   },
   "mcv_less_than_80": {
-    "description": "Microcytosis \u00e2\u20ac\u201d MCV below 80 fL",
+    "description": "Microcytosis â€” MCV below 80 fL",
     "diseases": {
       "iron_deficiency_anemia": {
         "lr_positive": 8.0,
@@ -121,7 +121,7 @@
     }
   },
   "mcv_greater_than_100": {
-    "description": "Macrocytosis \u00e2\u20ac\u201d MCV above 100 fL",
+    "description": "Macrocytosis â€” MCV above 100 fL",
     "diseases": {
       "vitamin_b12_deficiency": {
         "lr_positive": 6.5,
@@ -774,10 +774,6 @@
         "lr_positive": 2.5,
         "lr_negative": 0.5
       },
-      "myocardial_infarction": {
-        "lr_positive": 2.0,
-        "lr_negative": 0.6
-      },
       "rhabdomyolysis": {
         "lr_positive": 3.0,
         "lr_negative": 0.25
@@ -785,6 +781,10 @@
       "chronic_kidney_disease": {
         "lr_positive": 0.3,
         "lr_negative": 1.0
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
       }
     }
   },
@@ -1017,13 +1017,13 @@
         "lr_positive": 12.0,
         "lr_negative": 0.08
       },
-      "myocardial_infarction": {
-        "lr_positive": 3.0,
-        "lr_negative": 0.4
-      },
       "hypothyroidism": {
         "lr_positive": 3.5,
         "lr_negative": 0.7
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -1033,10 +1033,6 @@
       "rhabdomyolysis": {
         "lr_positive": 15.0,
         "lr_negative": 0.1
-      },
-      "myocardial_infarction": {
-        "lr_positive": 3.0,
-        "lr_negative": 0.45
       },
       "tumor_lysis_syndrome": {
         "lr_positive": 0.5,
@@ -1061,6 +1057,10 @@
       "diabetic_ketoacidosis": {
         "lr_positive": 0.5,
         "lr_negative": 1.0
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
       }
     }
   },
@@ -1154,7 +1154,7 @@
     }
   },
   "ana_positive": {
-    "description": "Antinuclear antibody test positive (\u00e2\u2030\u00a51:80 titer)",
+    "description": "Antinuclear antibody test positive (â‰¥1:80 titer)",
     "diseases": {
       "systemic_lupus_erythematosus": {
         "lr_positive": 4.5,
@@ -1195,7 +1195,7 @@
     }
   },
   "ana_positive_high_titer": {
-    "description": "ANA positive at high titer (\u00e2\u2030\u00a51:640)",
+    "description": "ANA positive at high titer (â‰¥1:640)",
     "diseases": {
       "systemic_lupus_erythematosus": {
         "lr_positive": 15.0,
@@ -2016,7 +2016,7 @@
     }
   },
   "hypersegmented_neutrophils": {
-    "description": "Neutrophils with \u00e2\u2030\u00a55 lobes (or any with \u00e2\u2030\u00a56 lobes) on peripheral blood smear",
+    "description": "Neutrophils with â‰¥5 lobes (or any with â‰¥6 lobes) on peripheral blood smear",
     "diseases": {
       "vitamin_b12_deficiency": {
         "lr_positive": 12.0,
@@ -2754,10 +2754,6 @@
         "lr_positive": 15.0,
         "lr_negative": 0.05
       },
-      "myocardial_infarction": {
-        "lr_positive": 3.0,
-        "lr_negative": 0.5
-      },
       "hypothyroidism": {
         "lr_positive": 2.0,
         "lr_negative": 0.7
@@ -2797,6 +2793,10 @@
       "multiple_myeloma": {
         "lr_positive": 0.5,
         "lr_negative": 1.0
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2997,6 +2997,10 @@
       "vitamin_d_deficiency": {
         "lr_positive": 3.0,
         "lr_negative": 0.5
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.7
       }
     }
   },

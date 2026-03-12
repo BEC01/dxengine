@@ -29,18 +29,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 3.8,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.9,
             "unit": "mEq/L"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.2,
+            "test_name": "phosphorus",
+            "value": 3.8,
             "unit": "mg/dL"
           },
           {
@@ -49,14 +44,14 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 322.0,
             "unit": "U/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 8.1,
-            "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
@@ -64,14 +59,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "glucose",
-            "value": 85.0,
+            "test_name": "uric_acid",
+            "value": 8.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "hemoglobin_a1c",
+            "value": 4.8,
+            "unit": "%"
           },
           {
             "test_name": "white_blood_cells",
@@ -79,14 +74,19 @@
             "unit": "x10^9/L"
           },
           {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 4.8,
-            "unit": "%"
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
           }
         ]
       }

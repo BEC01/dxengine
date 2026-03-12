@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "id": "acute_pancreatitis_moderate_000",
+    "category": "gastrointestinal",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "acute_pancreatitis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "severe epigastric pain radiating to back",
+    "symptoms": [
+      "severe epigastric pain radiating to back",
+      "worse with eating",
+      "better sitting up and leaning forward",
+      "nausea/vomiting",
+      "abdominal distension"
+    ],
+    "signs": [
+      "Cullen sign (periumbilical ecchymosis) and Grey Turner sign (flank ecchymosis) in severe hemorrhagic pancreatitis"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "lipase",
+            "value": 212.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "amylase",
+            "value": 123.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 51.7,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 178.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 3.6,
+            "unit": "mg/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "acute_pancreatitis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "acute_pancreatitis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1,28 +1,22 @@
 {
   "metadata": {
-    "id": "adv_amb_hepatocellular_injury_cholestatic_liver_disease",
-    "category": "adversarial",
+    "id": "mimic_acute_pancreatitis",
+    "category": "negative",
     "difficulty": "adversarial",
     "split": "test",
-    "source": "adversarial",
+    "source": "synthetic",
     "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "right upper quadrant pain",
+    "chief_complaint": "severe epigastric pain radiating to back",
     "symptoms": [
-      "right upper quadrant pain",
-      "nausea/vomiting",
-      "fatigue",
-      "dark urine",
-      "pale stools"
+      "severe epigastric pain radiating to back",
+      "worse with eating"
     ],
-    "signs": [
-      "jaundice",
-      "hepatomegaly"
-    ],
+    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -32,23 +26,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
+            "test_name": "lipase",
+            "value": 80.0,
             "unit": "U/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
+            "test_name": "amylase",
+            "value": 64.0,
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
+            "test_name": "calcium",
+            "value": 8.8,
             "unit": "mg/dL"
           },
           {
             "test_name": "alanine_aminotransferase",
-            "value": 55.4,
+            "value": 53.5,
             "unit": "U/L"
           }
         ]
