@@ -1188,5 +1188,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 33"
+  },
+  "acute_myocardial_infarction": {
+    "description": "Acute myocardial necrosis from coronary artery thrombotic occlusion (STEMI) or subtotal occlusion (NSTEMI). Dominated by troponin rise-and-fall, with CK-MB as confirmatory marker. Supportive findings include stress hyperglycemia, leukocytosis, and BNP elevation if LV dysfunction develops.",
+    "pattern": {
+      "troponin_i": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.95
+      },
+      "creatine_kinase_mb": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.8
+      },
+      "creatine_kinase": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.5
+      },
+      "myoglobin": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.45
+      },
+      "b_type_natriuretic_peptide": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.4
+      },
+      "lactate_dehydrogenase": {
+        "direction": "increased",
+        "typical_z_score": 5.4,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500"
   }
 }

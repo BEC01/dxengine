@@ -882,6 +882,10 @@
       "hepatocellular_injury": {
         "lr_positive": 0.5,
         "lr_negative": 1.0
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -967,6 +971,10 @@
       "heart_failure": {
         "lr_positive": 18.0,
         "lr_negative": 0.1
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -985,6 +993,10 @@
       "heart_failure": {
         "lr_positive": 15.0,
         "lr_negative": 0.08
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -1107,6 +1119,10 @@
       "rheumatoid_arthritis_flare": {
         "lr_positive": 3.0,
         "lr_negative": 0.3
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -2653,6 +2669,10 @@
       "chronic_kidney_disease": {
         "lr_positive": 0.5,
         "lr_negative": 1.0
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -2704,6 +2724,10 @@
       "polycythemia_vera": {
         "lr_positive": 2.0,
         "lr_negative": 0.7
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -2834,6 +2858,10 @@
       "hemolytic_anemia": {
         "lr_positive": 2.0,
         "lr_negative": 0.7
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -2955,6 +2983,10 @@
       "infective_endocarditis": {
         "lr_positive": 1.3,
         "lr_negative": 0.12
+      },
+      "acute_myocardial_infarction": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -3141,6 +3173,15 @@
       "cirrhosis": {
         "lr_positive": 3.5,
         "lr_negative": 0.4
+      }
+    }
+  },
+  "creatine_kinase_mb_elevated": {
+    "description": "CK-MB above upper limit of normal (>5 ng/mL). Classic AMI biomarker with faster rise/fall than troponin. Especially useful for detecting reinfarction.",
+    "diseases": {
+      "acute_myocardial_infarction": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.25
       }
     }
   }

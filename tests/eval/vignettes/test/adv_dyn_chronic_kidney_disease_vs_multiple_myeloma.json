@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "calcium",
+            "value": 9.4,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "glomerular_filtration_rate",
             "value": 61.1,
             "unit": "mL/min/1.73m2"
@@ -41,9 +46,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.4,
-            "unit": "mg/dL"
+            "test_name": "albumin",
+            "value": 3.6,
+            "unit": "g/dL"
           },
           {
             "test_name": "creatinine",
@@ -56,19 +61,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 3.6,
-            "unit": "g/dL"
+            "test_name": "blood_urea_nitrogen",
+            "value": 24.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "parathyroid_hormone",
             "value": 70.0,
             "unit": "pg/mL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 4.5,
-            "unit": "mg/dL"
           },
           {
             "test_name": "potassium",
@@ -81,8 +81,8 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 24.5,
+            "test_name": "phosphorus",
+            "value": 4.5,
             "unit": "mg/dL"
           },
           {

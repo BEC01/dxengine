@@ -734,6 +734,18 @@
       "test": "albumin",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "creatine_kinase_mb_elevated",
+      "test": "creatine_kinase_mb",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "neutrophils_absolute_elevated",
+      "test": "neutrophils_absolute",
+      "operator": "above_uln",
+      "importance": 2
     }
   ],
   "composite_rules": [

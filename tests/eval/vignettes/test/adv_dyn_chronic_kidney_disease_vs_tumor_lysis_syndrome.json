@@ -31,16 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 4.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 22.1,
             "unit": "mg/dL"
@@ -49,6 +39,11 @@
             "test_name": "calcium",
             "value": 8.6,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
           },
           {
             "test_name": "creatinine",
@@ -61,9 +56,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 70.0,
-            "unit": "pg/mL"
+            "test_name": "phosphorus",
+            "value": 4.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -71,9 +66,9 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 23.4,
-            "unit": "mEq/L"
+            "test_name": "parathyroid_hormone",
+            "value": 70.0,
+            "unit": "pg/mL"
           },
           {
             "test_name": "hemoglobin",
@@ -84,6 +79,11 @@
             "test_name": "albumin",
             "value": 3.7,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 23.4,
+            "unit": "mEq/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
