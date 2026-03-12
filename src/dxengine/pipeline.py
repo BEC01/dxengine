@@ -196,6 +196,7 @@ def run_phase1_pipeline(
     # Finding summaries: split by source
     mapped_findings = []
     fallback_findings = []
+    absent_findings = []
     for ev in new_findings:
         # Check if this finding has curated LR data
         lr_entry = lr_data.get(ev.finding, {})
@@ -212,6 +213,8 @@ def run_phase1_pipeline(
 
         if ev.source == "finding_mapper":
             mapped_findings.append(fs)
+        elif ev.source == "finding_mapper_absent":
+            absent_findings.append(fs)
         else:
             fallback_findings.append(fs)
 
@@ -226,6 +229,7 @@ def run_phase1_pipeline(
         diagnostic_ratios=ratio_results,
         mapped_findings=mapped_findings,
         fallback_findings=fallback_findings,
+        absent_findings=absent_findings,
         engine_hypotheses=state.hypotheses,
         engine_entropy=entropy,
         engine_recommended_tests=recommended,

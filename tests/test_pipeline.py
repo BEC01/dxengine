@@ -107,7 +107,7 @@ def _run_pipeline_module(patient_data: dict) -> dict:
     return {
         "num_analyzed": len(briefing.analyzed_labs),
         "num_patterns": len(briefing.known_patterns) + len(briefing.collectively_abnormal),
-        "num_findings": len(briefing.mapped_findings) + len(briefing.fallback_findings),
+        "num_findings": len(briefing.mapped_findings) + len(briefing.fallback_findings) + len(briefing.absent_findings),
         "num_hypotheses": len(briefing.engine_hypotheses),
         "top_diseases": [h.disease for h in briefing.engine_hypotheses[:5]],
         "entropy": round(briefing.engine_entropy, 4),

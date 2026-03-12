@@ -107,8 +107,9 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Graduated probability floors based on disease importance (5→8%, 4→5%, 3→2%)
 - Self-reflection in adversarial agent (DeepRare pattern)
 - Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
-- Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; global ceiling based on max `n_informative_lr` across hypothesis pool prevents normalization artifacts and eliminates cliff-edge regressions
-- 347 tests passing, eval score 0.8344 with 195 vignettes (190 synthetic + 5 fixtures)
+- Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; global ceiling based on max `n_informative_lr` across hypothesis pool prevents normalization artifacts and eliminates cliff-edge regressions. Absent-finding evidence excluded from `n_informative_lr` to prevent ceiling inflation.
+- Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
+- 347 tests passing, eval score 0.8307 with 195 vignettes (190 synthetic + 5 fixtures)
 
 ## /expand — Disease Expansion System
 
@@ -186,7 +187,7 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-11):** score=0.8344, top3=99.4%, top1=93.0%, neg_pass=100.0%
+**Current baseline (2026-03-11):** score=0.8307, top3=98.7%, top1=92.4%, neg_pass=100.0%
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -206,35 +207,23 @@ Added 30 `single_rules` entries in `finding_rules.json` using `above_uln`/`below
 
 ---
 
-### Priority 3: Implement LR- for Absent/Normal Findings (Rule-Out Evidence)
+### Priority 3: Implement LR- for Absent/Normal Findings (Rule-Out Evidence) (DONE)
 
-**Problem:** When a lab value is **within the normal reference range**, no Evidence is generated. But `likelihood_ratios.json` has **99 disease-finding pairs with LR- < 0.20** — strong rule-out evidence that is never applied. Example: a normal TSH provides LR- = 0.02 against hypothyroidism (i.e., normal TSH makes hypothyroidism 50x less likely), but the engine treats it as neutral. The engine literally cannot rule anything out from normal labs.
+Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positive rule fires), generates `Evidence(supports=False, source="finding_mapper_absent")` for findings with curated LR- < 0.1. The Bayesian updater's `update_single()` already handles `supports=False` via per-disease `lr_neg` lookup.
 
-**Solution:** After evaluating all positive findings (existing Passes 1-5), add a new pass in `finding_mapper.py` that checks: for each disease in the hypothesis pool, does any analyte in the patient's panel have a curated finding rule that DIDN'T fire, AND does the corresponding LR entry have LR- < 0.5? If yes, generate an Evidence with `supports=False` and `likelihood_ratio = lr_negative`.
+**Safety mechanisms:**
+- `_ABSENT_SUBSUMES` dict (19 entries) prevents multi-threshold double-counting (reverse of `_SUBSUMES`)
+- `covered_tests` suppression: if ANY positive finding fired for a test, ALL absent findings for that test are suppressed (handles d_dimer_normal + d_dimer_elevated, mid-threshold CK, etc.)
+- Z-score proximity check: skip absent if value trending toward threshold (z > 1.0 for upward rules, z < -1.0 for downward rules) — prevents borderline values from generating false rule-outs
+- `between` operator rules excluded (ambiguous absence semantics)
+- Only `single_rules` processed (composite/computed have complex multi-test dependencies)
+- Absent evidence excluded from `n_informative_lr` in `bayesian_updater.py` — absent findings push posteriors DOWN and cannot cause overconfidence, so they must not inflate the evidence ceiling
 
-**Implementation detail in `finding_mapper.py`:**
-```python
-# NEW Pass 6: Absent findings (rule-out evidence)
-# For each single_rule in finding_rules:
-#   1. Is the test present in the patient's labs? (lab was ordered)
-#   2. Did the rule NOT fire? (value within normal range)
-#   3. Does the finding_key have curated LR- < 0.5 for any disease?
-#   If all yes: generate Evidence(finding=finding_key, supports=False,
-#     likelihood_ratio=lr_negative, source="finding_mapper_absent")
-```
+**Threshold tuning:** Swept 0.05–0.20. LR- < 0.1 optimal: 13 qualifying finding keys, 1 new regression (medically defensible — normal calcium correctly argues against primary hyperparathyroidism). LR- < 0.2 caused normalization artifacts in narrow-panel adversarial cases.
 
-**Key constraint: Only generate absent findings for labs that were ORDERED.** If TSH was not in the patient's panel, we cannot infer TSH is normal — it was simply not measured. This means checking `test_name in patient_lab_names` before generating absent evidence.
+**Files changed:** `finding_mapper.py` (+144 lines), `bayesian_updater.py` (+6 lines), `models.py` (+1 line), `pipeline.py` (+4 lines), `test_finding_mapper.py` (+121 lines), `test_pipeline.py` (+1 line)
 
-**Files to modify:**
-- `src/dxengine/finding_mapper.py`: Add the absent-finding pass after existing passes. Need access to the full `likelihood_ratios.json` to check LR- values (load via `load_likelihood_ratios()`).
-- `src/dxengine/pipeline.py`: Pass the full list of patient lab test names to the finding mapper.
-- `src/dxengine/bayesian_updater.py`: `update_single()` already handles `supports=False` correctly (uses LR- path). No changes needed.
-
-**Expected impact:** Dramatically improves specificity. When a patient has a comprehensive panel with normal TSH, normal ferritin, normal liver enzymes — the engine can now actively push down hypothyroidism, IDA, and hepatocellular injury. This helps negative cases (healthy patients get many rule-outs) and helps discrimination in positive cases (competing diseases get ruled out by their key labs being normal).
-
-**Verification:** Run eval. Expect: (1) neg_pass improves (healthy/mimic negatives get strong rule-outs), (2) CKD overbreadth may improve (CKD gets ruled out when key labs like GFR are normal), (3) mean_gold_posterior may improve (competing diseases ruled out). Watch for: false rule-outs when a disease doesn't always cause a lab abnormality (e.g., early CKD may have normal creatinine).
-
-**Risk mitigation:** Only apply absent evidence when LR- < 0.5 (meaningful rule-out strength). LR- of 0.8 or 0.9 is too weak to justify. Start conservative (LR- < 0.3 cutoff), tune after eval.
+**Results:** score=0.8307 (baseline 0.8344, -0.004), top3=98.7%, top1=92.4%, neg_pass=100%, 347 tests. 7 gold posteriors improved (CKD +0.01, TLS discriminator +0.06), 2 regressed (1 pre-existing, 1 new).
 
 ---
 

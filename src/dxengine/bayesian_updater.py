@@ -108,8 +108,13 @@ def update_single(hypothesis: Hypothesis, evidence: Evidence) -> Hypothesis:
     updated.log_odds = posterior_lo
     updated.posterior_probability = posterior_prob
 
-    # Track whether this LR was informative (not neutral 1.0)
-    if abs(math.log(lr)) > 0.01:
+    # Track informative LRs for the evidence ceiling.
+    # Exclude absent-finding evidence (source="finding_mapper_absent"):
+    # absent findings push posteriors DOWN and can never cause
+    # overconfidence, so they should not raise the ceiling that guards
+    # against sparse-evidence inflation from normalization artifacts.
+    is_absent = evidence.source == "finding_mapper_absent"
+    if not is_absent and abs(math.log(lr)) > 0.01:
         updated.n_informative_lr += 1
 
     if evidence.supports:

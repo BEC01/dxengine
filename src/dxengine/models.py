@@ -228,6 +228,7 @@ class StructuredBriefing(BaseModel):
     diagnostic_ratios: list[RatioResult] = Field(default_factory=list)
     mapped_findings: list[FindingSummary] = Field(default_factory=list)
     fallback_findings: list[FindingSummary] = Field(default_factory=list)
+    absent_findings: list[FindingSummary] = Field(default_factory=list)
     engine_hypotheses: list[Hypothesis] = Field(default_factory=list)
     engine_entropy: float = 0.0
     engine_recommended_tests: list[RecommendedTest] = Field(default_factory=list)

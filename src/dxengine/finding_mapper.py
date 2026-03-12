@@ -140,6 +140,40 @@ _SUBSUMES: dict[str, list[str]] = {
 }
 
 
+# Absent subsumption: when multiple same-test/same-direction rules are ALL absent
+# (i.e., normal lab), the broadest rule subsumes narrower ones.
+# Reverse direction of _SUBSUMES: if ferritin is normal, ferritin_less_than_45
+# absent subsumes ferritin_less_than_15 absent (no need for both).
+_ABSENT_SUBSUMES: dict[str, list[str]] = {
+    "ferritin_less_than_45": ["ferritin_less_than_15"],
+    "ferritin_greater_than_100": ["ferritin_greater_than_300", "ferritin_greater_than_1000"],
+    "ferritin_greater_than_300": ["ferritin_greater_than_1000"],
+    "creatine_kinase_elevated": ["ck_greater_than_5x_uln", "ck_greater_than_10x_uln"],
+    "ck_greater_than_5x_uln": ["ck_greater_than_10x_uln"],
+    "glucose_elevated": ["glucose_greater_than_250", "glucose_greater_than_600"],
+    "glucose_greater_than_250": ["glucose_greater_than_600"],
+    "glomerular_filtration_rate_low": ["gfr_less_than_60", "gfr_less_than_15"],
+    "gfr_less_than_60": ["gfr_less_than_15"],
+    "haptoglobin_low": ["haptoglobin_undetectable"],
+    "tsh_elevated": ["tsh_greater_than_10"],
+    "alanine_aminotransferase_elevated": ["alt_greater_than_10x_uln"],
+    "erythrocyte_sedimentation_rate_elevated": ["esr_greater_than_100"],
+    "uric_acid_elevated": ["uric_acid_greater_than_10"],
+    "international_normalized_ratio_elevated": ["prolonged_pt_inr"],
+    "hemoglobin_a1c_elevated": ["hba1c_greater_than_6_5"],
+    "ana_positive": ["ana_positive_high_titer"],
+    "sodium_low": ["sodium_less_than_130"],
+    "cortisol_am_low": ["cortisol_am_less_than_3"],
+}
+
+
+# Only generate absent evidence for very strong rule-outs (LR- < threshold).
+# Tuned from 0.2 to 0.1 after eval: 0.2 caused normalization artifacts
+# in adversarial discriminator cases where narrow panels left some diseases
+# unaffected by absent findings while pushing others down.
+_LR_NEG_THRESHOLD = 0.1
+
+
 class FindingMapper:
     """Maps lab values to clinical finding keys for Bayesian updating."""
 
@@ -327,6 +361,112 @@ class FindingMapper:
             return computed_value <= threshold
         return False
 
+    # ── Absent findings (rule-out evidence) ────────────────────────────
+
+    def _evaluate_absent_findings(
+        self,
+        covered_tests: set[str],
+        seen_findings: set[str],
+    ) -> list[Evidence]:
+        """Generate absent-finding evidence for labs that were ordered but normal.
+
+        When a lab test is present in the panel and ALL finding rules for that
+        test fail to fire (i.e., the value is in the normal range), the absence
+        of the finding is evidence against diseases that would cause it.
+
+        Only generates evidence for findings with LR- < _LR_NEG_THRESHOLD
+        (strong rule-out power). Uses _ABSENT_SUBSUMES to prevent
+        double-counting when multiple thresholds are all absent.
+
+        Args:
+            covered_tests: test names that had at least one positive finding fire
+            seen_findings: finding keys that fired positively (from Passes 1-3)
+        """
+        candidates: dict[str, str] = {}  # finding_key → test_name
+
+        for rule in self.rules.get("single_rules", []):
+            finding_key = rule["finding_key"]
+            test_name = rule["test"]
+            operator = rule.get("operator", "")
+
+            # Skip if rule fired positively
+            if finding_key in seen_findings:
+                continue
+
+            # Skip if any positive finding fired for this test — prevents
+            # complementary double-counting (e.g., d_dimer_normal + d_dimer_elevated absent)
+            # and mid-threshold conflicts (CK elevated + CK 5x absent)
+            if test_name in covered_tests:
+                continue
+
+            # Skip between rules — ambiguous absence semantics
+            if operator == "between":
+                continue
+
+            # Skip if test was not ordered
+            if test_name not in self.lab_map:
+                continue
+
+            # For reference-range operators (above_uln, below_lln, within_range),
+            # skip if range is unavailable
+            if operator in ("above_uln", "below_lln", "within_range"):
+                if _get_range(test_name, self.age, self.sex) is None:
+                    continue
+
+            # Z-score proximity check: don't generate absent evidence when the
+            # value is trending toward the threshold. E.g., calcium=10.2 with
+            # ULN=10.5 (z=+1.4) is borderline — generating "calcium_elevated
+            # absent" would falsely rule out hyperparathyroidism.
+            lv = self.lab_map[test_name]
+            if lv.z_score is not None:
+                _UPWARD_OPS = {"above_uln", "gt", "gte", "gt_mult_uln"}
+                _DOWNWARD_OPS = {"below_lln", "lt", "lte"}
+                if operator in _UPWARD_OPS and lv.z_score > 1.0:
+                    continue  # high-normal: too close to firing threshold
+                if operator in _DOWNWARD_OPS and lv.z_score < -1.0:
+                    continue  # low-normal: too close to firing threshold
+
+            # Check if any disease has strong LR- for this finding
+            lr_entry = self.lr_data.get(finding_key, {})
+            diseases = lr_entry.get("diseases", {})
+            has_strong_lr_neg = any(
+                d.get("lr_negative", 1.0) < _LR_NEG_THRESHOLD
+                for d in diseases.values()
+            )
+            if not has_strong_lr_neg:
+                continue
+
+            candidates[finding_key] = test_name
+
+        # Apply absent subsumption: broadest absent suppresses narrower
+        absent_subsumed: set[str] = set()
+        for finding_key in candidates:
+            for suppressed in _ABSENT_SUBSUMES.get(finding_key, []):
+                if suppressed in candidates:
+                    absent_subsumed.add(suppressed)
+
+        # Generate Evidence for surviving candidates
+        evidence_list: list[Evidence] = []
+        for finding_key, test_name in candidates.items():
+            if finding_key in absent_subsumed:
+                continue
+
+            lv = self.lab_map[test_name]
+            evidence_list.append(Evidence(
+                finding=finding_key,
+                finding_type=FindingType.LAB,
+                supports=False,
+                strength=1.0,
+                source="finding_mapper_absent",
+                quality=EvidenceQuality.HIGH,
+                reasoning=(
+                    f"{test_name} = {lv.value} {lv.unit} (normal) → "
+                    f"{finding_key} absent"
+                ),
+            ))
+
+        return evidence_list
+
     # ── Main entry point ────────────────────────────────────────────────
 
     def map_to_findings(self) -> list[Evidence]:
@@ -392,6 +532,10 @@ class FindingMapper:
                 fb = self._make_fallback_evidence(lv)
                 if fb is not None:
                     evidence_list.append(fb)
+
+        # Pass 6: absent findings (rule-out evidence)
+        absent_evidence = self._evaluate_absent_findings(covered_tests, seen_findings)
+        evidence_list.extend(absent_evidence)
 
         return evidence_list
 

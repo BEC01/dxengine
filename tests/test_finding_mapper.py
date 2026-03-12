@@ -812,5 +812,124 @@ class TestOrphanedLRWiring:
         labs = [make_lv("potassium", 4.0, "mEq/L",
                         ref_low=3.5, ref_high=5.0, z_score=0.0, severity=Severity.NORMAL)]
         results = map_labs_to_findings(labs)
-        potassium_findings = [e for e in results if "potassium" in e.finding]
+        potassium_findings = [e for e in results if "potassium" in e.finding and e.source != "finding_mapper_absent"]
         assert len(potassium_findings) == 0
+
+
+# ── TestAbsentFindings ─────────────────────────────────────────────────────
+
+
+class TestAbsentFindings:
+    """Tests for Pass 6: absent-finding rule-out evidence."""
+
+    def test_normal_tsh_generates_absent_elevated(self):
+        """Normal TSH → tsh_elevated absent fires (rules out hypothyroidism)."""
+        labs = [make_lv("thyroid_stimulating_hormone", 2.0, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        ev = evidence_by_key(results, "tsh_elevated")
+        assert ev is not None
+        assert ev.supports is False
+        assert ev.source == "finding_mapper_absent"
+
+    def test_absent_has_correct_fields(self):
+        """Absent evidence has supports=False, quality=HIGH, strength=1.0."""
+        labs = [make_lv("thyroid_stimulating_hormone", 2.0, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        ev = evidence_by_key(results, "tsh_elevated")
+        assert ev is not None
+        assert ev.supports is False
+        assert ev.quality.value == "high"
+        assert ev.strength == 1.0
+        assert ev.source == "finding_mapper_absent"
+        assert ev.finding_type == FindingType.LAB
+
+    def test_not_generated_for_unordered_test(self):
+        """TSH not in panel → no tsh_elevated absent generated."""
+        labs = [make_lv("glucose", 90.0, "mg/dL",
+                        ref_low=70.0, ref_high=100.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        tsh_absent = [e for e in results if "tsh" in e.finding and e.source == "finding_mapper_absent"]
+        assert len(tsh_absent) == 0
+
+    def test_not_generated_when_rule_fires(self):
+        """TSH=12.5 → tsh_elevated fires positively, no absent."""
+        labs = [make_lv("thyroid_stimulating_hormone", 12.5, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=9.4, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.source == "finding_mapper_absent" and "tsh" in e.finding]
+        assert len(absent) == 0
+
+    def test_absent_subsumption_ferritin(self):
+        """Ferritin normal → ferritin absent findings filtered by LR- threshold.
+
+        At threshold 0.1, ferritin_less_than_45 (min LR- 0.11) and
+        ferritin_less_than_15 (min LR- 0.46) don't qualify. No ferritin
+        absent findings fire. Subsumption is moot.
+        """
+        labs = [make_lv("ferritin", 80.0, "ng/mL",
+                        ref_low=12.0, ref_high=150.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.source == "finding_mapper_absent" and "ferritin" in e.finding]
+        # At strict LR- < 0.1, no ferritin absent findings qualify
+        assert "ferritin_less_than_15" not in {e.finding for e in absent}
+
+    def test_absent_subsumption_glucose(self):
+        """Glucose normal → glucose_greater_than_250 absent fires (LR-=0.01).
+
+        At threshold 0.1, glucose_elevated (min LR- 0.10) doesn't qualify.
+        glucose_greater_than_250 (min LR- 0.01) does qualify and fires.
+        """
+        labs = [make_lv("glucose", 90.0, "mg/dL",
+                        ref_low=70.0, ref_high=100.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.source == "finding_mapper_absent" and "glucose" in e.finding]
+        absent_keys = {e.finding for e in absent}
+        # glucose_greater_than_250 qualifies (LR- 0.01 < 0.1)
+        assert "glucose_greater_than_250" in absent_keys
+        # glucose_greater_than_600 doesn't qualify (LR- 0.15 >= 0.1)
+        assert "glucose_greater_than_600" not in absent_keys
+
+    def test_between_rules_skipped(self):
+        """HbA1c normal → hba1c_5_7_to_6_4 absent NOT generated."""
+        labs = [make_lv("hemoglobin_a1c", 5.0, "%",
+                        ref_low=4.0, ref_high=5.6, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent_keys = {e.finding for e in results if e.source == "finding_mapper_absent"}
+        assert "hba1c_5_7_to_6_4" not in absent_keys
+
+    def test_covered_test_suppresses_absent(self):
+        """CK=300 (elevated) → ck_greater_than_5x_uln absent suppressed."""
+        labs = [make_lv("creatine_kinase", 600.0, "U/L",
+                        ref_low=39.0, ref_high=308.0, z_score=4.3, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs, age=40, sex=Sex.MALE)
+        # CK had a positive finding fire → covered_tests includes creatine_kinase
+        absent = [e for e in results if e.source == "finding_mapper_absent" and "ck" in e.finding.lower()]
+        assert len(absent) == 0
+
+    def test_bidirectional_both_absent(self):
+        """Normal TSH → both tsh_elevated and tsh_suppressed absent."""
+        labs = [make_lv("thyroid_stimulating_hormone", 2.0, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent_keys = {e.finding for e in results if e.source == "finding_mapper_absent"}
+        assert "tsh_elevated" in absent_keys
+        assert "tsh_suppressed" in absent_keys
+
+    def test_positive_and_absent_coexist(self):
+        """TSH=0.05 (suppressed fires) → tsh_elevated absent also fires."""
+        labs = [make_lv("thyroid_stimulating_hormone", 0.05, "mIU/L",
+                        ref_low=0.4, ref_high=4.0, z_score=-3.0, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        # tsh_suppressed should fire positively
+        assert "tsh_suppressed" in finding_keys(results)
+        # But tsh_elevated should NOT fire as absent because TSH is covered
+        absent = [e for e in results if e.source == "finding_mapper_absent" and "tsh" in e.finding]
+        assert len(absent) == 0
+
+    def test_empty_labs_no_absent(self):
+        """No labs → no absent findings."""
+        results = map_labs_to_findings([])
+        absent = [e for e in results if e.source == "finding_mapper_absent"]
+        assert len(absent) == 0
