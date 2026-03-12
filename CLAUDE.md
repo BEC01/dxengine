@@ -107,10 +107,11 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Graduated probability floors based on disease importance (5→8%, 4→5%, 3→2%)
 - Self-reflection in adversarial agent (DeepRare pattern)
 - Finding rules have `importance` field (1-5); illness scripts have `disease_importance` (1-5)
-- Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; global ceiling based on max `n_informative_lr` across hypothesis pool prevents normalization artifacts and eliminates cliff-edge regressions. Absent-finding evidence excluded from `n_informative_lr` to prevent ceiling inflation.
+- Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; **per-disease** ceiling based on each hypothesis's own `n_informative_lr` prevents normalization artifacts and eliminates cliff-edge regressions. Absent-finding evidence excluded from `n_informative_lr` to prevent ceiling inflation.
 - Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
 - Clinical feature integration (Pass 7): evaluates 90 `clinical_rules` in `finding_rules.json` against patient text fields (signs, symptoms, imaging, medical_history). Substring matching with negation prefix guard. Finding types: sign, symptom, imaging, lab. Generates `source="finding_mapper_clinical"` Evidence. Lab rules take priority over clinical text for same finding_key.
-- 383 tests passing, eval score 0.8504 with 195 vignettes (190 synthetic + 5 fixtures)
+- Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (28 entries across 12 diseases)
+- 398 tests passing, eval score 0.8619 with 236 vignettes (231 synthetic + 5 fixtures), 24 disease patterns
 
 ## /expand — Disease Expansion System
 
@@ -154,22 +155,22 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - Atomic file writes with .bak backup and rollback on failure
 
 ### Eval Harness
-190 vignettes + 5 fixtures = 195 total (152 positive, 38 negative, 20% negative ratio). All scale automatically with /expand:
+231 vignettes + 5 fixtures = 236 total (189 positive, 42 negative, 18% negative ratio). All scale automatically with /expand:
 
 **Vignette types (per disease, auto-generated):**
-- **classic** (18) — full disease pattern at canonical z-scores
-- **moderate** (18) — 0.55x z-scores, tests sensitivity to milder presentations
-- **partial_screen** (18) — only standard panel labs (CBC+CMP+TSH+iron)
-- **partial_nokey** (18) — highest-weight analyte removed, tests graceful degradation
-- **demog_flip** (18) — age/sex flipped to atypical demographics
+- **classic** (24) — full disease pattern at canonical z-scores (uses `typical_value` when available)
+- **moderate** (24) — 0.55x z-scores, tests sensitivity to milder presentations
+- **partial_screen** (24) — only standard panel labs (CBC+CMP+TSH+iron)
+- **partial_nokey** (24) — highest-weight analyte removed, tests graceful degradation
+- **demog_flip** (24) — age/sex flipped to atypical demographics
 - **comorbidity** (18) — blended with medically plausible comorbidity overlay (18 curated pairs)
-- **borderline** (8) — key analyte at finding rule threshold + 1%, handles all operator types
+- **borderline** (10) — key analyte at finding rule threshold + 1%, handles all operator types
 - **subtle** (10) — collectively-abnormal diseases only, z-scores that are individually normal
 
 **Adversarial & negative cases (auto-generated):**
-- **Dynamic discriminators** (25) — auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
+- **Dynamic discriminators** (29) — auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
 - **Dynamic ambiguous** (3) — shared labs only, both diseases plausible, gold = `__none__`
-- **Mimic negatives** (18) — mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; tests overconfidence from sparse data
+- **Mimic negatives** (23) — mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; stripped symptoms prevent clinical rule leakage
 - **Healthy negatives** (10) — normal labs with random physiological variation
 - **Unknown disease negatives** (5) — genuinely abnormal labs for diseases not in engine vocabulary; **flips_when** auto-converts to positive when disease is added
 - **Handcrafted adversarial** (3) — medication effect, age adjustment, partial panel
@@ -184,11 +185,11 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - Soft (warns only): rank degradation within top-3, mean posterior drop >0.03, per-disease top-3 rate drop from 100% to <80%
 
 **Other features:**
-- **`--expand-mode`** — compare_scores.py flag for /expand; accepts if score held steady (>= -0.001) instead of requiring improvement
+- **`--expand-mode`** — compare_scores.py flag for /expand; computes existing-only score on common vignettes (prevents new below-average vignettes from diluting score), separate new vignette health check (top3 >= 50%, neg_pass 100%, classic MUST be top-3)
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-12):** score=0.8504, top3=98.7%, top1=94.3%, neg_pass=100.0%
+**Current baseline (2026-03-12):** score=0.8619, top3=100.0%, top1=95.9%, neg_pass=100.0%, n=236
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -342,11 +343,34 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 
 **Files changed:** `models.py` (+1 line), `pipeline.py` (+4 lines), `run_pipeline.py` (+1 line), `dx-diagnostician.md` (+2 bullets), `skill.md` (+1 line), `test_pipeline.py` (+3 tests)
 
-**Results:** Display-only change. 383 tests passing (380 existing + 3 new), zero eval impact.
+**Results:** Display-only change. Zero eval impact.
 
 ---
 
-### Future Improvements (Beyond Priority 5)
+### Scaling Fixes (2026-03-12, Fixes 1-4 DONE)
+
+Produced by 4-agent deep analysis per fix. Each fix was validated by parallel analysis agents before implementation.
+
+**Fix 1: Per-Disease Evidence Ceiling (DONE)**
+Changed `apply_evidence_caps()` from global `max(h.n_informative_lr)` to per-disease `h.n_informative_lr`. Eliminated primary scaling bottleneck blocking expansion beyond ~25 diseases. Safety margin: ceiling(2)=0.390 < 0.40 neg_pass threshold.
+
+**Fix 2: Expand-Mode Scoring on Common Vignettes (DONE)**
+Rewrote `compare_scores.py` to compute existing-only score on common vignettes in `--expand-mode`. New vignette health check: top_3 >= 50%, neg_pass 100%, classic vignettes MUST be top-3. Prevents score dilution from new below-average vignettes blocking valid expansions.
+
+**Fix 3: Typical Value for Clinically Realistic Vignettes (DONE)**
+Added `typical_value` field to `disease_lab_patterns.json` for 28 analyte-disease pairs across 12 diseases. `_build_labs_from_pattern()` uses `mid + z_factor * (typical_value - mid)` when present, overriding z-score compression that produced unrealistically low values (e.g., TSH z=4→5.8 instead of clinical 25, CK z=6→358 instead of clinical 15,000). Unlocks high-value threshold rules: tsh>10 (LR+ 45), lipase>3xULN (LR+ 30), alt>10xULN (LR+ 25), ck>10xULN (LR+ 25), bnp>500 (LR+ 18), glucose>250 (LR+ 12), gfr<60 (LR+ 10), esr>100 (LR+ 8). 12 unit tests cover core logic and data consistency.
+
+**Fix 4: Strip Symptoms from Mimic Negatives (DONE)**
+Mimic negatives now have empty symptoms/chief_complaint. Prevents pathognomonic clinical findings from leaking via heuristic classifier.
+
+**Combined Results (Fixes 1-4):** score 0.8504 → 0.8619, top3 98.7% → 100%, top1 94.3% → 95.9%, neg_pass 100%, 398 tests
+
+**Fix 5: Category-Budget Floors (NOT YET DONE, needed at ~50 diseases)**
+At 30 hypotheses, all 95% available mass is consumed by floors. Per-disease ceiling (Fix 1) is the binding constraint, making floors less critical for now.
+
+---
+
+### Future Improvements (Beyond Scaling Fixes)
 
 **Add graded thresholds for 26 single-threshold analytes:**
 Currently 26 analytes have only 1 threshold rule, creating binary cliff effects. Add 2-3 additional threshold levels for high-impact analytes (troponin, lactate, sodium, platelets, INR, calcium, ESR, CRP) following the pattern of ferritin (5 rules) and TSH (3 rules). Each new threshold needs a corresponding LR entry in `likelihood_ratios.json`. Published stratum-specific LR data exists for ~half (troponin, ESR, CRP, lactate, sodium, platelets, INR). Source: JAMA Rational Clinical Examination series, McGee's Evidence-Based Physical Diagnosis.
@@ -374,11 +398,11 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 | File | Contents | Entries |
 |------|----------|---------|
 | lab_ranges.json | Age/sex-adjusted reference ranges | 91 analytes |
-| disease_lab_patterns.json | Disease-lab signatures (10 with collectively-abnormal) | 18 patterns |
+| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 24 patterns, 28 typical_values |
 | illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 186 findings, 379 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 111 lab rules + 90 clinical rules + 39 aliases |
-| loinc_mappings.json | LOINC code <-> common name mappings | 91 codes, 283 aliases |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 215 findings, 517 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 122 lab rules + 90 clinical rules + 39 name_aliases |
+| loinc_mappings.json | LOINC code <-> common name mappings | 91 codes, 283 name mappings |
 
 ## MCP Servers
 
