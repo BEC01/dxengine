@@ -191,13 +191,15 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
 
         rule_type = rule.get("rule_type", "single")
         if rule_type == "single":
-            rules.setdefault("single_rules", []).append({
+            entry = {
                 "finding_key": rule["finding_key"],
                 "test": rule["test"],
                 "operator": rule["operator"],
-                "threshold": rule["threshold"],
                 "importance": rule.get("importance", 3),
-            })
+            }
+            if "threshold" in rule:
+                entry["threshold"] = rule["threshold"]
+            rules.setdefault("single_rules", []).append(entry)
         elif rule_type == "composite":
             rules.setdefault("composite_rules", []).append(rule)
         elif rule_type == "computed":
