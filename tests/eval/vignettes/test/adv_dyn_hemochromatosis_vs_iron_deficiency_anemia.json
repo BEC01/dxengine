@@ -31,14 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "ferritin",
-            "value": 184.9,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "transferrin_saturation",
             "value": 35.6,
             "unit": "%"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 184.9,
+            "unit": "ng/mL"
           },
           {
             "test_name": "iron",
@@ -56,14 +56,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "glucose",
-            "value": 94.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "alanine_aminotransferase",
             "value": 41.2,
             "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 94.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "red_cell_distribution_width",
@@ -71,14 +71,14 @@
             "unit": "%"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 90.0,
-            "unit": "fL"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 1.5,
             "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
           },
           {
             "test_name": "platelets",
@@ -86,9 +86,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
           }
         ]
       }

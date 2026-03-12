@@ -33,12 +33,12 @@
         "values": [
           {
             "test_name": "c_reactive_protein",
-            "value": 3.2,
+            "value": 83.2,
             "unit": "mg/L"
           },
           {
             "test_name": "erythrocyte_sedimentation_rate",
-            "value": 14.7,
+            "value": 61.1,
             "unit": "mm/hr"
           },
           {
@@ -68,7 +68,7 @@
           },
           {
             "test_name": "procalcitonin",
-            "value": 0.1,
+            "value": 2.8,
             "unit": "ng/mL"
           },
           {

@@ -34,6 +34,11 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "white_blood_cells",
+            "value": 9.7,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "glucose",
             "value": 103.4,
             "unit": "mg/dL"
@@ -44,23 +49,8 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 9.7,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 18.7,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.2,
+            "test_name": "phosphorus",
+            "value": 2.9,
             "unit": "mg/dL"
           },
           {
@@ -69,8 +59,18 @@
             "unit": "%"
           },
           {
-            "test_name": "phosphorus",
-            "value": 2.9,
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 18.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
             "unit": "mg/dL"
           },
           {

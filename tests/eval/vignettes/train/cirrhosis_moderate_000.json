@@ -46,17 +46,17 @@
           },
           {
             "test_name": "international_normalized_ratio",
-            "value": 1.1,
+            "value": 1.4,
             "unit": "ratio"
           },
           {
             "test_name": "platelets",
-            "value": 189.1,
+            "value": 176.0,
             "unit": "x10^9/L"
           },
           {
             "test_name": "ammonia",
-            "value": 62.2,
+            "value": 83.1,
             "unit": "mcmol/L"
           },
           {

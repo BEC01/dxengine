@@ -33,7 +33,7 @@
         "values": [
           {
             "test_name": "sodium",
-            "value": 131.5,
+            "value": 125.0,
             "unit": "mEq/L"
           },
           {

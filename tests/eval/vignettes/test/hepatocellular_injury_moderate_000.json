@@ -33,12 +33,12 @@
         "values": [
           {
             "test_name": "alanine_aminotransferase",
-            "value": 65.2,
+            "value": 454.2,
             "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
-            "value": 41.5,
+            "value": 341.2,
             "unit": "U/L"
           },
           {

@@ -30,12 +30,12 @@
         "values": [
           {
             "test_name": "creatine_kinase",
-            "value": 577.0,
+            "value": 15000.0,
             "unit": "U/L"
           },
           {
             "test_name": "myoglobin",
-            "value": 105.0,
+            "value": 5000.0,
             "unit": "ng/mL"
           },
           {

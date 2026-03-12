@@ -32,12 +32,12 @@
         "values": [
           {
             "test_name": "lipase",
-            "value": 320.0,
+            "value": 1200.0,
             "unit": "U/L"
           },
           {
             "test_name": "amylase",
-            "value": 172.0,
+            "value": 800.0,
             "unit": "U/L"
           },
           {
@@ -57,7 +57,7 @@
           },
           {
             "test_name": "c_reactive_protein",
-            "value": 5.2,
+            "value": 180.0,
             "unit": "mg/L"
           }
         ]

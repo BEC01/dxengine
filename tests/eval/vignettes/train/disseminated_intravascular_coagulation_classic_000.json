@@ -32,7 +32,7 @@
         "values": [
           {
             "test_name": "platelets",
-            "value": 87.5,
+            "value": 45.0,
             "unit": "x10^9/L"
           },
           {
@@ -42,7 +42,7 @@
           },
           {
             "test_name": "international_normalized_ratio",
-            "value": 1.2,
+            "value": 2.5,
             "unit": "ratio"
           },
           {
@@ -52,12 +52,12 @@
           },
           {
             "test_name": "d_dimer",
-            "value": 0.9,
+            "value": 8000.0,
             "unit": "mcg/mL FEU"
           },
           {
             "test_name": "fibrinogen",
-            "value": 150.0,
+            "value": 80.0,
             "unit": "mg/dL"
           },
           {
@@ -72,7 +72,7 @@
           },
           {
             "test_name": "haptoglobin",
-            "value": 30.0,
+            "value": 5.0,
             "unit": "mg/dL"
           }
         ]

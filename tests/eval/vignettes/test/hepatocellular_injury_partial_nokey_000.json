@@ -33,7 +33,7 @@
         "values": [
           {
             "test_name": "aspartate_aminotransferase",
-            "value": 55.0,
+            "value": 600.0,
             "unit": "U/L"
           },
           {

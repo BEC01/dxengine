@@ -33,7 +33,7 @@
         "values": [
           {
             "test_name": "erythrocyte_sedimentation_rate",
-            "value": 20.6,
+            "value": 105.0,
             "unit": "mm/hr"
           },
           {
@@ -63,7 +63,7 @@
           },
           {
             "test_name": "procalcitonin",
-            "value": 0.1,
+            "value": 5.0,
             "unit": "ng/mL"
           },
           {

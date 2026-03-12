@@ -170,6 +170,11 @@ def _build_labs_from_pattern(
         z_factor: multiply z-scores by this factor (e.g. 0.55 for moderate)
         analyte_filter: if set, only include these analytes
         exclude_analytes: if set, exclude these analytes
+
+    When an analyte entry has a ``typical_value`` field, that clinically
+    realistic value is used instead of the z-score compression formula.
+    For z_factor < 1.0 (e.g. moderate vignettes), the value is
+    interpolated: ``mid + z_factor * (typical_value - mid)``.
     """
     labs = []
     for analyte, info in pattern.items():
@@ -178,8 +183,13 @@ def _build_labs_from_pattern(
         if exclude_analytes and analyte in exclude_analytes:
             continue
         ref_low, ref_high = _get_ref_range(analyte, age, sex)
-        z = info["typical_z_score"] * z_factor
-        value = _z_to_value(z, ref_low, ref_high)
+        typical_value = info.get("typical_value")
+        if typical_value is not None:
+            mid = (ref_low + ref_high) / 2.0
+            value = round(max(mid + z_factor * (typical_value - mid), 0.0), 1)
+        else:
+            z = info["typical_z_score"] * z_factor
+            value = _z_to_value(z, ref_low, ref_high)
         unit = _get_unit(analyte)
         labs.append({"test_name": analyte, "value": value, "unit": unit})
     return labs

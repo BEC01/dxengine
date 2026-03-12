@@ -30,7 +30,7 @@
         "values": [
           {
             "test_name": "uric_acid",
-            "value": 7.2,
+            "value": 10.0,
             "unit": "mg/dL"
           },
           {
@@ -50,7 +50,7 @@
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 287.0,
+            "value": 1194.5,
             "unit": "U/L"
           },
           {

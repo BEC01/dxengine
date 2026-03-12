@@ -32,14 +32,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 134.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "d_dimer",
-            "value": 0.4,
-            "unit": "mcg/mL FEU"
+            "test_name": "prothrombin_time",
+            "value": 12.8,
+            "unit": "seconds"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -47,24 +42,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "haptoglobin",
-            "value": 89.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 218.8,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 92.8,
+            "test_name": "alkaline_phosphatase",
+            "value": 134.1,
             "unit": "U/L"
           },
           {
-            "test_name": "albumin",
-            "value": 3.8,
-            "unit": "g/dL"
+            "test_name": "fibrinogen",
+            "value": 255.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_total",
@@ -77,9 +62,14 @@
             "unit": "ratio"
           },
           {
-            "test_name": "prothrombin_time",
-            "value": 12.8,
-            "unit": "seconds"
+            "test_name": "hemoglobin",
+            "value": 14.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 89.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -92,13 +82,23 @@
             "unit": "seconds"
           },
           {
-            "test_name": "fibrinogen",
-            "value": 255.0,
-            "unit": "mg/dL"
+            "test_name": "alanine_aminotransferase",
+            "value": 92.8,
+            "unit": "U/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.9,
+            "test_name": "d_dimer",
+            "value": 0.4,
+            "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "platelets",
+            "value": 218.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.8,
             "unit": "g/dL"
           }
         ]
