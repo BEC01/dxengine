@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "id": "systemic_lupus_erythematosus_demog_000",
+    "category": "rheumatologic",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "systemic_lupus_erythematosus",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "male",
+    "chief_complaint": "photosensitivity",
+    "symptoms": [
+      "photosensitivity",
+      "oral ulcers",
+      "arthritis (non-erosive)",
+      "serositis (pleuritis, pericarditis)",
+      "proteinuria/nephritis"
+    ],
+    "signs": [
+      "malar (butterfly) rash",
+      "discoid rash"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "complement_c3",
+            "value": 60.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 7.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 22.5,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 43.8,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.8,
+            "unit": "titer"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 0.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 150.0,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "systemic_lupus_erythematosus",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "systemic_lupus_erythematosus"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "adv_amb_preclinical_sle_systemic_lupus_erythematosus",
+    "category": "adversarial",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "arthralgias without frank arthritis",
+      "Raynaud phenomenon",
+      "subtle hair thinning",
+      "nonspecific constitutional symptoms"
+    ],
+    "signs": [
+      "intermittent rash"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.0,
+            "unit": "titer"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 18.2,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "platelets",
+            "value": 218.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 102.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 16.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 25.6,
+            "unit": "IU/mL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

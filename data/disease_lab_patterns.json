@@ -1226,5 +1226,48 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 500"
+  },
+  "systemic_lupus_erythematosus": {
+    "description": "Systemic autoimmune disease with production of pathogenic autoantibodies (anti-dsDNA, anti-Smith) and immune complex deposition causing multi-organ inflammation. Characteristic lab pattern includes low complements, elevated ESR with paradoxically normal CRP, cytopenias, and serologic markers.",
+    "pattern": {
+      "complement_c3": {
+        "direction": "decreased",
+        "typical_z_score": -3.3,
+        "weight": 0.85
+      },
+      "complement_c4": {
+        "direction": "decreased",
+        "typical_z_score": -2.4,
+        "weight": 0.8
+      },
+      "erythrocyte_sedimentation_rate": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.6
+      },
+      "anti_dsdna_antibody": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9
+      },
+      "antinuclear_antibody_titer": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.7
+      },
+      "lymphocytes_absolute": {
+        "direction": "decreased",
+        "typical_z_score": -2.2,
+        "weight": 0.55
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.5
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 1000"
   }
 }

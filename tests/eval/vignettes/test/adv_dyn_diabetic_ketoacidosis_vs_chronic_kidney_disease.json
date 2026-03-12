@@ -29,13 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.8,
+            "test_name": "bicarbonate",
+            "value": 22.1,
             "unit": "mEq/L"
           },
           {
@@ -44,8 +39,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 22.1,
+            "test_name": "potassium",
+            "value": 4.8,
             "unit": "mEq/L"
           },
           {
@@ -54,14 +49,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 10.3,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin_a1c",
@@ -69,14 +59,19 @@
             "unit": "%"
           },
           {
+            "test_name": "white_blood_cells",
+            "value": 10.3,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "glucose",
             "value": 115.0,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -92,6 +87,11 @@
             "test_name": "hemoglobin",
             "value": 15.5,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "albumin",

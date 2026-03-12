@@ -35,11 +35,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "international_normalized_ratio",
-            "value": 1.1,
-            "unit": "ratio"
-          },
-          {
             "test_name": "albumin",
             "value": 3.6,
             "unit": "g/dL"
@@ -50,9 +45,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "ammonia",
-            "value": 73.2,
-            "unit": "mcmol/L"
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
           },
           {
             "test_name": "platelets",
@@ -65,13 +60,13 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 95.5,
-            "unit": "U/L"
+            "test_name": "ammonia",
+            "value": 73.2,
+            "unit": "mcmol/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 25.0,
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
             "unit": "U/L"
           },
           {
@@ -80,8 +75,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
+            "test_name": "aspartate_aminotransferase",
+            "value": 25.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
             "unit": "U/L"
           }
         ]

@@ -3118,6 +3118,10 @@
       "infective_endocarditis": {
         "lr_positive": 3.5,
         "lr_negative": 0.8
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3128,6 +3132,10 @@
       "infective_endocarditis": {
         "lr_positive": 3.0,
         "lr_negative": 0.85
+      },
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.6
       }
     }
   },
@@ -3182,6 +3190,33 @@
       "acute_myocardial_infarction": {
         "lr_positive": 8.0,
         "lr_negative": 0.25
+      }
+    }
+  },
+  "platelets_low": {
+    "description": "Platelets below lower limit of normal, reflecting immune-mediated platelet destruction in SLE",
+    "diseases": {
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
+      }
+    }
+  },
+  "white_blood_cells_low": {
+    "description": "White blood cells below lower limit of normal (leukopenia), commonly reflecting lymphopenia in active SLE",
+    "diseases": {
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
+      }
+    }
+  },
+  "lymphocytes_absolute_low": {
+    "description": "Absolute lymphocyte count below lower limit of normal, the most prevalent initial laboratory abnormality in active SLE",
+    "diseases": {
+      "systemic_lupus_erythematosus": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
       }
     }
   }

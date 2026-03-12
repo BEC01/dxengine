@@ -29,13 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 17.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 137.3,
+            "test_name": "bicarbonate",
+            "value": 22.1,
             "unit": "mEq/L"
           },
           {
@@ -49,8 +44,13 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 22.1,
+            "test_name": "blood_urea_nitrogen",
+            "value": 17.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 137.3,
             "unit": "mEq/L"
           },
           {
@@ -59,9 +59,9 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "eosinophils_absolute",
-            "value": 0.4,
-            "unit": "x10^9/L"
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 80.1,
+            "unit": "pg/mL"
           },
           {
             "test_name": "calcium",
@@ -69,14 +69,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "adrenocorticotropic_hormone",
-            "value": 80.1,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.5,
-            "unit": "mg/dL"
+            "test_name": "eosinophils_absolute",
+            "value": 0.4,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "white_blood_cells",
@@ -84,13 +79,18 @@
             "unit": "x10^9/L"
           },
           {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "hemoglobin_a1c",
             "value": 4.8,
             "unit": "%"
           },
           {
-            "test_name": "creatinine",
-            "value": 0.8,
+            "test_name": "phosphorus",
+            "value": 3.5,
             "unit": "mg/dL"
           }
         ]

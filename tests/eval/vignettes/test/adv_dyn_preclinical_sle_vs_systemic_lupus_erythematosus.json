@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_preclinical_sle_vs_infective_endocarditis",
+    "id": "adv_dyn_preclinical_sle_vs_systemic_lupus_erythematosus",
     "category": "rheumatologic",
     "difficulty": "adversarial",
     "split": "test",
@@ -31,74 +31,49 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.1,
+            "unit": "titer"
+          },
+          {
             "test_name": "erythrocyte_sedimentation_rate",
-            "value": 18.8,
+            "value": 19.6,
             "unit": "mm/hr"
           },
           {
-            "test_name": "c_reactive_protein",
-            "value": 2.7,
-            "unit": "mg/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.9,
-            "unit": "g/dL"
+            "test_name": "platelets",
+            "value": 209.4,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "complement_c3",
-            "value": 107.4,
+            "value": 97.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "complement_c4",
-            "value": 17.1,
+            "value": 14.8,
             "unit": "mg/dL"
           },
           {
-            "test_name": "antinuclear_antibody_titer",
-            "value": 0.9,
-            "unit": "titer"
-          },
-          {
             "test_name": "lymphocytes_absolute",
-            "value": 2.1,
+            "value": 1.8,
             "unit": "x10^9/L"
           },
           {
             "test_name": "anti_dsdna_antibody",
-            "value": 22.5,
+            "value": 27.8,
             "unit": "IU/mL"
           },
           {
-            "test_name": "platelets",
-            "value": 225.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "ferritin",
-            "value": 159.0,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "procalcitonin",
-            "value": 0.1,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
+            "test_name": "hemoglobin",
+            "value": 13.2,
             "unit": "g/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
-            "unit": "x10^9/L"
+            "test_name": "c_reactive_protein",
+            "value": 1.8,
+            "unit": "mg/L"
           }
         ]
       }
@@ -109,7 +84,7 @@
   "gold_standard": {
     "primary_diagnosis": "preclinical_sle",
     "acceptable_alternatives": [
-      "infective_endocarditis"
+      "systemic_lupus_erythematosus"
     ],
     "expected_findings": [],
     "expected_patterns": [

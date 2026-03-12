@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "id": "adv_dyn_systemic_lupus_erythematosus_vs_preclinical_sle",
+    "category": "rheumatologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "systemic_lupus_erythematosus",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "photosensitivity",
+    "symptoms": [
+      "photosensitivity",
+      "oral ulcers",
+      "arthritis (non-erosive)",
+      "serositis (pleuritis, pericarditis)",
+      "proteinuria/nephritis"
+    ],
+    "signs": [
+      "malar (butterfly) rash",
+      "discoid rash"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.1,
+            "unit": "titer"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 19.6,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "platelets",
+            "value": 209.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 97.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c4",
+            "value": 14.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 27.8,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 1.5,
+            "unit": "mg/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "systemic_lupus_erythematosus",
+    "acceptable_alternatives": [
+      "preclinical_sle"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "systemic_lupus_erythematosus"
+    ],
+    "cant_miss_diseases": []
+  }
+}

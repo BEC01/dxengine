@@ -746,6 +746,24 @@
       "test": "neutrophils_absolute",
       "operator": "above_uln",
       "importance": 2
+    },
+    {
+      "finding_key": "platelets_low",
+      "test": "platelets",
+      "operator": "below_lln",
+      "importance": 3
+    },
+    {
+      "finding_key": "white_blood_cells_low",
+      "test": "white_blood_cells",
+      "operator": "below_lln",
+      "importance": 2
+    },
+    {
+      "finding_key": "lymphocytes_absolute_low",
+      "test": "lymphocytes_absolute",
+      "operator": "below_lln",
+      "importance": 2
     }
   ],
   "composite_rules": [

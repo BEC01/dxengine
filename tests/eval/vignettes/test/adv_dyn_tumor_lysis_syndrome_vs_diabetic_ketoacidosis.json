@@ -29,8 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 3.8,
+            "test_name": "creatinine",
+            "value": 1.2,
             "unit": "mg/dL"
           },
           {
@@ -39,18 +39,18 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "phosphorus",
+            "value": 3.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "blood_urea_nitrogen",
             "value": 18.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 8.1,
+            "test_name": "calcium",
+            "value": 8.5,
             "unit": "mg/dL"
           },
           {
@@ -59,13 +59,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "calcium",
-            "value": 8.5,
+            "test_name": "uric_acid",
+            "value": 8.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 140.5,
+            "test_name": "bicarbonate",
+            "value": 25.5,
             "unit": "mEq/L"
           },
           {
@@ -74,18 +74,18 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "hemoglobin_a1c",
             "value": 4.8,
             "unit": "%"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
             "unit": "mEq/L"
           }
         ]
