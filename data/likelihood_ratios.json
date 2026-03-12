@@ -2692,6 +2692,10 @@
       "infective_endocarditis": {
         "lr_positive": 1.2,
         "lr_negative": 0.85
+      },
+      "polycythemia_vera": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
       }
     }
   },
@@ -3022,6 +3026,10 @@
       "gout": {
         "lr_positive": 4.0,
         "lr_negative": 0.3
+      },
+      "polycythemia_vera": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -3084,6 +3092,15 @@
       "infective_endocarditis": {
         "lr_positive": 3.0,
         "lr_negative": 0.85
+      }
+    }
+  },
+  "hemoglobin_high": {
+    "description": "Hemoglobin above upper limit of normal. In PV, elevated hemoglobin is the defining feature (WHO 2016 major criterion).",
+    "diseases": {
+      "polycythemia_vera": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
       }
     }
   }

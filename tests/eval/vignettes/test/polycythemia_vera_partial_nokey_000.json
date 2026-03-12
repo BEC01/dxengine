@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "id": "polycythemia_vera_partial_nokey_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "polycythemia_vera",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "plethora (ruddy complexion)",
+    "symptoms": [
+      "plethora (ruddy complexion)",
+      "pruritus (especially aquagenic/post-shower)",
+      "headache",
+      "dizziness",
+      "visual disturbances"
+    ],
+    "signs": [
+      "splenomegaly"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "hematocrit",
+            "value": 53.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 6.5,
+            "unit": "x10^12/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 11.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 431.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 7.9,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "polycythemia_vera",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "polycythemia_vera"
+    ],
+    "cant_miss_diseases": []
+  }
+}

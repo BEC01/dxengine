@@ -704,6 +704,12 @@
       "test": "complement_c4",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "hemoglobin_high",
+      "test": "hemoglobin",
+      "operator": "above_uln",
+      "importance": 4
     }
   ],
   "composite_rules": [

@@ -29,28 +29,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 350.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 51.2,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 24.7,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "potassium",
-            "value": 5.3,
-            "unit": "mEq/L"
+            "test_name": "hemoglobin",
+            "value": 14.9,
+            "unit": "g/dL"
           },
           {
             "test_name": "calcium",
             "value": 8.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 8.1,
             "unit": "mg/dL"
           },
           {
@@ -59,19 +54,24 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.9,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "phosphorus",
             "value": 4.9,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 51.2,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 350.0,
+            "unit": "U/L"
           },
           {
             "test_name": "blood_urea_nitrogen",
@@ -79,14 +79,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 8.1,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 5.3,
+            "unit": "mEq/L"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 24.7,
+            "unit": "mEq/L"
           }
         ]
       }

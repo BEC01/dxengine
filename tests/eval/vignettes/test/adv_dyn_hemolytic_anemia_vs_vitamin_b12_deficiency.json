@@ -37,14 +37,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.1,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 1.8,
             "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.1,
+            "unit": "g/dL"
           },
           {
             "test_name": "mean_corpuscular_volume",
@@ -52,13 +52,13 @@
             "unit": "fL"
           },
           {
-            "test_name": "haptoglobin",
-            "value": 0.0,
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "bilirubin_direct",
-            "value": 0.1,
+            "test_name": "haptoglobin",
+            "value": 0.0,
             "unit": "mg/dL"
           },
           {
@@ -72,14 +72,14 @@
             "unit": "mcmol/L"
           },
           {
-            "test_name": "vitamin_b12",
-            "value": 550.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "methylmalonic_acid",
             "value": 172.0,
             "unit": "nmol/L"
+          },
+          {
+            "test_name": "vitamin_b12",
+            "value": 550.0,
+            "unit": "pg/mL"
           }
         ]
       }

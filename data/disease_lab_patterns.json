@@ -1028,5 +1028,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "34 per 100,000 per year"
+  },
+  "polycythemia_vera": {
+    "description": "Myeloproliferative neoplasm with JAK2 mutation causing erythropoietin-independent erythropoiesis. Defining feature: markedly elevated hemoglobin/hematocrit (opposite of all other hematologic diseases in the engine which cause anemia). Often accompanied by leukocytosis, thrombocytosis, and elevated uric acid from increased cell turnover.",
+    "pattern": {
+      "hemoglobin": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.9
+      },
+      "hematocrit": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.85
+      },
+      "red_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.6
+      },
+      "white_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.4
+      },
+      "platelets": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.4
+      },
+      "uric_acid": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 50000"
   }
 }

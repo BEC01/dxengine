@@ -35,14 +35,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
-            "unit": "pg/mL"
+            "test_name": "free_thyroxine",
+            "value": 2.0,
+            "unit": "ng/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.8,
-            "unit": "mEq/L"
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 0.0,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "bicarbonate",
@@ -50,18 +55,28 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "free_thyroxine",
-            "value": 2.0,
-            "unit": "ng/dL"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 58.4,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "free_triiodothyronine",
-            "value": 4.7,
+            "test_name": "alkaline_phosphatase",
+            "value": 146.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 102.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
             "unit": "pg/mL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.2,
+            "test_name": "calcium",
+            "value": 9.9,
             "unit": "mg/dL"
           },
           {
@@ -70,24 +85,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 146.2,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 58.4,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 0.0,
-            "unit": "mIU/L"
+            "test_name": "free_triiodothyronine",
+            "value": 4.7,
+            "unit": "pg/mL"
           },
           {
             "test_name": "total_cholesterol",
