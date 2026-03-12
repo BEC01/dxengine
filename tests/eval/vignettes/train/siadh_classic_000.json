@@ -1,57 +1,60 @@
 {
   "metadata": {
-    "id": "unknown_siadh",
+    "id": "siadh_classic_000",
     "category": "endocrine",
-    "difficulty": "moderate",
-    "split": "test",
+    "difficulty": "classic",
+    "split": "train",
     "source": "synthetic",
     "disease_pattern_name": "siadh",
     "variant": 0
   },
   "patient": {
-    "age": 68,
+    "age": 45,
     "sex": "male",
-    "chief_complaint": "Confusion and nausea",
+    "chief_complaint": "often asymptomatic if mild",
     "symptoms": [
-      "confusion",
+      "often asymptomatic if mild",
       "nausea",
-      "headache"
+      "headache",
+      "confusion",
+      "lethargy"
     ],
-    "signs": [],
-    "medical_history": [
-      "lung cancer"
+    "signs": [
+      "no edema",
+      "no signs of volume depletion"
     ],
+    "medical_history": [],
     "medications": [],
     "family_history": [],
     "social_history": [],
     "lab_panels": [
       {
-        "panel_name": "Panel",
+        "panel_name": "Eval Panel",
         "values": [
           {
             "test_name": "sodium",
-            "value": 118.0,
+            "value": 131.5,
             "unit": "mEq/L"
           },
           {
             "test_name": "osmolality_serum",
-            "value": 245.0,
+            "value": 265.0,
             "unit": "mOsm/kg"
           },
           {
-            "test_name": "potassium",
-            "value": 4.0,
+            "test_name": "blood_urea_nitrogen",
+            "value": 5.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 3.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "chloride",
+            "value": 96.0,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "glucose",
-            "value": 95.0,
-            "unit": "mg/dL"
           }
         ]
       }

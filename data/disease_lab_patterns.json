@@ -1066,5 +1066,38 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 50000"
+  },
+  "siadh": {
+    "description": "Syndrome of inappropriate ADH secretion causing euvolemic hyponatremia. Defining lab pattern: low sodium with low serum osmolality. UNIQUE features: low BUN and low uric acid (dilutional effect — opposite of most diseases which increase these markers). Normal potassium distinguishes from Addison's disease.",
+    "pattern": {
+      "sodium": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.9
+      },
+      "osmolality_serum": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.8
+      },
+      "blood_urea_nitrogen": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.5
+      },
+      "uric_acid": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.4
+      },
+      "chloride": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500"
   }
 }

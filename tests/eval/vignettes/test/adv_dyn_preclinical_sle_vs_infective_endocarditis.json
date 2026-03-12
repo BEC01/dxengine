@@ -41,11 +41,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.9,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "complement_c3",
             "value": 107.4,
             "unit": "mg/dL"
@@ -56,9 +51,19 @@
             "unit": "mg/L"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 12.9,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "antinuclear_antibody_titer",
             "value": 0.9,
             "unit": "titer"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 22.5,
+            "unit": "IU/mL"
           },
           {
             "test_name": "lymphocytes_absolute",
@@ -68,21 +73,6 @@
           {
             "test_name": "platelets",
             "value": 225.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "anti_dsdna_antibody",
-            "value": 22.5,
-            "unit": "IU/mL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
             "unit": "x10^9/L"
           },
           {
@@ -99,6 +89,16 @@
             "test_name": "ferritin",
             "value": 159.0,
             "unit": "ng/mL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
           }
         ]
       }

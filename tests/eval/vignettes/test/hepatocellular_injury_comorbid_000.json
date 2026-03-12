@@ -32,29 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 14.9,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 55.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "prothrombin_time",
-            "value": 12.8,
+            "test_name": "partial_thromboplastin_time",
+            "value": 31.9,
             "unit": "seconds"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 134.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "albumin",
-            "value": 3.8,
-            "unit": "g/dL"
+            "test_name": "fibrinogen",
+            "value": 255.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "d_dimer",
@@ -62,9 +47,9 @@
             "unit": "mcg/mL FEU"
           },
           {
-            "test_name": "international_normalized_ratio",
-            "value": 1.1,
-            "unit": "ratio"
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "haptoglobin",
@@ -77,9 +62,24 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.3,
-            "unit": "mg/dL"
+            "test_name": "prothrombin_time",
+            "value": 12.8,
+            "unit": "seconds"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 134.1,
+            "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -87,9 +87,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "partial_thromboplastin_time",
-            "value": 31.9,
-            "unit": "seconds"
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -97,9 +97,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "fibrinogen",
-            "value": 255.0,
-            "unit": "mg/dL"
+            "test_name": "aspartate_aminotransferase",
+            "value": 55.0,
+            "unit": "U/L"
           }
         ]
       }

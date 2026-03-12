@@ -1,28 +1,22 @@
 {
   "metadata": {
-    "id": "adv_amb_hepatocellular_injury_cholestatic_liver_disease",
-    "category": "adversarial",
+    "id": "mimic_siadh",
+    "category": "negative",
     "difficulty": "adversarial",
     "split": "test",
-    "source": "adversarial",
+    "source": "synthetic",
     "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "right upper quadrant pain",
+    "chief_complaint": "often asymptomatic if mild",
     "symptoms": [
-      "right upper quadrant pain",
-      "nausea/vomiting",
-      "fatigue",
-      "dark urine",
-      "pale stools"
+      "often asymptomatic if mild",
+      "nausea"
     ],
-    "signs": [
-      "jaundice",
-      "hepatomegaly"
-    ],
+    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -32,24 +26,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
-            "unit": "U/L"
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
-            "unit": "U/L"
+            "test_name": "osmolality_serum",
+            "value": 285.0,
+            "unit": "mOsm/kg"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
+            "test_name": "blood_urea_nitrogen",
+            "value": 8.6,
             "unit": "mg/dL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 55.4,
-            "unit": "U/L"
+            "test_name": "uric_acid",
+            "value": 3.9,
+            "unit": "mg/dL"
           }
         ]
       }

@@ -3103,5 +3103,32 @@
         "lr_negative": 0.1
       }
     }
+  },
+  "osmolality_serum_low": {
+    "description": "Serum osmolality below lower limit of normal (<275 mOsm/kg), indicating hypotonic hyponatremia consistent with SIADH.",
+    "diseases": {
+      "siadh": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.15
+      }
+    }
+  },
+  "blood_urea_nitrogen_low": {
+    "description": "BUN below lower limit of normal, reflecting dilutional effect and increased renal clearance in SIADH.",
+    "diseases": {
+      "siadh": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "uric_acid_low": {
+    "description": "Uric acid below lower limit of normal, reflecting increased renal clearance characteristic of SIADH.",
+    "diseases": {
+      "siadh": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      }
+    }
   }
 }

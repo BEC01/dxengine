@@ -710,6 +710,24 @@
       "test": "hemoglobin",
       "operator": "above_uln",
       "importance": 4
+    },
+    {
+      "finding_key": "osmolality_serum_low",
+      "test": "osmolality_serum",
+      "operator": "below_lln",
+      "importance": 4
+    },
+    {
+      "finding_key": "blood_urea_nitrogen_low",
+      "test": "blood_urea_nitrogen",
+      "operator": "below_lln",
+      "importance": 2
+    },
+    {
+      "finding_key": "uric_acid_low",
+      "test": "uric_acid",
+      "operator": "below_lln",
+      "importance": 2
     }
   ],
   "composite_rules": [

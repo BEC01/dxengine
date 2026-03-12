@@ -31,14 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 8.7,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "uric_acid",
@@ -51,13 +46,18 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "phosphorus",
             "value": 4.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
             "unit": "mg/dL"
           }
         ]

@@ -32,11 +32,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 271.2,
-            "unit": "U/L"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 1.8,
             "unit": "%"
@@ -52,18 +47,23 @@
             "unit": "fL"
           },
           {
+            "test_name": "lactate_dehydrogenase",
+            "value": 271.2,
+            "unit": "U/L"
+          },
+          {
             "test_name": "bilirubin_direct",
             "value": 0.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "haptoglobin",
-            "value": 0.0,
+            "test_name": "bilirubin_total",
+            "value": 1.2,
             "unit": "mg/dL"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.2,
+            "test_name": "haptoglobin",
+            "value": 0.0,
             "unit": "mg/dL"
           },
           {

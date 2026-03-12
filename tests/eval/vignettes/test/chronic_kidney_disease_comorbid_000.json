@@ -36,53 +36,13 @@
             "unit": "mm/hr"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 11.8,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 3.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 44.2,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 4.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "total_protein",
             "value": 7.8,
             "unit": "g/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 77.5,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 26.8,
+            "test_name": "phosphorus",
+            "value": 4.8,
             "unit": "mg/dL"
           },
           {
@@ -91,9 +51,49 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "parathyroid_hormone",
+            "value": 77.5,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 26.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 6.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 44.2,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.0,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 22.9,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.5,
+            "unit": "mg/dL"
           }
         ]
       }
