@@ -404,14 +404,14 @@ class TestFallback:
 
     def test_abnormal_lab_without_rule_gets_fallback(self):
         """An abnormal lab with no matching rule gets fallback evidence."""
-        # Use a test that has no specific rule (e.g., elevated potassium alone)
-        labs = [make_lv("potassium", 6.5, "mEq/L",
-                        ref_low=3.5, ref_high=5.0, z_score=4.0, severity=Severity.MODERATE)]
+        # magnesium has no specific rule in finding_rules.json
+        labs = [make_lv("magnesium", 1.0, "mg/dL",
+                        ref_low=1.7, ref_high=2.2, z_score=-5.6, severity=Severity.CRITICAL)]
         results = map_labs_to_findings(labs)
         assert len(results) >= 1
         fallback = [e for e in results if e.source == "finding_mapper_fallback"]
         assert len(fallback) == 1
-        assert fallback[0].finding == "potassium_elevated"
+        assert fallback[0].finding == "magnesium_low"
 
     def test_normal_lab_no_fallback(self):
         """A normal lab with no matching rule gets no evidence."""
@@ -561,18 +561,17 @@ class TestIntegration:
         labs = [
             make_lv("thyroid_stimulating_hormone", 12.5, "mIU/L",
                     ref_low=0.4, ref_high=4.0, z_score=9.4, severity=Severity.CRITICAL),
-            make_lv("potassium", 6.5, "mEq/L",
-                    ref_low=3.5, ref_high=5.0, z_score=4.0, severity=Severity.MODERATE),
+            make_lv("magnesium", 1.0, "mg/dL",
+                    ref_low=1.7, ref_high=2.2, z_score=-5.6, severity=Severity.CRITICAL),
         ]
         results = map_labs_to_findings(labs)
-        # tsh_elevated is subsumed by tsh_greater_than_10 for TSH=12.5
         tsh_ev = evidence_by_key(results, "tsh_greater_than_10")
         assert tsh_ev is not None
         assert tsh_ev.source == "finding_mapper"
 
-        k_ev = evidence_by_key(results, "potassium_elevated")
-        assert k_ev is not None
-        assert k_ev.source == "finding_mapper_fallback"
+        mg_ev = evidence_by_key(results, "magnesium_low")
+        assert mg_ev is not None
+        assert mg_ev.source == "finding_mapper_fallback"
 
     def test_strength_from_z_score(self):
         """Strength should be min(|z|/5, 1.0)."""
@@ -588,3 +587,230 @@ class TestIntegration:
         """No labs → no findings."""
         results = map_labs_to_findings([])
         assert results == []
+
+
+# ── TestOrphanedLRWiring ──────────────────────────────────────────────────
+
+
+class TestOrphanedLRWiring:
+    """Tests for Priority 2: wiring orphaned lab LR entries via finding_rules."""
+
+    # ── Basic firing tests ───────────────────────────────────────────
+
+    def test_hemoglobin_low(self):
+        """Hemoglobin below LLN → hemoglobin_low."""
+        labs = [make_lv("hemoglobin", 9.0, "g/dL",
+                        ref_low=12.0, ref_high=16.0, z_score=-3.0, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs, age=40, sex=Sex.FEMALE)
+        ev = evidence_by_key(results, "hemoglobin_low")
+        assert ev is not None
+        assert ev.source == "finding_mapper"
+        assert ev.quality.value == "high"
+
+    def test_potassium_elevated(self):
+        """Potassium above ULN → potassium_elevated with HIGH quality."""
+        labs = [make_lv("potassium", 6.5, "mEq/L",
+                        ref_low=3.5, ref_high=5.0, z_score=4.0, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        ev = evidence_by_key(results, "potassium_elevated")
+        assert ev is not None
+        assert ev.source == "finding_mapper"
+        assert ev.quality.value == "high"
+
+    def test_glucose_low(self):
+        """Glucose below LLN → glucose_low."""
+        labs = [make_lv("glucose", 50.0, "mg/dL",
+                        ref_low=70.0, ref_high=100.0, z_score=-2.7, severity=Severity.MILD)]
+        results = map_labs_to_findings(labs)
+        assert "glucose_low" in finding_keys(results)
+
+    def test_bicarbonate_low(self):
+        """Bicarbonate below LLN → bicarbonate_low."""
+        labs = [make_lv("bicarbonate", 18.0, "mEq/L",
+                        ref_low=22.0, ref_high=29.0, z_score=-2.3, severity=Severity.BORDERLINE)]
+        results = map_labs_to_findings(labs)
+        assert "bicarbonate_low" in finding_keys(results)
+
+    def test_creatinine_elevated(self):
+        """Creatinine above ULN → creatinine_elevated."""
+        labs = [make_lv("creatinine", 2.5, "mg/dL",
+                        ref_low=0.7, ref_high=1.3, z_score=8.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        assert "creatinine_elevated" in finding_keys(results)
+
+    # ── Subsumption tests ────────────────────────────────────────────
+
+    def test_sodium_low_subsumed_by_less_than_130(self):
+        """Sodium 125 → sodium_less_than_130 present, sodium_low absent."""
+        labs = [make_lv("sodium", 125.0, "mEq/L",
+                        ref_low=136.0, ref_high=145.0, z_score=-4.9, severity=Severity.SEVERE)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "sodium_less_than_130" in keys
+        assert "sodium_low" not in keys
+
+    def test_glucose_elevated_subsumed_by_greater_than_250(self):
+        """Glucose 450 → glucose_greater_than_250 present, glucose_elevated absent."""
+        labs = [make_lv("glucose", 450.0, "mg/dL",
+                        ref_low=70.0, ref_high=100.0, z_score=46.7, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "glucose_greater_than_250" in keys
+        assert "glucose_elevated" not in keys
+
+    def test_ck_elevated_subsumed_by_5x_uln(self):
+        """CK ~6x ULN → ck_greater_than_5x_uln present, creatine_kinase_elevated absent."""
+        labs = [make_lv("creatine_kinase", 1900.0, "U/L",
+                        ref_low=39.0, ref_high=308.0, z_score=23.7, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs, age=40, sex=Sex.MALE)
+        keys = finding_keys(results)
+        assert "ck_greater_than_5x_uln" in keys
+        assert "creatine_kinase_elevated" not in keys
+
+    def test_gfr_low_subsumed_by_less_than_60(self):
+        """GFR 40 → gfr_less_than_60 present, glomerular_filtration_rate_low absent."""
+        labs = [make_lv("glomerular_filtration_rate", 40.0, "mL/min/1.73m2",
+                        ref_low=90.0, ref_high=120.0, z_score=-5.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "gfr_less_than_60" in keys
+        assert "glomerular_filtration_rate_low" not in keys
+
+    def test_hba1c_elevated_subsumed_by_greater_than_6_5(self):
+        """HbA1c 8.0 → hba1c_greater_than_6_5 present, hemoglobin_a1c_elevated absent."""
+        labs = [make_lv("hemoglobin_a1c", 8.0, "%",
+                        ref_low=4.0, ref_high=5.6, z_score=6.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "hba1c_greater_than_6_5" in keys
+        assert "hemoglobin_a1c_elevated" not in keys
+
+    # ── Gap-filling tests ────────────────────────────────────────────
+
+    def test_glucose_mildly_elevated(self):
+        """Glucose 120 → glucose_elevated present, glucose_greater_than_250 absent."""
+        labs = [make_lv("glucose", 120.0, "mg/dL",
+                        ref_low=70.0, ref_high=100.0, z_score=2.7, severity=Severity.MILD)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "glucose_elevated" in keys
+        assert "glucose_greater_than_250" not in keys
+
+    def test_ck_mildly_elevated(self):
+        """CK 600 (< 5x ULN) → creatine_kinase_elevated present, ck_greater_than_5x_uln absent."""
+        labs = [make_lv("creatine_kinase", 600.0, "U/L",
+                        ref_low=39.0, ref_high=308.0, z_score=4.3, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs, age=40, sex=Sex.MALE)
+        keys = finding_keys(results)
+        assert "creatine_kinase_elevated" in keys
+        assert "ck_greater_than_5x_uln" not in keys
+
+    def test_sodium_mildly_low(self):
+        """Sodium 133 → sodium_low present, sodium_less_than_130 absent."""
+        labs = [make_lv("sodium", 133.0, "mEq/L",
+                        ref_low=136.0, ref_high=145.0, z_score=-1.3, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "sodium_low" in keys
+        assert "sodium_less_than_130" not in keys
+
+    # ── Composite subsumption ────────────────────────────────────────
+
+    def test_composite_subsumes_individual_ggt_alp(self):
+        """ALP + GGT both elevated → composite present, individuals absent."""
+        labs = [
+            make_lv("alkaline_phosphatase", 250.0, "U/L",
+                    ref_low=44.0, ref_high=147.0, z_score=4.0, severity=Severity.MODERATE),
+            make_lv("gamma_glutamyl_transferase", 120.0, "U/L",
+                    ref_low=8.0, ref_high=61.0, z_score=4.5, severity=Severity.MODERATE),
+        ]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "alp_elevated_with_elevated_ggt" in keys
+        assert "alkaline_phosphatase_elevated" not in keys
+        assert "gamma_glutamyl_transferase_elevated" not in keys
+
+    # ── PT/INR coagulation pathway ───────────────────────────────────
+
+    def test_inr_elevated_subsumes_pt_elevated(self):
+        """Both INR and PT elevated → INR finding present, PT finding absent."""
+        labs = [
+            make_lv("international_normalized_ratio", 1.3, "",
+                    ref_low=0.8, ref_high=1.1, z_score=2.7, severity=Severity.MILD),
+            make_lv("prothrombin_time", 18.0, "seconds",
+                    ref_low=11.0, ref_high=13.5, z_score=7.2, severity=Severity.CRITICAL),
+        ]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "international_normalized_ratio_elevated" in keys
+        assert "prothrombin_time_elevated" not in keys
+
+    def test_pt_elevated_alone(self):
+        """Only PT in panel → prothrombin_time_elevated fires normally."""
+        labs = [
+            make_lv("prothrombin_time", 18.0, "seconds",
+                    ref_low=11.0, ref_high=13.5, z_score=7.2, severity=Severity.CRITICAL),
+        ]
+        results = map_labs_to_findings(labs)
+        assert "prothrombin_time_elevated" in finding_keys(results)
+
+    # ── TLS triad subsumption ────────────────────────────────────────
+
+    def test_tls_triad_subsumes_individuals(self):
+        """K↑ + PO4↑ + Ca↓ composite subsumes individual findings."""
+        labs = [
+            make_lv("potassium", 6.5, "mEq/L",
+                    ref_low=3.5, ref_high=5.0, z_score=4.0, severity=Severity.MODERATE),
+            make_lv("phosphorus", 7.0, "mg/dL",
+                    ref_low=2.5, ref_high=4.5, z_score=5.0, severity=Severity.CRITICAL),
+            make_lv("calcium", 7.0, "mg/dL",
+                    ref_low=8.5, ref_high=10.5, z_score=-3.0, severity=Severity.MODERATE),
+        ]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "hyperkalemia_with_hyperphosphatemia_and_hypocalcemia" in keys
+        assert "potassium_elevated" not in keys
+        assert "phosphorus_elevated" not in keys
+        assert "calcium_low" not in keys
+
+    # ── Pancytopenia subsumption ─────────────────────────────────────
+
+    def test_pancytopenia_subsumes_hemoglobin_low(self):
+        """Pancytopenia composite subsumes hemoglobin_low."""
+        labs = [
+            make_lv("hemoglobin", 8.0, "g/dL",
+                    ref_low=12.0, ref_high=16.0, z_score=-4.0, severity=Severity.SEVERE),
+            make_lv("white_blood_cells", 2.5, "x10^9/L",
+                    ref_low=4.5, ref_high=11.0, z_score=-3.1, severity=Severity.MODERATE),
+            make_lv("platelets", 80.0, "x10^9/L",
+                    ref_low=150.0, ref_high=400.0, z_score=-2.8, severity=Severity.MILD),
+        ]
+        results = map_labs_to_findings(labs, age=55, sex=Sex.MALE)
+        keys = finding_keys(results)
+        assert "pancytopenia" in keys
+        assert "hemoglobin_low" not in keys
+
+    # ── Bilirubin breakdown subsumption ──────────────────────────────
+
+    def test_indirect_bilirubin_subsumes_total(self):
+        """Indirect bilirubin elevated subsumes bilirubin_total_elevated."""
+        labs = [
+            make_lv("bilirubin_total", 4.0, "mg/dL",
+                    ref_low=0.1, ref_high=1.2, z_score=10.2, severity=Severity.CRITICAL),
+            make_lv("bilirubin_direct", 0.5, "mg/dL",
+                    ref_low=0.0, ref_high=0.3, z_score=2.7, severity=Severity.MILD),
+        ]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "indirect_bilirubin_elevated" in keys
+        assert "bilirubin_total_elevated" not in keys
+
+    # ── No-fire test ─────────────────────────────────────────────────
+
+    def test_normal_potassium_no_finding(self):
+        """Normal potassium → no potassium findings generated."""
+        labs = [make_lv("potassium", 4.0, "mEq/L",
+                        ref_low=3.5, ref_high=5.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        potassium_findings = [e for e in results if "potassium" in e.finding]
+        assert len(potassium_findings) == 0

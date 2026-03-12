@@ -108,6 +108,7 @@ def _eval_condition(
 # in the Bayesian updater (e.g., ferritin=10 should only use LR for <15,
 # not multiply LR(<15) * LR(<45) = 455x).
 _SUBSUMES: dict[str, list[str]] = {
+    # Existing: specific threshold subsumes less specific threshold
     "ferritin_less_than_15": ["ferritin_less_than_45"],
     "ck_greater_than_10x_uln": ["ck_greater_than_5x_uln"],
     "glucose_greater_than_600": ["glucose_greater_than_250"],
@@ -115,6 +116,27 @@ _SUBSUMES: dict[str, list[str]] = {
     "haptoglobin_undetectable": ["haptoglobin_low"],
     "tsh_greater_than_10": ["tsh_elevated"],
     "ana_positive_high_titer": ["ana_positive"],
+    # Specific threshold subsumes generic ULN/LLN
+    "glucose_greater_than_250": ["glucose_elevated"],
+    "sodium_less_than_130": ["sodium_low"],
+    "ck_greater_than_5x_uln": ["creatine_kinase_elevated"],
+    "alt_greater_than_10x_uln": ["alanine_aminotransferase_elevated"],
+    "esr_greater_than_100": ["erythrocyte_sedimentation_rate_elevated"],
+    "uric_acid_greater_than_10": ["uric_acid_elevated"],
+    "prolonged_pt_inr": ["international_normalized_ratio_elevated"],
+    "gfr_less_than_60": ["glomerular_filtration_rate_low"],
+    "hba1c_greater_than_6_5": ["hemoglobin_a1c_elevated"],
+    "hba1c_5_7_to_6_4": ["hemoglobin_a1c_elevated"],
+    # Composite subsumes individual (prevents double-counting)
+    "alp_elevated_with_elevated_ggt": ["gamma_glutamyl_transferase_elevated", "alkaline_phosphatase_elevated"],
+    "alp_elevated_with_normal_ggt": ["alkaline_phosphatase_elevated"],
+    "hyperkalemia_with_hyperphosphatemia_and_hypocalcemia": ["potassium_elevated", "phosphorus_elevated", "calcium_low"],
+    "pancytopenia": ["hemoglobin_low"],
+    # Bilirubin breakdown subsumes total (avoids redundancy)
+    "indirect_bilirubin_elevated": ["bilirubin_total_elevated"],
+    "direct_bilirubin_elevated": ["bilirubin_total_elevated"],
+    # INR subsumes PT (same coagulation pathway)
+    "international_normalized_ratio_elevated": ["prothrombin_time_elevated"],
 }
 
 
