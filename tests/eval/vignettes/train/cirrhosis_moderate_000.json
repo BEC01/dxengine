@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "id": "cirrhosis_moderate_000",
+    "category": "hepatic",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "cirrhosis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "palmar erythema",
+    "symptoms": [
+      "palmar erythema",
+      "caput medusae",
+      "gynecomastia",
+      "testicular atrophy",
+      "easy bruising"
+    ],
+    "signs": [
+      "ascites",
+      "jaundice",
+      "spider angiomata",
+      "splenomegaly",
+      "asterixis"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "albumin",
+            "value": 3.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "platelets",
+            "value": 189.1,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "ammonia",
+            "value": 62.2,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 138.0,
+            "unit": "mEq/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cirrhosis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "cirrhosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

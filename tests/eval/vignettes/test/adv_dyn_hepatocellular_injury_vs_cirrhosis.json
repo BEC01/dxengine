@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_hepatocellular_injury_vs_cholestatic_liver_disease",
+    "id": "adv_dyn_hepatocellular_injury_vs_cirrhosis",
     "category": "hepatic",
     "difficulty": "adversarial",
     "split": "test",
@@ -32,24 +32,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 59.4,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 39.4,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 145.1,
-            "unit": "U/L"
+            "test_name": "albumin",
+            "value": 3.6,
+            "unit": "g/dL"
           },
           {
             "test_name": "bilirubin_total",
-            "value": 1.2,
+            "value": 1.3,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 80.5,
+            "unit": "U/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -57,29 +57,29 @@
             "unit": "U/L"
           },
           {
-            "test_name": "albumin",
-            "value": 3.9,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
-          },
-          {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 34.5,
+            "test_name": "aspartate_aminotransferase",
+            "value": 49.0,
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_direct",
-            "value": 0.1,
-            "unit": "mg/dL"
+            "test_name": "alkaline_phosphatase",
+            "value": 126.4,
+            "unit": "U/L"
           },
           {
-            "test_name": "total_cholesterol",
-            "value": 100.0,
-            "unit": "mg/dL"
+            "test_name": "ammonia",
+            "value": 38.0,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           }
         ]
       }
@@ -90,7 +90,7 @@
   "gold_standard": {
     "primary_diagnosis": "hepatocellular_injury",
     "acceptable_alternatives": [
-      "cholestatic_liver_disease"
+      "cirrhosis"
     ],
     "expected_findings": [],
     "expected_patterns": [

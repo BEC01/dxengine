@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "mimic_cirrhosis",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "palmar erythema",
+    "symptoms": [
+      "palmar erythema",
+      "caput medusae"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 0.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.1,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "platelets",
+            "value": 181.2,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

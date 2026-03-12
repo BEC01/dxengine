@@ -675,6 +675,10 @@
       "cholestatic_liver_disease": {
         "lr_positive": 5.0,
         "lr_negative": 0.3
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2243,6 +2247,10 @@
       "urea_cycle_disorder": {
         "lr_positive": 10.0,
         "lr_negative": 0.1
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3061,10 +3069,6 @@
         "lr_positive": 3.0,
         "lr_negative": 0.4
       },
-      "cirrhosis": {
-        "lr_positive": 3.0,
-        "lr_negative": 0.45
-      },
       "hepatocellular_injury": {
         "lr_positive": 1.5,
         "lr_negative": 0.7
@@ -3128,6 +3132,15 @@
       "siadh": {
         "lr_positive": 4.0,
         "lr_negative": 0.5
+      }
+    }
+  },
+  "albumin_low": {
+    "description": "Serum albumin below LLN reflecting hepatic synthetic failure in cirrhosis.",
+    "diseases": {
+      "cirrhosis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.4
       }
     }
   }

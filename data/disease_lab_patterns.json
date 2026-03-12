@@ -1099,5 +1099,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 500"
+  },
+  "cirrhosis": {
+    "description": "End-stage chronic liver disease with progressive fibrosis. Defining lab pattern: hepatic synthetic failure (low albumin, prolonged INR) with detoxification failure (elevated bilirubin, elevated ammonia). Thrombocytopenia from portal hypertension/splenic sequestration. AST:ALT ratio >2 distinguishes from acute hepatocellular injury.",
+    "pattern": {
+      "albumin": {
+        "direction": "decreased",
+        "typical_z_score": -3.5,
+        "weight": 0.8
+      },
+      "bilirubin_total": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.7
+      },
+      "international_normalized_ratio": {
+        "direction": "increased",
+        "typical_z_score": 3.5,
+        "weight": 0.65
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.55
+      },
+      "ammonia": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.5
+      },
+      "sodium": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 400"
   }
 }

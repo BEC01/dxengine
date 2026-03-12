@@ -728,6 +728,12 @@
       "test": "uric_acid",
       "operator": "below_lln",
       "importance": 2
+    },
+    {
+      "finding_key": "albumin_low",
+      "test": "albumin",
+      "operator": "below_lln",
+      "importance": 3
     }
   ],
   "composite_rules": [

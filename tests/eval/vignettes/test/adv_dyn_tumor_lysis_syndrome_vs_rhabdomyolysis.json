@@ -29,19 +29,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "potassium",
-            "value": 5.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 7.1,
+            "test_name": "creatinine",
+            "value": 1.3,
             "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
             "value": 4.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -54,8 +54,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.3,
+            "test_name": "uric_acid",
+            "value": 7.1,
             "unit": "mg/dL"
           },
           {
@@ -64,14 +64,14 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
+          },
+          {
             "test_name": "myoglobin",
             "value": 50.0,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 173.5,
-            "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -79,8 +79,8 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
+            "test_name": "creatine_kinase",
+            "value": 173.5,
             "unit": "U/L"
           }
         ]
