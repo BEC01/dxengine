@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "plethora (ruddy complexion)",
-    "symptoms": [
-      "plethora (ruddy complexion)",
-      "pruritus (especially aquagenic/post-shower)"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

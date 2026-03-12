@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "fatigue",
-    "symptoms": [
-      "fatigue",
-      "arthralgias without frank arthritis"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

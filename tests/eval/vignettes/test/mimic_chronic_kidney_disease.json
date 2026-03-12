@@ -11,11 +11,8 @@
   "patient": {
     "age": 68,
     "sex": "male",
-    "chief_complaint": "often asymptomatic until advanced (stage 4-5)",
-    "symptoms": [
-      "often asymptomatic until advanced (stage 4-5)",
-      "fatigue"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

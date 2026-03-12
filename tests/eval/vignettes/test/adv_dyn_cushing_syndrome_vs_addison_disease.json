@@ -46,14 +46,14 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "cortisol_am",
             "value": 12.8,
             "unit": "mcg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "lymphocytes_absolute",
@@ -71,14 +71,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "sodium",
-            "value": 140.5,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           },
           {
             "test_name": "adrenocorticotropic_hormone",

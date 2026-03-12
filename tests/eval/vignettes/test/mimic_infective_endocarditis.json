@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "fever (most common)",
-    "symptoms": [
-      "fever (most common)",
-      "constitutional symptoms (fatigue, malaise, weight loss, night sweats)"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

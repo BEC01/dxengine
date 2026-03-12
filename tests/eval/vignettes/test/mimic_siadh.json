@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "often asymptomatic if mild",
-    "symptoms": [
-      "often asymptomatic if mild",
-      "nausea"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

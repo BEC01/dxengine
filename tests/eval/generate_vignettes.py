@@ -695,8 +695,8 @@ def _generate_mimic_negatives(patterns: dict) -> list[dict]:
             },
             "patient": {
                 "age": age, "sex": sex,
-                "chief_complaint": demo.get("chief_complaint", ""),
-                "symptoms": demo.get("symptoms", [])[:2],
+                "chief_complaint": "",
+                "symptoms": [],
                 "signs": [], "medical_history": [], "medications": [],
                 "family_history": [], "social_history": [],
                 "lab_panels": [{"panel_name": "Eval Panel", "values": labs}],

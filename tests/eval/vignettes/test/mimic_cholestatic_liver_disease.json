@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "pruritus (bile salt deposition in skin)",
-    "symptoms": [
-      "pruritus (bile salt deposition in skin)",
-      "pale/clay-colored stools (acholic)"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

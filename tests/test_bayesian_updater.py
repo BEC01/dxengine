@@ -428,14 +428,23 @@ class TestApplyEvidenceCaps:
         assert result[0].posterior_probability == pytest.approx(ceiling, abs=0.001)
         assert "Capped" in result[0].confidence_note
 
-    def test_global_ceiling_from_max_informative(self):
-        """Ceiling should be based on the max n_informative_lr across all hypotheses."""
+    def test_per_disease_ceiling(self):
+        """Each disease should use its own n_informative_lr for the ceiling."""
         h1 = Hypothesis(disease="a", posterior_probability=0.90, n_informative_lr=8)
         h2 = Hypothesis(disease="b", posterior_probability=0.90, n_informative_lr=1)
         result = apply_evidence_caps([h1, h2])
-        # Both should use ceiling(8), not ceiling(1)
+        # Each should use its OWN ceiling, not the global max
         ceiling_8 = _evidence_ceiling(8)
-        assert result[1].posterior_probability == pytest.approx(ceiling_8, abs=0.001)
+        ceiling_1 = _evidence_ceiling(1)
+        assert result[0].posterior_probability == pytest.approx(ceiling_8, abs=0.001)
+        assert result[1].posterior_probability == pytest.approx(ceiling_1, abs=0.001)
+
+    def test_per_disease_ceiling_different_evidence_counts(self):
+        """Disease with more evidence should get higher ceiling than one with less."""
+        h1 = Hypothesis(disease="well_evidenced", posterior_probability=0.60, n_informative_lr=5)
+        h2 = Hypothesis(disease="poorly_evidenced", posterior_probability=0.60, n_informative_lr=1)
+        result = apply_evidence_caps([h1, h2])
+        assert result[0].posterior_probability > result[1].posterior_probability
 
     def test_ranking_order_preserved(self):
         """Relative ordering should be unchanged after capping."""
@@ -467,3 +476,37 @@ class TestApplyEvidenceCaps:
         h = Hypothesis(disease="test", posterior_probability=0.50, n_informative_lr=0)
         result = apply_evidence_caps([h])
         assert result[0].posterior_probability == pytest.approx(0.01, abs=0.001)
+
+    def test_mimic_negative_safety_invariant(self):
+        """Per-disease ceiling stays below 0.40 for n <= 2 (mimic negative safety).
+
+        Mimic negatives typically have 0-2 informative LRs per disease.
+        The 0.40 threshold is the negative pass gate. This test validates
+        the safety invariant that prevents false positive diagnoses.
+        """
+        for n in range(3):
+            h = Hypothesis(disease="test", posterior_probability=0.95, n_informative_lr=n)
+            result = apply_evidence_caps([h])
+            assert result[0].posterior_probability < 0.40, (
+                f"n_informative_lr={n}: posterior {result[0].posterior_probability:.4f} >= 0.40"
+            )
+
+    def test_multi_disease_varying_evidence(self):
+        """Diseases with more evidence get higher ceilings in a mixed pool."""
+        # All posteriors at 0.90 (above all ceilings) to force capping
+        h_strong = Hypothesis(disease="strong_evidence", posterior_probability=0.90, n_informative_lr=5)
+        h_moderate = Hypothesis(disease="moderate_evidence", posterior_probability=0.90, n_informative_lr=2)
+        h_weak = Hypothesis(disease="weak_evidence", posterior_probability=0.90, n_informative_lr=0)
+
+        result = apply_evidence_caps([h_strong, h_moderate, h_weak])
+
+        # Strong > moderate > weak (each capped at its own ceiling)
+        assert result[0].posterior_probability > result[1].posterior_probability
+        assert result[1].posterior_probability > result[2].posterior_probability
+
+        # Strong gets ceiling(5) = 0.615
+        assert result[0].posterior_probability == pytest.approx(_evidence_ceiling(5), abs=0.001)
+        # Moderate gets ceiling(2) = 0.390
+        assert result[1].posterior_probability == pytest.approx(_evidence_ceiling(2), abs=0.001)
+        # Weak gets ceiling(0) = 0.01
+        assert result[2].posterior_probability == pytest.approx(0.01, abs=0.001)

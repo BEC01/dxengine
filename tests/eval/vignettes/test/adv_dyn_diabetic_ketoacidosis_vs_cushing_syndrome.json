@@ -39,23 +39,28 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 9.7,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "potassium",
             "value": 4.2,
             "unit": "mEq/L"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
+            "test_name": "white_blood_cells",
+            "value": 9.7,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 18.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
             "unit": "mg/dL"
           },
           {
@@ -69,14 +74,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.9,
-            "unit": "x10^9/L"
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "cortisol_am",
@@ -84,9 +84,9 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
+            "test_name": "lymphocytes_absolute",
+            "value": 2.9,
+            "unit": "x10^9/L"
           }
         ]
       }

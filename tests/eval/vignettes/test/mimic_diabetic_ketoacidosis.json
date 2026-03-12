@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "polyuria",
-    "symptoms": [
-      "polyuria",
-      "polydipsia"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

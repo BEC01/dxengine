@@ -31,8 +31,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "complement_c4",
-            "value": 17.1,
+            "test_name": "complement_c3",
+            "value": 107.4,
             "unit": "mg/dL"
           },
           {
@@ -41,8 +41,8 @@
             "unit": "mm/hr"
           },
           {
-            "test_name": "complement_c3",
-            "value": 107.4,
+            "test_name": "complement_c4",
+            "value": 17.1,
             "unit": "mg/dL"
           },
           {
@@ -56,11 +56,6 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.1,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "antinuclear_antibody_titer",
             "value": 0.9,
             "unit": "titer"
@@ -71,9 +66,19 @@
             "unit": "IU/mL"
           },
           {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.1,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "platelets",
             "value": 225.0,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "creatinine",
@@ -81,8 +86,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "ferritin",
-            "value": 159.0,
+            "test_name": "procalcitonin",
+            "value": 0.1,
             "unit": "ng/mL"
           },
           {
@@ -91,14 +96,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "procalcitonin",
-            "value": 0.1,
+            "test_name": "ferritin",
+            "value": 159.0,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
           }
         ]
       }

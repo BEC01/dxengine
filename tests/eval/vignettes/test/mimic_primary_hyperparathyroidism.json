@@ -11,11 +11,8 @@
   "patient": {
     "age": 45,
     "sex": "female",
-    "chief_complaint": "often asymptomatic (incidental hypercalcemia)",
-    "symptoms": [
-      "often asymptomatic (incidental hypercalcemia)",
-      "stones (nephrolithiasis)"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],

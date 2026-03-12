@@ -32,11 +32,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 2.2,
-            "unit": "mIU/L"
-          },
-          {
             "test_name": "free_thyroxine",
             "value": 1.3,
             "unit": "ng/dL"
@@ -47,9 +42,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 138.7,
-            "unit": "mEq/L"
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 2.2,
+            "unit": "mIU/L"
           },
           {
             "test_name": "creatine_kinase",
@@ -57,14 +52,19 @@
             "unit": "U/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.2,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "ldl_cholesterol",
             "value": 80.0,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 138.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.2,
+            "unit": "g/dL"
           },
           {
             "test_name": "alkaline_phosphatase",

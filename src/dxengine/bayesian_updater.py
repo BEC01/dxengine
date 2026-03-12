@@ -245,40 +245,37 @@ def _evidence_ceiling(n_informative: int) -> float:
 
 
 def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
-    """Apply global evidence-based ceiling to prevent overconfidence.
+    """Apply per-disease evidence-based ceiling to prevent overconfidence.
 
-    When few informative likelihood ratios have been applied across the
-    hypothesis pool, posteriors are capped to prevent normalization
+    When few informative likelihood ratios have been applied for a
+    specific disease, its posterior is capped to prevent normalization
     artifacts from producing unwarranted diagnostic confidence.
 
     An "informative" LR is one where |log(LR)| > 0.01 — i.e., the curated
     data actually says something about this disease-finding pair, rather
     than defaulting to neutral (1.0, 1.0).
 
-    The ceiling is global (same for all hypotheses), determined by the
-    best-evidenced hypothesis.  This preserves ranking order while
-    limiting absolute confidence.
+    Each disease gets its own ceiling based on its own n_informative_lr.
+    This prevents a well-evidenced disease from inflating the ceiling for
+    poorly-evidenced diseases in the same pool — the primary scaling
+    bottleneck that blocked expansion beyond ~25 diseases.
 
     Uses smooth curve ceiling(n) = 1 - 1/(1 + k*n) with k=0.32.
     """
     if not hypotheses:
         return hypotheses
 
-    max_informative = max(h.n_informative_lr for h in hypotheses)
-    ceiling = _evidence_ceiling(max_informative)
-
-    # At very high n the ceiling approaches 1.0; skip capping entirely
-    if ceiling >= 0.99:
-        return hypotheses
-
     result = [h.model_copy(deep=True) for h in hypotheses]
     for h in result:
+        ceiling = _evidence_ceiling(h.n_informative_lr)
+        if ceiling >= 0.99:
+            continue
         if h.posterior_probability > ceiling:
             h.posterior_probability = ceiling
             h.log_odds = probability_to_log_odds(ceiling)
             h.confidence_note = (
                 f"Capped at {ceiling:.0%} (k={_EVIDENCE_CAP_K}): only "
-                f"{max_informative} informative finding(s) across hypothesis pool"
+                f"{h.n_informative_lr} informative finding(s) for this disease"
             )
 
     return result
