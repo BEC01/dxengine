@@ -31,13 +31,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 103.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.0,
             "unit": "mEq/L"
           },
           {
@@ -46,14 +46,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "cortisol_am",
-            "value": 20.7,
-            "unit": "mcg/dL"
+            "test_name": "glucose",
+            "value": 103.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
@@ -61,24 +56,14 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "cortisol_am",
+            "value": 20.7,
+            "unit": "mcg/dL"
+          },
+          {
             "test_name": "lymphocytes_absolute",
             "value": 1.8,
             "unit": "x10^9/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 140.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.5,
-            "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin_a1c",
@@ -89,6 +74,21 @@
             "test_name": "creatinine",
             "value": 0.8,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           }
         ]
       }

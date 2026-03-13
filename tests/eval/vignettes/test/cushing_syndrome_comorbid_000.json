@@ -31,14 +31,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "sodium",
-            "value": 139.7,
+            "test_name": "bicarbonate",
+            "value": 25.7,
             "unit": "mEq/L"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 5.1,
-            "unit": "%"
+            "test_name": "white_blood_cells",
+            "value": 10.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "glucose",
@@ -51,6 +56,21 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "hemoglobin_a1c",
+            "value": 5.1,
+            "unit": "%"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.9,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "calcium",
             "value": 9.0,
             "unit": "mg/dL"
@@ -61,34 +81,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.3,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 25.7,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "lymphocytes_absolute",
             "value": 1.5,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "potassium",
-            "value": 3.9,
+            "test_name": "sodium",
+            "value": 139.7,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "white_blood_cells",
-            "value": 10.4,
-            "unit": "x10^9/L"
           }
         ]
       }

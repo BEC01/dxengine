@@ -1,24 +1,26 @@
 {
   "metadata": {
-    "id": "unknown_pancytopenia",
+    "id": "aplastic_anemia_classic_000",
     "category": "hematologic",
-    "difficulty": "moderate",
-    "split": "test",
+    "difficulty": "classic",
+    "split": "train",
     "source": "synthetic",
     "disease_pattern_name": "aplastic_anemia",
     "variant": 0
   },
   "patient": {
-    "age": 55,
+    "age": 68,
     "sex": "male",
-    "chief_complaint": "Fatigue and easy bruising",
+    "chief_complaint": "fatigue (anemia)",
     "symptoms": [
-      "fatigue",
-      "easy bruising",
-      "recurrent infections"
+      "fatigue (anemia)",
+      "infections (neutropenia)",
+      "bleeding/bruising (thrombocytopenia)",
+      "no lymphadenopathy"
     ],
     "signs": [
-      "petechiae"
+      "pallor",
+      "no hepatosplenomegaly (distinguishes from leukemia)"
     ],
     "medical_history": [],
     "medications": [],
@@ -26,32 +28,32 @@
     "social_history": [],
     "lab_panels": [
       {
-        "panel_name": "Panel",
+        "panel_name": "Eval Panel",
         "values": [
           {
             "test_name": "hemoglobin",
-            "value": 8.0,
+            "value": 9.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 2.5,
+            "test_name": "platelets",
+            "value": 20.0,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "platelets",
-            "value": 45.0,
+            "test_name": "white_blood_cells",
+            "value": 1.8,
             "unit": "x10^9/L"
           },
           {
             "test_name": "reticulocyte_count",
-            "value": 0.3,
+            "value": 0.2,
             "unit": "%"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 102.0,
-            "unit": "fL"
+            "test_name": "neutrophils_absolute",
+            "value": 0.0,
+            "unit": "x10^9/L"
           }
         ]
       }

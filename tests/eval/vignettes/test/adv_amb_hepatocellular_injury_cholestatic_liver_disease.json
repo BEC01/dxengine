@@ -32,24 +32,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 55.4,
-            "unit": "U/L"
-          },
-          {
             "test_name": "alkaline_phosphatase",
             "value": 138.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
             "unit": "U/L"
           },
           {
             "test_name": "bilirubin_total",
             "value": 1.1,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 55.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 37.4,
+            "unit": "U/L"
           }
         ]
       }

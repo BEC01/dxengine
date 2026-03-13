@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_aplastic_anemia",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 260.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 3.9,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

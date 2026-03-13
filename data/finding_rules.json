@@ -770,6 +770,12 @@
       "test": "osmolality_serum",
       "operator": "above_uln",
       "importance": 3
+    },
+    {
+      "finding_key": "reticulocyte_count_low",
+      "test": "reticulocyte_count",
+      "operator": "below_lln",
+      "importance": 4
     }
   ],
   "composite_rules": [

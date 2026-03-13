@@ -1432,5 +1432,38 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 5000"
+  },
+  "aplastic_anemia": {
+    "description": "Bone marrow failure causing pancytopenia with hypoproliferative reticulocyte count. Distinguished from destructive cytopenias by low reticulocyte count and absence of splenomegaly.",
+    "pattern": {
+      "hemoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.8
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.85
+      },
+      "white_blood_cells": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.8
+      },
+      "reticulocyte_count": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.9
+      },
+      "neutrophils_absolute": {
+        "direction": "decreased",
+        "typical_z_score": -3.5,
+        "weight": 0.75
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500000"
   }
 }

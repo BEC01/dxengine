@@ -29,16 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "cortisol_am",
-            "value": 12.8,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "glucose",
-            "value": 85.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 25.5,
             "unit": "mEq/L"
@@ -54,8 +44,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 17.4,
+            "test_name": "cortisol_am",
+            "value": 12.8,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 85.0,
             "unit": "mg/dL"
           },
           {
@@ -67,6 +62,11 @@
             "test_name": "eosinophils_absolute",
             "value": 0.4,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 17.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "sodium",

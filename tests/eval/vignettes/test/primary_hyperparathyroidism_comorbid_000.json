@@ -29,39 +29,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 13.4,
-            "unit": "g/dL"
+            "test_name": "parathyroid_hormone",
+            "value": 77.5,
+            "unit": "pg/mL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 38.8,
-            "unit": "ng/mL"
+            "test_name": "bicarbonate",
+            "value": 23.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 105.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "alkaline_phosphatase",
             "value": 134.1,
             "unit": "U/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 10.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 97.1,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 16.4,
-            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -74,18 +59,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 77.5,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 23.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.3,
+            "test_name": "hemoglobin",
+            "value": 13.4,
             "unit": "g/dL"
           },
           {
@@ -94,9 +69,34 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "chloride",
-            "value": 105.0,
-            "unit": "mEq/L"
+            "test_name": "calcium",
+            "value": 10.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 16.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 97.1,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 38.8,
+            "unit": "ng/mL"
           }
         ]
       }

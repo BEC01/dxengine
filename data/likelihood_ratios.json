@@ -3064,6 +3064,10 @@
       "infective_endocarditis": {
         "lr_positive": 1.3,
         "lr_negative": 0.45
+      },
+      "aplastic_anemia": {
+        "lr_positive": 1.0,
+        "lr_negative": 1.0
       }
     }
   },
@@ -3268,6 +3272,10 @@
       "systemic_lupus_erythematosus": {
         "lr_positive": 2.5,
         "lr_negative": 0.7
+      },
+      "aplastic_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -3286,6 +3294,15 @@
       "hyperosmolar_hyperglycemic_state": {
         "lr_positive": 8.0,
         "lr_negative": 0.1
+      }
+    }
+  },
+  "reticulocyte_count_low": {
+    "description": "Hypoproliferative reticulocyte count — hallmark of marrow failure",
+    "diseases": {
+      "aplastic_anemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.2
       }
     }
   }

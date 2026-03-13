@@ -31,14 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_iron_binding_capacity",
-            "value": 332.5,
-            "unit": "mcg/dL"
+            "test_name": "reticulocyte_count",
+            "value": 0.8,
+            "unit": "%"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.4,
-            "unit": "g/dL"
+            "test_name": "methylmalonic_acid",
+            "value": 320.5,
+            "unit": "nmol/L"
           },
           {
             "test_name": "homocysteine",
@@ -46,29 +46,14 @@
             "unit": "mcmol/L"
           },
           {
-            "test_name": "iron",
-            "value": 89.1,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "red_cell_distribution_width",
-            "value": 13.4,
-            "unit": "%"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 0.8,
-            "unit": "%"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 280.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "transferrin_saturation",
             "value": 29.4,
             "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 287.0,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "ferritin",
@@ -81,19 +66,34 @@
             "unit": "fL"
           },
           {
-            "test_name": "methylmalonic_acid",
-            "value": 320.5,
-            "unit": "nmol/L"
+            "test_name": "iron",
+            "value": 89.1,
+            "unit": "mcg/dL"
           },
           {
-            "test_name": "platelets",
-            "value": 287.0,
-            "unit": "x10^9/L"
+            "test_name": "hemoglobin",
+            "value": 12.4,
+            "unit": "g/dL"
           },
           {
             "test_name": "vitamin_b12",
             "value": 112.5,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.4,
+            "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 280.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 332.5,
+            "unit": "mcg/dL"
           }
         ]
       }
