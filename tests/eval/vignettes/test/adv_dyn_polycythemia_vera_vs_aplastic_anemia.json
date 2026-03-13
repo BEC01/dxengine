@@ -31,9 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "platelets",
-            "value": 242.2,
-            "unit": "x10^9/L"
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "white_blood_cells",
@@ -41,14 +41,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "red_blood_cells",
-            "value": 6.2,
-            "unit": "x10^12/L"
+            "test_name": "platelets",
+            "value": 242.2,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "hematocrit",
@@ -59,6 +54,11 @@
             "test_name": "uric_acid",
             "value": 7.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 6.2,
+            "unit": "x10^12/L"
           },
           {
             "test_name": "reticulocyte_count",

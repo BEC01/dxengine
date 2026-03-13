@@ -46,19 +46,9 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.5,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "calcium",
             "value": 10.5,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 22.5,
-            "unit": "mm/hr"
           },
           {
             "test_name": "total_protein",
@@ -66,9 +56,19 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 13.5,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "uric_acid",
             "value": 6.3,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 22.5,
+            "unit": "mm/hr"
           },
           {
             "test_name": "complement_c3",

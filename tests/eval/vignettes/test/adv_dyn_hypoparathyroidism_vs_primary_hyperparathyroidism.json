@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 9.2,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "parathyroid_hormone",
             "value": 40.0,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -52,9 +52,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -62,19 +62,19 @@
             "unit": "U/L"
           },
           {
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "chloride",
             "value": 102.0,
             "unit": "mEq/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           }
         ]
       }

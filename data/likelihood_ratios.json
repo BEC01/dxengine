@@ -3401,5 +3401,14 @@
         "lr_negative": 0.1
       }
     }
+  },
+  "alkaline_phosphatase_low": {
+    "description": "Alkaline phosphatase below lower limit of normal — paradoxically low in Wilson disease despite liver involvement",
+    "diseases": {
+      "wilson_disease": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.4
+      }
+    }
   }
 }

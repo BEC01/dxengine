@@ -800,6 +800,12 @@
       "test": "folate",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "alkaline_phosphatase_low",
+      "test": "alkaline_phosphatase",
+      "operator": "below_lln",
+      "importance": 3
     }
   ],
   "composite_rules": [

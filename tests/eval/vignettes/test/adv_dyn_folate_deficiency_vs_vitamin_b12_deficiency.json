@@ -29,11 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 101.4,
-            "unit": "fL"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 13.9,
             "unit": "g/dL"
@@ -42,6 +37,11 @@
             "test_name": "homocysteine",
             "value": 15.7,
             "unit": "mcmol/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 101.4,
+            "unit": "fL"
           },
           {
             "test_name": "folate",
@@ -54,14 +54,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 1.5,
-            "unit": "%"
-          },
-          {
             "test_name": "methylmalonic_acid",
             "value": 172.0,
             "unit": "nmol/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
           },
           {
             "test_name": "vitamin_b12",

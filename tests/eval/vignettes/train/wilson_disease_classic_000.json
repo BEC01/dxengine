@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "wilson_disease_classic_000",
+    "category": "hepatic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "wilson_disease",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "hepatitis or cirrhosis in young patient",
+    "symptoms": [
+      "hepatitis or cirrhosis in young patient",
+      "Kayser-Fleischer rings (slit lamp exam)",
+      "low ceruloplasmin on workup",
+      "elevated 24h urine copper",
+      "psychiatric symptoms (depression, personality changes)"
+    ],
+    "signs": [
+      "neurologic symptoms (tremor, dysarthria, dystonia, parkinsonism)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 44.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 62.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 30.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "wilson_disease",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "wilson_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}
