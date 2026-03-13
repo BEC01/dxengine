@@ -50,11 +50,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "ammonia",
-            "value": 73.2,
-            "unit": "mcmol/L"
-          },
-          {
             "test_name": "platelets",
             "value": 150.0,
             "unit": "x10^9/L"
@@ -65,8 +60,13 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 95.5,
+            "test_name": "ammonia",
+            "value": 73.2,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
             "unit": "U/L"
           },
           {
@@ -75,13 +75,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 25.0,
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
+            "test_name": "aspartate_aminotransferase",
+            "value": 25.0,
             "unit": "U/L"
           }
         ]

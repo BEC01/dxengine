@@ -304,7 +304,7 @@
       },
       "hyperosmolar_hyperglycemic_state": {
         "lr_positive": 10.0,
-        "lr_negative": 0.01
+        "lr_negative": 0.05
       },
       "chronic_kidney_disease": {
         "lr_positive": 0.5,
@@ -2680,6 +2680,10 @@
       "chronic_kidney_disease": {
         "lr_positive": 0.3,
         "lr_negative": 1.0
+      },
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.8
       }
     }
   },
@@ -2998,6 +3002,10 @@
       "infective_endocarditis": {
         "lr_positive": 1.8,
         "lr_negative": 0.8
+      },
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
       }
     }
   },
@@ -3269,6 +3277,15 @@
       "systemic_lupus_erythematosus": {
         "lr_positive": 3.0,
         "lr_negative": 0.6
+      }
+    }
+  },
+  "osmolality_serum_high": {
+    "description": "Serum osmolality above ULN (>295 mOsm/kg), hallmark of HHS",
+    "diseases": {
+      "hyperosmolar_hyperglycemic_state": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
       }
     }
   }

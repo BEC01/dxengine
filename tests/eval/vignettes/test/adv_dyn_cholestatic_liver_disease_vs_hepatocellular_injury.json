@@ -32,6 +32,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "alanine_aminotransferase",
+            "value": 47.6,
+            "unit": "U/L"
+          },
+          {
             "test_name": "alkaline_phosphatase",
             "value": 145.1,
             "unit": "U/L"
@@ -42,23 +47,8 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 47.6,
-            "unit": "U/L"
-          },
-          {
             "test_name": "bilirubin_total",
             "value": 1.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 45.3,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "bilirubin_direct",
-            "value": 0.4,
             "unit": "mg/dL"
           },
           {
@@ -67,14 +57,24 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 210.0,
+            "test_name": "bilirubin_direct",
+            "value": 0.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 45.3,
             "unit": "U/L"
           },
           {
             "test_name": "international_normalized_ratio",
             "value": 1.0,
             "unit": "ratio"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
           },
           {
             "test_name": "albumin",

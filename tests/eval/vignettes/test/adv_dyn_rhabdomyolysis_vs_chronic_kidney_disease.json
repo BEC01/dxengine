@@ -29,8 +29,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 8.8,
+            "test_name": "phosphorus",
+            "value": 4.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 6.3,
             "unit": "mg/dL"
           },
           {
@@ -44,23 +49,18 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.4,
+            "test_name": "calcium",
+            "value": 8.8,
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 6.3,
-            "unit": "mg/dL"
+            "test_name": "myoglobin",
+            "value": 94.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "aspartate_aminotransferase",
             "value": 43.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 496.3,
             "unit": "U/L"
           },
           {
@@ -69,13 +69,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "myoglobin",
-            "value": 94.0,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "lactate_dehydrogenase",
             "value": 294.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 496.3,
             "unit": "U/L"
           },
           {
@@ -94,9 +94,9 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
           },
           {
             "test_name": "albumin",
@@ -104,9 +104,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
           }
         ]
       }

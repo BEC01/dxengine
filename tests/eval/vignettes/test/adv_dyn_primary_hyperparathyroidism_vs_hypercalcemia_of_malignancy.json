@@ -49,8 +49,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.1,
+            "test_name": "chloride",
+            "value": 104.4,
             "unit": "mEq/L"
           },
           {
@@ -59,14 +59,14 @@
             "unit": "ng/mL"
           },
           {
+            "test_name": "bicarbonate",
+            "value": 24.1,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "uric_acid",
             "value": 4.9,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "chloride",
-            "value": 104.4,
-            "unit": "mEq/L"
           }
         ]
       }

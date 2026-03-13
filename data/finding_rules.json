@@ -764,6 +764,12 @@
       "test": "lymphocytes_absolute",
       "operator": "below_lln",
       "importance": 2
+    },
+    {
+      "finding_key": "osmolality_serum_high",
+      "test": "osmolality_serum",
+      "operator": "above_uln",
+      "importance": 3
     }
   ],
   "composite_rules": [

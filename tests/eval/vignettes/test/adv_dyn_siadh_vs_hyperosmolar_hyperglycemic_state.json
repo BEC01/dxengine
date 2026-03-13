@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "adv_dyn_siadh_vs_hyperosmolar_hyperglycemic_state",
+    "category": "endocrine",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "siadh",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "often asymptomatic if mild",
+    "symptoms": [
+      "often asymptomatic if mild",
+      "nausea",
+      "headache",
+      "confusion",
+      "lethargy"
+    ],
+    "signs": [
+      "no edema",
+      "no signs of volume depletion"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "sodium",
+            "value": 135.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "osmolality_serum",
+            "value": 286.8,
+            "unit": "mOsm/kg"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 7.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "chloride",
+            "value": 97.2,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 3.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "siadh",
+    "acceptable_alternatives": [
+      "hyperosmolar_hyperglycemic_state"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "siadh"
+    ],
+    "cant_miss_diseases": []
+  }
+}

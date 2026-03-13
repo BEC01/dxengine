@@ -36,8 +36,8 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.4,
+            "test_name": "uric_acid",
+            "value": 5.9,
             "unit": "mg/dL"
           },
           {
@@ -46,23 +46,28 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 61.1,
-            "unit": "mL/min/1.73m2"
-          },
-          {
             "test_name": "albumin",
             "value": 3.6,
             "unit": "g/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.9,
+            "test_name": "calcium",
+            "value": 9.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 61.1,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 24.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 4.5,
             "unit": "mg/dL"
           },
           {
@@ -71,19 +76,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 23.4,
             "unit": "mEq/L"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.5,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "total_protein",

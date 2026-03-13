@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "hyperosmolar_hyperglycemic_state_moderate_000",
+    "category": "endocrine",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hyperosmolar_hyperglycemic_state",
+    "variant": 0
+  },
+  "patient": {
+    "age": 68,
+    "sex": "male",
+    "chief_complaint": "altered mental status",
+    "symptoms": [
+      "altered mental status",
+      "profound dehydration",
+      "severe hyperglycemia (often >600 mg/dL)",
+      "polyuria progressing to oliguria",
+      "weakness"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 105.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "osmolality_serum",
+            "value": 298.8,
+            "unit": "mOsm/kg"
+          },
+          {
+            "test_name": "sodium",
+            "value": 136.5,
+            "unit": "mEq/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hyperosmolar_hyperglycemic_state",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hyperosmolar_hyperglycemic_state"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1409,5 +1409,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 250000"
+  },
+  "hyperosmolar_hyperglycemic_state": {
+    "description": "Severe hyperglycemic emergency in type 2 diabetes without significant ketoacidosis. Defining lab pattern: extreme hyperglycemia (>600 mg/dL) with hyperosmolality (>320 mOsm/kg). KEY distinction from DKA: NORMAL pH and bicarbonate (no significant ketosis). Profound dehydration causes prerenal azotemia.",
+    "pattern": {
+      "glucose": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.95
+      },
+      "osmolality_serum": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.8
+      },
+      "sodium": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.4
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 5000"
   }
 }

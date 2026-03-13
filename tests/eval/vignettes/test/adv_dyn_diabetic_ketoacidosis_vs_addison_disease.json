@@ -44,19 +44,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 5.8,
-            "unit": "%"
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "white_blood_cells",
@@ -69,9 +69,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
+            "test_name": "hemoglobin_a1c",
+            "value": 5.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 12.8,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "adrenocorticotropic_hormone",
@@ -87,11 +92,6 @@
             "test_name": "calcium",
             "value": 9.5,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "cortisol_am",
-            "value": 12.8,
-            "unit": "mcg/dL"
           }
         ]
       }
