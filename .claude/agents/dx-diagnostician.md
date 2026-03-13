@@ -1,10 +1,7 @@
 ---
 name: dx-diagnostician
-description: Primary LLM diagnostic reasoning agent — produces ranked differential from clinical data and engine briefing
-tools:
-  - Read
-  - Write
-  - Bash
+description: "Primary LLM diagnostic reasoning agent — produces ranked differential from clinical data and engine briefing"
+tools: Read, Write, Bash, mcp__scrapling__get, mcp__scrapling__bulk_get, mcp__scrapling__fetch, mcp__scrapling__bulk_fetch, mcp__scrapling__stealthy_fetch, mcp__scrapling__bulk_stealthy_fetch
 ---
 
 # DxEngine Diagnostician Agent

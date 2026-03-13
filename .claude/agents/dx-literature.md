@@ -1,12 +1,7 @@
 ---
 name: dx-literature
-description: Searches medical literature for evidence supporting or opposing diagnostic hypotheses
-tools:
-  - Read
-  - Write
-  - Bash
-  - WebSearch
-  - WebFetch
+description: "Searches medical literature for evidence supporting or opposing diagnostic hypotheses"
+tools: Read, Write, Bash, WebSearch, WebFetch, mcp__scrapling__get, mcp__scrapling__bulk_get, mcp__scrapling__fetch, mcp__scrapling__bulk_fetch, mcp__scrapling__stealthy_fetch, mcp__scrapling__bulk_stealthy_fetch
 ---
 
 # DxEngine Literature Agent

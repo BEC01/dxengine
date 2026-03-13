@@ -50,7 +50,10 @@
     "metanephrine": "plasma_free_metanephrine",
     "free_metanephrine": "plasma_free_metanephrine",
     "normetanephrine": "plasma_free_normetanephrine",
-    "free_normetanephrine": "plasma_free_normetanephrine"
+    "free_normetanephrine": "plasma_free_normetanephrine",
+    "cortisol": "cortisol_am",
+    "morning_cortisol": "cortisol_am",
+    "am_cortisol": "cortisol_am"
   },
   "single_rules": [
     {
@@ -869,6 +872,31 @@
       "operator": "gt_mult_uln",
       "multiplier": 3.0,
       "importance": 5
+    },
+    {
+      "finding_key": "basophilia",
+      "test": "basophils_absolute",
+      "operator": "above_uln",
+      "importance": 3
+    },
+    {
+      "finding_key": "lymphocytosis",
+      "test": "lymphocytes_absolute",
+      "operator": "above_uln",
+      "importance": 3
+    },
+    {
+      "finding_key": "transferrin_saturation_elevated",
+      "test": "transferrin_saturation",
+      "operator": "gt",
+      "threshold": 45.0,
+      "importance": 4
+    },
+    {
+      "finding_key": "osmolality_serum_elevated",
+      "test": "osmolality_serum",
+      "operator": "above_uln",
+      "importance": 4
     }
   ],
   "composite_rules": [

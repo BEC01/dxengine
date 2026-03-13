@@ -16,6 +16,92 @@ You are running a **perpetual** expansion loop that autonomously adds new diseas
 
 **Shell variables** (`N`, `consecutive_skips`, `diseases_added`): These do NOT persist between Bash tool calls. Track them in your own context and substitute literal values into bash commands (e.g., `--output state/expand/iter_3.json` not `--output state/expand/iter_${N}.json`).
 
+## Phase -1: Discovery (auto-generates illness scripts when queue is nearly empty)
+
+**Trigger**: After Phase 0 builds the queue, if `total_candidates < 3` AND `data/discovery_candidates.json` exists with unprocessed entries.
+
+1. Load `data/discovery_candidates.json`
+2. Filter out diseases already in `data/illness_scripts.json`
+3. Sort remaining by wave (1→2→3), then by importance descending
+4. Process in **batches of 5** (max 3 batches per invocation = 15 scripts max)
+5. Initialize: `discovery_skips=0`
+
+### For each disease in the batch:
+
+**Research** — Launch 2 parallel foreground agents:
+
+**Agent A (Clinical Research):**
+Use a general-purpose Agent. In the prompt:
+- "Research {display_name} to generate a structured illness script for DxEngine"
+- Include the 10 required fields and their expected formats (see illness_scripts.json schema below)
+- Include the locked importance and category from the curated entry
+- Include the key_analytes_hint for context
+- Instruct to use BioMCP (`biomcp get disease "{name}" phenotypes`) and PubMed
+- Instruct to write output to `state/expand/packets/{disease_key}_script.json` in format: `{"disease_key": "...", "script": {...}}`
+- CRITICAL: Tell the agent that `disease_importance` and `category` values MUST match the curated values exactly
+
+**Illness script schema** (all 10 fields required):
+```json
+{
+  "disease_key": "snake_case_name",
+  "script": {
+    "category": "from curated list",
+    "disease_importance": 5,
+    "epidemiology": "Demographics, risk factors, prevalence (>50 chars)",
+    "pathophysiology": "Mechanism of disease (>100 chars)",
+    "classic_presentation": ["symptom1", "symptom2", "...at least 4 items"],
+    "key_labs": ["lab description 1", "lab description 2", "...at least 2"],
+    "diagnostic_criteria": "How to confirm diagnosis (>30 chars)",
+    "mimics": ["disease1", "disease2", "...at least 2, use snake_case matching existing diseases"],
+    "cant_miss_features": ["critical complication 1"],
+    "typical_course": "Natural history and treatment response (>30 chars)"
+  }
+}
+```
+
+**Agent B (Cross-Reference):**
+Use a general-purpose Agent. In the prompt:
+- "Verify {display_name} against existing DxEngine diseases for overlap and conflicts"
+- Use medical-kb MCP: `get_illness_script` for similar diseases, `search_by_findings` with key labs
+- Check that mimics list references real diseases in the engine
+- Write findings to `state/expand/packets/{disease_key}_xref.json`
+
+**After agents return:**
+1. Read Agent A's output script from `state/expand/packets/{disease_key}_script.json`
+2. Cross-check mimics against Agent B's findings — fix mimic names to match existing disease_keys
+3. Ensure importance and category match curated values (overwrite if different)
+4. Write corrected script back to `state/expand/packets/{disease_key}_script.json`
+5. Validate:
+   ```bash
+   uv run python .claude/skills/expand/scripts/validate_illness_script.py state/expand/packets/{disease_key}_script.json
+   ```
+6. If validation passes → generate:
+   ```bash
+   uv run python .claude/skills/expand/scripts/generate_illness_script.py state/expand/packets/{disease_key}_script.json
+   ```
+7. If validation fails → fix issues and retry once, or log skip and increment `discovery_skips`
+
+### After batch completes:
+
+```bash
+git add data/illness_scripts.json
+git commit -m "discover: add N illness scripts ({comma_separated_disease_list})"
+```
+
+### Discovery pause conditions:
+- All candidates in discovery_candidates.json exhausted or skipped
+- 3 batches completed in this invocation (15 scripts max)
+- `discovery_skips >= 5` consecutive validation failures
+
+After discovery pause, rebuild queue and proceed to Phase 0:
+```bash
+uv run python .claude/skills/expand/scripts/select_diseases.py --output state/expand/queue.json
+```
+
+If queue is still < 3 candidates after discovery, print "Discovery exhausted — add more candidates to discovery_candidates.json" and stop.
+
+---
+
 ## Phase 0: Setup (once)
 
 1. Ensure you're on `master` branch:
@@ -30,7 +116,12 @@ You are running a **perpetual** expansion loop that autonomously adds new diseas
    ```
    If `$ARGUMENTS.focus` is set, add `--focus $ARGUMENTS.focus`.
 
-3. Read the queue and confirm candidates exist. If empty, stop with "No expansion candidates found."
+3. Read the queue and confirm candidates exist.
+
+3b. If queue has fewer than 3 candidates AND `data/discovery_candidates.json` exists with unprocessed entries:
+    - Run Phase -1 Discovery (above)
+    - After discovery completes, rebuild queue and continue to step 4
+    - If queue is still empty after discovery, stop with "No expansion candidates found."
 
 4. Run baseline evaluation:
    ```bash
@@ -151,7 +242,7 @@ The research.json must have this structure:
 4. **Check for missing finding rules.** If the pattern uses an analyte whose finding_key doesn't exist in finding_rules.json, add the rule directly to finding_rules.json before integration (e.g., `folate_low`, `total_cholesterol_elevated`).
 
 **Diseases that CANNOT be expanded (missing analytes in lab_ranges.json):**
-- wilson_disease (ceruloplasmin), pheochromocytoma (metanephrines), celiac (tTG-IgA), acromegaly (IGF-1), autoimmune_hepatitis (ANA titer, anti-smooth muscle), rheumatoid_arthritis (RF, anti-CCP)
+- autoimmune_hepatitis (needs anti-smooth muscle antibody — not in lab_ranges.json)
 - These require adding new analytes to lab_ranges.json first (out of scope for /expand)
 
 **Diseases that CANNOT be expanded (discriminators are clinical, not lab-based):**
@@ -336,3 +427,5 @@ Apply these caps to prevent overconfident LR values from low-quality sources.
 | 3 | Illness script exists, importance ≤3 | ~10 diseases |
 
 The priority queue (select_diseases.py) handles this ordering automatically.
+
+When the queue is exhausted, **Phase -1 Discovery** auto-generates new illness scripts from `data/discovery_candidates.json` (25 curated candidates across 3 waves). Discovery candidates have locked importance/category to ensure safety. After discovery, the queue is rebuilt and expansion continues.

@@ -1,10 +1,7 @@
 ---
 name: dx-intake
-description: Structures raw patient data into a PatientProfile and generates a problem representation
-tools:
-  - Read
-  - Write
-  - Bash
+description: "Structures raw patient data into a PatientProfile and generates a problem representation"
+tools: Read, Write, Bash, mcp__scrapling__get, mcp__scrapling__bulk_get, mcp__scrapling__fetch, mcp__scrapling__bulk_fetch, mcp__scrapling__stealthy_fetch, mcp__scrapling__bulk_stealthy_fetch
 ---
 
 # DxEngine Intake Agent

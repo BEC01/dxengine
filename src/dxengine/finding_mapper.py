@@ -143,6 +143,9 @@ _SUBSUMES: dict[str, list[str]] = {
     "direct_bilirubin_elevated": ["bilirubin_total_elevated"],
     # INR subsumes PT (same coagulation pathway)
     "international_normalized_ratio_elevated": ["prothrombin_time_elevated"],
+    # Ferritin high thresholds: more specific subsumes less specific
+    "ferritin_greater_than_1000": ["ferritin_greater_than_300", "ferritin_greater_than_100"],
+    "ferritin_greater_than_300": ["ferritin_greater_than_100"],
     # tTG-IgA: strongly positive subsumes positive
     "ttg_iga_greater_than_10x_uln": ["ttg_iga_positive"],
     # Metanephrines: markedly elevated subsumes elevated

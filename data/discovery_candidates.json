@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "description": "Curated disease candidates for auto-discovery. importance and category are locked — LLM generates remaining illness script fields.",
+  "candidates": [
+    {
+      "disease_key": "adrenal_insufficiency",
+      "display_name": "Adrenal Insufficiency (Addison Disease)",
+      "importance": 5,
+      "category": "endocrine",
+      "wave": 1,
+      "key_analytes_hint": ["cortisol_am", "adrenocorticotropic_hormone", "sodium", "potassium", "glucose", "eosinophils_absolute"],
+      "notes": "Primary (ACTH high) vs secondary (ACTH low). cortisol_am and ACTH both in lab_ranges."
+    },
+    {
+      "disease_key": "HELLP_syndrome",
+      "display_name": "HELLP Syndrome",
+      "importance": 5,
+      "category": "hematologic",
+      "wave": 1,
+      "key_analytes_hint": ["platelets", "lactate_dehydrogenase", "aspartate_aminotransferase", "haptoglobin", "bilirubin_total"],
+      "notes": "Hemolysis + Elevated Liver enzymes + Low Platelets. Pregnancy-specific. All analytes available."
+    },
+    {
+      "disease_key": "ethylene_glycol_poisoning",
+      "display_name": "Ethylene Glycol Poisoning",
+      "importance": 5,
+      "category": "metabolic_toxic",
+      "wave": 1,
+      "key_analytes_hint": ["osmolality_serum", "bicarbonate", "calcium", "lactate", "creatinine"],
+      "notes": "Osmolar gap + anion gap metabolic acidosis + hypocalcemia. osmolality_serum available."
+    },
+    {
+      "disease_key": "macrophage_activation_syndrome",
+      "display_name": "Macrophage Activation Syndrome / HLH",
+      "importance": 5,
+      "category": "hematologic",
+      "wave": 1,
+      "key_analytes_hint": ["ferritin", "triglycerides", "fibrinogen", "platelets", "hemoglobin", "lactate_dehydrogenase", "aspartate_aminotransferase"],
+      "notes": "Ferritin >10000, triglycerides elevated, fibrinogen LOW (paradoxical), pancytopenia, LDH elevated, AST elevated. All analytes available."
+    },
+    {
+      "disease_key": "methanol_poisoning",
+      "display_name": "Methanol Poisoning",
+      "importance": 5,
+      "category": "metabolic_toxic",
+      "wave": 1,
+      "key_analytes_hint": ["osmolality_serum", "bicarbonate", "lactate"],
+      "notes": "Osmolar gap + anion gap metabolic acidosis. Similar to ethylene glycol but no hypocalcemia. osmolality_serum available."
+    },
+    {
+      "disease_key": "hemochromatosis",
+      "display_name": "Hereditary Hemochromatosis",
+      "importance": 4,
+      "category": "hepatic",
+      "wave": 1,
+      "key_analytes_hint": ["ferritin", "transferrin_saturation", "iron", "alanine_aminotransferase"],
+      "notes": "Ferritin >1000, transferrin saturation >45%. All analytes available. Pathognomonic lab pattern."
+    },
+    {
+      "disease_key": "alcoholic_hepatitis",
+      "display_name": "Alcoholic Hepatitis",
+      "importance": 4,
+      "category": "hepatic",
+      "wave": 1,
+      "key_analytes_hint": ["aspartate_aminotransferase", "alanine_aminotransferase", "gamma_glutamyl_transferase", "bilirubin_total", "international_normalized_ratio", "mean_corpuscular_volume"],
+      "notes": "AST:ALT ratio >2 is near-pathognomonic. GGT markedly elevated. MCV elevated from alcohol toxicity."
+    },
+    {
+      "disease_key": "chronic_myeloid_leukemia",
+      "display_name": "Chronic Myeloid Leukemia (CML)",
+      "importance": 4,
+      "category": "hematologic",
+      "wave": 1,
+      "key_analytes_hint": ["white_blood_cells", "basophils_absolute", "lactate_dehydrogenase", "uric_acid", "platelets"],
+      "notes": "WBC >100K with basophilia is distinctive. All analytes available."
+    },
+    {
+      "disease_key": "immune_thrombocytopenic_purpura",
+      "display_name": "Immune Thrombocytopenic Purpura (ITP)",
+      "importance": 4,
+      "category": "hematologic",
+      "wave": 1,
+      "key_analytes_hint": ["platelets", "white_blood_cells", "hemoglobin"],
+      "notes": "Isolated severe thrombocytopenia with normal WBC and hemoglobin. Diagnosis of exclusion but very distinctive isolated lab pattern."
+    },
+    {
+      "disease_key": "hepatorenal_syndrome",
+      "display_name": "Hepatorenal Syndrome",
+      "importance": 4,
+      "category": "renal",
+      "wave": 1,
+      "key_analytes_hint": ["creatinine", "bilirubin_total", "international_normalized_ratio", "sodium", "albumin"],
+      "notes": "Unique combined hepatic + renal failure pattern. All analytes available."
+    },
+    {
+      "disease_key": "cholangitis",
+      "display_name": "Ascending Cholangitis",
+      "importance": 4,
+      "category": "hepatic",
+      "wave": 2,
+      "key_analytes_hint": ["alkaline_phosphatase", "gamma_glutamyl_transferase", "bilirubin_direct", "white_blood_cells", "c_reactive_protein", "procalcitonin"],
+      "notes": "Charcot triad: fever + jaundice + RUQ pain. Cholestatic pattern + infection markers."
+    },
+    {
+      "disease_key": "pernicious_anemia",
+      "display_name": "Pernicious Anemia",
+      "importance": 3,
+      "category": "hematologic",
+      "wave": 2,
+      "key_analytes_hint": ["vitamin_b12", "mean_corpuscular_volume", "methylmalonic_acid", "homocysteine", "lactate_dehydrogenase"],
+      "notes": "B12 very low + MCV very high + MMA elevated distinguishes from folate deficiency. All analytes available."
+    },
+    {
+      "disease_key": "warm_autoimmune_hemolytic_anemia",
+      "display_name": "Warm Autoimmune Hemolytic Anemia (AIHA)",
+      "importance": 3,
+      "category": "hematologic",
+      "wave": 2,
+      "key_analytes_hint": ["hemoglobin", "reticulocyte_count", "haptoglobin", "lactate_dehydrogenase", "bilirubin_total"],
+      "notes": "Classic hemolysis pattern. Distinguished from TTP/HUS by normal platelets."
+    },
+    {
+      "disease_key": "myelodysplastic_syndrome",
+      "display_name": "Myelodysplastic Syndrome (MDS)",
+      "importance": 3,
+      "category": "hematologic",
+      "wave": 2,
+      "key_analytes_hint": ["hemoglobin", "white_blood_cells", "platelets", "mean_corpuscular_volume", "reticulocyte_count"],
+      "notes": "Pancytopenia with macrocytosis and LOW reticulocytes (unlike hemolysis). All available."
+    },
+    {
+      "disease_key": "chronic_lymphocytic_leukemia",
+      "display_name": "Chronic Lymphocytic Leukemia (CLL)",
+      "importance": 3,
+      "category": "hematologic",
+      "wave": 2,
+      "key_analytes_hint": ["white_blood_cells", "lymphocytes_absolute", "hemoglobin", "platelets"],
+      "notes": "Lymphocytosis >5K with WBC elevation. Distinguished from CML by cell line (lymphoid vs myeloid)."
+    },
+    {
+      "disease_key": "drug_induced_liver_injury",
+      "display_name": "Drug-Induced Liver Injury (DILI)",
+      "importance": 3,
+      "category": "hepatic",
+      "wave": 2,
+      "key_analytes_hint": ["alanine_aminotransferase", "aspartate_aminotransferase", "alkaline_phosphatase", "bilirubin_total"],
+      "notes": "Hepatocellular (ALT>10xULN), cholestatic (ALP>3xULN), or mixed. R-factor = (ALT/ULN) / (ALP/ULN)."
+    },
+    {
+      "disease_key": "cholestatic_liver_disease",
+      "display_name": "Cholestatic Liver Disease",
+      "importance": 3,
+      "category": "hepatic",
+      "wave": 2,
+      "key_analytes_hint": ["alkaline_phosphatase", "gamma_glutamyl_transferase", "bilirubin_direct", "alanine_aminotransferase"],
+      "notes": "ALP very high + GGT very high with direct bilirubin elevated. ALT mildly elevated. Distinguished from hepatocellular by ALP:ALT ratio."
+    },
+    {
+      "disease_key": "metabolic_alkalosis",
+      "display_name": "Metabolic Alkalosis",
+      "importance": 3,
+      "category": "metabolic_toxic",
+      "wave": 2,
+      "key_analytes_hint": ["bicarbonate", "chloride", "potassium"],
+      "notes": "Bicarbonate very high, chloride low, potassium low. Saline-responsive (vomiting) vs saline-resistant (hyperaldosteronism)."
+    },
+    {
+      "disease_key": "sjogren_syndrome",
+      "display_name": "Sjogren Syndrome",
+      "importance": 3,
+      "category": "rheumatologic",
+      "wave": 2,
+      "key_analytes_hint": ["rheumatoid_factor", "erythrocyte_sedimentation_rate", "antinuclear_antibody_titer", "complement_c3", "complement_c4"],
+      "notes": "RF elevated, ESR elevated, ANA positive. Distinguished from RA by anti-CCP NEGATIVE. Needs anti-SSA/SSB (not in lab_ranges) for specificity."
+    },
+    {
+      "disease_key": "milk_alkali_syndrome",
+      "display_name": "Milk-Alkali Syndrome",
+      "importance": 3,
+      "category": "metabolic_toxic",
+      "wave": 3,
+      "key_analytes_hint": ["calcium", "bicarbonate", "creatinine", "phosphorus"],
+      "notes": "Hypercalcemia + metabolic alkalosis + AKI. Unique triad. All analytes available."
+    },
+    {
+      "disease_key": "vitamin_d_deficiency",
+      "display_name": "Vitamin D Deficiency",
+      "importance": 2,
+      "category": "endocrine",
+      "wave": 3,
+      "key_analytes_hint": ["vitamin_d_25_hydroxy", "parathyroid_hormone", "calcium", "alkaline_phosphatase", "phosphorus"],
+      "notes": "Vitamin D low + secondary PTH elevated + calcium low or normal + ALP elevated. All available."
+    },
+    {
+      "disease_key": "secondary_hyperparathyroidism",
+      "display_name": "Secondary Hyperparathyroidism",
+      "importance": 3,
+      "category": "endocrine",
+      "wave": 3,
+      "key_analytes_hint": ["parathyroid_hormone", "calcium", "phosphorus", "vitamin_d_25_hydroxy", "creatinine"],
+      "notes": "PTH elevated + calcium low or normal + phosphorus elevated (if renal). Distinguished from primary hyperPTH by calcium direction."
+    },
+    {
+      "disease_key": "primary_biliary_cholangitis",
+      "display_name": "Primary Biliary Cholangitis (PBC)",
+      "importance": 3,
+      "category": "hepatic",
+      "wave": 3,
+      "key_analytes_hint": ["alkaline_phosphatase", "gamma_glutamyl_transferase", "bilirubin_total"],
+      "notes": "ALP very elevated, dominant. Needs AMA antibody for specificity (not in lab_ranges). Pattern-only may work."
+    },
+    {
+      "disease_key": "acute_interstitial_nephritis",
+      "display_name": "Acute Interstitial Nephritis",
+      "importance": 3,
+      "category": "renal",
+      "wave": 3,
+      "key_analytes_hint": ["creatinine", "eosinophils_absolute", "white_blood_cells"],
+      "notes": "Creatinine elevated + eosinophilia. Classic drug-induced (NSAIDs, antibiotics). Eosinophilia distinguishes from other AKI causes."
+    },
+    {
+      "disease_key": "antiphospholipid_syndrome",
+      "display_name": "Antiphospholipid Syndrome (APS)",
+      "importance": 3,
+      "category": "rheumatologic",
+      "wave": 3,
+      "key_analytes_hint": ["partial_thromboplastin_time", "platelets", "d_dimer"],
+      "notes": "PTT elevated (lupus anticoagulant), thrombocytopenia. Needs anticardiolipin antibodies (not in lab_ranges). Marginal viability."
+    }
+  ]
+}

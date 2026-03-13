@@ -153,13 +153,14 @@ class TestThresholdRules:
         assert "ferritin_less_than_45" in keys
 
     def test_ferritin_greater_than_1000(self):
-        """Ferritin 2500 → matches ferritin_greater_than_100 and _1000."""
+        """Ferritin 2500 → matches ferritin_greater_than_1000, subsumes _300 and _100."""
         labs = [make_lv("ferritin", 2500.0, "ng/mL",
                         ref_low=12.0, ref_high=150.0, z_score=68.1, severity=Severity.CRITICAL)]
         results = map_labs_to_findings(labs)
         keys = finding_keys(results)
-        assert "ferritin_greater_than_100" in keys
         assert "ferritin_greater_than_1000" in keys
+        assert "ferritin_greater_than_300" not in keys  # subsumed by >1000
+        assert "ferritin_greater_than_100" not in keys  # subsumed by >1000
 
     def test_ck_greater_than_5x_uln(self):
         """CK at ~6x ULN → matches 5x but not 10x."""

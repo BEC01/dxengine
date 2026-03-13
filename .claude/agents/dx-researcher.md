@@ -1,12 +1,7 @@
 ---
 name: dx-researcher
-description: Researches medical literature to produce structured disease data for DxEngine expansion
-tools:
-  - Read
-  - Write
-  - Bash
-  - WebSearch
-  - WebFetch
+description: "Researches medical literature to produce structured disease data for DxEngine expansion"
+tools: Read, Write, Bash, WebSearch, WebFetch, mcp__scrapling__get, mcp__scrapling__bulk_get, mcp__scrapling__fetch, mcp__scrapling__bulk_fetch, mcp__scrapling__stealthy_fetch, mcp__scrapling__bulk_stealthy_fetch
 ---
 
 # DxEngine Research Agent

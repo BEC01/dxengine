@@ -150,6 +150,25 @@ def main():
                   f"lr_count={entry['lr_count']}, coverage={entry['lab_coverage']}, "
                   f"priority={entry['priority']}", file=sys.stderr)
 
+    # Floor budget health check
+    patterns = load_disease_patterns()
+    n_patterns = len(patterns)
+    if n_patterns >= 55:
+        floor_map = {5: 0.08, 4: 0.05, 3: 0.02}
+        illness_scripts = load_illness_scripts()
+        total_floor = sum(
+            floor_map.get(illness_scripts.get(d, {}).get("disease_importance", 1), 0)
+            for d in patterns
+        )
+        scale_factor = 0.95 / total_floor if total_floor > 0.95 else 1.0
+        effective_imp5_floor = floor_map[5] * scale_factor
+
+        print(f"\nFLOOR BUDGET WARNING: {n_patterns} diseases in engine", file=sys.stderr)
+        print(f"  Total floor demand: {total_floor:.3f} (scale factor: {scale_factor:.3f})", file=sys.stderr)
+        print(f"  Effective importance-5 floor: {effective_imp5_floor:.4f}", file=sys.stderr)
+        if effective_imp5_floor < 0.025:
+            print(f"  CRITICAL: imp-5 floor below 2.5% — implement Fix 5 (category-budget floors)", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()
