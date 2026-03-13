@@ -2179,6 +2179,20 @@
       "finding_type": "sign",
       "importance": 3,
       "quality": "high"
+    },
+    {
+      "finding_key": "pregnancy_hypertensive_disorder",
+      "match_terms": [
+        "preeclampsia",
+        "eclampsia",
+        "hellp",
+        "pregnancy-induced hypertension",
+        "gestational hypertension",
+        "toxemia of pregnancy"
+      ],
+      "finding_type": "sign",
+      "importance": 5,
+      "quality": "high"
     }
   ],
   "vitals_rules": []

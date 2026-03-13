@@ -1913,5 +1913,41 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 25000"
+  },
+  "hellp_syndrome": {
+    "description": "HELLP syndrome: Hemolysis, Elevated Liver enzymes, Low Platelets",
+    "pattern": {
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.9,
+        "typical_value": 45.0
+      },
+      "haptoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.8
+      },
+      "aspartate_aminotransferase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.8,
+        "typical_value": 150.0
+      },
+      "bilirubin_total": {
+        "direction": "increased",
+        "typical_z_score": 2.0,
+        "weight": 0.55,
+        "typical_value": 3.0
+      },
+      "bilirubin_direct": {
+        "direction": "normal",
+        "typical_z_score": 0.0,
+        "weight": 0.35
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 1000 pregnancies"
   }
 }

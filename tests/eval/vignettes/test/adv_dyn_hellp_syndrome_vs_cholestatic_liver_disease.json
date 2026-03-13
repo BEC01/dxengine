@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hellp_syndrome_vs_cholestatic_liver_disease",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hellp_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "right upper quadrant or epigastric pain (hepatic capsule distension, subcapsular hematoma)",
+    "symptoms": [
+      "right upper quadrant or epigastric pain (hepatic capsule distension, subcapsular hematoma)",
+      "nausea and vomiting",
+      "malaise and fatigue",
+      "headache",
+      "hypertension with proteinuria (preeclampsia features present in 85% of cases)"
+    ],
+    "signs": [
+      "jaundice (less common, from hemolytic hyperbilirubinemia)",
+      "peripheral edema and rapid weight gain"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 29.6,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 75.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 13.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 100.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 26.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 20.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hellp_syndrome",
+    "acceptable_alternatives": [
+      "cholestatic_liver_disease"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hellp_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

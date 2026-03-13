@@ -31,9 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 12.8,
-            "unit": "g/dL"
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.0,
+            "unit": "titer"
           },
           {
             "test_name": "mean_corpuscular_volume",
@@ -41,49 +41,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "transferrin_saturation",
-            "value": 27.0,
-            "unit": "%"
-          },
-          {
-            "test_name": "antinuclear_antibody_titer",
-            "value": 1.0,
-            "unit": "titer"
-          },
-          {
             "test_name": "ferritin",
             "value": 103.5,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "complement_c3",
-            "value": 101.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 1.3,
-            "unit": "%"
-          },
-          {
-            "test_name": "anti_dsdna_antibody",
-            "value": 25.0,
-            "unit": "IU/mL"
-          },
-          {
-            "test_name": "c_reactive_protein",
-            "value": 1.9,
-            "unit": "mg/L"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 328.8,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 17.5,
-            "unit": "mm/hr"
           },
           {
             "test_name": "complement_c4",
@@ -91,13 +51,28 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "red_cell_distribution_width",
-            "value": 13.4,
+            "test_name": "iron",
+            "value": 91.2,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 27.0,
             "unit": "%"
           },
           {
-            "test_name": "iron",
-            "value": 91.2,
+            "test_name": "hemoglobin",
+            "value": 12.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 101.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 328.8,
             "unit": "mcg/dL"
           },
           {
@@ -109,6 +84,31 @@
             "test_name": "platelets",
             "value": 251.6,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.4,
+            "unit": "%"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 1.9,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 17.5,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "anti_dsdna_antibody",
+            "value": 25.0,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.3,
+            "unit": "%"
           }
         ]
       }

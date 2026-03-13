@@ -52,6 +52,11 @@
             "unit": "%"
           },
           {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "bilirubin_direct",
             "value": 0.1,
             "unit": "mg/dL"
@@ -59,11 +64,6 @@
           {
             "test_name": "haptoglobin",
             "value": 0.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bilirubin_total",
-            "value": 1.2,
             "unit": "mg/dL"
           },
           {

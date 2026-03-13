@@ -66,13 +66,13 @@
             "unit": "mcmol/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.0,
+            "test_name": "platelets",
+            "value": 260.0,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "platelets",
-            "value": 260.0,
+            "test_name": "white_blood_cells",
+            "value": 7.0,
             "unit": "x10^9/L"
           }
         ]

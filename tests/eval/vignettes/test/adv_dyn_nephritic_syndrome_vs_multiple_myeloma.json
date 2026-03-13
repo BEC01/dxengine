@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "albumin",
             "value": 3.8,
             "unit": "g/dL"
@@ -39,11 +44,6 @@
             "test_name": "glomerular_filtration_rate",
             "value": 89.2,
             "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
           },
           {
             "test_name": "complement_c3",
@@ -56,8 +56,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
+            "test_name": "total_protein",
+            "value": 7.2,
             "unit": "g/dL"
           },
           {
@@ -66,14 +66,14 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "erythrocyte_sedimentation_rate",
             "value": 7.5,
             "unit": "mm/hr"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 7.2,
-            "unit": "g/dL"
           }
         ]
       }

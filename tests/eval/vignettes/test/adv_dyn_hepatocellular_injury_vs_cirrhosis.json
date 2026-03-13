@@ -32,9 +32,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "albumin",
-            "value": 3.6,
-            "unit": "g/dL"
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "international_normalized_ratio",
@@ -42,18 +42,13 @@
             "unit": "ratio"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.3,
-            "unit": "mg/dL"
+            "test_name": "albumin",
+            "value": 3.6,
+            "unit": "g/dL"
           },
           {
             "test_name": "lactate_dehydrogenase",
             "value": 266.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 80.5,
             "unit": "U/L"
           },
           {
@@ -62,14 +57,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 126.4,
+            "test_name": "alanine_aminotransferase",
+            "value": 80.5,
             "unit": "U/L"
           },
           {
-            "test_name": "sodium",
-            "value": 140.5,
-            "unit": "mEq/L"
+            "test_name": "alkaline_phosphatase",
+            "value": 126.4,
+            "unit": "U/L"
           },
           {
             "test_name": "ammonia",
@@ -80,6 +75,11 @@
             "test_name": "platelets",
             "value": 275.0,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
           }
         ]
       }

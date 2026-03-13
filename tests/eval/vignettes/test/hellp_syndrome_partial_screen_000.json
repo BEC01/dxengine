@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "hellp_syndrome_partial_screen_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hellp_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "right upper quadrant or epigastric pain (hepatic capsule distension, subcapsular hematoma)",
+    "symptoms": [
+      "right upper quadrant or epigastric pain (hepatic capsule distension, subcapsular hematoma)",
+      "nausea and vomiting",
+      "malaise and fatigue",
+      "headache",
+      "hypertension with proteinuria (preeclampsia features present in 85% of cases)"
+    ],
+    "signs": [
+      "jaundice (less common, from hemolytic hyperbilirubinemia)",
+      "peripheral edema and rapid weight gain"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 45.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 150.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 3.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hellp_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hellp_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "id": "adv_dyn_ttp_hus_vs_hellp_syndrome",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "ttp_hus",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "microangiopathic hemolytic anemia (schistocytes)",
+    "symptoms": [
+      "microangiopathic hemolytic anemia (schistocytes)",
+      "severe thrombocytopenia",
+      "renal impairment",
+      "neurologic symptoms (TTP: confusion, seizures, stroke)",
+      "fever"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 100.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 10.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 350.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 0.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 20.5,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "ttp_hus",
+    "acceptable_alternatives": [
+      "hellp_syndrome"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "ttp_hus"
+    ],
+    "cant_miss_diseases": []
+  }
+}

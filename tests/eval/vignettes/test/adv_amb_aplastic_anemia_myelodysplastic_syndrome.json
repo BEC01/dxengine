@@ -31,6 +31,16 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "platelets",
+            "value": 152.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 11.9,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "white_blood_cells",
             "value": 4.4,
             "unit": "x10^9/L"
@@ -39,16 +49,6 @@
             "test_name": "reticulocyte_count",
             "value": 0.8,
             "unit": "%"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 11.9,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 152.0,
-            "unit": "x10^9/L"
           }
         ]
       }

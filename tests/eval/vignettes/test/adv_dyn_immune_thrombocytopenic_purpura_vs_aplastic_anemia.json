@@ -47,14 +47,14 @@
             "unit": "fL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "neutrophils_absolute",
             "value": 4.8,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
           },
           {
             "test_name": "white_blood_cells",

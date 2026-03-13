@@ -691,6 +691,10 @@
       "cirrhosis": {
         "lr_positive": 3.0,
         "lr_negative": 0.5
+      },
+      "hellp_syndrome": {
+        "lr_positive": 1.2,
+        "lr_negative": 0.8
       }
     }
   },
@@ -708,6 +712,10 @@
       "ineffective_erythropoiesis": {
         "lr_positive": 4.0,
         "lr_negative": 0.5
+      },
+      "hellp_syndrome": {
+        "lr_positive": 1.2,
+        "lr_negative": 0.7
       }
     }
   },
@@ -737,6 +745,10 @@
       "ttp_hus": {
         "lr_positive": 6.0,
         "lr_negative": 0.3
+      },
+      "hellp_syndrome": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.4
       }
     }
   },
@@ -813,6 +825,10 @@
       "ttp_hus": {
         "lr_positive": 3.0,
         "lr_negative": 0.3
+      },
+      "hellp_syndrome": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -889,6 +905,10 @@
       "immune_thrombocytopenic_purpura": {
         "lr_positive": 4.0,
         "lr_negative": 0.3
+      },
+      "hellp_syndrome": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2974,6 +2994,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "hellp_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.2
       }
     }
   },
@@ -3539,6 +3563,15 @@
       "chronic_lymphocytic_leukemia": {
         "lr_positive": 8.0,
         "lr_negative": 0.05
+      }
+    }
+  },
+  "pregnancy_hypertensive_disorder": {
+    "description": "Pregnancy-related hypertensive disorder (preeclampsia/eclampsia/HELLP)",
+    "diseases": {
+      "hellp_syndrome": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.08
       }
     }
   }

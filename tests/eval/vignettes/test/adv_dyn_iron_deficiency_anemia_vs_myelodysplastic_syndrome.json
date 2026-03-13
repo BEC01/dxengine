@@ -32,6 +32,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "platelets",
+            "value": 249.5,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "mean_corpuscular_volume",
             "value": 90.9,
             "unit": "fL"
@@ -47,24 +52,9 @@
             "unit": "%"
           },
           {
-            "test_name": "platelets",
-            "value": 249.5,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "transferrin_saturation",
-            "value": 20.0,
-            "unit": "%"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 370.0,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "red_cell_distribution_width",
-            "value": 14.2,
-            "unit": "%"
+            "test_name": "ferritin",
+            "value": 0.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "iron",
@@ -72,9 +62,19 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "ferritin",
-            "value": 0.0,
-            "unit": "ng/mL"
+            "test_name": "transferrin_saturation",
+            "value": 20.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 14.2,
+            "unit": "%"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 370.0,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "white_blood_cells",
