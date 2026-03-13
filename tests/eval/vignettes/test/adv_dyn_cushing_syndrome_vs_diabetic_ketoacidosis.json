@@ -31,19 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "potassium",
             "value": 4.2,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "white_blood_cells",
-            "value": 9.7,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "glucose",
@@ -51,9 +41,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 1.8,
+            "test_name": "white_blood_cells",
+            "value": 9.7,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "cortisol_am",
@@ -61,24 +56,24 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.8,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "calcium",
             "value": 9.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
             "unit": "mg/dL"
           },
           {
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin_a1c",
@@ -88,6 +83,11 @@
           {
             "test_name": "phosphorus",
             "value": 3.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
             "unit": "mg/dL"
           }
         ]

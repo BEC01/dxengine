@@ -1330,5 +1330,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 1500"
+  },
+  "hypercalcemia_of_malignancy": {
+    "description": "Paraneoplastic hypercalcemia from PTHrP secretion (80%) or osteolytic metastases (20%). Defining lab pattern: markedly elevated calcium with SUPPRESSED PTH (opposite of primary hyperparathyroidism where PTH is elevated). Often severe calcium >14 mg/dL. Elevated ALP from bone metastases. Elevated creatinine from dehydration.",
+    "pattern": {
+      "calcium": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9
+      },
+      "parathyroid_hormone": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.85
+      },
+      "alkaline_phosphatase": {
+        "direction": "increased",
+        "typical_z_score": 3.5,
+        "weight": 0.45
+      },
+      "phosphorus": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.35
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 2000"
   }
 }

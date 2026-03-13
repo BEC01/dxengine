@@ -32,14 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
+            "test_name": "free_thyroxine",
+            "value": 0.7,
+            "unit": "ng/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 15.9,
-            "unit": "mg/dL"
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.8,
+            "unit": "g/dL"
           },
           {
             "test_name": "albumin",
@@ -52,14 +57,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "potassium",
-            "value": 4.4,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.8,
-            "unit": "g/dL"
+            "test_name": "calcium",
+            "value": 9.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "sodium",
@@ -72,23 +72,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 5.8,
-            "unit": "mIU/L"
-          },
-          {
             "test_name": "ldl_cholesterol",
             "value": 87.5,
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 24.8,
+            "test_name": "potassium",
+            "value": 4.4,
             "unit": "mEq/L"
           },
           {
@@ -102,19 +92,29 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.2,
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.9,
             "unit": "mg/dL"
           },
           {
-            "test_name": "free_thyroxine",
-            "value": 0.7,
-            "unit": "ng/dL"
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 5.8,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.8,
+            "unit": "mEq/L"
           }
         ]
       }

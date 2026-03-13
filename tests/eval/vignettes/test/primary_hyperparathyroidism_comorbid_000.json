@@ -29,24 +29,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 38.8,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 16.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.5,
-            "unit": "mEq/L"
+            "test_name": "parathyroid_hormone",
+            "value": 77.5,
+            "unit": "pg/mL"
           },
           {
             "test_name": "hemoglobin",
@@ -54,14 +44,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.2,
-            "unit": "mg/dL"
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -69,13 +54,18 @@
             "unit": "U/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 23.5,
-            "unit": "mEq/L"
+            "test_name": "calcium",
+            "value": 10.1,
+            "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 105.0,
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.5,
             "unit": "mEq/L"
           },
           {
@@ -84,19 +74,29 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 77.5,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 38.8,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 10.1,
+            "test_name": "blood_urea_nitrogen",
+            "value": 16.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "chloride",
+            "value": 105.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 23.5,
+            "unit": "mEq/L"
           }
         ]
       }

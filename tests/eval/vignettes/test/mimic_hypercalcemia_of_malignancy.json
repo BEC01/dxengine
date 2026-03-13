@@ -1,24 +1,18 @@
 {
   "metadata": {
-    "id": "adv_amb_acute_myocardial_infarction_pulmonary_embolism",
-    "category": "adversarial",
+    "id": "mimic_hypercalcemia_of_malignancy",
+    "category": "negative",
     "difficulty": "adversarial",
     "split": "test",
-    "source": "adversarial",
+    "source": "synthetic",
     "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
     "age": 45,
-    "sex": "female",
-    "chief_complaint": "substernal chest pressure/tightness",
-    "symptoms": [
-      "substernal chest pressure/tightness",
-      "radiation to left arm, jaw, back",
-      "diaphoresis",
-      "dyspnea",
-      "nausea/vomiting"
-    ],
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],
@@ -29,19 +23,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "b_type_natriuretic_peptide",
-            "value": 125.0,
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
             "unit": "pg/mL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 298.2,
+            "test_name": "alkaline_phosphatase",
+            "value": 149.6,
             "unit": "U/L"
           },
           {
-            "test_name": "troponin_i",
-            "value": 0.0,
-            "unit": "ng/mL"
+            "test_name": "phosphorus",
+            "value": 2.9,
+            "unit": "mg/dL"
           }
         ]
       }

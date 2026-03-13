@@ -31,13 +31,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 21.1,
+            "test_name": "uric_acid",
+            "value": 6.6,
             "unit": "mg/dL"
           },
           {
@@ -46,18 +41,23 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "blood_urea_nitrogen",
+            "value": 21.1,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "calcium",
             "value": 8.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 6.6,
+            "test_name": "phosphorus",
+            "value": 4.3,
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.3,
+            "test_name": "creatinine",
+            "value": 1.2,
             "unit": "mg/dL"
           }
         ]

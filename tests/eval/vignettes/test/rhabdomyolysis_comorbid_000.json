@@ -29,19 +29,29 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "myoglobin",
             "value": 105.0,
             "unit": "ng/mL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 16.4,
-            "unit": "mg/dL"
+            "test_name": "parathyroid_hormone",
+            "value": 51.2,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.7,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 315.0,
+            "unit": "U/L"
           },
           {
             "test_name": "albumin",
@@ -54,19 +64,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "potassium",
-            "value": 5.1,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 47.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.9,
-            "unit": "g/dL"
+            "test_name": "calcium",
+            "value": 8.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
@@ -74,13 +74,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 24.7,
+            "test_name": "potassium",
+            "value": 5.1,
             "unit": "mEq/L"
           },
           {
@@ -94,19 +89,24 @@
             "unit": "U/L"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 51.2,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 8.5,
+            "test_name": "blood_urea_nitrogen",
+            "value": 16.4,
             "unit": "mg/dL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 315.0,
+            "test_name": "phosphorus",
+            "value": 4.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 47.5,
             "unit": "U/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.5,
+            "unit": "mg/dL"
           }
         ]
       }

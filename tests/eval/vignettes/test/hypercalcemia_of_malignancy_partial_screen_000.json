@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "id": "hypercalcemia_of_malignancy_partial_screen_000",
+    "category": "oncologic_emergency",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hypercalcemia_of_malignancy",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "confusion/lethargy",
+    "symptoms": [
+      "confusion/lethargy",
+      "polyuria/polydipsia",
+      "constipation",
+      "nausea/vomiting",
+      "bone pain"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "calcium",
+            "value": 12.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 185.6,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypercalcemia_of_malignancy",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hypercalcemia_of_malignancy"
+    ],
+    "cant_miss_diseases": []
+  }
+}

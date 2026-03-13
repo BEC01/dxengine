@@ -658,6 +658,10 @@
       "hepatocellular_injury": {
         "lr_positive": 0.8,
         "lr_negative": 1.0
+      },
+      "hypercalcemia_of_malignancy": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.7
       }
     }
   },

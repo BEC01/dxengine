@@ -35,24 +35,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "bicarbonate",
-            "value": 25.1,
-            "unit": "mEq/L"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 58.4,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "total_cholesterol",
-            "value": 25.0,
+            "test_name": "uric_acid",
+            "value": 5.0,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
-            "unit": "pg/mL"
           },
           {
             "test_name": "free_triiodothyronine",
@@ -60,18 +50,28 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 58.4,
-            "unit": "ng/mL"
+            "test_name": "free_thyroxine",
+            "value": 2.0,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 25.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 146.2,
+            "unit": "U/L"
           },
           {
             "test_name": "calcium",
             "value": 9.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.0,
             "unit": "mg/dL"
           },
           {
@@ -85,14 +85,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "free_thyroxine",
-            "value": 2.0,
-            "unit": "ng/dL"
+            "test_name": "bicarbonate",
+            "value": 25.1,
+            "unit": "mEq/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 146.2,
-            "unit": "U/L"
+            "test_name": "chloride",
+            "value": 102.8,
+            "unit": "mEq/L"
           }
         ]
       }

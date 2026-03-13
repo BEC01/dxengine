@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_iron_binding_capacity",
-            "value": 320.5,
-            "unit": "mcg/dL"
-          },
-          {
             "test_name": "transferrin_saturation",
             "value": 37.6,
             "unit": "%"
+          },
+          {
+            "test_name": "iron",
+            "value": 118.0,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "ferritin",
@@ -47,8 +47,8 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "iron",
-            "value": 118.0,
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
             "unit": "mcg/dL"
           },
           {
@@ -57,9 +57,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 0.9,
-            "unit": "%"
+            "test_name": "platelets",
+            "value": 332.0,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "hemoglobin",
@@ -72,14 +72,9 @@
             "unit": "%"
           },
           {
-            "test_name": "platelets",
-            "value": 332.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
-            "unit": "U/L"
+            "test_name": "reticulocyte_count",
+            "value": 0.9,
+            "unit": "%"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -90,6 +85,11 @@
             "test_name": "glucose",
             "value": 85.0,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
           }
         ]
       }
