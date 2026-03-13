@@ -1302,5 +1302,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 400"
+  },
+  "pulmonary_embolism": {
+    "description": "Pulmonary artery thromboembolism causing V/Q mismatch and right ventricular strain. Key lab pattern: markedly elevated D-dimer (sensitive screening marker), mildly elevated troponin (RV strain marker), elevated BNP (RV dysfunction). Normal d-dimer has strong rule-out power (LR- 0.08).",
+    "pattern": {
+      "d_dimer": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9
+      },
+      "troponin_i": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.4
+      },
+      "b_type_natriuretic_peptide": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.35
+      },
+      "lactate_dehydrogenase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.2
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 1500"
   }
 }

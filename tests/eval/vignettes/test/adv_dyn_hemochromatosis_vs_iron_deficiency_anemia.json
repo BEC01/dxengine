@@ -31,8 +31,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "iron",
-            "value": 115.2,
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
             "unit": "mcg/dL"
           },
           {
@@ -46,8 +46,8 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "total_iron_binding_capacity",
-            "value": 320.5,
+            "test_name": "iron",
+            "value": 115.2,
             "unit": "mcg/dL"
           },
           {
@@ -56,29 +56,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "glucose",
-            "value": 94.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "aspartate_aminotransferase",
             "value": 29.7,
             "unit": "U/L"
           },
           {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 1.5,
-            "unit": "%"
+            "test_name": "glucose",
+            "value": 94.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "mean_corpuscular_volume",
@@ -86,9 +71,24 @@
             "unit": "fL"
           },
           {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "red_cell_distribution_width",
             "value": 13.0,
             "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
           }
         ]
       }

@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "id": "pulmonary_embolism_demog_000",
+    "category": "cardiovascular",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "pulmonary_embolism",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "acute dyspnea (most common)",
+    "symptoms": [
+      "acute dyspnea (most common)",
+      "pleuritic chest pain",
+      "tachycardia",
+      "tachypnea",
+      "hypoxemia"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "d_dimer",
+            "value": 0.9,
+            "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "b_type_natriuretic_peptide",
+            "value": 150.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 315.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "pulmonary_embolism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "pulmonary_embolism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

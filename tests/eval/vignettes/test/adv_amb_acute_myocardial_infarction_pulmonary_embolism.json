@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_amb_hepatocellular_injury_cholestatic_liver_disease",
+    "id": "adv_amb_acute_myocardial_infarction_pulmonary_embolism",
     "category": "adversarial",
     "difficulty": "adversarial",
     "split": "test",
@@ -10,19 +10,16 @@
   },
   "patient": {
     "age": 45,
-    "sex": "male",
-    "chief_complaint": "right upper quadrant pain",
+    "sex": "female",
+    "chief_complaint": "substernal chest pressure/tightness",
     "symptoms": [
-      "right upper quadrant pain",
-      "nausea/vomiting",
-      "fatigue",
-      "dark urine",
-      "pale stools"
+      "substernal chest pressure/tightness",
+      "radiation to left arm, jaw, back",
+      "diaphoresis",
+      "dyspnea",
+      "nausea/vomiting"
     ],
-    "signs": [
-      "jaundice",
-      "hepatomegaly"
-    ],
+    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -32,24 +29,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
-            "unit": "U/L"
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 55.4,
-            "unit": "U/L"
+            "test_name": "b_type_natriuretic_peptide",
+            "value": 125.0,
+            "unit": "pg/mL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
+            "test_name": "lactate_dehydrogenase",
+            "value": 298.2,
             "unit": "U/L"
-          },
-          {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
-            "unit": "mg/dL"
           }
         ]
       }

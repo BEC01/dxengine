@@ -40,19 +40,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.3,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "international_normalized_ratio",
             "value": 1.1,
             "unit": "ratio"
           },
           {
-            "test_name": "ammonia",
-            "value": 73.2,
-            "unit": "mcmol/L"
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "platelets",
@@ -65,14 +60,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 95.5,
-            "unit": "U/L"
+            "test_name": "ammonia",
+            "value": 73.2,
+            "unit": "mcmol/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -80,8 +70,18 @@
             "unit": "U/L"
           },
           {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
+          },
+          {
             "test_name": "aspartate_aminotransferase",
             "value": 25.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
             "unit": "U/L"
           }
         ]

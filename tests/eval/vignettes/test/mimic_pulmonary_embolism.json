@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_pulmonary_embolism",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "d_dimer",
+            "value": 0.2,
+            "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "b_type_natriuretic_peptide",
+            "value": 110.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 273.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}
