@@ -3261,6 +3261,10 @@
       "cirrhosis": {
         "lr_positive": 3.5,
         "lr_negative": 0.4
+      },
+      "nephrotic_syndrome": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.2
       }
     }
   },
@@ -3336,6 +3340,24 @@
       "hypoparathyroidism": {
         "lr_positive": 3.0,
         "lr_negative": 0.5
+      }
+    }
+  },
+  "total_cholesterol_elevated": {
+    "description": "Hyperlipidemia from compensatory hepatic lipoprotein synthesis",
+    "diseases": {
+      "nephrotic_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "triglycerides_elevated": {
+    "description": "Hypertriglyceridemia",
+    "diseases": {
+      "nephrotic_syndrome": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
       }
     }
   }

@@ -31,21 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "anti_dsdna_antibody",
-            "value": 25.6,
-            "unit": "IU/mL"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "complement_c3",
-            "value": 102.6,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "erythrocyte_sedimentation_rate",
             "value": 18.2,
             "unit": "mm/hr"
@@ -61,9 +46,24 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "anti_dsdna_antibody",
+            "value": 25.6,
+            "unit": "IU/mL"
+          },
+          {
             "test_name": "antinuclear_antibody_titer",
             "value": 1.0,
             "unit": "titer"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 102.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.0,
+            "unit": "x10^9/L"
           }
         ]
       }

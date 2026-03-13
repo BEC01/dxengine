@@ -31,9 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 9.4,
-            "unit": "mg/dL"
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -46,9 +46,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 3.6,
-            "unit": "g/dL"
+            "test_name": "calcium",
+            "value": 9.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "creatinine",
@@ -56,19 +56,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.5,
+            "test_name": "albumin",
+            "value": 3.6,
             "unit": "g/dL"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 24.5,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 70.0,
-            "unit": "pg/mL"
           },
           {
             "test_name": "potassium",
@@ -86,14 +81,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "total_protein",
-            "value": 7.2,
-            "unit": "g/dL"
+            "test_name": "parathyroid_hormone",
+            "value": 70.0,
+            "unit": "pg/mL"
           },
           {
             "test_name": "erythrocyte_sedimentation_rate",
             "value": 15.0,
             "unit": "mm/hr"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 7.2,
+            "unit": "g/dL"
           }
         ]
       }

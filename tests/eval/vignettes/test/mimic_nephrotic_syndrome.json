@@ -1,24 +1,18 @@
 {
   "metadata": {
-    "id": "adv_amb_pulmonary_embolism_myocarditis",
-    "category": "adversarial",
+    "id": "mimic_nephrotic_syndrome",
+    "category": "negative",
     "difficulty": "adversarial",
     "split": "test",
-    "source": "adversarial",
+    "source": "synthetic",
     "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "acute dyspnea (most common)",
-    "symptoms": [
-      "acute dyspnea (most common)",
-      "pleuritic chest pain",
-      "tachycardia",
-      "tachypnea",
-      "hypoxemia"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
     "signs": [],
     "medical_history": [],
     "medications": [],
@@ -29,14 +23,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "b_type_natriuretic_peptide",
-            "value": 125.0,
-            "unit": "pg/mL"
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
           },
           {
-            "test_name": "troponin_i",
-            "value": 0.0,
-            "unit": "ng/mL"
+            "test_name": "total_cholesterol",
+            "value": 100.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 165.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 6.1,
+            "unit": "g/dL"
           }
         ]
       }

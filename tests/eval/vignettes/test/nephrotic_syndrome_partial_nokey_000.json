@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "nephrotic_syndrome_partial_nokey_000",
+    "category": "renal",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "nephrotic_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "pleural effusions",
+    "symptoms": [
+      "pleural effusions",
+      "foamy urine",
+      "weight gain",
+      "fatigue"
+    ],
+    "signs": [
+      "periorbital edema (morning)",
+      "dependent edema",
+      "ascites"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "total_cholesterol",
+            "value": 300.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 225.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 5.4,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "nephrotic_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "nephrotic_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

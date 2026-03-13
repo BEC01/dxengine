@@ -1544,5 +1544,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 2700"
+  },
+  "nephrotic_syndrome": {
+    "description": "Glomerular protein loss causing severe hypoalbuminemia, hyperlipidemia, and edema. Characterized by proteinuria >3.5g/day.",
+    "pattern": {
+      "albumin": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.9
+      },
+      "total_cholesterol": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.75
+      },
+      "triglycerides": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.65
+      },
+      "total_protein": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.6
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 50000"
   }
 }

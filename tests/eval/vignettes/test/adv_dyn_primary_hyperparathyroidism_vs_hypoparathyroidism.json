@@ -29,8 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 9.2,
+            "test_name": "phosphorus",
+            "value": 3.7,
             "unit": "mg/dL"
           },
           {
@@ -39,8 +39,8 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.7,
+            "test_name": "calcium",
+            "value": 9.2,
             "unit": "mg/dL"
           },
           {
@@ -54,14 +54,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 44.0,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 24.1,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 44.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "chloride",

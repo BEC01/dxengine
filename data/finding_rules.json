@@ -782,6 +782,18 @@
       "test": "parathyroid_hormone",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "total_cholesterol_elevated",
+      "test": "total_cholesterol",
+      "operator": "above_uln",
+      "importance": 2
+    },
+    {
+      "finding_key": "triglycerides_elevated",
+      "test": "triglycerides",
+      "operator": "above_uln",
+      "importance": 2
     }
   ],
   "composite_rules": [
