@@ -3088,6 +3088,10 @@
       "aplastic_anemia": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "folate_deficiency": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3331,6 +3335,10 @@
       "aplastic_anemia": {
         "lr_positive": 6.0,
         "lr_negative": 0.2
+      },
+      "folate_deficiency": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3358,6 +3366,15 @@
       "nephrotic_syndrome": {
         "lr_positive": 2.5,
         "lr_negative": 0.6
+      }
+    }
+  },
+  "folate_low": {
+    "description": "Serum folate below LLN",
+    "diseases": {
+      "folate_deficiency": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
       }
     }
   }

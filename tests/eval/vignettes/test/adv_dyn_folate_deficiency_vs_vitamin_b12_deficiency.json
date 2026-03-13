@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "id": "adv_dyn_folate_deficiency_vs_vitamin_b12_deficiency",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "folate_deficiency",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "macrocytic anemia",
+      "glossitis",
+      "no neurologic symptoms (distinguishes from B12)",
+      "diarrhea"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "homocysteine",
+            "value": 15.7,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.9,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 101.4,
+            "unit": "fL"
+          },
+          {
+            "test_name": "folate",
+            "value": 1.3,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "methylmalonic_acid",
+            "value": 172.0,
+            "unit": "nmol/L"
+          },
+          {
+            "test_name": "vitamin_b12",
+            "value": 550.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "folate_deficiency",
+    "acceptable_alternatives": [
+      "vitamin_b12_deficiency"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "folate_deficiency"
+    ],
+    "cant_miss_diseases": []
+  }
+}

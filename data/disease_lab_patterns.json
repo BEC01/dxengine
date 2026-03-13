@@ -1572,5 +1572,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 50000"
+  },
+  "folate_deficiency": {
+    "description": "Folate deficiency causing megaloblastic anemia with macrocytosis, hypersegmented neutrophils, and elevated homocysteine. Distinguished from B12 deficiency by normal methylmalonic acid.",
+    "pattern": {
+      "folate": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.95
+      },
+      "mean_corpuscular_volume": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.85
+      },
+      "hemoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.7
+      },
+      "homocysteine": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.8
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500"
   }
 }

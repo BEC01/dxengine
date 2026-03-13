@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "id": "folate_deficiency_moderate_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "folate_deficiency",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "macrocytic anemia",
+      "glossitis",
+      "no neurologic symptoms (distinguishes from B12)",
+      "diarrhea"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "folate",
+            "value": 4.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 101.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 15.5,
+            "unit": "mcmol/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "folate_deficiency",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "folate_deficiency"
+    ],
+    "cant_miss_diseases": []
+  }
+}

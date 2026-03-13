@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_cholesterol",
-            "value": 100.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "thyroid_stimulating_hormone",
             "value": 2.2,
             "unit": "mIU/L"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 100.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "free_thyroxine",
@@ -57,14 +57,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.2,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "sodium",
             "value": 138.7,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.2,
+            "unit": "g/dL"
           },
           {
             "test_name": "free_triiodothyronine",

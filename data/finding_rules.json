@@ -794,6 +794,12 @@
       "test": "triglycerides",
       "operator": "above_uln",
       "importance": 2
+    },
+    {
+      "finding_key": "folate_low",
+      "test": "folate",
+      "operator": "below_lln",
+      "importance": 3
     }
   ],
   "composite_rules": [

@@ -29,24 +29,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 20.0,
-            "unit": "mg/dL"
+            "test_name": "myoglobin",
+            "value": 66.5,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "potassium",
-            "value": 5.1,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 241.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 31.8,
-            "unit": "U/L"
+            "test_name": "hemoglobin_a1c",
+            "value": 6.0,
+            "unit": "%"
           },
           {
             "test_name": "bicarbonate",
@@ -54,24 +44,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "sodium",
-            "value": 137.1,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "myoglobin",
-            "value": 66.5,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "uric_acid",
             "value": 5.7,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "white_blood_cells",
-            "value": 11.0,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -79,18 +54,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "creatine_kinase",
-            "value": 294.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.2,
+            "test_name": "glucose",
+            "value": 122.5,
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.4,
+            "test_name": "blood_urea_nitrogen",
+            "value": 20.0,
             "unit": "mg/dL"
           },
           {
@@ -99,14 +69,44 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 6.0,
-            "unit": "%"
+            "test_name": "creatine_kinase",
+            "value": 294.5,
+            "unit": "U/L"
           },
           {
-            "test_name": "glucose",
-            "value": 122.5,
+            "test_name": "phosphorus",
+            "value": 3.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 137.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 31.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 11.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 241.5,
+            "unit": "U/L"
           }
         ]
       }

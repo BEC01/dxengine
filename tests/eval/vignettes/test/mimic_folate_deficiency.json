@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_folate_deficiency",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "folate",
+            "value": 9.8,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 16.0,
+            "unit": "mcmol/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.7,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}
