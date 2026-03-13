@@ -47,6 +47,16 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "aspartate_aminotransferase",
+            "value": 49.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 80.5,
+            "unit": "U/L"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 266.0,
             "unit": "U/L"
@@ -57,14 +67,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 80.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 49.0,
-            "unit": "U/L"
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "ammonia",
@@ -75,11 +80,6 @@
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
           }
         ]
       }

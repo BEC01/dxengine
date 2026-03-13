@@ -29,18 +29,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.8,
             "unit": "mEq/L"
           },
           {
-            "test_name": "calcium",
-            "value": 8.8,
+            "test_name": "creatinine",
+            "value": 1.4,
             "unit": "mg/dL"
           },
           {
@@ -54,14 +49,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 51.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 43.0,
-            "unit": "U/L"
+            "test_name": "calcium",
+            "value": 8.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "creatine_kinase",
@@ -74,14 +64,19 @@
             "unit": "U/L"
           },
           {
+            "test_name": "aspartate_aminotransferase",
+            "value": 43.0,
+            "unit": "U/L"
+          },
+          {
             "test_name": "myoglobin",
             "value": 94.0,
             "unit": "ng/mL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
+            "test_name": "alanine_aminotransferase",
+            "value": 51.1,
+            "unit": "U/L"
           },
           {
             "test_name": "bicarbonate",
@@ -89,14 +84,19 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "hemoglobin",
             "value": 15.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
           },
           {
             "test_name": "blood_urea_nitrogen",

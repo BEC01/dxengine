@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "id": "adv_dyn_myocarditis_vs_pulmonary_embolism",
+    "category": "cardiac",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "myocarditis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "recent viral prodrome (1-2 weeks prior)",
+    "symptoms": [
+      "recent viral prodrome (1-2 weeks prior)",
+      "chest pain (sharp, pleuritic \u2014 pericardial involvement)",
+      "dyspnea",
+      "palpitations",
+      "heart failure symptoms"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "b_type_natriuretic_peptide",
+            "value": 137.5,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 5.1,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "d_dimer",
+            "value": 0.2,
+            "unit": "mcg/mL FEU"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "myocarditis",
+    "acceptable_alternatives": [
+      "pulmonary_embolism"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "myocarditis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

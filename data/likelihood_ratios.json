@@ -995,6 +995,10 @@
       "pulmonary_embolism": {
         "lr_positive": 2.5,
         "lr_negative": 0.7
+      },
+      "myocarditis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
       }
     }
   },
@@ -1147,6 +1151,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "myocarditis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3035,6 +3043,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "myocarditis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
       }
     }
   },

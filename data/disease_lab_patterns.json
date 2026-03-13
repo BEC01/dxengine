@@ -1465,5 +1465,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 500000"
+  },
+  "myocarditis": {
+    "description": "Viral or immune-mediated myocardial inflammation causing troponin elevation with inflammatory markers. Distinguished from AMI by absence of CK-MB elevation and presence of viral prodrome.",
+    "pattern": {
+      "troponin_i": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.9
+      },
+      "c_reactive_protein": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.6
+      },
+      "b_type_natriuretic_peptide": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.5
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 10000"
   }
 }

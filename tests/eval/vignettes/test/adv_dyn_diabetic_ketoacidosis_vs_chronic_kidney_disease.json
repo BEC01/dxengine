@@ -29,11 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.3,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
@@ -44,8 +39,8 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.2,
+            "test_name": "creatinine",
+            "value": 1.3,
             "unit": "mg/dL"
           },
           {
@@ -54,9 +49,19 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "hemoglobin_a1c",
             "value": 5.8,
             "unit": "%"
+          },
+          {
+            "test_name": "glucose",
+            "value": 115.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "sodium",
@@ -69,26 +74,6 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "glucose",
-            "value": 115.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "albumin",
             "value": 4.5,
             "unit": "g/dL"
@@ -96,6 +81,21 @@
           {
             "test_name": "uric_acid",
             "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
             "unit": "mg/dL"
           },
           {

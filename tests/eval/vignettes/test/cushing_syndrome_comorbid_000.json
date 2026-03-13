@@ -31,9 +31,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "bicarbonate",
-            "value": 25.7,
+            "test_name": "glucose",
+            "value": 105.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 139.7,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "white_blood_cells",
@@ -43,36 +53,6 @@
           {
             "test_name": "phosphorus",
             "value": 3.3,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "glucose",
-            "value": 105.6,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "cortisol_am",
-            "value": 22.7,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "hemoglobin_a1c",
-            "value": 5.1,
-            "unit": "%"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 3.9,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.0,
             "unit": "mg/dL"
           },
           {
@@ -86,9 +66,29 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "sodium",
-            "value": 139.7,
+            "test_name": "bicarbonate",
+            "value": 25.7,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 5.1,
+            "unit": "%"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 22.7,
+            "unit": "mcg/dL"
           }
         ]
       }

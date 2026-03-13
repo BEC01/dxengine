@@ -36,24 +36,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.5,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 15.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "red_blood_cells",
-            "value": 6.2,
-            "unit": "x10^12/L"
-          },
-          {
-            "test_name": "hematocrit",
-            "value": 51.7,
-            "unit": "%"
+            "test_name": "white_blood_cells",
+            "value": 7.5,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "uric_acid",
@@ -61,14 +51,24 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 1.5,
+            "test_name": "hematocrit",
+            "value": 51.7,
             "unit": "%"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 6.2,
+            "unit": "x10^12/L"
           },
           {
             "test_name": "neutrophils_absolute",
             "value": 4.8,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
           }
         ]
       }

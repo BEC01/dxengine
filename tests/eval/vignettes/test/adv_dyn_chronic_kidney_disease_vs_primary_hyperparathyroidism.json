@@ -31,19 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "parathyroid_hormone",
-            "value": 66.2,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 24.0,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.4,
-            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
@@ -51,9 +41,24 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "parathyroid_hormone",
+            "value": 66.2,
+            "unit": "pg/mL"
+          },
+          {
             "test_name": "phosphorus",
             "value": 3.6,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.7,
+            "unit": "g/dL"
           },
           {
             "test_name": "creatinine",
@@ -61,18 +66,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.8,
             "unit": "mEq/L"
           },
           {
-            "test_name": "albumin",
-            "value": 3.7,
+            "test_name": "hemoglobin",
+            "value": 12.5,
             "unit": "g/dL"
           },
           {
@@ -86,9 +86,9 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 105.0,
-            "unit": "U/L"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "chloride",
@@ -96,9 +96,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "alkaline_phosphatase",
+            "value": 105.0,
+            "unit": "U/L"
           }
         ]
       }
