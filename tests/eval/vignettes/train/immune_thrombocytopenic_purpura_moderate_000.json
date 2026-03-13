@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "immune_thrombocytopenic_purpura_moderate_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "immune_thrombocytopenic_purpura",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "isolated thrombocytopenia discovered incidentally or during workup for mucocutaneous bleeding (platelets typically <30 x10^9/L when symptomatic)",
+    "symptoms": [
+      "isolated thrombocytopenia discovered incidentally or during workup for mucocutaneous bleeding (platelets typically <30 x10^9/L when symptomatic)",
+      "easy bruising (ecchymoses) disproportionate to minor trauma",
+      "epistaxis, gingival bleeding, or prolonged bleeding from minor cuts",
+      "menorrhagia in premenopausal women (may be presenting or dominant symptom)",
+      "preceded by viral illness 1-3 weeks prior in pediatric acute ITP (50-80% of children)"
+    ],
+    "signs": [
+      "petechiae \u2014 pinpoint non-blanching hemorrhages on skin and mucous membranes, especially lower extremities and pressure areas",
+      "no splenomegaly, lymphadenopathy, or systemic symptoms (absence of these is clinically important)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 103.1,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "mean_platelet_volume",
+            "value": 10.6,
+            "unit": "fL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.9,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "immune_thrombocytopenic_purpura",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "immune_thrombocytopenic_purpura"
+    ],
+    "cant_miss_diseases": []
+  }
+}

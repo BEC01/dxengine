@@ -29,19 +29,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "troponin_i",
-            "value": 0.0,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "b_type_natriuretic_peptide",
             "value": 137.5,
             "unit": "pg/mL"
           },
           {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 312.9,
             "unit": "U/L"
+          },
+          {
+            "test_name": "creatine_kinase_mb",
+            "value": 8.5,
+            "unit": "ng/mL"
           },
           {
             "test_name": "myoglobin",
@@ -52,11 +57,6 @@
             "test_name": "creatine_kinase",
             "value": 308.2,
             "unit": "U/L"
-          },
-          {
-            "test_name": "creatine_kinase_mb",
-            "value": 8.5,
-            "unit": "ng/mL"
           },
           {
             "test_name": "d_dimer",

@@ -36,9 +36,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "glucose",
-            "value": 103.4,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 24.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "potassium",
@@ -46,14 +46,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 1.8,
-            "unit": "x10^9/L"
+            "test_name": "glucose",
+            "value": 103.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "cortisol_am",
@@ -61,23 +56,13 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.8,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "calcium",
             "value": 9.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "hemoglobin_a1c",
-            "value": 4.8,
-            "unit": "%"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.5,
             "unit": "mg/dL"
           },
           {
@@ -86,9 +71,24 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 4.8,
+            "unit": "%"
           }
         ]
       }

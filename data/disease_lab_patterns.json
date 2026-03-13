@@ -1806,5 +1806,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 500000"
+  },
+  "immune_thrombocytopenic_purpura": {
+    "description": "Immune-mediated isolated severe thrombocytopenia with normal WBC, hemoglobin, and coagulation",
+    "pattern": {
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -5.0,
+        "weight": 0.95
+      },
+      "mean_platelet_volume": {
+        "direction": "increased",
+        "typical_z_score": 2.0,
+        "weight": 0.4
+      },
+      "reticulocyte_count": {
+        "direction": "increased",
+        "typical_z_score": 1.5,
+        "weight": 0.25
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 25000"
   }
 }

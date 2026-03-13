@@ -830,6 +830,10 @@
       "recovery_from_iron_therapy": {
         "lr_positive": 4.0,
         "lr_negative": 0.5
+      },
+      "immune_thrombocytopenic_purpura": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -882,9 +886,9 @@
         "lr_positive": 5.0,
         "lr_negative": 0.25
       },
-      "immune_thrombocytopenia": {
+      "immune_thrombocytopenic_purpura": {
         "lr_positive": 4.0,
-        "lr_negative": 0.2
+        "lr_negative": 0.3
       }
     }
   },
@@ -3347,6 +3351,10 @@
       "sepsis": {
         "lr_positive": 2.0,
         "lr_negative": 0.7
+      },
+      "immune_thrombocytopenic_purpura": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.3
       }
     }
   },

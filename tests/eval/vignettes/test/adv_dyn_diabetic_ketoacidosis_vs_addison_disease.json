@@ -29,13 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 92.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 22.1,
+            "test_name": "potassium",
+            "value": 4.8,
             "unit": "mEq/L"
           },
           {
@@ -44,14 +39,19 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "bicarbonate",
+            "value": 22.1,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "blood_urea_nitrogen",
             "value": 17.5,
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
+            "test_name": "glucose",
+            "value": 92.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "white_blood_cells",
@@ -59,9 +59,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 5.8,
-            "unit": "%"
+            "test_name": "phosphorus",
+            "value": 2.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "creatinine",
@@ -69,19 +69,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 2.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "cortisol_am",
-            "value": 12.8,
-            "unit": "mcg/dL"
+            "test_name": "hemoglobin_a1c",
+            "value": 5.8,
+            "unit": "%"
           },
           {
             "test_name": "adrenocorticotropic_hormone",
             "value": 35.2,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "cortisol_am",
+            "value": 12.8,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "eosinophils_absolute",

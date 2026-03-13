@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_aplastic_anemia_vs_polycythemia_vera",
+    "id": "adv_dyn_aplastic_anemia_vs_immune_thrombocytopenic_purpura",
     "category": "hematologic",
     "difficulty": "adversarial",
     "split": "test",
@@ -31,19 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "white_blood_cells",
-            "value": 6.7,
-            "unit": "x10^9/L"
+            "test_name": "reticulocyte_count",
+            "value": 1.3,
+            "unit": "%"
           },
           {
             "test_name": "platelets",
-            "value": 228.5,
+            "value": 71.0,
             "unit": "x10^9/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.5,
-            "unit": "g/dL"
           },
           {
             "test_name": "neutrophils_absolute",
@@ -51,24 +46,19 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 0.5,
-            "unit": "%"
+            "test_name": "white_blood_cells",
+            "value": 2.8,
+            "unit": "x10^9/L"
           },
           {
-            "test_name": "hematocrit",
-            "value": 41.0,
-            "unit": "%"
+            "test_name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL"
           },
           {
-            "test_name": "red_blood_cells",
-            "value": 5.0,
-            "unit": "x10^12/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 4.7,
-            "unit": "mg/dL"
+            "test_name": "mean_platelet_volume",
+            "value": 9.5,
+            "unit": "fL"
           }
         ]
       }
@@ -79,7 +69,7 @@
   "gold_standard": {
     "primary_diagnosis": "aplastic_anemia",
     "acceptable_alternatives": [
-      "polycythemia_vera"
+      "immune_thrombocytopenic_purpura"
     ],
     "expected_findings": [],
     "expected_patterns": [
