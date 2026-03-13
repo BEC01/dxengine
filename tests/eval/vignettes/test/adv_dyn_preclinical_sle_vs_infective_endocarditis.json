@@ -31,16 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "complement_c3",
-            "value": 107.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.9,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "c_reactive_protein",
             "value": 2.7,
             "unit": "mg/L"
@@ -51,19 +41,19 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 12.9,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "erythrocyte_sedimentation_rate",
             "value": 18.8,
             "unit": "mm/hr"
           },
           {
-            "test_name": "anti_dsdna_antibody",
-            "value": 22.5,
-            "unit": "IU/mL"
-          },
-          {
-            "test_name": "antinuclear_antibody_titer",
-            "value": 0.9,
-            "unit": "titer"
+            "test_name": "complement_c3",
+            "value": 107.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "platelets",
@@ -71,19 +61,24 @@
             "unit": "x10^9/L"
           },
           {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 0.9,
+            "unit": "titer"
+          },
+          {
             "test_name": "lymphocytes_absolute",
             "value": 2.1,
             "unit": "x10^9/L"
           },
           {
+            "test_name": "anti_dsdna_antibody",
+            "value": 22.5,
+            "unit": "IU/mL"
+          },
+          {
             "test_name": "creatinine",
             "value": 0.8,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
           },
           {
             "test_name": "procalcitonin",
@@ -99,6 +94,11 @@
             "test_name": "white_blood_cells",
             "value": 7.8,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
           }
         ]
       }

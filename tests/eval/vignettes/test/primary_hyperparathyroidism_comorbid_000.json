@@ -29,13 +29,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 10.1,
-            "unit": "mg/dL"
+            "test_name": "glomerular_filtration_rate",
+            "value": 97.1,
+            "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "creatinine",
-            "value": 0.9,
+            "test_name": "blood_urea_nitrogen",
+            "value": 16.4,
             "unit": "mg/dL"
           },
           {
@@ -49,34 +49,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 97.1,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 134.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 16.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "vitamin_d_25_hydroxy",
             "value": 38.8,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.2,
-            "unit": "mg/dL"
           },
           {
             "test_name": "albumin",
@@ -84,9 +59,29 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "alkaline_phosphatase",
+            "value": 134.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "parathyroid_hormone",
             "value": 77.5,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "bicarbonate",
@@ -96,6 +91,11 @@
           {
             "test_name": "uric_acid",
             "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.1,
             "unit": "mg/dL"
           }
         ]

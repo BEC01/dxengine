@@ -46,18 +46,13 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 10.5,
-            "unit": "mg/dL"
+            "test_name": "total_protein",
+            "value": 8.8,
+            "unit": "g/dL"
           },
           {
             "test_name": "hemoglobin",
             "value": 13.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 8.8,
             "unit": "g/dL"
           },
           {
@@ -68,6 +63,11 @@
           {
             "test_name": "uric_acid",
             "value": 6.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.5,
             "unit": "mg/dL"
           },
           {

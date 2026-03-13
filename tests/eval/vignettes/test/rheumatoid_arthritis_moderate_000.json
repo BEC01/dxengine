@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "rheumatoid_arthritis_moderate_000",
+    "category": "rheumatologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "rheumatoid_arthritis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "symmetric polyarthritis (MCP, PIP, wrist, MTP joints)",
+    "symptoms": [
+      "symmetric polyarthritis (MCP, PIP, wrist, MTP joints)",
+      "morning stiffness >1 hour",
+      "boggy joint swelling",
+      "swan-neck and boutonniere deformities (late)",
+      "ulnar deviation (late)"
+    ],
+    "signs": [
+      "rheumatoid nodules"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "anti_ccp_antibody",
+            "value": 114.5,
+            "unit": "U/mL"
+          },
+          {
+            "test_name": "rheumatoid_factor",
+            "value": 47.2,
+            "unit": "IU/mL"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 16.9,
+            "unit": "mm/hr"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "rheumatoid_arthritis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "rheumatoid_arthritis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

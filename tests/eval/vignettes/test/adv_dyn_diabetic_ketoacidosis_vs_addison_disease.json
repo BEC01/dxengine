@@ -29,8 +29,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "blood_urea_nitrogen",
+            "value": 17.5,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "potassium",
             "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 22.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 137.3,
             "unit": "mEq/L"
           },
           {
@@ -39,19 +54,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 137.3,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 17.5,
+            "test_name": "phosphorus",
+            "value": 2.9,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 22.1,
-            "unit": "mEq/L"
           },
           {
             "test_name": "creatinine",
@@ -64,24 +69,14 @@
             "unit": "%"
           },
           {
-            "test_name": "phosphorus",
-            "value": 2.9,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "white_blood_cells",
             "value": 10.3,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "eosinophils_absolute",
-            "value": 0.2,
-            "unit": "x10^9/L"
+            "test_name": "cortisol_am",
+            "value": 12.8,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "adrenocorticotropic_hormone",
@@ -89,9 +84,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "cortisol_am",
-            "value": 12.8,
-            "unit": "mcg/dL"
+            "test_name": "eosinophils_absolute",
+            "value": 0.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
           }
         ]
       }

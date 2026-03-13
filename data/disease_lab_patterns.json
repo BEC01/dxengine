@@ -1700,5 +1700,30 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 500000"
+  },
+  "rheumatoid_arthritis": {
+    "description": "Autoimmune synovitis with pannus formation causing cartilage and bone erosion. Diagnosed by anti-CCP antibodies (95% specificity) and rheumatoid factor with characteristic symmetric small-joint polyarthritis.",
+    "pattern": {
+      "anti_ccp_antibody": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.95,
+        "typical_value": 200.0
+      },
+      "rheumatoid_factor": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.8,
+        "typical_value": 80.0
+      },
+      "erythrocyte_sedimentation_rate": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.2
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 200"
   }
 }

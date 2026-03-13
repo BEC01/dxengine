@@ -3441,5 +3441,23 @@
         "lr_negative": 0.72
       }
     }
+  },
+  "esr_elevated": {
+    "description": "ESR above upper limit of normal, reflecting systemic inflammation",
+    "diseases": {
+      "rheumatoid_arthritis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
+      }
+    }
+  },
+  "crp_elevated": {
+    "description": "CRP above upper limit of normal, reflecting acute-phase inflammation",
+    "diseases": {
+      "rheumatoid_arthritis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
+      }
+    }
   }
 }
