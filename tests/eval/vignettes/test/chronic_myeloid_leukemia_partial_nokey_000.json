@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "chronic_myeloid_leukemia_partial_nokey_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "chronic_myeloid_leukemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "marked leukocytosis: WBC commonly 50,000-300,000/uL with left-shifted differential (myelocytes, metamyelocytes, bands)",
+    "symptoms": [
+      "marked leukocytosis: WBC commonly 50,000-300,000/uL with left-shifted differential (myelocytes, metamyelocytes, bands)",
+      "absolute basophilia (present in virtually 100% of CML cases; absent in leukemoid reactions)",
+      "fatigue, night sweats, and weight loss from hypermetabolic state driven by massive cell turnover",
+      "thrombocytosis (platelet count 400,000-600,000/uL in ~30-50% of patients at presentation)",
+      "incidental discovery on routine CBC in an asymptomatic patient (~30-40% of cases in the TKI era)"
+    ],
+    "signs": [
+      "splenomegaly causing early satiety, left upper quadrant fullness, or dragging discomfort (present in ~50-70% at diagnosis)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "basophils_absolute",
+            "value": 0.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 7.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 315.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "chronic_myeloid_leukemia",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "chronic_myeloid_leukemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

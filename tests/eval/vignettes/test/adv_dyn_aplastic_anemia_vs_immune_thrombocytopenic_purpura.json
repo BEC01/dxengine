@@ -41,11 +41,6 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "neutrophils_absolute",
-            "value": 0.6,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "white_blood_cells",
             "value": 2.8,
             "unit": "x10^9/L"
@@ -54,6 +49,11 @@
             "test_name": "hemoglobin",
             "value": 10.5,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "neutrophils_absolute",
+            "value": 0.6,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "mean_platelet_volume",

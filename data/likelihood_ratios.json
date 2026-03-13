@@ -2828,6 +2828,10 @@
       "gout": {
         "lr_positive": 1.5,
         "lr_negative": 0.7
+      },
+      "chronic_myeloid_leukemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.1
       }
     }
   },
@@ -3206,6 +3210,10 @@
       "polycythemia_vera": {
         "lr_positive": 2.5,
         "lr_negative": 0.7
+      },
+      "chronic_myeloid_leukemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3493,6 +3501,15 @@
       "rheumatoid_arthritis": {
         "lr_positive": 1.5,
         "lr_negative": 0.8
+      }
+    }
+  },
+  "basophilia": {
+    "description": "Basophil count above ULN — highly distinctive for CML (AUC 0.889)",
+    "diseases": {
+      "chronic_myeloid_leukemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.2
       }
     }
   }

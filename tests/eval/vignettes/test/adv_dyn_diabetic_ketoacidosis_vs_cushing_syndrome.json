@@ -49,9 +49,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -59,9 +59,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "blood_urea_nitrogen",

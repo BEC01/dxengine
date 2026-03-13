@@ -31,9 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "reticulocyte_count",
-            "value": 1.8,
-            "unit": "%"
+            "test_name": "mean_corpuscular_volume",
+            "value": 96.1,
+            "unit": "fL"
           },
           {
             "test_name": "hemoglobin",
@@ -41,9 +41,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 96.1,
-            "unit": "fL"
+            "test_name": "reticulocyte_count",
+            "value": 1.8,
+            "unit": "%"
           },
           {
             "test_name": "lactate_dehydrogenase",

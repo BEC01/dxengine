@@ -1829,5 +1829,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 25000"
+  },
+  "chronic_myeloid_leukemia": {
+    "description": "BCR-ABL1 myeloproliferative neoplasm with extreme leukocytosis and basophilia",
+    "pattern": {
+      "white_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.9
+      },
+      "basophils_absolute": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.85
+      },
+      "uric_acid": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.55
+      },
+      "lactate_dehydrogenase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.5
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 65000"
   }
 }
