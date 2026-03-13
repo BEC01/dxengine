@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "celiac_disease_partial_screen_000",
+    "category": "gastrointestinal",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "celiac_disease",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "male",
+    "chief_complaint": "chronic diarrhea",
+    "symptoms": [
+      "chronic diarrhea",
+      "steatorrhea",
+      "abdominal bloating/distension",
+      "weight loss",
+      "fatigue"
+    ],
+    "signs": [
+      "dermatitis herpetiformis (pathognomonic skin rash)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.5,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "celiac_disease",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "celiac_disease"
+    ],
+    "cant_miss_diseases": []
+  }
+}

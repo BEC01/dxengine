@@ -1725,5 +1725,29 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 200"
+  },
+  "celiac_disease": {
+    "description": "Immune-mediated enteropathy triggered by gluten in genetically susceptible individuals. Diagnosed by tissue transglutaminase IgA antibodies with >95% sensitivity and specificity. Causes villous atrophy and malabsorption.",
+    "pattern": {
+      "tissue_transglutaminase_iga": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.95,
+        "typical_value": 80.0
+      },
+      "ferritin": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.3
+      },
+      "hemoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.15
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 100"
   }
 }

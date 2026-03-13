@@ -44,6 +44,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.5,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "chloride",
             "value": 102.0,
             "unit": "mEq/L"
@@ -51,11 +56,6 @@
           {
             "test_name": "uric_acid",
             "value": 4.7,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 15.5,
             "unit": "mg/dL"
           }
         ]

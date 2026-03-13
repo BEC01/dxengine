@@ -5,6 +5,10 @@
       "iron_deficiency_anemia": {
         "lr_positive": 51.8,
         "lr_negative": 0.46
+      },
+      "celiac_disease": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.9
       }
     }
   },
@@ -1669,7 +1673,7 @@
     "description": "tTG-IgA elevated more than 10 times upper limit of normal",
     "diseases": {
       "celiac_disease": {
-        "lr_positive": 100.0,
+        "lr_positive": 50.0,
         "lr_negative": 0.25
       }
     }

@@ -34,6 +34,16 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "lactate_dehydrogenase",
+            "value": 295.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.7,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "potassium",
             "value": 5.0,
             "unit": "mEq/L"
@@ -49,14 +59,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 8.7,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 295.8,
-            "unit": "U/L"
+            "test_name": "myoglobin",
+            "value": 94.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -64,18 +69,13 @@
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 43.0,
+            "test_name": "creatine_kinase",
+            "value": 496.3,
             "unit": "U/L"
           },
           {
-            "test_name": "myoglobin",
-            "value": 94.0,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 496.3,
+            "test_name": "aspartate_aminotransferase",
+            "value": 43.0,
             "unit": "U/L"
           },
           {

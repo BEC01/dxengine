@@ -34,11 +34,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.2,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.8,
             "unit": "mEq/L"
@@ -54,6 +49,21 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 115.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 10.3,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "hemoglobin_a1c",
             "value": 5.8,
             "unit": "%"
@@ -64,13 +74,18 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 10.3,
-            "unit": "x10^9/L"
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
           },
           {
-            "test_name": "glucose",
-            "value": 115.0,
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
             "unit": "mg/dL"
           },
           {
@@ -79,29 +94,14 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
+            "test_name": "albumin",
+            "value": 4.5,
             "unit": "g/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
           },
           {
             "test_name": "uric_acid",
             "value": 5.2,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
           }
         ]
       }

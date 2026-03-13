@@ -34,6 +34,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "calcium",
+            "value": 8.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "potassium",
             "value": 4.8,
             "unit": "mEq/L"
@@ -49,9 +54,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 8.8,
-            "unit": "mg/dL"
+            "test_name": "lactate_dehydrogenase",
+            "value": 294.0,
+            "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -64,34 +69,14 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 43.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "creatine_kinase",
             "value": 496.3,
             "unit": "U/L"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 294.0,
+            "test_name": "aspartate_aminotransferase",
+            "value": 43.0,
             "unit": "U/L"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
           },
           {
             "test_name": "parathyroid_hormone",
@@ -99,14 +84,29 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "albumin",
             "value": 4.5,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
           }
         ]
       }
