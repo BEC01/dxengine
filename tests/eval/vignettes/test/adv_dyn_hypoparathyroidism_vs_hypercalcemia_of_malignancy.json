@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hypoparathyroidism_vs_hypercalcemia_of_malignancy",
+    "category": "endocrine",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hypoparathyroidism",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "perioral numbness/tingling",
+    "symptoms": [
+      "perioral numbness/tingling",
+      "paresthesias (hands/feet)",
+      "muscle cramps/spasms",
+      "carpopedal spasm",
+      "seizures"
+    ],
+    "signs": [
+      "Chvostek sign",
+      "Trousseau sign"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "calcium",
+            "value": 9.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 13.8,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "magnesium",
+            "value": 1.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypoparathyroidism",
+    "acceptable_alternatives": [
+      "hypercalcemia_of_malignancy"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hypoparathyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

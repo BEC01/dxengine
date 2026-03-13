@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "hypoparathyroidism_partial_nokey_000",
+    "category": "endocrine",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "hypoparathyroidism",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "perioral numbness/tingling",
+    "symptoms": [
+      "perioral numbness/tingling",
+      "paresthesias (hands/feet)",
+      "muscle cramps/spasms",
+      "carpopedal spasm",
+      "seizures"
+    ],
+    "signs": [
+      "Chvostek sign",
+      "Trousseau sign"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "calcium",
+            "value": 7.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 5.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "magnesium",
+            "value": 1.7,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypoparathyroidism",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hypoparathyroidism"
+    ],
+    "cant_miss_diseases": []
+  }
+}

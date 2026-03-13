@@ -29,13 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 4.4,
+            "test_name": "calcium",
+            "value": 8.8,
             "unit": "mg/dL"
           },
           {
@@ -44,14 +39,29 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "potassium",
             "value": 4.8,
             "unit": "mEq/L"
           },
           {
-            "test_name": "calcium",
-            "value": 8.8,
+            "test_name": "phosphorus",
+            "value": 4.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 496.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 294.0,
+            "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -69,14 +79,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 294.0,
-            "unit": "U/L"
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "creatine_kinase",
-            "value": 496.3,
-            "unit": "U/L"
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "parathyroid_hormone",
@@ -89,11 +99,6 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 15.5,
             "unit": "g/dL"
@@ -102,11 +107,6 @@
             "test_name": "bicarbonate",
             "value": 25.5,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
-            "unit": "mg/dL"
           }
         ]
       }

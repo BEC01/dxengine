@@ -3329,5 +3329,14 @@
         "lr_negative": 0.2
       }
     }
+  },
+  "pth_low": {
+    "description": "PTH below lower limit of normal — defining feature of hypoparathyroidism. Distinguishes from other causes of hypocalcemia where PTH is elevated (secondary hyperparathyroidism).",
+    "diseases": {
+      "hypoparathyroidism": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
+    }
   }
 }

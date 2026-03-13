@@ -36,14 +36,9 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "homocysteine",
-            "value": 16.2,
-            "unit": "mcmol/L"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 0.8,
-            "unit": "%"
+            "test_name": "lactate_dehydrogenase",
+            "value": 280.0,
+            "unit": "U/L"
           },
           {
             "test_name": "vitamin_b12",
@@ -56,14 +51,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 280.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "transferrin_saturation",
-            "value": 29.4,
-            "unit": "%"
+            "test_name": "methylmalonic_acid",
+            "value": 320.5,
+            "unit": "nmol/L"
           },
           {
             "test_name": "platelets",
@@ -71,9 +61,24 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "ferritin",
-            "value": 109.8,
-            "unit": "ng/mL"
+            "test_name": "red_cell_distribution_width",
+            "value": 13.4,
+            "unit": "%"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 29.4,
+            "unit": "%"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 16.2,
+            "unit": "mcmol/L"
           },
           {
             "test_name": "hemoglobin",
@@ -81,19 +86,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "methylmalonic_acid",
-            "value": 320.5,
-            "unit": "nmol/L"
-          },
-          {
             "test_name": "iron",
             "value": 89.1,
             "unit": "mcg/dL"
           },
           {
-            "test_name": "red_cell_distribution_width",
-            "value": 13.4,
-            "unit": "%"
+            "test_name": "ferritin",
+            "value": 109.8,
+            "unit": "ng/mL"
           }
         ]
       }

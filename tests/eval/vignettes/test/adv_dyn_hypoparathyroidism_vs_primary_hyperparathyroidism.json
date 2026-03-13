@@ -1,25 +1,28 @@
 {
   "metadata": {
-    "id": "adv_dyn_hypercalcemia_of_malignancy_vs_primary_hyperparathyroidism",
-    "category": "oncologic_emergency",
+    "id": "adv_dyn_hypoparathyroidism_vs_primary_hyperparathyroidism",
+    "category": "endocrine",
     "difficulty": "adversarial",
     "split": "test",
     "source": "adversarial",
-    "disease_pattern_name": "hypercalcemia_of_malignancy",
+    "disease_pattern_name": "hypoparathyroidism",
     "variant": 0
   },
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "confusion/lethargy",
+    "chief_complaint": "perioral numbness/tingling",
     "symptoms": [
-      "confusion/lethargy",
-      "polyuria/polydipsia",
-      "constipation",
-      "nausea/vomiting",
-      "bone pain"
+      "perioral numbness/tingling",
+      "paresthesias (hands/feet)",
+      "muscle cramps/spasms",
+      "carpopedal spasm",
+      "seizures"
     ],
-    "signs": [],
+    "signs": [
+      "Chvostek sign",
+      "Trousseau sign"
+    ],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -30,7 +33,7 @@
         "values": [
           {
             "test_name": "calcium",
-            "value": 10.8,
+            "value": 9.2,
             "unit": "mg/dL"
           },
           {
@@ -39,19 +42,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 140.6,
-            "unit": "U/L"
-          },
-          {
             "test_name": "phosphorus",
-            "value": 2.8,
+            "value": 3.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "magnesium",
+            "value": 1.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
@@ -59,14 +57,24 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.0,
-            "unit": "mEq/L"
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
+            "unit": "U/L"
           },
           {
             "test_name": "vitamin_d_25_hydroxy",
             "value": 65.0,
             "unit": "ng/mL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 102.0,
+            "unit": "mEq/L"
           }
         ]
       }
@@ -75,13 +83,13 @@
     "vitals": {}
   },
   "gold_standard": {
-    "primary_diagnosis": "hypercalcemia_of_malignancy",
+    "primary_diagnosis": "hypoparathyroidism",
     "acceptable_alternatives": [
       "primary_hyperparathyroidism"
     ],
     "expected_findings": [],
     "expected_patterns": [
-      "hypercalcemia_of_malignancy"
+      "hypoparathyroidism"
     ],
     "cant_miss_diseases": []
   }

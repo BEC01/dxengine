@@ -776,6 +776,12 @@
       "test": "reticulocyte_count",
       "operator": "below_lln",
       "importance": 4
+    },
+    {
+      "finding_key": "pth_low",
+      "test": "parathyroid_hormone",
+      "operator": "below_lln",
+      "importance": 3
     }
   ],
   "composite_rules": [

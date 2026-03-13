@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_primary_hyperparathyroidism_vs_chronic_kidney_disease",
+    "id": "adv_dyn_primary_hyperparathyroidism_vs_hypoparathyroidism",
     "category": "endocrine",
     "difficulty": "adversarial",
     "split": "test",
@@ -30,33 +30,23 @@
         "values": [
           {
             "test_name": "calcium",
-            "value": 9.6,
+            "value": 9.2,
             "unit": "mg/dL"
           },
           {
             "test_name": "parathyroid_hormone",
-            "value": 66.2,
+            "value": 40.0,
             "unit": "pg/mL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "phosphorus",
-            "value": 3.6,
+            "value": 3.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 104.4,
-            "unit": "mEq/L"
+            "test_name": "uric_acid",
+            "value": 4.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -69,34 +59,19 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.2,
+            "test_name": "bicarbonate",
+            "value": 24.1,
             "unit": "mEq/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
+            "test_name": "chloride",
+            "value": 104.4,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "magnesium",
+            "value": 2.0,
+            "unit": "mg/dL"
           }
         ]
       }
@@ -107,7 +82,7 @@
   "gold_standard": {
     "primary_diagnosis": "primary_hyperparathyroidism",
     "acceptable_alternatives": [
-      "chronic_kidney_disease"
+      "hypoparathyroidism"
     ],
     "expected_findings": [],
     "expected_patterns": [

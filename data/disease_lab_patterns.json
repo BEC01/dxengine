@@ -1516,5 +1516,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 10000"
+  },
+  "hypoparathyroidism": {
+    "description": "PTH deficiency causing hypocalcemia and hyperphosphatemia. MIRROR image of primary hyperparathyroidism (which has elevated calcium, elevated PTH, low phosphorus). Most common cause: post-thyroidectomy. Defining lab pattern: low calcium + low PTH + elevated phosphorus.",
+    "pattern": {
+      "calcium": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.85
+      },
+      "parathyroid_hormone": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.9
+      },
+      "phosphorus": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.6
+      },
+      "magnesium": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 2700"
   }
 }
