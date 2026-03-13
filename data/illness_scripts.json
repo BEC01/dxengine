@@ -2046,5 +2046,518 @@
       "upper extremity DVT (Paget-Schroetter syndrome, central lines)"
     ],
     "typical_course": "Anticoagulation same as PE. Proximal DVT: anticoagulate immediately. Isolated distal DVT: may observe with serial ultrasound or anticoagulate. Compression stockings no longer routinely recommended. Post-thrombotic syndrome (chronic pain, swelling, skin changes) develops in 20-50%. IVC filter only if anticoagulation contraindicated."
+  },
+  "HELLP_syndrome": {
+    "category": "hematologic",
+    "disease_importance": 5,
+    "epidemiology": "Occurs in 0.5-0.9% of all pregnancies and 10-20% of severe preeclampsia cases. Peak onset 27-37 weeks gestation; approximately 30% of cases present postpartum (usually within 48h of delivery). Affects women of all races; risk factors include prior HELLP episode (recurrence risk 3-25%), chronic hypertension, multifetal pregnancy, antiphospholipid syndrome, nulliparity, and age over 35. Rare cases occur without concurrent hypertension or proteinuria.",
+    "pathophysiology": "Endothelial dysfunction driven by an exaggerated maternal inflammatory response to abnormal placentation causes vasospasm and microvascular injury. Mechanical shearing of red blood cells through damaged microvessels produces microangiopathic hemolytic anemia (the H). Hepatic sinusoidal obstruction from periportal fibrin deposition causes hepatocellular necrosis and elevated transaminases (the EL). Platelet activation and consumption at sites of endothelial injury causes thrombocytopenia (the LP). ADAMTS13 activity is reduced but not absent (distinguishes from TTP). Complement dysregulation — elevated C5a and C5b-9 — contributes to endothelial injury and hemolysis. Alternative pathway complement gene mutations are present in approximately 46% of cases, overlapping genetically with atypical HUS.",
+    "classic_presentation": [
+      "right upper quadrant or epigastric pain (hepatic capsule distension, subcapsular hematoma)",
+      "nausea and vomiting",
+      "malaise and fatigue",
+      "headache",
+      "hypertension with proteinuria (preeclampsia features present in 85% of cases)",
+      "jaundice (less common, from hemolytic hyperbilirubinemia)",
+      "peripheral edema and rapid weight gain"
+    ],
+    "key_labs": [
+      "thrombocytopenia: platelets <100 x10^9/L (Class 1 severe: <50; Class 2: 50-100)",
+      "elevated LDH >600 U/L (hemolysis and hepatic ischemia marker — Tennessee diagnostic criterion)",
+      "low or undetectable haptoglobin (consumed by intravascular hemolysis — most sensitive hemolysis marker)",
+      "elevated AST >70 U/L (Tennessee liver enzyme criterion; AST typically exceeds ALT)",
+      "elevated indirect bilirubin (from RBC destruction)",
+      "schistocytes on peripheral blood smear (microangiopathic hemolytic anemia)",
+      "normal or near-normal PT/INR and fibrinogen (key distinction from DIC)",
+      "normal ADAMTS13 activity (key distinction from TTP)"
+    ],
+    "diagnostic_criteria": "Tennessee criteria (all three required): (1) Hemolysis — LDH >600 U/L, haptoglobin low, or abnormal peripheral blood smear; (2) Elevated liver enzymes — AST >70 U/L; (3) Low platelets — <100 x10^9/L. Mississippi triple-class system further stratifies by platelet nadir: Class 1 (<50k), Class 2 (50-100k), Class 3 (100-150k with full criteria). Delivery is both diagnostic confirmation and definitive treatment.",
+    "mimics": [
+      "ttp_hus",
+      "disseminated_intravascular_coagulation",
+      "hemolytic_anemia",
+      "acute_pancreatitis",
+      "hepatocellular_injury",
+      "systemic_lupus_erythematosus"
+    ],
+    "cant_miss_features": [
+      "hepatic subcapsular hematoma or rupture (severe RUQ pain radiating to shoulder, hemodynamic instability — surgical emergency with mortality >50% if ruptured)",
+      "evolution to DIC (monitor fibrinogen, D-dimer, PT serially — HELLP can trigger consumptive coagulopathy)",
+      "placental abruption (thrombocytopenia and vascular injury increase risk)",
+      "acute kidney injury (from renal microangiopathy or DIC complication)",
+      "delivery is the only definitive treatment — do not delay for fetal maturity when maternal condition is deteriorating"
+    ],
+    "typical_course": "Delivery is definitive treatment; 25% of cases transiently worsen in the first 24-48h postpartum before resolving. Platelet nadir and peak LDH typically occur 24-48h after delivery. Resolution expected within 3-7 days postpartum. Maternal mortality 1-3% in high-resource settings, higher with hepatic rupture. Corticosteroids (dexamethasone) may temporarily improve platelet count but do not change overall outcomes. Recurrence risk in subsequent pregnancies is 3-25%."
+  },
+  "ethylene_glycol_poisoning": {
+    "category": "metabolic_toxic",
+    "disease_importance": 5,
+    "epidemiology": "Ethylene glycol (antifreeze, de-icing solutions) is a leading cause of fatal toxic alcohol poisoning. Estimated 5,000+ exposures annually in the US (NPDS data). Ingested accidentally by children (sweet taste) or intentionally (suicide attempt, alcohol substitution). Lethal dose ~1.5 mL/kg. Mortality 20-30% without treatment; <5% with fomepizole and early dialysis.",
+    "pathophysiology": "Ethylene glycol itself is minimally toxic; alcohol dehydrogenase (ADH) metabolizes it to toxic metabolites: glycolaldehyde → glycolic acid → glyoxylic acid → oxalic acid. Glycolic acid accumulates causing severe high anion gap metabolic acidosis. Oxalic acid chelates calcium forming calcium oxalate monohydrate crystals that deposit in renal tubules, causing acute tubular necrosis and AKI. Calcium chelation causes hypocalcemia. Elevated osmolal gap early reflects intact parent compound; gap narrows as metabolism proceeds. Secondary lactic acidosis from tissue hypoperfusion and mitochondrial toxicity.",
+    "classic_presentation": [
+      "stage 1 (0-12h): apparent inebriation without alcohol odor, nausea, vomiting, ataxia, slurred speech",
+      "stage 2 (12-24h): tachycardia, hypertension, tachypnea (Kussmaul respirations), pulmonary edema",
+      "stage 3 (24-72h): flank pain, oliguria, hematuria, acute kidney injury progressing to renal failure",
+      "hypocalcemia symptoms: tetany, carpopedal spasm, QT prolongation, seizures",
+      "altered mental status and coma in severe cases"
+    ],
+    "key_labs": [
+      "severe high anion gap metabolic acidosis (bicarbonate typically 5-12 mEq/L)",
+      "elevated osmolal gap (>10 mOsm/kg early; serum osmolality 320-380+ mOsm/kg)",
+      "hypocalcemia (calcium 6.5-8.0 mg/dL from oxalate chelation)",
+      "elevated creatinine and BUN (AKI from tubular oxalate deposition)",
+      "calcium oxalate monohydrate crystals in urine (envelope or needle-shaped)",
+      "elevated lactate (secondary, usually <6 mmol/L)",
+      "elevated serum ethylene glycol level (>20 mg/dL indicates significant exposure)"
+    ],
+    "diagnostic_criteria": "High anion gap metabolic acidosis + elevated osmolal gap (>10 mOsm/kg) + compatible exposure history. Calcium oxalate crystalluria is pathognomonic. Confirmed by serum ethylene glycol level >20 mg/dL. Treatment should not await confirmatory levels if clinical suspicion is high.",
+    "mimics": [
+      "diabetic_ketoacidosis",
+      "lactic_acidosis",
+      "methanol_ethylene_glycol_poisoning",
+      "chronic_kidney_disease",
+      "sepsis"
+    ],
+    "cant_miss_features": [
+      "irreversible acute renal failure if treatment delayed beyond 8-12 hours",
+      "fomepizole (ADH inhibitor) must be started empirically — do not wait for levels",
+      "hemodialysis required for pH <7.15, AKI, or ethylene glycol level >50 mg/dL",
+      "QT prolongation and hypocalcemic seizures require emergent IV calcium"
+    ],
+    "typical_course": "Untreated: progression to dialysis-dependent renal failure within 24-72h; 20-30% mortality. Treatment: fomepizole 15 mg/kg IV loading dose (blocks ADH), thiamine 100 mg IV + pyridoxine 50 mg IV (shunts metabolism away from oxalate), IV calcium for symptomatic hypocalcemia. Hemodialysis for severe cases. Prognosis excellent with early fomepizole — near-complete renal recovery if started within 8h of ingestion."
+  },
+  "macrophage_activation_syndrome": {
+    "category": "hematologic",
+    "disease_importance": 5,
+    "epidemiology": "Bimodal distribution: primary (genetic/familial) HLH predominantly in infants and children under 2 years with PRF1, UNC13D, STX11, or STXBP2 mutations; secondary (acquired) MAS/HLH affects all ages. Secondary triggers: viral infections (EBV most common, also CMV, HIV, influenza), hematologic malignancy (T-cell and NK-cell lymphoma in ~30-50% of adult secondary HLH), and rheumatic disease (systemic juvenile idiopathic arthritis / sJIA is the classic rheumatic trigger). Overall estimated incidence 1-2 per million/year; mortality 40-60% without treatment, 20-40% with immunochemotherapy. No sex predominance in primary; slight male predominance in malignancy-triggered secondary.",
+    "pathophysiology": "Defective cytotoxic T lymphocyte and NK cell killing of antigen-presenting cells — due to genetic perforin/granule secretion defects (primary) or functional impairment (secondary) — prevents normal immune contraction. Persistent antigen presentation drives uncontrolled CD8+ T-cell and macrophage activation, producing massive IFN-γ, IL-1β, IL-6, IL-12, and IL-18 release (cytokine storm). IFN-γ directly activates macrophages to phagocytose blood cells (hemophagocytosis), inhibits lipoprotein lipase causing hypertriglyceridemia, and suppresses bone marrow producing pancytopenia. IL-6 drives acute-phase response with extreme hyperferritinemia. Sustained cytokine storm leads to disseminated endothelial injury, coagulopathy (fibrinogen consumption), hepatic failure, and multiorgan dysfunction.",
+    "classic_presentation": [
+      "prolonged high fever (>38.5°C, typically unresponsive to antibiotics)",
+      "splenomegaly (often massive)",
+      "hepatomegaly with transaminitis and jaundice",
+      "progressive pancytopenia (anemia, thrombocytopenia, neutropenia)",
+      "lymphadenopathy",
+      "neurologic symptoms (seizures, altered consciousness, ataxia — in 30-50% of primary)",
+      "rash (evanescent salmon-colored rash in sJIA-associated MAS)",
+      "coagulopathy with bleeding"
+    ],
+    "key_labs": [
+      "extreme hyperferritinemia (ferritin >500 ng/mL required; levels >10,000 ng/mL highly specific for HLH/MAS)",
+      "hypertriglyceridemia (fasting triglycerides >265 mg/dL or >3 mmol/L, from LPL inhibition)",
+      "hypofibrinogenemia (fibrinogen <150 mg/dL, consumed by activated macrophages)",
+      "pancytopenia: hemoglobin <9 g/dL + platelets <100,000/uL + neutrophils <1,000/uL (2+ lineages required)",
+      "elevated LDH (tissue destruction and hemophagocytosis)",
+      "elevated AST/ALT (hepatic involvement in majority)",
+      "elevated soluble CD25/sIL-2R (>2,400 U/mL; reflects T-cell activation — most sensitive HLH marker)",
+      "absent or markedly decreased NK cell cytotoxicity (in primary HLH)"
+    ],
+    "diagnostic_criteria": "HLH-2004 criteria: 5 of 8 features required — fever, splenomegaly, cytopenias (>=2 cell lines), hypertriglyceridemia and/or hypofibrinogenemia, hemophagocytosis on bone marrow/spleen/lymph node biopsy, low or absent NK cell activity, ferritin >500 ng/mL, elevated soluble CD25 (sIL-2R). Alternatively, HScore >=169 yields >93% probability. Ferritin >=500 has 94% sensitivity as screening threshold (PMID 39868852). Molecular diagnosis (PRF1/UNC13D mutations) confirms primary HLH.",
+    "mimics": [
+      "sepsis",
+      "systemic_lupus_erythematosus",
+      "disseminated_intravascular_coagulation",
+      "ttp_hus",
+      "aplastic_anemia",
+      "tumor_lysis_syndrome"
+    ],
+    "cant_miss_features": [
+      "multiorgan failure with extremely elevated ferritin (>10,000) — diagnostic of HLH until proven otherwise",
+      "rapidly fatal without immunosuppression (etoposide + dexamethasone +/- cyclosporine); empiric treatment may be needed before bone marrow biopsy",
+      "underlying malignancy (T/NK cell lymphoma) present in up to 50% of adult secondary HLH — must be excluded",
+      "CNS HLH (seizures, encephalopathy) requires intrathecal therapy and indicates poor prognosis"
+    ],
+    "typical_course": "Rapidly progressive over days to weeks without treatment. Primary HLH: 50-60% 5-year survival with HLH-94/2004 chemotherapy protocol (etoposide + dexamethasone + cyclosporine), cured only by allogeneic hematopoietic stem cell transplant. Secondary/reactive MAS: treat underlying trigger (antivirals, chemotherapy for lymphoma, steroids/anakinra for rheumatic disease); mortality 20-40%. Refractory disease responds to emapalumab (anti-IFN-γ) approved for primary HLH."
+  },
+  "methanol_poisoning": {
+    "category": "metabolic_toxic",
+    "disease_importance": 5,
+    "epidemiology": "Predominantly affects adults who intentionally ingest methanol as an alcohol substitute (bootleg spirits, industrial spirits) or as a suicidal ingestion. Mass poisoning outbreaks documented in developing countries from contaminated illicit alcohol. Occupational exposure risk in painters, mechanics, and laboratory workers. Lethal dose approximately 1 mL/kg (as little as 10 mL can cause permanent blindness). Men > women; often co-ingestion with ethanol which may mask or delay presentation.",
+    "pathophysiology": "Methanol itself has low acute toxicity but is metabolized by alcohol dehydrogenase (ADH) to formaldehyde, which is rapidly converted to formic acid (formate). Formate inhibits mitochondrial cytochrome c oxidase, blocking oxidative phosphorylation and causing cellular energy failure. The retina and optic nerve are selectively vulnerable due to low mitochondrial cytochrome c oxidase activity in retinal ganglion cells. Formate accumulation drives a severe high anion gap metabolic acidosis. Parent compound methanol elevates serum osmolality creating an osmolal gap that narrows as metabolism proceeds. A latent period of 6-24 hours occurs before metabolic acidosis develops; concurrent ethanol ingestion prolongs the latency by competitively inhibiting ADH.",
+    "classic_presentation": [
+      "visual disturbances: blurred vision, photophobia, 'snowstorm' or halo vision, progressing to blindness",
+      "severe headache and nausea/vomiting after latent period of 6-24 hours",
+      "Kussmaul respirations (deep, rapid breathing) from metabolic acidosis",
+      "CNS depression, confusion, or coma in severe poisoning",
+      "abdominal pain (due to formate toxicity and acidosis)",
+      "fundoscopic findings: papilledema, optic disc hyperemia, retinal edema",
+      "fixed dilated pupils and absence of pupillary reflex in severe optic toxicity"
+    ],
+    "key_labs": [
+      "severe high anion gap metabolic acidosis: bicarbonate typically 5-12 mEq/L",
+      "elevated osmolal gap (>10 mOsm/kg) early in course, before full metabolism of parent compound",
+      "elevated serum methanol level >20 mg/dL on direct measurement",
+      "elevated formate/formic acid level (confirmatory for severity)",
+      "elevated lactate (secondary tissue hypoperfusion and mitochondrial inhibition)",
+      "normal glucose (distinguishes from DKA)",
+      "normal or mildly elevated creatinine (distinguishes from ethylene glycol renal failure)"
+    ],
+    "diagnostic_criteria": "High anion gap metabolic acidosis + elevated osmolal gap + visual symptoms or history of toxic alcohol exposure. Confirmed by serum methanol level >20 mg/dL. Osmolal gap alone unreliable late in course as parent compound is metabolized. Treatment must not be delayed pending confirmation when clinical suspicion is high.",
+    "mimics": [
+      "ethylene_glycol_poisoning",
+      "diabetic_ketoacidosis",
+      "lactic_acidosis",
+      "sepsis",
+      "methanol_ethylene_glycol_poisoning"
+    ],
+    "cant_miss_features": [
+      "permanent bilateral blindness if treatment delayed — visual loss may be irreversible within hours of symptom onset",
+      "mass casualty potential in outbreak settings (contaminated bootleg alcohol)",
+      "concurrent ethanol ingestion may mask early presentation and prolong latent period"
+    ],
+    "typical_course": "Latent period 6-24 hours (prolonged by co-ingestion of ethanol). Then rapid deterioration: metabolic acidosis, visual loss, coma. Untreated mortality high. Treatment with fomepizole (preferred) or IV ethanol blocks ADH, halting formate production. Hemodialysis required for severe acidosis (pH <7.15), serum methanol >50 mg/dL, or visual symptoms — removes both methanol and formate. Folate/folinic acid supplementation enhances formate clearance. Visual prognosis correlates with severity of acidosis at presentation; early treatment can preserve vision."
+  },
+  "alcoholic_hepatitis": {
+    "category": "hepatic",
+    "disease_importance": 4,
+    "epidemiology": "Occurs in 10-35% of patients with alcohol use disorder. US hospitalizations rose from ~281,000 (2011) to ~325,000 (2017). Predominantly affects men 40-60 years old with >10 years of heavy alcohol use (>80g/day in men, >40g/day in women). NIAAA criteria require >50g/day for ≥6 months. Rising incidence in younger adults and women.",
+    "pathophysiology": "Ethanol metabolism reduces hepatic NAD:NADH ratio, promoting lipid accumulation and impaired fatty acid oxidation. Acetaldehyde adducts cause direct hepatocyte injury. Intestinal dysbiosis and increased gut permeability allow LPS translocation into portal circulation, activating Kupffer cells via TLR4 signaling. This drives TNF-alpha, IL-6, IL-8 release, neutrophilic infiltration, and oxidative stress from reactive oxygen species. Hepatocyte mitochondrial dysfunction and apoptosis lead to rapid synthetic failure with coagulopathy, jaundice, and portal hypertension.",
+    "classic_presentation": [
+      "acute or subacute onset jaundice after heavy alcohol use",
+      "tender hepatomegaly (liver may be palpable 4-6 cm below costal margin)",
+      "fever (38-40°C in ~50% — from cytokine-driven inflammation, not always infection)",
+      "neutrophilic leukocytosis (WBC often 10,000-20,000/µL despite no infection)",
+      "anorexia, nausea, vomiting, and significant weight loss",
+      "right upper quadrant pain or fullness",
+      "stigmata of chronic liver disease: spider angiomata, palmar erythema, asterixis",
+      "ascites and peripheral edema in severe disease",
+      "hepatic encephalopathy in severe cases (most reliable indicator of severity)"
+    ],
+    "key_labs": [
+      "AST elevated 2-10x ULN (rarely >500 U/L — values >500 suggest alternative diagnosis)",
+      "AST:ALT ratio >2 (near-pathognomonic for alcoholic etiology; ratio >1 present in almost all cases)",
+      "ALT often only mildly elevated or near-normal (pyridoxine deficiency impairs ALT synthesis)",
+      "GGT markedly elevated (6-8x ULN — most sensitive alcohol marker; induced by microsomal enzymes)",
+      "MCV elevated (>100 fL in ~50-60% — direct alcohol toxicity to erythroid precursors)",
+      "bilirubin elevated (often >3 mg/dL, median ~13 mg/dL in severe cases)",
+      "INR/PT prolonged (synthetic failure; degree correlates with prognosis)",
+      "thrombocytopenia (bone marrow suppression + splenic sequestration)",
+      "hypoalbuminemia (synthetic failure)"
+    ],
+    "diagnostic_criteria": "NIAAA clinical criteria: onset of jaundice within 60 days of heavy alcohol use (>50g/day for ≥6 months), serum bilirubin >3 mg/dL, AST 50-400 U/L with AST:ALT >1.5, no other cause of acute hepatitis. Severity: Maddrey Discriminant Function (MDF) = 4.6×(PT-control) + bilirubin(mg/dL); MDF >32 indicates severe disease with 30-day mortality 30-50%. MELD score >20 also indicates severe disease warranting steroid consideration.",
+    "mimics": [
+      "cirrhosis",
+      "hepatocellular_injury",
+      "acute_pancreatitis",
+      "sepsis",
+      "autoimmune_hepatitis",
+      "wilson_disease"
+    ],
+    "cant_miss_features": [
+      "severe alcoholic hepatitis (MDF >32 or MELD >20): 30-day mortality 30-50% — prednisolone 40mg/day x28 days if no contraindications",
+      "hepatic encephalopathy signals hepatic decompensation requiring urgent evaluation for transplant listing",
+      "concurrent infection mimics fever/leukocytosis of AH — blood/urine/ascitic fluid cultures mandatory before steroids",
+      "spontaneous bacterial peritonitis must be excluded before attributing ascites to AH alone",
+      "Lille score >0.45 at day 7 of steroids predicts 75% 6-month mortality — early transplant evaluation required"
+    ],
+    "typical_course": "Without treatment, 40% mortality within 6 months in severe disease. With abstinence and supportive care, mild-moderate AH can resolve over weeks to months. Prednisolone improves 28-day survival in MDF >32 but does not change 6-month outcomes. Lille score at day 7 stratifies steroid responders (mortality ~25%) vs non-responders (mortality ~75%). Non-responders with MELD >26 may be considered for early liver transplant at select centers."
+  },
+  "chronic_myeloid_leukemia": {
+    "category": "hematologic",
+    "disease_importance": 4,
+    "epidemiology": "Incidence ~1-2 per 100,000 per year; ~15% of all new leukemia diagnoses in adults. Median age at diagnosis 55-65 years; rare in children. Slight male predominance. Ionizing radiation exposure is the principal environmental risk factor (observed in atomic bomb survivors). No inherited predisposition. With tyrosine kinase inhibitor (TKI) therapy, prevalence is growing as patients achieve near-normal life expectancy; estimated 70,000-100,000 people living with CML in the United States.",
+    "pathophysiology": "CML arises from a clonal hematopoietic stem cell bearing the Philadelphia chromosome — the reciprocal translocation t(9;22)(q34;q11.2). This juxtaposes the ABL1 proto-oncogene from chromosome 9 to the BCR breakpoint cluster region on chromosome 22, generating the BCR::ABL1 fusion gene. The resulting chimeric BCR-ABL1 protein (p210 in >95% of cases) is a constitutively active tyrosine kinase that drives unregulated myeloid proliferation, impairs apoptosis, and causes genomic instability via activation of RAS/MAPK, PI3K/AKT, JAK/STAT5, and MYC pathways. Massive granulocyte expansion spills into the peripheral blood (leukocytosis), infiltrates the spleen (splenomegaly), and elevates catabolism markers (LDH, uric acid). Basophilia — an almost universal feature — reflects BCR-ABL1-driven maturation skewing. Natural history follows three phases: chronic (granulocytic expansion, years), accelerated (clonal evolution, months), and blast crisis (acute leukemia transformation, rapidly fatal).",
+    "classic_presentation": [
+      "marked leukocytosis: WBC commonly 50,000-300,000/uL with left-shifted differential (myelocytes, metamyelocytes, bands)",
+      "absolute basophilia (present in virtually 100% of CML cases; absent in leukemoid reactions)",
+      "splenomegaly causing early satiety, left upper quadrant fullness, or dragging discomfort (present in ~50-70% at diagnosis)",
+      "fatigue, night sweats, and weight loss from hypermetabolic state driven by massive cell turnover",
+      "thrombocytosis (platelet count 400,000-600,000/uL in ~30-50% of patients at presentation)",
+      "incidental discovery on routine CBC in an asymptomatic patient (~30-40% of cases in the TKI era)",
+      "gout or gouty arthritis from hyperuricemia secondary to nucleic acid turnover",
+      "elevated LDH reflecting high cell turnover and tissue infiltration"
+    ],
+    "key_labs": [
+      "WBC markedly elevated (typically >25,000/uL; often >100,000/uL); full myeloid spectrum on differential (AUC 0.748 for CML diagnosis)",
+      "absolute basophilia (≥200 basophils/mm³ in virtually all chronic-phase cases; AUC 0.889, stronger than WBC alone)",
+      "elevated LDH (correlates strongly with BCR-ABL1 transcript level; AUC 0.881)",
+      "elevated uric acid (from nucleic acid turnover; weaker diagnostic discriminator, AUC 0.695)",
+      "thrombocytosis (40-50% of patients; distinguishes from aplastic anemia where platelets are low)",
+      "Philadelphia chromosome (t(9;22)) and BCR-ABL1 fusion gene confirmed by cytogenetics, FISH, or RT-PCR on peripheral blood or bone marrow",
+      "low leukocyte alkaline phosphatase (LAP) score (distinguishes CML from leukemoid reaction where LAP is high)"
+    ],
+    "diagnostic_criteria": "Peripheral blood showing marked leukocytosis with myeloid left shift and basophilia is the trigger for workup. Confirmation requires detection of the Philadelphia chromosome t(9;22)(q34;q11.2) by conventional cytogenetics on bone marrow aspirate, and/or BCR-ABL1 fusion by FISH or quantitative RT-PCR on peripheral blood. Quantitative PCR (IS %) is then used for monitoring treatment response (major molecular response: BCR-ABL1 ≤0.1% IS; deep molecular response: ≤0.01%). Bone marrow biopsy is performed at diagnosis for phase classification and cytogenetic evaluation. Chronic phase defined by <10% blasts in blood or marrow; accelerated phase 10-19% blasts or additional cytogenetic abnormalities; blast crisis ≥20% blasts.",
+    "mimics": [
+      "polycythemia_vera",
+      "aplastic_anemia",
+      "sepsis",
+      "tumor_lysis_syndrome",
+      "multiple_myeloma",
+      "rhabdomyolysis",
+      "macrophage_activation_syndrome"
+    ],
+    "cant_miss_features": [
+      "leukostasis emergency: WBC >100,000/uL with neurological symptoms (altered mentation, vision changes), respiratory failure, or priapism — requires urgent cytoreduction (hydroxyurea) and leukapheresis consideration; mortality without rapid treatment is high",
+      "blast crisis transformation: sudden worsening with >20% blasts, new cytopenias, fever — acts as acute leukemia and is rapidly fatal without intensive chemotherapy plus TKI",
+      "tumor lysis syndrome risk: upon initiating cytoreductive therapy in patients with very high WBC, monitor uric acid, potassium, creatinine, phosphorus closely"
+    ],
+    "typical_course": "Chronic phase (85-90% at diagnosis) is indolent and responds well to first-line TKI therapy (imatinib, dasatinib, or nilotinib). With imatinib, 5-year overall survival is ~89%; second-generation TKIs achieve higher rates of deep molecular response. Treatment-free remission (discontinuing TKI) is achievable in ~40-50% of patients with sustained deep molecular response. Without treatment, median survival is 3-5 years with inevitable progression to blast crisis. Accelerated and blast phase carry median survival of <2 years and <1 year respectively despite TKI plus chemotherapy. Allogeneic stem cell transplantation is reserved for blast phase or TKI-resistant disease."
+  },
+  "immune_thrombocytopenic_purpura": {
+    "category": "hematologic",
+    "disease_importance": 4,
+    "epidemiology": "Annual incidence approximately 2-5 per 100,000. Bimodal age distribution: children aged 1-6 years (acute form, equal sex distribution, often follows viral illness) and adults aged 20-50 years (chronic form, female predominance 3:1). Adult prevalence estimated 9.5 per 100,000. Chronic ITP (>12 months duration) occurs in ~67% of adults versus ~36% of children. Secondary ITP may be triggered by HIV, HCV, H. pylori, SLE, antiphospholipid syndrome, lymphoproliferative disorders (CLL, lymphoma), or medications (heparin, quinine, sulfonamides). Pediatric acute ITP often self-resolves within 3-6 months without treatment in 70-80% of cases.",
+    "pathophysiology": "Autoimmune disorder in which IgG autoantibodies — predominantly directed against platelet membrane glycoproteins GPIIb/IIIa (integrin αIIbβ3) and GPIb/IX — opsonize platelets, triggering Fc-receptor-mediated phagocytosis primarily in the spleen and liver. Dysregulated T-cell tolerance permits autoreactive B-cell survival and antibody production. The spleen serves dual roles: site of antiplatelet antibody production by plasma cells and primary site of antibody-coated platelet destruction by splenic macrophages. Secondary mechanism: autoantibody-mediated impairment of megakaryocyte maturation in the bone marrow suppresses platelet production despite compensatorily elevated thrombopoietin — bone marrow megakaryocyte number is normal to increased but platelet output per megakaryocyte is reduced. Cytotoxic CD8+ T cells also directly kill platelets and megakaryocytes. Erythroid and myeloid lineages are unaffected, explaining the hallmark isolated thrombocytopenia with normal WBC and hemoglobin.",
+    "classic_presentation": [
+      "isolated thrombocytopenia discovered incidentally or during workup for mucocutaneous bleeding (platelets typically <30 x10^9/L when symptomatic)",
+      "petechiae — pinpoint non-blanching hemorrhages on skin and mucous membranes, especially lower extremities and pressure areas",
+      "easy bruising (ecchymoses) disproportionate to minor trauma",
+      "epistaxis, gingival bleeding, or prolonged bleeding from minor cuts",
+      "menorrhagia in premenopausal women (may be presenting or dominant symptom)",
+      "no splenomegaly, lymphadenopathy, or systemic symptoms (absence of these is clinically important)",
+      "preceded by viral illness 1-3 weeks prior in pediatric acute ITP (50-80% of children)"
+    ],
+    "key_labs": [
+      "isolated thrombocytopenia: platelets <100 x10^9/L (severe: <30 x10^9/L; very severe: <10 x10^9/L) with normal or large platelets on peripheral smear",
+      "normal WBC count and differential (lymphocytosis may suggest secondary cause such as CLL or viral trigger)",
+      "normal hemoglobin (anemia absent unless concurrent autoimmune hemolytic anemia — Evans syndrome — or significant hemorrhage)",
+      "peripheral blood smear: isolated thrombocytopenia with megathrombocytes (large platelets reflecting increased thrombopoietic drive), no schistocytes, no blasts, no dysplastic cells",
+      "normal PT/INR and aPTT (coagulation cascade intact — distinguishes from DIC and liver disease)",
+      "elevated or compensatorily normal reticulocyte count (distinguishes from aplastic anemia where reticulocytes are low)",
+      "bone marrow examination (if performed): normal-to-increased megakaryocyte number with adequate erythroid and myeloid precursors"
+    ],
+    "diagnostic_criteria": "Diagnosis of exclusion per ASH 2019 guidelines: platelet count <100 x10^9/L on at least one occasion with otherwise normal CBC, normal peripheral blood smear (no schistocytes, no blasts), normal coagulation studies (PT/INR, aPTT), and no alternative etiology identified. No gold-standard confirmatory test exists. Antiplatelet antibody testing (anti-GPIIb/IIIa IgG) has sensitivity ~49-66% and specificity ~78-92% — insufficient to confirm or exclude alone. Bone marrow biopsy not routinely required in typical presentations but recommended if age >60 years, atypical features, or failure to respond to first-line therapy. Screen for secondary causes: HIV, HCV, HBV serology; H. pylori testing; ANA, antiphospholipid antibodies; TSH; serum protein electrophoresis in older adults.",
+    "mimics": [
+      "aplastic_anemia",
+      "ttp_hus",
+      "disseminated_intravascular_coagulation",
+      "systemic_lupus_erythematosus",
+      "sepsis",
+      "cirrhosis",
+      "HELLP_syndrome",
+      "hemolytic_anemia"
+    ],
+    "cant_miss_features": [
+      "intracranial hemorrhage (ICH): rare (<1% of cases) but life-threatening; risk increases sharply when platelets <10 x10^9/L and with concurrent head trauma, anticoagulation, or hypertension — requires immediate platelet transfusion, IVIg, and neurosurgical evaluation",
+      "Evans syndrome: concurrent autoimmune hemolytic anemia (Coombs-positive) with ITP — indicates more severe immune dysregulation, associated with SLE and common variable immunodeficiency, requires more aggressive immunosuppression",
+      "secondary ITP masking underlying HIV, HCV, or lymphoma — failure to screen delays treatment of the primary condition and allows disease progression"
+    ],
+    "typical_course": "Pediatric acute ITP: 70-80% achieve spontaneous remission within 6 months without treatment; chronic ITP develops in ~20-30%. Adult ITP: chronic course in ~60-70%; spontaneous sustained remission uncommon (~5-10%). Phase definitions: newly diagnosed (<3 months), persistent (3-12 months), chronic (>12 months). First-line treatment: corticosteroids (prednisone 1 mg/kg/day x 2-4 weeks or high-dose dexamethasone 40 mg/day x 4 days); initial response rate ~70-80% but sustained response <30%. IVIg used for rapid platelet elevation (surgical preparation, severe bleeding, pregnancy). Second-line: thrombopoietin receptor agonists (romiplostim, eltrombopag) achieve sustained response in 50-60%, rituximab achieves sustained remission in ~25-30%. Splenectomy achieves durable remission in 60-70% of carefully selected adults with refractory chronic ITP (ASH recommendation: defer at least 12 months). Mortality from ITP-related hemorrhage <1% in modern management."
+  },
+  "hepatorenal_syndrome": {
+    "category": "renal",
+    "disease_importance": 4,
+    "epidemiology": "Develops in 18% of decompensated cirrhosis patients at 1 year, 39% at 5 years. One-third of spontaneous bacterial peritonitis (SBP) cases precipitate HRS. Risk factors: decompensated cirrhosis, acute liver failure, severe alcoholic hepatitis, hyponatremia, elevated plasma renin activity. AKI occurs in 20-50% of hospitalized cirrhotic patients; HRS-AKI is the most severe and lethal subtype.",
+    "pathophysiology": "Cirrhosis-induced portal hypertension causes progressive splanchnic vasodilation via nitric oxide and prostaglandins, reducing effective arterial blood volume. This activates compensatory renin-angiotensin-aldosterone system (RAAS), sympathetic nervous system, and arginine vasopressin release, causing intense renal vasoconstriction and cortical ischemia without structural kidney damage. Cirrhotic cardiomyopathy (present in up to 50% of advanced cases) limits cardiac compensation. Systemic inflammation from bacterial translocation and pro-inflammatory cytokines (IL-6, IL-8, TNF-alpha) further impairs renal perfusion. Common precipitants: SBP, infections, large-volume paracentesis without albumin replacement, GI bleeding, and nephrotoxic drugs.",
+    "classic_presentation": [
+      "progressive oliguria in the setting of known cirrhosis and ascites",
+      "jaundice with rapidly rising bilirubin",
+      "hepatic encephalopathy (confusion, asterixis)",
+      "refractory ascites not responding to diuretics",
+      "spontaneous bacterial peritonitis as a precipitating event",
+      "absence of proteinuria or hematuria on urinalysis (functional, not structural AKI)",
+      "hypotension or low mean arterial pressure"
+    ],
+    "key_labs": [
+      "creatinine: rising >=0.3 mg/dL within 48h or >=1.5x baseline within 7 days (HRS-AKI); no minimum threshold required",
+      "bilirubin: elevated, often >5 mg/dL reflecting advanced hepatic failure; higher levels predict worse terlipressin response",
+      "INR: prolonged (>1.5), reflects hepatic synthetic failure",
+      "sodium: hyponatremia common (dilutional), low urine sodium (<10 mEq/L in classic HRS)",
+      "albumin: low (<2.5 g/dL typical), reflects severe hepatic dysfunction; also used therapeutically (1 g/kg/day)"
+    ],
+    "diagnostic_criteria": "HRS-AKI (2019 ICA/EASL/AASLD): cirrhosis with ascites + AKI (creatinine rise >=0.3 mg/dL in 48h or >=1.5x baseline in 7 days) + no response to 2 days of diuretic withdrawal and albumin challenge (1 g/kg/day up to 100g) + absence of shock, nephrotoxins, structural kidney disease (proteinuria <500 mg/day, <50 RBCs/hpf, normal renal ultrasound). Replaces old Type 1/Type 2 classification. HRS-NAKI includes HRS-AKD (eGFR <60 for <3 months) and HRS-CKD (>3 months).",
+    "mimics": [
+      "cirrhosis",
+      "chronic_kidney_disease",
+      "sepsis",
+      "heart_failure",
+      "nephrotic_syndrome"
+    ],
+    "cant_miss_features": [
+      "median survival without treatment is 2-4 weeks for HRS-AKI; urgent vasopressor + albumin therapy (terlipressin or norepinephrine) and transplant evaluation required",
+      "spontaneous bacterial peritonitis precipitates HRS in one-third of cases; always check ascitic fluid PMN count",
+      "prerenal azotemia vs HRS: prerenal responds to albumin challenge, HRS does not; fractional excretion of urea is more reliable than FeNa when patient is on diuretics"
+    ],
+    "typical_course": "HRS-AKI: 90-day mortality 51-73% without treatment. Terlipressin + albumin achieves reversal in ~50% of cases. Norepinephrine + albumin achieves 39-70%. Liver transplantation is the only curative treatment; renal recovery post-transplant in up to 75%. HRS-NAKI has slower progression but median survival without transplant is 6-12 months. Each day of pretransplant dialysis increases non-recovery risk by 6%."
+  },
+  "cholangitis": {
+    "category": "hepatic",
+    "disease_importance": 4,
+    "epidemiology": "Affects ~200,000 Americans annually; peaks in 5th–6th decade with equal sex distribution. Higher prevalence in populations with gallstone disease (Native American, Hispanic). Most common etiology: choledocholithiasis (~60%). Other causes: biliary stricture (post-surgical, malignant), biliary stent occlusion, hepaticojejunostomy anastomotic stenosis, liver flukes (endemic Asia). Gram-negative enteric organisms dominate (E. coli, Klebsiella, Enterococcus); 20–30% of blood cultures positive.",
+    "pathophysiology": "Obstruction of the common bile duct (most commonly by a gallstone or stricture) raises intraductal biliary pressure above the bacteriostatic capacity of the biliary epithelium. Commensal gut bacteria — predominantly gram-negative enteric flora — ascend the bile duct against normal antegrade flow once pressure exceeds ~25 cm H2O. Bacterial translocation across the hepatic sinusoids into systemic circulation causes bacteremia, rigors, and sepsis physiology. Biliary obstruction impairs bilirubin excretion (direct hyperbilirubinemia, ALP/GGT elevation from cholangiocyte injury). Without biliary decompression, infection progresses to suppurative cholangitis (pus under pressure), hepatic abscess formation, and multi-organ failure (Reynolds pentad: Charcot triad + hypotension + altered mental status).",
+    "classic_presentation": [
+      "Charcot triad: fever/rigors + right upper quadrant pain + jaundice (present together in only 26–72% of cases; each element present in >60%)",
+      "Reynolds pentad (severe): Charcot triad + hypotension + altered mental status — indicates suppurative cholangitis with bacteremic shock",
+      "Acute onset fever with rigors and chills, often preceded by biliary colic or known cholelithiasis",
+      "Right upper quadrant tenderness on palpation; Murphy sign may be positive (gallbladder co-involvement)",
+      "Jaundice with dark urine and pale/clay-colored stools (acholic stool from biliary obstruction)",
+      "Rapid clinical deterioration to septic shock if biliary decompression delayed beyond 24–48 hours"
+    ],
+    "key_labs": [
+      "Markedly elevated alkaline phosphatase (>2–3x ULN in ~78–93% of cases) and GGT — cholestatic pattern is the biochemical hallmark",
+      "Direct (conjugated) hyperbilirubinemia — total bilirubin >3–4 mg/dL in biliary obstruction; >2 mg/dL is a Tokyo Guidelines criterion",
+      "Leukocytosis with neutrophilia (WBC typically 12,000–25,000/mm³; present in ~80% of cases) — key infectious discriminator from chronic cholestatic disease",
+      "Elevated CRP (>10 mg/L is a Tokyo Guidelines criterion) and procalcitonin (>2–3 ng/mL predicts Grade II/III severity; PCT >0.68 ng/mL associated with bacteremia; AUC-ROC 0.75–0.90 for severe cholangitis)",
+      "ALT/AST mildly elevated (<3x ULN typical); transient transaminase spike >1,000 IU/L may occur with acute biliary obstruction — should not be misattributed to hepatocellular injury",
+      "Blood cultures positive in 20–30% of cases; positive cultures correlate with significantly higher procalcitonin (mean 8.6 vs 0.7 ng/mL in bacteremia vs non-bacteremia)"
+    ],
+    "diagnostic_criteria": "Tokyo Guidelines 2018 (TG18; PMID 31211357): definite diagnosis requires systemic inflammation (fever >38°C OR abnormal WBC OR elevated CRP) PLUS biochemical cholestasis (bilirubin >2 mg/dL OR ALP/GGT/transaminases >1.5x ULN) PLUS imaging evidence of biliary obstruction (bile duct dilatation with causative lesion). Sensitivity 100%, specificity 87.4%. Charcot triad alone: high specificity but low sensitivity (26–72%). Severity graded I (mild, responds to antibiotics), II (moderate, fails medical therapy), III (severe, organ dysfunction).",
+    "mimics": [
+      "cholestatic_liver_disease",
+      "acute_pancreatitis",
+      "sepsis",
+      "hepatocellular_injury",
+      "acute_myocardial_infarction"
+    ],
+    "cant_miss_features": [
+      "Reynolds pentad (Charcot triad + hypotension + altered mental status) = suppurative cholangitis requiring emergency ERCP within hours — mortality approaches 50% without biliary decompression",
+      "Bacteremic cholangitis in elderly or immunocompromised may present without classic fever or jaundice — sepsis physiology with mild cholestatic labs alone should trigger biliary imaging",
+      "Gallstone cholangitis and biliary pancreatitis can co-exist (Mirizzi syndrome); do NOT use lipase elevation to exclude cholangitis",
+      "Procalcitonin >2 ng/mL predicts Grade II/III severity requiring early ERCP within 24 hours"
+    ],
+    "typical_course": "Prompt recognition and treatment (IV antibiotics + ERCP biliary decompression) reduces mortality from ~50% to <10%. ERCP achieves biliary drainage in 94–98% of cases. Mild cholangitis responds to antibiotics and supportive care; moderate-severe cases require ERCP within 24–48 hours; critical cases (Reynolds pentad) require emergency decompression. Recurrence is common if the underlying cause (choledocholithiasis, biliary stricture) is not definitively managed. Cholecystectomy after recovery is recommended for gallstone-related cholangitis."
+  },
+  "warm_autoimmune_hemolytic_anemia": {
+    "category": "hematologic",
+    "disease_importance": 3,
+    "epidemiology": "Incidence 1.77–2.4 per 100,000 adults annually; most common AIHA subtype (~70% of all AIHA). Median age 53 years, 60% female. Incidence rises with age, reaching 3.34 per 100,000 per year in those over 50. Half of cases are primary (idiopathic); half are secondary to lymphoproliferative disorders (CLL, lymphoma ~24%), autoimmune diseases (SLE ~25%), infections, or drugs.",
+    "pathophysiology": "IgG autoantibodies (rarely IgA or IgM) bind RBC surface antigens optimally at 37°C, targeting Rh system epitopes or band 3 protein. Antibody-opsonized RBCs are recognized by Fcγ receptors on splenic macrophages, leading to phagocytosis or partial membrane removal (trogocytosis) that converts RBCs into microspherocytes. NK cell antibody-dependent cytotoxicity and, in ~20% of cases, C3d complement activation via IgG contribute to hepatic destruction. Net result is predominantly extravascular hemolysis exceeding bone marrow compensatory capacity, producing anemia with reticulocytosis.",
+    "classic_presentation": [
+      "fatigue, dyspnea, and pallor from hemolytic anemia (median Hgb 7–7.5 g/dL at onset; 63% below 8 g/dL)",
+      "jaundice from elevated unconjugated bilirubin (present in ~85% of cases)",
+      "splenomegaly from RBC sequestration and extramedullary hematopoiesis",
+      "positive direct antiglobulin test (DAT) for IgG in ~95% of cases",
+      "spherocytes and polychromasia on peripheral blood smear",
+      "concurrent immune thrombocytopenia (Evans syndrome) in ~10–15%, predicts worse prognosis"
+    ],
+    "key_labs": [
+      "hemoglobin decreased (median ~7 g/dL; range 3–10 g/dL at presentation)",
+      "haptoglobin undetectable or severely reduced (decreased in >93% of cases; <25 mg/dL has 83% sensitivity, 96% specificity for hemolysis)",
+      "lactate_dehydrogenase elevated (elevated in ~100% of primary wAIHA; median ~500 U/L, range up to 5000 U/L)",
+      "bilirubin_indirect elevated (elevated in ~85% of cases; reflects extravascular hemolysis)",
+      "reticulocyte_count elevated (mean ~323 × 10⁹/L at onset; up to 20% present with paradoxical reticulocytopenia due to concurrent autoimmune reticulocyte destruction)",
+      "DAT positive for IgG alone (67%), IgG+C3d (20%), or C3d alone (13%); 3–11% are DAT-negative despite clinical AIHA"
+    ],
+    "diagnostic_criteria": "Hemolytic anemia (low Hgb, elevated LDH, low haptoglobin, elevated indirect bilirubin, reticulocytosis) plus positive DAT with IgG and/or C3d, after excluding alloimmune, drug-induced, and non-immune causes of hemolysis. Spherocytes on peripheral smear support diagnosis. DAT-negative AIHA diagnosed by clinical/lab hemolysis pattern plus therapeutic response when extensive workup excludes alternatives.",
+    "mimics": [
+      "hemolytic_anemia",
+      "ttp_hus",
+      "disseminated_intravascular_coagulation",
+      "systemic_lupus_erythematosus",
+      "aplastic_anemia",
+      "vitamin_b12_deficiency",
+      "immune_thrombocytopenic_purpura"
+    ],
+    "cant_miss_features": [
+      "Evans syndrome (AIHA + ITP): concurrent thrombocytopenia distinguishes from pure warm AIHA; associated with SLE, CLL, and primary immunodeficiency; predicts higher relapse and mortality",
+      "Hemoglobin <6 g/dL at presentation: associated with >50% relapse risk at 3 years and may require emergent transfusion despite cross-match difficulties from pan-reactive autoantibody",
+      "Secondary AIHA masking underlying CLL or lymphoma: new warm AIHA in adults >50 years warrants lymphoproliferative workup (lymphadenopathy, CBC differential, flow cytometry)"
+    ],
+    "typical_course": "Acute to subacute onset; ~85% respond to corticosteroids within 1–3 weeks, but only 31–38% maintain response at 12 months. Two-thirds of steroid responders require second-line therapy (rituximab ~75–80% CR at 12 months; splenectomy ~75% CR). Mortality 3–20% depending on cohort and follow-up; infection is the leading identified cause of death. Relapse after steroid taper in >60%; Evans syndrome and severe onset Hgb predict worse outcomes."
+  },
+  "myelodysplastic_syndrome": {
+    "category": "hematologic",
+    "disease_importance": 3,
+    "epidemiology": "Incidence ~4 cases per 100,000/year; rises sharply with age (median onset 70-75 years). Predominantly males. Risk factors: prior cytotoxic chemotherapy or radiotherapy (treatment-related MDS has worse prognosis), benzene/organic solvent exposure, smoking, germline predisposition syndromes (Fanconi anemia, Diamond-Blackfan). Estimated prevalence 10% in adults over 80. De novo MDS most common; treatment-related MDS accounts for ~15% of cases.",
+    "pathophysiology": "Clonal hematopoietic stem cell disorder caused by somatic mutations in genes regulating RNA splicing (SF3B1, SRSF2, U2AF1), epigenetic modification (DNMT3A, TET2, ASXL1, EZH2), transcription (RUNX1, TP53), and signal transduction (NRAS, JAK2). Mutations cause ineffective hematopoiesis: marrow is normo- or hypercellular yet peripheral cytopenias occur because differentiating cells undergo intramedullary apoptosis before release. Progressive acquisition of additional mutations drives clonal evolution and transformation to AML in ~30% of de novo MDS. Cytogenetic abnormalities (del5q, monosomy 7, del7q, trisomy 8, del20q) contribute to dysregulated differentiation and genomic instability.",
+    "classic_presentation": [
+      "elderly patient (>65) with fatigue and exertional dyspnea from macrocytic or normocytic anemia",
+      "incidental pancytopenia on routine CBC with no obvious nutritional or medication cause",
+      "recurrent bacterial infections from neutropenia (ANC <1.8 x 10^9/L)",
+      "easy bruising, petechiae, or mucosal bleeding from thrombocytopenia",
+      "pallor without neurological symptoms (distinguishes from B12 deficiency)",
+      "inadequate reticulocyte response despite significant anemia (reflects ineffective erythropoiesis)"
+    ],
+    "key_labs": [
+      "CBC: anemia (Hgb often <10 g/dL), thrombocytopenia (<100 x 10^9/L), neutropenia; single cytopenia or pancytopenia",
+      "MCV elevated (macrocytosis, often 95-110 fL) with elevated RDW; reticulocyte count inappropriately low for degree of anemia",
+      "peripheral smear: pseudo-Pelger-Huet anomaly (hyposegmented hypogranular neutrophils), anisocytosis, occasional circulating blasts (<20%)",
+      "bone marrow biopsy: normo- or hypercellular marrow with dysplasia in >=10% of one or more cell lines; ring sideroblasts on Prussian blue stain in SF3B1-mutated subtype",
+      "normal or elevated B12 and folate (excludes megaloblastic cause)",
+      "LDH mildly elevated; Coombs negative (distinguishes from autoimmune hemolytic anemia)"
+    ],
+    "diagnostic_criteria": "WHO 2022 (MDS now termed myelodysplastic neoplasm): persistent cytopenia >=2 months with dysplasia >=10% in >=1 myeloid cell line on bone marrow AND bone marrow blasts <20% (>=20% = AML). Supported by cytogenetics and molecular profiling (SF3B1 mutation with ring sideroblasts is diagnostic even without dysplasia threshold). Exclusion of reactive dysplasia from B12/folate deficiency, medications, infections, copper deficiency required. Risk stratification by IPSS-R: very low to very high risk based on blast %, cytogenetics, and cytopenias.",
+    "mimics": [
+      "aplastic_anemia",
+      "vitamin_b12_deficiency",
+      "folate_deficiency",
+      "chronic_kidney_disease",
+      "systemic_lupus_erythematosus",
+      "chronic_myeloid_leukemia",
+      "multiple_myeloma"
+    ],
+    "cant_miss_features": [
+      "AML transformation: ~30% of de novo MDS within 2-3 years; 55% in treatment-related MDS; watch for rising blast count or worsening cytopenias",
+      "life-threatening infections from severe neutropenia (ANC <0.5 x 10^9/L)",
+      "intracranial or GI hemorrhage from severe thrombocytopenia (<20 x 10^9/L)"
+    ],
+    "typical_course": "Highly variable by IPSS-R risk category. Very low risk: median survival 8.8 years; very high risk: 0.8 years. Lower-risk MDS managed with erythropoiesis-stimulating agents (ESA), luspatercept, or transfusion support. Higher-risk MDS treated with hypomethylating agents (azacitidine, decitabine); allogeneic stem cell transplant is the only curative option. Isolated del(5q) has favorable prognosis and responds to lenalidomide. Treatment-related MDS (post-chemotherapy) carries worst prognosis with median survival ~30 weeks."
+  },
+  "chronic_lymphocytic_leukemia": {
+    "category": "hematologic",
+    "disease_importance": 3,
+    "epidemiology": "Most common adult leukemia in Western countries, comprising 25-30% of all leukemias in the United States. Incidence ~4.7 per 100,000 per year; approximately 21,000 new cases annually in the US. Strongly age-related: median age at diagnosis 70 years, rare under 40. Slight male predominance (1.7:1). Higher incidence in individuals of Northern European descent; uncommon in East Asian populations. No known environmental trigger unlike CML; modest familial clustering with first-degree relative risk ~8-fold elevated. Approximately 30-50% of patients are asymptomatic at diagnosis, detected incidentally on routine CBC.",
+    "pathophysiology": "CLL arises from clonal expansion of mature B-lymphocytes arrested at an intermediate stage of B-cell development, expressing CD5, CD19, CD20 (dim), CD23, and CD200. The malignant cells accumulate due to prolonged survival rather than rapid proliferation — anti-apoptotic proteins BCL-2 (overexpressed via miR-15a/16-1 deletion on chromosome 13q14) and MCL-1 prevent normal programmed cell death. B-cell receptor (BCR) signaling through BTK drives survival and proliferation in lymph nodes and bone marrow microenvironment. Somatic hypermutation status of immunoglobulin heavy-chain variable (IGHV) gene divides CLL into two prognostic groups: mutated IGHV (indolent, >95% sequence identity to germline threshold) vs unmutated IGHV (aggressive, shorter time to treatment). Cytogenetic aberrations are prognostically important: del(13q) sole abnormality (best prognosis, ~55%), trisomy 12 (intermediate), del(11q) (aggressive, ATM deletion), del(17p)/TP53 mutation (worst prognosis, ibrutinib/venetoclax required). Bone marrow infiltration leads to cytopenias; defective immunoglobulin production causes hypogammaglobulinemia and susceptibility to encapsulated bacterial infections. Autoimmune cytopenias occur in 10-15% of patients via T-cell dysregulation generating autoantibodies against RBCs (AIHA) or platelets (ITP).",
+    "classic_presentation": [
+      "incidental absolute lymphocytosis on routine CBC in an asymptomatic older adult (30-50% of cases at diagnosis)",
+      "painless, symmetric cervical, axillary, or inguinal lymphadenopathy that is rubbery and non-tender",
+      "fatigue and exertional intolerance from progressive anemia (hemoglobin <11 g/dL in Rai stage III disease)",
+      "recurrent sinopulmonary infections (pneumonia, sinusitis) from hypogammaglobulinemia and T-cell dysfunction",
+      "splenomegaly causing early satiety and left upper quadrant fullness or discomfort (present in ~30-40% at diagnosis)",
+      "B symptoms: drenching night sweats, unintentional weight loss >10%, and fever without infection (indicate active disease requiring treatment)",
+      "petechiae or easy bruising from autoimmune thrombocytopenia (ITP in ~2-5%) or bone marrow failure (Rai stage IV)"
+    ],
+    "key_labs": [
+      "absolute lymphocytosis: lymphocyte count >5,000/uL (>5 × 10^9/L) sustained for ≥3 months — required for diagnosis; median at diagnosis ~17,600/uL, range 5,000-500,000/uL",
+      "elevated total WBC driven by lymphocytosis: typically 20,000-150,000/uL; myeloid elements are normal or mildly decreased",
+      "smudge cells (Gumprecht shadows) on peripheral blood smear: fragile CLL lymphocytes crushed during smear preparation — characteristic but not pathognomonic",
+      "anemia (hemoglobin <11 g/dL) in advanced disease from marrow infiltration or autoimmune hemolytic anemia (positive direct antiglobulin test/Coombs in AIHA)",
+      "thrombocytopenia (<100,000/uL) in Rai stage IV from marrow infiltration or autoimmune ITP",
+      "elevated beta-2 microglobulin (prognostic marker correlating with tumor burden; LR+ for disease activity)",
+      "hypogammaglobulinemia (low IgG, IgA, IgM) in ~25% at diagnosis, progressing over time — predicts infection risk",
+      "flow cytometry confirming clonal B-cells co-expressing CD5, CD19, CD20(dim), CD23 with light chain restriction (kappa or lambda) — required for definitive diagnosis"
+    ],
+    "diagnostic_criteria": "iwCLL 2018 criteria: ≥5 × 10^9/L clonal B-lymphocytes in peripheral blood for ≥3 months, confirmed by flow cytometry showing CD5+/CD19+/CD20(dim)+/CD23+ co-expression with immunoglobulin light chain restriction. Peripheral smear shows small, mature lymphocytes with scant cytoplasm and smudge cells. Bone marrow biopsy not required for diagnosis but performed if cytopenias present to distinguish marrow infiltration from autoimmune cause. Rai staging (0-IV) based on lymphocytosis, lymphadenopathy, organomegaly, anemia, and thrombocytopenia stratifies prognosis. Binet staging (A-C) is the European equivalent. High-risk cytogenetics (del17p, TP53 mutation) must be assessed before treatment.",
+    "mimics": [
+      "chronic_myeloid_leukemia",
+      "multiple_myeloma",
+      "aplastic_anemia",
+      "hemolytic_anemia",
+      "macrophage_activation_syndrome",
+      "sepsis"
+    ],
+    "cant_miss_features": [
+      "Richter transformation: CLL transforming to diffuse large B-cell lymphoma (2-10% of patients) — sudden B symptoms, rapidly enlarging lymph nodes, markedly elevated LDH, and poor prognosis (median survival <12 months without treatment); requires urgent biopsy",
+      "autoimmune hemolytic anemia (AIHA): warm-antibody AIHA in 7-10% of CLL patients; positive direct Coombs test with falling hemoglobin despite no progression in lymphocyte count; treat with steroids first-line before CLL-directed therapy",
+      "severe hypogammaglobulinemia predisposing to fatal pneumococcal or other encapsulated organism infections; IgG replacement indicated when IgG <400 mg/dL with recurrent serious infections"
+    ],
+    "typical_course": "Extremely heterogeneous: Rai stage 0 (lymphocytosis only) has median survival >10 years, often never requiring treatment; Rai stage III-IV has median survival 2-3 years without modern therapy. Watch-and-wait is standard for early-stage asymptomatic disease. Treatment indications include progressive cytopenias, bulky/symptomatic lymphadenopathy, B symptoms, or rapid lymphocyte doubling time <6 months. Modern regimens: BTK inhibitors (ibrutinib, acalabrutinib) or venetoclax-based combinations are first-line for most patients; FCR chemoimmunotherapy reserved for young, fit, IGHV-mutated patients. Del(17p)/TP53-mutated CLL requires ibrutinib or venetoclax (chemotherapy-resistant). Allogeneic stem cell transplantation only for highly refractory disease."
+  },
+  "drug_induced_liver_injury": {
+    "category": "hepatic",
+    "disease_importance": 3,
+    "epidemiology": "Incidence ~10-15 per 100,000 population annually; leading cause of acute liver failure in the US (~13-16% of ALF cases). Over 1,100 known hepatotoxic substances. Female predominance (59%). Age >50 at higher risk. Most common causative agents: amoxicillin-clavulanate (most common idiosyncratic cause in Western countries), antituberculosis drugs, NSAIDs, herbal/dietary supplements (~16%), statins, amiodarone, and acetaminophen overdose (most common intrinsic cause of ALF).",
+    "pathophysiology": "Three mechanisms: (1) Intrinsic/direct — dose-dependent, predictable, short latency (hours to days); reactive metabolites cause mitochondrial dysfunction, oxidative stress, and hepatocyte apoptosis/necrosis (classic example: NAPQI from acetaminophen overdose). (2) Idiosyncratic — dose-independent, rare (1:1,000 to 1:1,000,000 exposed), variable latency 7 days to 12 months; involves reactive drug-protein adducts triggering adaptive immune responses, HLA genotype susceptibility (e.g., HLA-B*57:01 with flucloxacillin), and T-cell-mediated hepatocyte injury. (3) Indirect — immune dysregulation by checkpoint inhibitors or other immunomodulators; not truly idiosyncratic, can affect any exposed patient. Injury pattern classified by R-factor = (ALT/ULN)/(ALP/ULN): R≥5 = hepatocellular, R≤2 = cholestatic, 2<R<5 = mixed.",
+    "classic_presentation": [
+      "new-onset jaundice within days to months of starting a new medication",
+      "fatigue, malaise, anorexia, nausea — often preceding jaundice by days",
+      "right upper quadrant pain or hepatic tenderness",
+      "dark urine and pale/clay-colored stools (cholestatic pattern)",
+      "pruritus (cholestatic or mixed pattern — bile salt deposition in skin)",
+      "fever, rash, eosinophilia (immune-mediated/hypersensitivity DILI)",
+      "asymptomatic incidental transaminase elevation on routine monitoring",
+      "symptom onset most commonly within first 6 months of a new drug"
+    ],
+    "key_labs": [
+      "hepatocellular pattern: ALT >5x ULN, often >10x ULN (AST/ALT ratio <2); ALP minimally elevated",
+      "cholestatic pattern: ALP >2-3x ULN predominant; GGT elevated; ALT may be normal or mildly elevated",
+      "mixed pattern: both ALT and ALP elevated with R-factor 2-5",
+      "bilirubin_total elevated (>2.5 mg/dL with enzyme elevation = moderate severity; Hy's Law: bilirubin >2x ULN + ALT >3x ULN = ~10% fatal risk)",
+      "INR elevated (>1.5) in severe cases — coagulopathy signals impending acute liver failure",
+      "CBC: eosinophilia in hypersensitivity DILI (~10% of cases)"
+    ],
+    "diagnostic_criteria": "RUCAM (Roussel Uclaf Causality Assessment Method, updated 2016): scores –9 to +14 based on time-to-onset, dechallenge response, rechallenge, risk factors, concurrent drugs, exclusion of alternative causes, and known hepatotoxicity of drug. Score ≥6 = probable/highly probable. Requires ALT ≥5x ULN or ALP ≥2x ULN on ≥2 occasions ≥24 hours apart, or total bilirubin ≥2.5 mg/dL with elevated enzymes, or INR ≥1.5 with elevated enzymes. Diagnosis of exclusion: must rule out viral hepatitis (HAV/HBV/HCV/EBV/CMV serology), autoimmune hepatitis (ANA, anti-SMA, IgG), biliary obstruction (ultrasound/MRCP), ischemic hepatitis, and Wilson disease in young patients.",
+    "mimics": [
+      "autoimmune_hepatitis",
+      "alcoholic_hepatitis",
+      "wilson_disease",
+      "cirrhosis",
+      "acute_pancreatitis"
+    ],
+    "cant_miss_features": [
+      "Hy's Law: ALT >3x ULN + bilirubin >2x ULN without biliary obstruction — ~10% fatal without transplant",
+      "acute liver failure (encephalopathy + coagulopathy) — requires urgent transplant center referral; spontaneous recovery rate only ~25%",
+      "vanishing bile duct syndrome (cholestatic DILI variant): progressive bile duct destruction on biopsy, may not improve with drug cessation and can evolve to chronic liver disease"
+    ],
+    "typical_course": "~90% recover fully within weeks to months after drug discontinuation (dechallenge). Hepatocellular injury resolves faster than cholestatic (cholestatic may persist 6-12+ months). ~17% develop chronic liver disease, especially with prolonged cholestatic injury. ~10% with DILI-associated acute liver failure require liver transplantation (66% post-transplant survival). Severity classification: mild (enzymes elevated, bilirubin <2x ULN), moderate (bilirubin ≥2x ULN or symptomatic hepatitis), severe (coagulopathy, ascites, or encephalopathy)."
   }
 }
