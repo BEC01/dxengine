@@ -37,34 +37,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 105.2,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 13.0,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "international_normalized_ratio",
             "value": 1.0,
             "unit": "ratio"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 306.2,
-            "unit": "U/L"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 95.0,
             "unit": "fL"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 46.8,
-            "unit": "U/L"
           },
           {
             "test_name": "bilirubin_total",
@@ -75,6 +55,21 @@
             "test_name": "reticulocyte_count",
             "value": 3.0,
             "unit": "%"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 46.8,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 105.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 306.2,
+            "unit": "U/L"
           },
           {
             "test_name": "haptoglobin",
@@ -89,6 +84,11 @@
           {
             "test_name": "albumin",
             "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.0,
             "unit": "g/dL"
           }
         ]

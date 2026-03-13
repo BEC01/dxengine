@@ -29,11 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "calcium",
             "value": 9.2,
             "unit": "mg/dL"
@@ -44,8 +39,18 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.1,
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 44.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "chloride",
+            "value": 104.4,
             "unit": "mEq/L"
           },
           {
@@ -59,14 +64,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 104.4,
+            "test_name": "bicarbonate",
+            "value": 24.1,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 44.0,
-            "unit": "ng/mL"
           },
           {
             "test_name": "magnesium",

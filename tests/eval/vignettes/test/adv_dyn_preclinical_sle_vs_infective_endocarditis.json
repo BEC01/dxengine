@@ -36,8 +36,18 @@
             "unit": "mg/L"
           },
           {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 18.8,
+            "unit": "mm/hr"
+          },
+          {
             "test_name": "complement_c4",
             "value": 17.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 107.4,
             "unit": "mg/dL"
           },
           {
@@ -46,28 +56,13 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 18.8,
-            "unit": "mm/hr"
-          },
-          {
-            "test_name": "complement_c3",
-            "value": 107.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 225.0,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "anti_dsdna_antibody",
             "value": 22.5,
             "unit": "IU/mL"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.1,
+            "test_name": "platelets",
+            "value": 225.0,
             "unit": "x10^9/L"
           },
           {
@@ -76,14 +71,14 @@
             "unit": "titer"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
+            "test_name": "lymphocytes_absolute",
+            "value": 2.1,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "procalcitonin",
-            "value": 0.1,
-            "unit": "ng/mL"
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "creatinine",
@@ -99,6 +94,11 @@
             "test_name": "albumin",
             "value": 4.5,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
           }
         ]
       }

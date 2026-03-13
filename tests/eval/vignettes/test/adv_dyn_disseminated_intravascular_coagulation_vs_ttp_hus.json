@@ -31,11 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 301.9,
-            "unit": "U/L"
-          },
-          {
             "test_name": "platelets",
             "value": 121.9,
             "unit": "x10^9/L"
@@ -46,14 +41,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "prothrombin_time",
-            "value": 13.8,
-            "unit": "seconds"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 13.9,
-            "unit": "g/dL"
+            "test_name": "lactate_dehydrogenase",
+            "value": 301.9,
+            "unit": "U/L"
           },
           {
             "test_name": "international_normalized_ratio",
@@ -61,8 +51,13 @@
             "unit": "ratio"
           },
           {
-            "test_name": "partial_thromboplastin_time",
-            "value": 35.0,
+            "test_name": "fibrinogen",
+            "value": 180.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "prothrombin_time",
+            "value": 13.8,
             "unit": "seconds"
           },
           {
@@ -71,9 +66,14 @@
             "unit": "mcg/mL FEU"
           },
           {
-            "test_name": "fibrinogen",
-            "value": 180.0,
-            "unit": "mg/dL"
+            "test_name": "partial_thromboplastin_time",
+            "value": 35.0,
+            "unit": "seconds"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.9,
+            "unit": "g/dL"
           }
         ]
       }

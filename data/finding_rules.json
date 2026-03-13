@@ -38,7 +38,19 @@
     "hgb": "hemoglobin",
     "hct": "hematocrit",
     "plt": "platelets",
-    "mpv": "mean_platelet_volume"
+    "mpv": "mean_platelet_volume",
+    "rf": "rheumatoid_factor",
+    "anti_ccp": "anti_ccp_antibody",
+    "ccp": "anti_ccp_antibody",
+    "ttg_iga": "tissue_transglutaminase_iga",
+    "ttg": "tissue_transglutaminase_iga",
+    "igf_1": "insulin_like_growth_factor_1",
+    "igf1": "insulin_like_growth_factor_1",
+    "somatomedin_c": "insulin_like_growth_factor_1",
+    "metanephrine": "plasma_free_metanephrine",
+    "free_metanephrine": "plasma_free_metanephrine",
+    "normetanephrine": "plasma_free_normetanephrine",
+    "free_normetanephrine": "plasma_free_normetanephrine"
   },
   "single_rules": [
     {
@@ -806,6 +818,57 @@
       "test": "alkaline_phosphatase",
       "operator": "below_lln",
       "importance": 3
+    },
+    {
+      "finding_key": "low_ceruloplasmin",
+      "test": "ceruloplasmin",
+      "operator": "lt",
+      "threshold": 20.0,
+      "importance": 4
+    },
+    {
+      "finding_key": "rheumatoid_factor_positive",
+      "test": "rheumatoid_factor",
+      "operator": "above_uln",
+      "importance": 3
+    },
+    {
+      "finding_key": "anti_ccp_positive",
+      "test": "anti_ccp_antibody",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "ttg_iga_positive",
+      "test": "tissue_transglutaminase_iga",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "ttg_iga_greater_than_10x_uln",
+      "test": "tissue_transglutaminase_iga",
+      "operator": "gt_mult_uln",
+      "multiplier": 10.0,
+      "importance": 5
+    },
+    {
+      "finding_key": "igf1_elevated",
+      "test": "insulin_like_growth_factor_1",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "plasma_free_metanephrines_elevated",
+      "test": "plasma_free_metanephrine",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "plasma_free_metanephrines_greater_than_3x_uln",
+      "test": "plasma_free_metanephrine",
+      "operator": "gt_mult_uln",
+      "multiplier": 3.0,
+      "importance": 5
     }
   ],
   "composite_rules": [

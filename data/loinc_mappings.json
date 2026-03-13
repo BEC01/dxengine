@@ -545,6 +545,48 @@
       "canonical_name": "myoglobin",
       "category": "chemistry",
       "specimen": "serum"
+    },
+    "2064-4": {
+      "common_names": ["Ceruloplasmin", "Cp"],
+      "canonical_name": "ceruloplasmin",
+      "category": "chemistry",
+      "specimen": "serum"
+    },
+    "11572-5": {
+      "common_names": ["Rheumatoid Factor", "RF"],
+      "canonical_name": "rheumatoid_factor",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "53027-9": {
+      "common_names": ["Anti-CCP Antibody", "Anti-Cyclic Citrullinated Peptide", "ACPA"],
+      "canonical_name": "anti_ccp_antibody",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "31017-7": {
+      "common_names": ["Tissue Transglutaminase IgA", "tTG-IgA", "Anti-tTG IgA"],
+      "canonical_name": "tissue_transglutaminase_iga",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "49210-8": {
+      "common_names": ["Insulin-like Growth Factor 1", "IGF-1", "Somatomedin C"],
+      "canonical_name": "insulin_like_growth_factor_1",
+      "category": "endocrine",
+      "specimen": "serum"
+    },
+    "38494-1": {
+      "common_names": ["Plasma Free Metanephrine", "Free Metanephrine"],
+      "canonical_name": "plasma_free_metanephrine",
+      "category": "endocrine",
+      "specimen": "plasma"
+    },
+    "2668-2": {
+      "common_names": ["Plasma Free Normetanephrine", "Free Normetanephrine"],
+      "canonical_name": "plasma_free_normetanephrine",
+      "category": "endocrine",
+      "specimen": "plasma"
     }
   },
   "name_to_loinc": {
@@ -830,6 +872,45 @@
     "amylase": "1798-8",
     "lipase": "3040-3",
     "myoglobin": "2639-3",
-    "Mb": "2639-3"
+    "Mb": "2639-3",
+    "ceruloplasmin": "2064-4",
+    "Cp": "2064-4",
+    "serum ceruloplasmin": "2064-4",
+    "ceruloplasmin level": "2064-4",
+    "rheumatoid_factor": "11572-5",
+    "rheumatoid factor": "11572-5",
+    "RF": "11572-5",
+    "RF quantitative": "11572-5",
+    "rheumatoid factor quantitative": "11572-5",
+    "anti_ccp_antibody": "53027-9",
+    "anti-CCP": "53027-9",
+    "anti CCP": "53027-9",
+    "anti-CCP antibody": "53027-9",
+    "cyclic citrullinated peptide": "53027-9",
+    "CCP antibody": "53027-9",
+    "ACPA": "53027-9",
+    "tissue_transglutaminase_iga": "31017-7",
+    "tissue transglutaminase IgA": "31017-7",
+    "tTG-IgA": "31017-7",
+    "tTG IgA": "31017-7",
+    "anti-tTG IgA": "31017-7",
+    "anti-tissue transglutaminase": "31017-7",
+    "tTG": "31017-7",
+    "insulin_like_growth_factor_1": "49210-8",
+    "insulin-like growth factor 1": "49210-8",
+    "IGF-1": "49210-8",
+    "IGF1": "49210-8",
+    "IGF 1": "49210-8",
+    "somatomedin C": "49210-8",
+    "plasma_free_metanephrine": "38494-1",
+    "plasma free metanephrine": "38494-1",
+    "free metanephrine": "38494-1",
+    "metanephrine": "38494-1",
+    "metanephrine, plasma": "38494-1",
+    "plasma_free_normetanephrine": "2668-2",
+    "plasma free normetanephrine": "2668-2",
+    "free normetanephrine": "2668-2",
+    "normetanephrine": "2668-2",
+    "normetanephrine, plasma": "2668-2"
   }
 }

@@ -34,24 +34,19 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "homocysteine",
-            "value": 15.7,
-            "unit": "mcmol/L"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 101.4,
             "unit": "fL"
           },
           {
+            "test_name": "homocysteine",
+            "value": 15.7,
+            "unit": "mcmol/L"
+          },
+          {
             "test_name": "folate",
             "value": 1.3,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 210.0,
-            "unit": "U/L"
           },
           {
             "test_name": "methylmalonic_acid",
@@ -62,6 +57,11 @@
             "test_name": "reticulocyte_count",
             "value": 1.5,
             "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
           },
           {
             "test_name": "vitamin_b12",

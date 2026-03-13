@@ -29,11 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "parathyroid_hormone",
-            "value": 13.8,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "calcium",
             "value": 9.7,
             "unit": "mg/dL"
@@ -42,6 +37,11 @@
             "test_name": "phosphorus",
             "value": 3.7,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 13.8,
+            "unit": "pg/mL"
           },
           {
             "test_name": "alkaline_phosphatase",

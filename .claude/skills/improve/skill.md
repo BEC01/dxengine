@@ -15,6 +15,8 @@ Each cycle: analyze failures → propose data fix → evaluate → auto-merge if
 
 **IMPORTANT**: You may ONLY modify data files (`data/*.json`). Never modify Python code, test vignettes, or evaluation harness code.
 
+**Shell variables** (`N`, `rejections`): These do NOT persist between Bash tool calls. Track them in your own context and substitute literal values into bash commands (e.g., `--output state/eval/iter_3.json` not `--output state/eval/iter_${N}.json`).
+
 ## Phase 0: Setup (once)
 
 1. Ensure you're on `master` branch:

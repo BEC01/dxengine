@@ -176,6 +176,41 @@ EXTRA_ALIASES: dict[str, str] = {
     "hapto": "haptoglobin",
     "osm": "osmolality_serum",
     "serum osmolality": "osmolality_serum",
+    # Ceruloplasmin
+    "ceruloplasmin": "ceruloplasmin",
+    "cp": "ceruloplasmin",
+    "serum ceruloplasmin": "ceruloplasmin",
+    # Rheumatoid Factor
+    "rheumatoid factor": "rheumatoid_factor",
+    "rf": "rheumatoid_factor",
+    "rf quant": "rheumatoid_factor",
+    "rheumatoid factor, quantitative": "rheumatoid_factor",
+    # Anti-CCP
+    "anti-ccp": "anti_ccp_antibody",
+    "anti ccp": "anti_ccp_antibody",
+    "anti-ccp antibody": "anti_ccp_antibody",
+    "ccp antibody": "anti_ccp_antibody",
+    "cyclic citrullinated peptide antibody": "anti_ccp_antibody",
+    # tTG-IgA
+    "ttg-iga": "tissue_transglutaminase_iga",
+    "ttg iga": "tissue_transglutaminase_iga",
+    "tissue transglutaminase iga": "tissue_transglutaminase_iga",
+    "anti-ttg": "tissue_transglutaminase_iga",
+    "anti-tissue transglutaminase": "tissue_transglutaminase_iga",
+    # IGF-1
+    "igf-1": "insulin_like_growth_factor_1",
+    "igf1": "insulin_like_growth_factor_1",
+    "igf 1": "insulin_like_growth_factor_1",
+    "somatomedin c": "insulin_like_growth_factor_1",
+    "insulin-like growth factor 1": "insulin_like_growth_factor_1",
+    # Plasma free metanephrine
+    "plasma free metanephrine": "plasma_free_metanephrine",
+    "free metanephrine": "plasma_free_metanephrine",
+    "metanephrine, plasma free": "plasma_free_metanephrine",
+    # Plasma free normetanephrine
+    "plasma free normetanephrine": "plasma_free_normetanephrine",
+    "free normetanephrine": "plasma_free_normetanephrine",
+    "normetanephrine, plasma free": "plasma_free_normetanephrine",
 }
 
 
@@ -756,6 +791,13 @@ PLAUSIBLE_BOUNDS: dict[str, tuple[float | None, float | None]] = {
     "haptoglobin": (0.0, 1000.0),
     "homocysteine": (0.0, 200.0),
     "osmolality_serum": (100.0, 500.0),
+    "ceruloplasmin": (0.0, 200.0),
+    "rheumatoid_factor": (0.0, 5000.0),
+    "anti_ccp_antibody": (0.0, 5000.0),
+    "tissue_transglutaminase_iga": (0.0, 500.0),
+    "insulin_like_growth_factor_1": (0.0, 2000.0),
+    "plasma_free_metanephrine": (0.0, 50000.0),
+    "plasma_free_normetanephrine": (0.0, 50000.0),
 }
 
 # Tests where negative values are allowed

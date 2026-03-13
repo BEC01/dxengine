@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "alkaline_phosphatase",
+            "value": 44.0,
+            "unit": "U/L"
+          },
+          {
             "test_name": "alanine_aminotransferase",
             "value": 62.1,
             "unit": "U/L"

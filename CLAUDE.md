@@ -110,8 +110,8 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Evidence-based confidence ceiling (`apply_evidence_caps`): smooth curve `ceiling(n) = 1 - 1/(1+k*n)` with k=0.32; **per-disease** ceiling based on each hypothesis's own `n_informative_lr` prevents normalization artifacts and eliminates cliff-edge regressions. Absent-finding evidence excluded from `n_informative_lr` to prevent ceiling inflation.
 - Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
 - Clinical feature integration (Pass 7): evaluates 90 `clinical_rules` in `finding_rules.json` against patient text fields (signs, symptoms, imaging, medical_history). Substring matching with negation prefix guard. Finding types: sign, symptom, imaging, lab. Generates `source="finding_mapper_clinical"` Evidence. Lab rules take priority over clinical text for same finding_key.
-- Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (28 entries across 12 diseases)
-- 398 tests passing, eval score 0.8619 with 236 vignettes (231 synthetic + 5 fixtures), 24 disease patterns
+- Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (29 entries across 13 diseases)
+- 424 tests passing, eval score 0.8274 with 358 vignettes (353 synthetic + 5 fixtures), 41 disease patterns
 
 ## /expand — Disease Expansion System
 
@@ -189,7 +189,7 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-12):** score=0.8619, top3=100.0%, top1=95.9%, neg_pass=100.0%, n=236
+**Current baseline (2026-03-12):** score=0.8274, top3=99.0%, top1=86.4%, neg_pass=100.0%, n=358 (41 disease patterns)
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -397,12 +397,12 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 
 | File | Contents | Entries |
 |------|----------|---------|
-| lab_ranges.json | Age/sex-adjusted reference ranges | 91 analytes |
-| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 24 patterns, 28 typical_values |
+| lab_ranges.json | Age/sex-adjusted reference ranges | 98 analytes |
+| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 41 patterns, 29 typical_values |
 | illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 215 findings, 517 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 122 lab rules + 90 clinical rules + 39 name_aliases |
-| loinc_mappings.json | LOINC code <-> common name mappings | 91 codes, 283 name mappings |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 226 findings, 570 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 142 lab rules + 90 clinical rules + 51 name_aliases |
+| loinc_mappings.json | LOINC code <-> common name mappings | 98 codes, 322 name mappings |
 
 ## MCP Servers
 

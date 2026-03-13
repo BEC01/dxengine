@@ -1,27 +1,19 @@
 {
   "metadata": {
-    "id": "wilson_disease_classic_000",
-    "category": "hepatic",
-    "difficulty": "classic",
-    "split": "train",
+    "id": "mimic_wilson_disease",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
     "source": "synthetic",
-    "disease_pattern_name": "wilson_disease",
+    "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "hepatitis or cirrhosis in young patient",
-    "symptoms": [
-      "hepatitis or cirrhosis in young patient",
-      "Kayser-Fleischer rings (slit lamp exam)",
-      "low ceruloplasmin on workup",
-      "elevated 24h urine copper",
-      "psychiatric symptoms (depression, personality changes)"
-    ],
-    "signs": [
-      "neurologic symptoms (tremor, dysarthria, dystonia, parkinsonism)"
-    ],
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
     "medical_history": [],
     "medications": [],
     "family_history": [],
@@ -32,22 +24,22 @@
         "values": [
           {
             "test_name": "ceruloplasmin",
-            "value": 8.0,
+            "value": 23.5,
             "unit": "mg/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
-            "value": 44.0,
+            "value": 95.5,
             "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
-            "value": 62.1,
+            "value": 49.9,
             "unit": "U/L"
           },
           {
             "test_name": "haptoglobin",
-            "value": 30.0,
+            "value": 64.0,
             "unit": "mg/dL"
           }
         ]
@@ -57,12 +49,10 @@
     "vitals": {}
   },
   "gold_standard": {
-    "primary_diagnosis": "wilson_disease",
-    "acceptable_alternatives": [],
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
     "expected_findings": [],
-    "expected_patterns": [
-      "wilson_disease"
-    ],
+    "expected_patterns": [],
     "cant_miss_diseases": []
   }
 }

@@ -1650,6 +1650,12 @@
   "wilson_disease": {
     "description": "Copper accumulation disorder causing hepatic, neurologic, and psychiatric disease. Distinguished by paradoxically low alkaline phosphatase in context of liver disease, with Coombs-negative hemolytic anemia.",
     "pattern": {
+      "ceruloplasmin": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.95,
+        "typical_value": 8.0
+      },
       "alkaline_phosphatase": {
         "direction": "decreased",
         "typical_z_score": -2.0,

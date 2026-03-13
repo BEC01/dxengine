@@ -789,5 +789,57 @@
       "adult_female": { "low": 25, "high": 58 },
       "default": { "low": 25, "high": 72 }
     }
+  },
+  "ceruloplasmin": {
+    "loinc": "2064-4",
+    "unit": "mg/dL",
+    "ranges": {
+      "adult_male": { "low": 16.0, "high": 31.0 },
+      "adult_female": { "low": 19.0, "high": 39.0 },
+      "default": { "low": 16.0, "high": 39.0 }
+    }
+  },
+  "rheumatoid_factor": {
+    "loinc": "11572-5",
+    "unit": "IU/mL",
+    "ranges": {
+      "default": { "low": 0, "high": 14.0 }
+    }
+  },
+  "anti_ccp_antibody": {
+    "loinc": "53027-9",
+    "unit": "U/mL",
+    "ranges": {
+      "default": { "low": 0, "high": 20.0 }
+    }
+  },
+  "tissue_transglutaminase_iga": {
+    "loinc": "31017-7",
+    "unit": "U/mL",
+    "ranges": {
+      "default": { "low": 0, "high": 4.0 }
+    }
+  },
+  "insulin_like_growth_factor_1": {
+    "loinc": "49210-8",
+    "unit": "ng/mL",
+    "ranges": {
+      "default": { "low": 50.0, "high": 350.0 }
+    }
+  },
+  "plasma_free_metanephrine": {
+    "loinc": "38494-1",
+    "unit": "pg/mL",
+    "ranges": {
+      "default": { "low": 0, "high": 90.0 }
+    }
+  },
+  "plasma_free_normetanephrine": {
+    "loinc": "2668-2",
+    "unit": "pg/mL",
+    "ranges": {
+      "default": { "low": 0, "high": 200.0 },
+      "elderly": { "low": 0, "high": 285.0 }
+    }
   }
 }

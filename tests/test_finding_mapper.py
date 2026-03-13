@@ -1067,3 +1067,262 @@ class TestClinicalRules:
         assert "malar_rash" in keys
         assert "oral_ulcers" in keys
         assert "photosensitivity_rash" in keys
+
+
+# ── TestNewAnalyteRules ───────────────────────────────────────────────────
+
+
+class TestNewAnalyteRules:
+    """Tests for the 7 new analytes added to unblock 5 diseases."""
+
+    # --- Ceruloplasmin ---
+
+    def test_ceruloplasmin_low(self):
+        """Low ceruloplasmin fires low_ceruloplasmin finding."""
+        labs = [make_lv("ceruloplasmin", 8.0, "mg/dL",
+                        ref_low=16.0, ref_high=39.0, z_score=-2.8, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        assert "low_ceruloplasmin" in finding_keys(results)
+
+    def test_ceruloplasmin_normal_no_finding(self):
+        """Normal ceruloplasmin (>20) does not fire low_ceruloplasmin."""
+        labs = [make_lv("ceruloplasmin", 25.0, "mg/dL",
+                        ref_low=16.0, ref_high=39.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        assert "low_ceruloplasmin" not in finding_keys(results)
+
+    def test_ceruloplasmin_between_lln_and_wilson_cutoff(self):
+        """Ceruloplasmin 17 mg/dL: above male LLN (16) but below Wilson cutoff (20) → fires."""
+        labs = [make_lv("ceruloplasmin", 17.0, "mg/dL",
+                        ref_low=16.0, ref_high=31.0, z_score=-2.7, severity=Severity.MILD)]
+        results = map_labs_to_findings(labs, sex=Sex.MALE)
+        assert "low_ceruloplasmin" in finding_keys(results)
+
+    # --- Rheumatoid Factor ---
+
+    def test_rf_positive(self):
+        """Elevated RF fires rheumatoid_factor_positive."""
+        labs = [make_lv("rheumatoid_factor", 45.0, "IU/mL",
+                        ref_low=0.0, ref_high=14.0, z_score=4.4, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        assert "rheumatoid_factor_positive" in finding_keys(results)
+
+    def test_rf_normal_no_finding(self):
+        """Normal RF does not fire rheumatoid_factor_positive."""
+        labs = [make_lv("rheumatoid_factor", 8.0, "IU/mL",
+                        ref_low=0.0, ref_high=14.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        assert "rheumatoid_factor_positive" not in finding_keys(results)
+
+    # --- Anti-CCP ---
+
+    def test_anti_ccp_positive(self):
+        """Elevated anti-CCP fires anti_ccp_positive."""
+        labs = [make_lv("anti_ccp_antibody", 85.0, "U/mL",
+                        ref_low=0.0, ref_high=20.0, z_score=6.5, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        assert "anti_ccp_positive" in finding_keys(results)
+
+    # --- tTG-IgA (with subsumption) ---
+
+    def test_ttg_iga_positive(self):
+        """Moderately elevated tTG-IgA fires ttg_iga_positive only (below 10x)."""
+        labs = [make_lv("tissue_transglutaminase_iga", 15.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=5.5, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "ttg_iga_positive" in keys
+        assert "ttg_iga_greater_than_10x_uln" not in keys  # below 10x ULN (40)
+
+    def test_ttg_iga_strongly_positive_subsumes(self):
+        """tTG-IgA >10x ULN: only >10x fires, positive is subsumed."""
+        labs = [make_lv("tissue_transglutaminase_iga", 120.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=58.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "ttg_iga_greater_than_10x_uln" in keys
+        assert "ttg_iga_positive" not in keys  # subsumed
+
+    # --- IGF-1 ---
+
+    def test_igf1_elevated(self):
+        """Elevated IGF-1 fires igf1_elevated."""
+        labs = [make_lv("insulin_like_growth_factor_1", 600.0, "ng/mL",
+                        ref_low=50.0, ref_high=350.0, z_score=3.3, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        assert "igf1_elevated" in finding_keys(results)
+
+    # --- Metanephrines (with subsumption) ---
+
+    def test_metanephrine_elevated(self):
+        """Moderately elevated metanephrine fires elevated only (below 3x)."""
+        labs = [make_lv("plasma_free_metanephrine", 150.0, "pg/mL",
+                        ref_low=0.0, ref_high=90.0, z_score=2.7, severity=Severity.BORDERLINE)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "plasma_free_metanephrines_elevated" in keys
+        assert "plasma_free_metanephrines_greater_than_3x_uln" not in keys
+
+    def test_metanephrine_markedly_elevated_subsumes(self):
+        """Metanephrine >3x ULN: only >3x fires, elevated is subsumed."""
+        labs = [make_lv("plasma_free_metanephrine", 500.0, "pg/mL",
+                        ref_low=0.0, ref_high=90.0, z_score=9.1, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "plasma_free_metanephrines_greater_than_3x_uln" in keys
+        assert "plasma_free_metanephrines_elevated" not in keys  # subsumed
+
+    # --- Normetanephrine (NO finding rule — z-score/pattern only) ---
+
+    def test_normetanephrine_no_finding_rule(self):
+        """Elevated normetanephrine does NOT fire any metanephrine finding."""
+        labs = [make_lv("plasma_free_normetanephrine", 500.0, "pg/mL",
+                        ref_low=0.0, ref_high=200.0, z_score=3.0, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "plasma_free_metanephrines_elevated" not in keys
+        assert "plasma_free_metanephrines_greater_than_3x_uln" not in keys
+
+    # --- Lab-clinical bridge (lab takes priority over text) ---
+
+    def test_ceruloplasmin_lab_suppresses_clinical(self):
+        """Lab-based low_ceruloplasmin suppresses clinical text rule."""
+        labs = [make_lv("ceruloplasmin", 8.0, "mg/dL",
+                        ref_low=16.0, ref_high=39.0, z_score=-2.8, severity=Severity.MODERATE)]
+        results = map_labs_to_findings(labs, signs=["low ceruloplasmin"])
+        matching = [e for e in results if e.finding == "low_ceruloplasmin"]
+        assert len(matching) == 1
+        assert matching[0].source == "finding_mapper"
+
+    def test_ttg_iga_lab_suppresses_clinical(self):
+        """Lab-based tTG >10x subsumes positive and suppresses clinical rule."""
+        labs = [make_lv("tissue_transglutaminase_iga", 120.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=58.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs, signs=["ttg iga positive"])
+        # >10x fires from lab (subsuming positive)
+        keys = finding_keys(results)
+        assert "ttg_iga_greater_than_10x_uln" in keys
+        # clinical rule for ttg_iga_positive suppressed (seen_findings)
+        ttg_positive = [e for e in results if e.finding == "ttg_iga_positive"]
+        assert len(ttg_positive) == 0
+
+    # --- Additional negative tests ---
+
+    def test_anti_ccp_normal_no_finding(self):
+        """Normal anti-CCP does not fire anti_ccp_positive."""
+        labs = [make_lv("anti_ccp_antibody", 10.0, "U/mL",
+                        ref_low=0.0, ref_high=20.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        assert "anti_ccp_positive" not in finding_keys(results)
+
+    def test_ttg_iga_normal_no_positive_finding(self):
+        """Normal tTG-IgA does not fire positive findings (may fire absent)."""
+        labs = [make_lv("tissue_transglutaminase_iga", 2.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        positive = [e for e in results if e.supports and e.finding in
+                    ("ttg_iga_positive", "ttg_iga_greater_than_10x_uln")]
+        assert len(positive) == 0
+
+    def test_igf1_normal_no_positive_finding(self):
+        """Normal IGF-1 does not fire positive igf1_elevated (may fire absent)."""
+        labs = [make_lv("insulin_like_growth_factor_1", 200.0, "ng/mL",
+                        ref_low=50.0, ref_high=350.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        positive = [e for e in results if e.supports and e.finding == "igf1_elevated"]
+        assert len(positive) == 0
+
+    def test_metanephrine_normal_no_positive_finding(self):
+        """Normal metanephrine does not fire positive elevated findings (may fire absent)."""
+        labs = [make_lv("plasma_free_metanephrine", 50.0, "pg/mL",
+                        ref_low=0.0, ref_high=90.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        positive = [e for e in results if e.supports and e.finding in
+                    ("plasma_free_metanephrines_elevated",
+                     "plasma_free_metanephrines_greater_than_3x_uln")]
+        assert len(positive) == 0
+
+    # --- Boundary tests ---
+
+    def test_ttg_iga_at_exactly_10x_uln(self):
+        """tTG-IgA at exactly 10x ULN (40.0): gt_mult_uln uses >, so 40.0 does NOT fire >10x."""
+        labs = [make_lv("tissue_transglutaminase_iga", 40.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=18.0, severity=Severity.CRITICAL)]
+        results = map_labs_to_findings(labs)
+        keys = finding_keys(results)
+        assert "ttg_iga_positive" in keys  # above ULN
+        assert "ttg_iga_greater_than_10x_uln" not in keys  # exactly at, not above
+
+    def test_ceruloplasmin_at_exactly_cutoff(self):
+        """Ceruloplasmin at exactly 20.0: lt uses <, so 20.0 does NOT fire."""
+        labs = [make_lv("ceruloplasmin", 20.0, "mg/dL",
+                        ref_low=16.0, ref_high=39.0, z_score=-1.3, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        assert "low_ceruloplasmin" not in finding_keys(results)
+
+    def test_ceruloplasmin_just_below_cutoff(self):
+        """Ceruloplasmin at 19.9: fires low_ceruloplasmin."""
+        labs = [make_lv("ceruloplasmin", 19.9, "mg/dL",
+                        ref_low=16.0, ref_high=39.0, z_score=-1.3, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        assert "low_ceruloplasmin" in finding_keys(results)
+
+    # --- Absent evidence tests (rule-out via strong LR-) ---
+
+    def test_ttg_iga_normal_generates_absent_evidence(self):
+        """Normal tTG-IgA generates absent evidence for celiac (LR- 0.06 < 0.1)."""
+        labs = [make_lv("tissue_transglutaminase_iga", 2.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.finding == "ttg_iga_positive" and not e.supports]
+        assert len(absent) == 1
+        assert absent[0].source == "finding_mapper_absent"
+
+    def test_metanephrine_normal_generates_absent_evidence(self):
+        """Normal metanephrine generates absent evidence for pheo (LR- 0.02 < 0.1)."""
+        labs = [make_lv("plasma_free_metanephrine", 50.0, "pg/mL",
+                        ref_low=0.0, ref_high=90.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.finding == "plasma_free_metanephrines_elevated"
+                  and not e.supports]
+        assert len(absent) == 1
+        assert absent[0].source == "finding_mapper_absent"
+
+    def test_igf1_normal_generates_absent_evidence(self):
+        """Normal IGF-1 generates absent evidence for acromegaly (LR- 0.05 < 0.1)."""
+        labs = [make_lv("insulin_like_growth_factor_1", 200.0, "ng/mL",
+                        ref_low=50.0, ref_high=350.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        absent = [e for e in results if e.finding == "igf1_elevated" and not e.supports]
+        assert len(absent) == 1
+        assert absent[0].source == "finding_mapper_absent"
+
+    def test_ttg_iga_absent_subsumption(self):
+        """Normal tTG-IgA: absent for ttg_iga_positive subsumes absent for >10x."""
+        labs = [make_lv("tissue_transglutaminase_iga", 2.0, "U/mL",
+                        ref_low=0.0, ref_high=4.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        # ttg_iga_positive absent should exist
+        absent_positive = [e for e in results if e.finding == "ttg_iga_positive"
+                           and not e.supports]
+        assert len(absent_positive) == 1
+        # ttg_iga_greater_than_10x_uln absent should NOT exist (subsumed)
+        absent_10x = [e for e in results if e.finding == "ttg_iga_greater_than_10x_uln"
+                      and not e.supports]
+        assert len(absent_10x) == 0
+
+    def test_metanephrine_absent_subsumption(self):
+        """Normal metanephrine: absent for elevated subsumes absent for >3x."""
+        labs = [make_lv("plasma_free_metanephrine", 50.0, "pg/mL",
+                        ref_low=0.0, ref_high=90.0, z_score=0.0, severity=Severity.NORMAL)]
+        results = map_labs_to_findings(labs)
+        # elevated absent should exist
+        absent_elevated = [e for e in results
+                           if e.finding == "plasma_free_metanephrines_elevated"
+                           and not e.supports]
+        assert len(absent_elevated) == 1
+        # >3x absent should NOT exist (subsumed)
+        absent_3x = [e for e in results
+                     if e.finding == "plasma_free_metanephrines_greater_than_3x_uln"
+                     and not e.supports]
+        assert len(absent_3x) == 0

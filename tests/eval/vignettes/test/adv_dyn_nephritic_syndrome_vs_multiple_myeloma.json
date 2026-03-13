@@ -31,11 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "albumin",
             "value": 3.8,
             "unit": "g/dL"
@@ -46,13 +41,13 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "complement_c3",
-            "value": 81.0,
+            "test_name": "creatinine",
+            "value": 1.4,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
+            "test_name": "complement_c3",
+            "value": 81.0,
             "unit": "mg/dL"
           },
           {
@@ -61,9 +56,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 7.5,
+            "unit": "mm/hr"
           },
           {
             "test_name": "uric_acid",
@@ -71,9 +71,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 7.5,
-            "unit": "mm/hr"
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
           }
         ]
       }

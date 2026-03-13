@@ -70,7 +70,7 @@ for k,v in data.items():
         print(f'{k}: {v[\"diseases\"][\"{disease_key}\"]}')"
 ```
 
-**Launch 3 parallel sub-agents using the Agent tool** (all in a single message for parallel execution):
+**Launch 3 parallel foreground sub-agents using the Agent tool** (all in a single message for parallel execution). Do NOT use `run_in_background` — you need all results before proceeding to validation/integration:
 
 **Sub-agent A (Literature Research):**
 Use `subagent_type="dx-researcher"`. In the prompt, include:
@@ -91,10 +91,10 @@ Use a general-purpose Agent. In the prompt, instruct it to:
 - Check for conflicts with existing diseases
 - Write findings to `state/expand/packets/{disease_key}_conflicts.json`
 
-**After sub-agents complete:**
-If the dx-researcher agent produced a complete research.json at `state/expand/packets/{disease_key}.json`, proceed. Otherwise, synthesize findings from all three sub-agents into a research.json yourself, writing it to `state/expand/packets/{disease_key}.json`.
+**After all sub-agents return:**
+Synthesize findings from all three into the final research.json at `state/expand/packets/{disease_key}.json`. Use the dx-researcher output as the base, cross-check LR values against the Disease Info agent's lab distributions, and incorporate conflict warnings from the KB Validation agent. If the dx-researcher failed to produce output, build the packet yourself from the other two agents' findings.
 
-**Optional validation:** If you have time, launch a `dx-research-validator` agent to spot-check 2-3 PMIDs and verify clinical plausibility before proceeding to Step 3.
+**Optional validation:** Launch a `dx-research-validator` agent (foreground) to spot-check 2-3 PMIDs and verify clinical plausibility before proceeding to Step 3.
 
 The research.json must have this structure:
 ```json
@@ -135,6 +135,28 @@ The research.json must have this structure:
   "research_complete": true
 }
 ```
+
+### Critical: Pattern Trimming & LR Neutralization
+
+**This is the most important lesson from prior expansion sessions.** Adding a disease with many analytes (>7) causes mass absorption — the new disease matches many existing vignettes via cosine similarity, stealing probability mass from correct diagnoses. Every disease that failed initial integration had this problem.
+
+**Before proceeding to validation, apply these rules to the research packet:**
+
+1. **Trim pattern to 3-7 distinctive markers.** Remove non-specific analytes shared with many diseases (e.g., CRP, ESR, WBC, albumin, glucose) unless they are THE defining feature (e.g., glucose for DKA). Keep only analytes that discriminate THIS disease from others.
+
+2. **Neutralize non-specific LR entries.** For any LR entry where the finding is shared with 3+ existing diseases AND the LR+ for this disease is lower than competitors, set `lr_positive: 1.0, lr_negative: 1.0` in the packet. This prevents the new disease from absorbing mass via weak shared findings. Example: AMI had AST_elevated (LR+ 1.5) competing with hepatitis (LR+ 8.0) — neutralizing it fixed 62 regressions.
+
+3. **Add typical_value for extreme labs.** The vignette generator compresses z-scores, making extreme values unrealistically mild (TSH z=4 → 5.8 instead of clinical 25). Add `typical_value` to pattern entries where threshold rules exist (e.g., `tsh>10`, `lipase>3xULN`, `ck>10xULN`, `glucose>250`, `bnp>500`). Format: add `"typical_value": 25.0` to the pattern entry in disease_lab_patterns.json after integration.
+
+4. **Check for missing finding rules.** If the pattern uses an analyte whose finding_key doesn't exist in finding_rules.json, add the rule directly to finding_rules.json before integration (e.g., `folate_low`, `total_cholesterol_elevated`).
+
+**Diseases that CANNOT be expanded (missing analytes in lab_ranges.json):**
+- wilson_disease (ceruloplasmin), pheochromocytoma (metanephrines), celiac (tTG-IgA), acromegaly (IGF-1), autoimmune_hepatitis (ANA titer, anti-smooth muscle), rheumatoid_arthritis (RF, anti-CCP)
+- These require adding new analytes to lab_ranges.json first (out of scope for /expand)
+
+**Diseases that CANNOT be expanded (discriminators are clinical, not lab-based):**
+- sickle_cell_disease (sickle cells on smear, Howell-Jolly bodies — vignette generator can't include clinical findings in patient text)
+- deep_vein_thrombosis (imaging-based diagnosis)
 
 ### Step 3: Validate
 
@@ -192,11 +214,18 @@ Reset `consecutive_skips=0`. Increment `diseases_added`.
 Print: `ADDED {disease} (score X.XXXX → Y.YYYY)`
 
 **REJECT** (score dropped OR regressions OR new false positives):
-Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `data/*.json` from Step 4 — edit those files directly:
+Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `data/*.json` from Step 4 — edit those files directly.
 
-1. Read the comparison output to identify which existing disease regressed
-2. Edit `data/likelihood_ratios.json` to reduce LR+ values for the new disease's entries (multiply by 0.7)
-3. Or add LR- penalties: edit the finding entry to add `"{new_disease}": {"lr_positive": 0.5, "lr_negative": 1.2}` for findings shared with the regressed disease
+**Effective tune strategy (in order of impact):**
+
+1. **Trim the pattern** (most effective). Remove non-specific analytes from `disease_lab_patterns.json`. If the pattern has >7 analytes, cut to the 4-6 most distinctive ones. This reduces cosine similarity matches with existing vignettes.
+
+2. **Neutralize shared LR entries.** In `likelihood_ratios.json`, find entries where the new disease shares a finding_key with the regressed disease. Set the new disease's entry to `lr_positive: 1.0, lr_negative: 1.0`. This makes the finding uninformative for the new disease without affecting the existing disease's LR.
+
+3. **Reduce LR+ only as last resort.** Multiplying by 0.7 is less effective than the above two — the issue is usually pattern overlap, not LR magnitude.
+
+**Do NOT:** add LR- penalties (these create artificial findings). Do NOT remove LR entries entirely (breaks n_informative_lr count).
+
 4. Re-run vignette generation + evaluation (substitute literal iteration/tune numbers):
    ```bash
    uv run python tests/eval/generate_vignettes.py
@@ -220,8 +249,9 @@ Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `d
 
 ## Safety Rules
 
-- **ONLY modify**: `data/*.json` (except `data/lab_ranges.json`), `tests/eval/vignettes/`
+- **ONLY modify**: `data/*.json` (except `data/lab_ranges.json`), `tests/eval/vignettes/`, `data/finding_rules.json` (to add missing rules)
 - **NEVER modify**: Python source code (`src/`, `tests/*.py`), evaluation harness, `data/lab_ranges.json`
+- **Windows encoding**: Always use `encoding='utf-8'` when reading/writing JSON files. Set `PYTHONIOENCODING=utf-8` env var before running compare_scores.py (arrow chars fail with cp1252)
 - **LR bounds**: LR+ in [0.5, 50.0], LR- in [0.05, 1.5]
 - **Literature-grounded**: every LR must have a PMID or explicit "clinical consensus" note
 - **Minimum quality**: ≥3 analytes in pattern, ≥3 LR entries per disease

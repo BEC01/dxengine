@@ -143,6 +143,10 @@ _SUBSUMES: dict[str, list[str]] = {
     "direct_bilirubin_elevated": ["bilirubin_total_elevated"],
     # INR subsumes PT (same coagulation pathway)
     "international_normalized_ratio_elevated": ["prothrombin_time_elevated"],
+    # tTG-IgA: strongly positive subsumes positive
+    "ttg_iga_greater_than_10x_uln": ["ttg_iga_positive"],
+    # Metanephrines: markedly elevated subsumes elevated
+    "plasma_free_metanephrines_greater_than_3x_uln": ["plasma_free_metanephrines_elevated"],
 }
 
 
@@ -170,6 +174,10 @@ _ABSENT_SUBSUMES: dict[str, list[str]] = {
     "ana_positive": ["ana_positive_high_titer"],
     "sodium_low": ["sodium_less_than_130"],
     "cortisol_am_low": ["cortisol_am_less_than_3"],
+    # tTG-IgA: normal tTG absent-subsumes the >10x check
+    "ttg_iga_positive": ["ttg_iga_greater_than_10x_uln"],
+    # Metanephrines: normal metanephrine absent-subsumes the >3x check
+    "plasma_free_metanephrines_elevated": ["plasma_free_metanephrines_greater_than_3x_uln"],
 }
 
 
