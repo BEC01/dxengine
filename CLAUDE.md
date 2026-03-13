@@ -111,7 +111,7 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
 - Clinical feature integration (Pass 7): evaluates 90 `clinical_rules` in `finding_rules.json` against patient text fields (signs, symptoms, imaging, medical_history). Substring matching with negation prefix guard. Finding types: sign, symptom, imaging, lab. Generates `source="finding_mapper_clinical"` Evidence. Lab rules take priority over clinical text for same finding_key.
 - Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (29 entries across 13 diseases)
-- 424 tests passing, eval score 0.8274 with 358 vignettes (353 synthetic + 5 fixtures), 41 disease patterns
+- 424 tests passing, eval score 0.8312 with 378 vignettes (373 synthetic + 5 fixtures), 45 disease patterns
 
 ## /expand — Disease Expansion System
 
@@ -189,7 +189,7 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-12):** score=0.8274, top3=99.0%, top1=86.4%, neg_pass=100.0%, n=358 (41 disease patterns)
+**Current baseline (2026-03-13):** score=0.8312, top3=99.1%, top1=87.0%, neg_pass=100.0%, n=378 (45 disease patterns)
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -398,10 +398,10 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 | File | Contents | Entries |
 |------|----------|---------|
 | lab_ranges.json | Age/sex-adjusted reference ranges | 98 analytes |
-| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 41 patterns, 29 typical_values |
+| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 45 patterns, 35 typical_values |
 | illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 226 findings, 570 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 142 lab rules + 90 clinical rules + 51 name_aliases |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 232 findings, 585 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 150 lab rules + 93 clinical rules + 63 name_aliases |
 | loinc_mappings.json | LOINC code <-> common name mappings | 98 codes, 322 name mappings |
 
 ## MCP Servers
