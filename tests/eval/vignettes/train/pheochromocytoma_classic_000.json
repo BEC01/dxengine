@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "pheochromocytoma_classic_000",
+    "category": "endocrine",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "pheochromocytoma",
+    "variant": 0
+  },
+  "patient": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "episodic hypertension (paroxysms)",
+    "symptoms": [
+      "episodic hypertension (paroxysms)",
+      "headache",
+      "palpitations",
+      "diaphoresis",
+      "classic triad: headache + sweating + tachycardia"
+    ],
+    "signs": [
+      "pallor",
+      "tremor"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "plasma_free_metanephrine",
+            "value": 350.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "plasma_free_normetanephrine",
+            "value": 600.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 103.8,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "pheochromocytoma",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "pheochromocytoma"
+    ],
+    "cant_miss_diseases": []
+  }
+}

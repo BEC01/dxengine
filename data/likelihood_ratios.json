@@ -2733,6 +2733,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "pheochromocytoma": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
       }
     }
   },
@@ -3408,6 +3412,33 @@
       "wilson_disease": {
         "lr_positive": 8.0,
         "lr_negative": 0.4
+      }
+    }
+  },
+  "classic_triad_headache_sweating_palpitations": {
+    "description": "Classic triad of episodic headache, diaphoresis, and palpitations in a hypertensive patient",
+    "diseases": {
+      "pheochromocytoma": {
+        "lr_positive": 6.3,
+        "lr_negative": 0.14
+      }
+    }
+  },
+  "diaphoresis": {
+    "description": "Excessive sweating, typically episodic and associated with catecholamine surges",
+    "diseases": {
+      "pheochromocytoma": {
+        "lr_positive": 2.2,
+        "lr_negative": 0.45
+      }
+    }
+  },
+  "pallor": {
+    "description": "Pallor during paroxysms, due to catecholamine-induced vasoconstriction (distinguishes from flushing syndromes)",
+    "diseases": {
+      "pheochromocytoma": {
+        "lr_positive": 4.7,
+        "lr_negative": 0.72
       }
     }
   }

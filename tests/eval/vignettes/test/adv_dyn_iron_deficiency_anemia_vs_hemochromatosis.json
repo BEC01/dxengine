@@ -52,24 +52,9 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 82.0,
             "unit": "fL"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 0.9,
-            "unit": "%"
-          },
-          {
-            "test_name": "platelets",
-            "value": 332.0,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "red_cell_distribution_width",
@@ -77,9 +62,19 @@
             "unit": "%"
           },
           {
-            "test_name": "glucose",
-            "value": 85.0,
-            "unit": "mg/dL"
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 332.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.9,
+            "unit": "%"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -90,6 +85,11 @@
             "test_name": "aspartate_aminotransferase",
             "value": 25.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
           }
         ]
       }

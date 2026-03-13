@@ -2113,6 +2113,44 @@
       "finding_type": "lab",
       "importance": 4,
       "quality": "high"
+    },
+    {
+      "finding_key": "classic_triad_headache_sweating_palpitations",
+      "match_terms": [
+        "classic triad",
+        "headache sweating palpitations",
+        "headache diaphoresis palpitations",
+        "headache sweating tachycardia",
+        "triad of headache"
+      ],
+      "finding_type": "symptom",
+      "importance": 4,
+      "quality": "moderate"
+    },
+    {
+      "finding_key": "diaphoresis",
+      "match_terms": [
+        "diaphoresis",
+        "profuse sweating",
+        "excessive sweating",
+        "drenching sweats",
+        "episodic sweating"
+      ],
+      "finding_type": "symptom",
+      "importance": 3,
+      "quality": "moderate"
+    },
+    {
+      "finding_key": "pallor",
+      "match_terms": [
+        "pallor",
+        "pale skin",
+        "facial pallor",
+        "pallor during episodes"
+      ],
+      "finding_type": "sign",
+      "importance": 3,
+      "quality": "high"
     }
   ],
   "vitals_rules": []

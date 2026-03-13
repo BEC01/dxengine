@@ -37,24 +37,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.7,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "parathyroid_hormone",
             "value": 40.0,
             "unit": "pg/mL"
           },
           {
-            "test_name": "magnesium",
-            "value": 1.8,
+            "test_name": "phosphorus",
+            "value": 3.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "magnesium",
+            "value": 1.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "chloride",
@@ -67,14 +62,19 @@
             "unit": "U/L"
           },
           {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "uric_acid",
             "value": 5.2,
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           }
         ]
       }

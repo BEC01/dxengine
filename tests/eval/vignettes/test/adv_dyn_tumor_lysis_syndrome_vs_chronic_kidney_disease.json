@@ -29,23 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 4.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "calcium",
             "value": 8.7,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.2,
             "unit": "mg/dL"
           },
           {
@@ -54,8 +39,23 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "uric_acid",
             "value": 6.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 4.5,
             "unit": "mg/dL"
           },
           {
@@ -64,14 +64,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "albumin",
@@ -79,14 +74,19 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "parathyroid_hormone",
             "value": 40.0,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
           }
         ]
       }

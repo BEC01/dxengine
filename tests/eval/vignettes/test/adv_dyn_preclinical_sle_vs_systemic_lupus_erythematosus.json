@@ -31,19 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "complement_c3",
+            "value": 97.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "anti_dsdna_antibody",
             "value": 27.8,
             "unit": "IU/mL"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 1.8,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "platelets",
-            "value": 209.4,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "antinuclear_antibody_titer",
@@ -51,9 +46,14 @@
             "unit": "titer"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 19.6,
-            "unit": "mm/hr"
+            "test_name": "platelets",
+            "value": 209.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.8,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "complement_c4",
@@ -61,9 +61,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "complement_c3",
-            "value": 97.2,
-            "unit": "mg/dL"
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 19.6,
+            "unit": "mm/hr"
           },
           {
             "test_name": "c_reactive_protein",

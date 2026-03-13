@@ -1675,5 +1675,30 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 30000"
+  },
+  "pheochromocytoma": {
+    "description": "Catecholamine-secreting tumor of chromaffin cells (adrenal medulla or extra-adrenal paraganglia). Diagnosed by markedly elevated plasma free metanephrines with near-perfect sensitivity. Episodic or sustained catecholamine release causes paroxysmal hypertension, tachycardia, and metabolic effects including hyperglycemia.",
+    "pattern": {
+      "plasma_free_metanephrine": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.95,
+        "typical_value": 350.0
+      },
+      "plasma_free_normetanephrine": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9,
+        "typical_value": 600.0
+      },
+      "glucose": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.25
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500000"
   }
 }

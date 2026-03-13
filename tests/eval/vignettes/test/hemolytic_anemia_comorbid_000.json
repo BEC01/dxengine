@@ -32,34 +32,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 32.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 95.0,
             "unit": "fL"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.3,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 3.0,
-            "unit": "%"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 46.8,
+            "test_name": "aspartate_aminotransferase",
+            "value": 32.5,
             "unit": "U/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -67,9 +57,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 306.2,
-            "unit": "U/L"
+            "test_name": "bilirubin_total",
+            "value": 1.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "haptoglobin",
@@ -82,14 +72,24 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
+            "test_name": "alanine_aminotransferase",
+            "value": 46.8,
+            "unit": "U/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.0,
-            "unit": "g/dL"
+            "test_name": "reticulocyte_count",
+            "value": 3.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 306.2,
+            "unit": "U/L"
           }
         ]
       }
