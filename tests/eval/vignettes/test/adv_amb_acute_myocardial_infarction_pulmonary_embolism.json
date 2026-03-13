@@ -34,14 +34,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "troponin_i",
-            "value": 0.0,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "lactate_dehydrogenase",
             "value": 298.2,
             "unit": "U/L"
+          },
+          {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
           }
         ]
       }

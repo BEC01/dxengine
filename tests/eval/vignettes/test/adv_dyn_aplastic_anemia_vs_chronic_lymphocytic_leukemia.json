@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_aplastic_anemia_vs_immune_thrombocytopenic_purpura",
+    "id": "adv_dyn_aplastic_anemia_vs_chronic_lymphocytic_leukemia",
     "category": "hematologic",
     "difficulty": "adversarial",
     "split": "test",
@@ -31,19 +31,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "hemoglobin",
+            "value": 12.1,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.6,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "reticulocyte_count",
-            "value": 1.3,
+            "value": 0.5,
             "unit": "%"
           },
           {
             "test_name": "platelets",
-            "value": 71.0,
+            "value": 68.0,
             "unit": "x10^9/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 10.5,
-            "unit": "g/dL"
           },
           {
             "test_name": "neutrophils_absolute",
@@ -51,14 +56,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 2.8,
+            "test_name": "lymphocytes_absolute",
+            "value": 2.9,
             "unit": "x10^9/L"
-          },
-          {
-            "test_name": "mean_platelet_volume",
-            "value": 9.5,
-            "unit": "fL"
           }
         ]
       }
@@ -69,7 +69,7 @@
   "gold_standard": {
     "primary_diagnosis": "aplastic_anemia",
     "acceptable_alternatives": [
-      "immune_thrombocytopenic_purpura"
+      "chronic_lymphocytic_leukemia"
     ],
     "expected_findings": [],
     "expected_patterns": [

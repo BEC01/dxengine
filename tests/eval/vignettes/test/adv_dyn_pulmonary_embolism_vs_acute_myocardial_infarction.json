@@ -34,19 +34,24 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "troponin_i",
-            "value": 0.0,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "lactate_dehydrogenase",
             "value": 312.9,
             "unit": "U/L"
           },
           {
+            "test_name": "troponin_i",
+            "value": 0.0,
+            "unit": "ng/mL"
+          },
+          {
             "test_name": "d_dimer",
             "value": 0.8,
             "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "creatine_kinase",
+            "value": 173.5,
+            "unit": "U/L"
           },
           {
             "test_name": "creatine_kinase_mb",
@@ -57,11 +62,6 @@
             "test_name": "myoglobin",
             "value": 50.0,
             "unit": "ng/mL"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 173.5,
-            "unit": "U/L"
           }
         ]
       }

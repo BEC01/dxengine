@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "id": "adv_dyn_chronic_lymphocytic_leukemia_vs_aplastic_anemia",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "chronic_lymphocytic_leukemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "male",
+    "chief_complaint": "incidental absolute lymphocytosis on routine CBC in an asymptomatic older adult (30-50% of cases at diagnosis)",
+    "symptoms": [
+      "incidental absolute lymphocytosis on routine CBC in an asymptomatic older adult (30-50% of cases at diagnosis)",
+      "painless, symmetric cervical, axillary, or inguinal lymphadenopathy that is rubbery and non-tender",
+      "fatigue and exertional intolerance from progressive anemia (hemoglobin <11 g/dL in Rai stage III disease)",
+      "recurrent sinopulmonary infections (pneumonia, sinusitis) from hypogammaglobulinemia and T-cell dysfunction",
+      "B symptoms: drenching night sweats, unintentional weight loss >10%, and fever without infection (indicate active disease requiring treatment)"
+    ],
+    "signs": [
+      "splenomegaly causing early satiety and left upper quadrant fullness or discomfort (present in ~30-40% at diagnosis)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 13.6,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 8.3,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 6.7,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "neutrophils_absolute",
+            "value": 4.8,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "chronic_lymphocytic_leukemia",
+    "acceptable_alternatives": [
+      "aplastic_anemia"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "chronic_lymphocytic_leukemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

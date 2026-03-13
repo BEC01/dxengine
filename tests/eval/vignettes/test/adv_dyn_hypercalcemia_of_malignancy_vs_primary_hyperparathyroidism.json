@@ -34,11 +34,6 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "calcium",
-            "value": 10.8,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "alkaline_phosphatase",
             "value": 140.6,
             "unit": "U/L"
@@ -49,14 +44,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "calcium",
+            "value": 10.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
             "value": 5.2,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "chloride",

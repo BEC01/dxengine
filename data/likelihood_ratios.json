@@ -2832,6 +2832,10 @@
       "chronic_myeloid_leukemia": {
         "lr_positive": 2.0,
         "lr_negative": 0.1
+      },
+      "chronic_lymphocytic_leukemia": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3152,6 +3156,10 @@
       "folate_deficiency": {
         "lr_positive": 2.0,
         "lr_negative": 0.5
+      },
+      "chronic_lymphocytic_leukemia": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
       }
     }
   },
@@ -3510,6 +3518,15 @@
       "chronic_myeloid_leukemia": {
         "lr_positive": 8.0,
         "lr_negative": 0.2
+      }
+    }
+  },
+  "lymphocytosis": {
+    "description": "Absolute lymphocyte count above ULN — defining feature of CLL",
+    "diseases": {
+      "chronic_lymphocytic_leukemia": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.05
       }
     }
   }

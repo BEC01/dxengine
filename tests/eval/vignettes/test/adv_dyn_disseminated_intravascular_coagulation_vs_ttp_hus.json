@@ -46,11 +46,6 @@
             "unit": "U/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.9,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "fibrinogen",
             "value": 180.0,
             "unit": "mg/dL"
@@ -74,6 +69,11 @@
             "test_name": "prothrombin_time",
             "value": 13.8,
             "unit": "seconds"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.9,
+            "unit": "g/dL"
           }
         ]
       }

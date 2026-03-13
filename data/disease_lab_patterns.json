@@ -1857,5 +1857,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 65000"
+  },
+  "chronic_lymphocytic_leukemia": {
+    "description": "Clonal B-cell lymphoproliferative disorder with marked lymphocytosis",
+    "pattern": {
+      "lymphocytes_absolute": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.95
+      },
+      "white_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.6
+      },
+      "hemoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -1.5,
+        "weight": 0.3
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 20000"
   }
 }

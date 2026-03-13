@@ -43,11 +43,6 @@
             "unit": "U/L"
           },
           {
-            "test_name": "fibrinogen",
-            "value": 180.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "triglycerides",
             "value": 165.0,
             "unit": "mg/dL"
@@ -56,6 +51,11 @@
             "test_name": "ferritin",
             "value": 554.4,
             "unit": "ng/mL"
+          },
+          {
+            "test_name": "fibrinogen",
+            "value": 180.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "haptoglobin",

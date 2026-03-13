@@ -34,13 +34,13 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.7,
+            "test_name": "phosphorus",
+            "value": 3.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.7,
+            "test_name": "calcium",
+            "value": 9.7,
             "unit": "mg/dL"
           },
           {
