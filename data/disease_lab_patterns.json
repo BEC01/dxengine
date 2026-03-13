@@ -1386,5 +1386,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 100000"
+  },
+  "ttp_hus": {
+    "description": "Thrombotic microangiopathy with microangiopathic hemolytic anemia and severe thrombocytopenia. Defining lab pattern: severely low platelets + hemolysis markers (low haptoglobin, elevated LDH, elevated indirect bilirubin) with NORMAL coagulation (PT/INR/fibrinogen normal — key distinction from DIC). Schistocytes on smear are pathognomonic.",
+    "pattern": {
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.9
+      },
+      "haptoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.8
+      },
+      "lactate_dehydrogenase": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.7
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 250000"
   }
 }

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "ttp_hus_moderate_000",
+    "category": "hematologic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "ttp_hus",
+    "variant": 0
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "microangiopathic hemolytic anemia (schistocytes)",
+    "symptoms": [
+      "microangiopathic hemolytic anemia (schistocytes)",
+      "severe thrombocytopenia",
+      "renal impairment",
+      "neurologic symptoms (TTP: confusion, seizures, stroke)",
+      "fever"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 137.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 21.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 306.2,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "ttp_hus",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "ttp_hus"
+    ],
+    "cant_miss_diseases": []
+  }
+}

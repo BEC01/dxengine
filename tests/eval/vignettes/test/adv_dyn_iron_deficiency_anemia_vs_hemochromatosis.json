@@ -32,16 +32,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_iron_binding_capacity",
-            "value": 320.5,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "transferrin_saturation",
-            "value": 37.6,
-            "unit": "%"
-          },
-          {
             "test_name": "iron",
             "value": 118.0,
             "unit": "mcg/dL"
@@ -52,19 +42,19 @@
             "unit": "ng/mL"
           },
           {
+            "test_name": "transferrin_saturation",
+            "value": 37.6,
+            "unit": "%"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
+            "unit": "mcg/dL"
+          },
+          {
             "test_name": "mean_corpuscular_volume",
             "value": 82.0,
             "unit": "fL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 332.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "red_cell_distribution_width",
-            "value": 14.2,
-            "unit": "%"
           },
           {
             "test_name": "hemoglobin",
@@ -72,18 +62,28 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "red_cell_distribution_width",
+            "value": 14.2,
+            "unit": "%"
+          },
+          {
             "test_name": "reticulocyte_count",
             "value": 0.9,
             "unit": "%"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
-            "unit": "U/L"
+            "test_name": "platelets",
+            "value": 332.0,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
             "value": 25.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
             "unit": "U/L"
           },
           {

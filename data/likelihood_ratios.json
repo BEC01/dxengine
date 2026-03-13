@@ -725,6 +725,10 @@
       "hypothyroidism": {
         "lr_positive": 0.5,
         "lr_negative": 1.0
+      },
+      "ttp_hus": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -764,6 +768,10 @@
       "disseminated_intravascular_coagulation": {
         "lr_positive": 4.0,
         "lr_negative": 0.4
+      },
+      "ttp_hus": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.2
       }
     }
   },
@@ -793,6 +801,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 2.0,
         "lr_negative": 0.6
+      },
+      "ttp_hus": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
       }
     }
   },

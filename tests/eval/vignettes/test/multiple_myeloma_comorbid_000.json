@@ -36,6 +36,21 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "creatinine",
+            "value": 1.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 9.2,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.6,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 24.7,
             "unit": "mEq/L"
@@ -46,9 +61,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 86.6,
-            "unit": "mL/min/1.73m2"
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 26.2,
+            "unit": "mm/hr"
           },
           {
             "test_name": "hemoglobin",
@@ -56,14 +71,19 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "parathyroid_hormone",
+            "value": 51.2,
+            "unit": "pg/mL"
+          },
+          {
             "test_name": "calcium",
             "value": 10.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 3.6,
-            "unit": "g/dL"
+            "test_name": "glomerular_filtration_rate",
+            "value": 86.6,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "potassium",
@@ -71,29 +91,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 51.2,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 26.2,
-            "unit": "mm/hr"
-          },
-          {
             "test_name": "phosphorus",
             "value": 3.9,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 9.2,
-            "unit": "g/dL"
           }
         ]
       }

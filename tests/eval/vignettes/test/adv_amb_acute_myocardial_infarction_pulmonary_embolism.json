@@ -29,14 +29,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 298.2,
-            "unit": "U/L"
-          },
-          {
             "test_name": "troponin_i",
             "value": 0.0,
             "unit": "ng/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 298.2,
+            "unit": "U/L"
           },
           {
             "test_name": "b_type_natriuretic_peptide",

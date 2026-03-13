@@ -29,9 +29,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "creatinine",
@@ -39,28 +39,18 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.2,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "phosphorus",
             "value": 3.7,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "glucose",
-            "value": 115.0,
             "unit": "mg/dL"
           },
           {
@@ -74,8 +64,18 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "albumin",
-            "value": 4.5,
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 115.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 15.5,
             "unit": "g/dL"
           },
           {
@@ -84,8 +84,8 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.2,
+            "test_name": "calcium",
+            "value": 9.5,
             "unit": "mg/dL"
           },
           {
@@ -94,13 +94,13 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 15.5,
+            "test_name": "albumin",
+            "value": 4.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
+            "test_name": "uric_acid",
+            "value": 5.2,
             "unit": "mg/dL"
           }
         ]

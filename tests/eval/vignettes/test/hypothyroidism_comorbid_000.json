@@ -32,8 +32,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_cholesterol",
-            "value": 175.0,
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
             "unit": "mg/dL"
           },
           {
@@ -42,9 +47,9 @@
             "unit": "ng/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 15.9,
-            "unit": "mg/dL"
+            "test_name": "albumin",
+            "value": 4.4,
+            "unit": "g/dL"
           },
           {
             "test_name": "bicarbonate",
@@ -52,9 +57,19 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "creatine_kinase",
-            "value": 192.0,
-            "unit": "U/L"
+            "test_name": "uric_acid",
+            "value": 4.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 175.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.8,
+            "unit": "g/dL"
           },
           {
             "test_name": "ldl_cholesterol",
@@ -62,8 +77,18 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 4.5,
+            "test_name": "creatine_kinase",
+            "value": 192.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.2,
             "unit": "mg/dL"
           },
           {
@@ -72,9 +97,9 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.8,
-            "unit": "g/dL"
+            "test_name": "sodium",
+            "value": 138.2,
+            "unit": "mEq/L"
           },
           {
             "test_name": "thyroid_stimulating_hormone",
@@ -82,34 +107,9 @@
             "unit": "mIU/L"
           },
           {
-            "test_name": "calcium",
-            "value": 9.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 138.2,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "potassium",
             "value": 4.4,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.4,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
-            "unit": "pg/mL"
           },
           {
             "test_name": "phosphorus",
