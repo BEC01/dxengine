@@ -31,6 +31,21 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "glomerular_filtration_rate",
+            "value": 61.1,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "calcium",
             "value": 9.4,
             "unit": "mg/dL"
@@ -39,21 +54,6 @@
             "test_name": "albumin",
             "value": 3.6,
             "unit": "g/dL"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 61.1,
-            "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.3,
-            "unit": "mg/dL"
           },
           {
             "test_name": "uric_acid",
@@ -71,11 +71,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 23.4,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 24.5,
             "unit": "mg/dL"
@@ -86,14 +81,19 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "total_protein",
-            "value": 7.2,
-            "unit": "g/dL"
+            "test_name": "bicarbonate",
+            "value": 23.4,
+            "unit": "mEq/L"
           },
           {
             "test_name": "erythrocyte_sedimentation_rate",
             "value": 15.0,
             "unit": "mm/hr"
+          },
+          {
+            "test_name": "total_protein",
+            "value": 7.2,
+            "unit": "g/dL"
           }
         ]
       }

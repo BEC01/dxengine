@@ -39,14 +39,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "d_dimer",
-            "value": 0.8,
-            "unit": "mcg/mL FEU"
-          },
-          {
             "test_name": "lactate_dehydrogenase",
             "value": 294.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "d_dimer",
+            "value": 0.8,
+            "unit": "mcg/mL FEU"
           },
           {
             "test_name": "c_reactive_protein",

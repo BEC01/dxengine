@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "id": "renal_tubular_acidosis_partial_screen_000",
+    "category": "renal",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "renal_tubular_acidosis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "non-anion gap metabolic acidosis (normal anion gap)",
+    "symptoms": [
+      "non-anion gap metabolic acidosis (normal anion gap)",
+      "Type 1: kidney stones, nephrocalcinosis, growth failure in children",
+      "Type 2: osteomalacia, rickets in children, Fanconi syndrome features",
+      "Type 4: often asymptomatic, mild acidosis with hyperkalemia"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "bicarbonate",
+            "value": 21.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 107.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.5,
+            "unit": "mEq/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "renal_tubular_acidosis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "renal_tubular_acidosis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

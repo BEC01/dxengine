@@ -1623,5 +1623,28 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 25"
+  },
+  "renal_tubular_acidosis": {
+    "description": "Non-anion gap hyperchloremic metabolic acidosis from impaired renal acid excretion (Type 1 distal) or bicarbonate reabsorption (Type 2 proximal). Type 1 distinguished by urine pH >5.5 with acidosis.",
+    "pattern": {
+      "bicarbonate": {
+        "direction": "decreased",
+        "typical_z_score": -2.5,
+        "weight": 0.65
+      },
+      "chloride": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.75
+      },
+      "potassium": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.55
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 5000"
   }
 }

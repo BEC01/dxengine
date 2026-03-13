@@ -2388,7 +2388,7 @@
     "diseases": {
       "renal_tubular_acidosis": {
         "lr_positive": 6.0,
-        "lr_negative": 0.25
+        "lr_negative": 0.15
       },
       "diarrhea": {
         "lr_positive": 4.0,
@@ -2401,6 +2401,10 @@
     "diseases": {
       "renal_tubular_acidosis_type_1": {
         "lr_positive": 18.0,
+        "lr_negative": 0.15
+      },
+      "renal_tubular_acidosis": {
+        "lr_positive": 10.0,
         "lr_negative": 0.15
       }
     }
@@ -2738,6 +2742,10 @@
       "primary_hyperparathyroidism": {
         "lr_positive": 4.0,
         "lr_negative": 0.4
+      },
+      "renal_tubular_acidosis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -2818,6 +2826,10 @@
       "primary_hyperparathyroidism": {
         "lr_positive": 2.5,
         "lr_negative": 0.6
+      },
+      "renal_tubular_acidosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
       }
     }
   },

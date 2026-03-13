@@ -31,14 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "calcium",
-            "value": 9.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "parathyroid_hormone",
             "value": 66.2,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -56,18 +56,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 3.7,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "glomerular_filtration_rate",
             "value": 48.0,
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 24.5,
+            "test_name": "creatinine",
+            "value": 1.4,
             "unit": "mg/dL"
           },
           {
@@ -76,8 +71,13 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.4,
+            "test_name": "albumin",
+            "value": 3.7,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 24.5,
             "unit": "mg/dL"
           },
           {
@@ -86,9 +86,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "chloride",
-            "value": 102.0,
-            "unit": "mEq/L"
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -96,9 +96,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "chloride",
+            "value": 102.0,
+            "unit": "mEq/L"
           }
         ]
       }
