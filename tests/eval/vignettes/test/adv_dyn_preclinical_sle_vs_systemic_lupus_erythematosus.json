@@ -31,19 +31,24 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "platelets",
+            "value": 209.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 1.8,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "antinuclear_antibody_titer",
             "value": 1.1,
             "unit": "titer"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 19.6,
-            "unit": "mm/hr"
-          },
-          {
-            "test_name": "platelets",
-            "value": 209.4,
-            "unit": "x10^9/L"
+            "test_name": "anti_dsdna_antibody",
+            "value": 27.8,
+            "unit": "IU/mL"
           },
           {
             "test_name": "complement_c3",
@@ -56,24 +61,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 1.8,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "anti_dsdna_antibody",
-            "value": 27.8,
-            "unit": "IU/mL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 13.2,
-            "unit": "g/dL"
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 19.6,
+            "unit": "mm/hr"
           },
           {
             "test_name": "c_reactive_protein",
             "value": 1.8,
             "unit": "mg/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.2,
+            "unit": "g/dL"
           }
         ]
       }

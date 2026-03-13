@@ -32,24 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 231.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "bilirubin_direct",
-            "value": 0.4,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "alanine_aminotransferase",
             "value": 50.2,
             "unit": "U/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 179.2,
+            "test_name": "lactate_dehydrogenase",
+            "value": 231.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
           },
           {
             "test_name": "total_cholesterol",
@@ -57,14 +52,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
+            "test_name": "bilirubin_total",
+            "value": 1.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -77,8 +67,18 @@
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.4,
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 179.2,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.4,
             "unit": "mg/dL"
           }
         ]

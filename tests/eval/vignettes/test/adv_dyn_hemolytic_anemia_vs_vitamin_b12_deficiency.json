@@ -32,6 +32,16 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "reticulocyte_count",
+            "value": 1.8,
+            "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 271.2,
+            "unit": "U/L"
+          },
+          {
             "test_name": "hemoglobin",
             "value": 14.1,
             "unit": "g/dL"
@@ -42,14 +52,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 1.8,
-            "unit": "%"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 271.2,
-            "unit": "U/L"
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_total",
@@ -62,16 +67,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "haptoglobin",
-            "value": 0.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "vitamin_b12",
-            "value": 550.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "methylmalonic_acid",
             "value": 172.0,
             "unit": "nmol/L"
@@ -80,6 +75,11 @@
             "test_name": "homocysteine",
             "value": 10.0,
             "unit": "mcmol/L"
+          },
+          {
+            "test_name": "vitamin_b12",
+            "value": 550.0,
+            "unit": "pg/mL"
           }
         ]
       }

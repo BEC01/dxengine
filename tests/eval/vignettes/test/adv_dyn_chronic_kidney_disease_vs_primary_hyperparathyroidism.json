@@ -31,14 +31,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "parathyroid_hormone",
+            "value": 66.2,
+            "unit": "pg/mL"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 24.0,
             "unit": "mEq/L"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 66.2,
-            "unit": "pg/mL"
+            "test_name": "uric_acid",
+            "value": 5.7,
+            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -51,9 +56,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.7,
+            "test_name": "blood_urea_nitrogen",
+            "value": 24.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -66,11 +76,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 12.5,
             "unit": "g/dL"
@@ -79,11 +84,6 @@
             "test_name": "albumin",
             "value": 3.7,
             "unit": "g/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 24.5,
-            "unit": "mg/dL"
           },
           {
             "test_name": "chloride",

@@ -42,13 +42,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
+            "test_name": "alkaline_phosphatase",
+            "value": 138.0,
             "unit": "U/L"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
+            "test_name": "aspartate_aminotransferase",
+            "value": 37.4,
             "unit": "U/L"
           }
         ]

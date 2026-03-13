@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_sepsis",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "lactate",
+            "value": 1.4,
+            "unit": "mmol/L"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 3.8,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 11.7,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

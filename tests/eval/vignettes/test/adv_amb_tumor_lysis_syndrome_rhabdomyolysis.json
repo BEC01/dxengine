@@ -29,6 +29,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 283.5,
             "unit": "U/L"
@@ -39,9 +44,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
+            "test_name": "uric_acid",
+            "value": 6.8,
+            "unit": "mg/dL"
           },
           {
             "test_name": "phosphorus",
@@ -51,11 +56,6 @@
           {
             "test_name": "calcium",
             "value": 8.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.8,
             "unit": "mg/dL"
           }
         ]

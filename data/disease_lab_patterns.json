@@ -1269,5 +1269,38 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 1000"
+  },
+  "sepsis": {
+    "description": "Dysregulated host immune response to infection causing organ dysfunction. Key lab pattern: markedly elevated procalcitonin (most specific bacterial marker), elevated lactate (tissue hypoperfusion), elevated CRP (inflammation), leukocytosis, thrombocytopenia (consumption/DIC), with organ dysfunction markers (creatinine, bilirubin, metabolic acidosis).",
+    "pattern": {
+      "procalcitonin": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.9
+      },
+      "lactate": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.85
+      },
+      "c_reactive_protein": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.6
+      },
+      "white_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.5
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.45
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 400"
   }
 }

@@ -2615,6 +2615,10 @@
       "addison_disease": {
         "lr_positive": 2.0,
         "lr_negative": 0.65
+      },
+      "sepsis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.55
       }
     }
   },
@@ -2728,6 +2732,10 @@
       "acute_myocardial_infarction": {
         "lr_positive": 1.0,
         "lr_negative": 1.0
+      },
+      "sepsis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
       }
     }
   },
@@ -3198,6 +3206,10 @@
     "diseases": {
       "systemic_lupus_erythematosus": {
         "lr_positive": 2.5,
+        "lr_negative": 0.7
+      },
+      "sepsis": {
+        "lr_positive": 2.0,
         "lr_negative": 0.7
       }
     }

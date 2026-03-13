@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "id": "sepsis_moderate_000",
+    "category": "infectious",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "sepsis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 46,
+    "sex": "male",
+    "chief_complaint": "fever or hypothermia",
+    "symptoms": [
+      "fever or hypothermia",
+      "tachycardia",
+      "tachypnea",
+      "hypotension (septic shock)",
+      "altered mental status"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "lactate",
+            "value": 2.5,
+            "unit": "mmol/L"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 3.6,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 11.3,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 171.9,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "sepsis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "sepsis"
+    ],
+    "cant_miss_diseases": []
+  }
+}
