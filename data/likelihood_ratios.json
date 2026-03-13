@@ -108,6 +108,10 @@
       "hemophagocytic_lymphohistiocytosis": {
         "lr_positive": 6.0,
         "lr_negative": 0.4
+      },
+      "macrophage_activation_syndrome": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
       }
     }
   },
@@ -936,6 +940,10 @@
       "severe_liver_disease": {
         "lr_positive": 4.0,
         "lr_negative": 0.55
+      },
+      "macrophage_activation_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -2435,6 +2443,10 @@
       "hairy_cell_leukemia": {
         "lr_positive": 6.0,
         "lr_negative": 0.4
+      },
+      "macrophage_activation_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -3406,6 +3418,10 @@
       "nephrotic_syndrome": {
         "lr_positive": 2.5,
         "lr_negative": 0.6
+      },
+      "macrophage_activation_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },

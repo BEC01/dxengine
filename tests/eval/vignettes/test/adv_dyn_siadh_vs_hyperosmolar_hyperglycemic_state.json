@@ -32,18 +32,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "sodium",
-            "value": 135.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "osmolality_serum",
             "value": 286.8,
             "unit": "mOsm/kg"
           },
           {
-            "test_name": "chloride",
-            "value": 97.2,
+            "test_name": "sodium",
+            "value": 135.8,
             "unit": "mEq/L"
           },
           {
@@ -55,6 +50,11 @@
             "test_name": "uric_acid",
             "value": 3.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "chloride",
+            "value": 97.2,
+            "unit": "mEq/L"
           },
           {
             "test_name": "glucose",

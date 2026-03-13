@@ -35,19 +35,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
+            "unit": "pg/mL"
+          },
+          {
             "test_name": "phosphorus",
             "value": 3.2,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "free_thyroxine",
-            "value": 2.0,
-            "unit": "ng/dL"
           },
           {
             "test_name": "bicarbonate",
@@ -60,19 +55,24 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
+            "test_name": "free_triiodothyronine",
+            "value": 4.7,
             "unit": "pg/mL"
           },
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 0.0,
-            "unit": "mIU/L"
+            "test_name": "free_thyroxine",
+            "value": 2.0,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "total_cholesterol",
@@ -80,19 +80,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "free_triiodothyronine",
-            "value": 4.7,
-            "unit": "pg/mL"
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 0.0,
+            "unit": "mIU/L"
           },
           {
             "test_name": "alkaline_phosphatase",
             "value": 146.2,
             "unit": "U/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 102.8,
+            "unit": "mEq/L"
           }
         ]
       }

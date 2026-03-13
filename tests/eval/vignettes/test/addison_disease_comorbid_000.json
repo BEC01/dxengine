@@ -29,33 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "adrenocorticotropic_hormone",
-            "value": 91.3,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 22.9,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 51.2,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "glucose",
             "value": 70.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 19.8,
             "unit": "mg/dL"
           },
           {
@@ -64,19 +39,49 @@
             "unit": "mL/min/1.73m2"
           },
           {
+            "test_name": "calcium",
+            "value": 9.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 134.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 19.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 51.2,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.9,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "hemoglobin",
             "value": 13.4,
             "unit": "g/dL"
           },
           {
-            "test_name": "eosinophils_absolute",
-            "value": 0.4,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 4.6,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 22.9,
+            "unit": "mEq/L"
           },
           {
             "test_name": "albumin",
@@ -84,8 +89,13 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.6,
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 91.3,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 4.6,
             "unit": "mg/dL"
           },
           {
@@ -94,19 +104,9 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 134.9,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "potassium",
-            "value": 5.1,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.9,
-            "unit": "mg/dL"
+            "test_name": "eosinophils_absolute",
+            "value": 0.4,
+            "unit": "x10^9/L"
           }
         ]
       }

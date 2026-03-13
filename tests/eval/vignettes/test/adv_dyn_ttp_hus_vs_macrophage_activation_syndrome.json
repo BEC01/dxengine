@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_ttp_hus_vs_disseminated_intravascular_coagulation",
+    "id": "adv_dyn_ttp_hus_vs_macrophage_activation_syndrome",
     "category": "hematologic",
     "difficulty": "adversarial",
     "split": "test",
@@ -29,19 +29,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "haptoglobin",
-            "value": 25.8,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "platelets",
             "value": 121.9,
             "unit": "x10^9/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
-            "value": 301.9,
+            "value": 308.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "fibrinogen",
@@ -49,29 +49,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
+            "test_name": "ferritin",
+            "value": 159.0,
+            "unit": "ng/mL"
           },
           {
-            "test_name": "d_dimer",
-            "value": 0.2,
-            "unit": "mcg/mL FEU"
-          },
-          {
-            "test_name": "prothrombin_time",
-            "value": 12.2,
-            "unit": "seconds"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
-          },
-          {
-            "test_name": "partial_thromboplastin_time",
-            "value": 30.0,
-            "unit": "seconds"
+            "test_name": "triglycerides",
+            "value": 75.0,
+            "unit": "mg/dL"
           }
         ]
       }
@@ -82,7 +67,7 @@
   "gold_standard": {
     "primary_diagnosis": "ttp_hus",
     "acceptable_alternatives": [
-      "disseminated_intravascular_coagulation"
+      "macrophage_activation_syndrome"
     ],
     "expected_findings": [],
     "expected_patterns": [

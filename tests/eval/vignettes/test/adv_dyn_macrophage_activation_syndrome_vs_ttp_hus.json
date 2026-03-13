@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "id": "adv_dyn_macrophage_activation_syndrome_vs_ttp_hus",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "macrophage_activation_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 32,
+    "sex": "male",
+    "chief_complaint": "prolonged high fever (>38.5\u00b0C, typically unresponsive to antibiotics)",
+    "symptoms": [
+      "prolonged high fever (>38.5\u00b0C, typically unresponsive to antibiotics)",
+      "progressive pancytopenia (anemia, thrombocytopenia, neutropenia)",
+      "lymphadenopathy",
+      "neurologic symptoms (seizures, altered consciousness, ataxia \u2014 in 30-50% of primary)",
+      "coagulopathy with bleeding"
+    ],
+    "signs": [
+      "splenomegaly (often massive)",
+      "hepatomegaly with transaminitis and jaundice",
+      "rash (evanescent salmon-colored rash in sJIA-associated MAS)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "platelets",
+            "value": 121.9,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 308.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "fibrinogen",
+            "value": 180.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 554.4,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 165.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 115.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "macrophage_activation_syndrome",
+    "acceptable_alternatives": [
+      "ttp_hus"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "macrophage_activation_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

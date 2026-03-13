@@ -29,14 +29,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 25.5,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "calcium",
-            "value": 9.5,
-            "unit": "mg/dL"
           },
           {
             "test_name": "cortisol_am",
@@ -44,8 +44,8 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "glucose",
-            "value": 85.0,
+            "test_name": "calcium",
+            "value": 9.5,
             "unit": "mg/dL"
           },
           {
@@ -64,14 +64,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "sodium",
-            "value": 136.0,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "adrenocorticotropic_hormone",
             "value": 80.1,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 136.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "white_blood_cells",

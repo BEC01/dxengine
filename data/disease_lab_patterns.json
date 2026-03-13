@@ -1773,5 +1773,38 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 15000"
+  },
+  "macrophage_activation_syndrome": {
+    "description": "Macrophage Activation Syndrome / Hemophagocytic Lymphohistiocytosis — uncontrolled immune activation with extreme hyperferritinemia and cytopenias",
+    "pattern": {
+      "ferritin": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.95
+      },
+      "triglycerides": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.8
+      },
+      "fibrinogen": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.85
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.6
+      },
+      "lactate_dehydrogenase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.55
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 500000"
   }
 }

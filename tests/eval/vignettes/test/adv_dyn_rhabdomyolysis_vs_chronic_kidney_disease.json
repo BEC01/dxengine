@@ -34,6 +34,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "phosphorus",
+            "value": 4.4,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "uric_acid",
             "value": 6.3,
             "unit": "mg/dL"
@@ -49,23 +54,8 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.4,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 294.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "creatine_kinase",
             "value": 496.3,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 43.0,
             "unit": "U/L"
           },
           {
@@ -79,8 +69,23 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "albumin",
-            "value": 4.5,
+            "test_name": "lactate_dehydrogenase",
+            "value": 294.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 43.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 15.5,
             "unit": "g/dL"
           },
           {
@@ -89,9 +94,9 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -102,11 +107,6 @@
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
           }
         ]
       }

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "id": "macrophage_activation_syndrome_classic_000",
+    "category": "hematologic",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "macrophage_activation_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 32,
+    "sex": "male",
+    "chief_complaint": "prolonged high fever (>38.5\u00b0C, typically unresponsive to antibiotics)",
+    "symptoms": [
+      "prolonged high fever (>38.5\u00b0C, typically unresponsive to antibiotics)",
+      "progressive pancytopenia (anemia, thrombocytopenia, neutropenia)",
+      "lymphadenopathy",
+      "neurologic symptoms (seizures, altered consciousness, ataxia \u2014 in 30-50% of primary)",
+      "coagulopathy with bleeding"
+    ],
+    "signs": [
+      "splenomegaly (often massive)",
+      "hepatomegaly with transaminitis and jaundice",
+      "rash (evanescent salmon-colored rash in sJIA-associated MAS)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "ferritin",
+            "value": 648.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 187.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "fibrinogen",
+            "value": 150.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 87.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 315.0,
+            "unit": "U/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "macrophage_activation_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "macrophage_activation_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

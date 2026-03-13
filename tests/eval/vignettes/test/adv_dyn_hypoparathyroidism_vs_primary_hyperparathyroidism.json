@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 3.7,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "parathyroid_hormone",
             "value": 40.0,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.7,
+            "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
@@ -49,11 +49,6 @@
           {
             "test_name": "magnesium",
             "value": 1.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.2,
             "unit": "mg/dL"
           },
           {
@@ -67,14 +62,19 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.0,
-            "unit": "mEq/L"
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
             "value": 95.5,
             "unit": "U/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 102.0,
+            "unit": "mEq/L"
           }
         ]
       }
