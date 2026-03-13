@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "id": "adv_dyn_polycythemia_vera_vs_myelodysplastic_syndrome",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "polycythemia_vera",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "plethora (ruddy complexion)",
+    "symptoms": [
+      "plethora (ruddy complexion)",
+      "pruritus (especially aquagenic/post-shower)",
+      "headache",
+      "dizziness",
+      "visual disturbances"
+    ],
+    "signs": [
+      "splenomegaly"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "white_blood_cells",
+            "value": 8.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 15.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 285.9,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hematocrit",
+            "value": 51.7,
+            "unit": "%"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 7.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 6.2,
+            "unit": "x10^12/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.5,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "polycythemia_vera",
+    "acceptable_alternatives": [
+      "myelodysplastic_syndrome"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "polycythemia_vera"
+    ],
+    "cant_miss_diseases": []
+  }
+}

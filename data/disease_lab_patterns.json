@@ -1880,5 +1880,38 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 20000"
+  },
+  "myelodysplastic_syndrome": {
+    "description": "Clonal myeloid neoplasm with ineffective hematopoiesis causing macrocytic pancytopenia with low reticulocytes",
+    "pattern": {
+      "hemoglobin": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.8
+      },
+      "mean_corpuscular_volume": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.75
+      },
+      "reticulocyte_count": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.85
+      },
+      "white_blood_cells": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.55
+      },
+      "platelets": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.5
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 25000"
   }
 }

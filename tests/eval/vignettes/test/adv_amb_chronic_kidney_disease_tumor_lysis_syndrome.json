@@ -36,9 +36,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
+            "test_name": "phosphorus",
+            "value": 4.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "calcium",
@@ -46,9 +46,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 21.1,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
           },
           {
             "test_name": "creatinine",
@@ -56,8 +56,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.3,
+            "test_name": "blood_urea_nitrogen",
+            "value": 21.1,
             "unit": "mg/dL"
           }
         ]

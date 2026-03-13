@@ -36,9 +36,9 @@
             "unit": "titer"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 18.2,
-            "unit": "mm/hr"
+            "test_name": "complement_c3",
+            "value": 102.6,
+            "unit": "mg/dL"
           },
           {
             "test_name": "anti_dsdna_antibody",
@@ -46,23 +46,23 @@
             "unit": "IU/mL"
           },
           {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 18.2,
+            "unit": "mm/hr"
+          },
+          {
             "test_name": "complement_c4",
             "value": 16.2,
             "unit": "mg/dL"
           },
           {
-            "test_name": "platelets",
-            "value": 218.8,
+            "test_name": "lymphocytes_absolute",
+            "value": 2.0,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "complement_c3",
-            "value": 102.6,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.0,
+            "test_name": "platelets",
+            "value": 218.8,
             "unit": "x10^9/L"
           }
         ]

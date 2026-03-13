@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "id": "adv_dyn_myelodysplastic_syndrome_vs_polycythemia_vera",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "myelodysplastic_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "elderly patient (>65) with fatigue and exertional dyspnea from macrocytic or normocytic anemia",
+    "symptoms": [
+      "elderly patient (>65) with fatigue and exertional dyspnea from macrocytic or normocytic anemia",
+      "incidental pancytopenia on routine CBC with no obvious nutritional or medication cause",
+      "recurrent bacterial infections from neutropenia (ANC <1.8 x 10^9/L)",
+      "easy bruising, petechiae, or mucosal bleeding from thrombocytopenia"
+    ],
+    "signs": [
+      "pallor without neurological symptoms (distinguishes from B12 deficiency)",
+      "inadequate reticulocyte response despite significant anemia (reflects ineffective erythropoiesis)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "white_blood_cells",
+            "value": 8.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 15.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 285.9,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 100.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.7,
+            "unit": "%"
+          },
+          {
+            "test_name": "hematocrit",
+            "value": 43.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 5.4,
+            "unit": "x10^12/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "myelodysplastic_syndrome",
+    "acceptable_alternatives": [
+      "polycythemia_vera"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "myelodysplastic_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

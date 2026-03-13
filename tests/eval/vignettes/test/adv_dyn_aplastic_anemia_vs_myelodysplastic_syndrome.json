@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_aplastic_anemia_vs_chronic_lymphocytic_leukemia",
+    "id": "adv_dyn_aplastic_anemia_vs_myelodysplastic_syndrome",
     "category": "hematologic",
     "difficulty": "adversarial",
     "split": "test",
@@ -31,23 +31,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 12.1,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "white_blood_cells",
-            "value": 7.6,
+            "value": 3.9,
             "unit": "x10^9/L"
           },
           {
             "test_name": "reticulocyte_count",
-            "value": 0.5,
+            "value": 0.7,
             "unit": "%"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 11.4,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "platelets",
-            "value": 68.0,
+            "value": 134.0,
             "unit": "x10^9/L"
           },
           {
@@ -56,9 +56,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.9,
-            "unit": "x10^9/L"
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
           }
         ]
       }
@@ -69,7 +69,7 @@
   "gold_standard": {
     "primary_diagnosis": "aplastic_anemia",
     "acceptable_alternatives": [
-      "chronic_lymphocytic_leukemia"
+      "myelodysplastic_syndrome"
     ],
     "expected_findings": [],
     "expected_patterns": [

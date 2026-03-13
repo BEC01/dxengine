@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "id": "adv_dyn_myelodysplastic_syndrome_vs_iron_deficiency_anemia",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "myelodysplastic_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "elderly patient (>65) with fatigue and exertional dyspnea from macrocytic or normocytic anemia",
+    "symptoms": [
+      "elderly patient (>65) with fatigue and exertional dyspnea from macrocytic or normocytic anemia",
+      "incidental pancytopenia on routine CBC with no obvious nutritional or medication cause",
+      "recurrent bacterial infections from neutropenia (ANC <1.8 x 10^9/L)",
+      "easy bruising, petechiae, or mucosal bleeding from thrombocytopenia"
+    ],
+    "signs": [
+      "pallor without neurological symptoms (distinguishes from B12 deficiency)",
+      "inadequate reticulocyte response despite significant anemia (reflects ineffective erythropoiesis)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.9,
+            "unit": "fL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 0.9,
+            "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 264.1,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 5.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 35.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 310.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "iron",
+            "value": 120.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 180.0,
+            "unit": "ng/mL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "myelodysplastic_syndrome",
+    "acceptable_alternatives": [
+      "iron_deficiency_anemia"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "myelodysplastic_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -31,44 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 96.2,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bilirubin_total",
             "value": 0.9,
             "unit": "mg/dL"
           },
           {
-            "test_name": "ferritin",
-            "value": 455.0,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 265.0,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 231.0,
+            "test_name": "aspartate_aminotransferase",
+            "value": 35.4,
             "unit": "U/L"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 107.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 53.5,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "transferrin_saturation",
-            "value": 63.1,
-            "unit": "%"
           },
           {
             "test_name": "albumin",
@@ -81,14 +51,44 @@
             "unit": "ratio"
           },
           {
-            "test_name": "iron",
-            "value": 200.0,
+            "test_name": "alkaline_phosphatase",
+            "value": 107.1,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 63.1,
+            "unit": "%"
+          },
+          {
+            "test_name": "glucose",
+            "value": 96.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 231.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 53.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 265.0,
             "unit": "mcg/dL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 35.4,
-            "unit": "U/L"
+            "test_name": "ferritin",
+            "value": 455.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "iron",
+            "value": 200.0,
+            "unit": "mcg/dL"
           }
         ]
       }

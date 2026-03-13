@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "id": "adv_dyn_hemolytic_anemia_vs_myelodysplastic_syndrome",
+    "category": "hematologic",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "adversarial",
+    "disease_pattern_name": "hemolytic_anemia",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "fatigue",
+    "symptoms": [
+      "fatigue",
+      "dark urine (intravascular hemolysis)",
+      "tachycardia",
+      "gallstones (chronic)"
+    ],
+    "signs": [
+      "jaundice",
+      "pallor",
+      "splenomegaly"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 96.1,
+            "unit": "fL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.6,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.7,
+            "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 294.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 1.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemolytic_anemia",
+    "acceptable_alternatives": [
+      "myelodysplastic_syndrome"
+    ],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hemolytic_anemia"
+    ],
+    "cant_miss_diseases": []
+  }
+}

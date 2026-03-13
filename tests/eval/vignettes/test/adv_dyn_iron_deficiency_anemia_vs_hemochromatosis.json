@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "transferrin_saturation",
-            "value": 37.6,
-            "unit": "%"
-          },
-          {
             "test_name": "ferritin",
             "value": 207.3,
             "unit": "ng/mL"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 37.6,
+            "unit": "%"
           },
           {
             "test_name": "total_iron_binding_capacity",
@@ -52,8 +52,23 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 82.0,
+            "unit": "fL"
+          },
+          {
             "test_name": "reticulocyte_count",
             "value": 0.9,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 14.2,
             "unit": "%"
           },
           {
@@ -62,24 +77,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 82.0,
-            "unit": "fL"
-          },
-          {
-            "test_name": "red_cell_distribution_width",
-            "value": 14.2,
-            "unit": "%"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "glucose",
-            "value": 85.0,
-            "unit": "mg/dL"
+            "test_name": "alanine_aminotransferase",
+            "value": 31.5,
+            "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -87,9 +87,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 31.5,
-            "unit": "U/L"
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
           }
         ]
       }

@@ -35,11 +35,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "total_cholesterol",
-            "value": 100.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "thyroid_stimulating_hormone",
             "value": 2.7,
             "unit": "mIU/L"
@@ -50,9 +45,9 @@
             "unit": "ng/dL"
           },
           {
-            "test_name": "free_triiodothyronine",
-            "value": 4.4,
-            "unit": "pg/mL"
+            "test_name": "total_cholesterol",
+            "value": 100.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -65,14 +60,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "ldl_cholesterol",
-            "value": 50.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 139.5,
-            "unit": "mEq/L"
+            "test_name": "free_triiodothyronine",
+            "value": 4.4,
+            "unit": "pg/mL"
           },
           {
             "test_name": "creatine_kinase",
@@ -83,6 +73,16 @@
             "test_name": "hemoglobin",
             "value": 14.5,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 139.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "ldl_cholesterol",
+            "value": 50.0,
+            "unit": "mg/dL"
           }
         ]
       }
