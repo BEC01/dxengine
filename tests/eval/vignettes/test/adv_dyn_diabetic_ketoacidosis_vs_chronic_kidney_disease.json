@@ -34,6 +34,11 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "creatinine",
+            "value": 1.3,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
@@ -49,8 +54,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatinine",
-            "value": 1.3,
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 115.0,
             "unit": "mg/dL"
           },
           {
@@ -59,19 +69,19 @@
             "unit": "%"
           },
           {
-            "test_name": "glucose",
-            "value": 115.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "white_blood_cells",
             "value": 10.3,
             "unit": "x10^9/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
           },
           {
             "test_name": "uric_acid",
@@ -84,18 +94,8 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 15.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.5,
             "unit": "g/dL"
           },
           {

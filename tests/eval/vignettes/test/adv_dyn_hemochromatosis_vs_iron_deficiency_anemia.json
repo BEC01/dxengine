@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "total_iron_binding_capacity",
+            "value": 320.5,
+            "unit": "mcg/dL"
+          },
+          {
             "test_name": "transferrin_saturation",
             "value": 35.6,
             "unit": "%"
@@ -46,9 +51,9 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "total_iron_binding_capacity",
-            "value": 320.5,
-            "unit": "mcg/dL"
+            "test_name": "alanine_aminotransferase",
+            "value": 41.2,
+            "unit": "U/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -61,11 +66,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 41.2,
-            "unit": "U/L"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 90.0,
             "unit": "fL"
@@ -76,14 +76,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "red_cell_distribution_width",
             "value": 13.0,
             "unit": "%"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
           },
           {
             "test_name": "reticulocyte_count",

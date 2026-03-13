@@ -1358,5 +1358,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 2000"
+  },
+  "methanol_ethylene_glycol_poisoning": {
+    "description": "Toxic alcohol poisoning causing severe high anion gap metabolic acidosis with elevated osmolal gap. Ethylene glycol causes calcium oxalate crystalluria and hypocalcemia.",
+    "pattern": {
+      "bicarbonate": {
+        "direction": "decreased",
+        "typical_z_score": -6.0,
+        "weight": 0.9
+      },
+      "osmolality_serum": {
+        "direction": "increased",
+        "typical_z_score": 6.0,
+        "weight": 0.85
+      },
+      "calcium": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.7
+      },
+      "lactate": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.4
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 100000"
   }
 }

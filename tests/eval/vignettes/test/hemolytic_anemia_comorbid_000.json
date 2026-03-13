@@ -37,9 +37,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
+            "test_name": "lactate_dehydrogenase",
+            "value": 306.2,
+            "unit": "U/L"
           },
           {
             "test_name": "mean_corpuscular_volume",
@@ -47,14 +47,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 46.8,
+            "test_name": "aspartate_aminotransferase",
+            "value": 32.5,
             "unit": "U/L"
-          },
-          {
-            "test_name": "haptoglobin",
-            "value": 0.0,
-            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_total",
@@ -62,18 +57,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.0,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "alkaline_phosphatase",
             "value": 105.2,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 306.2,
             "unit": "U/L"
           },
           {
@@ -82,14 +67,29 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 32.5,
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.0,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 46.8,
             "unit": "U/L"
           },
           {
             "test_name": "reticulocyte_count",
             "value": 3.0,
             "unit": "%"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
           }
         ]
       }

@@ -1182,6 +1182,10 @@
       "shock": {
         "lr_positive": 8.0,
         "lr_negative": 0.15
+      },
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
       }
     }
   },
@@ -2631,6 +2635,10 @@
       "sepsis": {
         "lr_positive": 2.5,
         "lr_negative": 0.55
+      },
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3065,6 +3073,10 @@
       "acute_pancreatitis": {
         "lr_positive": 3.0,
         "lr_negative": 0.7
+      },
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.6
       }
     }
   },

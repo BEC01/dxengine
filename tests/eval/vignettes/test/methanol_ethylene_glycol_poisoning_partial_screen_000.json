@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "id": "methanol_ethylene_glycol_poisoning_partial_screen_000",
+    "category": "metabolic_toxic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "methanol_ethylene_glycol_poisoning",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "Methanol: visual disturbances (blurred vision, blindness), headache, nausea/vomiting, abdominal pain, CNS depression",
+    "symptoms": [
+      "Methanol: visual disturbances (blurred vision, blindness), headache, nausea/vomiting, abdominal pain, CNS depression",
+      "Both: inebriation early, then severe metabolic acidosis"
+    ],
+    "signs": [
+      "Ethylene glycol: stages \u2014 CNS (inebriation, 0-12h) \u2192 cardiopulmonary (tachycardia, pulmonary edema, 12-24h) \u2192 renal (flank pain, oliguria, AKI, 24-72h)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "bicarbonate",
+            "value": 15.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "methanol_ethylene_glycol_poisoning",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "methanol_ethylene_glycol_poisoning"
+    ],
+    "cant_miss_diseases": []
+  }
+}

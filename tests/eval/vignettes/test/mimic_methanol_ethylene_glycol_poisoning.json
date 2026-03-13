@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_methanol_ethylene_glycol_poisoning",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "osmolality_serum",
+            "value": 285.0,
+            "unit": "mOsm/kg"
+          },
+          {
+            "test_name": "calcium",
+            "value": 8.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate",
+            "value": 2.4,
+            "unit": "mmol/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}
