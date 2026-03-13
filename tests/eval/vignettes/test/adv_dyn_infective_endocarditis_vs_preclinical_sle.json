@@ -32,14 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 14.1,
+            "unit": "mm/hr"
+          },
+          {
             "test_name": "complement_c3",
             "value": 107.4,
             "unit": "mg/dL"
           },
           {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 14.1,
-            "unit": "mm/hr"
+            "test_name": "hemoglobin",
+            "value": 14.4,
+            "unit": "g/dL"
           },
           {
             "test_name": "c_reactive_protein",
@@ -52,19 +57,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.4,
+            "test_name": "albumin",
+            "value": 3.7,
             "unit": "g/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "procalcitonin",
-            "value": 0.1,
-            "unit": "ng/mL"
           },
           {
             "test_name": "white_blood_cells",
@@ -72,9 +67,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "albumin",
-            "value": 3.7,
-            "unit": "g/dL"
+            "test_name": "procalcitonin",
+            "value": 0.1,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.2,
+            "unit": "mg/dL"
           },
           {
             "test_name": "ferritin",
@@ -82,14 +82,14 @@
             "unit": "ng/mL"
           },
           {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "antinuclear_antibody_titer",
             "value": 0.5,
             "unit": "titer"
-          },
-          {
-            "test_name": "anti_dsdna_antibody",
-            "value": 12.5,
-            "unit": "IU/mL"
           },
           {
             "test_name": "lymphocytes_absolute",
@@ -97,9 +97,9 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
+            "test_name": "anti_dsdna_antibody",
+            "value": 12.5,
+            "unit": "IU/mL"
           }
         ]
       }

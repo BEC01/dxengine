@@ -1155,6 +1155,10 @@
       "myocarditis": {
         "lr_positive": 2.5,
         "lr_negative": 0.5
+      },
+      "gout": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
       }
     }
   },
@@ -2784,6 +2788,10 @@
       "sepsis": {
         "lr_positive": 2.5,
         "lr_negative": 0.6
+      },
+      "gout": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -3055,6 +3063,10 @@
       "myocarditis": {
         "lr_positive": 2.0,
         "lr_negative": 0.6
+      },
+      "gout": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
       }
     }
   },

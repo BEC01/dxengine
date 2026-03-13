@@ -31,11 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "homocysteine",
-            "value": 15.7,
-            "unit": "mcmol/L"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 12.5,
             "unit": "g/dL"
@@ -46,9 +41,9 @@
             "unit": "fL"
           },
           {
-            "test_name": "methylmalonic_acid",
-            "value": 290.8,
-            "unit": "nmol/L"
+            "test_name": "homocysteine",
+            "value": 15.7,
+            "unit": "mcmol/L"
           },
           {
             "test_name": "vitamin_b12",
@@ -59,6 +54,11 @@
             "test_name": "lactate_dehydrogenase",
             "value": 266.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "methylmalonic_acid",
+            "value": 290.8,
+            "unit": "nmol/L"
           },
           {
             "test_name": "reticulocyte_count",

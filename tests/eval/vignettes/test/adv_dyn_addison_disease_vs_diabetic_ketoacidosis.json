@@ -29,16 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 92.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 17.5,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "sodium",
             "value": 137.3,
             "unit": "mEq/L"
@@ -47,6 +37,16 @@
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 17.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 92.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "potassium",
@@ -79,9 +79,9 @@
             "unit": "%"
           },
           {
-            "test_name": "phosphorus",
-            "value": 3.5,
-            "unit": "mg/dL"
+            "test_name": "white_blood_cells",
+            "value": 7.8,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "creatinine",
@@ -89,9 +89,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
-            "unit": "x10^9/L"
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
           }
         ]
       }

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "gout_demog_000",
+    "category": "rheumatologic",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "gout",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "male",
+    "chief_complaint": "acute onset monoarthritis (first MTP most classic = podagra)",
+    "symptoms": [
+      "acute onset monoarthritis (first MTP most classic = podagra)",
+      "excruciating pain, swelling, erythema",
+      "nocturnal onset",
+      "peak intensity at 12-24 hours",
+      "self-limited (resolves in 7-14 days untreated)"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "uric_acid",
+            "value": 8.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "c_reactive_protein",
+            "value": 4.5,
+            "unit": "mg/L"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 18.8,
+            "unit": "mm/hr"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "gout",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "gout"
+    ],
+    "cant_miss_diseases": []
+  }
+}
