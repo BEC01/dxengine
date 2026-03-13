@@ -34,6 +34,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "uric_acid",
+            "value": 7.1,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 295.8,
             "unit": "U/L"
@@ -54,9 +59,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 7.1,
-            "unit": "mg/dL"
+            "test_name": "creatine_kinase",
+            "value": 496.3,
+            "unit": "U/L"
           },
           {
             "test_name": "myoglobin",
@@ -64,18 +69,13 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 51.1,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "creatine_kinase",
-            "value": 496.3,
-            "unit": "U/L"
-          },
-          {
             "test_name": "aspartate_aminotransferase",
             "value": 43.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 51.1,
             "unit": "U/L"
           },
           {

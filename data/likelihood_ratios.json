@@ -1809,7 +1809,7 @@
     "diseases": {
       "acromegaly": {
         "lr_positive": 40.0,
-        "lr_negative": 0.03
+        "lr_negative": 0.05
       }
     }
   },
@@ -2741,6 +2741,10 @@
       "pheochromocytoma": {
         "lr_positive": 1.5,
         "lr_negative": 0.8
+      },
+      "acromegaly": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.8
       }
     }
   },
@@ -3013,6 +3017,10 @@
       "hypoparathyroidism": {
         "lr_positive": 5.0,
         "lr_negative": 0.3
+      },
+      "acromegaly": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.7
       }
     }
   },

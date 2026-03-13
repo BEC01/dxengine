@@ -36,8 +36,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.9,
+            "test_name": "uric_acid",
+            "value": 6.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.0,
             "unit": "g/dL"
           },
           {
@@ -51,18 +56,8 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "albumin",
-            "value": 4.0,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 8.8,
+            "test_name": "hemoglobin",
+            "value": 13.9,
             "unit": "g/dL"
           },
           {
@@ -71,9 +66,24 @@
             "unit": "mm/hr"
           },
           {
+            "test_name": "total_protein",
+            "value": 8.8,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "parathyroid_hormone",
             "value": 40.0,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 13.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "potassium",
@@ -83,16 +93,6 @@
           {
             "test_name": "phosphorus",
             "value": 3.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 13.5,
             "unit": "mg/dL"
           }
         ]

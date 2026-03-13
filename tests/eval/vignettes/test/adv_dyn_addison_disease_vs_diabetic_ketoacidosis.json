@@ -29,16 +29,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 92.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 22.1,
             "unit": "mEq/L"
@@ -49,8 +39,23 @@
             "unit": "mEq/L"
           },
           {
+            "test_name": "glucose",
+            "value": 92.9,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "blood_urea_nitrogen",
             "value": 17.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.9,
             "unit": "mg/dL"
           },
           {
@@ -64,14 +69,14 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.9,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "adrenocorticotropic_hormone",
             "value": 80.1,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.5,
+            "unit": "mg/dL"
           },
           {
             "test_name": "creatinine",
@@ -87,11 +92,6 @@
             "test_name": "hemoglobin_a1c",
             "value": 4.8,
             "unit": "%"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.5,
-            "unit": "mg/dL"
           }
         ]
       }

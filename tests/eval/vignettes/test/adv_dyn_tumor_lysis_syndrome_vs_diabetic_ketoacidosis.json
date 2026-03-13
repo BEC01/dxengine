@@ -34,14 +34,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 18.1,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
           },
           {
             "test_name": "phosphorus",
@@ -64,9 +64,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "glucose",
-            "value": 85.0,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 25.5,
+            "unit": "mEq/L"
           },
           {
             "test_name": "white_blood_cells",
@@ -74,19 +74,19 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin_a1c",
-            "value": 4.8,
-            "unit": "%"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 25.5,
-            "unit": "mEq/L"
+            "test_name": "glucose",
+            "value": 85.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "sodium",
             "value": 140.5,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "hemoglobin_a1c",
+            "value": 4.8,
+            "unit": "%"
           }
         ]
       }

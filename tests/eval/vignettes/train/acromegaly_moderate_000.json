@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "acromegaly_moderate_000",
+    "category": "endocrine",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "acromegaly",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "coarsened facial features (frontal bossing, prognathism)",
+    "symptoms": [
+      "coarsened facial features (frontal bossing, prognathism)",
+      "enlarged hands and feet (ring/shoe size increase)",
+      "macroglossia",
+      "deepening voice",
+      "hyperhidrosis"
+    ],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "insulin_like_growth_factor_1",
+            "value": 420.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 93.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 4.0,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "acromegaly",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "acromegaly"
+    ],
+    "cant_miss_diseases": []
+  }
+}

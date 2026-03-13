@@ -34,6 +34,11 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "uric_acid",
+            "value": 6.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 283.5,
             "unit": "U/L"
@@ -51,11 +56,6 @@
           {
             "test_name": "phosphorus",
             "value": 4.3,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.8,
             "unit": "mg/dL"
           }
         ]

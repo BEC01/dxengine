@@ -31,18 +31,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.7,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "glucose",
             "value": 105.6,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.3,
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.1,
             "unit": "mg/dL"
           },
           {
@@ -51,23 +56,8 @@
             "unit": "%"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.7,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "sodium",
-            "value": 139.7,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "blood_urea_nitrogen",
-            "value": 15.1,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
+            "test_name": "calcium",
+            "value": 9.0,
             "unit": "mg/dL"
           },
           {
@@ -81,9 +71,19 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "sodium",
+            "value": 139.7,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "potassium",
             "value": 3.9,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "phosphorus",
+            "value": 3.3,
+            "unit": "mg/dL"
           },
           {
             "test_name": "lymphocytes_absolute",

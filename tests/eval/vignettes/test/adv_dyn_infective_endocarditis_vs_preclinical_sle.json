@@ -47,13 +47,13 @@
             "unit": "mg/L"
           },
           {
-            "test_name": "complement_c4",
-            "value": 17.1,
+            "test_name": "complement_c3",
+            "value": 107.4,
             "unit": "mg/dL"
           },
           {
-            "test_name": "complement_c3",
-            "value": 107.4,
+            "test_name": "complement_c4",
+            "value": 17.1,
             "unit": "mg/dL"
           },
           {
@@ -62,19 +62,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 10.3,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "albumin",
             "value": 3.7,
             "unit": "g/dL"
           },
           {
-            "test_name": "ferritin",
-            "value": 336.0,
-            "unit": "ng/mL"
+            "test_name": "white_blood_cells",
+            "value": 10.3,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "procalcitonin",
@@ -82,14 +77,9 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "antinuclear_antibody_titer",
-            "value": 0.5,
-            "unit": "titer"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.9,
-            "unit": "x10^9/L"
+            "test_name": "ferritin",
+            "value": 336.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "platelets",
@@ -100,6 +90,16 @@
             "test_name": "anti_dsdna_antibody",
             "value": 12.5,
             "unit": "IU/mL"
+          },
+          {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 0.5,
+            "unit": "titer"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.9,
+            "unit": "x10^9/L"
           }
         ]
       }

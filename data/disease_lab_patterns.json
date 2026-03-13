@@ -1749,5 +1749,29 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 100"
+  },
+  "acromegaly": {
+    "description": "Excess growth hormone from pituitary adenoma causing elevated IGF-1, soft tissue and bone overgrowth, and metabolic derangements including insulin resistance.",
+    "pattern": {
+      "insulin_like_growth_factor_1": {
+        "direction": "increased",
+        "typical_z_score": 5.0,
+        "weight": 0.95,
+        "typical_value": 600.0
+      },
+      "glucose": {
+        "direction": "increased",
+        "typical_z_score": 2.0,
+        "weight": 0.2
+      },
+      "phosphorus": {
+        "direction": "increased",
+        "typical_z_score": 2.0,
+        "weight": 0.35
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 15000"
   }
 }

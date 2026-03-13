@@ -50,6 +50,11 @@
             "unit": "mIU/L"
           },
           {
+            "test_name": "calcium",
+            "value": 9.7,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "free_triiodothyronine",
             "value": 4.4,
             "unit": "pg/mL"
@@ -60,9 +65,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "calcium",
-            "value": 9.7,
-            "unit": "mg/dL"
+            "test_name": "creatine_kinase",
+            "value": 167.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "ldl_cholesterol",
@@ -70,19 +80,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "creatine_kinase",
-            "value": 167.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "sodium",
             "value": 139.5,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.5,
-            "unit": "g/dL"
           }
         ]
       }

@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "mean_corpuscular_volume",
             "value": 101.4,
             "unit": "fL"
@@ -39,16 +44,6 @@
             "test_name": "homocysteine",
             "value": 15.7,
             "unit": "mcmol/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 266.0,
-            "unit": "U/L"
           },
           {
             "test_name": "vitamin_b12",
@@ -64,6 +59,11 @@
             "test_name": "reticulocyte_count",
             "value": 0.9,
             "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 266.0,
+            "unit": "U/L"
           },
           {
             "test_name": "folate",
