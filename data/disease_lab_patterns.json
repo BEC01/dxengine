@@ -1488,5 +1488,33 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 10000"
+  },
+  "nephritic_syndrome": {
+    "description": "Glomerular inflammation causing hematuria with RBC casts, proteinuria, and renal impairment. Often with complement consumption in immune-complex mediated forms.",
+    "pattern": {
+      "creatinine": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.8
+      },
+      "glomerular_filtration_rate": {
+        "direction": "decreased",
+        "typical_z_score": -4.0,
+        "weight": 0.8
+      },
+      "complement_c3": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.7
+      },
+      "albumin": {
+        "direction": "decreased",
+        "typical_z_score": -2.0,
+        "weight": 0.4
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 10000"
   }
 }

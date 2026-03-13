@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "total_iron_binding_capacity",
+            "value": 332.5,
+            "unit": "mcg/dL"
+          },
+          {
             "test_name": "homocysteine",
             "value": 16.2,
             "unit": "mcmol/L"
@@ -41,18 +46,23 @@
             "unit": "%"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 280.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "vitamin_b12",
             "value": 112.5,
             "unit": "pg/mL"
           },
           {
-            "test_name": "red_cell_distribution_width",
-            "value": 13.4,
+            "test_name": "mean_corpuscular_volume",
+            "value": 95.8,
+            "unit": "fL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 280.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "transferrin_saturation",
+            "value": 29.4,
             "unit": "%"
           },
           {
@@ -66,26 +76,6 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "iron",
-            "value": 89.1,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 332.5,
-            "unit": "mcg/dL"
-          },
-          {
-            "test_name": "mean_corpuscular_volume",
-            "value": 95.8,
-            "unit": "fL"
-          },
-          {
-            "test_name": "transferrin_saturation",
-            "value": 29.4,
-            "unit": "%"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 12.4,
             "unit": "g/dL"
@@ -94,6 +84,16 @@
             "test_name": "methylmalonic_acid",
             "value": 320.5,
             "unit": "nmol/L"
+          },
+          {
+            "test_name": "iron",
+            "value": 89.1,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.4,
+            "unit": "%"
           }
         ]
       }

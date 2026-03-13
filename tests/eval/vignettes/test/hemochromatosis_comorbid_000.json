@@ -36,9 +36,29 @@
             "unit": "mcg/dL"
           },
           {
+            "test_name": "transferrin_saturation",
+            "value": 63.1,
+            "unit": "%"
+          },
+          {
             "test_name": "international_normalized_ratio",
             "value": 1.0,
             "unit": "ratio"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 35.4,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 455.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "glucose",
@@ -46,13 +66,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 107.1,
+            "test_name": "alanine_aminotransferase",
+            "value": 53.5,
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 35.4,
+            "test_name": "alkaline_phosphatase",
+            "value": 107.1,
             "unit": "U/L"
           },
           {
@@ -61,29 +81,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "transferrin_saturation",
-            "value": 63.1,
-            "unit": "%"
-          },
-          {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 53.5,
-            "unit": "U/L"
-          },
-          {
             "test_name": "bilirubin_total",
             "value": 0.9,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "ferritin",
-            "value": 455.0,
-            "unit": "ng/mL"
           },
           {
             "test_name": "iron",

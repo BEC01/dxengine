@@ -32,23 +32,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "osmolality_serum",
-            "value": 286.8,
-            "unit": "mOsm/kg"
-          },
-          {
             "test_name": "sodium",
             "value": 135.8,
             "unit": "mEq/L"
           },
           {
-            "test_name": "uric_acid",
-            "value": 3.4,
-            "unit": "mg/dL"
+            "test_name": "osmolality_serum",
+            "value": 286.8,
+            "unit": "mOsm/kg"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 7.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 3.4,
             "unit": "mg/dL"
           },
           {

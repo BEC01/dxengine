@@ -31,16 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.7,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "parathyroid_hormone",
             "value": 66.2,
             "unit": "pg/mL"
@@ -48,6 +38,16 @@
           {
             "test_name": "phosphorus",
             "value": 3.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.7,
             "unit": "mg/dL"
           },
           {
@@ -66,9 +66,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
+            "test_name": "glomerular_filtration_rate",
+            "value": 48.0,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "hemoglobin",
@@ -76,14 +76,19 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "blood_urea_nitrogen",
             "value": 24.5,
             "unit": "mg/dL"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 48.0,
-            "unit": "mL/min/1.73m2"
+            "test_name": "alkaline_phosphatase",
+            "value": 105.0,
+            "unit": "U/L"
           },
           {
             "test_name": "vitamin_d_25_hydroxy",
@@ -94,11 +99,6 @@
             "test_name": "chloride",
             "value": 102.0,
             "unit": "mEq/L"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 105.0,
-            "unit": "U/L"
           }
         ]
       }

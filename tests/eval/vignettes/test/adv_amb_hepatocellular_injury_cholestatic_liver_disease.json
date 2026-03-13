@@ -32,8 +32,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
+            "test_name": "alanine_aminotransferase",
+            "value": 55.4,
             "unit": "U/L"
           },
           {
@@ -42,8 +42,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alanine_aminotransferase",
-            "value": 55.4,
+            "test_name": "aspartate_aminotransferase",
+            "value": 37.4,
             "unit": "U/L"
           },
           {

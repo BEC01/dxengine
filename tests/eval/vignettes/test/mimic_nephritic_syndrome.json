@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "mimic_nephritic_syndrome",
+    "category": "negative",
+    "difficulty": "adversarial",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "",
+    "symptoms": [],
+    "signs": [],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 1.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 94.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.9,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
+    "expected_findings": [],
+    "expected_patterns": [],
+    "cant_miss_diseases": []
+  }
+}

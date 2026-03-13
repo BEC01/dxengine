@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "id": "nephritic_syndrome_classic_000",
+    "category": "renal",
+    "difficulty": "classic",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "nephritic_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "hematuria (cola/tea-colored urine)",
+    "symptoms": [
+      "hematuria (cola/tea-colored urine)",
+      "proteinuria (subnephrotic usually)",
+      "hypertension",
+      "oliguria"
+    ],
+    "signs": [
+      "edema",
+      "RBC casts on urinalysis (pathognomonic)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 1.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glomerular_filtration_rate",
+            "value": 75.0,
+            "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "complement_c3",
+            "value": 67.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.5,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "nephritic_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "nephritic_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}
