@@ -107,6 +107,7 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
         "lr_entries_added": 0,
         "lr_entries_updated": 0,
         "finding_rules_added": 0,
+        "clinical_rules_added": 0,
         "illness_script_updated": False,
         "files_modified": [],
     }
@@ -125,11 +126,14 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
         }
         for finding in pattern_data.get("lab_findings", []):
             analyte = finding["analyte"]
-            pattern_entry["pattern"][analyte] = {
+            entry_data = {
                 "direction": finding["direction"],
                 "typical_z_score": finding["typical_z_score"],
                 "weight": finding["weight"],
             }
+            if "typical_value" in finding:
+                entry_data["typical_value"] = finding["typical_value"]
+            pattern_entry["pattern"][analyte] = entry_data
         patterns[disease_key] = pattern_entry
         changes["pattern_added"] = True
         changes["files_modified"].append("disease_lab_patterns.json")
@@ -244,6 +248,7 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
         print(f"  LR entries added: {changes['lr_entries_added']}")
         print(f"  LR entries updated: {changes['lr_entries_updated']}")
         print(f"  Finding rules added: {changes['finding_rules_added']}")
+        print(f"  Clinical rules added: {changes['clinical_rules_added']}")
         print(f"  Illness script updated: {changes['illness_script_updated']}")
         return changes
 
@@ -297,7 +302,7 @@ def main():
     print(f"  LR entries added: {changes['lr_entries_added']}")
     print(f"  LR entries updated: {changes['lr_entries_updated']}")
     print(f"  Finding rules added: {changes['finding_rules_added']}")
-    print(f"  Clinical rules added: {changes.get('clinical_rules_added', 0)}")
+    print(f"  Clinical rules added: {changes['clinical_rules_added']}")
     print(f"  Illness script updated: {changes['illness_script_updated']}")
 
     if not args.dry_run and changes["files_modified"]:
