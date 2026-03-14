@@ -3684,6 +3684,27 @@
       }
     }
   },
+  "c_reactive_protein_elevated": {
+    "description": "CRP above upper limit of normal — nonspecific marker of inflammation, infection, or tissue injury",
+    "diseases": {
+      "myocarditis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "sepsis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.4
+      },
+      "infective_endocarditis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      }
+    }
+  },
   "basophilia": {
     "description": "Basophil count above ULN — highly distinctive for CML (AUC 0.889)",
     "diseases": {
