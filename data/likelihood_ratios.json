@@ -2200,6 +2200,10 @@
       "cirrhosis": {
         "lr_positive": 5.0,
         "lr_negative": 0.5
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2222,6 +2226,10 @@
       "hyperthyroidism": {
         "lr_positive": 2.0,
         "lr_negative": 0.8
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
       }
     }
   },
@@ -3046,7 +3054,7 @@
     }
   },
   "alanine_aminotransferase_elevated": {
-    "description": "ALT above upper limit of normal (fallback finding)",
+    "description": "ALT above upper limit of normal",
     "diseases": {
       "hepatocellular_injury": {
         "lr_positive": 7.0,
@@ -3063,6 +3071,10 @@
       "rhabdomyolysis": {
         "lr_positive": 2.0,
         "lr_negative": 0.6
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.4
       }
     }
   },
