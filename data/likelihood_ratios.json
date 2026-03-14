@@ -1223,6 +1223,14 @@
       "gout": {
         "lr_positive": 2.0,
         "lr_negative": 0.6
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      },
+      "infective_endocarditis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.35
       }
     }
   },
@@ -3760,6 +3768,50 @@
       "hepatorenal_syndrome": {
         "lr_positive": 12.0,
         "lr_negative": 0.1
+      }
+    }
+  },
+  "iron_low": {
+    "description": "Serum iron below lower limit of normal — hallmark of iron deficiency",
+    "diseases": {
+      "iron_deficiency_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.15
+      }
+    }
+  },
+  "total_iron_binding_capacity_elevated": {
+    "description": "TIBC above upper limit of normal — compensatory increase in iron deficiency",
+    "diseases": {
+      "iron_deficiency_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.2
+      }
+    }
+  },
+  "lactate_elevated": {
+    "description": "Serum lactate above upper limit of normal — tissue hypoperfusion or metabolic derangement",
+    "diseases": {
+      "sepsis": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.3
+      },
+      "methanol_ethylene_glycol_poisoning": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      }
+    }
+  },
+  "lactate_dehydrogenase_elevated": {
+    "description": "LDH above upper limit of normal — tissue damage, hemolysis, or ineffective erythropoiesis",
+    "diseases": {
+      "vitamin_b12_deficiency": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      },
+      "hepatocellular_injury": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
       }
     }
   }
