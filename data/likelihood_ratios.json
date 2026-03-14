@@ -464,11 +464,15 @@
     }
   },
   "hyperpigmentation": {
-    "description": "Darkening of skin, especially in palmar creases, buccal mucosa, and scars",
+    "description": "Darkening of skin — adrenal insufficiency or iron overload (bronze diabetes)",
     "diseases": {
       "addison_disease": {
         "lr_positive": 8.0,
         "lr_negative": 0.45
+      },
+      "hemochromatosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2190,7 +2194,7 @@
     }
   },
   "asterixis": {
-    "description": "Flapping tremor of outstretched hands, negative myoclonus",
+    "description": "Flapping tremor of outstretched hands — hepatic or metabolic encephalopathy",
     "diseases": {
       "hepatic_encephalopathy": {
         "lr_positive": 15.0,
@@ -2199,6 +2203,18 @@
       "uremic_encephalopathy": {
         "lr_positive": 8.0,
         "lr_negative": 0.55
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.5
+      },
+      "cirrhosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.5
+      },
+      "hepatorenal_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
       }
     }
   },
@@ -3091,6 +3107,14 @@
       "alcoholic_hepatitis": {
         "lr_positive": 2.0,
         "lr_negative": 0.4
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "wilson_disease": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
       }
     }
   },
