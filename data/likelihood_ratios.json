@@ -3738,6 +3738,14 @@
       "acute_pancreatitis": {
         "lr_positive": 2.0,
         "lr_negative": 0.5
+      },
+      "gout": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "rheumatoid_arthritis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -3916,6 +3924,51 @@
       "methanol_ethylene_glycol_poisoning": {
         "lr_positive": 3.0,
         "lr_negative": 0.4
+      }
+    }
+  },
+  "transferrin_saturation_elevated": {
+    "description": "Transferrin saturation above 45% — iron overload",
+    "diseases": {
+      "hemochromatosis": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.15
+      }
+    }
+  },
+  "mean_corpuscular_volume_low": {
+    "description": "MCV below lower limit of normal (microcytosis)",
+    "diseases": {
+      "iron_deficiency_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
+      }
+    }
+  },
+  "red_cell_distribution_width_elevated": {
+    "description": "RDW above upper limit of normal (anisocytosis)",
+    "diseases": {
+      "iron_deficiency_anemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
+      }
+    }
+  },
+  "mean_platelet_volume_elevated": {
+    "description": "MPV above upper limit of normal — large platelets from marrow compensation",
+    "diseases": {
+      "immune_thrombocytopenic_purpura": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      }
+    }
+  },
+  "vitamin_b12_low": {
+    "description": "Serum B12 below lower limit of normal",
+    "diseases": {
+      "vitamin_b12_deficiency": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.1
       }
     }
   }
