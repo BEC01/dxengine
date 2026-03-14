@@ -3843,6 +3843,69 @@
       }
     }
   },
+  "hematocrit_elevated": {
+    "description": "Hematocrit above upper limit of normal — polycythemia",
+    "diseases": {
+      "polycythemia_vera": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.1
+      }
+    }
+  },
+  "red_blood_cells_elevated": {
+    "description": "RBC count above upper limit of normal — erythrocytosis",
+    "diseases": {
+      "polycythemia_vera": {
+        "lr_positive": 5.0,
+        "lr_negative": 0.1
+      }
+    }
+  },
+  "platelets_elevated": {
+    "description": "Platelet count above upper limit of normal (thrombocytosis)",
+    "diseases": {
+      "polycythemia_vera": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "total_protein_low": {
+    "description": "Total protein below lower limit of normal — protein loss or decreased synthesis",
+    "diseases": {
+      "nephrotic_syndrome": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
+    }
+  },
+  "plasma_free_normetanephrine_elevated": {
+    "description": "Plasma free normetanephrine above upper limit of normal — catecholamine excess",
+    "diseases": {
+      "pheochromocytoma": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.3
+      }
+    }
+  },
+  "chloride_low": {
+    "description": "Serum chloride below lower limit of normal — dilutional or SIADH-related",
+    "diseases": {
+      "siadh": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
+      }
+    }
+  },
+  "transferrin_saturation_low": {
+    "description": "Transferrin saturation below 16% — insufficient iron delivery to marrow",
+    "diseases": {
+      "iron_deficiency_anemia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      }
+    }
+  },
   "osmolality_serum_elevated": {
     "description": "Serum osmolality above upper limit of normal — dehydration, hyperglycemia, or toxic alcohol ingestion",
     "diseases": {
