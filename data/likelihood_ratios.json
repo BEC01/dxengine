@@ -2726,6 +2726,10 @@
       "heart_failure": {
         "lr_positive": 2.5,
         "lr_negative": 0.6
+      },
+      "nephritic_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.45
       }
     }
   },
@@ -2951,7 +2955,7 @@
     }
   },
   "glomerular_filtration_rate_low": {
-    "description": "GFR below lower limit of normal (fallback finding for mild impairment)",
+    "description": "GFR below lower limit of normal (impaired renal function)",
     "diseases": {
       "chronic_kidney_disease": {
         "lr_positive": 5.0,
@@ -2960,6 +2964,10 @@
       "multiple_myeloma": {
         "lr_positive": 2.0,
         "lr_negative": 0.65
+      },
+      "nephritic_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -3420,7 +3428,7 @@
     }
   },
   "albumin_low": {
-    "description": "Serum albumin below LLN reflecting hepatic synthetic failure in cirrhosis.",
+    "description": "Serum albumin below LLN — from hepatic failure, renal protein loss, or inflammation",
     "diseases": {
       "cirrhosis": {
         "lr_positive": 3.5,
@@ -3432,6 +3440,10 @@
       },
       "hepatorenal_syndrome": {
         "lr_positive": 1.5,
+        "lr_negative": 0.5
+      },
+      "nephritic_syndrome": {
+        "lr_positive": 3.0,
         "lr_negative": 0.5
       }
     }
