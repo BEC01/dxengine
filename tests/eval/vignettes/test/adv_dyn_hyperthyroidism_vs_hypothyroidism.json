@@ -55,14 +55,19 @@
             "unit": "pg/mL"
           },
           {
+            "test_name": "alkaline_phosphatase",
+            "value": 138.0,
+            "unit": "U/L"
+          },
+          {
             "test_name": "calcium",
             "value": 9.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
-            "unit": "U/L"
+            "test_name": "sodium",
+            "value": 139.5,
+            "unit": "mEq/L"
           },
           {
             "test_name": "creatine_kinase",
@@ -73,11 +78,6 @@
             "test_name": "ldl_cholesterol",
             "value": 50.0,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 139.5,
-            "unit": "mEq/L"
           },
           {
             "test_name": "hemoglobin",

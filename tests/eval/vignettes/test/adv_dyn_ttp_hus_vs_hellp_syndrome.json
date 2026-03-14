@@ -44,9 +44,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 0.7,
-            "unit": "mg/dL"
+            "test_name": "aspartate_aminotransferase",
+            "value": 20.5,
+            "unit": "U/L"
           },
           {
             "test_name": "bilirubin_direct",
@@ -54,9 +54,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 20.5,
-            "unit": "U/L"
+            "test_name": "bilirubin_total",
+            "value": 0.7,
+            "unit": "mg/dL"
           }
         ]
       }

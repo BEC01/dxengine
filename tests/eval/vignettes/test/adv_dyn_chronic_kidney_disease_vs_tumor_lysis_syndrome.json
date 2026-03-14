@@ -31,13 +31,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "potassium",
-            "value": 4.9,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.9,
+            "test_name": "phosphorus",
+            "value": 4.5,
             "unit": "mg/dL"
           },
           {
@@ -46,14 +41,19 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "phosphorus",
-            "value": 4.5,
+            "test_name": "uric_acid",
+            "value": 6.9,
             "unit": "mg/dL"
           },
           {
             "test_name": "blood_urea_nitrogen",
             "value": 22.1,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.9,
+            "unit": "mEq/L"
           },
           {
             "test_name": "creatinine",
@@ -71,14 +71,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 23.4,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "glomerular_filtration_rate",
             "value": 48.0,
             "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 23.4,
+            "unit": "mEq/L"
           },
           {
             "test_name": "hemoglobin",

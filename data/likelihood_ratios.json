@@ -150,6 +150,10 @@
       "liver_disease": {
         "lr_positive": 2.5,
         "lr_negative": 0.75
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -653,6 +657,10 @@
       "hepatocellular_injury": {
         "lr_positive": 2.0,
         "lr_negative": 0.5
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.3
       }
     }
   },
@@ -695,6 +703,10 @@
       "hellp_syndrome": {
         "lr_positive": 1.2,
         "lr_negative": 0.8
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.4
       }
     }
   },
@@ -2998,6 +3010,10 @@
       "hellp_syndrome": {
         "lr_positive": 3.0,
         "lr_negative": 0.2
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3572,6 +3588,19 @@
       "hellp_syndrome": {
         "lr_positive": 15.0,
         "lr_negative": 0.08
+      }
+    }
+  },
+  "heavy_alcohol_use": {
+    "description": "History of heavy/chronic alcohol use",
+    "diseases": {
+      "alcoholic_hepatitis": {
+        "lr_positive": 10.0,
+        "lr_negative": 0.05
+      },
+      "cirrhosis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
       }
     }
   }

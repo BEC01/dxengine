@@ -1949,5 +1949,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 1000 pregnancies"
+  },
+  "alcoholic_hepatitis": {
+    "description": "Alcoholic hepatitis: AST:ALT >2, GGT markedly elevated, macrocytosis",
+    "pattern": {
+      "aspartate_aminotransferase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.85,
+        "typical_value": 200
+      },
+      "alanine_aminotransferase": {
+        "direction": "increased",
+        "typical_z_score": 1.5,
+        "weight": 0.2,
+        "typical_value": 70
+      },
+      "gamma_glutamyl_transferase": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.8,
+        "typical_value": 400
+      },
+      "bilirubin_total": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.55,
+        "typical_value": 8.0
+      },
+      "mean_corpuscular_volume": {
+        "direction": "increased",
+        "typical_z_score": 2.0,
+        "weight": 0.5,
+        "typical_value": 105
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 300"
   }
 }

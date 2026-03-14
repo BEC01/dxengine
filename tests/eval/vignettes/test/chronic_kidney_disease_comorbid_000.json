@@ -36,8 +36,8 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.0,
+            "test_name": "uric_acid",
+            "value": 6.4,
             "unit": "mg/dL"
           },
           {
@@ -46,19 +46,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 26.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 1.5,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 26.2,
-            "unit": "mm/hr"
+            "test_name": "total_protein",
+            "value": 7.8,
+            "unit": "g/dL"
           },
           {
             "test_name": "parathyroid_hormone",
@@ -66,24 +56,9 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "potassium",
-            "value": 5.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 22.9,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 6.4,
+            "test_name": "calcium",
+            "value": 9.0,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 7.8,
-            "unit": "g/dL"
           },
           {
             "test_name": "glomerular_filtration_rate",
@@ -91,9 +66,34 @@
             "unit": "mL/min/1.73m2"
           },
           {
+            "test_name": "bicarbonate",
+            "value": 22.9,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 26.8,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "hemoglobin",
             "value": 11.8,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 5.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "erythrocyte_sedimentation_rate",
+            "value": 26.2,
+            "unit": "mm/hr"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.5,
+            "unit": "mg/dL"
           }
         ]
       }

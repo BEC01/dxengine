@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "alcoholic_hepatitis_demog_000",
+    "category": "hepatic",
+    "difficulty": "classic",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "alcoholic_hepatitis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 35,
+    "sex": "male",
+    "chief_complaint": "fever (38-40\u00b0C in ~50% \u2014 from cytokine-driven inflammation, not always infection)",
+    "symptoms": [
+      "fever (38-40\u00b0C in ~50% \u2014 from cytokine-driven inflammation, not always infection)",
+      "neutrophilic leukocytosis (WBC often 10,000-20,000/\u00b5L despite no infection)",
+      "right upper quadrant pain or fullness",
+      "hepatic encephalopathy in severe cases (most reliable indicator of severity)"
+    ],
+    "signs": [
+      "acute or subacute onset jaundice after heavy alcohol use",
+      "tender hepatomegaly (liver may be palpable 4-6 cm below costal margin)",
+      "anorexia, nausea, vomiting, and significant weight loss",
+      "stigmata of chronic liver disease: spider angiomata, palmar erythema, asterixis",
+      "ascites and peripheral edema in severe disease"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 200.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 70.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 400.0,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 8.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 105.0,
+            "unit": "fL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "alcoholic_hepatitis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "alcoholic_hepatitis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

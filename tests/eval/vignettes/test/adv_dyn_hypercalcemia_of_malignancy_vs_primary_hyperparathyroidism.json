@@ -29,18 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 140.6,
-            "unit": "U/L"
-          },
-          {
             "test_name": "phosphorus",
             "value": 2.8,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "calcium",
-            "value": 10.8,
             "unit": "mg/dL"
           },
           {
@@ -49,8 +39,18 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "chloride",
-            "value": 102.0,
+            "test_name": "alkaline_phosphatase",
+            "value": 140.6,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25.5,
             "unit": "mEq/L"
           },
           {
@@ -59,8 +59,8 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 25.5,
+            "test_name": "chloride",
+            "value": 102.0,
             "unit": "mEq/L"
           },
           {

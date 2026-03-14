@@ -32,28 +32,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "ldl_cholesterol",
+            "value": 87.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 5.8,
+            "unit": "mIU/L"
+          },
+          {
             "test_name": "albumin",
             "value": 4.4,
             "unit": "g/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "total_cholesterol",
-            "value": 175.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "free_thyroxine",
-            "value": 0.7,
-            "unit": "ng/dL"
-          },
-          {
-            "test_name": "ldl_cholesterol",
-            "value": 87.5,
+            "test_name": "uric_acid",
+            "value": 4.5,
             "unit": "mg/dL"
           },
           {
@@ -62,34 +57,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "blood_urea_nitrogen",
-            "value": 15.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "creatinine",
-            "value": 0.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "parathyroid_hormone",
-            "value": 49.4,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "potassium",
-            "value": 4.4,
+            "test_name": "sodium",
+            "value": 138.2,
             "unit": "mEq/L"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 4.5,
-            "unit": "mg/dL"
+            "test_name": "free_thyroxine",
+            "value": 0.7,
+            "unit": "ng/dL"
           },
           {
             "test_name": "creatine_kinase",
@@ -97,9 +72,34 @@
             "unit": "U/L"
           },
           {
+            "test_name": "parathyroid_hormone",
+            "value": 49.4,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 175.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "glomerular_filtration_rate",
             "value": 98.4,
             "unit": "mL/min/1.73m2"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 15.9,
+            "unit": "mg/dL"
           },
           {
             "test_name": "hemoglobin",
@@ -107,14 +107,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 5.8,
-            "unit": "mIU/L"
+            "test_name": "potassium",
+            "value": 4.4,
+            "unit": "mEq/L"
           },
           {
-            "test_name": "sodium",
-            "value": 138.2,
-            "unit": "mEq/L"
+            "test_name": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL"
           }
         ]
       }

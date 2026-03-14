@@ -31,14 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 280.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "ferritin",
-            "value": 109.8,
-            "unit": "ng/mL"
+            "test_name": "transferrin_saturation",
+            "value": 29.4,
+            "unit": "%"
           },
           {
             "test_name": "platelets",
@@ -46,19 +41,24 @@
             "unit": "x10^9/L"
           },
           {
+            "test_name": "red_cell_distribution_width",
+            "value": 13.4,
+            "unit": "%"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 109.8,
+            "unit": "ng/mL"
+          },
+          {
             "test_name": "vitamin_b12",
             "value": 112.5,
             "unit": "pg/mL"
           },
           {
-            "test_name": "homocysteine",
-            "value": 16.2,
-            "unit": "mcmol/L"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 0.8,
-            "unit": "%"
+            "test_name": "lactate_dehydrogenase",
+            "value": 280.0,
+            "unit": "U/L"
           },
           {
             "test_name": "mean_corpuscular_volume",
@@ -71,9 +71,14 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "transferrin_saturation",
-            "value": 29.4,
-            "unit": "%"
+            "test_name": "total_iron_binding_capacity",
+            "value": 332.5,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "homocysteine",
+            "value": 16.2,
+            "unit": "mcmol/L"
           },
           {
             "test_name": "hemoglobin",
@@ -86,14 +91,9 @@
             "unit": "nmol/L"
           },
           {
-            "test_name": "red_cell_distribution_width",
-            "value": 13.4,
+            "test_name": "reticulocyte_count",
+            "value": 0.8,
             "unit": "%"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 332.5,
-            "unit": "mcg/dL"
           }
         ]
       }

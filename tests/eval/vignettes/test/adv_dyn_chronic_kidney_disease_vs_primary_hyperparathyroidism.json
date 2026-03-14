@@ -36,19 +36,14 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "bicarbonate",
-            "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "uric_acid",
             "value": 5.7,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.4,
-            "unit": "mg/dL"
+            "test_name": "bicarbonate",
+            "value": 24.0,
+            "unit": "mEq/L"
           },
           {
             "test_name": "phosphorus",
@@ -56,9 +51,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.8,
-            "unit": "mEq/L"
+            "test_name": "calcium",
+            "value": 9.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "albumin",
@@ -71,24 +66,24 @@
             "unit": "mL/min/1.73m2"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.5,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "blood_urea_nitrogen",
             "value": 24.5,
             "unit": "mg/dL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
             "test_name": "creatinine",
             "value": 1.4,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "chloride",
-            "value": 102.0,
-            "unit": "mEq/L"
           },
           {
             "test_name": "vitamin_d_25_hydroxy",
@@ -99,6 +94,11 @@
             "test_name": "alkaline_phosphatase",
             "value": 105.0,
             "unit": "U/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 102.0,
+            "unit": "mEq/L"
           }
         ]
       }

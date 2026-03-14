@@ -29,9 +29,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 101.4,
-            "unit": "fL"
+            "test_name": "homocysteine",
+            "value": 15.7,
+            "unit": "mcmol/L"
           },
           {
             "test_name": "hemoglobin",
@@ -39,9 +39,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "homocysteine",
-            "value": 15.7,
-            "unit": "mcmol/L"
+            "test_name": "mean_corpuscular_volume",
+            "value": 101.4,
+            "unit": "fL"
           },
           {
             "test_name": "folate",
@@ -49,14 +49,14 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 210.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "vitamin_b12",
             "value": 550.0,
             "unit": "pg/mL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
           },
           {
             "test_name": "methylmalonic_acid",

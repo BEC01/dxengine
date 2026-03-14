@@ -2193,6 +2193,22 @@
       "finding_type": "sign",
       "importance": 5,
       "quality": "high"
+    },
+    {
+      "finding_key": "heavy_alcohol_use",
+      "match_terms": [
+        "alcohol use",
+        "alcohol abuse",
+        "heavy alcohol",
+        "heavy drinking",
+        "alcohol dependence",
+        "alcoholism",
+        "alcohol use disorder",
+        "etoh"
+      ],
+      "finding_type": "symptom",
+      "importance": 4,
+      "quality": "moderate"
     }
   ],
   "vitals_rules": []
