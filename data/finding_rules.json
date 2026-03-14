@@ -53,7 +53,15 @@
     "free_normetanephrine": "plasma_free_normetanephrine",
     "cortisol": "cortisol_am",
     "morning_cortisol": "cortisol_am",
-    "am_cortisol": "cortisol_am"
+    "am_cortisol": "cortisol_am",
+    "igg": "immunoglobulin_g",
+    "asma": "anti_smooth_muscle_antibody",
+    "anti_sma": "anti_smooth_muscle_antibody",
+    "urine_osm": "urine_osmolality",
+    "anti_ro": "anti_ssa_antibody",
+    "anti_la": "anti_ssb_antibody",
+    "ssa": "anti_ssa_antibody",
+    "ssb": "anti_ssb_antibody"
   },
   "single_rules": [
     {
@@ -897,6 +905,44 @@
       "test": "osmolality_serum",
       "operator": "above_uln",
       "importance": 4
+    },
+    {
+      "finding_key": "immunoglobulin_g_elevated",
+      "test": "immunoglobulin_g",
+      "operator": "above_uln",
+      "importance": 3
+    },
+    {
+      "finding_key": "anti_smooth_muscle_antibody_positive",
+      "test": "anti_smooth_muscle_antibody",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "urine_osmolality_low",
+      "test": "urine_osmolality",
+      "operator": "lt",
+      "threshold": 300,
+      "importance": 4
+    },
+    {
+      "finding_key": "urine_osmolality_very_low",
+      "test": "urine_osmolality",
+      "operator": "lt",
+      "threshold": 200,
+      "importance": 5
+    },
+    {
+      "finding_key": "anti_ssa_antibody_positive",
+      "test": "anti_ssa_antibody",
+      "operator": "above_uln",
+      "importance": 4
+    },
+    {
+      "finding_key": "anti_ssb_antibody_positive",
+      "test": "anti_ssb_antibody",
+      "operator": "above_uln",
+      "importance": 3
     }
   ],
   "composite_rules": [

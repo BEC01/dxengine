@@ -3,11 +3,26 @@
     "loinc": "6690-2",
     "unit": "x10^9/L",
     "ranges": {
-      "adult_male": { "low": 4.5, "high": 11.0 },
-      "adult_female": { "low": 4.5, "high": 11.0 },
-      "child": { "low": 5.0, "high": 13.0 },
-      "elderly": { "low": 3.5, "high": 10.5 },
-      "default": { "low": 4.5, "high": 11.0 }
+      "adult_male": {
+        "low": 4.5,
+        "high": 11.0
+      },
+      "adult_female": {
+        "low": 4.5,
+        "high": 11.0
+      },
+      "child": {
+        "low": 5.0,
+        "high": 13.0
+      },
+      "elderly": {
+        "low": 3.5,
+        "high": 10.5
+      },
+      "default": {
+        "low": 4.5,
+        "high": 11.0
+      }
     },
     "critical_low": 2.0,
     "critical_high": 30.0
@@ -16,11 +31,26 @@
     "loinc": "789-8",
     "unit": "x10^12/L",
     "ranges": {
-      "adult_male": { "low": 4.7, "high": 6.1 },
-      "adult_female": { "low": 4.2, "high": 5.4 },
-      "child": { "low": 4.0, "high": 5.5 },
-      "elderly": { "low": 4.2, "high": 5.8 },
-      "default": { "low": 4.2, "high": 6.1 }
+      "adult_male": {
+        "low": 4.7,
+        "high": 6.1
+      },
+      "adult_female": {
+        "low": 4.2,
+        "high": 5.4
+      },
+      "child": {
+        "low": 4.0,
+        "high": 5.5
+      },
+      "elderly": {
+        "low": 4.2,
+        "high": 5.8
+      },
+      "default": {
+        "low": 4.2,
+        "high": 6.1
+      }
     },
     "critical_low": 2.5,
     "critical_high": 8.0
@@ -29,11 +59,26 @@
     "loinc": "718-7",
     "unit": "g/dL",
     "ranges": {
-      "adult_male": { "low": 13.5, "high": 17.5 },
-      "adult_female": { "low": 12.0, "high": 16.0 },
-      "child": { "low": 11.5, "high": 15.5 },
-      "elderly": { "low": 12.0, "high": 17.0 },
-      "default": { "low": 12.0, "high": 17.5 }
+      "adult_male": {
+        "low": 13.5,
+        "high": 17.5
+      },
+      "adult_female": {
+        "low": 12.0,
+        "high": 16.0
+      },
+      "child": {
+        "low": 11.5,
+        "high": 15.5
+      },
+      "elderly": {
+        "low": 12.0,
+        "high": 17.0
+      },
+      "default": {
+        "low": 12.0,
+        "high": 17.5
+      }
     },
     "critical_low": 7.0,
     "critical_high": 20.0
@@ -42,11 +87,26 @@
     "loinc": "4544-3",
     "unit": "%",
     "ranges": {
-      "adult_male": { "low": 38.3, "high": 48.6 },
-      "adult_female": { "low": 35.5, "high": 44.9 },
-      "child": { "low": 35.0, "high": 45.0 },
-      "elderly": { "low": 35.0, "high": 47.0 },
-      "default": { "low": 35.5, "high": 48.6 }
+      "adult_male": {
+        "low": 38.3,
+        "high": 48.6
+      },
+      "adult_female": {
+        "low": 35.5,
+        "high": 44.9
+      },
+      "child": {
+        "low": 35.0,
+        "high": 45.0
+      },
+      "elderly": {
+        "low": 35.0,
+        "high": 47.0
+      },
+      "default": {
+        "low": 35.5,
+        "high": 48.6
+      }
     },
     "critical_low": 20.0,
     "critical_high": 60.0
@@ -55,43 +115,82 @@
     "loinc": "787-2",
     "unit": "fL",
     "ranges": {
-      "adult_male": { "low": 80.0, "high": 100.0 },
-      "adult_female": { "low": 80.0, "high": 100.0 },
-      "child": { "low": 70.0, "high": 86.0 },
-      "elderly": { "low": 80.0, "high": 100.0 },
-      "default": { "low": 80.0, "high": 100.0 }
+      "adult_male": {
+        "low": 80.0,
+        "high": 100.0
+      },
+      "adult_female": {
+        "low": 80.0,
+        "high": 100.0
+      },
+      "child": {
+        "low": 70.0,
+        "high": 86.0
+      },
+      "elderly": {
+        "low": 80.0,
+        "high": 100.0
+      },
+      "default": {
+        "low": 80.0,
+        "high": 100.0
+      }
     }
   },
   "mean_corpuscular_hemoglobin": {
     "loinc": "785-6",
     "unit": "pg",
     "ranges": {
-      "default": { "low": 27.0, "high": 33.0 }
+      "default": {
+        "low": 27.0,
+        "high": 33.0
+      }
     }
   },
   "mean_corpuscular_hemoglobin_concentration": {
     "loinc": "786-4",
     "unit": "g/dL",
     "ranges": {
-      "default": { "low": 31.5, "high": 35.5 }
+      "default": {
+        "low": 31.5,
+        "high": 35.5
+      }
     }
   },
   "red_cell_distribution_width": {
     "loinc": "788-0",
     "unit": "%",
     "ranges": {
-      "default": { "low": 11.5, "high": 14.5 }
+      "default": {
+        "low": 11.5,
+        "high": 14.5
+      }
     }
   },
   "platelets": {
     "loinc": "777-3",
     "unit": "x10^9/L",
     "ranges": {
-      "adult_male": { "low": 150, "high": 400 },
-      "adult_female": { "low": 150, "high": 400 },
-      "child": { "low": 150, "high": 450 },
-      "elderly": { "low": 140, "high": 380 },
-      "default": { "low": 150, "high": 400 }
+      "adult_male": {
+        "low": 150,
+        "high": 400
+      },
+      "adult_female": {
+        "low": 150,
+        "high": 400
+      },
+      "child": {
+        "low": 150,
+        "high": 450
+      },
+      "elderly": {
+        "low": 140,
+        "high": 380
+      },
+      "default": {
+        "low": 150,
+        "high": 400
+      }
     },
     "critical_low": 50,
     "critical_high": 1000
@@ -100,14 +199,20 @@
     "loinc": "32623-1",
     "unit": "fL",
     "ranges": {
-      "default": { "low": 7.5, "high": 11.5 }
+      "default": {
+        "low": 7.5,
+        "high": 11.5
+      }
     }
   },
   "neutrophils_absolute": {
     "loinc": "751-8",
     "unit": "x10^9/L",
     "ranges": {
-      "default": { "low": 1.8, "high": 7.7 }
+      "default": {
+        "low": 1.8,
+        "high": 7.7
+      }
     },
     "critical_low": 0.5,
     "critical_high": 20.0
@@ -116,10 +221,22 @@
     "loinc": "731-0",
     "unit": "x10^9/L",
     "ranges": {
-      "adult_male": { "low": 1.0, "high": 4.8 },
-      "adult_female": { "low": 1.0, "high": 4.8 },
-      "child": { "low": 1.5, "high": 7.0 },
-      "default": { "low": 1.0, "high": 4.8 }
+      "adult_male": {
+        "low": 1.0,
+        "high": 4.8
+      },
+      "adult_female": {
+        "low": 1.0,
+        "high": 4.8
+      },
+      "child": {
+        "low": 1.5,
+        "high": 7.0
+      },
+      "default": {
+        "low": 1.0,
+        "high": 4.8
+      }
     },
     "critical_low": 0.5
   },
@@ -127,39 +244,66 @@
     "loinc": "742-7",
     "unit": "x10^9/L",
     "ranges": {
-      "default": { "low": 0.2, "high": 0.8 }
+      "default": {
+        "low": 0.2,
+        "high": 0.8
+      }
     }
   },
   "eosinophils_absolute": {
     "loinc": "711-2",
     "unit": "x10^9/L",
     "ranges": {
-      "default": { "low": 0.0, "high": 0.5 }
+      "default": {
+        "low": 0.0,
+        "high": 0.5
+      }
     }
   },
   "basophils_absolute": {
     "loinc": "704-7",
     "unit": "x10^9/L",
     "ranges": {
-      "default": { "low": 0.0, "high": 0.1 }
+      "default": {
+        "low": 0.0,
+        "high": 0.1
+      }
     }
   },
   "reticulocyte_count": {
     "loinc": "17849-1",
     "unit": "%",
     "ranges": {
-      "default": { "low": 0.5, "high": 2.5 }
+      "default": {
+        "low": 0.5,
+        "high": 2.5
+      }
     }
   },
   "sodium": {
     "loinc": "2951-2",
     "unit": "mEq/L",
     "ranges": {
-      "adult_male": { "low": 136, "high": 145 },
-      "adult_female": { "low": 136, "high": 145 },
-      "child": { "low": 136, "high": 145 },
-      "elderly": { "low": 134, "high": 145 },
-      "default": { "low": 136, "high": 145 }
+      "adult_male": {
+        "low": 136,
+        "high": 145
+      },
+      "adult_female": {
+        "low": 136,
+        "high": 145
+      },
+      "child": {
+        "low": 136,
+        "high": 145
+      },
+      "elderly": {
+        "low": 134,
+        "high": 145
+      },
+      "default": {
+        "low": 136,
+        "high": 145
+      }
     },
     "critical_low": 120,
     "critical_high": 160
@@ -168,11 +312,26 @@
     "loinc": "2823-3",
     "unit": "mEq/L",
     "ranges": {
-      "adult_male": { "low": 3.5, "high": 5.0 },
-      "adult_female": { "low": 3.5, "high": 5.0 },
-      "child": { "low": 3.4, "high": 4.7 },
-      "elderly": { "low": 3.5, "high": 5.0 },
-      "default": { "low": 3.5, "high": 5.0 }
+      "adult_male": {
+        "low": 3.5,
+        "high": 5.0
+      },
+      "adult_female": {
+        "low": 3.5,
+        "high": 5.0
+      },
+      "child": {
+        "low": 3.4,
+        "high": 4.7
+      },
+      "elderly": {
+        "low": 3.5,
+        "high": 5.0
+      },
+      "default": {
+        "low": 3.5,
+        "high": 5.0
+      }
     },
     "critical_low": 2.5,
     "critical_high": 6.5
@@ -181,7 +340,10 @@
     "loinc": "2075-0",
     "unit": "mEq/L",
     "ranges": {
-      "default": { "low": 98, "high": 106 }
+      "default": {
+        "low": 98,
+        "high": 106
+      }
     },
     "critical_low": 80,
     "critical_high": 120
@@ -190,7 +352,10 @@
     "loinc": "1963-8",
     "unit": "mEq/L",
     "ranges": {
-      "default": { "low": 22, "high": 29 }
+      "default": {
+        "low": 22,
+        "high": 29
+      }
     },
     "critical_low": 10,
     "critical_high": 40
@@ -199,11 +364,26 @@
     "loinc": "3094-0",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 7, "high": 20 },
-      "adult_female": { "low": 7, "high": 20 },
-      "child": { "low": 5, "high": 18 },
-      "elderly": { "low": 8, "high": 23 },
-      "default": { "low": 7, "high": 20 }
+      "adult_male": {
+        "low": 7,
+        "high": 20
+      },
+      "adult_female": {
+        "low": 7,
+        "high": 20
+      },
+      "child": {
+        "low": 5,
+        "high": 18
+      },
+      "elderly": {
+        "low": 8,
+        "high": 23
+      },
+      "default": {
+        "low": 7,
+        "high": 20
+      }
     },
     "critical_high": 100
   },
@@ -211,11 +391,26 @@
     "loinc": "2160-0",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 0.74, "high": 1.35 },
-      "adult_female": { "low": 0.59, "high": 1.04 },
-      "child": { "low": 0.3, "high": 0.7 },
-      "elderly": { "low": 0.7, "high": 1.3 },
-      "default": { "low": 0.59, "high": 1.35 }
+      "adult_male": {
+        "low": 0.74,
+        "high": 1.35
+      },
+      "adult_female": {
+        "low": 0.59,
+        "high": 1.04
+      },
+      "child": {
+        "low": 0.3,
+        "high": 0.7
+      },
+      "elderly": {
+        "low": 0.7,
+        "high": 1.3
+      },
+      "default": {
+        "low": 0.59,
+        "high": 1.35
+      }
     },
     "critical_high": 10.0
   },
@@ -223,7 +418,10 @@
     "loinc": "2345-7",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 70, "high": 100 }
+      "default": {
+        "low": 70,
+        "high": 100
+      }
     },
     "critical_low": 40,
     "critical_high": 500
@@ -232,11 +430,26 @@
     "loinc": "17861-6",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 8.5, "high": 10.5 },
-      "adult_female": { "low": 8.5, "high": 10.5 },
-      "child": { "low": 8.8, "high": 10.8 },
-      "elderly": { "low": 8.4, "high": 10.2 },
-      "default": { "low": 8.5, "high": 10.5 }
+      "adult_male": {
+        "low": 8.5,
+        "high": 10.5
+      },
+      "adult_female": {
+        "low": 8.5,
+        "high": 10.5
+      },
+      "child": {
+        "low": 8.8,
+        "high": 10.8
+      },
+      "elderly": {
+        "low": 8.4,
+        "high": 10.2
+      },
+      "default": {
+        "low": 8.5,
+        "high": 10.5
+      }
     },
     "critical_low": 6.5,
     "critical_high": 13.5
@@ -245,17 +458,32 @@
     "loinc": "2885-2",
     "unit": "g/dL",
     "ranges": {
-      "default": { "low": 6.0, "high": 8.3 }
+      "default": {
+        "low": 6.0,
+        "high": 8.3
+      }
     }
   },
   "albumin": {
     "loinc": "1751-7",
     "unit": "g/dL",
     "ranges": {
-      "adult_male": { "low": 3.5, "high": 5.5 },
-      "adult_female": { "low": 3.5, "high": 5.5 },
-      "elderly": { "low": 3.2, "high": 5.0 },
-      "default": { "low": 3.5, "high": 5.5 }
+      "adult_male": {
+        "low": 3.5,
+        "high": 5.5
+      },
+      "adult_female": {
+        "low": 3.5,
+        "high": 5.5
+      },
+      "elderly": {
+        "low": 3.2,
+        "high": 5.0
+      },
+      "default": {
+        "low": 3.5,
+        "high": 5.5
+      }
     },
     "critical_low": 1.5
   },
@@ -263,7 +491,10 @@
     "loinc": "1975-2",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 0.1, "high": 1.2 }
+      "default": {
+        "low": 0.1,
+        "high": 1.2
+      }
     },
     "critical_high": 15.0
   },
@@ -271,28 +502,58 @@
     "loinc": "1968-7",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 0.0, "high": 0.3 }
+      "default": {
+        "low": 0.0,
+        "high": 0.3
+      }
     }
   },
   "alkaline_phosphatase": {
     "loinc": "6768-6",
     "unit": "U/L",
     "ranges": {
-      "adult_male": { "low": 44, "high": 147 },
-      "adult_female": { "low": 44, "high": 147 },
-      "child": { "low": 100, "high": 400 },
-      "elderly": { "low": 50, "high": 160 },
-      "default": { "low": 44, "high": 147 }
+      "adult_male": {
+        "low": 44,
+        "high": 147
+      },
+      "adult_female": {
+        "low": 44,
+        "high": 147
+      },
+      "child": {
+        "low": 100,
+        "high": 400
+      },
+      "elderly": {
+        "low": 50,
+        "high": 160
+      },
+      "default": {
+        "low": 44,
+        "high": 147
+      }
     }
   },
   "alanine_aminotransferase": {
     "loinc": "1742-6",
     "unit": "U/L",
     "ranges": {
-      "adult_male": { "low": 7, "high": 56 },
-      "adult_female": { "low": 7, "high": 45 },
-      "child": { "low": 10, "high": 40 },
-      "default": { "low": 7, "high": 56 }
+      "adult_male": {
+        "low": 7,
+        "high": 56
+      },
+      "adult_female": {
+        "low": 7,
+        "high": 45
+      },
+      "child": {
+        "low": 10,
+        "high": 40
+      },
+      "default": {
+        "low": 7,
+        "high": 56
+      }
     },
     "critical_high": 1000
   },
@@ -300,10 +561,22 @@
     "loinc": "1920-8",
     "unit": "U/L",
     "ranges": {
-      "adult_male": { "low": 10, "high": 40 },
-      "adult_female": { "low": 9, "high": 32 },
-      "child": { "low": 15, "high": 50 },
-      "default": { "low": 10, "high": 40 }
+      "adult_male": {
+        "low": 10,
+        "high": 40
+      },
+      "adult_female": {
+        "low": 9,
+        "high": 32
+      },
+      "child": {
+        "low": 15,
+        "high": 50
+      },
+      "default": {
+        "low": 10,
+        "high": 40
+      }
     },
     "critical_high": 1000
   },
@@ -311,30 +584,48 @@
     "loinc": "2093-3",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 0, "high": 200 }
+      "default": {
+        "low": 0,
+        "high": 200
+      }
     }
   },
   "ldl_cholesterol": {
     "loinc": "2089-1",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 0, "high": 100 }
+      "default": {
+        "low": 0,
+        "high": 100
+      }
     }
   },
   "hdl_cholesterol": {
     "loinc": "2085-9",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 40, "high": 200 },
-      "adult_female": { "low": 50, "high": 200 },
-      "default": { "low": 40, "high": 200 }
+      "adult_male": {
+        "low": 40,
+        "high": 200
+      },
+      "adult_female": {
+        "low": 50,
+        "high": 200
+      },
+      "default": {
+        "low": 40,
+        "high": 200
+      }
     }
   },
   "triglycerides": {
     "loinc": "2571-8",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 0, "high": 150 }
+      "default": {
+        "low": 0,
+        "high": 150
+      }
     },
     "critical_high": 500
   },
@@ -342,10 +633,22 @@
     "loinc": "11580-8",
     "unit": "mIU/L",
     "ranges": {
-      "adult_male": { "low": 0.4, "high": 4.0 },
-      "adult_female": { "low": 0.4, "high": 4.0 },
-      "elderly": { "low": 0.4, "high": 5.0 },
-      "default": { "low": 0.4, "high": 4.0 }
+      "adult_male": {
+        "low": 0.4,
+        "high": 4.0
+      },
+      "adult_female": {
+        "low": 0.4,
+        "high": 4.0
+      },
+      "elderly": {
+        "low": 0.4,
+        "high": 5.0
+      },
+      "default": {
+        "low": 0.4,
+        "high": 4.0
+      }
     },
     "critical_low": 0.01,
     "critical_high": 50.0
@@ -354,72 +657,126 @@
     "loinc": "3024-7",
     "unit": "ng/dL",
     "ranges": {
-      "default": { "low": 0.8, "high": 1.8 }
+      "default": {
+        "low": 0.8,
+        "high": 1.8
+      }
     }
   },
   "free_triiodothyronine": {
     "loinc": "3051-0",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 2.3, "high": 4.2 }
+      "default": {
+        "low": 2.3,
+        "high": 4.2
+      }
     }
   },
   "total_thyroxine": {
     "loinc": "3026-2",
     "unit": "mcg/dL",
     "ranges": {
-      "default": { "low": 5.1, "high": 14.1 }
+      "default": {
+        "low": 5.1,
+        "high": 14.1
+      }
     }
   },
   "total_triiodothyronine": {
     "loinc": "3053-6",
     "unit": "ng/dL",
     "ranges": {
-      "default": { "low": 80, "high": 200 }
+      "default": {
+        "low": 80,
+        "high": 200
+      }
     }
   },
   "iron": {
     "loinc": "2498-4",
     "unit": "mcg/dL",
     "ranges": {
-      "adult_male": { "low": 65, "high": 175 },
-      "adult_female": { "low": 50, "high": 170 },
-      "child": { "low": 50, "high": 120 },
-      "default": { "low": 50, "high": 175 }
+      "adult_male": {
+        "low": 65,
+        "high": 175
+      },
+      "adult_female": {
+        "low": 50,
+        "high": 170
+      },
+      "child": {
+        "low": 50,
+        "high": 120
+      },
+      "default": {
+        "low": 50,
+        "high": 175
+      }
     }
   },
   "ferritin": {
     "loinc": "2276-4",
     "unit": "ng/mL",
     "ranges": {
-      "adult_male": { "low": 24, "high": 336 },
-      "adult_female": { "low": 11, "high": 307 },
-      "child": { "low": 7, "high": 140 },
-      "elderly": { "low": 24, "high": 336 },
-      "default": { "low": 11, "high": 336 }
+      "adult_male": {
+        "low": 24,
+        "high": 336
+      },
+      "adult_female": {
+        "low": 11,
+        "high": 307
+      },
+      "child": {
+        "low": 7,
+        "high": 140
+      },
+      "elderly": {
+        "low": 24,
+        "high": 336
+      },
+      "default": {
+        "low": 11,
+        "high": 336
+      }
     }
   },
   "total_iron_binding_capacity": {
     "loinc": "2500-7",
     "unit": "mcg/dL",
     "ranges": {
-      "default": { "low": 250, "high": 370 }
+      "default": {
+        "low": 250,
+        "high": 370
+      }
     }
   },
   "transferrin_saturation": {
     "loinc": "2502-3",
     "unit": "%",
     "ranges": {
-      "adult_male": { "low": 20, "high": 50 },
-      "adult_female": { "low": 15, "high": 50 },
-      "default": { "low": 20, "high": 50 }
+      "adult_male": {
+        "low": 20,
+        "high": 50
+      },
+      "adult_female": {
+        "low": 15,
+        "high": 50
+      },
+      "default": {
+        "low": 20,
+        "high": 50
+      }
     }
   },
   "prothrombin_time": {
     "loinc": "5902-2",
     "unit": "seconds",
     "ranges": {
-      "default": { "low": 11.0, "high": 13.5 }
+      "default": {
+        "low": 11.0,
+        "high": 13.5
+      }
     },
     "critical_high": 30.0
   },
@@ -427,7 +784,10 @@
     "loinc": "6301-6",
     "unit": "ratio",
     "ranges": {
-      "default": { "low": 0.8, "high": 1.1 }
+      "default": {
+        "low": 0.8,
+        "high": 1.1
+      }
     },
     "critical_high": 5.0
   },
@@ -435,7 +795,10 @@
     "loinc": "3173-2",
     "unit": "seconds",
     "ranges": {
-      "default": { "low": 25, "high": 35 }
+      "default": {
+        "low": 25,
+        "high": 35
+      }
     },
     "critical_high": 100
   },
@@ -443,7 +806,10 @@
     "loinc": "3255-7",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 200, "high": 400 }
+      "default": {
+        "low": 200,
+        "high": 400
+      }
     },
     "critical_low": 100
   },
@@ -451,31 +817,52 @@
     "loinc": "48065-7",
     "unit": "mcg/mL FEU",
     "ranges": {
-      "default": { "low": 0, "high": 0.50 }
+      "default": {
+        "low": 0,
+        "high": 0.5
+      }
     }
   },
   "erythrocyte_sedimentation_rate": {
     "loinc": "4537-7",
     "unit": "mm/hr",
     "ranges": {
-      "adult_male": { "low": 0, "high": 15 },
-      "adult_female": { "low": 0, "high": 20 },
-      "elderly": { "low": 0, "high": 30 },
-      "default": { "low": 0, "high": 20 }
+      "adult_male": {
+        "low": 0,
+        "high": 15
+      },
+      "adult_female": {
+        "low": 0,
+        "high": 20
+      },
+      "elderly": {
+        "low": 0,
+        "high": 30
+      },
+      "default": {
+        "low": 0,
+        "high": 20
+      }
     }
   },
   "c_reactive_protein": {
     "loinc": "1988-5",
     "unit": "mg/L",
     "ranges": {
-      "default": { "low": 0, "high": 3.0 }
+      "default": {
+        "low": 0,
+        "high": 3.0
+      }
     }
   },
   "procalcitonin": {
     "loinc": "33959-8",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0, "high": 0.10 }
+      "default": {
+        "low": 0,
+        "high": 0.1
+      }
     },
     "critical_high": 10.0
   },
@@ -483,10 +870,22 @@
     "loinc": "33914-3",
     "unit": "mL/min/1.73m2",
     "ranges": {
-      "adult_male": { "low": 90, "high": 120 },
-      "adult_female": { "low": 90, "high": 120 },
-      "elderly": { "low": 60, "high": 120 },
-      "default": { "low": 90, "high": 120 }
+      "adult_male": {
+        "low": 90,
+        "high": 120
+      },
+      "adult_female": {
+        "low": 90,
+        "high": 120
+      },
+      "elderly": {
+        "low": 60,
+        "high": 120
+      },
+      "default": {
+        "low": 90,
+        "high": 120
+      }
     },
     "critical_low": 15
   },
@@ -494,23 +893,38 @@
     "loinc": "33863-2",
     "unit": "mg/L",
     "ranges": {
-      "default": { "low": 0.53, "high": 0.95 }
+      "default": {
+        "low": 0.53,
+        "high": 0.95
+      }
     }
   },
   "microalbumin_urine": {
     "loinc": "14957-5",
     "unit": "mg/L",
     "ranges": {
-      "default": { "low": 0, "high": 30 }
+      "default": {
+        "low": 0,
+        "high": 30
+      }
     }
   },
   "uric_acid": {
     "loinc": "3084-1",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 3.4, "high": 7.0 },
-      "adult_female": { "low": 2.4, "high": 6.0 },
-      "default": { "low": 2.4, "high": 7.0 }
+      "adult_male": {
+        "low": 3.4,
+        "high": 7.0
+      },
+      "adult_female": {
+        "low": 2.4,
+        "high": 6.0
+      },
+      "default": {
+        "low": 2.4,
+        "high": 7.0
+      }
     },
     "critical_high": 12.0
   },
@@ -518,26 +932,50 @@
     "loinc": "2324-2",
     "unit": "U/L",
     "ranges": {
-      "adult_male": { "low": 8, "high": 61 },
-      "adult_female": { "low": 5, "high": 36 },
-      "default": { "low": 5, "high": 61 }
+      "adult_male": {
+        "low": 8,
+        "high": 61
+      },
+      "adult_female": {
+        "low": 5,
+        "high": 36
+      },
+      "default": {
+        "low": 5,
+        "high": 61
+      }
     }
   },
   "lactate_dehydrogenase": {
     "loinc": "2532-0",
     "unit": "U/L",
     "ranges": {
-      "default": { "low": 140, "high": 280 }
+      "default": {
+        "low": 140,
+        "high": 280
+      }
     }
   },
   "ammonia": {
     "loinc": "1841-3",
     "unit": "mcmol/L",
     "ranges": {
-      "adult_male": { "low": 16, "high": 60 },
-      "adult_female": { "low": 11, "high": 51 },
-      "child": { "low": 21, "high": 50 },
-      "default": { "low": 11, "high": 60 }
+      "adult_male": {
+        "low": 16,
+        "high": 60
+      },
+      "adult_female": {
+        "low": 11,
+        "high": 51
+      },
+      "child": {
+        "low": 21,
+        "high": 50
+      },
+      "default": {
+        "low": 11,
+        "high": 60
+      }
     },
     "critical_high": 150
   },
@@ -545,25 +983,43 @@
     "loinc": "10839-9",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0, "high": 0.04 }
+      "default": {
+        "low": 0,
+        "high": 0.04
+      }
     },
-    "critical_high": 0.40
+    "critical_high": 0.4
   },
   "b_type_natriuretic_peptide": {
     "loinc": "30934-4",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 0, "high": 100 }
+      "default": {
+        "low": 0,
+        "high": 100
+      }
     }
   },
   "nt_pro_bnp": {
     "loinc": "33762-6",
     "unit": "pg/mL",
     "ranges": {
-      "adult_male": { "low": 0, "high": 125 },
-      "adult_female": { "low": 0, "high": 125 },
-      "elderly": { "low": 0, "high": 450 },
-      "default": { "low": 0, "high": 125 }
+      "adult_male": {
+        "low": 0,
+        "high": 125
+      },
+      "adult_female": {
+        "low": 0,
+        "high": 125
+      },
+      "elderly": {
+        "low": 0,
+        "high": 450
+      },
+      "default": {
+        "low": 0,
+        "high": 125
+      }
     },
     "critical_high": 5000
   },
@@ -571,9 +1027,18 @@
     "loinc": "2157-6",
     "unit": "U/L",
     "ranges": {
-      "adult_male": { "low": 39, "high": 308 },
-      "adult_female": { "low": 26, "high": 192 },
-      "default": { "low": 26, "high": 308 }
+      "adult_male": {
+        "low": 39,
+        "high": 308
+      },
+      "adult_female": {
+        "low": 26,
+        "high": 192
+      },
+      "default": {
+        "low": 26,
+        "high": 308
+      }
     },
     "critical_high": 10000
   },
@@ -581,14 +1046,20 @@
     "loinc": "13969-1",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0, "high": 5.0 }
+      "default": {
+        "low": 0,
+        "high": 5.0
+      }
     }
   },
   "cortisol_am": {
     "loinc": "2143-6",
     "unit": "mcg/dL",
     "ranges": {
-      "default": { "low": 6.2, "high": 19.4 }
+      "default": {
+        "low": 6.2,
+        "high": 19.4
+      }
     },
     "critical_low": 3.0
   },
@@ -596,49 +1067,70 @@
     "loinc": "2141-0",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 7.2, "high": 63.3 }
+      "default": {
+        "low": 7.2,
+        "high": 63.3
+      }
     }
   },
   "parathyroid_hormone": {
     "loinc": "2731-8",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 15, "high": 65 }
+      "default": {
+        "low": 15,
+        "high": 65
+      }
     }
   },
   "vitamin_d_25_hydroxy": {
     "loinc": "1989-3",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 30, "high": 100 }
+      "default": {
+        "low": 30,
+        "high": 100
+      }
     }
   },
   "insulin": {
     "loinc": "2484-4",
     "unit": "mIU/L",
     "ranges": {
-      "default": { "low": 2.6, "high": 24.9 }
+      "default": {
+        "low": 2.6,
+        "high": 24.9
+      }
     }
   },
   "hemoglobin_a1c": {
     "loinc": "4548-4",
     "unit": "%",
     "ranges": {
-      "default": { "low": 4.0, "high": 5.6 }
+      "default": {
+        "low": 4.0,
+        "high": 5.6
+      }
     }
   },
   "c_peptide": {
     "loinc": "1986-9",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0.8, "high": 3.85 }
+      "default": {
+        "low": 0.8,
+        "high": 3.85
+      }
     }
   },
   "magnesium": {
     "loinc": "19123-9",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 1.7, "high": 2.2 }
+      "default": {
+        "low": 1.7,
+        "high": 2.2
+      }
     },
     "critical_low": 1.0,
     "critical_high": 4.7
@@ -647,10 +1139,22 @@
     "loinc": "2777-1",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 2.5, "high": 4.5 },
-      "adult_female": { "low": 2.5, "high": 4.5 },
-      "child": { "low": 4.0, "high": 7.0 },
-      "default": { "low": 2.5, "high": 4.5 }
+      "adult_male": {
+        "low": 2.5,
+        "high": 4.5
+      },
+      "adult_female": {
+        "low": 2.5,
+        "high": 4.5
+      },
+      "child": {
+        "low": 4.0,
+        "high": 7.0
+      },
+      "default": {
+        "low": 2.5,
+        "high": 4.5
+      }
     },
     "critical_low": 1.0,
     "critical_high": 8.9
@@ -659,7 +1163,10 @@
     "loinc": "2524-7",
     "unit": "mmol/L",
     "ranges": {
-      "default": { "low": 0.5, "high": 2.2 }
+      "default": {
+        "low": 0.5,
+        "high": 2.2
+      }
     },
     "critical_high": 4.0
   },
@@ -667,7 +1174,10 @@
     "loinc": "2692-2",
     "unit": "mOsm/kg",
     "ranges": {
-      "default": { "low": 275, "high": 295 }
+      "default": {
+        "low": 275,
+        "high": 295
+      }
     },
     "critical_low": 240,
     "critical_high": 320
@@ -676,170 +1186,324 @@
     "loinc": "4542-7",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 30, "high": 200 }
+      "default": {
+        "low": 30,
+        "high": 200
+      }
     }
   },
   "homocysteine": {
     "loinc": "13965-9",
     "unit": "mcmol/L",
     "ranges": {
-      "adult_male": { "low": 5.0, "high": 15.0 },
-      "adult_female": { "low": 5.0, "high": 12.0 },
-      "default": { "low": 5.0, "high": 15.0 }
+      "adult_male": {
+        "low": 5.0,
+        "high": 15.0
+      },
+      "adult_female": {
+        "low": 5.0,
+        "high": 12.0
+      },
+      "default": {
+        "low": 5.0,
+        "high": 15.0
+      }
     }
   },
   "methylmalonic_acid": {
     "loinc": "15089-7",
     "unit": "nmol/L",
     "ranges": {
-      "default": { "low": 73, "high": 271 }
+      "default": {
+        "low": 73,
+        "high": 271
+      }
     }
   },
   "folate": {
     "loinc": "2284-8",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 2.7, "high": 17.0 }
+      "default": {
+        "low": 2.7,
+        "high": 17.0
+      }
     }
   },
   "vitamin_b12": {
     "loinc": "2132-9",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 200, "high": 900 }
+      "default": {
+        "low": 200,
+        "high": 900
+      }
     }
   },
   "complement_c3": {
     "loinc": "4485-9",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 90, "high": 180 }
+      "default": {
+        "low": 90,
+        "high": 180
+      }
     }
   },
   "complement_c4": {
     "loinc": "4498-2",
     "unit": "mg/dL",
     "ranges": {
-      "default": { "low": 10, "high": 40 }
+      "default": {
+        "low": 10,
+        "high": 40
+      }
     }
   },
   "antinuclear_antibody_titer": {
     "loinc": "5047-6",
     "unit": "titer",
     "ranges": {
-      "default": { "low": 0, "high": 1 }
+      "default": {
+        "low": 0,
+        "high": 1
+      }
     }
   },
   "anti_dsdna_antibody": {
     "loinc": "5130-0",
     "unit": "IU/mL",
     "ranges": {
-      "default": { "low": 0, "high": 25 }
+      "default": {
+        "low": 0,
+        "high": 25
+      }
     }
   },
   "prostate_specific_antigen": {
     "loinc": "2857-1",
     "unit": "ng/mL",
     "ranges": {
-      "adult_male": { "low": 0, "high": 4.0 },
-      "default": { "low": 0, "high": 4.0 }
+      "adult_male": {
+        "low": 0,
+        "high": 4.0
+      },
+      "default": {
+        "low": 0,
+        "high": 4.0
+      }
     }
   },
   "cancer_antigen_125": {
     "loinc": "10334-1",
     "unit": "U/mL",
     "ranges": {
-      "adult_female": { "low": 0, "high": 35 },
-      "default": { "low": 0, "high": 35 }
+      "adult_female": {
+        "low": 0,
+        "high": 35
+      },
+      "default": {
+        "low": 0,
+        "high": 35
+      }
     }
   },
   "alpha_fetoprotein": {
     "loinc": "1834-8",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0, "high": 10 }
+      "default": {
+        "low": 0,
+        "high": 10
+      }
     }
   },
   "carcinoembryonic_antigen": {
     "loinc": "2039-6",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 0, "high": 3.0 }
+      "default": {
+        "low": 0,
+        "high": 3.0
+      }
     }
   },
   "amylase": {
     "loinc": "1798-8",
     "unit": "U/L",
     "ranges": {
-      "default": { "low": 28, "high": 100 }
+      "default": {
+        "low": 28,
+        "high": 100
+      }
     }
   },
   "lipase": {
     "loinc": "3040-3",
     "unit": "U/L",
     "ranges": {
-      "default": { "low": 0, "high": 160 }
+      "default": {
+        "low": 0,
+        "high": 160
+      }
     }
   },
   "myoglobin": {
     "loinc": "2639-3",
     "unit": "ng/mL",
     "ranges": {
-      "adult_male": { "low": 28, "high": 72 },
-      "adult_female": { "low": 25, "high": 58 },
-      "default": { "low": 25, "high": 72 }
+      "adult_male": {
+        "low": 28,
+        "high": 72
+      },
+      "adult_female": {
+        "low": 25,
+        "high": 58
+      },
+      "default": {
+        "low": 25,
+        "high": 72
+      }
     }
   },
   "ceruloplasmin": {
     "loinc": "2064-4",
     "unit": "mg/dL",
     "ranges": {
-      "adult_male": { "low": 16.0, "high": 31.0 },
-      "adult_female": { "low": 19.0, "high": 39.0 },
-      "default": { "low": 16.0, "high": 39.0 }
+      "adult_male": {
+        "low": 16.0,
+        "high": 31.0
+      },
+      "adult_female": {
+        "low": 19.0,
+        "high": 39.0
+      },
+      "default": {
+        "low": 16.0,
+        "high": 39.0
+      }
     }
   },
   "rheumatoid_factor": {
     "loinc": "11572-5",
     "unit": "IU/mL",
     "ranges": {
-      "default": { "low": 0, "high": 14.0 }
+      "default": {
+        "low": 0,
+        "high": 14.0
+      }
     }
   },
   "anti_ccp_antibody": {
     "loinc": "53027-9",
     "unit": "U/mL",
     "ranges": {
-      "default": { "low": 0, "high": 20.0 }
+      "default": {
+        "low": 0,
+        "high": 20.0
+      }
     }
   },
   "tissue_transglutaminase_iga": {
     "loinc": "31017-7",
     "unit": "U/mL",
     "ranges": {
-      "default": { "low": 0, "high": 4.0 }
+      "default": {
+        "low": 0,
+        "high": 4.0
+      }
     }
   },
   "insulin_like_growth_factor_1": {
     "loinc": "49210-8",
     "unit": "ng/mL",
     "ranges": {
-      "default": { "low": 50.0, "high": 350.0 }
+      "default": {
+        "low": 50.0,
+        "high": 350.0
+      }
     }
   },
   "plasma_free_metanephrine": {
     "loinc": "38494-1",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 0, "high": 90.0 }
+      "default": {
+        "low": 0,
+        "high": 90.0
+      }
     }
   },
   "plasma_free_normetanephrine": {
     "loinc": "2668-2",
     "unit": "pg/mL",
     "ranges": {
-      "default": { "low": 0, "high": 200.0 },
-      "elderly": { "low": 0, "high": 285.0 }
+      "default": {
+        "low": 0,
+        "high": 200.0
+      },
+      "elderly": {
+        "low": 0,
+        "high": 285.0
+      }
+    }
+  },
+  "immunoglobulin_g": {
+    "loinc": "2465-3",
+    "unit": "mg/dL",
+    "ranges": {
+      "adult_male": {
+        "low": 700,
+        "high": 1600
+      },
+      "adult_female": {
+        "low": 700,
+        "high": 1600
+      },
+      "default": {
+        "low": 700,
+        "high": 1600
+      }
+    }
+  },
+  "anti_smooth_muscle_antibody": {
+    "loinc": "5268-6",
+    "unit": "U",
+    "ranges": {
+      "default": {
+        "low": 0,
+        "high": 20
+      }
+    }
+  },
+  "urine_osmolality": {
+    "loinc": "2695-5",
+    "unit": "mOsm/kg",
+    "ranges": {
+      "default": {
+        "low": 300,
+        "high": 900
+      }
+    }
+  },
+  "anti_ssa_antibody": {
+    "loinc": "31627-5",
+    "unit": "U/mL",
+    "ranges": {
+      "default": {
+        "low": 0,
+        "high": 20
+      }
+    }
+  },
+  "anti_ssb_antibody": {
+    "loinc": "31628-3",
+    "unit": "U/mL",
+    "ranges": {
+      "default": {
+        "low": 0,
+        "high": 20
+      }
     }
   }
 }

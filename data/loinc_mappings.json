@@ -1,592 +1,1123 @@
 {
   "loinc_to_info": {
     "6690-2": {
-      "common_names": ["WBC", "white blood cells", "white count", "leukocytes", "leukocyte count"],
+      "common_names": [
+        "WBC",
+        "white blood cells",
+        "white count",
+        "leukocytes",
+        "leukocyte count"
+      ],
       "canonical_name": "white_blood_cells",
       "category": "hematology",
       "specimen": "blood"
     },
     "789-8": {
-      "common_names": ["RBC", "red blood cells", "red count", "erythrocytes", "erythrocyte count"],
+      "common_names": [
+        "RBC",
+        "red blood cells",
+        "red count",
+        "erythrocytes",
+        "erythrocyte count"
+      ],
       "canonical_name": "red_blood_cells",
       "category": "hematology",
       "specimen": "blood"
     },
     "718-7": {
-      "common_names": ["Hgb", "Hb", "hemoglobin", "haemoglobin"],
+      "common_names": [
+        "Hgb",
+        "Hb",
+        "hemoglobin",
+        "haemoglobin"
+      ],
       "canonical_name": "hemoglobin",
       "category": "hematology",
       "specimen": "blood"
     },
     "4544-3": {
-      "common_names": ["Hct", "hematocrit", "haematocrit", "crit", "packed cell volume", "PCV"],
+      "common_names": [
+        "Hct",
+        "hematocrit",
+        "haematocrit",
+        "crit",
+        "packed cell volume",
+        "PCV"
+      ],
       "canonical_name": "hematocrit",
       "category": "hematology",
       "specimen": "blood"
     },
     "787-2": {
-      "common_names": ["MCV", "mean corpuscular volume", "mean cell volume"],
+      "common_names": [
+        "MCV",
+        "mean corpuscular volume",
+        "mean cell volume"
+      ],
       "canonical_name": "mean_corpuscular_volume",
       "category": "hematology",
       "specimen": "blood"
     },
     "785-6": {
-      "common_names": ["MCH", "mean corpuscular hemoglobin", "mean cell hemoglobin"],
+      "common_names": [
+        "MCH",
+        "mean corpuscular hemoglobin",
+        "mean cell hemoglobin"
+      ],
       "canonical_name": "mean_corpuscular_hemoglobin",
       "category": "hematology",
       "specimen": "blood"
     },
     "786-4": {
-      "common_names": ["MCHC", "mean corpuscular hemoglobin concentration"],
+      "common_names": [
+        "MCHC",
+        "mean corpuscular hemoglobin concentration"
+      ],
       "canonical_name": "mean_corpuscular_hemoglobin_concentration",
       "category": "hematology",
       "specimen": "blood"
     },
     "788-0": {
-      "common_names": ["RDW", "red cell distribution width", "RDW-CV"],
+      "common_names": [
+        "RDW",
+        "red cell distribution width",
+        "RDW-CV"
+      ],
       "canonical_name": "red_cell_distribution_width",
       "category": "hematology",
       "specimen": "blood"
     },
     "777-3": {
-      "common_names": ["PLT", "platelets", "platelet count", "thrombocytes"],
+      "common_names": [
+        "PLT",
+        "platelets",
+        "platelet count",
+        "thrombocytes"
+      ],
       "canonical_name": "platelets",
       "category": "hematology",
       "specimen": "blood"
     },
     "32623-1": {
-      "common_names": ["MPV", "mean platelet volume"],
+      "common_names": [
+        "MPV",
+        "mean platelet volume"
+      ],
       "canonical_name": "mean_platelet_volume",
       "category": "hematology",
       "specimen": "blood"
     },
     "751-8": {
-      "common_names": ["ANC", "neutrophils", "neutrophil count", "absolute neutrophil count", "polys", "PMN", "segs"],
+      "common_names": [
+        "ANC",
+        "neutrophils",
+        "neutrophil count",
+        "absolute neutrophil count",
+        "polys",
+        "PMN",
+        "segs"
+      ],
       "canonical_name": "neutrophils_absolute",
       "category": "hematology",
       "specimen": "blood"
     },
     "731-0": {
-      "common_names": ["ALC", "lymphocytes", "lymphocyte count", "absolute lymphocyte count", "lymphs"],
+      "common_names": [
+        "ALC",
+        "lymphocytes",
+        "lymphocyte count",
+        "absolute lymphocyte count",
+        "lymphs"
+      ],
       "canonical_name": "lymphocytes_absolute",
       "category": "hematology",
       "specimen": "blood"
     },
     "742-7": {
-      "common_names": ["monocytes", "monocyte count", "absolute monocyte count", "monos"],
+      "common_names": [
+        "monocytes",
+        "monocyte count",
+        "absolute monocyte count",
+        "monos"
+      ],
       "canonical_name": "monocytes_absolute",
       "category": "hematology",
       "specimen": "blood"
     },
     "711-2": {
-      "common_names": ["eosinophils", "eosinophil count", "absolute eosinophil count", "eos"],
+      "common_names": [
+        "eosinophils",
+        "eosinophil count",
+        "absolute eosinophil count",
+        "eos"
+      ],
       "canonical_name": "eosinophils_absolute",
       "category": "hematology",
       "specimen": "blood"
     },
     "704-7": {
-      "common_names": ["basophils", "basophil count", "absolute basophil count", "basos"],
+      "common_names": [
+        "basophils",
+        "basophil count",
+        "absolute basophil count",
+        "basos"
+      ],
       "canonical_name": "basophils_absolute",
       "category": "hematology",
       "specimen": "blood"
     },
     "17849-1": {
-      "common_names": ["retic", "reticulocytes", "reticulocyte count", "retic count"],
+      "common_names": [
+        "retic",
+        "reticulocytes",
+        "reticulocyte count",
+        "retic count"
+      ],
       "canonical_name": "reticulocyte_count",
       "category": "hematology",
       "specimen": "blood"
     },
     "2951-2": {
-      "common_names": ["Na", "sodium", "Na+", "serum sodium"],
+      "common_names": [
+        "Na",
+        "sodium",
+        "Na+",
+        "serum sodium"
+      ],
       "canonical_name": "sodium",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2823-3": {
-      "common_names": ["K", "potassium", "K+", "serum potassium"],
+      "common_names": [
+        "K",
+        "potassium",
+        "K+",
+        "serum potassium"
+      ],
       "canonical_name": "potassium",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2075-0": {
-      "common_names": ["Cl", "chloride", "Cl-", "serum chloride"],
+      "common_names": [
+        "Cl",
+        "chloride",
+        "Cl-",
+        "serum chloride"
+      ],
       "canonical_name": "chloride",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1963-8": {
-      "common_names": ["CO2", "bicarbonate", "bicarb", "HCO3", "total CO2", "tCO2", "carbon dioxide"],
+      "common_names": [
+        "CO2",
+        "bicarbonate",
+        "bicarb",
+        "HCO3",
+        "total CO2",
+        "tCO2",
+        "carbon dioxide"
+      ],
       "canonical_name": "bicarbonate",
       "category": "chemistry",
       "specimen": "serum"
     },
     "3094-0": {
-      "common_names": ["BUN", "blood urea nitrogen", "urea nitrogen", "urea"],
+      "common_names": [
+        "BUN",
+        "blood urea nitrogen",
+        "urea nitrogen",
+        "urea"
+      ],
       "canonical_name": "blood_urea_nitrogen",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2160-0": {
-      "common_names": ["Cr", "creatinine", "creat", "serum creatinine", "SCr"],
+      "common_names": [
+        "Cr",
+        "creatinine",
+        "creat",
+        "serum creatinine",
+        "SCr"
+      ],
       "canonical_name": "creatinine",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2345-7": {
-      "common_names": ["glucose", "blood glucose", "blood sugar", "FBS", "fasting glucose", "BG", "serum glucose"],
+      "common_names": [
+        "glucose",
+        "blood glucose",
+        "blood sugar",
+        "FBS",
+        "fasting glucose",
+        "BG",
+        "serum glucose"
+      ],
       "canonical_name": "glucose",
       "category": "chemistry",
       "specimen": "serum"
     },
     "17861-6": {
-      "common_names": ["Ca", "calcium", "Ca2+", "total calcium", "serum calcium"],
+      "common_names": [
+        "Ca",
+        "calcium",
+        "Ca2+",
+        "total calcium",
+        "serum calcium"
+      ],
       "canonical_name": "calcium",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2885-2": {
-      "common_names": ["TP", "total protein", "serum protein", "protein total"],
+      "common_names": [
+        "TP",
+        "total protein",
+        "serum protein",
+        "protein total"
+      ],
       "canonical_name": "total_protein",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1751-7": {
-      "common_names": ["Alb", "albumin", "serum albumin"],
+      "common_names": [
+        "Alb",
+        "albumin",
+        "serum albumin"
+      ],
       "canonical_name": "albumin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1975-2": {
-      "common_names": ["T bili", "total bilirubin", "bilirubin total", "TB", "total bili"],
+      "common_names": [
+        "T bili",
+        "total bilirubin",
+        "bilirubin total",
+        "TB",
+        "total bili"
+      ],
       "canonical_name": "bilirubin_total",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1968-7": {
-      "common_names": ["D bili", "direct bilirubin", "bilirubin direct", "conjugated bilirubin", "DB"],
+      "common_names": [
+        "D bili",
+        "direct bilirubin",
+        "bilirubin direct",
+        "conjugated bilirubin",
+        "DB"
+      ],
       "canonical_name": "bilirubin_direct",
       "category": "chemistry",
       "specimen": "serum"
     },
     "6768-6": {
-      "common_names": ["ALP", "alk phos", "alkaline phosphatase", "alkp"],
+      "common_names": [
+        "ALP",
+        "alk phos",
+        "alkaline phosphatase",
+        "alkp"
+      ],
       "canonical_name": "alkaline_phosphatase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1742-6": {
-      "common_names": ["ALT", "SGPT", "alanine aminotransferase", "alanine transaminase", "GPT"],
+      "common_names": [
+        "ALT",
+        "SGPT",
+        "alanine aminotransferase",
+        "alanine transaminase",
+        "GPT"
+      ],
       "canonical_name": "alanine_aminotransferase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1920-8": {
-      "common_names": ["AST", "SGOT", "aspartate aminotransferase", "aspartate transaminase", "GOT"],
+      "common_names": [
+        "AST",
+        "SGOT",
+        "aspartate aminotransferase",
+        "aspartate transaminase",
+        "GOT"
+      ],
       "canonical_name": "aspartate_aminotransferase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2093-3": {
-      "common_names": ["TC", "total cholesterol", "cholesterol", "total chol"],
+      "common_names": [
+        "TC",
+        "total cholesterol",
+        "cholesterol",
+        "total chol"
+      ],
       "canonical_name": "total_cholesterol",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2089-1": {
-      "common_names": ["LDL", "LDL-C", "LDL cholesterol", "low-density lipoprotein", "bad cholesterol"],
+      "common_names": [
+        "LDL",
+        "LDL-C",
+        "LDL cholesterol",
+        "low-density lipoprotein",
+        "bad cholesterol"
+      ],
       "canonical_name": "ldl_cholesterol",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2085-9": {
-      "common_names": ["HDL", "HDL-C", "HDL cholesterol", "high-density lipoprotein", "good cholesterol"],
+      "common_names": [
+        "HDL",
+        "HDL-C",
+        "HDL cholesterol",
+        "high-density lipoprotein",
+        "good cholesterol"
+      ],
       "canonical_name": "hdl_cholesterol",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2571-8": {
-      "common_names": ["TG", "triglycerides", "trigs", "triglyceride"],
+      "common_names": [
+        "TG",
+        "triglycerides",
+        "trigs",
+        "triglyceride"
+      ],
       "canonical_name": "triglycerides",
       "category": "chemistry",
       "specimen": "serum"
     },
     "11580-8": {
-      "common_names": ["TSH", "thyroid stimulating hormone", "thyrotropin"],
+      "common_names": [
+        "TSH",
+        "thyroid stimulating hormone",
+        "thyrotropin"
+      ],
       "canonical_name": "thyroid_stimulating_hormone",
       "category": "endocrine",
       "specimen": "serum"
     },
     "3024-7": {
-      "common_names": ["FT4", "free T4", "free thyroxine"],
+      "common_names": [
+        "FT4",
+        "free T4",
+        "free thyroxine"
+      ],
       "canonical_name": "free_thyroxine",
       "category": "endocrine",
       "specimen": "serum"
     },
     "3051-0": {
-      "common_names": ["FT3", "free T3", "free triiodothyronine"],
+      "common_names": [
+        "FT3",
+        "free T3",
+        "free triiodothyronine"
+      ],
       "canonical_name": "free_triiodothyronine",
       "category": "endocrine",
       "specimen": "serum"
     },
     "3026-2": {
-      "common_names": ["T4", "total T4", "thyroxine", "total thyroxine"],
+      "common_names": [
+        "T4",
+        "total T4",
+        "thyroxine",
+        "total thyroxine"
+      ],
       "canonical_name": "total_thyroxine",
       "category": "endocrine",
       "specimen": "serum"
     },
     "3053-6": {
-      "common_names": ["T3", "total T3", "triiodothyronine", "total triiodothyronine"],
+      "common_names": [
+        "T3",
+        "total T3",
+        "triiodothyronine",
+        "total triiodothyronine"
+      ],
       "canonical_name": "total_triiodothyronine",
       "category": "endocrine",
       "specimen": "serum"
     },
     "2498-4": {
-      "common_names": ["Fe", "iron", "serum iron", "serum Fe"],
+      "common_names": [
+        "Fe",
+        "iron",
+        "serum iron",
+        "serum Fe"
+      ],
       "canonical_name": "iron",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2276-4": {
-      "common_names": ["ferritin", "serum ferritin"],
+      "common_names": [
+        "ferritin",
+        "serum ferritin"
+      ],
       "canonical_name": "ferritin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2500-7": {
-      "common_names": ["TIBC", "total iron binding capacity", "iron binding capacity"],
+      "common_names": [
+        "TIBC",
+        "total iron binding capacity",
+        "iron binding capacity"
+      ],
       "canonical_name": "total_iron_binding_capacity",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2502-3": {
-      "common_names": ["TSAT", "transferrin saturation", "transferrin sat", "iron saturation", "% saturation"],
+      "common_names": [
+        "TSAT",
+        "transferrin saturation",
+        "transferrin sat",
+        "iron saturation",
+        "% saturation"
+      ],
       "canonical_name": "transferrin_saturation",
       "category": "chemistry",
       "specimen": "serum"
     },
     "5902-2": {
-      "common_names": ["PT", "prothrombin time", "pro time", "protime"],
+      "common_names": [
+        "PT",
+        "prothrombin time",
+        "pro time",
+        "protime"
+      ],
       "canonical_name": "prothrombin_time",
       "category": "coagulation",
       "specimen": "blood"
     },
     "6301-6": {
-      "common_names": ["INR", "international normalized ratio"],
+      "common_names": [
+        "INR",
+        "international normalized ratio"
+      ],
       "canonical_name": "international_normalized_ratio",
       "category": "coagulation",
       "specimen": "blood"
     },
     "3173-2": {
-      "common_names": ["PTT", "aPTT", "partial thromboplastin time", "activated partial thromboplastin time"],
+      "common_names": [
+        "PTT",
+        "aPTT",
+        "partial thromboplastin time",
+        "activated partial thromboplastin time"
+      ],
       "canonical_name": "partial_thromboplastin_time",
       "category": "coagulation",
       "specimen": "blood"
     },
     "3255-7": {
-      "common_names": ["fibrinogen", "factor I", "clottable fibrinogen"],
+      "common_names": [
+        "fibrinogen",
+        "factor I",
+        "clottable fibrinogen"
+      ],
       "canonical_name": "fibrinogen",
       "category": "coagulation",
       "specimen": "blood"
     },
     "48065-7": {
-      "common_names": ["D-dimer", "d dimer", "fibrin degradation products", "FDP"],
+      "common_names": [
+        "D-dimer",
+        "d dimer",
+        "fibrin degradation products",
+        "FDP"
+      ],
       "canonical_name": "d_dimer",
       "category": "coagulation",
       "specimen": "blood"
     },
     "4537-7": {
-      "common_names": ["ESR", "sed rate", "erythrocyte sedimentation rate", "Westergren ESR"],
+      "common_names": [
+        "ESR",
+        "sed rate",
+        "erythrocyte sedimentation rate",
+        "Westergren ESR"
+      ],
       "canonical_name": "erythrocyte_sedimentation_rate",
       "category": "hematology",
       "specimen": "blood"
     },
     "1988-5": {
-      "common_names": ["CRP", "C-reactive protein", "c reactive protein"],
+      "common_names": [
+        "CRP",
+        "C-reactive protein",
+        "c reactive protein"
+      ],
       "canonical_name": "c_reactive_protein",
       "category": "chemistry",
       "specimen": "serum"
     },
     "33959-8": {
-      "common_names": ["PCT", "procalcitonin", "pro-calcitonin"],
+      "common_names": [
+        "PCT",
+        "procalcitonin",
+        "pro-calcitonin"
+      ],
       "canonical_name": "procalcitonin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "33914-3": {
-      "common_names": ["GFR", "eGFR", "glomerular filtration rate", "estimated GFR", "estimated glomerular filtration rate"],
+      "common_names": [
+        "GFR",
+        "eGFR",
+        "glomerular filtration rate",
+        "estimated GFR",
+        "estimated glomerular filtration rate"
+      ],
       "canonical_name": "glomerular_filtration_rate",
       "category": "chemistry",
       "specimen": "serum"
     },
     "33863-2": {
-      "common_names": ["cystatin C", "CysC"],
+      "common_names": [
+        "cystatin C",
+        "CysC"
+      ],
       "canonical_name": "cystatin_c",
       "category": "chemistry",
       "specimen": "serum"
     },
     "14957-5": {
-      "common_names": ["microalbumin", "urine albumin", "urine microalbumin", "MAU"],
+      "common_names": [
+        "microalbumin",
+        "urine albumin",
+        "urine microalbumin",
+        "MAU"
+      ],
       "canonical_name": "microalbumin_urine",
       "category": "urinalysis",
       "specimen": "urine"
     },
     "3084-1": {
-      "common_names": ["uric acid", "urate", "serum uric acid", "UA"],
+      "common_names": [
+        "uric acid",
+        "urate",
+        "serum uric acid",
+        "UA"
+      ],
       "canonical_name": "uric_acid",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2324-2": {
-      "common_names": ["GGT", "gamma GT", "gamma-glutamyl transferase", "gamma-glutamyl transpeptidase", "GGTP"],
+      "common_names": [
+        "GGT",
+        "gamma GT",
+        "gamma-glutamyl transferase",
+        "gamma-glutamyl transpeptidase",
+        "GGTP"
+      ],
       "canonical_name": "gamma_glutamyl_transferase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2532-0": {
-      "common_names": ["LDH", "lactate dehydrogenase", "LD"],
+      "common_names": [
+        "LDH",
+        "lactate dehydrogenase",
+        "LD"
+      ],
       "canonical_name": "lactate_dehydrogenase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "1841-3": {
-      "common_names": ["NH3", "ammonia", "serum ammonia", "blood ammonia"],
+      "common_names": [
+        "NH3",
+        "ammonia",
+        "serum ammonia",
+        "blood ammonia"
+      ],
       "canonical_name": "ammonia",
       "category": "chemistry",
       "specimen": "blood"
     },
     "10839-9": {
-      "common_names": ["troponin I", "TnI", "cTnI", "cardiac troponin I", "trop I"],
+      "common_names": [
+        "troponin I",
+        "TnI",
+        "cTnI",
+        "cardiac troponin I",
+        "trop I"
+      ],
       "canonical_name": "troponin_i",
       "category": "cardiac",
       "specimen": "serum"
     },
     "30934-4": {
-      "common_names": ["BNP", "brain natriuretic peptide", "B-type natriuretic peptide"],
+      "common_names": [
+        "BNP",
+        "brain natriuretic peptide",
+        "B-type natriuretic peptide"
+      ],
       "canonical_name": "b_type_natriuretic_peptide",
       "category": "cardiac",
       "specimen": "blood"
     },
     "33762-6": {
-      "common_names": ["NT-proBNP", "N-terminal proBNP", "NT pro BNP", "proBNP"],
+      "common_names": [
+        "NT-proBNP",
+        "N-terminal proBNP",
+        "NT pro BNP",
+        "proBNP"
+      ],
       "canonical_name": "nt_pro_bnp",
       "category": "cardiac",
       "specimen": "blood"
     },
     "2157-6": {
-      "common_names": ["CK", "CPK", "creatine kinase", "creatine phosphokinase", "total CK"],
+      "common_names": [
+        "CK",
+        "CPK",
+        "creatine kinase",
+        "creatine phosphokinase",
+        "total CK"
+      ],
       "canonical_name": "creatine_kinase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "13969-1": {
-      "common_names": ["CK-MB", "CKMB", "creatine kinase MB", "MB fraction"],
+      "common_names": [
+        "CK-MB",
+        "CKMB",
+        "creatine kinase MB",
+        "MB fraction"
+      ],
       "canonical_name": "creatine_kinase_mb",
       "category": "cardiac",
       "specimen": "serum"
     },
     "2143-6": {
-      "common_names": ["cortisol AM", "morning cortisol", "serum cortisol", "cortisol"],
+      "common_names": [
+        "cortisol AM",
+        "morning cortisol",
+        "serum cortisol",
+        "cortisol"
+      ],
       "canonical_name": "cortisol_am",
       "category": "endocrine",
       "specimen": "serum"
     },
     "2141-0": {
-      "common_names": ["ACTH", "adrenocorticotropic hormone", "corticotropin", "adrenocorticotropin"],
+      "common_names": [
+        "ACTH",
+        "adrenocorticotropic hormone",
+        "corticotropin",
+        "adrenocorticotropin"
+      ],
       "canonical_name": "adrenocorticotropic_hormone",
       "category": "endocrine",
       "specimen": "blood"
     },
     "2731-8": {
-      "common_names": ["PTH", "parathyroid hormone", "parathormone", "intact PTH", "iPTH"],
+      "common_names": [
+        "PTH",
+        "parathyroid hormone",
+        "parathormone",
+        "intact PTH",
+        "iPTH"
+      ],
       "canonical_name": "parathyroid_hormone",
       "category": "endocrine",
       "specimen": "serum"
     },
     "1989-3": {
-      "common_names": ["vitamin D", "25-OH vitamin D", "25-hydroxyvitamin D", "calcidiol", "25(OH)D", "vit D"],
+      "common_names": [
+        "vitamin D",
+        "25-OH vitamin D",
+        "25-hydroxyvitamin D",
+        "calcidiol",
+        "25(OH)D",
+        "vit D"
+      ],
       "canonical_name": "vitamin_d_25_hydroxy",
       "category": "endocrine",
       "specimen": "serum"
     },
     "2484-4": {
-      "common_names": ["insulin", "fasting insulin", "serum insulin"],
+      "common_names": [
+        "insulin",
+        "fasting insulin",
+        "serum insulin"
+      ],
       "canonical_name": "insulin",
       "category": "endocrine",
       "specimen": "serum"
     },
     "4548-4": {
-      "common_names": ["HbA1c", "A1c", "hemoglobin A1c", "glycated hemoglobin", "glycosylated hemoglobin"],
+      "common_names": [
+        "HbA1c",
+        "A1c",
+        "hemoglobin A1c",
+        "glycated hemoglobin",
+        "glycosylated hemoglobin"
+      ],
       "canonical_name": "hemoglobin_a1c",
       "category": "endocrine",
       "specimen": "blood"
     },
     "1986-9": {
-      "common_names": ["C-peptide", "c peptide", "connecting peptide"],
+      "common_names": [
+        "C-peptide",
+        "c peptide",
+        "connecting peptide"
+      ],
       "canonical_name": "c_peptide",
       "category": "endocrine",
       "specimen": "serum"
     },
     "19123-9": {
-      "common_names": ["Mg", "magnesium", "Mg2+", "serum magnesium"],
+      "common_names": [
+        "Mg",
+        "magnesium",
+        "Mg2+",
+        "serum magnesium"
+      ],
       "canonical_name": "magnesium",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2777-1": {
-      "common_names": ["phos", "phosphorus", "phosphate", "PO4", "serum phosphorus", "inorganic phosphorus"],
+      "common_names": [
+        "phos",
+        "phosphorus",
+        "phosphate",
+        "PO4",
+        "serum phosphorus",
+        "inorganic phosphorus"
+      ],
       "canonical_name": "phosphorus",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2524-7": {
-      "common_names": ["lactate", "lactic acid", "serum lactate", "blood lactate"],
+      "common_names": [
+        "lactate",
+        "lactic acid",
+        "serum lactate",
+        "blood lactate"
+      ],
       "canonical_name": "lactate",
       "category": "chemistry",
       "specimen": "blood"
     },
     "2692-2": {
-      "common_names": ["osmolality", "serum osmolality", "Osm", "serum osm", "plasma osmolality"],
+      "common_names": [
+        "osmolality",
+        "serum osmolality",
+        "Osm",
+        "serum osm",
+        "plasma osmolality"
+      ],
       "canonical_name": "osmolality_serum",
       "category": "chemistry",
       "specimen": "serum"
     },
     "4542-7": {
-      "common_names": ["haptoglobin", "Hp", "hapto"],
+      "common_names": [
+        "haptoglobin",
+        "Hp",
+        "hapto"
+      ],
       "canonical_name": "haptoglobin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "13965-9": {
-      "common_names": ["homocysteine", "Hcy", "total homocysteine"],
+      "common_names": [
+        "homocysteine",
+        "Hcy",
+        "total homocysteine"
+      ],
       "canonical_name": "homocysteine",
       "category": "chemistry",
       "specimen": "serum"
     },
     "15089-7": {
-      "common_names": ["MMA", "methylmalonic acid", "methylmalonate"],
+      "common_names": [
+        "MMA",
+        "methylmalonic acid",
+        "methylmalonate"
+      ],
       "canonical_name": "methylmalonic_acid",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2284-8": {
-      "common_names": ["folate", "folic acid", "serum folate", "vitamin B9"],
+      "common_names": [
+        "folate",
+        "folic acid",
+        "serum folate",
+        "vitamin B9"
+      ],
       "canonical_name": "folate",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2132-9": {
-      "common_names": ["B12", "vitamin B12", "cobalamin", "cyanocobalamin", "serum B12"],
+      "common_names": [
+        "B12",
+        "vitamin B12",
+        "cobalamin",
+        "cyanocobalamin",
+        "serum B12"
+      ],
       "canonical_name": "vitamin_b12",
       "category": "chemistry",
       "specimen": "serum"
     },
     "4485-9": {
-      "common_names": ["C3", "complement C3", "complement component 3"],
+      "common_names": [
+        "C3",
+        "complement C3",
+        "complement component 3"
+      ],
       "canonical_name": "complement_c3",
       "category": "immunology",
       "specimen": "serum"
     },
     "4498-2": {
-      "common_names": ["C4", "complement C4", "complement component 4"],
+      "common_names": [
+        "C4",
+        "complement C4",
+        "complement component 4"
+      ],
       "canonical_name": "complement_c4",
       "category": "immunology",
       "specimen": "serum"
     },
     "5047-6": {
-      "common_names": ["ANA", "antinuclear antibody", "ANA titer", "antinuclear antibodies"],
+      "common_names": [
+        "ANA",
+        "antinuclear antibody",
+        "ANA titer",
+        "antinuclear antibodies"
+      ],
       "canonical_name": "antinuclear_antibody_titer",
       "category": "immunology",
       "specimen": "serum"
     },
     "5130-0": {
-      "common_names": ["anti-dsDNA", "anti-double stranded DNA", "dsDNA antibody", "anti-DNA"],
+      "common_names": [
+        "anti-dsDNA",
+        "anti-double stranded DNA",
+        "dsDNA antibody",
+        "anti-DNA"
+      ],
       "canonical_name": "anti_dsdna_antibody",
       "category": "immunology",
       "specimen": "serum"
     },
     "2857-1": {
-      "common_names": ["PSA", "prostate specific antigen", "total PSA"],
+      "common_names": [
+        "PSA",
+        "prostate specific antigen",
+        "total PSA"
+      ],
       "canonical_name": "prostate_specific_antigen",
       "category": "tumor_markers",
       "specimen": "serum"
     },
     "10334-1": {
-      "common_names": ["CA-125", "CA 125", "cancer antigen 125"],
+      "common_names": [
+        "CA-125",
+        "CA 125",
+        "cancer antigen 125"
+      ],
       "canonical_name": "cancer_antigen_125",
       "category": "tumor_markers",
       "specimen": "serum"
     },
     "1834-8": {
-      "common_names": ["AFP", "alpha-fetoprotein", "alpha fetoprotein"],
+      "common_names": [
+        "AFP",
+        "alpha-fetoprotein",
+        "alpha fetoprotein"
+      ],
       "canonical_name": "alpha_fetoprotein",
       "category": "tumor_markers",
       "specimen": "serum"
     },
     "2039-6": {
-      "common_names": ["CEA", "carcinoembryonic antigen"],
+      "common_names": [
+        "CEA",
+        "carcinoembryonic antigen"
+      ],
       "canonical_name": "carcinoembryonic_antigen",
       "category": "tumor_markers",
       "specimen": "serum"
     },
     "1798-8": {
-      "common_names": ["amylase", "serum amylase", "total amylase"],
+      "common_names": [
+        "amylase",
+        "serum amylase",
+        "total amylase"
+      ],
       "canonical_name": "amylase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "3040-3": {
-      "common_names": ["lipase", "serum lipase", "pancreatic lipase"],
+      "common_names": [
+        "lipase",
+        "serum lipase",
+        "pancreatic lipase"
+      ],
       "canonical_name": "lipase",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2639-3": {
-      "common_names": ["myoglobin", "serum myoglobin", "Mb"],
+      "common_names": [
+        "myoglobin",
+        "serum myoglobin",
+        "Mb"
+      ],
       "canonical_name": "myoglobin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "2064-4": {
-      "common_names": ["Ceruloplasmin", "Cp"],
+      "common_names": [
+        "Ceruloplasmin",
+        "Cp"
+      ],
       "canonical_name": "ceruloplasmin",
       "category": "chemistry",
       "specimen": "serum"
     },
     "11572-5": {
-      "common_names": ["Rheumatoid Factor", "RF"],
+      "common_names": [
+        "Rheumatoid Factor",
+        "RF"
+      ],
       "canonical_name": "rheumatoid_factor",
       "category": "immunology",
       "specimen": "serum"
     },
     "53027-9": {
-      "common_names": ["Anti-CCP Antibody", "Anti-Cyclic Citrullinated Peptide", "ACPA"],
+      "common_names": [
+        "Anti-CCP Antibody",
+        "Anti-Cyclic Citrullinated Peptide",
+        "ACPA"
+      ],
       "canonical_name": "anti_ccp_antibody",
       "category": "immunology",
       "specimen": "serum"
     },
     "31017-7": {
-      "common_names": ["Tissue Transglutaminase IgA", "tTG-IgA", "Anti-tTG IgA"],
+      "common_names": [
+        "Tissue Transglutaminase IgA",
+        "tTG-IgA",
+        "Anti-tTG IgA"
+      ],
       "canonical_name": "tissue_transglutaminase_iga",
       "category": "immunology",
       "specimen": "serum"
     },
     "49210-8": {
-      "common_names": ["Insulin-like Growth Factor 1", "IGF-1", "Somatomedin C"],
+      "common_names": [
+        "Insulin-like Growth Factor 1",
+        "IGF-1",
+        "Somatomedin C"
+      ],
       "canonical_name": "insulin_like_growth_factor_1",
       "category": "endocrine",
       "specimen": "serum"
     },
     "38494-1": {
-      "common_names": ["Plasma Free Metanephrine", "Free Metanephrine"],
+      "common_names": [
+        "Plasma Free Metanephrine",
+        "Free Metanephrine"
+      ],
       "canonical_name": "plasma_free_metanephrine",
       "category": "endocrine",
       "specimen": "plasma"
     },
     "2668-2": {
-      "common_names": ["Plasma Free Normetanephrine", "Free Normetanephrine"],
+      "common_names": [
+        "Plasma Free Normetanephrine",
+        "Free Normetanephrine"
+      ],
       "canonical_name": "plasma_free_normetanephrine",
       "category": "endocrine",
       "specimen": "plasma"
+    },
+    "2465-3": {
+      "common_names": [
+        "IgG",
+        "immunoglobulin G",
+        "gamma globulin",
+        "serum IgG"
+      ],
+      "canonical_name": "immunoglobulin_g",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "5268-6": {
+      "common_names": [
+        "Anti-Smooth Muscle Antibody",
+        "ASMA",
+        "SMA",
+        "anti-SMA",
+        "smooth muscle antibody"
+      ],
+      "canonical_name": "anti_smooth_muscle_antibody",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "2695-5": {
+      "common_names": [
+        "Urine osmolality",
+        "urine osm",
+        "urine osmolality random"
+      ],
+      "canonical_name": "urine_osmolality",
+      "category": "urinalysis",
+      "specimen": "urine"
+    },
+    "31627-5": {
+      "common_names": [
+        "Anti-SSA",
+        "anti-Ro antibody",
+        "SSA antibody",
+        "Ro antibody"
+      ],
+      "canonical_name": "anti_ssa_antibody",
+      "category": "immunology",
+      "specimen": "serum"
+    },
+    "31628-3": {
+      "common_names": [
+        "Anti-SSB",
+        "anti-La antibody",
+        "SSB antibody",
+        "La antibody"
+      ],
+      "canonical_name": "anti_ssb_antibody",
+      "category": "immunology",
+      "specimen": "serum"
     }
   },
   "name_to_loinc": {
@@ -911,6 +1442,32 @@
     "plasma free normetanephrine": "2668-2",
     "free normetanephrine": "2668-2",
     "normetanephrine": "2668-2",
-    "normetanephrine, plasma": "2668-2"
+    "normetanephrine, plasma": "2668-2",
+    "immunoglobulin_g": "2465-3",
+    "IgG": "2465-3",
+    "immunoglobulin G": "2465-3",
+    "gamma globulin": "2465-3",
+    "serum IgG": "2465-3",
+    "anti_smooth_muscle_antibody": "5268-6",
+    "ASMA": "5268-6",
+    "SMA antibody": "5268-6",
+    "anti-SMA": "5268-6",
+    "smooth muscle antibody": "5268-6",
+    "anti-smooth muscle antibody": "5268-6",
+    "urine_osmolality": "2695-5",
+    "urine osm": "2695-5",
+    "urine osmolality": "2695-5",
+    "anti_ssa_antibody": "31627-5",
+    "anti-SSA": "31627-5",
+    "anti-Ro": "31627-5",
+    "SSA antibody": "31627-5",
+    "Ro antibody": "31627-5",
+    "anti-Ro antibody": "31627-5",
+    "anti_ssb_antibody": "31628-3",
+    "anti-SSB": "31628-3",
+    "anti-La": "31628-3",
+    "SSB antibody": "31628-3",
+    "La antibody": "31628-3",
+    "anti-La antibody": "31628-3"
   }
 }

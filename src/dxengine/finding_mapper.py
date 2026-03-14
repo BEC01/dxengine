@@ -150,6 +150,8 @@ _SUBSUMES: dict[str, list[str]] = {
     "ttg_iga_greater_than_10x_uln": ["ttg_iga_positive"],
     # Metanephrines: markedly elevated subsumes elevated
     "plasma_free_metanephrines_greater_than_3x_uln": ["plasma_free_metanephrines_elevated"],
+    # Urine osmolality: very low subsumes low
+    "urine_osmolality_very_low": ["urine_osmolality_low"],
 }
 
 

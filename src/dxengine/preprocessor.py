@@ -211,6 +211,34 @@ EXTRA_ALIASES: dict[str, str] = {
     "plasma free normetanephrine": "plasma_free_normetanephrine",
     "free normetanephrine": "plasma_free_normetanephrine",
     "normetanephrine, plasma free": "plasma_free_normetanephrine",
+    # Immunoglobulin G
+    "igg": "immunoglobulin_g",
+    "immunoglobulin g": "immunoglobulin_g",
+    "serum igg": "immunoglobulin_g",
+    "gamma globulin": "immunoglobulin_g",
+    "quantitative igg": "immunoglobulin_g",
+    # Anti-smooth muscle antibody
+    "asma": "anti_smooth_muscle_antibody",
+    "sma": "anti_smooth_muscle_antibody",
+    "anti-sma": "anti_smooth_muscle_antibody",
+    "anti-smooth muscle antibody": "anti_smooth_muscle_antibody",
+    "smooth muscle antibody": "anti_smooth_muscle_antibody",
+    # Urine osmolality
+    "urine osmolality": "urine_osmolality",
+    "urine osm": "urine_osmolality",
+    "osmolality, urine": "urine_osmolality",
+    # Anti-SSA/Ro
+    "anti-ssa": "anti_ssa_antibody",
+    "anti-ro": "anti_ssa_antibody",
+    "ssa antibody": "anti_ssa_antibody",
+    "ro antibody": "anti_ssa_antibody",
+    "anti-ro antibody": "anti_ssa_antibody",
+    # Anti-SSB/La
+    "anti-ssb": "anti_ssb_antibody",
+    "anti-la": "anti_ssb_antibody",
+    "ssb antibody": "anti_ssb_antibody",
+    "la antibody": "anti_ssb_antibody",
+    "anti-la antibody": "anti_ssb_antibody",
 }
 
 
@@ -798,6 +826,11 @@ PLAUSIBLE_BOUNDS: dict[str, tuple[float | None, float | None]] = {
     "insulin_like_growth_factor_1": (0.0, 2000.0),
     "plasma_free_metanephrine": (0.0, 50000.0),
     "plasma_free_normetanephrine": (0.0, 50000.0),
+    "immunoglobulin_g": (0.0, 10000.0),
+    "anti_smooth_muscle_antibody": (0.0, 5000.0),
+    "urine_osmolality": (0.0, 1500.0),
+    "anti_ssa_antibody": (0.0, 5000.0),
+    "anti_ssb_antibody": (0.0, 5000.0),
 }
 
 # Tests where negative values are allowed
