@@ -115,7 +115,7 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 
 ## /expand — Disease Expansion System
 
-The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 100+ diseases using AI-driven literature research.
+The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driven literature research. Currently at **54 disease patterns** (from original 18). Features **clinical rule discovery** — automatically finds unique clinical discriminators from illness scripts to break evidence ceiling asymmetry for diseases with shared lab patterns.
 
 ### Architecture
 ```
@@ -129,27 +129,34 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
     ├─ Pick highest-priority disease from queue
     ├─ Research: 3 parallel sub-agents (literature, disease info, KB validation)
     │    Output: state/expand/packets/{disease}.json
+    │    Includes Phase 4b: clinical rule discriminator discovery
+    ├─ Pattern trimming + LR neutralization + clinical rule analysis
     ├─ Validate: 21 checks (schema, bounds, coverage, conflicts, plausibility)
     ├─ Integrate: atomic writes to data/*.json with .bak backups
+    │    Now handles new_clinical_rules field in research packets
     ├─ Regenerate vignettes + run unit tests
     ├─ Evaluate + compare against baseline
-    ├─ Accept/Reject/Mini-tune (up to 3 tune attempts)
+    ├─ Accept/Reject/Mini-tune (Strategy 0: clinical rule, then trim/neutralize)
     └─ Loop back (pause after 5 consecutive skips or empty queue)
 ```
 
 ### Scripts
 - `select_diseases.py` — Priority queue: scores by `(importance × 3) + (lr_count / 3) + lab_coverage`; floor budget warning at 55+ diseases
 - `validate_expansion.py` — 21 validation checks, outputs pass/warn/fail with `ready_for_integration` gate
-- `integrate_disease.py` — Atomic integrator with idempotency checks and .bak rollback
+- `integrate_disease.py` — Atomic integrator with idempotency checks, .bak rollback, clinical rules integration, and `typical_value` preservation
 - `validate_illness_script.py` — 10-check validator for auto-generated illness scripts (schema, curated match, cross-ref)
 - `generate_illness_script.py` — Writes validated illness script to illness_scripts.json; overwrites importance/category from curated list
 
-### Expansion Waves (33 candidates)
-| Wave | Criteria | Count | Examples |
-|------|----------|-------|---------|
-| 1 | importance 5 | ~11 | sepsis, AMI, TTP/HUS, aplastic_anemia, PE, DKA_variant |
-| 2 | importance 4 | ~12 | cirrhosis, heart_failure, SLE, polycythemia_vera, SIADH |
-| 3 | importance ≤3 | ~10 | folate_deficiency, gout, celiac, nephrotic_syndrome |
+### Expansion State (54 patterns, 2026-03-14)
+
+**32 diseases expanded** (from original 18 → 54 patterns):
+- Wave 1 (imp 5): AMI, sepsis, PE, TTP/HUS, aplastic_anemia, DKA, HHS, TLS, MAS/HLH, HELLP
+- Wave 2 (imp 4): cirrhosis, heart_failure, SLE, polycythemia_vera, SIADH, IE, pancreatitis, CML, ITP, alcoholic_hepatitis, cholangitis, hepatorenal_syndrome
+- Wave 3 (imp ≤3): folate_deficiency, gout, celiac, nephrotic_syndrome, RTA, wilson, pheochromocytoma, RA, acromegaly, CLL, MDS
+- **4 diseases unblocked by clinical rule strategy**: HELLP (pregnancy), alcoholic_hepatitis (alcohol), cholangitis (Charcot triad), hepatorenal_syndrome (cirrhosis+ascites context)
+
+**Remaining blocked diseases** (10 with illness scripts, no patterns):
+- lactic_acidosis (insufficient distinctive evidence), EG/methanol (combined entry exists), sickle_cell (clinical-only discriminators), DVT (imaging-based), autoimmune_hepatitis (missing analyte), DILI (exclusion diagnosis), warm_AIHA (pure subtype), nephrotic_minimal_change (subtype), diabetes_insipidus (missing analyte)
 
 ### Safety
 - LR bounds: LR+ [0.5, 50.0], LR- [0.05, 1.5]; quality-based caps (EXPERT_OPINION capped at 3.0)
@@ -193,7 +200,7 @@ The `/expand` skill autonomously grows DxEngine's disease coverage from 18 to 10
 - **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
 - **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
-**Current baseline (2026-03-13):** score=0.8311, top3=99.1%, top1=87.0%, neg_pass=100.0%, n=378 (45 disease patterns, 25 discovery candidates)
+**Current baseline (2026-03-14):** score=0.8012, top3=98.5%, top1=78.6%, neg_pass=100.0%, n=464 (54 disease patterns, 25 discovery candidates)
 
 ## Pending Improvements (Verified Scaling Roadmap)
 
@@ -202,6 +209,7 @@ Produced by 11-agent deep analysis on 2026-03-11. Six verification agents stress
 **REJECTED proposals (do NOT re-propose):**
 - **Category-based hypothesis filtering** — 83% of diseases cross 3+ organ-system panels; filtering misses multi-system diseases (SLE, myeloma, rhabdomyolysis, sepsis). INTERNIST-1's filtering failure is the canonical cautionary tale. DXplain scores 2,600 diseases with no filtering. No computational need at 100 diseases (<10ms per case).
 - **LR sparsity formulas (specificity discount, transitive LR inference)** — specificity discount destroys valid information; transitive inference is epidemiologically invalid (sensitivity/specificity are disease-specific population parameters). Inferred LRs would also defeat the evidence cap safety mechanism.
+- **Category-budget floors** — Originally proposed as Fix 5. Deep analysis at 54 diseases showed: (a) floors change rankings in only 2% of cases, (b) evidence caps are the actual binding constraint, (c) no reference system uses category-budget floors (QMR-DT handles 570 diseases without floors; DXplain handles 2,600 without them), (d) it "kicks the can" from ~50 to ~80 diseases without solving the fundamental O(n) budget problem. See floor scaling roadmap below for the correct phased approach.
 
 ### Priority 1: Smooth the Evidence Cap Curve (DONE)
 Replaced discrete staircase `{0→20%, 1→38%, 2→60%, 3→80%, 4+→uncapped}` with smooth curve `ceiling(n) = 1 - 1/(1 + k*n)`, k=0.32. Eliminates the n=1→2 cliff (0.38→0.60) that crossed the 0.40 negative pass threshold. Tuned k from 0.15→0.32 to maximize weighted score while keeping neg_pass=100%. Results: neg_pass 89.5%→100%, top_1 91.7%→93.0%, score 0.8338→0.8344. Now safe for Priorities 2-4 to add evidence sources. See `_evidence_ceiling()` in `bayesian_updater.py`.
@@ -369,8 +377,14 @@ Mimic negatives now have empty symptoms/chief_complaint. Prevents pathognomonic 
 
 **Combined Results (Fixes 1-4):** score 0.8504 → 0.8619, top3 98.7% → 100%, top1 94.3% → 95.9%, neg_pass 100%, 398 tests
 
-**Fix 5: Category-Budget Floors (NOT YET DONE, needed at ~50 diseases)**
-At 30 hypotheses, all 95% available mass is consumed by floors. Per-disease ceiling (Fix 1) is the binding constraint, making floors less critical for now.
+**Fix 5: Floor Scaling Roadmap (REPLACES category-budget proposal)**
+Deep analysis at 54 diseases revealed floors are NOT the binding constraint — evidence caps (Fix 1) are. Floors change rankings in only 2% of cases. The correct approach is a phased deprecation, not category budgets:
+
+- **Phase A (at 70+ diseases): Evidence-Gated Floors** — Only apply floors to diseases with `n_informative_lr >= 1`. Speculative pattern matches (n_informative=0) get no floor. Cuts floor budget ~40-60%. Implementation: 5 lines in `normalize_posteriors()`. Conceptually clean: only diseases with curated evidence deserve floor protection.
+- **Phase B (at 100+ diseases): Importance-5-Only Floors** — Drop floors for importance 3-4 entirely. Keep only for importance-5 "can't miss" diseases (PE, AMI, sepsis, DKA, TTP/HUS). At 25 imp-5 diseases × 0.04 = 1.0 total budget, each gets a meaningful 4% floor.
+- **Phase C (at 150+ diseases): Remove Floors Entirely** — Rely solely on evidence caps + prevalence priors, matching QMR-DT (570 diseases, no floors) and DXplain (2,600 diseases, no floors). By this point, LR coverage should be comprehensive enough that floors are genuinely unnecessary.
+
+**Why floors don't matter now:** At 54 patterns, typical hypothesis pools are 2-14 diseases (median ~6). The per-disease evidence ceiling (n=0→1%, n=1→24%, n=2→39%) is always the binding constraint, not the 2-8% floor. Zero diseases currently depend on floors for top-3 placement.
 
 ---
 
@@ -382,8 +396,8 @@ Currently 26 analytes have only 1 threshold rule, creating binary cliff effects.
 **LR^strength continuous evidence weighting:**
 `Evidence.strength` is computed from z-scores (`min(|z|/5, 1.0)`) in `finding_mapper.py` but **never read** by `bayesian_updater.py`. The formula `LR_effective = LR^strength` (fractional Bayesian updating) is mathematically sound and requires zero new parameters. However, it would amplify CKD overbreadth (15 positive-direction findings each contributing small evidence from borderline labs). Implement ONLY with CKD-specific safeguards and AFTER Priorities 1-3 are stable.
 
-**Floor mechanism redesign for 100+ diseases:**
-At 30 hypotheses, all 95% available mass is consumed by floors. At 51, importance-5 floor drops from 8% to 3.14%. Need category-budget allocation: "hematologic diseases" get X% floor budget, distributed among whichever hematologic diseases are in the pool. Needed before 100 diseases.
+**Clinical rule discriminator pattern (proven, use for all shared-lab diseases):**
+Diseases sharing lab patterns with existing diseases (hepatic, hematologic subtypes) need **clinical rules as unique discriminators** to break evidence ceiling asymmetry. The process: find unique terms in the illness script's `classic_presentation`, create a clinical rule matching those terms, add LR+ 8-15 for the new finding. Proven on 4 previously-impossible diseases: HELLP (pregnancy LR+ 15), alcoholic_hepatitis (alcohol LR+ 10), cholangitis (Charcot triad LR+ 12), hepatorenal_syndrome (cirrhosis+ascites context LR+ 12). Codified in `/expand` skill as Strategy 0 in tune loop and Phase 4b in dx-researcher agent.
 
 **Counterfactual inference (Richens/Babylon Health 2020):**
 Replace associative query "P(disease|findings)" with counterfactual "would findings be present if disease were absent?" Same knowledge base, different inference method. Babylon Health moved from top-48% to top-25% of doctors. Implementation: twin network on the existing noisy-OR-like model. Research-phase — requires significant architectural work. Source: github.com/babylonhealth/counterfactual-diagnosis.
@@ -402,10 +416,10 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 | File | Contents | Entries |
 |------|----------|---------|
 | lab_ranges.json | Age/sex-adjusted reference ranges | 98 analytes |
-| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 45 patterns, 35 typical_values |
-| illness_scripts.json | Structured illness scripts with disease_importance | 51 diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 232 findings, 585 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 146 lab rules + 93 clinical rules + 54 name_aliases |
+| disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 54 patterns, 50 typical_values |
+| illness_scripts.json | Structured illness scripts with disease_importance | 64 diseases |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 237 findings, 616 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 146 lab rules + 97 clinical rules + 54 name_aliases |
 | discovery_candidates.json | Curated disease candidates for auto-discovery with locked importance/category | 25 candidates (3 waves) |
 | loinc_mappings.json | LOINC code <-> common name mappings | 98 codes, 322 name mappings |
 
