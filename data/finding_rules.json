@@ -777,6 +777,12 @@
       "importance": 3
     },
     {
+      "finding_key": "neutrophils_absolute_low",
+      "test": "neutrophils_absolute",
+      "operator": "below_lln",
+      "importance": 3
+    },
+    {
       "finding_key": "white_blood_cells_low",
       "test": "white_blood_cells",
       "operator": "below_lln",

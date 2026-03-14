@@ -2027,6 +2027,10 @@
       "hypocalcemia": {
         "lr_positive": 4.0,
         "lr_negative": 0.6
+      },
+      "hypoparathyroidism": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -2036,6 +2040,10 @@
       "hypocalcemia": {
         "lr_positive": 12.0,
         "lr_negative": 0.4
+      },
+      "hypoparathyroidism": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3430,7 +3438,7 @@
     }
   },
   "platelets_low": {
-    "description": "Platelets below lower limit of normal, reflecting immune-mediated platelet destruction in SLE",
+    "description": "Platelets below lower limit of normal (thrombocytopenia)",
     "diseases": {
       "systemic_lupus_erythematosus": {
         "lr_positive": 2.5,
@@ -3443,6 +3451,14 @@
       "immune_thrombocytopenic_purpura": {
         "lr_positive": 2.0,
         "lr_negative": 0.3
+      },
+      "aplastic_anemia": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.25
+      },
+      "myelodysplastic_syndrome": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3495,6 +3511,45 @@
       "myelodysplastic_syndrome": {
         "lr_positive": 5.0,
         "lr_negative": 0.3
+      }
+    }
+  },
+  "neutrophils_absolute_low": {
+    "description": "Absolute neutrophil count below lower limit of normal (neutropenia) — key component of pancytopenia in marrow failure",
+    "diseases": {
+      "aplastic_anemia": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      },
+      "myelodysplastic_syndrome": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "mean_corpuscular_volume_elevated": {
+    "description": "MCV above upper limit of normal (macrocytosis) — common in MDS, megaloblastic anemias, and liver disease",
+    "diseases": {
+      "myelodysplastic_syndrome": {
+        "lr_positive": 3.5,
+        "lr_negative": 0.4
+      },
+      "folate_deficiency": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      },
+      "vitamin_b12_deficiency": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
+      }
+    }
+  },
+  "magnesium_low": {
+    "description": "Serum magnesium below lower limit of normal (hypomagnesemia) — can exacerbate hypocalcemia by impairing PTH secretion",
+    "diseases": {
+      "hypoparathyroidism": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
       }
     }
   },
