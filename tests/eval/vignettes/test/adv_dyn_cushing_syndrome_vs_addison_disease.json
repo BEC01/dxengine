@@ -31,9 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "glucose",
-            "value": 85.0,
-            "unit": "mg/dL"
+            "test_name": "potassium",
+            "value": 4.3,
+            "unit": "mEq/L"
           },
           {
             "test_name": "bicarbonate",
@@ -46,13 +46,13 @@
             "unit": "mcg/dL"
           },
           {
-            "test_name": "potassium",
-            "value": 4.3,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "calcium",
             "value": 9.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 85.0,
             "unit": "mg/dL"
           },
           {
@@ -66,16 +66,6 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "adrenocorticotropic_hormone",
-            "value": 35.2,
-            "unit": "pg/mL"
-          },
-          {
-            "test_name": "sodium",
-            "value": 140.5,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "eosinophils_absolute",
             "value": 0.2,
             "unit": "x10^9/L"
@@ -84,6 +74,16 @@
             "test_name": "blood_urea_nitrogen",
             "value": 13.5,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 140.5,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 35.2,
+            "unit": "pg/mL"
           }
         ]
       }

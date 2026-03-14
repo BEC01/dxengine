@@ -29,23 +29,18 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "platelets",
-            "value": 100.0,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "haptoglobin",
             "value": 10.9,
             "unit": "mg/dL"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 350.0,
-            "unit": "U/L"
+            "test_name": "platelets",
+            "value": 100.0,
+            "unit": "x10^9/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 20.5,
+            "test_name": "lactate_dehydrogenase",
+            "value": 350.0,
             "unit": "U/L"
           },
           {
@@ -57,6 +52,11 @@
             "test_name": "bilirubin_total",
             "value": 0.7,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 20.5,
+            "unit": "U/L"
           }
         ]
       }

@@ -31,21 +31,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "platelets",
-            "value": 218.8,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "antinuclear_antibody_titer",
-            "value": 1.0,
-            "unit": "titer"
-          },
-          {
-            "test_name": "lymphocytes_absolute",
-            "value": 2.0,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "complement_c4",
             "value": 16.2,
             "unit": "mg/dL"
@@ -61,9 +46,24 @@
             "unit": "mm/hr"
           },
           {
+            "test_name": "antinuclear_antibody_titer",
+            "value": 1.0,
+            "unit": "titer"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 2.0,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "complement_c3",
             "value": 102.6,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 218.8,
+            "unit": "x10^9/L"
           }
         ]
       }

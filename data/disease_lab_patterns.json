@@ -1987,5 +1987,43 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 300"
+  },
+  "cholangitis": {
+    "description": "Ascending cholangitis: biliary obstruction with bacterial infection causing cholestatic pattern + systemic inflammation",
+    "pattern": {
+      "alkaline_phosphatase": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.85,
+        "typical_value": 350
+      },
+      "gamma_glutamyl_transferase": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.8,
+        "typical_value": 300
+      },
+      "bilirubin_direct": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.75,
+        "typical_value": 5.0
+      },
+      "white_blood_cells": {
+        "direction": "increased",
+        "typical_z_score": 2.5,
+        "weight": 0.7,
+        "typical_value": 18
+      },
+      "bilirubin_total": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.5,
+        "typical_value": 6.0
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 1500"
   }
 }

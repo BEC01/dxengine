@@ -47,23 +47,13 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 34.3,
-            "unit": "U/L"
-          },
-          {
             "test_name": "platelets",
             "value": 75.0,
             "unit": "x10^9/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 210.0,
+            "test_name": "aspartate_aminotransferase",
+            "value": 34.3,
             "unit": "U/L"
           },
           {
@@ -72,9 +62,19 @@
             "unit": "fL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "reticulocyte_count",
             "value": 1.5,
             "unit": "%"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
           }
         ]
       }

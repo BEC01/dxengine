@@ -32,24 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "hemoglobin",
-            "value": 13.6,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 96.1,
             "unit": "fL"
           },
           {
+            "test_name": "hemoglobin",
+            "value": 13.6,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "reticulocyte_count",
             "value": 1.7,
             "unit": "%"
-          },
-          {
-            "test_name": "lactate_dehydrogenase",
-            "value": 294.0,
-            "unit": "U/L"
           },
           {
             "test_name": "haptoglobin",
@@ -65,6 +60,11 @@
             "test_name": "bilirubin_total",
             "value": 1.2,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 294.0,
+            "unit": "U/L"
           },
           {
             "test_name": "white_blood_cells",

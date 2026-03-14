@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "id": "adv_dyn_cholestatic_liver_disease_vs_hellp_syndrome",
-    "category": "hepatic",
+    "id": "adv_amb_cholestatic_liver_disease_cholangitis",
+    "category": "adversarial",
     "difficulty": "adversarial",
     "split": "test",
     "source": "adversarial",
-    "disease_pattern_name": "cholestatic_liver_disease",
+    "disease_pattern_name": "",
     "variant": 0
   },
   "patient": {
@@ -32,13 +32,13 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 29.6,
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 39.1,
             "unit": "U/L"
           },
           {
             "test_name": "bilirubin_direct",
-            "value": 0.2,
+            "value": 0.3,
             "unit": "mg/dL"
           },
           {
@@ -47,34 +47,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 45.3,
-            "unit": "U/L"
-          },
-          {
             "test_name": "alkaline_phosphatase",
-            "value": 177.9,
+            "value": 149.6,
             "unit": "U/L"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 37.4,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "total_cholesterol",
-            "value": 160.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
-          },
-          {
-            "test_name": "haptoglobin",
-            "value": 115.0,
-            "unit": "mg/dL"
           }
         ]
       }
@@ -83,14 +58,10 @@
     "vitals": {}
   },
   "gold_standard": {
-    "primary_diagnosis": "cholestatic_liver_disease",
-    "acceptable_alternatives": [
-      "hellp_syndrome"
-    ],
+    "primary_diagnosis": "__none__",
+    "expect_no_dominant": true,
     "expected_findings": [],
-    "expected_patterns": [
-      "cholestatic_liver_disease"
-    ],
+    "expected_patterns": [],
     "cant_miss_diseases": []
   }
 }

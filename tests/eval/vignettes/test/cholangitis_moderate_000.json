@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "id": "cholangitis_moderate_000",
+    "category": "hepatic",
+    "difficulty": "moderate",
+    "split": "test",
+    "source": "synthetic",
+    "disease_pattern_name": "cholangitis",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "Reynolds pentad (severe): Charcot triad + hypotension + altered mental status \u2014 indicates suppurative cholangitis with bacteremic shock",
+    "symptoms": [
+      "Reynolds pentad (severe): Charcot triad + hypotension + altered mental status \u2014 indicates suppurative cholangitis with bacteremic shock",
+      "Acute onset fever with rigors and chills, often preceded by biliary colic or known cholelithiasis",
+      "Rapid clinical deterioration to septic shock if biliary decompression delayed beyond 24\u201348 hours"
+    ],
+    "signs": [
+      "Charcot triad: fever/rigors + right upper quadrant pain + jaundice (present together in only 26\u201372% of cases; each element present in >60%)",
+      "Right upper quadrant tenderness on palpation; Murphy sign may be positive (gallbladder co-involvement)",
+      "Jaundice with dark urine and pale/clay-colored stools (acholic stool from biliary obstruction)"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 235.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 180.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 2.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 13.4,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 3.6,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cholangitis",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "cholangitis"
+    ],
+    "cant_miss_diseases": []
+  }
+}

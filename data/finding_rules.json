@@ -2209,6 +2209,19 @@
       "finding_type": "symptom",
       "importance": 4,
       "quality": "moderate"
+    },
+    {
+      "finding_key": "charcot_triad",
+      "match_terms": [
+        "charcot triad",
+        "charcot's triad",
+        "fever with jaundice",
+        "biliary sepsis",
+        "cholangitis"
+      ],
+      "finding_type": "sign",
+      "importance": 5,
+      "quality": "high"
     }
   ],
   "vitals_rules": []

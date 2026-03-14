@@ -31,6 +31,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "hemoglobin",
+            "value": 13.1,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "white_blood_cells",
             "value": 4.9,
             "unit": "x10^9/L"
@@ -44,11 +49,6 @@
             "test_name": "platelets",
             "value": 143.8,
             "unit": "x10^9/L"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 13.1,
-            "unit": "g/dL"
           },
           {
             "test_name": "mean_corpuscular_volume",

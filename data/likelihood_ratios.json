@@ -627,6 +627,10 @@
       "biliary_obstruction": {
         "lr_positive": 12.0,
         "lr_negative": 0.15
+      },
+      "cholangitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -644,6 +648,10 @@
       "hepatocellular_injury": {
         "lr_positive": 3.0,
         "lr_negative": 0.45
+      },
+      "cholangitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.4
       }
     }
   },
@@ -707,6 +715,10 @@
       "alcoholic_hepatitis": {
         "lr_positive": 1.5,
         "lr_negative": 0.4
+      },
+      "cholangitis": {
+        "lr_positive": 1.2,
+        "lr_negative": 0.6
       }
     }
   },
@@ -2868,6 +2880,10 @@
       "chronic_lymphocytic_leukemia": {
         "lr_positive": 1.5,
         "lr_negative": 0.3
+      },
+      "cholangitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3601,6 +3617,15 @@
       "cirrhosis": {
         "lr_positive": 3.0,
         "lr_negative": 0.6
+      }
+    }
+  },
+  "charcot_triad": {
+    "description": "Charcot triad: fever + RUQ pain + jaundice — pathognomonic for cholangitis",
+    "diseases": {
+      "cholangitis": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.2
       }
     }
   }
