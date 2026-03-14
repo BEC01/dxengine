@@ -32,8 +32,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "haptoglobin",
-            "value": 18.3,
+            "test_name": "bilirubin_total",
+            "value": 1.1,
             "unit": "mg/dL"
           },
           {
@@ -42,14 +42,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
+            "test_name": "haptoglobin",
+            "value": 18.3,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 75.0,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "aspartate_aminotransferase",
@@ -57,14 +52,19 @@
             "unit": "U/L"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 90.0,
-            "unit": "fL"
+            "test_name": "platelets",
+            "value": 75.0,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "hemoglobin",
             "value": 14.0,
             "unit": "g/dL"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 90.0,
+            "unit": "fL"
           },
           {
             "test_name": "reticulocyte_count",

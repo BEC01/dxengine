@@ -29,18 +29,23 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "platelets",
-            "value": 121.9,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "lactate_dehydrogenase",
             "value": 308.0,
             "unit": "U/L"
           },
           {
+            "test_name": "platelets",
+            "value": 121.9,
+            "unit": "x10^9/L"
+          },
+          {
             "test_name": "haptoglobin",
             "value": 0.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "triglycerides",
+            "value": 75.0,
             "unit": "mg/dL"
           },
           {
@@ -51,11 +56,6 @@
           {
             "test_name": "fibrinogen",
             "value": 300.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "triglycerides",
-            "value": 75.0,
             "unit": "mg/dL"
           }
         ]

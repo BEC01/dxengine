@@ -31,29 +31,9 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "haptoglobin",
-            "value": 10.9,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "international_normalized_ratio",
-            "value": 1.2,
-            "unit": "ratio"
-          },
-          {
-            "test_name": "partial_thromboplastin_time",
-            "value": 36.2,
-            "unit": "seconds"
-          },
-          {
             "test_name": "mean_corpuscular_volume",
             "value": 91.5,
             "unit": "fL"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 1.9,
-            "unit": "%"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -61,19 +41,19 @@
             "unit": "U/L"
           },
           {
+            "test_name": "partial_thromboplastin_time",
+            "value": 36.2,
+            "unit": "seconds"
+          },
+          {
             "test_name": "bilirubin_direct",
             "value": 0.1,
             "unit": "mg/dL"
           },
           {
-            "test_name": "prothrombin_time",
-            "value": 14.1,
-            "unit": "seconds"
-          },
-          {
-            "test_name": "fibrinogen",
-            "value": 150.0,
-            "unit": "mg/dL"
+            "test_name": "platelets",
+            "value": 87.5,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "d_dimer",
@@ -81,9 +61,14 @@
             "unit": "mcg/mL FEU"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 13.3,
-            "unit": "g/dL"
+            "test_name": "fibrinogen",
+            "value": 150.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "reticulocyte_count",
+            "value": 1.9,
+            "unit": "%"
           },
           {
             "test_name": "bilirubin_total",
@@ -91,9 +76,24 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "platelets",
-            "value": 87.5,
-            "unit": "x10^9/L"
+            "test_name": "hemoglobin",
+            "value": 13.3,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "prothrombin_time",
+            "value": 14.1,
+            "unit": "seconds"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.2,
+            "unit": "ratio"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 10.9,
+            "unit": "mg/dL"
           }
         ]
       }

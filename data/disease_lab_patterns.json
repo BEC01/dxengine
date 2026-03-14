@@ -2025,5 +2025,30 @@
     "key_ratios": [],
     "collectively_abnormal": false,
     "prevalence": "1 in 1500"
+  },
+  "hepatorenal_syndrome": {
+    "description": "Hepatorenal syndrome: functional renal failure in advanced cirrhosis with portal hypertension",
+    "pattern": {
+      "creatinine": {
+        "direction": "increased",
+        "typical_z_score": 3.0,
+        "weight": 0.9,
+        "typical_value": 3.5
+      },
+      "albumin": {
+        "direction": "decreased",
+        "typical_z_score": -3.0,
+        "weight": 0.7
+      },
+      "bilirubin_total": {
+        "direction": "increased",
+        "typical_z_score": 4.0,
+        "weight": 0.7,
+        "typical_value": 12.0
+      }
+    },
+    "key_ratios": [],
+    "collectively_abnormal": false,
+    "prevalence": "1 in 5000"
   }
 }

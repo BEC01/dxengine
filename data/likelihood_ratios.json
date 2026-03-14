@@ -719,6 +719,10 @@
       "cholangitis": {
         "lr_positive": 1.2,
         "lr_negative": 0.6
+      },
+      "hepatorenal_syndrome": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3138,6 +3142,10 @@
       "nephritic_syndrome": {
         "lr_positive": 3.0,
         "lr_negative": 0.4
+      },
+      "hepatorenal_syndrome": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3401,6 +3409,10 @@
       "nephrotic_syndrome": {
         "lr_positive": 6.0,
         "lr_negative": 0.2
+      },
+      "hepatorenal_syndrome": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3626,6 +3638,15 @@
       "cholangitis": {
         "lr_positive": 12.0,
         "lr_negative": 0.2
+      }
+    }
+  },
+  "hepatorenal_clinical_context": {
+    "description": "Clinical context of hepatorenal syndrome: cirrhosis with ascites and renal failure",
+    "diseases": {
+      "hepatorenal_syndrome": {
+        "lr_positive": 12.0,
+        "lr_negative": 0.1
       }
     }
   }

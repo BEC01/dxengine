@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "hepatorenal_syndrome_moderate_000",
+    "category": "renal",
+    "difficulty": "moderate",
+    "split": "train",
+    "source": "synthetic",
+    "disease_pattern_name": "hepatorenal_syndrome",
+    "variant": 0
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "spontaneous bacterial peritonitis as a precipitating event",
+    "symptoms": [
+      "spontaneous bacterial peritonitis as a precipitating event",
+      "absence of proteinuria or hematuria on urinalysis (functional, not structural AKI)",
+      "hypotension or low mean arterial pressure"
+    ],
+    "signs": [
+      "progressive oliguria in the setting of known cirrhosis and ascites",
+      "jaundice with rapidly rising bilirubin",
+      "hepatic encephalopathy (confusion, asterixis)",
+      "refractory ascites not responding to diuretics"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Eval Panel",
+        "values": [
+          {
+            "test_name": "creatinine",
+            "value": 2.4,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.7,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "bilirubin_total",
+            "value": 6.9,
+            "unit": "mg/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hepatorenal_syndrome",
+    "acceptable_alternatives": [],
+    "expected_findings": [],
+    "expected_patterns": [
+      "hepatorenal_syndrome"
+    ],
+    "cant_miss_diseases": []
+  }
+}

@@ -2222,6 +2222,18 @@
       "finding_type": "sign",
       "importance": 5,
       "quality": "high"
+    },
+    {
+      "finding_key": "hepatorenal_clinical_context",
+      "match_terms": [
+        "cirrhosis and ascites",
+        "hepatorenal",
+        "renal failure in cirrhosis",
+        "hepatorenal syndrome"
+      ],
+      "finding_type": "symptom",
+      "importance": 4,
+      "quality": "high"
     }
   ],
   "vitals_rules": []

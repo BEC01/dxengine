@@ -46,11 +46,6 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "neutrophils_absolute",
-            "value": 4.8,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 1.5,
             "unit": "%"
@@ -58,6 +53,11 @@
           {
             "test_name": "platelets",
             "value": 275.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "neutrophils_absolute",
+            "value": 4.8,
             "unit": "x10^9/L"
           }
         ]

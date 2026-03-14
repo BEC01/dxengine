@@ -52,9 +52,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 65.0,
-            "unit": "ng/mL"
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
+            "unit": "U/L"
           },
           {
             "test_name": "uric_acid",
@@ -62,18 +62,18 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "alkaline_phosphatase",
-            "value": 95.5,
-            "unit": "U/L"
+            "test_name": "chloride",
+            "value": 102.0,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 65.0,
+            "unit": "ng/mL"
           },
           {
             "test_name": "bicarbonate",
             "value": 25.5,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "chloride",
-            "value": 102.0,
             "unit": "mEq/L"
           }
         ]

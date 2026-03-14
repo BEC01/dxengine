@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_amb_hepatocellular_injury_cholestatic_liver_disease",
+    "id": "adv_amb_nephritic_syndrome_hepatorenal_syndrome",
     "category": "adversarial",
     "difficulty": "adversarial",
     "split": "test",
@@ -11,17 +11,16 @@
   "patient": {
     "age": 45,
     "sex": "male",
-    "chief_complaint": "right upper quadrant pain",
+    "chief_complaint": "hematuria (cola/tea-colored urine)",
     "symptoms": [
-      "right upper quadrant pain",
-      "nausea/vomiting",
-      "fatigue",
-      "dark urine",
-      "pale stools"
+      "hematuria (cola/tea-colored urine)",
+      "proteinuria (subnephrotic usually)",
+      "hypertension",
+      "oliguria"
     ],
     "signs": [
-      "jaundice",
-      "hepatomegaly"
+      "edema",
+      "RBC casts on urinalysis (pathognomonic)"
     ],
     "medical_history": [],
     "medications": [],
@@ -32,24 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 37.4,
-            "unit": "U/L"
+            "test_name": "albumin",
+            "value": 3.8,
+            "unit": "g/dL"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
+            "test_name": "creatinine",
+            "value": 1.4,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "alanine_aminotransferase",
-            "value": 55.4,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 138.0,
-            "unit": "U/L"
           }
         ]
       }

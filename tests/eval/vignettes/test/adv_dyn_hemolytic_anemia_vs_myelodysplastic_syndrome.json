@@ -32,29 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 96.1,
-            "unit": "fL"
-          },
-          {
             "test_name": "hemoglobin",
             "value": 13.6,
             "unit": "g/dL"
           },
           {
+            "test_name": "mean_corpuscular_volume",
+            "value": 96.1,
+            "unit": "fL"
+          },
+          {
             "test_name": "reticulocyte_count",
             "value": 1.7,
             "unit": "%"
-          },
-          {
-            "test_name": "haptoglobin",
-            "value": 0.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "bilirubin_direct",
-            "value": 0.1,
-            "unit": "mg/dL"
           },
           {
             "test_name": "bilirubin_total",
@@ -67,13 +57,23 @@
             "unit": "U/L"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 7.8,
-            "unit": "x10^9/L"
+            "test_name": "bilirubin_direct",
+            "value": 0.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "haptoglobin",
+            "value": 0.0,
+            "unit": "mg/dL"
           },
           {
             "test_name": "platelets",
             "value": 275.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.8,
             "unit": "x10^9/L"
           }
         ]

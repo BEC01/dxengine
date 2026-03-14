@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "adv_dyn_nephritic_syndrome_vs_multiple_myeloma",
+    "id": "adv_dyn_nephritic_syndrome_vs_hepatorenal_syndrome",
     "category": "renal",
     "difficulty": "adversarial",
     "split": "test",
@@ -32,13 +32,8 @@
         "values": [
           {
             "test_name": "albumin",
-            "value": 3.8,
+            "value": 3.6,
             "unit": "g/dL"
-          },
-          {
-            "test_name": "glomerular_filtration_rate",
-            "value": 89.2,
-            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "creatinine",
@@ -46,34 +41,19 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "glomerular_filtration_rate",
+            "value": 81.0,
+            "unit": "mL/min/1.73m2"
+          },
+          {
             "test_name": "complement_c3",
             "value": 81.0,
             "unit": "mg/dL"
           },
           {
-            "test_name": "calcium",
-            "value": 9.5,
+            "test_name": "bilirubin_total",
+            "value": 0.7,
             "unit": "mg/dL"
-          },
-          {
-            "test_name": "erythrocyte_sedimentation_rate",
-            "value": 7.5,
-            "unit": "mm/hr"
-          },
-          {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "total_protein",
-            "value": 7.2,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 15.5,
-            "unit": "g/dL"
           }
         ]
       }
@@ -84,7 +64,7 @@
   "gold_standard": {
     "primary_diagnosis": "nephritic_syndrome",
     "acceptable_alternatives": [
-      "multiple_myeloma"
+      "hepatorenal_syndrome"
     ],
     "expected_findings": [],
     "expected_patterns": [

@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 42.2,
+            "test_name": "aspartate_aminotransferase",
+            "value": 29.6,
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.2,
-            "unit": "mg/dL"
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 42.2,
+            "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -47,13 +47,8 @@
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 29.6,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "bilirubin_direct",
-            "value": 0.4,
+            "test_name": "bilirubin_total",
+            "value": 1.2,
             "unit": "mg/dL"
           },
           {
@@ -65,6 +60,11 @@
             "test_name": "alkaline_phosphatase",
             "value": 177.9,
             "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.4,
+            "unit": "mg/dL"
           },
           {
             "test_name": "mean_corpuscular_volume",

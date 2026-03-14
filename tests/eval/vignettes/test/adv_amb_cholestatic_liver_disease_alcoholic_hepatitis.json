@@ -32,14 +32,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 39.1,
+            "test_name": "aspartate_aminotransferase",
+            "value": 28.3,
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
-            "unit": "mg/dL"
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 39.1,
+            "unit": "U/L"
           },
           {
             "test_name": "alanine_aminotransferase",
@@ -47,9 +47,9 @@
             "unit": "U/L"
           },
           {
-            "test_name": "aspartate_aminotransferase",
-            "value": 28.3,
-            "unit": "U/L"
+            "test_name": "bilirubin_total",
+            "value": 1.1,
+            "unit": "mg/dL"
           }
         ]
       }

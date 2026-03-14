@@ -36,8 +36,8 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 3.9,
+            "test_name": "platelets",
+            "value": 134.0,
             "unit": "x10^9/L"
           },
           {
@@ -46,8 +46,8 @@
             "unit": "%"
           },
           {
-            "test_name": "platelets",
-            "value": 134.0,
+            "test_name": "white_blood_cells",
+            "value": 3.9,
             "unit": "x10^9/L"
           },
           {

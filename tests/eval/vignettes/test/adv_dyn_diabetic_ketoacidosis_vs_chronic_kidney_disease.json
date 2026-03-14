@@ -29,18 +29,8 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "phosphorus",
-            "value": 3.7,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "potassium",
             "value": 4.8,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "bicarbonate",
-            "value": 22.1,
             "unit": "mEq/L"
           },
           {
@@ -54,14 +44,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "sodium",
-            "value": 137.8,
-            "unit": "mEq/L"
+            "test_name": "phosphorus",
+            "value": 3.7,
+            "unit": "mg/dL"
           },
           {
-            "test_name": "white_blood_cells",
-            "value": 10.3,
-            "unit": "x10^9/L"
+            "test_name": "bicarbonate",
+            "value": 22.1,
+            "unit": "mEq/L"
           },
           {
             "test_name": "glucose",
@@ -74,18 +64,28 @@
             "unit": "%"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
+            "test_name": "sodium",
+            "value": 137.8,
+            "unit": "mEq/L"
           },
           {
-            "test_name": "glomerular_filtration_rate",
-            "value": 105.0,
-            "unit": "mL/min/1.73m2"
+            "test_name": "white_blood_cells",
+            "value": 10.3,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "calcium",
             "value": 9.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.2,
             "unit": "mg/dL"
           },
           {
@@ -94,9 +94,9 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
+            "test_name": "glomerular_filtration_rate",
+            "value": 105.0,
+            "unit": "mL/min/1.73m2"
           },
           {
             "test_name": "hemoglobin",

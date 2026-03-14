@@ -37,11 +37,6 @@
             "unit": "U/L"
           },
           {
-            "test_name": "bilirubin_direct",
-            "value": 0.3,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bilirubin_total",
             "value": 1.1,
             "unit": "mg/dL"
@@ -50,6 +45,11 @@
             "test_name": "alkaline_phosphatase",
             "value": 149.6,
             "unit": "U/L"
+          },
+          {
+            "test_name": "bilirubin_direct",
+            "value": 0.3,
+            "unit": "mg/dL"
           }
         ]
       }

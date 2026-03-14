@@ -44,11 +44,6 @@
             "unit": "ng/mL"
           },
           {
-            "test_name": "myoglobin",
-            "value": 81.1,
-            "unit": "ng/mL"
-          },
-          {
             "test_name": "creatine_kinase",
             "value": 308.2,
             "unit": "U/L"
@@ -56,6 +51,11 @@
           {
             "test_name": "creatine_kinase_mb",
             "value": 8.5,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "myoglobin",
+            "value": 81.1,
             "unit": "ng/mL"
           },
           {
