@@ -125,6 +125,44 @@ For each LR entry, check if a finding rule already exists:
    - `importance`: 1-5 (how diagnostic is this finding)
    - `rule_type`: "single" (default)
 
+### Phase 4b: Clinical Discriminators
+
+Check the disease's illness script `classic_presentation` for findings that could serve as **clinical rules** — unique discriminators that fire on text matching (not lab values). These are critical for diseases sharing lab patterns with existing diseases.
+
+For each item in `classic_presentation`:
+
+1. Is it an **objective, specific** finding? (physical exam sign, specialized test result, specific clinical context like pregnancy, alcohol use, dietary exposure)
+2. Does a `clinical_rule` already exist for it in `finding_rules.json`? Check both the finding_key and match_terms.
+3. Is the term **unique** to this disease? (Does NOT appear in any other disease's classic_presentation in illness_scripts.json)
+
+If a discriminating clinical finding exists with no matching rule AND is unique to this disease:
+- Add to `new_clinical_rules` in the output packet
+- Propose corresponding LR entry in `lr_data` with `finding_rule_exists: true`
+- LR+ should be 8.0-15.0 for strong unique discriminators (HIGH or MODERATE quality)
+- LR- should be 0.05-0.1 (absence of context strongly argues against the disease)
+
+**DO NOT** propose clinical rules for:
+- Non-specific symptoms: fatigue, pain, nausea, weakness, malaise, anorexia (LR+ near 1.0)
+- Findings shared with 3+ diseases' classic_presentations
+- Findings that already have existing clinical rules in finding_rules.json
+
+**GOOD examples** (unique context, high discriminating power):
+- "preeclampsia" → `pregnancy_hypertensive_disorder` (unique to HELLP)
+- "heavy alcohol use" → `heavy_alcohol_use` (unique to alcoholic_hepatitis)
+- "Charcot triad" → `charcot_triad` (unique to cholangitis)
+- "kayser-fleischer rings" → already exists as clinical rule
+
+**Output format** for `new_clinical_rules`:
+```json
+{
+  "finding_key": "descriptive_snake_case",
+  "match_terms": ["term1", "term2", "synonym"],
+  "finding_type": "sign|symptom|lab|imaging",
+  "importance": 4,
+  "quality": "high|moderate"
+}
+```
+
 ### Phase 5: Cross-Disease Conflicts
 
 1. Use `mcp__medical-kb__search_by_findings` with the key findings to find overlapping diseases
@@ -178,6 +216,15 @@ Output a complete `research.json` packet to the specified path:
       "rule_type": "single"
     }
   ],
+  "new_clinical_rules": [
+    {
+      "finding_key": "clinical_discriminator_name",
+      "match_terms": ["substring1", "synonym2"],
+      "finding_type": "sign",
+      "importance": 4,
+      "quality": "high"
+    }
+  ],
   "illness_script_update": null,
   "conflicts": ["disease_x (shares analyte_a, analyte_b)"],
   "skipped_analytes": ["analyte_not_in_lab_ranges"],
@@ -195,5 +242,5 @@ Output a complete `research.json` packet to the specified path:
 6. **Only use analytes from the 91-analyte list** — skip any not available
 7. **LR bounds**: LR+ in [0.5, 50.0], LR- in [0.05, 1.5]
 8. **Be conservative** — underestimate rather than overestimate diagnostic power. It's easier to tune up than to debug false positives.
-9. **Focus on LAB findings** — DxEngine is a lab-based engine. Clinical findings (symptoms, signs) can be included as LR entries but the pattern must be lab-based.
+9. **Pattern must be lab-based, but include clinical discriminators** — The disease pattern uses lab analytes. However, diseases sharing lab patterns with existing diseases NEED clinical rule discriminators (unique clinical context like pregnancy, alcohol use, specific signs) to achieve competitive evidence ceilings. Always check Phase 4b and propose clinical rules when unique terms exist in the illness script.
 10. **Record calculations** — show the sens/(1-spec) math for every computed LR

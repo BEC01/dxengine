@@ -179,11 +179,26 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
     if lr_modified:
         changes["files_modified"].append("likelihood_ratios.json")
 
+    # --- Clinical rules integration ---
+    clinical_rules_added = 0
+    existing_clinical_keys = {r["finding_key"] for r in rules.get("clinical_rules", [])}
+    for rule in research.get("new_clinical_rules", []):
+        if rule["finding_key"] in existing_clinical_keys:
+            continue
+        rules.setdefault("clinical_rules", []).append(rule)
+        clinical_rules_added += 1
+
+    if clinical_rules_added > 0:
+        if "finding_rules.json" not in changes["files_modified"]:
+            changes["files_modified"].append("finding_rules.json")
+    changes["clinical_rules_added"] = clinical_rules_added
+
     # --- Finding rules integration ---
-    rules_modified = False
+    rules_modified = clinical_rules_added > 0
     existing_rule_keys = {r["finding_key"] for r in rules.get("single_rules", [])}
     existing_rule_keys.update(r["finding_key"] for r in rules.get("composite_rules", []))
     existing_rule_keys.update(r["finding_key"] for r in rules.get("computed_rules", []))
+    existing_rule_keys.update(existing_clinical_keys)
 
     for rule in new_finding_rules:
         if rule["finding_key"] in existing_rule_keys:
@@ -208,7 +223,7 @@ def integrate(research_path: str, dry_run: bool = False) -> dict:
         changes["finding_rules_added"] += 1
         rules_modified = True
 
-    if rules_modified:
+    if rules_modified and "finding_rules.json" not in changes["files_modified"]:
         changes["files_modified"].append("finding_rules.json")
 
     # --- Illness script update ---
@@ -282,6 +297,7 @@ def main():
     print(f"  LR entries added: {changes['lr_entries_added']}")
     print(f"  LR entries updated: {changes['lr_entries_updated']}")
     print(f"  Finding rules added: {changes['finding_rules_added']}")
+    print(f"  Clinical rules added: {changes.get('clinical_rules_added', 0)}")
     print(f"  Illness script updated: {changes['illness_script_updated']}")
 
     if not args.dry_run and changes["files_modified"]:
