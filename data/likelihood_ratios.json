@@ -3256,6 +3256,19 @@
       "myelodysplastic_syndrome": {
         "lr_positive": 1.5,
         "lr_negative": 0.5
+      },
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "partial_thromboplastin_time_elevated": {
+    "description": "Partial thromboplastin time (PTT/aPTT) above upper limit of normal — indicates intrinsic coagulation pathway dysfunction or consumption",
+    "diseases": {
+      "disseminated_intravascular_coagulation": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
       }
     }
   },
