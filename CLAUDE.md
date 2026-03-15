@@ -37,6 +37,7 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 ## Skills
 
 - `/diagnose <patient_data>` — Run full diagnostic reasoning loop
+- `/eval [layer] [category]` — Run multi-layer clinical evaluation (lab accuracy, clinical cases, LLM comparison, pytest gates)
 - `/improve [iterations=5] [focus=area]` — Run self-improvement loop on data files
 - `/expand [focus=category]` — Perpetual disease expansion loop — autonomously researches, validates, and integrates new diseases
 
@@ -111,7 +112,7 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Absent-finding rule-out evidence (Pass 6): when a lab test is ordered and normal, generates `supports=False` evidence for findings with LR- < 0.1. Uses `_ABSENT_SUBSUMES` dict (reverse of `_SUBSUMES`), z-score proximity check (skip if value trending toward threshold), and `covered_tests` suppression.
 - Clinical feature integration (Pass 7): evaluates 90 `clinical_rules` in `finding_rules.json` against patient text fields (signs, symptoms, imaging, medical_history). Substring matching with negation prefix guard. Finding types: sign, symptom, imaging, lab. Generates `source="finding_mapper_clinical"` Evidence. Lab rules take priority over clinical text for same finding_key.
 - Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (29 entries across 13 diseases)
-- 424 tests passing, eval score 0.8311 with 378 vignettes (373 synthetic + 5 fixtures), 45 disease patterns, 25 discovery candidates
+- 423 tests passing (unit + eval gates), 54 disease patterns, 25 discovery candidates
 
 ## /expand — Disease Expansion System
 
@@ -405,6 +406,181 @@ Replace associative query "P(disease|findings)" with counterfactual "would findi
 **Dynamic sparse network generation (MidasMed approach):**
 For each patient, generate a tailored 30-50 disease sub-network instead of reasoning over all diseases. Validated by MidasMed (93% top-1 with 200 disease families). Needed at 200+ diseases. Different from rejected "category filtering" because it uses finding-based relevance, not organ-system categories.
 
+## Clinical Evaluation System (2026-03-15, CURRENT)
+
+### Current State
+
+Three-layer evaluation built and operational. Clinical accuracy validated on 50 independent teaching cases. Blind LLM comparison completed. `/eval` skill orchestrates all layers.
+
+**Headline numbers:**
+- **Layer 1 (Lab Accuracy):** 100% pass rate on 1,227 test points, 97.5% classification agreement with textbook ranges
+- **Layer 2 (Clinical Cases):** 92.5% top-3 on 50 teaching cases, 94.1% importance-5 sensitivity, 100% OOV safety
+- **Layer 3 (vs Claude blind):** Engine top-3 82.5% → 92.5% (after fixes), Claude blind top-3 97.5%. Engine wins on OOV safety (100% vs 0%).
+- **Synthetic-clinical gap:** -7.2% (synthetic overestimates by 7 points — confirms clinical eval was needed)
+
+### Evaluation Architecture
+
+```
+Layer 1: LAB INTERPRETATION ACCURACY (DONE)
+  1,227 test points: 98 analytes × demographics × value positions
+  Cross-validated against 40 textbook reference ranges (Laposata, Fischbach)
+  Location: tests/eval/lab_accuracy/
+
+Layer 2: CLINICAL TEACHING CASES (DONE)
+  50 cases: 40 in-vocabulary (17 imp-5, 15 imp-4, 8 imp-3/2) + 10 OOV
+  Lab values from medical knowledge, NOT from disease_lab_patterns.json
+  Clinical-specific metrics: imp-5 sensitivity, OOV handling, discriminator recall, Wilson CIs
+  Location: tests/eval/clinical/
+
+Layer 3: LLM COMPARISON (DONE)
+  Blind Claude diagnoses (subagents with no access to gold standard)
+  Cached at state/comparison/claude_results.json — no API keys needed
+  Location: tests/eval/comparison/
+
+Synthetic Regression (EXISTS — unchanged)
+  464 vignettes, 8 types per disease, adversarial cases
+  /improve and /expand optimize against this — clinical eval is held-out
+```
+
+**Critical rule:** `/improve` and `/expand` NEVER optimize against clinical cases. They optimize against synthetic eval only. Clinical eval is the held-out ground truth. `/expand` runs clinical eval as a secondary check after accepting a disease (warn-only, not blocking).
+
+### Eval Commands
+
+```bash
+/eval              # Run all layers + unified summary
+/eval lab          # Layer 1: lab interpretation accuracy
+/eval clinical     # Layer 2: 50 clinical teaching cases
+/eval compare      # Layer 3: DxEngine vs blind Claude
+/eval pytest       # All 22 threshold assertions
+
+# Or directly:
+uv run python tests/eval/lab_accuracy/run_lab_accuracy.py
+uv run python tests/eval/clinical/run_clinical_eval.py
+uv run python tests/eval/comparison/run_comparison.py --reuse-cache --models claude
+uv run pytest tests/eval/lab_accuracy/ tests/eval/clinical/ tests/eval/comparison/ -v
+```
+
+### Remaining Clinical Failures (2 of 50)
+
+- **alcoholic_hepatitis** (rank 4, p=0.059): competing with sepsis/IE/DIC — shared nonspecific findings (low Na, low K, elevated WBC). Needs stronger unique discriminators.
+- **macrophage_activation_syndrome** (rank 7, p=0.054): competing with TTP/TLS/sepsis — shared hematologic/inflammatory findings. 25 hypotheses dilute the posterior despite ferritin >1000 firing.
+
+### Eval File Structure
+
+```
+tests/eval/
+  lab_accuracy/                    # Layer 1
+    schema.py, matrix_generator.py, matrix_runner.py
+    cross_validator.py, reporter.py, run_lab_accuracy.py
+    test_lab_accuracy.py           # 11 pytest assertions
+    data/textbook_ranges.json      # 40 external reference ranges
+
+  clinical/                        # Layer 2
+    run_clinical_eval.py           # CLI with clinical-specific metrics
+    test_clinical_eval.py          # 7 pytest assertions
+    cases/                         # 50 clinical case JSON files
+      clinical_{disease}_001.json  # 40 in-vocabulary
+      clinical_oov_{disease}_001.json  # 10 out-of-vocabulary
+
+  comparison/                      # Layer 3
+    prompt.py                      # Case → LLM prompt formatting
+    llm_runner.py                  # API integration + response parsing + disease name normalization
+    run_comparison.py              # Side-by-side comparison report
+    test_comparison.py             # 4 pytest assertions (skip without cache)
+
+  # Synthetic eval (unchanged)
+  generate_vignettes.py, runner.py, scorer.py, reporter.py, schema.py
+
+.claude/skills/eval/skill.md      # /eval skill definition
+state/comparison/claude_results.json  # Cached blind Claude diagnoses
+```
+
+---
+
+## Path to Helping People — Revised Roadmap (2026-03-15)
+
+### Strategic Context
+
+DxEngine is a doctor-facing clinical decision support tool. It provides three things no other tool offers: (1) collectively-abnormal detection, (2) calibrated uncertainty with transparent LR evidence chains, (3) information-gain test suggestion. The engine has 54 diseases, 92.5% clinical top-3 accuracy, and a 3-layer independent evaluation.
+
+**The bottleneck is no longer the engine. It's that nobody can use it.**
+
+### Phase A: Equity Audit + Safety Argument (NEXT — 1 week)
+**Must do BEFORE public release. Responsible open-sourcing of medical AI.**
+
+- Reference range audit: document source populations for 98 analytes, flag ethnicity-dependent ranges
+- LR source audit: document study populations for 689 LR pairs, flag limited-diversity sources
+- Performance disaggregation: run eval with demographic variants
+- Safety argument document (Waymo pattern): claims + evidence + limitations
+- Known failure modes documented explicitly
+- Output: `MODEL_CARD.md` in repo root
+
+### Phase B: Open-Source Preparation (1-2 days)
+**Make the project visible to the world.**
+
+- README with architecture, eval results, comparison vs Claude, disclaimers
+- License selection (MIT or Apache 2.0)
+- Clean up repo for public consumption
+- Contribution guidelines
+- Clear medical disclaimers: "This is decision support for healthcare professionals, not a diagnostic tool for patients"
+
+### Phase C: Simple API (1-2 days)
+**Make it usable beyond Claude Code.**
+
+- FastAPI endpoint: POST /api/diagnose with lab values → ranked differential
+- Pipeline runs in ~5ms — wrapping in HTTP is trivial
+- Enables integration into EHR plugins, teaching tools, lab result viewers
+- Include disclaimers in API responses
+
+### Phase D: Public Release
+**The moment it starts helping people.**
+
+- Push to public GitHub repo
+- Announce in medical informatics communities
+- Invite contributions (clinician case submissions, disease expansions, translations)
+
+### Phase E: Continue Building (ongoing, after release)
+- Expand to 100+ diseases via /expand
+- Synthea cross-validation (independent synthetic data)
+- NHANES population-representative validation
+- Scale clinical cases to 200+ via extraction pipeline
+- Clinical utility pilot with residents (proves tool helps doctors)
+- Collectively-abnormal benchmark (first of its kind — publishable)
+- Journal paper (JAMIA/JBI) with all evidence
+
+### What NOT to Do Before Release
+- Don't wait for 200+ clinical cases — 50 is credible enough
+- Don't wait for NHANES — it strengthens but doesn't block
+- Don't build a web UI — API first, interface later
+- Don't wait for the paper — open-source first, publish after
+
+### Publishability Path (after release)
+
+**Target:** JAMIA, JBI, BMC Medical Informatics, JMIR Medical Informatics
+
+**Paper structure:**
+1. Background: diagnostic error (795K Americans/year), failed CDSSs (DXplain, QMR, Epic)
+2. System: hybrid Bayesian + LLM with collectively-abnormal detection
+3. Validation: 3-layer eval on 50 clinical cases + blind LLM comparison
+4. Clinical utility study with residents (if completed)
+5. Transparency: equity audit, safety argument, all code/data open
+6. Unique: collectively-abnormal detection benchmark, autonomous knowledge expansion
+
+**Regulatory:** FDA CDS exemption pathway — system meets all 4 criteria (no images, displays medical info, supports HCP, clinician can verify)
+
+### Data Sources Reference
+
+| Source | Cases | Labs? | Open? | Status |
+|--------|-------|-------|-------|--------|
+| **Textbook ranges** | 40 analytes | Ref ranges | Curated | DONE (Layer 1) |
+| **Teaching cases** | 50 cases | Structured | Curated | DONE (Layer 2) |
+| **Blind Claude** | 50 diagnoses | N/A | Generated | DONE (Layer 3) |
+| **MultiCaRe** | 85,653 | In text | CC-BY 4.0 | Future (scale to 200+) |
+| **MedCaseReasoning** | 14,489 | In text | CC-BY | Future (scale to 200+) |
+| **NHANES** | ~10K/cycle | Structured | Public | Future (Phase E) |
+| **Synthea** | Unlimited | FHIR/LOINC | Apache 2.0 | Future (Phase E) |
+| **MIMIC-IV** | 300K+ | Structured | Credentialed | Private only (can't redistribute) |
+
 ## Prior Roadmap (v2, completed)
 
 v2 roadmap items are all completed or superseded by v3. See auto-memory `v2_roadmap.md` for history.
@@ -418,8 +594,8 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 | lab_ranges.json | Age/sex-adjusted reference ranges | 98 analytes |
 | disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 54 patterns, 50 typical_values |
 | illness_scripts.json | Structured illness scripts with disease_importance | 64 diseases |
-| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 237 findings, 616 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 146 lab rules + 97 clinical rules + 54 name_aliases |
+| likelihood_ratios.json | LR+/LR- for finding-disease pairs | 262 findings, 689 LR pairs |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 146 lab rules + 100 clinical rules + 54 name_aliases |
 | discovery_candidates.json | Curated disease candidates for auto-discovery with locked importance/category | 25 candidates (3 waves) |
 | loinc_mappings.json | LOINC code <-> common name mappings | 98 codes, 322 name mappings |
 
