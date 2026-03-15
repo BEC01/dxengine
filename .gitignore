@@ -12,6 +12,11 @@ state/
 !state/comparison/claude_results.json
 
 sandbox/
+!sandbox/tournament/
+!sandbox/tournament/**
+sandbox/tournament/__pycache__/
+sandbox/tournament/**/__pycache__/
+sandbox/tournament/results/
 
 # Environment
 .env

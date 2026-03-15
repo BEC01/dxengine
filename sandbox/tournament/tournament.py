@@ -296,6 +296,9 @@ class TournamentOrchestrator:
                 ):
                     try:
                         instance = obj()
+                        # Skip the agent_template (it's a no-op placeholder)
+                        if instance.name == "agent_template":
+                            continue
                         discovered.append(instance)
                     except Exception as exc:
                         print(
