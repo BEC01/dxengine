@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "id": "clinical_rhabdomyolysis_001",
+    "category": "metabolic_toxic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "rhabdomyolysis",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 32,
+    "sex": "male",
+    "chief_complaint": "severe muscle pain, weakness, and dark brown urine after intense exercise",
+    "symptoms": ["severe muscle pain", "weakness", "nausea", "dark urine with positive dipstick blood no rbc"],
+    "signs": [],
+    "medical_history": ["no significant past medical history"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["completed a marathon in extreme heat yesterday", "no regular training"],
+    "lab_panels": [
+      {
+        "panel_name": "Muscle Injury Panel",
+        "values": [
+          {"test_name": "creatine_kinase", "value": 45000, "unit": "U/L"},
+          {"test_name": "myoglobin", "value": 2800, "unit": "ng/mL"},
+          {"test_name": "lactate_dehydrogenase", "value": 850, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 520, "unit": "U/L"},
+          {"test_name": "alanine_aminotransferase", "value": 185, "unit": "U/L"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 136, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 5.9, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 100, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 18, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 35, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 2.5, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 110, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 7.2, "unit": "mg/dL"},
+          {"test_name": "phosphorus", "value": 6.8, "unit": "mg/dL"},
+          {"test_name": "uric_acid", "value": 11.5, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 13.5, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 15.2, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 220, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 105, "blood_pressure_systolic": 130, "blood_pressure_diastolic": 78}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "rhabdomyolysis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ck_greater_than_10x_uln", "ck_greater_than_5x_uln", "myoglobin_elevated", "ldh_elevated", "creatinine_elevated", "potassium_elevated", "calcium_low", "phosphorus_elevated", "uric_acid_greater_than_10", "dark_urine_with_positive_dipstick_blood_no_rbcs"],
+    "expected_patterns": ["rhabdomyolysis"],
+    "expect_high_entropy": false
+  }
+}

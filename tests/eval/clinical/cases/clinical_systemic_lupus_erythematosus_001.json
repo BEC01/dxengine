@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_systemic_lupus_erythematosus_001",
+    "category": "rheumatologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "systemic_lupus_erythematosus",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 28,
+    "sex": "female",
+    "chief_complaint": "facial rash, joint pain, and fatigue for 2 months",
+    "symptoms": ["fatigue", "joint pain", "hair loss", "oral ulcers", "photosensitivity"],
+    "signs": ["malar rash", "oral ulcers", "non-erosive synovitis of hands", "alopecia"],
+    "medical_history": ["Raynaud phenomenon"],
+    "medications": [],
+    "family_history": ["sister with Sjogren syndrome"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Autoimmune Panel",
+        "values": [
+          {"test_name": "antinuclear_antibody_titer", "value": 8, "unit": "titer"},
+          {"test_name": "anti_dsdna_antibody", "value": 120, "unit": "IU/mL"},
+          {"test_name": "complement_c3", "value": 55, "unit": "mg/dL"},
+          {"test_name": "complement_c4", "value": 8, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "hemoglobin", "value": 10.5, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 3.2, "unit": "x10^9/L"},
+          {"test_name": "lymphocytes_absolute", "value": 0.8, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 118, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Chemistry and Inflammatory",
+        "values": [
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 62, "unit": "mm/hr"},
+          {"test_name": "c_reactive_protein", "value": 3.5, "unit": "mg/L"},
+          {"test_name": "creatinine", "value": 0.7, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.0, "unit": "mEq/L"},
+          {"test_name": "albumin", "value": 3.3, "unit": "g/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "systemic_lupus_erythematosus",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ana_positive", "anti_dsdna_positive", "malar_rash", "oral_ulcers", "photosensitivity_rash"],
+    "expected_patterns": ["systemic_lupus_erythematosus"],
+    "expect_high_entropy": false
+  }
+}

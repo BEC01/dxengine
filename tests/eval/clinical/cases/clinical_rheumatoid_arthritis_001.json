@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "id": "clinical_rheumatoid_arthritis_001",
+    "category": "rheumatologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "rheumatoid_arthritis",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "Bilateral hand and wrist pain and stiffness for 4 months",
+    "symptoms": [
+      "bilateral hand and wrist pain",
+      "prolonged morning stiffness",
+      "fatigue",
+      "low-grade fevers"
+    ],
+    "signs": [
+      "symmetric polyarthritis of MCP and PIP joints",
+      "mcp joint swelling bilaterally",
+      "warmth of affected joints",
+      "rheumatoid nodule on right olecranon",
+      "grip strength reduced bilaterally"
+    ],
+    "medical_history": [],
+    "medications": ["ibuprofen as needed"],
+    "family_history": ["mother with rheumatoid arthritis"],
+    "social_history": ["never smoker"],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "rheumatoid_factor", "value": 85, "unit": "IU/mL"},
+          {"test_name": "anti_ccp_antibody", "value": 165, "unit": "U/mL"},
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 48, "unit": "mm/hr"},
+          {"test_name": "c_reactive_protein", "value": 22, "unit": "mg/L"},
+          {"test_name": "hemoglobin", "value": 11.2, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 8.5, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 380, "unit": "x10^9/L"},
+          {"test_name": "albumin", "value": 3.4, "unit": "g/dL"},
+          {"test_name": "creatinine", "value": 0.72, "unit": "mg/dL"},
+          {"test_name": "alanine_aminotransferase", "value": 22, "unit": "U/L"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "rheumatoid_arthritis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["anti_ccp_positive", "rheumatoid_factor_positive", "symmetric_polyarthritis_small_joints", "rheumatoid_nodules", "morning_stiffness_greater_than_1_hour"],
+    "expected_patterns": ["rheumatoid_arthritis"]
+  }
+}

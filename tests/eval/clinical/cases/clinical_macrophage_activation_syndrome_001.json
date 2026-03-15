@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "id": "clinical_macrophage_activation_syndrome_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "macrophage_activation_syndrome",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 30,
+    "sex": "female",
+    "chief_complaint": "persistent high fever, worsening fatigue, and jaundice for 1 week",
+    "symptoms": ["persistent fever", "fatigue", "malaise", "abdominal fullness"],
+    "signs": [],
+    "medical_history": ["sJIA (juvenile idiopathic arthritis) diagnosed at age 12"],
+    "medications": ["methotrexate", "prednisone 5 mg daily"],
+    "family_history": [],
+    "social_history": ["non-smoker"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC with Differential",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 2.8, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 8.0, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 45, "unit": "x10^9/L"},
+          {"test_name": "neutrophils_absolute", "value": 0.9, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Hemolysis and Inflammation",
+        "values": [
+          {"test_name": "ferritin", "value": 18500, "unit": "ng/mL"},
+          {"test_name": "lactate_dehydrogenase", "value": 1250, "unit": "U/L"},
+          {"test_name": "triglycerides", "value": 420, "unit": "mg/dL"},
+          {"test_name": "fibrinogen", "value": 95, "unit": "mg/dL"},
+          {"test_name": "c_reactive_protein", "value": 85, "unit": "mg/L"},
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 18, "unit": "mm/hr"}
+        ]
+      },
+      {
+        "panel_name": "Liver Panel",
+        "values": [
+          {"test_name": "aspartate_aminotransferase", "value": 285, "unit": "U/L"},
+          {"test_name": "alanine_aminotransferase", "value": 195, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 3.8, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 132, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.2, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 1.2, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 90, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["CT abdomen shows hepatosplenomegaly"],
+    "vitals": {"heart_rate": 115, "blood_pressure_systolic": 100, "blood_pressure_diastolic": 62, "temperature": 39.5}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "macrophage_activation_syndrome",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ferritin_greater_than_1000", "fibrinogen_low", "platelets_less_than_50000", "ldh_elevated", "triglycerides_elevated", "hemoglobin_low", "white_blood_cells_low"],
+    "expected_patterns": ["macrophage_activation_syndrome"],
+    "expect_high_entropy": false
+  }
+}

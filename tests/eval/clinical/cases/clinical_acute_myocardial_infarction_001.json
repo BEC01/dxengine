@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "clinical_acute_myocardial_infarction_001",
+    "category": "cardiac",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "acute_myocardial_infarction",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 62,
+    "sex": "male",
+    "chief_complaint": "substernal chest pressure radiating to left arm for 2 hours",
+    "symptoms": ["substernal chest pain", "diaphoresis", "nausea", "dyspnea"],
+    "signs": ["diaphoresis"],
+    "medical_history": ["hypertension", "type 2 diabetes mellitus", "hyperlipidemia"],
+    "medications": ["metformin", "lisinopril", "atorvastatin"],
+    "family_history": ["father had MI at age 55"],
+    "social_history": ["former smoker, quit 5 years ago", "occasional alcohol use"],
+    "lab_panels": [
+      {
+        "panel_name": "Cardiac Panel",
+        "values": [
+          {"test_name": "troponin_i", "value": 4.8, "unit": "ng/mL"},
+          {"test_name": "creatine_kinase", "value": 920, "unit": "U/L"},
+          {"test_name": "creatine_kinase_mb", "value": 52, "unit": "ng/mL"},
+          {"test_name": "b_type_natriuretic_peptide", "value": 280, "unit": "pg/mL"},
+          {"test_name": "lactate_dehydrogenase", "value": 380, "unit": "U/L"},
+          {"test_name": "myoglobin", "value": 310, "unit": "ng/mL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 139, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.2, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 102, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 24, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 18, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.1, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 165, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 12.8, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 245, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": ["ECG shows ST elevation in leads V1-V4"],
+    "vitals": {"heart_rate": 98, "blood_pressure_systolic": 148, "blood_pressure_diastolic": 92}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "acute_myocardial_infarction",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["troponin_elevated", "creatine_kinase_mb_elevated", "ck_greater_than_5x_uln", "ldh_elevated", "myoglobin_elevated", "chest_pain_substernal_pressure", "st_elevation_on_ecg"],
+    "expected_patterns": ["acute_myocardial_infarction"],
+    "expect_high_entropy": false
+  }
+}

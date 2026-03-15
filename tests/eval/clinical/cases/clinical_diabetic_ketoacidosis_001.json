@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_diabetic_ketoacidosis_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "diabetic_ketoacidosis",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 28,
+    "sex": "female",
+    "chief_complaint": "nausea, vomiting, abdominal pain, and Kussmaul breathing for 12 hours",
+    "symptoms": ["nausea", "vomiting", "abdominal pain", "polyuria", "polydipsia", "kussmaul breathing"],
+    "signs": ["fruity breath", "kussmaul breathing"],
+    "medical_history": ["type 1 diabetes mellitus diagnosed age 14"],
+    "medications": ["insulin glargine", "insulin lispro"],
+    "family_history": ["mother has type 1 diabetes"],
+    "social_history": ["college student", "ran out of insulin 2 days ago"],
+    "lab_panels": [
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 131, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 5.6, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 95, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 10, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 28, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.5, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 485, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 14.2, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 275, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Other Labs",
+        "values": [
+          {"test_name": "hemoglobin_a1c", "value": 11.2, "unit": "%"},
+          {"test_name": "phosphorus", "value": 5.2, "unit": "mg/dL"},
+          {"test_name": "magnesium", "value": 1.6, "unit": "mg/dL"},
+          {"test_name": "lactate", "value": 2.8, "unit": "mmol/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 118, "blood_pressure_systolic": 100, "blood_pressure_diastolic": 60, "respiratory_rate": 28, "temperature": 37.1}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "diabetic_ketoacidosis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["glucose_greater_than_250", "bicarbonate_low", "hba1c_greater_than_6_5", "glucose_elevated", "potassium_elevated", "kussmaul_breathing", "fruity_breath"],
+    "expected_patterns": ["diabetic_ketoacidosis"],
+    "expect_high_entropy": false
+  }
+}

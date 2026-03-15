@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "id": "clinical_cushing_syndrome_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "cushing_syndrome",
+    "tags": [
+      "teaching_case",
+      "importance_4"
+    ]
+  },
+  "patient": {
+    "age": 38,
+    "sex": "female",
+    "chief_complaint": "weight gain, easy bruising, and proximal weakness for 6 months",
+    "symptoms": [
+      "central weight gain",
+      "easy bruising",
+      "proximal muscle weakness",
+      "depression",
+      "irregular menses",
+      "acne"
+    ],
+    "signs": [
+      "moon facies",
+      "buffalo hump",
+      "purple striae",
+      "truncal obesity",
+      "thin skin",
+      "facial plethora"
+    ],
+    "medical_history": [
+      "hypertension",
+      "new-onset diabetes"
+    ],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Endocrine Panel",
+        "values": [
+          {
+            "test_name": "cortisol_am",
+            "value": 32.0,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "adrenocorticotropic_hormone",
+            "value": 85.0,
+            "unit": "pg/mL"
+          }
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {
+            "test_name": "sodium",
+            "value": 143,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 31,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "glucose",
+            "value": 185,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "calcium",
+            "value": 9.5,
+            "unit": "mg/dL"
+          }
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {
+            "test_name": "white_blood_cells",
+            "value": 12.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.2,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 280,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "lymphocytes_absolute",
+            "value": 0.9,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 98
+    }
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cushing_syndrome",
+    "acceptable_alternatives": [],
+    "key_discriminators": [
+      "cortisol_am_greater_than_18",
+      "purple_striae",
+      "potassium_low",
+      "bicarbonate_elevated",
+      "white_blood_cells_elevated"
+    ],
+    "expected_patterns": [
+      "cushing_syndrome"
+    ],
+    "expect_high_entropy": false
+  }
+}

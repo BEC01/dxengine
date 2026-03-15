@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_nephrotic_syndrome_001",
+    "category": "renal",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "nephrotic_syndrome",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 45,
+    "sex": "male",
+    "chief_complaint": "Progressive bilateral leg swelling and foamy urine for 6 weeks",
+    "symptoms": [
+      "bilateral leg swelling",
+      "foamy urine",
+      "weight gain of 20 pounds",
+      "fatigue",
+      "loss of appetite"
+    ],
+    "signs": [
+      "periorbital edema",
+      "bilateral pitting edema to mid-thigh",
+      "ascites",
+      "pallor"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "albumin", "value": 1.8, "unit": "g/dL"},
+          {"test_name": "total_protein", "value": 4.2, "unit": "g/dL"},
+          {"test_name": "microalbumin_urine", "value": 850, "unit": "mg/L"},
+          {"test_name": "total_cholesterol", "value": 380, "unit": "mg/dL"},
+          {"test_name": "ldl_cholesterol", "value": 240, "unit": "mg/dL"},
+          {"test_name": "triglycerides", "value": 310, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.2, "unit": "mg/dL"},
+          {"test_name": "blood_urea_nitrogen", "value": 18, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 136, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.0, "unit": "mEq/L"},
+          {"test_name": "calcium", "value": 7.9, "unit": "mg/dL"},
+          {"test_name": "hemoglobin", "value": 13.5, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 7.0, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 290, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "nephrotic_syndrome",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["proteinuria_nephrotic_range", "periorbital_edema_morning", "foamy_urine"],
+    "expected_patterns": ["nephrotic_syndrome"]
+  }
+}

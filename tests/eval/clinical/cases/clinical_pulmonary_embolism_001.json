@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_pulmonary_embolism_001",
+    "category": "cardiovascular",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "pulmonary_embolism",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "sudden onset pleuritic chest pain and dyspnea",
+    "symptoms": ["pleuritic chest pain", "dyspnea", "palpitations"],
+    "signs": [],
+    "medical_history": ["recent knee arthroscopy 10 days ago", "oral contraceptive use"],
+    "medications": ["combined oral contraceptive"],
+    "family_history": ["mother had DVT at age 50"],
+    "social_history": ["non-smoker", "works as an accountant"],
+    "lab_panels": [
+      {
+        "panel_name": "Coagulation and Markers",
+        "values": [
+          {"test_name": "d_dimer", "value": 4.8, "unit": "mcg/mL FEU"},
+          {"test_name": "troponin_i", "value": 0.18, "unit": "ng/mL"},
+          {"test_name": "b_type_natriuretic_peptide", "value": 320, "unit": "pg/mL"},
+          {"test_name": "lactate_dehydrogenase", "value": 310, "unit": "U/L"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 9.2, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 13.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 210, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.0, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 103, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 22, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 14, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 0.8, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 92, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["CTPA shows bilateral segmental pulmonary emboli with right ventricular strain"],
+    "vitals": {"heart_rate": 115, "blood_pressure_systolic": 105, "blood_pressure_diastolic": 68, "respiratory_rate": 24}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "pulmonary_embolism",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["d_dimer_elevated", "troponin_elevated", "ldh_elevated", "chest_pain_pleuritic"],
+    "expected_patterns": ["pulmonary_embolism"],
+    "expect_high_entropy": false
+  }
+}

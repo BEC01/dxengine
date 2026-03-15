@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "id": "clinical_sepsis_001",
+    "category": "infectious",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "sepsis",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 72,
+    "sex": "male",
+    "chief_complaint": "fever, confusion, and decreased urine output for 1 day",
+    "symptoms": ["fever", "confusion", "rigors", "malaise"],
+    "signs": ["diaphoresis"],
+    "medical_history": ["benign prostatic hyperplasia", "type 2 diabetes mellitus", "chronic kidney disease stage 3"],
+    "medications": ["tamsulosin", "metformin", "glipizide"],
+    "family_history": [],
+    "social_history": ["retired teacher", "no tobacco or alcohol"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 18.5, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 11.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 98, "unit": "x10^9/L"},
+          {"test_name": "neutrophils_absolute", "value": 15.2, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 134, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.8, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 100, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 18, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 42, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 2.8, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 185, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Inflammatory Markers",
+        "values": [
+          {"test_name": "c_reactive_protein", "value": 185, "unit": "mg/L"},
+          {"test_name": "procalcitonin", "value": 8.5, "unit": "ng/mL"},
+          {"test_name": "lactate", "value": 5.2, "unit": "mmol/L"}
+        ]
+      },
+      {
+        "panel_name": "Coagulation",
+        "values": [
+          {"test_name": "international_normalized_ratio", "value": 1.6, "unit": "ratio"},
+          {"test_name": "prothrombin_time", "value": 18.2, "unit": "seconds"}
+        ]
+      }
+    ],
+    "imaging": ["chest X-ray unremarkable"],
+    "vitals": {"heart_rate": 112, "blood_pressure_systolic": 88, "blood_pressure_diastolic": 52, "temperature": 39.2}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "sepsis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["procalcitonin_greater_than_2", "lactate_greater_than_4", "crp_greater_than_10", "prolonged_pt_inr", "creatinine_elevated", "white_blood_cells_elevated"],
+    "expected_patterns": ["sepsis"],
+    "expect_high_entropy": false
+  }
+}

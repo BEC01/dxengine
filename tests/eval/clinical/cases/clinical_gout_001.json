@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "clinical_gout_001",
+    "category": "rheumatologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "gout",
+    "tags": ["teaching_case", "importance_2"]
+  },
+  "patient": {
+    "age": 58,
+    "sex": "male",
+    "chief_complaint": "Acute onset severe pain and swelling of the right first metatarsophalangeal joint",
+    "symptoms": [
+      "severe pain in right great toe",
+      "acute onset overnight",
+      "cannot bear weight",
+      "history of similar episodes"
+    ],
+    "signs": [
+      "erythema and swelling of right first MTP joint",
+      "exquisite tenderness to palpation",
+      "warm joint",
+      "tophi on left ear helix"
+    ],
+    "medical_history": ["hypertension", "prior gout flares"],
+    "medications": ["hydrochlorothiazide"],
+    "family_history": ["father with gout"],
+    "social_history": ["drinks 2-3 beers daily", "diet rich in red meat"],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "uric_acid", "value": 10.5, "unit": "mg/dL"},
+          {"test_name": "c_reactive_protein", "value": 45.0, "unit": "mg/L"},
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 52, "unit": "mm/hr"},
+          {"test_name": "white_blood_cells", "value": 12.5, "unit": "x10^9/L"},
+          {"test_name": "creatinine", "value": 1.4, "unit": "mg/dL"},
+          {"test_name": "blood_urea_nitrogen", "value": 22, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 105, "unit": "mg/dL"},
+          {"test_name": "hemoglobin", "value": 14.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 280, "unit": "x10^9/L"},
+          {"test_name": "sodium", "value": 141, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.2, "unit": "mEq/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "gout",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["uric_acid_greater_than_10", "crp_greater_than_10"],
+    "expected_patterns": ["gout"]
+  }
+}

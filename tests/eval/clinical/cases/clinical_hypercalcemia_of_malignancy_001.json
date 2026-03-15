@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_hypercalcemia_of_malignancy_001",
+    "category": "oncologic_emergency",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hypercalcemia_of_malignancy",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 65,
+    "sex": "male",
+    "chief_complaint": "confusion, nausea, constipation, and bone pain for 2 weeks",
+    "symptoms": ["confusion", "nausea", "constipation", "bone pain", "polyuria", "fatigue"],
+    "signs": [],
+    "medical_history": ["squamous cell carcinoma of lung diagnosed 2 months ago", "30 pound weight loss over 4 months"],
+    "medications": ["oxycodone as needed for pain"],
+    "family_history": [],
+    "social_history": ["40 pack-year smoker", "quit 1 month ago"],
+    "lab_panels": [
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 3.8, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 105, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 26, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 28, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.6, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 98, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 14.2, "unit": "mg/dL"},
+          {"test_name": "phosphorus", "value": 2.2, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Endocrine and Tumor Markers",
+        "values": [
+          {"test_name": "parathyroid_hormone", "value": 8, "unit": "pg/mL"},
+          {"test_name": "alkaline_phosphatase", "value": 210, "unit": "U/L"},
+          {"test_name": "albumin", "value": 3.0, "unit": "g/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 10.5, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 11.2, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 310, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": ["CT chest shows large left hilar mass with mediastinal lymphadenopathy"],
+    "vitals": {"heart_rate": 92, "blood_pressure_systolic": 135, "blood_pressure_diastolic": 78}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypercalcemia_of_malignancy",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["calcium_elevated", "calcium_elevated_with_pth_suppressed", "alkaline_phosphatase_elevated", "albumin_low", "creatinine_elevated", "phosphorus_low"],
+    "expected_patterns": ["hypercalcemia_of_malignancy"],
+    "expect_high_entropy": false
+  }
+}

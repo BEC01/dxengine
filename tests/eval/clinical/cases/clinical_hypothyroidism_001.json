@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_hypothyroidism_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hypothyroidism",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 52,
+    "sex": "female",
+    "chief_complaint": "Weight gain, fatigue, and cold intolerance worsening over 6 months",
+    "symptoms": [
+      "fatigue",
+      "weight gain of 15 pounds",
+      "cold intolerance",
+      "constipation",
+      "dry skin",
+      "hair loss"
+    ],
+    "signs": [
+      "periorbital edema",
+      "delayed ankle reflex",
+      "dry coarse skin",
+      "diffuse goiter",
+      "bradycardia at 54 bpm",
+      "non-pitting edema of lower extremities"
+    ],
+    "medical_history": ["family history of thyroid disease"],
+    "medications": [],
+    "family_history": ["mother with Hashimoto thyroiditis"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "thyroid_stimulating_hormone", "value": 42.0, "unit": "mIU/L"},
+          {"test_name": "free_thyroxine", "value": 0.4, "unit": "ng/dL"},
+          {"test_name": "total_cholesterol", "value": 275, "unit": "mg/dL"},
+          {"test_name": "ldl_cholesterol", "value": 180, "unit": "mg/dL"},
+          {"test_name": "creatine_kinase", "value": 480, "unit": "U/L"},
+          {"test_name": "hemoglobin", "value": 11.5, "unit": "g/dL"},
+          {"test_name": "mean_corpuscular_volume", "value": 102, "unit": "fL"},
+          {"test_name": "sodium", "value": 137, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 88, "unit": "mg/dL"},
+          {"test_name": "white_blood_cells", "value": 6.0, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 210, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hypothyroidism",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["tsh_greater_than_10", "free_t4_decreased", "delayed_ankle_reflex"],
+    "expected_patterns": ["hypothyroidism"]
+  }
+}

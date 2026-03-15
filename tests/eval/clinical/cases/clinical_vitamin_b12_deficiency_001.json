@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "clinical_vitamin_b12_deficiency_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "vitamin_b12_deficiency",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 62,
+    "sex": "male",
+    "chief_complaint": "Numbness and tingling in both feet for 4 months with progressive fatigue",
+    "symptoms": [
+      "fatigue",
+      "numbness and tingling in feet",
+      "difficulty with balance",
+      "cognitive slowing"
+    ],
+    "signs": [
+      "glossitis",
+      "pallor",
+      "hypersegmented neutrophils on peripheral smear",
+      "decreased vibration sense in lower extremities",
+      "positive Romberg sign"
+    ],
+    "medical_history": ["strict vegan diet for 5 years"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["strict vegan, no supplementation"],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "hemoglobin", "value": 10.1, "unit": "g/dL"},
+          {"test_name": "mean_corpuscular_volume", "value": 112, "unit": "fL"},
+          {"test_name": "vitamin_b12", "value": 95, "unit": "pg/mL"},
+          {"test_name": "methylmalonic_acid", "value": 1450, "unit": "nmol/L"},
+          {"test_name": "homocysteine", "value": 32, "unit": "mcmol/L"},
+          {"test_name": "lactate_dehydrogenase", "value": 520, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 1.8, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 0.2, "unit": "mg/dL"},
+          {"test_name": "folate", "value": 8.5, "unit": "ng/mL"},
+          {"test_name": "reticulocyte_count", "value": 0.8, "unit": "%"},
+          {"test_name": "white_blood_cells", "value": 4.8, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 135, "unit": "x10^9/L"},
+          {"test_name": "ferritin", "value": 180, "unit": "ng/mL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "vitamin_b12_deficiency",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["b12_less_than_200", "elevated_methylmalonic_acid", "mcv_greater_than_100", "elevated_homocysteine"],
+    "expected_patterns": ["vitamin_b12_deficiency"]
+  }
+}

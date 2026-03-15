@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "clinical_wilson_disease_001",
+    "category": "hepatic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "wilson_disease",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 22,
+    "sex": "male",
+    "chief_complaint": "jaundice, tremor, and personality changes over 3 months",
+    "symptoms": ["jaundice", "tremor", "difficulty speaking", "personality changes", "depression", "poor coordination"],
+    "signs": ["kayser-fleischer rings on slit lamp", "jaundice", "hepatomegaly", "wing-beating tremor", "dysarthria"],
+    "medical_history": [],
+    "medications": [],
+    "family_history": ["brother with liver disease diagnosed at age 19"],
+    "social_history": ["no alcohol use"],
+    "lab_panels": [
+      {
+        "panel_name": "Hepatic Panel",
+        "values": [
+          {"test_name": "alanine_aminotransferase", "value": 125, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 145, "unit": "U/L"},
+          {"test_name": "alkaline_phosphatase", "value": 35, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 6.5, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 3.8, "unit": "mg/dL"},
+          {"test_name": "albumin", "value": 3.0, "unit": "g/dL"}
+        ]
+      },
+      {
+        "panel_name": "Wilson Disease Panel",
+        "values": [
+          {"test_name": "ceruloplasmin", "value": 8.0, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC and Chemistry",
+        "values": [
+          {"test_name": "hemoglobin", "value": 10.2, "unit": "g/dL"},
+          {"test_name": "reticulocyte_count", "value": 4.5, "unit": "%"},
+          {"test_name": "haptoglobin", "value": 15, "unit": "mg/dL"},
+          {"test_name": "white_blood_cells", "value": 6.0, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 110, "unit": "x10^9/L"},
+          {"test_name": "international_normalized_ratio", "value": 1.5, "unit": "ratio"},
+          {"test_name": "sodium", "value": 138, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.2, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.8, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "wilson_disease",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["low_ceruloplasmin", "kayser_fleischer_rings", "alanine_aminotransferase_elevated", "bilirubin_total_elevated"],
+    "expected_patterns": ["wilson_disease"],
+    "expect_high_entropy": false
+  }
+}

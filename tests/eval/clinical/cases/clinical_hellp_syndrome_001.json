@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "id": "clinical_hellp_syndrome_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hellp_syndrome",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 32,
+    "sex": "female",
+    "chief_complaint": "right upper quadrant pain, nausea, and headache at 34 weeks gestation",
+    "symptoms": ["right upper quadrant pain", "nausea", "vomiting", "headache"],
+    "signs": [],
+    "medical_history": ["pregnancy at 34 weeks gestation", "mild preeclampsia diagnosed 2 weeks ago"],
+    "medications": ["prenatal vitamins", "labetalol"],
+    "family_history": ["mother had preeclampsia"],
+    "social_history": ["non-smoker", "no alcohol during pregnancy"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 11.2, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 9.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 62, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Hemolysis and Liver Panel",
+        "values": [
+          {"test_name": "lactate_dehydrogenase", "value": 890, "unit": "U/L"},
+          {"test_name": "haptoglobin", "value": 12, "unit": "mg/dL"},
+          {"test_name": "bilirubin_total", "value": 2.8, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 0.4, "unit": "mg/dL"},
+          {"test_name": "aspartate_aminotransferase", "value": 245, "unit": "U/L"},
+          {"test_name": "alanine_aminotransferase", "value": 195, "unit": "U/L"}
+        ]
+      },
+      {
+        "panel_name": "Coagulation",
+        "values": [
+          {"test_name": "prothrombin_time", "value": 12.8, "unit": "seconds"},
+          {"test_name": "international_normalized_ratio", "value": 1.0, "unit": "ratio"},
+          {"test_name": "fibrinogen", "value": 280, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 138, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.0, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 82, "unit": "mg/dL"},
+          {"test_name": "uric_acid", "value": 7.8, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["peripheral blood smear shows schistocytes"],
+    "vitals": {"heart_rate": 95, "blood_pressure_systolic": 165, "blood_pressure_diastolic": 105}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hellp_syndrome",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ldh_elevated", "haptoglobin_low", "hemoglobin_low", "bilirubin_total_elevated", "aspartate_aminotransferase_elevated", "alanine_aminotransferase_elevated", "schistocytes_on_smear"],
+    "expected_patterns": ["hellp_syndrome"],
+    "expect_high_entropy": false
+  }
+}

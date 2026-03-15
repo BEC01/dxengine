@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_tumor_lysis_syndrome_001",
+    "category": "oncologic_emergency",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "tumor_lysis_syndrome",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 48,
+    "sex": "male",
+    "chief_complaint": "nausea, muscle cramps, and decreased urine output 24 hours after starting chemotherapy",
+    "symptoms": ["nausea", "vomiting", "muscle cramps", "lethargy"],
+    "signs": [],
+    "medical_history": ["Burkitt lymphoma diagnosed 1 week ago", "started cyclophosphamide chemotherapy yesterday"],
+    "medications": ["cyclophosphamide", "allopurinol"],
+    "family_history": [],
+    "social_history": ["construction worker", "no tobacco or alcohol"],
+    "lab_panels": [
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 137, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 6.8, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 101, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 17, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 38, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 3.2, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 95, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 6.8, "unit": "mg/dL"},
+          {"test_name": "phosphorus", "value": 8.5, "unit": "mg/dL"},
+          {"test_name": "uric_acid", "value": 14.2, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Additional Labs",
+        "values": [
+          {"test_name": "lactate_dehydrogenase", "value": 2200, "unit": "U/L"},
+          {"test_name": "magnesium", "value": 1.4, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 42.0, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 10.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 85, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 110, "blood_pressure_systolic": 135, "blood_pressure_diastolic": 82}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "tumor_lysis_syndrome",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["uric_acid_greater_than_10", "hyperkalemia_with_hyperphosphatemia_and_hypocalcemia", "ldh_elevated", "potassium_elevated", "phosphorus_elevated", "calcium_low", "creatinine_elevated"],
+    "expected_patterns": ["tumor_lysis_syndrome"],
+    "expect_high_entropy": false
+  }
+}

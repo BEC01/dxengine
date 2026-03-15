@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "id": "clinical_acute_pancreatitis_001",
+    "category": "gastrointestinal",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "acute_pancreatitis",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 48,
+    "sex": "male",
+    "chief_complaint": "severe epigastric pain radiating to back for 12 hours",
+    "symptoms": ["severe epigastric pain radiating to back", "nausea", "vomiting", "pain worse with eating", "pain better leaning forward"],
+    "signs": ["epigastric tenderness", "abdominal guarding", "diminished bowel sounds"],
+    "medical_history": ["gallstones"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["social alcohol use"],
+    "lab_panels": [
+      {
+        "panel_name": "Pancreatic Enzymes",
+        "values": [
+          {"test_name": "lipase", "value": 1250, "unit": "U/L"},
+          {"test_name": "amylase", "value": 580, "unit": "U/L"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 15.2, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.8, "unit": "g/dL"},
+          {"test_name": "hematocrit", "value": 44.5, "unit": "%"},
+          {"test_name": "platelets", "value": 245, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Chemistry and Liver Panel",
+        "values": [
+          {"test_name": "glucose", "value": 165, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 8.2, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.2, "unit": "mg/dL"},
+          {"test_name": "blood_urea_nitrogen", "value": 22, "unit": "mg/dL"},
+          {"test_name": "alanine_aminotransferase", "value": 95, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 78, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 2.8, "unit": "mg/dL"},
+          {"test_name": "lactate_dehydrogenase", "value": 420, "unit": "U/L"},
+          {"test_name": "c_reactive_protein", "value": 85, "unit": "mg/L"},
+          {"test_name": "sodium", "value": 139, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 3.9, "unit": "mEq/L"}
+        ]
+      }
+    ],
+    "imaging": ["gallstones on abdominal ultrasound"],
+    "vitals": {"heart_rate": 105, "temperature": 38.2}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "acute_pancreatitis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["lipase_greater_than_3x_uln", "amylase_greater_than_3x_uln", "epigastric_pain_radiating_to_back", "crp_greater_than_10"],
+    "expected_patterns": ["acute_pancreatitis"],
+    "expect_high_entropy": false
+  }
+}

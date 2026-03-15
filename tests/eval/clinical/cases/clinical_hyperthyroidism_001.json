@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "id": "clinical_hyperthyroidism_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hyperthyroidism",
+    "tags": [
+      "teaching_case",
+      "importance_4"
+    ]
+  },
+  "patient": {
+    "age": 32,
+    "sex": "female",
+    "chief_complaint": "weight loss and palpitations for 3 months",
+    "symptoms": [
+      "weight loss",
+      "palpitations",
+      "heat intolerance",
+      "tremor",
+      "insomnia",
+      "anxiety",
+      "frequent bowel movements"
+    ],
+    "signs": [
+      "lid lag",
+      "exophthalmos",
+      "diffuse goiter",
+      "fine tremor",
+      "warm moist skin"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [
+      "mother with Hashimoto thyroiditis"
+    ],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Thyroid Panel",
+        "values": [
+          {
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 0.01,
+            "unit": "mIU/L"
+          },
+          {
+            "test_name": "free_thyroxine",
+            "value": 4.2,
+            "unit": "ng/dL"
+          },
+          {
+            "test_name": "free_triiodothyronine",
+            "value": 11.8,
+            "unit": "pg/mL"
+          }
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {
+            "test_name": "sodium",
+            "value": 140,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 105,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.7,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "alkaline_phosphatase",
+            "value": 185,
+            "unit": "U/L"
+          }
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {
+            "test_name": "white_blood_cells",
+            "value": 6.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 13.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 210,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "heart_rate": 112,
+      "blood_pressure_systolic": 148,
+      "blood_pressure_diastolic": 72
+    }
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hyperthyroidism",
+    "acceptable_alternatives": [],
+    "key_discriminators": [
+      "tsh_suppressed",
+      "free_t4_elevated",
+      "free_triiodothyronine_elevated",
+      "lid_lag",
+      "exophthalmos"
+    ],
+    "expected_patterns": [
+      "hyperthyroidism"
+    ],
+    "expect_high_entropy": false
+  }
+}

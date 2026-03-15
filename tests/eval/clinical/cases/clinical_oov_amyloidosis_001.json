@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_oov_amyloidosis_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 63,
+    "sex": "male",
+    "chief_complaint": "Progressive swelling of both legs and shortness of breath for 3 months",
+    "symptoms": [
+      "bilateral leg swelling",
+      "dyspnea on exertion",
+      "fatigue",
+      "numbness in hands",
+      "early satiety"
+    ],
+    "signs": [
+      "macroglossia",
+      "periorbital purpura",
+      "bilateral pitting edema",
+      "hepatomegaly"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "albumin", "value": 2.2, "unit": "g/dL"},
+          {"test_name": "microalbumin_urine", "value": 650, "unit": "mg/L"},
+          {"test_name": "b_type_natriuretic_peptide", "value": 780, "unit": "pg/mL"},
+          {"test_name": "creatinine", "value": 1.8, "unit": "mg/dL"},
+          {"test_name": "troponin_i", "value": 0.08, "unit": "ng/mL"},
+          {"test_name": "alkaline_phosphatase", "value": 195, "unit": "U/L"},
+          {"test_name": "total_protein", "value": 5.5, "unit": "g/dL"},
+          {"test_name": "hemoglobin", "value": 11.8, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 6.5, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 220, "unit": "x10^9/L"},
+          {"test_name": "sodium", "value": 137, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.3, "unit": "mEq/L"},
+          {"test_name": "calcium", "value": 9.0, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_multiple_myeloma_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "multiple_myeloma",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 68,
+    "sex": "male",
+    "chief_complaint": "progressive back pain, fatigue, and recurrent infections over 4 months",
+    "symptoms": ["back pain", "fatigue", "recurrent upper respiratory infections", "weight loss"],
+    "signs": ["pallor", "point tenderness over lumbar spine"],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "hemoglobin", "value": 9.2, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 5.8, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 165, "unit": "x10^9/L"},
+          {"test_name": "mean_corpuscular_volume", "value": 92, "unit": "fL"}
+        ]
+      },
+      {
+        "panel_name": "Chemistry Panel",
+        "values": [
+          {"test_name": "total_protein", "value": 10.5, "unit": "g/dL"},
+          {"test_name": "albumin", "value": 3.2, "unit": "g/dL"},
+          {"test_name": "calcium", "value": 12.1, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.8, "unit": "mg/dL"},
+          {"test_name": "blood_urea_nitrogen", "value": 32, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 138, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.5, "unit": "mEq/L"},
+          {"test_name": "glucose", "value": 95, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Inflammatory and Other Markers",
+        "values": [
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 115, "unit": "mm/hr"},
+          {"test_name": "lactate_dehydrogenase", "value": 310, "unit": "U/L"},
+          {"test_name": "uric_acid", "value": 8.5, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["lytic lesions in lumbar spine and pelvis on skeletal survey"],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "multiple_myeloma",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["esr_greater_than_100", "calcium_elevated", "creatinine_elevated", "hemoglobin_low", "ldh_elevated"],
+    "expected_patterns": ["multiple_myeloma"],
+    "expect_high_entropy": false
+  }
+}

@@ -23,6 +23,7 @@ class GoldStandard(BaseModel):
     expected_findings: list[str] = []
     expected_patterns: list[str] = []
     cant_miss_diseases: list[str] = []
+    key_discriminators: list[str] = []        # finding keys that should fire for gold diagnosis
     expect_high_entropy: bool = False
     expect_no_dominant: bool = False           # no disease should exceed 40% posterior
 

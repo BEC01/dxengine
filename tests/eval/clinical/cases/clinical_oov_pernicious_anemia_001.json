@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "clinical_oov_pernicious_anemia_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 58,
+    "sex": "female",
+    "chief_complaint": "Progressive fatigue, paresthesias in hands and feet, and unsteady gait for 4 months",
+    "symptoms": [
+      "fatigue",
+      "paresthesias in hands and feet",
+      "unsteady gait",
+      "sore tongue",
+      "cognitive difficulty"
+    ],
+    "signs": [
+      "pallor",
+      "glossitis",
+      "decreased proprioception in feet",
+      "positive Romberg sign",
+      "absent ankle reflexes"
+    ],
+    "medical_history": ["vitiligo", "autoimmune thyroid disease"],
+    "medications": ["levothyroxine"],
+    "family_history": ["sister with pernicious anemia"],
+    "social_history": ["non-vegetarian diet"],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "vitamin_b12", "value": 72, "unit": "pg/mL"},
+          {"test_name": "methylmalonic_acid", "value": 2800, "unit": "nmol/L"},
+          {"test_name": "homocysteine", "value": 45, "unit": "mcmol/L"},
+          {"test_name": "hemoglobin", "value": 8.5, "unit": "g/dL"},
+          {"test_name": "mean_corpuscular_volume", "value": 118, "unit": "fL"},
+          {"test_name": "lactate_dehydrogenase", "value": 890, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 2.4, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 0.3, "unit": "mg/dL"},
+          {"test_name": "reticulocyte_count", "value": 0.4, "unit": "%"},
+          {"test_name": "white_blood_cells", "value": 3.8, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 110, "unit": "x10^9/L"},
+          {"test_name": "haptoglobin", "value": 22, "unit": "mg/dL"},
+          {"test_name": "folate", "value": 12.0, "unit": "ng/mL"},
+          {"test_name": "ferritin", "value": 220, "unit": "ng/mL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}

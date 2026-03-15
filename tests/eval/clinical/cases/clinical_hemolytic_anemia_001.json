@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_hemolytic_anemia_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hemolytic_anemia",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 45,
+    "sex": "female",
+    "chief_complaint": "fatigue, jaundice, and dark urine for 2 weeks",
+    "symptoms": ["fatigue", "jaundice", "dark urine", "dyspnea on exertion"],
+    "signs": ["scleral icterus", "pallor", "splenomegaly"],
+    "medical_history": ["systemic lupus erythematosus"],
+    "medications": ["hydroxychloroquine"],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "hemoglobin", "value": 7.8, "unit": "g/dL"},
+          {"test_name": "hematocrit", "value": 23.5, "unit": "%"},
+          {"test_name": "mean_corpuscular_volume", "value": 102, "unit": "fL"},
+          {"test_name": "white_blood_cells", "value": 7.5, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 195, "unit": "x10^9/L"},
+          {"test_name": "reticulocyte_count", "value": 8.5, "unit": "%"}
+        ]
+      },
+      {
+        "panel_name": "Hemolysis Panel",
+        "values": [
+          {"test_name": "haptoglobin", "value": 5, "unit": "mg/dL"},
+          {"test_name": "lactate_dehydrogenase", "value": 580, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 4.8, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 0.5, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 139, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.3, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 88, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 98}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hemolytic_anemia",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["haptoglobin_undetectable", "ldh_elevated", "reticulocyte_count_elevated", "bilirubin_total_elevated", "indirect_bilirubin_elevated"],
+    "expected_patterns": ["hemolytic_anemia"],
+    "expect_high_entropy": false
+  }
+}

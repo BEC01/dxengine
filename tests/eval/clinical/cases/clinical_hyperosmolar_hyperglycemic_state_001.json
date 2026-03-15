@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "clinical_hyperosmolar_hyperglycemic_state_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "hyperosmolar_hyperglycemic_state",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 68,
+    "sex": "female",
+    "chief_complaint": "progressive confusion, weakness, and decreased oral intake over 5 days",
+    "symptoms": ["confusion", "weakness", "polyuria", "polydipsia", "poor oral intake"],
+    "signs": [],
+    "medical_history": ["type 2 diabetes mellitus", "hypertension", "recent urinary tract infection"],
+    "medications": ["metformin", "glipizide", "amlodipine"],
+    "family_history": ["brother has type 2 diabetes"],
+    "social_history": ["retired", "lives alone"],
+    "lab_panels": [
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 148, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.8, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 108, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 22, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 52, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 2.4, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 845, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Other Labs",
+        "values": [
+          {"test_name": "osmolality_serum", "value": 348, "unit": "mOsm/kg"},
+          {"test_name": "hemoglobin_a1c", "value": 12.5, "unit": "%"},
+          {"test_name": "lactate", "value": 2.5, "unit": "mmol/L"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 12.0, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 280, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 108, "blood_pressure_systolic": 110, "blood_pressure_diastolic": 65}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "hyperosmolar_hyperglycemic_state",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["glucose_greater_than_600", "glucose_greater_than_250", "osmolality_serum_high", "osmolality_serum_elevated", "hba1c_greater_than_6_5", "creatinine_elevated", "blood_urea_nitrogen_elevated"],
+    "expected_patterns": ["hyperosmolar_hyperglycemic_state"],
+    "expect_high_entropy": false
+  }
+}

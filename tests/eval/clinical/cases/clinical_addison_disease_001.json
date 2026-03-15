@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_addison_disease_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "addison_disease",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 38,
+    "sex": "female",
+    "chief_complaint": "progressive fatigue, weight loss, nausea, and skin darkening over 4 months",
+    "symptoms": ["fatigue", "weight loss", "nausea", "salt craving", "dizziness on standing"],
+    "signs": ["hyperpigmentation"],
+    "medical_history": ["Hashimoto thyroiditis"],
+    "medications": ["levothyroxine"],
+    "family_history": ["sister has type 1 diabetes"],
+    "social_history": ["works in marketing", "non-smoker"],
+    "lab_panels": [
+      {
+        "panel_name": "Endocrine Panel",
+        "values": [
+          {"test_name": "cortisol_am", "value": 2.1, "unit": "mcg/dL"},
+          {"test_name": "adrenocorticotropic_hormone", "value": 285, "unit": "pg/mL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 128, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 5.8, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 96, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 20, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 22, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.0, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 62, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 10.8, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 5.2, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 11.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 195, "unit": "x10^9/L"},
+          {"test_name": "eosinophils_absolute", "value": 0.8, "unit": "x10^9/L"},
+          {"test_name": "lymphocytes_absolute", "value": 3.2, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 92, "blood_pressure_systolic": 90, "blood_pressure_diastolic": 55}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "addison_disease",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["cortisol_am_less_than_3", "adrenocorticotropic_hormone_elevated", "sodium_less_than_130", "potassium_elevated", "glucose_low", "hyperpigmentation"],
+    "expected_patterns": ["addison_disease"],
+    "expect_high_entropy": false
+  }
+}

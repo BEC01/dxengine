@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "clinical_methanol_ethylene_glycol_poisoning_001",
+    "category": "metabolic_toxic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "methanol_ethylene_glycol_poisoning",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 40,
+    "sex": "male",
+    "chief_complaint": "confusion, blurred vision, and vomiting 18 hours after drinking an unknown alcohol",
+    "symptoms": ["blurred vision", "confusion", "vomiting", "headache", "abdominal pain"],
+    "signs": ["kussmaul breathing"],
+    "medical_history": ["alcohol use disorder"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["history of heavy alcohol use", "found with open container of windshield washer fluid"],
+    "lab_panels": [
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 138, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.5, "unit": "mEq/L"},
+          {"test_name": "chloride", "value": 98, "unit": "mEq/L"},
+          {"test_name": "bicarbonate", "value": 8, "unit": "mEq/L"},
+          {"test_name": "blood_urea_nitrogen", "value": 18, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.3, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 95, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 8.0, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Osmolality and Other",
+        "values": [
+          {"test_name": "osmolality_serum", "value": 325, "unit": "mOsm/kg"},
+          {"test_name": "lactate", "value": 5.5, "unit": "mmol/L"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 11.0, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.5, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 225, "unit": "x10^9/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {"heart_rate": 105, "blood_pressure_systolic": 120, "blood_pressure_diastolic": 75, "respiratory_rate": 30}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "methanol_ethylene_glycol_poisoning",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["high_anion_gap_metabolic_acidosis", "elevated_osmolal_gap", "bicarbonate_low", "lactate_greater_than_4", "osmolality_serum_high", "kussmaul_breathing"],
+    "expected_patterns": ["methanol_ethylene_glycol_poisoning"],
+    "expect_high_entropy": false
+  }
+}

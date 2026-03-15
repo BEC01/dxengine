@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "id": "clinical_pheochromocytoma_001",
+    "category": "endocrine",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "pheochromocytoma",
+    "tags": [
+      "teaching_case",
+      "importance_4"
+    ]
+  },
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "chief_complaint": "episodic headaches, palpitations, and sweating for 4 months",
+    "symptoms": [
+      "episodic severe headaches",
+      "palpitations",
+      "diaphoresis",
+      "anxiety",
+      "tremor",
+      "weight loss"
+    ],
+    "signs": [
+      "episodic hypertension",
+      "pallor during episodes",
+      "tremor"
+    ],
+    "medical_history": [
+      "resistant hypertension despite 3 medications"
+    ],
+    "medications": [
+      "amlodipine",
+      "lisinopril",
+      "hydrochlorothiazide"
+    ],
+    "family_history": [
+      "father had thyroid cancer"
+    ],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Catecholamine Panel",
+        "values": [
+          {
+            "test_name": "plasma_free_metanephrine",
+            "value": 450,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "plasma_free_normetanephrine",
+            "value": 680,
+            "unit": "pg/mL"
+          }
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {
+            "test_name": "glucose",
+            "value": 142,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "sodium",
+            "value": 141,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 3.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "calcium",
+            "value": 10.2,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 25,
+            "unit": "mEq/L"
+          }
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 15.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "hematocrit",
+            "value": 46.0,
+            "unit": "%"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 8.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 260,
+            "unit": "x10^9/L"
+          }
+        ]
+      }
+    ],
+    "imaging": [
+      "3.5 cm right adrenal mass on CT abdomen"
+    ],
+    "vitals": {
+      "heart_rate": 108,
+      "blood_pressure_systolic": 210,
+      "blood_pressure_diastolic": 120
+    }
+  },
+  "gold_standard": {
+    "primary_diagnosis": "pheochromocytoma",
+    "acceptable_alternatives": [],
+    "key_discriminators": [
+      "plasma_free_metanephrines_elevated",
+      "plasma_free_metanephrines_greater_than_3x_uln"
+    ],
+    "expected_patterns": [
+      "pheochromocytoma"
+    ],
+    "expect_high_entropy": false
+  }
+}

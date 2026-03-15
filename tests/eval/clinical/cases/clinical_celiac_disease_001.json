@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "id": "clinical_celiac_disease_001",
+    "category": "gastrointestinal",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "celiac_disease",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 28,
+    "sex": "female",
+    "chief_complaint": "Chronic diarrhea, bloating, and weight loss for 8 months",
+    "symptoms": [
+      "chronic diarrhea with steatorrhea",
+      "abdominal bloating",
+      "weight loss of 12 pounds",
+      "fatigue"
+    ],
+    "signs": [
+      "pallor",
+      "dermatitis herpetiformis on elbows and knees",
+      "mild abdominal distension"
+    ],
+    "medical_history": ["type 1 diabetes mellitus"],
+    "medications": ["insulin glargine", "insulin lispro"],
+    "family_history": ["sister with celiac disease"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "tissue_transglutaminase_iga", "value": 125, "unit": "U/mL"},
+          {"test_name": "hemoglobin", "value": 10.8, "unit": "g/dL"},
+          {"test_name": "mean_corpuscular_volume", "value": 74, "unit": "fL"},
+          {"test_name": "ferritin", "value": 8, "unit": "ng/mL"},
+          {"test_name": "iron", "value": 30, "unit": "mcg/dL"},
+          {"test_name": "albumin", "value": 3.0, "unit": "g/dL"},
+          {"test_name": "calcium", "value": 8.2, "unit": "mg/dL"},
+          {"test_name": "vitamin_d_25_hydroxy", "value": 14, "unit": "ng/mL"},
+          {"test_name": "folate", "value": 2.0, "unit": "ng/mL"},
+          {"test_name": "alkaline_phosphatase", "value": 155, "unit": "U/L"},
+          {"test_name": "white_blood_cells", "value": 6.8, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 310, "unit": "x10^9/L"},
+          {"test_name": "creatinine", "value": 0.65, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "celiac_disease",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ttg_iga_greater_than_10x_uln", "dermatitis_herpetiformis", "ferritin_less_than_15"],
+    "expected_patterns": ["celiac_disease"]
+  }
+}

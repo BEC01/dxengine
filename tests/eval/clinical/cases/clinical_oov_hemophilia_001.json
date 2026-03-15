@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "id": "clinical_oov_hemophilia_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 22,
+    "sex": "male",
+    "chief_complaint": "Recurrent easy bruising and prolonged bleeding after minor cuts",
+    "symptoms": [
+      "easy bruising since childhood",
+      "prolonged bleeding after dental procedure",
+      "right knee swelling after minor trauma"
+    ],
+    "signs": [
+      "multiple ecchymoses on extremities",
+      "swollen right knee with limited range of motion",
+      "no petechiae"
+    ],
+    "medical_history": ["history of hemarthrosis"],
+    "medications": [],
+    "family_history": ["maternal uncle with bleeding disorder"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "partial_thromboplastin_time", "value": 68, "unit": "seconds"},
+          {"test_name": "prothrombin_time", "value": 12.5, "unit": "seconds"},
+          {"test_name": "international_normalized_ratio", "value": 1.0, "unit": "ratio"},
+          {"test_name": "platelets", "value": 245, "unit": "x10^9/L"},
+          {"test_name": "fibrinogen", "value": 310, "unit": "mg/dL"},
+          {"test_name": "hemoglobin", "value": 13.8, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 7.5, "unit": "x10^9/L"},
+          {"test_name": "d_dimer", "value": 0.3, "unit": "mcg/mL FEU"},
+          {"test_name": "sodium", "value": 141, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.95, "unit": "mg/dL"},
+          {"test_name": "alanine_aminotransferase", "value": 18, "unit": "U/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}

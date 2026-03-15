@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "clinical_aplastic_anemia_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "aplastic_anemia",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 22,
+    "sex": "male",
+    "chief_complaint": "progressive fatigue, recurrent infections, and easy bruising for 6 weeks",
+    "symptoms": ["fatigue", "easy bruising", "epistaxis", "recurrent sore throat"],
+    "signs": [],
+    "medical_history": ["no significant past medical history"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["college student", "non-smoker"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC with Differential",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 2.1, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 7.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 22, "unit": "x10^9/L"},
+          {"test_name": "neutrophils_absolute", "value": 0.6, "unit": "x10^9/L"},
+          {"test_name": "lymphocytes_absolute", "value": 1.2, "unit": "x10^9/L"},
+          {"test_name": "reticulocyte_count", "value": 0.3, "unit": "%"},
+          {"test_name": "mean_corpuscular_volume", "value": 102, "unit": "fL"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.1, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 85, "unit": "mg/dL"},
+          {"test_name": "bicarbonate", "value": 25, "unit": "mEq/L"}
+        ]
+      },
+      {
+        "panel_name": "Additional Labs",
+        "values": [
+          {"test_name": "lactate_dehydrogenase", "value": 195, "unit": "U/L"},
+          {"test_name": "iron", "value": 145, "unit": "mcg/dL"},
+          {"test_name": "ferritin", "value": 480, "unit": "ng/mL"}
+        ]
+      }
+    ],
+    "imaging": ["bone marrow biopsy shows markedly hypocellular marrow"],
+    "vitals": {"heart_rate": 95, "blood_pressure_systolic": 118, "blood_pressure_diastolic": 72}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "aplastic_anemia",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["platelets_less_than_50000", "hemoglobin_low", "white_blood_cells_low", "neutrophils_absolute_low", "reticulocyte_count_low"],
+    "expected_patterns": ["aplastic_anemia"],
+    "expect_high_entropy": false
+  }
+}

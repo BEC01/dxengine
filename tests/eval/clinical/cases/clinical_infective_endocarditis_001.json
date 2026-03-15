@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "id": "clinical_infective_endocarditis_001",
+    "category": "infectious",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "infective_endocarditis",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 42,
+    "sex": "male",
+    "chief_complaint": "persistent fever, fatigue, and new heart murmur for 3 weeks",
+    "symptoms": ["fever", "fatigue", "malaise", "night sweats", "weight loss"],
+    "signs": ["new heart murmur", "splinter hemorrhage", "janeway lesion"],
+    "medical_history": ["bicuspid aortic valve", "dental extraction 5 weeks ago without antibiotic prophylaxis"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["non-smoker", "social drinker"],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 14.5, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 10.2, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 165, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Inflammatory Markers",
+        "values": [
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 72, "unit": "mm/hr"},
+          {"test_name": "c_reactive_protein", "value": 95, "unit": "mg/L"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 136, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.3, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 1.3, "unit": "mg/dL"},
+          {"test_name": "blood_urea_nitrogen", "value": 24, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 102, "unit": "mg/dL"}
+        ]
+      },
+      {
+        "panel_name": "Other",
+        "values": [
+          {"test_name": "rheumatoid_factor", "value": 45, "unit": "IU/mL"},
+          {"test_name": "complement_c3", "value": 72, "unit": "mg/dL"},
+          {"test_name": "complement_c4", "value": 14, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["TEE shows 12mm vegetation on aortic valve with moderate regurgitation"],
+    "vitals": {"heart_rate": 100, "blood_pressure_systolic": 125, "blood_pressure_diastolic": 55, "temperature": 38.8}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "infective_endocarditis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["crp_greater_than_10", "erythrocyte_sedimentation_rate_elevated", "hemoglobin_low", "rheumatoid_factor_positive", "complement_c3_low", "janeway_lesions", "splinter_hemorrhages", "new_murmur_with_fever", "vegetation_on_echo"],
+    "expected_patterns": ["infective_endocarditis"],
+    "expect_high_entropy": false
+  }
+}

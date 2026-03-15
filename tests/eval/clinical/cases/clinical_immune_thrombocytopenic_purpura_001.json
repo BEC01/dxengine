@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "id": "clinical_immune_thrombocytopenic_purpura_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "immune_thrombocytopenic_purpura",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 35,
+    "sex": "female",
+    "chief_complaint": "easy bruising, petechiae, and heavy menstrual periods for 3 weeks",
+    "symptoms": ["easy bruising", "petechiae on legs", "heavy menstrual bleeding", "epistaxis", "gingival bleeding"],
+    "signs": ["petechiae on lower extremities", "scattered ecchymoses", "no splenomegaly", "no lymphadenopathy"],
+    "medical_history": ["upper respiratory infection 2 weeks ago"],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "hemoglobin", "value": 12.8, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 6.5, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 12, "unit": "x10^9/L"},
+          {"test_name": "mean_platelet_volume", "value": 12.5, "unit": "fL"},
+          {"test_name": "mean_corpuscular_volume", "value": 88, "unit": "fL"},
+          {"test_name": "neutrophils_absolute", "value": 3.8, "unit": "x10^9/L"},
+          {"test_name": "lymphocytes_absolute", "value": 2.0, "unit": "x10^9/L"},
+          {"test_name": "reticulocyte_count", "value": 1.5, "unit": "%"}
+        ]
+      },
+      {
+        "panel_name": "Coagulation",
+        "values": [
+          {"test_name": "prothrombin_time", "value": 12.5, "unit": "seconds"},
+          {"test_name": "international_normalized_ratio", "value": 1.0, "unit": "ratio"},
+          {"test_name": "partial_thromboplastin_time", "value": 28, "unit": "seconds"}
+        ]
+      },
+      {
+        "panel_name": "Chemistry",
+        "values": [
+          {"test_name": "creatinine", "value": 0.7, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.1, "unit": "mEq/L"},
+          {"test_name": "lactate_dehydrogenase", "value": 195, "unit": "U/L"},
+          {"test_name": "haptoglobin", "value": 120, "unit": "mg/dL"},
+          {"test_name": "bilirubin_total", "value": 0.8, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "immune_thrombocytopenic_purpura",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["platelets_less_than_50000", "reticulocyte_count_elevated"],
+    "expected_patterns": ["immune_thrombocytopenic_purpura"],
+    "expect_high_entropy": false
+  }
+}

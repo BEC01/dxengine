@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "clinical_chronic_myeloid_leukemia_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "chronic_myeloid_leukemia",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 52,
+    "sex": "male",
+    "chief_complaint": "fatigue, night sweats, and left upper quadrant fullness for 2 months",
+    "symptoms": ["fatigue", "night sweats", "early satiety", "left upper quadrant fullness", "weight loss of 10 pounds"],
+    "signs": ["splenomegaly palpable 6 cm below costal margin", "pallor"],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "CBC with Differential",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 125.0, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 10.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 550, "unit": "x10^9/L"},
+          {"test_name": "basophils_absolute", "value": 3.5, "unit": "x10^9/L"},
+          {"test_name": "neutrophils_absolute", "value": 65.0, "unit": "x10^9/L"},
+          {"test_name": "eosinophils_absolute", "value": 2.5, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Chemistry Panel",
+        "values": [
+          {"test_name": "lactate_dehydrogenase", "value": 680, "unit": "U/L"},
+          {"test_name": "uric_acid", "value": 10.5, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.5, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 9.2, "unit": "mg/dL"},
+          {"test_name": "phosphorus", "value": 4.8, "unit": "mg/dL"},
+          {"test_name": "alanine_aminotransferase", "value": 32, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 28, "unit": "U/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "chronic_myeloid_leukemia",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["white_blood_cells_elevated", "ldh_elevated"],
+    "expected_patterns": ["chronic_myeloid_leukemia"],
+    "expect_high_entropy": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "id": "clinical_oov_multiple_sclerosis_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 29,
+    "sex": "female",
+    "chief_complaint": "Episodic visual blurring and numbness in left leg over 6 months",
+    "symptoms": [
+      "blurred vision in right eye lasting 2 weeks then resolved",
+      "numbness and tingling in left leg",
+      "urinary urgency",
+      "fatigue worsened by heat"
+    ],
+    "signs": [
+      "relative afferent pupillary defect right eye",
+      "internuclear ophthalmoplegia",
+      "hyperreflexia in left lower extremity",
+      "positive Babinski sign left"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "hemoglobin", "value": 13.8, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 6.9, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 275, "unit": "x10^9/L"},
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 12, "unit": "mm/hr"},
+          {"test_name": "c_reactive_protein", "value": 1.5, "unit": "mg/L"},
+          {"test_name": "thyroid_stimulating_hormone", "value": 1.8, "unit": "mIU/L"},
+          {"test_name": "vitamin_b12", "value": 450, "unit": "pg/mL"},
+          {"test_name": "creatinine", "value": 0.68, "unit": "mg/dL"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "glucose", "value": 85, "unit": "mg/dL"},
+          {"test_name": "antinuclear_antibody_titer", "value": 0, "unit": "titer"}
+        ]
+      }
+    ],
+    "imaging": ["MRI brain: multiple periventricular white matter lesions with gadolinium enhancement"],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}

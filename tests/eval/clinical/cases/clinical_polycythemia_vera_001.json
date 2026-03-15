@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "id": "clinical_polycythemia_vera_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "polycythemia_vera",
+    "tags": [
+      "teaching_case",
+      "importance_4"
+    ]
+  },
+  "patient": {
+    "age": 58,
+    "sex": "male",
+    "chief_complaint": "headaches, dizziness, and itching after showers for 6 months",
+    "symptoms": [
+      "headache",
+      "dizziness",
+      "itching after shower",
+      "visual disturbances",
+      "burning pain in extremities"
+    ],
+    "signs": [
+      "plethora",
+      "splenomegaly",
+      "ruddy complexion",
+      "erythromelalgia"
+    ],
+    "medical_history": [
+      "gout"
+    ],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "CBC",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 19.2,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "hematocrit",
+            "value": 57.5,
+            "unit": "%"
+          },
+          {
+            "test_name": "red_blood_cells",
+            "value": 6.8,
+            "unit": "x10^12/L"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 14.5,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 520,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "basophils_absolute",
+            "value": 0.15,
+            "unit": "x10^9/L"
+          }
+        ]
+      },
+      {
+        "panel_name": "Chemistry Panel",
+        "values": [
+          {
+            "test_name": "uric_acid",
+            "value": 9.8,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 350,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "sodium",
+            "value": 141,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.6,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "iron",
+            "value": 45,
+            "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 18,
+            "unit": "ng/mL"
+          }
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {
+      "blood_pressure_systolic": 155,
+      "blood_pressure_diastolic": 90
+    }
+  },
+  "gold_standard": {
+    "primary_diagnosis": "polycythemia_vera",
+    "acceptable_alternatives": [],
+    "key_discriminators": [
+      "erythrocytosis",
+      "aquagenic_pruritus",
+      "erythromelalgia",
+      "white_blood_cells_elevated",
+      "ldh_elevated"
+    ],
+    "expected_patterns": [
+      "polycythemia_vera"
+    ],
+    "expect_high_entropy": false
+  }
+}

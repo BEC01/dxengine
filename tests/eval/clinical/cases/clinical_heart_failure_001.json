@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "id": "clinical_heart_failure_001",
+    "category": "cardiac",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "heart_failure",
+    "tags": [
+      "teaching_case",
+      "importance_4"
+    ]
+  },
+  "patient": {
+    "age": 67,
+    "sex": "male",
+    "chief_complaint": "progressive dyspnea and lower extremity swelling for 6 weeks",
+    "symptoms": [
+      "dyspnea on exertion",
+      "orthopnea",
+      "paroxysmal nocturnal dyspnea",
+      "fatigue",
+      "weight gain of 8 pounds"
+    ],
+    "signs": [
+      "S3 gallop",
+      "elevated jvp",
+      "hepatojugular reflux",
+      "bilateral crackles",
+      "bilateral lower extremity pitting edema"
+    ],
+    "medical_history": [
+      "hypertension for 15 years",
+      "type 2 diabetes",
+      "prior myocardial infarction 3 years ago"
+    ],
+    "medications": [
+      "lisinopril",
+      "metformin",
+      "aspirin",
+      "atorvastatin"
+    ],
+    "family_history": [
+      "father died of heart failure at age 72"
+    ],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Cardiac Markers",
+        "values": [
+          {
+            "test_name": "b_type_natriuretic_peptide",
+            "value": 850,
+            "unit": "pg/mL"
+          },
+          {
+            "test_name": "troponin_i",
+            "value": 0.02,
+            "unit": "ng/mL"
+          }
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {
+            "test_name": "sodium",
+            "value": 132,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "potassium",
+            "value": 4.8,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "creatinine",
+            "value": 1.5,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "blood_urea_nitrogen",
+            "value": 28,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "glucose",
+            "value": 135,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "bicarbonate",
+            "value": 24,
+            "unit": "mEq/L"
+          }
+        ]
+      },
+      {
+        "panel_name": "CBC and Liver",
+        "values": [
+          {
+            "test_name": "hemoglobin",
+            "value": 12.5,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "white_blood_cells",
+            "value": 7.2,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "platelets",
+            "value": 230,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "alanine_aminotransferase",
+            "value": 52,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "aspartate_aminotransferase",
+            "value": 48,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.4,
+            "unit": "g/dL"
+          }
+        ]
+      }
+    ],
+    "imaging": [
+      "cardiomegaly on chest X-ray with bilateral pleural effusions"
+    ],
+    "vitals": {
+      "heart_rate": 92,
+      "blood_pressure_systolic": 100,
+      "blood_pressure_diastolic": 68
+    }
+  },
+  "gold_standard": {
+    "primary_diagnosis": "heart_failure",
+    "acceptable_alternatives": [],
+    "key_discriminators": [
+      "bnp_greater_than_500",
+      "s3_gallop",
+      "elevated_jvp",
+      "hepatojugular_reflux",
+      "paroxysmal_nocturnal_dyspnea",
+      "orthopnea",
+      "sodium_less_than_130"
+    ],
+    "expected_patterns": [
+      "heart_failure"
+    ],
+    "expect_high_entropy": false
+  }
+}

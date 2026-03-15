@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "id": "clinical_cirrhosis_001",
+    "category": "hepatic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "cirrhosis",
+    "tags": ["teaching_case", "importance_4"]
+  },
+  "patient": {
+    "age": 55,
+    "sex": "male",
+    "chief_complaint": "abdominal distension, leg swelling, and confusion for 3 weeks",
+    "symptoms": ["abdominal distension", "leg swelling", "easy bruising", "fatigue", "confusion"],
+    "signs": ["ascites", "spider angiomata", "caput medusae", "palmar erythema", "asterixis", "jaundice", "splenomegaly"],
+    "medical_history": ["hepatitis C", "alcohol use disorder"],
+    "medications": [],
+    "family_history": [],
+    "social_history": ["heavy alcohol use for 25 years", "IV drug use in youth"],
+    "lab_panels": [
+      {
+        "panel_name": "Hepatic Panel",
+        "values": [
+          {"test_name": "albumin", "value": 2.4, "unit": "g/dL"},
+          {"test_name": "bilirubin_total", "value": 5.2, "unit": "mg/dL"},
+          {"test_name": "bilirubin_direct", "value": 3.1, "unit": "mg/dL"},
+          {"test_name": "alanine_aminotransferase", "value": 42, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 88, "unit": "U/L"},
+          {"test_name": "alkaline_phosphatase", "value": 165, "unit": "U/L"},
+          {"test_name": "gamma_glutamyl_transferase", "value": 180, "unit": "U/L"},
+          {"test_name": "ammonia", "value": 95, "unit": "mcmol/L"}
+        ]
+      },
+      {
+        "panel_name": "Coagulation",
+        "values": [
+          {"test_name": "international_normalized_ratio", "value": 1.8, "unit": "ratio"},
+          {"test_name": "prothrombin_time", "value": 20.5, "unit": "seconds"}
+        ]
+      },
+      {
+        "panel_name": "CBC and Chemistry",
+        "values": [
+          {"test_name": "hemoglobin", "value": 10.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 72, "unit": "x10^9/L"},
+          {"test_name": "white_blood_cells", "value": 4.8, "unit": "x10^9/L"},
+          {"test_name": "sodium", "value": 131, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 3.6, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 1.1, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["nodular liver contour with ascites on ultrasound"],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "cirrhosis",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ast_alt_ratio_greater_than_2", "caput_medusae", "spider_angiomata", "palmar_erythema", "asterixis", "ammonia_elevated", "bilirubin_total_elevated"],
+    "expected_patterns": ["cirrhosis"],
+    "expect_high_entropy": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "id": "clinical_iron_deficiency_anemia_001",
+    "category": "hematologic",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "iron_deficiency_anemia",
+    "tags": ["teaching_case", "importance_3"]
+  },
+  "patient": {
+    "age": 34,
+    "sex": "female",
+    "chief_complaint": "Progressive fatigue and exertional dyspnea over 3 months",
+    "symptoms": [
+      "fatigue",
+      "dyspnea on exertion",
+      "pica (ice chewing/pagophagia)",
+      "brittle nails",
+      "dizziness"
+    ],
+    "signs": [
+      "pallor of conjunctivae and nail beds",
+      "koilonychia",
+      "glossitis",
+      "tachycardia at 102 bpm",
+      "flow murmur"
+    ],
+    "medical_history": ["menorrhagia"],
+    "medications": [],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "hemoglobin", "value": 9.2, "unit": "g/dL"},
+          {"test_name": "hematocrit", "value": 28.5, "unit": "%"},
+          {"test_name": "mean_corpuscular_volume", "value": 68, "unit": "fL"},
+          {"test_name": "red_cell_distribution_width", "value": 18.2, "unit": "%"},
+          {"test_name": "ferritin", "value": 6, "unit": "ng/mL"},
+          {"test_name": "iron", "value": 25, "unit": "mcg/dL"},
+          {"test_name": "total_iron_binding_capacity", "value": 450, "unit": "mcg/dL"},
+          {"test_name": "transferrin_saturation", "value": 6, "unit": "%"},
+          {"test_name": "platelets", "value": 420, "unit": "x10^9/L"},
+          {"test_name": "white_blood_cells", "value": 7.2, "unit": "x10^9/L"},
+          {"test_name": "reticulocyte_count", "value": 0.5, "unit": "%"},
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.7, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "iron_deficiency_anemia",
+    "acceptable_alternatives": [],
+    "key_discriminators": ["ferritin_less_than_15", "mcv_less_than_80", "transferrin_saturation_less_than_16"],
+    "expected_patterns": ["iron_deficiency_anemia"]
+  }
+}

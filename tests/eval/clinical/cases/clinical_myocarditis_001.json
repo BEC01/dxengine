@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "clinical_myocarditis_001",
+    "category": "cardiac",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "myocarditis",
+    "tags": ["teaching_case", "importance_5"]
+  },
+  "patient": {
+    "age": 25,
+    "sex": "male",
+    "chief_complaint": "sharp chest pain worse with breathing and dyspnea for 2 days after a viral illness",
+    "symptoms": ["sharp chest pain with breathing", "dyspnea", "palpitations", "fatigue"],
+    "signs": [],
+    "medical_history": ["upper respiratory infection 10 days ago with fever, myalgias, and sore throat"],
+    "medications": ["ibuprofen as needed"],
+    "family_history": [],
+    "social_history": ["college athlete", "non-smoker", "no alcohol or drugs"],
+    "lab_panels": [
+      {
+        "panel_name": "Cardiac Panel",
+        "values": [
+          {"test_name": "troponin_i", "value": 3.2, "unit": "ng/mL"},
+          {"test_name": "creatine_kinase", "value": 450, "unit": "U/L"},
+          {"test_name": "creatine_kinase_mb", "value": 28, "unit": "ng/mL"},
+          {"test_name": "b_type_natriuretic_peptide", "value": 580, "unit": "pg/mL"}
+        ]
+      },
+      {
+        "panel_name": "Inflammatory Markers",
+        "values": [
+          {"test_name": "c_reactive_protein", "value": 42, "unit": "mg/L"},
+          {"test_name": "erythrocyte_sedimentation_rate", "value": 38, "unit": "mm/hr"}
+        ]
+      },
+      {
+        "panel_name": "CBC",
+        "values": [
+          {"test_name": "white_blood_cells", "value": 10.8, "unit": "x10^9/L"},
+          {"test_name": "hemoglobin", "value": 14.8, "unit": "g/dL"},
+          {"test_name": "platelets", "value": 230, "unit": "x10^9/L"},
+          {"test_name": "lymphocytes_absolute", "value": 4.2, "unit": "x10^9/L"}
+        ]
+      },
+      {
+        "panel_name": "Basic Metabolic Panel",
+        "values": [
+          {"test_name": "sodium", "value": 140, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.1, "unit": "mEq/L"},
+          {"test_name": "creatinine", "value": 0.9, "unit": "mg/dL"},
+          {"test_name": "glucose", "value": 88, "unit": "mg/dL"}
+        ]
+      }
+    ],
+    "imaging": ["cardiac MRI shows late gadolinium enhancement in non-coronary distribution with myocardial edema", "echocardiogram shows EF 40% with global hypokinesis"],
+    "vitals": {"heart_rate": 108, "blood_pressure_systolic": 112, "blood_pressure_diastolic": 70, "temperature": 37.8}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "myocarditis",
+    "acceptable_alternatives": ["acute_myocardial_infarction"],
+    "key_discriminators": ["troponin_elevated", "crp_greater_than_10", "bnp_greater_than_500", "creatine_kinase_mb_elevated", "chest_pain_pleuritic"],
+    "expected_patterns": ["myocarditis"],
+    "expect_high_entropy": true
+  }
+}

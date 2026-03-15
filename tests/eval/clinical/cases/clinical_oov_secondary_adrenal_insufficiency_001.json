@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "id": "clinical_oov_secondary_adrenal_insufficiency_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 50,
+    "sex": "male",
+    "chief_complaint": "Persistent fatigue, weakness, and lightheadedness for 3 months after stopping prednisone",
+    "symptoms": [
+      "fatigue",
+      "weakness",
+      "lightheadedness on standing",
+      "nausea",
+      "weight loss of 8 pounds"
+    ],
+    "signs": [
+      "orthostatic hypotension",
+      "no hyperpigmentation",
+      "thin appearance"
+    ],
+    "medical_history": ["rheumatoid arthritis treated with prednisone 20mg daily for 2 years, tapered and stopped 3 months ago"],
+    "medications": ["methotrexate"],
+    "family_history": [],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "cortisol_am", "value": 2.1, "unit": "mcg/dL"},
+          {"test_name": "adrenocorticotropic_hormone", "value": 4.5, "unit": "pg/mL"},
+          {"test_name": "sodium", "value": 132, "unit": "mEq/L"},
+          {"test_name": "potassium", "value": 4.0, "unit": "mEq/L"},
+          {"test_name": "glucose", "value": 62, "unit": "mg/dL"},
+          {"test_name": "hemoglobin", "value": 12.8, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 5.5, "unit": "x10^9/L"},
+          {"test_name": "eosinophils_absolute", "value": 0.15, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 240, "unit": "x10^9/L"},
+          {"test_name": "creatinine", "value": 1.0, "unit": "mg/dL"},
+          {"test_name": "calcium", "value": 9.2, "unit": "mg/dL"},
+          {"test_name": "thyroid_stimulating_hormone", "value": 2.5, "unit": "mIU/L"}
+        ]
+      }
+    ],
+    "imaging": [],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}

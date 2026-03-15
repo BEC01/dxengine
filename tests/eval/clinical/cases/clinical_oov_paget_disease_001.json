@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "id": "clinical_oov_paget_disease_001",
+    "category": "out_of_vocabulary",
+    "difficulty": "clinical",
+    "split": "test",
+    "source": "clinical",
+    "disease_pattern_name": "",
+    "tags": ["teaching_case", "out_of_vocabulary"]
+  },
+  "patient": {
+    "age": 72,
+    "sex": "male",
+    "chief_complaint": "Progressive right hip pain and hearing loss over the past year",
+    "symptoms": [
+      "right hip and thigh pain",
+      "progressive hearing loss",
+      "increasing hat size",
+      "warmth over right thigh"
+    ],
+    "signs": [
+      "bowing of right tibia",
+      "warmth over right femur",
+      "sensorineural hearing loss",
+      "increased skull circumference"
+    ],
+    "medical_history": [],
+    "medications": [],
+    "family_history": ["father had Paget disease"],
+    "social_history": [],
+    "lab_panels": [
+      {
+        "panel_name": "Clinical Panel",
+        "values": [
+          {"test_name": "alkaline_phosphatase", "value": 650, "unit": "U/L"},
+          {"test_name": "gamma_glutamyl_transferase", "value": 28, "unit": "U/L"},
+          {"test_name": "calcium", "value": 9.6, "unit": "mg/dL"},
+          {"test_name": "phosphorus", "value": 3.5, "unit": "mg/dL"},
+          {"test_name": "parathyroid_hormone", "value": 35, "unit": "pg/mL"},
+          {"test_name": "alanine_aminotransferase", "value": 25, "unit": "U/L"},
+          {"test_name": "aspartate_aminotransferase", "value": 30, "unit": "U/L"},
+          {"test_name": "bilirubin_total", "value": 0.8, "unit": "mg/dL"},
+          {"test_name": "creatinine", "value": 1.1, "unit": "mg/dL"},
+          {"test_name": "hemoglobin", "value": 14.0, "unit": "g/dL"},
+          {"test_name": "white_blood_cells", "value": 6.5, "unit": "x10^9/L"},
+          {"test_name": "platelets", "value": 230, "unit": "x10^9/L"},
+          {"test_name": "sodium", "value": 141, "unit": "mEq/L"}
+        ]
+      }
+    ],
+    "imaging": ["X-ray pelvis: osteolytic and osteoblastic mixed lesions in right hemipelvis and proximal femur"],
+    "vitals": {}
+  },
+  "gold_standard": {
+    "primary_diagnosis": "__none__",
+    "acceptable_alternatives": [],
+    "key_discriminators": [],
+    "expected_patterns": [],
+    "expect_no_dominant": true
+  }
+}
