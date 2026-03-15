@@ -216,8 +216,17 @@ class LoopIteration(BaseModel):
     notes: str = ""
 
 
+_EXPERIMENTAL_DISCLAIMER = (
+    "EXPERIMENTAL SOFTWARE - NOT FOR CLINICAL USE. "
+    "This is an unvalidated research experiment built by a non-medical-professional. "
+    "It has never been tested on real patients. Do not use this output for any "
+    "medical decisions. Always consult a qualified healthcare provider."
+)
+
+
 class StructuredBriefing(BaseModel):
     """Snapshot of all deterministic analysis for LLM consumption."""
+    disclaimer: str = _EXPERIMENTAL_DISCLAIMER
     patient: PatientProfile = Field(default_factory=PatientProfile)
     problem_representation: ProblemRepresentation = Field(default_factory=ProblemRepresentation)
     analyzed_labs: list[LabSummary] = Field(default_factory=list)
