@@ -188,6 +188,8 @@ DxEngine doesn't just diagnose. It autonomously improves itself through four fee
 
 **`/eval`: Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
 
+**`\evolve`: Autonomous research system.** A perpetual meta-orchestrator that coordinates all skills above in a continuous loop. Assesses system state, picks the highest-impact research direction (improve, expand, calibrate, tournament, or novel algorithm generation), launches parallel agent teams, evaluates results, and loops indefinitely. Agents can design entirely new detection algorithms that compete in the tournament. A research journal provides continuity across conversations.
+
 ### Other Skills
 
 - `/diagnose <patient_data>` - Full hybrid diagnostic reasoning loop (deterministic pipeline + LLM clinical reasoning)
