@@ -5,8 +5,22 @@ build-backend = "hatchling.build"
 [project]
 name = "dxengine"
 version = "0.1.0"
-description = "Medical Diagnostic Reasoning Engine — literature-based reasoning with data-driven lab pattern discovery"
-requires-python = ">=3.12"
+description = "Medical diagnostic reasoning engine combining Bayesian inference with LLM clinical reasoning"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Bernardo Castro"}
+]
+keywords = ["medical", "diagnosis", "bayesian", "clinical-decision-support", "laboratory"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
 dependencies = [
     "pydantic>=2.0",
     "scipy>=1.12",
@@ -21,6 +35,12 @@ dev = [
     "pytest>=8.0",
     "pytest-asyncio>=0.23",
 ]
+
+[project.urls]
+Repository = "https://github.com/BEC01/dxengine"
+Documentation = "https://github.com/BEC01/dxengine/blob/master/CLAUDE.md"
+"Safety Argument" = "https://github.com/BEC01/dxengine/blob/master/docs/SAFETY_ARGUMENT.md"
+"Equity Audit" = "https://github.com/BEC01/dxengine/blob/master/docs/EQUITY_AUDIT.md"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

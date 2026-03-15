@@ -1,13 +1,16 @@
 __pycache__/
 *.py[cod]
+*.pyc
 *.egg-info/
 dist/
 build/
 .venv/
+.pytest_cache/
 
 # Runtime state and generated reports
-state/sessions/
-state/eval/
+state/
+!state/comparison/claude_results.json
+
 sandbox/
 
 # Environment
