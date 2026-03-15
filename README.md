@@ -1,21 +1,23 @@
 # DxEngine
 
-**A hybrid diagnostic reasoning engine that combines deterministic Bayesian inference with LLM clinical reasoning.**
+**An experimental diagnostic reasoning engine exploring hybrid Bayesian + LLM approaches to lab-based diagnosis.**
 
 <!-- Badges -->
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
-[![Tests](https://img.shields.io/badge/tests-446%20passing-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/tests-423%20passing-brightgreen.svg)](tests/)
+
+> **This is a research experiment, not a clinical tool.** DxEngine was built as an exploration of AI-assisted diagnostic reasoning by a non-medical-professional. It has not been clinically validated on real patients, has not been reviewed by a medical board, and is not suitable for clinical use. See [MEDICAL_DISCLAIMER.md](MEDICAL_DISCLAIMER.md).
 
 ---
 
 ## What Is DxEngine?
 
-DxEngine is an open-source clinical decision support engine that takes laboratory values, physical exam findings, and symptoms as input and produces a ranked differential diagnosis with calibrated probabilities. Every probability is backed by curated likelihood ratios sourced from peer-reviewed literature, with full evidence chains you can trace back to the original studies.
+DxEngine is an experimental open-source project exploring how deterministic Bayesian inference and LLM reasoning can be combined for lab-based diagnostic reasoning. It takes laboratory values, physical exam findings, and symptoms as input and produces a ranked differential diagnosis with probability estimates backed by curated likelihood ratios from published medical literature.
 
-The system uses a hybrid architecture. A deterministic Bayesian pipeline runs in under 10ms, analyzing labs against 103 age/sex-adjusted reference ranges, mapping them to 262 clinical findings via 689 curated likelihood ratio pairs, and producing a structured probabilistic briefing. An LLM diagnostician then reasons over this briefing alongside the full clinical picture -- history, medications, imaging, exam findings -- to produce the final differential.
+**This project was built by a lawyer, not a doctor.** The medical knowledge was curated from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) and structured using AI-assisted research. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data. The evaluation numbers below reflect performance on curated test cases, not clinical accuracy in practice.
 
-What makes DxEngine different from both traditional CDSSs and raw LLM queries is **collectively-abnormal detection**: the ability to identify disease patterns where every individual lab value falls within the normal range, but the combination across multiple analytes is statistically improbable. A CBC, CMP, and iron panel that each look "fine" individually can collectively point to early myelodysplastic syndrome or pre-clinical SLE. This is exactly the kind of pattern that gets missed in clinical practice.
+The system uses a hybrid architecture: a deterministic Bayesian pipeline runs in under 10ms, and an LLM diagnostician reasons over the engine's structured analysis. One experimental feature is **collectively-abnormal detection** — identifying disease patterns where every individual lab value falls within the normal range, but the combination is statistically improbable. This is a novel approach that has not been independently validated.
 
 ## Why Not Just Ask ChatGPT?
 
@@ -33,9 +35,9 @@ Honest question, and we measured it. On 50 independent clinical teaching cases:
 
 The LLM is a better general diagnostician. DxEngine is a better safety net. The hybrid architecture combines both: the LLM reasons freely, but the engine constrains it with verified evidence and catches the patterns it would miss.
 
-## Clinical Validation
+## Evaluation Results (Experimental)
 
-DxEngine has been validated through a three-layer independent evaluation:
+DxEngine has been tested through a three-layer evaluation. These results reflect performance on curated test cases, **not clinical validation on real patients**:
 
 **Layer 1 -- Lab Interpretation Accuracy**
 1,227 test points across 103 analytes, multiple demographics, and value positions. 100% pass rate. Cross-validated against 40 textbook reference ranges (Laposata, Fischbach).
@@ -172,18 +174,20 @@ DxEngine provides Claude Code skills for interactive use:
 - `/improve [iterations] [focus]` -- Self-improvement loop that tunes data files against the eval harness
 - `/expand [focus=category]` -- Autonomous disease expansion: researches new diseases from literature, validates against 21 checks, integrates with zero-regression gates
 
-## Limitations and Responsible Use
+## Limitations
 
-**This is a decision support tool, not a diagnostic oracle.**
+**This is an experiment, not a clinical tool. Do not use it for medical decisions.**
 
-- **54 diseases out of thousands.** The engine covers a fraction of possible diagnoses. Diseases outside its vocabulary are handled safely (the system says "I don't know" rather than guessing), but they are not considered by the deterministic layer.
-- **No ethnicity-specific reference ranges.** Lab ranges use population-wide adult defaults. See the [Equity Audit](docs/EQUITY_AUDIT.md) for a detailed analysis of demographic gaps and their clinical implications.
-- **Validated on teaching cases, not real patients.** Clinical evaluation uses 50 handcrafted cases with textbook-quality lab values. Real-world lab panels are noisier, with more pre-analytical variation and missing values.
-- **Not suitable for imaging-dependent, pathology-dependent, or culture-dependent diagnoses** (e.g., DVT, lymphoma, tuberculosis).
-- **Not validated for pediatric patients.** Reference ranges use adult defaults with limited age adjustment.
-- **Requires clinical judgment.** Every output includes a differential (never a single diagnosis) and requires correlation by a licensed healthcare professional.
+- **Built by a non-medical-professional.** The author is a lawyer who built this as an AI experiment. Medical knowledge was curated from published sources using AI-assisted research, not clinical expertise.
+- **Never tested on real patients.** All evaluation uses synthetic or teaching-case data. No real-world clinical validation has been performed.
+- **54 diseases out of thousands.** The engine covers a tiny fraction of possible diagnoses.
+- **No ethnicity-specific reference ranges.** Lab ranges are derived from predominantly North American/European populations and may produce incorrect classifications for other populations. See the [Equity Audit](docs/EQUITY_AUDIT.md).
+- **Not suitable for imaging, pathology, or culture-dependent diagnoses** (e.g., DVT, lymphoma, tuberculosis).
+- **Not validated for pediatric patients.**
+- **Likelihood ratios may be incorrect.** LRs were curated from published literature using AI-assisted research and have not been independently verified by medical experts.
+- **The collectively-abnormal detection is unvalidated.** This is a novel approach with no published validation on real clinical data.
 
-For the complete safety argument with failure modes and mitigations, see [Safety Argument](docs/SAFETY_ARGUMENT.md).
+For the complete safety argument with known failure modes, see [Safety Argument](docs/SAFETY_ARGUMENT.md). For the full medical disclaimer, see [MEDICAL_DISCLAIMER.md](MEDICAL_DISCLAIMER.md).
 
 ## Contributing
 
@@ -195,8 +199,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, data file guidelin
 
 ## Disclaimer
 
-DxEngine is an **educational and research tool**. It is not a medical device. It has not been cleared or approved by the FDA or any regulatory body. It does not provide medical advice, and its output does not constitute a diagnosis.
+**DxEngine is an experimental research project. It is not a medical device, not clinically validated, and not suitable for clinical use.**
 
-**Do not use this tool to make clinical decisions without independent verification by a licensed healthcare professional.** The system is designed to support -- never replace -- clinical judgment. All output is probabilistic, always presents a differential diagnosis, and explicitly recommends clinical correlation.
+This software has not been cleared or approved by the FDA, EMA, or any regulatory body. It does not provide medical advice. Its output does not constitute a diagnosis. The medical knowledge it contains was curated by a non-medical-professional using AI-assisted literature research and has not been reviewed or validated by a medical board or clinical experts.
 
-The authors and contributors assume no liability for clinical decisions informed by this tool.
+**Do not use this tool to make any medical or clinical decisions.** If you have health concerns, consult a licensed healthcare professional.
+
+The authors and contributors assume no liability for any use of this software. See [MEDICAL_DISCLAIMER.md](MEDICAL_DISCLAIMER.md) for full terms.
