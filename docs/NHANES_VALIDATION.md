@@ -2,12 +2,12 @@
 
 ## Summary
 
-DxEngine's collectively-abnormal detection was validated on **5,273 real adults** from the CDC National Health and Nutrition Examination Survey (NHANES 2017-2018 cycle). This is the first validation of this approach on real patient data.
+DxEngine's collectively-abnormal detection was validated on real adults from two independent NHANES cycles: **5,273 adults from 2017-2018** and **5,322 adults from 2011-2012** (the latter including thyroid panel data with TSH and free T4). This is the first validation of this approach on real patient data.
 
 **Key findings:**
-- **CKD pattern: validated.** 98.0% specificity, 3.6x enrichment in kidney disease (p < 0.0001)
+- **CKD pattern: validated and cross-cycle replicated.** 3.6x enrichment on 2017-2018 (p < 0.0001, 98% specificity), **6.0x enrichment on 2011-2012** (p < 0.000001, 99% specificity). Strongest result across two independent cohorts.
 - **SLE pattern: weak signal.** 1.4x enrichment in arthritis/autoimmune (p = 0.0001), but 9.3% false-positive rate - pattern too broad
-- **Hypothyroidism pattern: not validated.** Fires less in thyroid patients than healthy (0.7x, p = 0.14)
+- **Hypothyroidism pattern: not validated even with TSH data.** On 2011-2012 with TSH/FT4 available, enrichment was only 1.1x (p = 0.86). Treatment effect (levothyroxine normalizes TSH) likely masks the CA pattern in diagnosed patients.
 - **Myeloma pattern: not validated.** No enrichment in cancer patients (0.7x, p = 0.64)
 - Detection rate increases with age (15% in 20s to 22% in 60s), consistent with subclinical disease prevalence
 
