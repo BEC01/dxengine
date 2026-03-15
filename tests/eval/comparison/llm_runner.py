@@ -44,6 +44,9 @@ _DISEASE_ALIASES: dict[str, str] = {
     "ttp": "ttp_hus",
     "hus": "ttp_hus",
     "ttp/hus": "ttp_hus",
+    "thrombotic_thrombocytopenic_purpura": "ttp_hus",
+    "hemolytic_uremic_syndrome": "ttp_hus",
+    "thrombotic_microangiopathy": "ttp_hus",
     "tls": "tumor_lysis_syndrome",
     "mas": "macrophage_activation_syndrome",
     "hlh": "macrophage_activation_syndrome",
@@ -55,6 +58,9 @@ _DISEASE_ALIASES: dict[str, str] = {
     "mds": "myelodysplastic_syndrome",
     "ckd": "chronic_kidney_disease",
     "siadh": "siadh",
+    "syndrome_of_inappropriate_antidiuretic_hormone": "siadh",
+    "syndrome_of_inappropriate_adh": "siadh",
+    "syndrome_of_inappropriate_adh_secretion": "siadh",
     "hellp": "hellp_syndrome",
     "ra": "rheumatoid_arthritis",
     "chf": "heart_failure",
@@ -67,6 +73,8 @@ _DISEASE_ALIASES: dict[str, str] = {
     "cobalamin_deficiency": "vitamin_b12_deficiency",
     "addisons_disease": "addison_disease",
     "addison's_disease": "addison_disease",
+    "adrenal_insufficiency": "addison_disease",
+    "primary_adrenal_insufficiency": "addison_disease",
     "cushings_syndrome": "cushing_syndrome",
     "cushing's_syndrome": "cushing_syndrome",
     "wilsons_disease": "wilson_disease",
@@ -96,9 +104,13 @@ _DISEASE_ALIASES: dict[str, str] = {
     "nephritic": "nephritic_syndrome",
     "aplastic": "aplastic_anemia",
     "hemolytic": "hemolytic_anemia",
+    "autoimmune_hemolytic_anemia": "hemolytic_anemia",
+    "warm_autoimmune_hemolytic_anemia": "hemolytic_anemia",
     "methanol_poisoning": "methanol_ethylene_glycol_poisoning",
     "ethylene_glycol_poisoning": "methanol_ethylene_glycol_poisoning",
     "toxic_alcohol_poisoning": "methanol_ethylene_glycol_poisoning",
+    "toxic_alcohol_ingestion": "methanol_ethylene_glycol_poisoning",
+    "methanol_ingestion": "methanol_ethylene_glycol_poisoning",
     "folate_def": "folate_deficiency",
     "folic_acid_deficiency": "folate_deficiency",
     "alcoholic_liver_disease": "alcoholic_hepatitis",
@@ -136,14 +148,16 @@ def normalize_disease_name(name: str) -> str:
     # Remove trailing punctuation
     cleaned = cleaned.rstrip(".,;:")
 
+    # Alias lookup FIRST — aliases are intentional overrides
+    # (e.g., methanol_poisoning exists in illness_scripts but should map to
+    # methanol_ethylene_glycol_poisoning for the combined disease pattern)
+    if cleaned in _DISEASE_ALIASES:
+        return _DISEASE_ALIASES[cleaned]
+
     # Direct match to valid diseases
     valid = _get_valid_diseases()
     if cleaned in valid:
         return cleaned
-
-    # Alias lookup
-    if cleaned in _DISEASE_ALIASES:
-        return _DISEASE_ALIASES[cleaned]
 
     # Try removing common suffixes/prefixes
     for suffix in ("_syndrome", "_disease", "_disorder"):

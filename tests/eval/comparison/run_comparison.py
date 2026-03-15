@@ -28,7 +28,7 @@ from tests.eval.clinical.run_clinical_eval import (
     load_clinical_cases,
     wilson_ci,
 )
-from tests.eval.comparison.llm_runner import LLMResult, LLMRunner
+from tests.eval.comparison.llm_runner import LLMResult, LLMRunner, normalize_disease_name
 from tests.eval.schema import CaseResult
 from tests.eval.scorer import compute_suite_metrics, compute_weighted_score
 
@@ -48,12 +48,12 @@ def llm_to_case_result(llm_result: LLMResult, case: dict) -> CaseResult:
     target_diseases = {primary} | alternatives
     is_negative = primary == "__none__"
 
-    # Build ranked_hypotheses from LLM diagnoses
+    # Build ranked_hypotheses from LLM diagnoses (normalize names from cache)
     ranked = []
     for i, d in enumerate(llm_result.diagnoses):
         ranked.append(
             {
-                "disease": d["disease"],
+                "disease": normalize_disease_name(d["disease"]),
                 "posterior": d["probability"],
                 "rank": i + 1,
             }
@@ -367,10 +367,15 @@ def main():
 
         all_llm_results[model] = llm_results
 
-        # Convert to CaseResults for scoring
+        # Convert to CaseResults for scoring — match by vignette_id, not position
+        llm_by_id = {r.vignette_id: r for r in llm_results}
         case_results = []
         parse_ok = 0
-        for llm_r, case in zip(llm_results, cases):
+        for case in cases:
+            vid = case.get("metadata", {}).get("id", "")
+            llm_r = llm_by_id.get(vid)
+            if llm_r is None:
+                continue
             cr = llm_to_case_result(llm_r, case)
             case_results.append(cr)
             if llm_r.parse_success:
