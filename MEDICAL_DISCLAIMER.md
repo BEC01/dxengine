@@ -2,7 +2,7 @@
 
 ## Experimental Software
 
-DxEngine is an **experimental research project** built entirely by AI (Claude), directed by a non-medical-professional (a lawyer) with no programming or medical background. All code, algorithms, medical knowledge curation, and evaluation design was performed by a large language model. The medical data was extracted from published literature by AI - **not** by a clinician, medical expert, or trained programmer. Nothing in this project has been reviewed or validated by a medical board, clinical experts, or any peer-review process.
+DxEngine is an **experimental research project** built entirely by AI (Claude), directed by a non-medical-professional with no programming or medical background. All code, algorithms, medical knowledge curation, and evaluation design was performed by a large language model. The medical data was extracted from published literature by AI - **not** by a clinician, medical expert, or trained programmer. Nothing in this project has been reviewed or validated by a medical board, clinical experts, or any peer-review process.
 
 ## Not a Medical Device
 

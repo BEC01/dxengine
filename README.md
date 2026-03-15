@@ -15,7 +15,7 @@
 
 DxEngine is an experimental open-source project exploring how deterministic Bayesian inference and LLM reasoning can be combined for lab-based diagnostic reasoning. It takes laboratory values, physical exam findings, and symptoms as input and produces a ranked differential diagnosis with probability estimates backed by curated likelihood ratios from published medical literature.
 
-**This project was built entirely by AI (Claude), directed by a lawyer with no medical or programming background.** All code, medical knowledge curation, and evaluation design was done by an LLM. The medical data was extracted from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) by AI-assisted research - not by a clinician or medical expert. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data. The evaluation numbers below reflect performance on curated test cases, not clinical accuracy in practice.
+**This project was built entirely by AI (Claude), directed by a non-medical-professional with no programming background.** All code, medical knowledge curation, and evaluation design was done by an LLM. The medical data was extracted from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) by AI-assisted research - not by a clinician or medical expert. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data. The evaluation numbers below reflect performance on curated test cases, not clinical accuracy in practice.
 
 The system uses a hybrid architecture: a deterministic Bayesian pipeline runs in under 10ms, and an LLM diagnostician reasons over the engine's structured analysis. One experimental feature is **collectively-abnormal detection** - identifying disease patterns where every individual lab value falls within the normal range, but the combination is statistically improbable. This is a novel approach that has not been independently validated.
 
@@ -182,7 +182,7 @@ DxEngine provides Claude Code skills for interactive use:
 
 **This is an experiment, not a clinical tool. Do not use it for medical decisions.**
 
-- **Built by a non-medical-professional.** The author is a lawyer who built this as an AI experiment. Medical knowledge was curated from published sources using AI-assisted research, not clinical expertise.
+- **Built by a non-medical-professional.** This project was built as an AI experiment by someone without medical or programming expertise. Medical knowledge was curated from published sources using AI-assisted research, not clinical expertise.
 - **Never tested on real patients.** All evaluation uses synthetic or teaching-case data. No real-world clinical validation has been performed.
 - **54 diseases out of thousands.** The engine covers a tiny fraction of possible diagnoses.
 - **No ethnicity-specific reference ranges.** Lab ranges are derived from predominantly North American/European populations and may produce incorrect classifications for other populations. See the [Equity Audit](docs/EQUITY_AUDIT.md).
