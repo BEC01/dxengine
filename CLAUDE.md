@@ -40,6 +40,7 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 - `/eval [layer] [category]` - Run multi-layer clinical evaluation (lab accuracy, clinical cases, LLM comparison, pytest gates)
 - `/improve [iterations=5] [focus=area]` - Run self-improvement loop on data files
 - `/expand [focus=category]` - Perpetual disease expansion loop - autonomously researches, validates, and integrates new diseases
+- `/calibrate [disease|all|discover]` - Calibrate CA patterns against NHANES population data; Lab-GWAS discovery
 
 ## Agents
 
@@ -167,22 +168,22 @@ The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driv
 - Atomic file writes with .bak backup and rollback on failure
 
 ### Eval Harness
-231 vignettes + 5 fixtures = 236 total (189 positive, 42 negative, 18% negative ratio). All scale automatically with /expand:
+464 vignettes + 5 fixtures = 469 total. All scale automatically with /expand:
 
 **Vignette types (per disease, auto-generated):**
-- **classic** (24) - full disease pattern at canonical z-scores (uses `typical_value` when available)
-- **moderate** (24) - 0.55x z-scores, tests sensitivity to milder presentations
-- **partial_screen** (24) - only standard panel labs (CBC+CMP+TSH+iron)
-- **partial_nokey** (24) - highest-weight analyte removed, tests graceful degradation
-- **demog_flip** (24) - age/sex flipped to atypical demographics
+- **classic** (54) - full disease pattern at canonical z-scores (uses `typical_value` when available)
+- **moderate** (54) - 0.55x z-scores, tests sensitivity to milder presentations
+- **partial_screen** (42) - only standard panel labs (CBC+CMP+TSH+iron)
+- **partial_nokey** (54) - highest-weight analyte removed, tests graceful degradation
+- **demog_flip** (54) - age/sex flipped to atypical demographics
 - **comorbidity** (18) - blended with medically plausible comorbidity overlay (18 curated pairs)
-- **borderline** (10) - key analyte at finding rule threshold + 1%, handles all operator types
+- **borderline** (23) - key analyte at finding rule threshold + 1%, handles all operator types
 - **subtle** (10) - collectively-abnormal diseases only, z-scores that are individually normal
 
 **Adversarial & negative cases (auto-generated):**
-- **Dynamic discriminators** (29) - auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
-- **Dynamic ambiguous** (3) - shared labs only, both diseases plausible, gold = `__none__`
-- **Mimic negatives** (23) - mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; stripped symptoms prevent clinical rule leakage
+- **Dynamic discriminators** (79) - auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
+- **Dynamic ambiguous** (10) - shared labs only, both diseases plausible, gold = `__none__`
+- **Mimic negatives** (41) - mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; stripped symptoms prevent clinical rule leakage
 - **Healthy negatives** (10) - normal labs with random physiological variation
 - **Unknown disease negatives** (5) - genuinely abnormal labs for diseases not in engine vocabulary; **flips_when** auto-converts to positive when disease is added
 - **Handcrafted adversarial** (3) - medication effect, age adjustment, partial panel
@@ -591,11 +592,11 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 
 | File | Contents | Entries |
 |------|----------|---------|
-| lab_ranges.json | Age/sex-adjusted reference ranges | 98 analytes |
+| lab_ranges.json | Age/sex-adjusted reference ranges | 103 analytes |
 | disease_lab_patterns.json | Disease-lab signatures with optional `typical_value` (10 collectively-abnormal) | 54 patterns, 50 typical_values |
 | illness_scripts.json | Structured illness scripts with disease_importance | 64 diseases |
 | likelihood_ratios.json | LR+/LR- for finding-disease pairs | 262 findings, 689 LR pairs |
-| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 146 lab rules + 100 clinical rules + 54 name_aliases |
+| finding_rules.json | Lab-to-finding mapping rules with importance (single, composite, computed, clinical) | 153 lab rules + 100 clinical rules + 62 name_aliases |
 | discovery_candidates.json | Curated disease candidates for auto-discovery with locked importance/category | 25 candidates (3 waves) |
 | loinc_mappings.json | LOINC code <-> common name mappings | 98 codes, 322 name mappings |
 

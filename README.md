@@ -48,6 +48,9 @@ DxEngine has been tested through a three-layer evaluation. These results reflect
 **Layer 3 -- Blind LLM Comparison**
 Side-by-side against Claude diagnosing the same 50 cases with no access to gold standards. Engine wins on OOV safety and evidence transparency; LLM wins on raw accuracy for canonical presentations.
 
+**NHANES Population Validation**
+Collectively-abnormal detection validated on 5,273 real adults from CDC NHANES (2017-2018) with cross-cycle replication on 5,322 adults (2011-2012). CKD pattern: 6.0x enrichment, 99% specificity, p < 0.000001. See [NHANES Validation](docs/NHANES_VALIDATION.md).
+
 **Synthetic Regression Suite**
 464 auto-generated vignettes across 8 case types (classic, moderate, partial panel, borderline, comorbidity, and adversarial cases) ensure no regressions when expanding disease coverage.
 
@@ -59,7 +62,7 @@ For detailed analysis of demographic bias, see [Equity Audit](docs/EQUITY_AUDIT.
 git clone https://github.com/BEC01/dxengine.git
 cd dxengine
 uv sync
-uv run pytest tests/ -v  # 446 tests
+uv run pytest tests/ -v  # 423 tests
 ```
 
 ### Requirements
@@ -125,7 +128,7 @@ See [CLAUDE.md](CLAUDE.md) for the full architecture specification.
 | Renal | 5 | CKD, nephrotic syndrome, RTA, primary hyperparathyroidism, rhabdomyolysis |
 | Rheumatologic | 4 | SLE, rheumatoid arthritis, gout, celiac disease |
 | Cardiac | 3 | AMI, heart failure, infective endocarditis |
-| Infectious | 2 | Sepsis, cholangitis |
+| Infectious | 1 | Sepsis |
 | Oncologic emergency | 2 | Tumor lysis syndrome, MAS/HLH |
 | Metabolic/toxic | 2 | Ethylene glycol poisoning, methanol poisoning |
 | Gastrointestinal | 2 | Pancreatitis, celiac disease |
@@ -141,7 +144,7 @@ See [CLAUDE.md](CLAUDE.md) for the full architecture specification.
 | `disease_lab_patterns.json` | Disease-specific lab signatures | 54 patterns |
 | `illness_scripts.json` | Structured illness scripts (presentation, labs, criteria, mimics) | 64 diseases |
 | `likelihood_ratios.json` | LR+/LR- for finding-disease pairs, all with PMID sources | 262 findings, 689 LR pairs |
-| `finding_rules.json` | Lab-to-finding and clinical-sign-to-finding mapping rules | 153 lab rules, 100 clinical rules |
+| `finding_rules.json` | Lab-to-finding and clinical-sign-to-finding mapping rules | 153 lab rules, 100 clinical rules, 62 name aliases |
 | `loinc_mappings.json` | LOINC code to common name mappings | 98 codes, 322 name mappings |
 
 All likelihood ratios are bounded (LR+ [0.5, 50.0], LR- [0.05, 1.5]) and sourced from published literature. Quality-based caps prevent overweighting low-evidence sources (expert opinion capped at LR 3.0).
@@ -173,6 +176,7 @@ DxEngine provides Claude Code skills for interactive use:
 - `/eval [layer]` -- Run the multi-layer evaluation suite
 - `/improve [iterations] [focus]` -- Self-improvement loop that tunes data files against the eval harness
 - `/expand [focus=category]` -- Autonomous disease expansion: researches new diseases from literature, validates against 21 checks, integrates with zero-regression gates
+- `/calibrate [disease|all|discover]` -- Calibrate CA patterns against NHANES population data; Lab-GWAS discovery mode finds new signatures
 
 ## Limitations
 

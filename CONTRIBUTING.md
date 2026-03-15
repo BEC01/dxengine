@@ -15,6 +15,9 @@ uv run pytest tests/ -v
 uv run python tests/eval/lab_accuracy/run_lab_accuracy.py    # Layer 1: Lab accuracy
 uv run python tests/eval/clinical/run_clinical_eval.py       # Layer 2: Clinical cases
 uv run python tests/eval/comparison/run_comparison.py --reuse-cache  # Layer 3: LLM comparison
+
+# NHANES population validation (requires pandas: uv pip install pandas)
+uv run python state/nhanes/calibrate.py discover
 ```
 
 ## How to Contribute
@@ -22,6 +25,7 @@ uv run python tests/eval/comparison/run_comparison.py --reuse-cache  # Layer 3: 
 - **Add clinical test cases**: Create JSON files in `tests/eval/clinical/cases/` following the existing format.
 - **Add disease coverage**: Use the `/expand` skill or manually add to `data/*.json`.
 - **Improve accuracy**: Use the `/improve` skill or add LR entries to `data/likelihood_ratios.json`.
+- **Validate CA patterns**: Run `/calibrate` against NHANES data to optimize collectively-abnormal detection patterns.
 - **Report issues**: Open a GitHub issue with the case data that produced incorrect results.
 
 ## Data File Guidelines

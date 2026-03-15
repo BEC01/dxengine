@@ -13,7 +13,7 @@
 DxEngine is a deterministic medical diagnostic reasoning engine that analyzes laboratory values and clinical findings to produce a ranked differential diagnosis. It combines literature-based likelihood ratios with data-driven pattern detection to support clinical decision-making.
 
 The system operates in a hybrid architecture:
-- **Layer 1 (Deterministic Pipeline):** Processes lab values against 103 age/sex-adjusted reference ranges, maps them to 262 clinical findings via 153 lab rules and 100 clinical rules, applies Bayesian updating using 526 curated likelihood ratio pairs sourced from peer-reviewed literature, detects collectively-abnormal lab patterns via weighted directional projection, and produces a structured probabilistic briefing. Executes in under 10ms.
+- **Layer 1 (Deterministic Pipeline):** Processes lab values against 103 age/sex-adjusted reference ranges, maps them to 262 clinical findings via 153 lab rules and 100 clinical rules, applies Bayesian updating using 689 curated likelihood ratio pairs sourced from peer-reviewed literature, detects collectively-abnormal lab patterns via weighted directional projection, and produces a structured probabilistic briefing. Executes in under 10ms.
 - **Layer 2 (LLM Diagnostician):** An LLM agent receives the deterministic briefing as context and performs full clinical reasoning, integrating information the engine cannot process (history, imaging context, medication effects, clinical gestalt).
 - **Verification Layer:** A deterministic verifier checks LLM claims against engine z-scores and caps uncurated likelihood ratios at 3.0.
 
@@ -131,7 +131,7 @@ DxEngine is intended as a **clinical decision support tool** for licensed health
 | Metric | DxEngine (deterministic) | Raw Claude LLM |
 |--------|--------------------------|----------------|
 | Top-1 accuracy | 82.5% | 100% |
-| Top-3 accuracy | 92.5% | 100% |
+| Top-3 accuracy | 92.5% | 97.5% |
 | OOV pass rate (max post < 0.40) | **100%** | **0%** |
 | False positive rate | **0.0%** | **100%** |
 | Negative pass rate | **100%** | **0%** |
@@ -140,7 +140,7 @@ DxEngine is intended as a **clinical decision support tool** for licensed health
 
 **Interpretation:**
 
-The raw LLM achieves perfect top-3 accuracy: it always names the correct diagnosis. However, it also **always names a diagnosis**, even for diseases it should not recognize. The LLM's 0% OOV pass rate and 100% false positive rate mean it confidently assigns a diagnosis to every case, including the 10 out-of-vocabulary diseases where no correct answer exists in its output vocabulary.
+The raw LLM achieves 97.5% top-3 accuracy (after disease name normalization): it nearly always names the correct diagnosis. However, it also **always names a diagnosis**, even for diseases it should not recognize. The LLM's 0% OOV pass rate and 100% false positive rate mean it confidently assigns a diagnosis to every case, including the 10 out-of-vocabulary diseases where no correct answer exists in its output vocabulary.
 
 DxEngine's deterministic pipeline makes the opposite trade-off: it misses 3 of 40 in-vocabulary diseases in the top-3, but it **never** produces a false positive on OOV cases. This is the core safety property: the engine knows what it doesn't know.
 
@@ -150,10 +150,27 @@ The LLM produces better-calibrated posteriors (Brier 0.034 vs. 0.732) on in-voca
 
 **Limitations:**
 - The comparison tests the deterministic pipeline in isolation against the LLM in isolation. The production hybrid system combines both and was not separately evaluated in this head-to-head.
-- The LLM's 100% top-3 is partly an artifact of the evaluation format: the LLM was given the correct diagnosis as a possibility in its vocabulary and vignettes were designed around known diseases. Real-world LLM performance on ambiguous cases would be lower.
+- The LLM's 97.5% top-3 is partly an artifact of the evaluation format: the LLM was given the correct diagnosis as a possibility in its vocabulary and vignettes were designed around known diseases. Real-world LLM performance on ambiguous cases would be lower.
 - The engine's advantage (OOV restraint) matters most in settings where clinicians might over-trust AI output. In settings where clinicians already apply strong independent judgment, the restraint is less incrementally valuable.
 
 **Confidence Level:** HIGH for the specific claim that the engine provides OOV safety that the LLM does not. LOW for quantifying the net clinical value of the hybrid system, which has not been evaluated end-to-end in a clinical setting.
+
+---
+
+### CLAIM 5: Collectively-abnormal detection produces real signals on population data
+
+**Claim:** The engine's collectively-abnormal pattern detection identifies clinically meaningful disease signals in real-world population data, not just synthetic vignettes.
+
+**Evidence:**
+- NHANES validation on 5,322 adults showed CKD pattern 6.0x enrichment (p < 0.000001) with cross-cycle replication.
+- See [NHANES Validation](NHANES_VALIDATION.md) for full methodology and results.
+
+**Limitations:**
+- Only CKD fully validated; hypothyroidism not validated (treatment effect confound).
+- SLE pattern over-sensitive (9.3% false positive rate).
+- Analysis performed by AI, not expert-reviewed.
+
+**Confidence Level:** MODERATE. Strong enrichment on one disease with replication, but limited disease coverage and no expert review of methodology.
 
 ---
 
@@ -207,7 +224,7 @@ Reference ranges in `lab_ranges.json` are derived from predominantly North Ameri
 - **Alkaline phosphatase:** Higher normal values in individuals of African descent.
 - **Vitamin D:** Lower 25-OH vitamin D levels in individuals with darker skin pigmentation may be physiologically normal but flagged as deficient.
 
-No formal equity audit has been performed. This is a known gap.
+A formal equity audit was performed on 2026-03-15. See [Equity Audit](EQUITY_AUDIT.md).
 
 ### 3.6 Pediatric Patients
 
@@ -294,3 +311,10 @@ However, the exemption requires that the software "enables [the HCP] to independ
 | Date | Version | Change Summary |
 |------|---------|----------------|
 | 2026-03-15 | 1.0 | Initial safety argument. 54 disease patterns, 103 analytes. Clinical eval: top-3 92.5% (n=40), imp-5 sensitivity 94.1% (n=17), OOV pass 100% (n=10). Lab accuracy 100% (1,227/1,227). |
+
+---
+
+## 8. Related Documents
+
+- [Equity Audit](EQUITY_AUDIT.md) -- Reference range and LR source population audit, performance disaggregation
+- [NHANES Validation](NHANES_VALIDATION.md) -- Population-level validation of collectively-abnormal detection on NHANES data
