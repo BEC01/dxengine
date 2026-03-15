@@ -1,0 +1,2162 @@
+[
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_acute_myocardial_infarction_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "acute_myocardial_infarction",
+        "probability": 0.9,
+        "reasoning": "Classic STEMI: 62M with substernal chest pressure radiating to left arm, troponin I 4.8 ng/mL (massively elevated), CK 920 U/L, CK-MB 52, myoglobin 310, ST elevation V1-V4 (anterior wall), diaphoresis, and multiple cardiac risk factors (HTN, DM2, hyperlipidemia, family hx MI at 55, former smoker)"
+      },
+      {
+        "disease": "myocarditis",
+        "probability": 0.03,
+        "reasoning": "Can cause elevated troponin and ST changes, but the focal ST elevation in V1-V4 with classic risk factors and presentation strongly favors MI over myocarditis"
+      },
+      {
+        "disease": "pulmonary_embolism",
+        "probability": 0.02,
+        "reasoning": "Dyspnea and tachycardia present, but substernal pressure with ST elevation and markedly elevated troponin/CK-MB pattern is characteristic of MI not PE"
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.02,
+        "reasoning": "BNP 280 mildly elevated suggesting some cardiac stress/early failure, could be secondary to acute MI, but not the primary diagnosis"
+      },
+      {
+        "disease": "aortic_dissection",
+        "probability": 0.01,
+        "reasoning": "Can present with chest pain and ST changes if dissection involves coronary ostia, but tearing quality pain typically different and biomarker pattern favors MI"
+      },
+      {
+        "disease": "stress_cardiomyopathy",
+        "probability": 0.01,
+        "reasoning": "Takotsubo can mimic STEMI but typically in post-menopausal women after emotional stress; does not fit this male patient with risk factors"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_acute_pancreatitis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "acute_pancreatitis",
+        "probability": 0.92,
+        "reasoning": "48M with severe epigastric pain radiating to back, lipase 1250 U/L (>10x ULN), amylase 580 (>5x ULN), gallstones on US (biliary pancreatitis etiology), leukocytosis 15.2, CRP 85, fever 38.2, pain worse with eating and better leaning forward - classic presentation meeting all 3 Atlanta criteria"
+      },
+      {
+        "disease": "cholangitis",
+        "probability": 0.03,
+        "reasoning": "Gallstones with elevated bilirubin 2.8 and mildly elevated ALT/AST could suggest choledocholithiasis with ascending cholangitis, but lipase >3x ULN confirms pancreatitis as primary"
+      },
+      {
+        "disease": "peptic_ulcer_disease",
+        "probability": 0.02,
+        "reasoning": "Epigastric pain can mimic, but pain radiating to back with massively elevated lipase/amylase rules this out"
+      },
+      {
+        "disease": "cholecystitis",
+        "probability": 0.02,
+        "reasoning": "Gallstones with RUQ component possible, but epigastric radiation to back and lipase >1000 clearly indicate pancreatitis"
+      },
+      {
+        "disease": "mesenteric_ischemia",
+        "probability": 0.01,
+        "reasoning": "Severe abdominal pain with leukocytosis, but lipase/amylase elevation and gallstone etiology make this very unlikely"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_addison_disease_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "addison_disease",
+        "probability": 0.92,
+        "reasoning": "38F with progressive fatigue, weight loss, salt craving, orthostatic dizziness, hyperpigmentation, cortisol AM 2.1 mcg/dL (<3 is diagnostic), ACTH 285 pg/mL (massively elevated confirming primary adrenal insufficiency), hyponatremia 128, hyperkalemia 5.8, hypoglycemia 62, mild hypotension 90/55, eosinophilia 0.8, and autoimmune diathesis (Hashimoto's, family hx T1DM)"
+      },
+      {
+        "disease": "siadh",
+        "probability": 0.02,
+        "reasoning": "Hyponatremia present but SIADH would not cause hyperkalemia, hypoglycemia, or elevated ACTH with low cortisol"
+      },
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.02,
+        "reasoning": "Patient has Hashimoto's and is on levothyroxine; fatigue could be from undertreated hypothyroidism, but electrolyte pattern and cortisol/ACTH are diagnostic of Addison's"
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.01,
+        "reasoning": "Hyperkalemia and mild anemia present, but creatinine is normal at 1.0 and the cortisol/ACTH pattern is definitive"
+      },
+      {
+        "disease": "secondary_adrenal_insufficiency",
+        "probability": 0.01,
+        "reasoning": "Low cortisol present but massively elevated ACTH confirms PRIMARY not secondary adrenal insufficiency; hyperpigmentation also confirms primary"
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.01,
+        "reasoning": "Autoimmune context and fatigue, but no lupus-specific findings; electrolyte and hormonal pattern is classic Addison's"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_alcoholic_hepatitis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "alcoholic_hepatitis",
+        "probability": 0.72,
+        "reasoning": "48M with 15-year heavy alcohol use (10-12 beers/day), jaundice, fever, tender hepatomegaly, spider angiomata, palmar erythema, asterixis, AST:ALT ratio >2 (280:85=3.3:1 classic for alcohol), elevated GGT 420, bilirubin 14.5, INR 2.1, leukocytosis 16.5, macrocytosis MCV 105, hypoalbuminemia 2.6, thrombocytopenia 95. Maddrey DF >32 indicating severe alcoholic hepatitis"
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.18,
+        "reasoning": "Spider angiomata, palmar erythema, asterixis, hypoalbuminemia, thrombocytopenia, and coagulopathy all indicate underlying cirrhosis; alcoholic hepatitis likely superimposed on cirrhosis. These conditions frequently coexist"
+      },
+      {
+        "disease": "hepatocellular_injury",
+        "probability": 0.03,
+        "reasoning": "Elevated AST/ALT with jaundice represents hepatocellular injury broadly, but the specific AST:ALT ratio >2 with alcohol history points to alcoholic etiology specifically"
+      },
+      {
+        "disease": "cholangitis",
+        "probability": 0.02,
+        "reasoning": "Fever, jaundice, and elevated bilirubin overlap with Charcot's triad, but no RUQ pain pattern, no biliary dilation, and AST:ALT ratio with alcohol history is classic for alcoholic hepatitis"
+      },
+      {
+        "disease": "wilson_disease",
+        "probability": 0.01,
+        "reasoning": "Acute hepatitis presentation possible in Wilson's but age 48 with heavy alcohol use and classic AST:ALT ratio makes this far less likely"
+      },
+      {
+        "disease": "hepatocellular_carcinoma",
+        "probability": 0.01,
+        "reasoning": "Can complicate cirrhosis but acute presentation with fever and leukocytosis is more consistent with alcoholic hepatitis"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_aplastic_anemia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "aplastic_anemia",
+        "probability": 0.85,
+        "reasoning": "22M with pancytopenia: WBC 2.1, Hgb 7.8, platelets 22, ANC 0.6 (severe neutropenia), reticulocyte count 0.3% (hypoproliferative - key discriminator), markedly hypocellular marrow on biopsy. Normal LDH (195) argues against hemolysis/destruction. Elevated ferritin 480 and iron 145 reflect transfusion iron loading or ineffective erythropoiesis. No prior medical history in a young male is classic presentation"
+      },
+      {
+        "disease": "myelodysplastic_syndrome",
+        "probability": 0.07,
+        "reasoning": "Can present with pancytopenia and hypocellular marrow (hypoplastic MDS variant), but more common in older adults (>60); MCV 102 mildly elevated is seen in both. Would need morphologic dysplasia or cytogenetics to distinguish"
+      },
+      {
+        "disease": "acute_leukemia",
+        "probability": 0.03,
+        "reasoning": "Pancytopenia with marrow failure, but hypocellular marrow rather than hypercellular packed with blasts makes this less likely; no circulating blasts mentioned"
+      },
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.02,
+        "reasoning": "Macrocytosis and pancytopenia possible in severe B12 deficiency, but reticulocyte count would typically respond and marrow would be megaloblastic not hypocellular; elevated iron/ferritin argues against nutritional deficiency"
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.01,
+        "reasoning": "SLE can cause cytopenias through autoimmune mechanisms but typically with other systemic features; no autoimmune symptoms described"
+      },
+      {
+        "disease": "paroxysmal_nocturnal_hemoglobinuria",
+        "probability": 0.01,
+        "reasoning": "Overlaps with aplastic anemia and can co-occur; normal LDH and haptoglobin not tested, but hypocellular marrow is more typical of AA"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_celiac_disease_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "celiac_disease",
+        "probability": 0.93,
+        "reasoning": "28F with chronic diarrhea with steatorrhea, bloating, weight loss, dermatitis herpetiformis (pathognomonic for celiac), tTG-IgA 125 U/mL (>10x ULN, highly specific), iron-deficiency anemia (ferritin 8, iron 30, MCV 74), low calcium 8.2, low vitamin D 14, low folate 2.0, low albumin 3.0 (malabsorption pattern), elevated ALP 155 (metabolic bone disease), T1DM (autoimmune association), and family history of celiac disease in sister"
+      },
+      {
+        "disease": "iron_deficiency_anemia",
+        "probability": 0.03,
+        "reasoning": "Clearly present as a secondary finding (ferritin 8, iron 30, MCV 74) but this is a consequence of celiac malabsorption, not the primary diagnosis"
+      },
+      {
+        "disease": "inflammatory_bowel_disease",
+        "probability": 0.02,
+        "reasoning": "Chronic diarrhea and weight loss overlap, but tTG-IgA >10x ULN and dermatitis herpetiformis are definitive for celiac disease"
+      },
+      {
+        "disease": "tropical_sprue",
+        "probability": 0.01,
+        "reasoning": "Similar malabsorption pattern but no tropical travel mentioned, and tTG-IgA is not elevated in tropical sprue"
+      },
+      {
+        "disease": "folate_deficiency",
+        "probability": 0.01,
+        "reasoning": "Folate 2.0 is low (secondary to malabsorption) but the microcytic anemia indicates iron deficiency is dominant; folate deficiency is a component not the primary diagnosis"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_chronic_kidney_disease_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.93,
+        "reasoning": "67M with progressive fatigue, nausea, pruritus, decreased urine output, creatinine 4.5, BUN 55, GFR 12 (stage 5/ESRD), hyperkalemia 5.5, hyperphosphatemia 6.2, hypocalcemia 7.8 (renal osteodystrophy triad), metabolic acidosis bicarb 18, secondary hyperparathyroidism PTH 280, anemia Hgb 9.8 (erythropoietin deficiency), low albumin 3.2. Risk factors: T2DM x20 years and HTN x15 years (leading causes of CKD). Bilateral LE edema, pallor, sallow skin all consistent"
+      },
+      {
+        "disease": "diabetic_nephropathy",
+        "probability": 0.03,
+        "reasoning": "This is the most likely ETIOLOGY of the CKD given 20-year T2DM history, but CKD is the correct syndromic diagnosis. HbA1c 7.8% shows ongoing poor glycemic control"
+      },
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.01,
+        "reasoning": "Low albumin and edema present, but the degree of renal failure with hyperkalemia/hyperphosphatemia/hypocalcemia points to CKD with uremia rather than primary nephrotic syndrome"
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.01,
+        "reasoning": "PTH 280 is elevated but calcium is LOW (7.8) - this is secondary/tertiary hyperparathyroidism from CKD, not primary (which would have hypercalcemia)"
+      },
+      {
+        "disease": "renal_tubular_acidosis",
+        "probability": 0.01,
+        "reasoning": "Metabolic acidosis with CKD, but the degree of renal failure (GFR 12) with the full uremic constellation makes CKD the diagnosis; acidosis is a manifestation, not a separate entity"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_chronic_myeloid_leukemia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "chronic_myeloid_leukemia",
+        "probability": 0.85,
+        "reasoning": "52M with massive leukocytosis WBC 125 x10^9/L, basophilia 3.5 (pathognomonic for CML), splenomegaly 6cm below costal margin, thrombocytosis 550, elevated LDH 680, elevated uric acid 10.5, mild anemia Hgb 10.8, eosinophilia 2.5, constitutional symptoms (fatigue, night sweats, weight loss, early satiety from spleen). The combination of extreme leukocytosis + basophilia + massive splenomegaly is classic chronic phase CML"
+      },
+      {
+        "disease": "chronic_lymphocytic_leukemia",
+        "probability": 0.03,
+        "reasoning": "Can cause marked leukocytosis and splenomegaly but would show lymphocyte predominance, not neutrophil/basophil predominance; CLL WBC is usually lymphocyte-dominant"
+      },
+      {
+        "disease": "polycythemia_vera",
+        "probability": 0.03,
+        "reasoning": "Splenomegaly and leukocytosis overlap, but PV would show elevated hemoglobin/hematocrit as defining feature; Hgb 10.8 is actually low, ruling out PV"
+      },
+      {
+        "disease": "myelofibrosis",
+        "probability": 0.03,
+        "reasoning": "Massive splenomegaly with leukocytosis and anemia overlaps with spent-phase myelofibrosis, but the degree of leukocytosis (125) with basophilia strongly favors CML"
+      },
+      {
+        "disease": "leukemoid_reaction",
+        "probability": 0.02,
+        "reasoning": "Extreme leukocytosis can occur reactively but basophilia and thrombocytosis with splenomegaly point to clonal myeloproliferative neoplasm not reactive process"
+      },
+      {
+        "disease": "acute_leukemia",
+        "probability": 0.02,
+        "reasoning": "Blast crisis CML or de novo AML possible but chronic symptoms over months with mature cell predominance indicates chronic phase disease"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_cirrhosis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "cirrhosis",
+        "probability": 0.9,
+        "reasoning": "55M with ascites, spider angiomata, caput medusae (portal hypertension), palmar erythema, asterixis (hepatic encephalopathy), jaundice, splenomegaly (portal hypertension), hep C + alcohol use disorder, nodular liver on ultrasound. Labs: albumin 2.4, bilirubin 5.2, AST:ALT ratio >2 (88:42), elevated ALP 165, GGT 180, ammonia 95, INR 1.8, thrombocytopenia 72 (splenic sequestration), anemia Hgb 10.8, hyponatremia 131. Multiple stigmata of chronic liver disease with decompensation (ascites, encephalopathy, jaundice)"
+      },
+      {
+        "disease": "alcoholic_hepatitis",
+        "probability": 0.04,
+        "reasoning": "AST:ALT >2 with alcohol history, but the chronic stigmata (caput medusae, spider angiomata) and nodular liver on imaging indicate established cirrhosis rather than acute alcoholic hepatitis superimposed"
+      },
+      {
+        "disease": "hepatocellular_carcinoma",
+        "probability": 0.02,
+        "reasoning": "Patient has two major risk factors (HCV + alcohol) for HCC development on cirrhotic liver, but presentation is of decompensated cirrhosis rather than mass lesion"
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.01,
+        "reasoning": "Peripheral edema, ascites, and hyponatremia overlap with cardiac failure, but portal hypertension signs (caput medusae, splenomegaly) and hepatic synthetic failure (low albumin, elevated INR) confirm hepatic etiology"
+      },
+      {
+        "disease": "hepatorenal_syndrome",
+        "probability": 0.01,
+        "reasoning": "Creatinine 1.1 is still relatively preserved, but in a cirrhotic with ascites this warrants monitoring; not yet meeting criteria for HRS"
+      },
+      {
+        "disease": "wilson_disease",
+        "probability": 0.01,
+        "reasoning": "Can cause cirrhosis but age 55 with known HCV and alcohol makes Wilson's exceedingly unlikely as the etiology"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_cushing_syndrome_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "cushing_syndrome",
+        "probability": 0.92,
+        "reasoning": "38F with central weight gain, easy bruising, proximal muscle weakness, moon facies, buffalo hump, purple striae (highly specific for Cushing's), truncal obesity, thin skin, facial plethora, new-onset diabetes and hypertension. AM cortisol 32 mcg/dL (elevated >18), ACTH 85 pg/mL (elevated, confirming ACTH-dependent Cushing's likely pituitary adenoma). Metabolic alkalosis bicarb 31, hypokalemia 3.1 (mineralocorticoid effect of cortisol excess), hyperglycemia 185, leukocytosis 12.5 with lymphopenia 0.9 (cortisol-mediated lymphocyte apoptosis)"
+      },
+      {
+        "disease": "metabolic_syndrome",
+        "probability": 0.02,
+        "reasoning": "Obesity, diabetes, and hypertension overlap but purple striae, proximal weakness, moon facies, buffalo hump, and cortisol/ACTH elevation are definitive for Cushing's"
+      },
+      {
+        "disease": "polycystic_ovary_syndrome",
+        "probability": 0.02,
+        "reasoning": "Irregular menses and acne in a premenopausal woman, but the specific Cushingoid features and elevated cortisol distinguish this"
+      },
+      {
+        "disease": "ectopic_acth_syndrome",
+        "probability": 0.02,
+        "reasoning": "ACTH-dependent with ACTH 85 - could be ectopic (usually >200 pg/mL in ectopic) or pituitary (Cushing's disease). The more gradual presentation favors pituitary origin. Still classified under cushing_syndrome umbrella"
+      },
+      {
+        "disease": "exogenous_corticosteroid_use",
+        "probability": 0.01,
+        "reasoning": "No corticosteroid medications listed; endogenous hypercortisolism confirmed by elevated AM cortisol and ACTH"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_diabetic_ketoacidosis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "diabetic_ketoacidosis",
+        "probability": 0.95,
+        "reasoning": "28F with T1DM who ran out of insulin 2 days ago: glucose 485 (>250), bicarb 10 (severe metabolic acidosis), AG = 131-95-10=26 (elevated anion gap), Kussmaul breathing, fruity breath (acetone), polyuria, polydipsia, nausea/vomiting, abdominal pain. HbA1c 11.2% (chronic poor control). Leukocytosis 14.2 (stress response), elevated BUN/Cr 28/1.5 (pre-renal from dehydration), hyperkalemia 5.6 (transcellular shift despite total body K+ depletion), tachycardia 118, hypotension 100/60. Textbook DKA"
+      },
+      {
+        "disease": "hyperosmolar_hyperglycemic_state",
+        "probability": 0.02,
+        "reasoning": "Glucose >250 but bicarb 10 with Kussmaul breathing and fruity breath indicate ketoacidosis not HHS; HHS typically has glucose >600 with minimal acidosis and occurs in T2DM"
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.01,
+        "reasoning": "Tachycardia, hypotension, and leukocytosis overlap, but clear precipitant (insulin omission), DKA metabolic profile, and temp 37.1 (afebrile) make sepsis unlikely as primary; though infection can trigger DKA"
+      },
+      {
+        "disease": "lactic_acidosis",
+        "probability": 0.01,
+        "reasoning": "Lactate 2.8 mildly elevated (likely from dehydration/hypoperfusion) but anion gap acidosis with glucose 485 in known T1DM is definitively DKA"
+      },
+      {
+        "disease": "acute_pancreatitis",
+        "probability": 0.01,
+        "reasoning": "Abdominal pain, nausea, vomiting overlap, and DKA can cause elevated lipase, but the metabolic picture is clearly DKA"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_disseminated_intravascular_coagulation_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.88,
+        "reasoning": "55M with metastatic pancreatic cancer (classic DIC trigger) presenting with bleeding from IV sites and gums, petechiae. Labs: platelets 35 (consumption), PT 22.5/INR 2.1 (prolonged), PTT 52 (prolonged), fibrinogen 85 (consumed <150), D-dimer 12.5 (massively elevated - fibrin degradation), microangiopathic hemolysis with LDH 580, haptoglobin 18 (low), bilirubin 3.2. Anemia Hgb 8.2. ISTH DIC score would be >5 (overt DIC)"
+      },
+      {
+        "disease": "ttp_hus",
+        "probability": 0.05,
+        "reasoning": "Thrombocytopenia with microangiopathic hemolysis (low haptoglobin, elevated LDH) overlaps, but in TTP coagulation studies (PT/PTT/fibrinogen) are typically NORMAL; here they are markedly abnormal, pointing to consumptive coagulopathy (DIC) not TTP"
+      },
+      {
+        "disease": "hemolytic_anemia",
+        "probability": 0.02,
+        "reasoning": "Hemolysis markers present (low haptoglobin, elevated LDH, elevated bilirubin) but this is microangiopathic hemolysis secondary to DIC, not a primary hemolytic disorder"
+      },
+      {
+        "disease": "liver_failure",
+        "probability": 0.02,
+        "reasoning": "Coagulopathy and thrombocytopenia can occur with hepatic synthetic failure, but the massively elevated D-dimer and low fibrinogen with known malignancy trigger clearly indicate DIC"
+      },
+      {
+        "disease": "immune_thrombocytopenic_purpura",
+        "probability": 0.01,
+        "reasoning": "Severe thrombocytopenia with bleeding, but ITP has NORMAL coagulation studies; prolonged PT/PTT/low fibrinogen/elevated D-dimer exclude ITP"
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.02,
+        "reasoning": "Tachycardia 105, hypotension 95/58, leukocytosis 15.4, and DIC can be sepsis-triggered, but pancreatic cancer is the identified trigger and there is no documented infection"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_gout_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "gout",
+        "probability": 0.92,
+        "reasoning": "58M with acute onset severe pain in first MTP joint (podagra - classic gout location), erythema/swelling/warmth of joint, tophi on ear helix (pathognomonic for chronic gout), uric acid 10.5 (>10, elevated), prior gout flares, CRP 45 and ESR 52 (acute inflammatory response), leukocytosis 12.5. Risk factors: hydrochlorothiazide (raises uric acid), alcohol (2-3 beers daily), red meat diet, family history of gout, male sex, mild renal impairment (Cr 1.4)"
+      },
+      {
+        "disease": "septic_arthritis",
+        "probability": 0.04,
+        "reasoning": "Acute monoarthritis with warmth and erythema always warrants exclusion of septic joint; however, tophi, prior gout episodes, hyperuricemia, and classic first MTP location strongly favor gout. Would still recommend joint aspiration"
+      },
+      {
+        "disease": "pseudogout",
+        "probability": 0.02,
+        "reasoning": "CPPD can cause acute monoarthritis but typically affects larger joints (knee, wrist), not first MTP; also no chondrocalcinosis mentioned and tophi indicate urate crystal disease"
+      },
+      {
+        "disease": "rheumatoid_arthritis",
+        "probability": 0.01,
+        "reasoning": "Inflammatory arthritis but RA is typically polyarticular, symmetric, and affects MCP/PIP joints; acute monoarticular first MTP with hyperuricemia is gout"
+      },
+      {
+        "disease": "cellulitis",
+        "probability": 0.01,
+        "reasoning": "Erythema and warmth of toe/foot can mimic cellulitis, but joint involvement with tophi and prior episodes confirm crystal arthropathy"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_heart_failure_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "heart_failure",
+        "probability": 0.9,
+        "reasoning": "67M with progressive dyspnea on exertion, orthopnea, PND (Framingham major criteria), S3 gallop (highly specific LR+ 11), elevated JVP, hepatojugular reflux, bilateral crackles, bilateral LE pitting edema, BNP 850 (>500, highly specific), cardiomegaly with bilateral pleural effusions on CXR. Prior MI 3 years ago (ischemic cardiomyopathy etiology), HTN, DM2. Mild hyponatremia 132 (poor prognostic marker in HF), elevated BUN/Cr 28/1.5 (cardiorenal), mildly elevated AST/ALT (congestive hepatopathy), low albumin 3.4"
+      },
+      {
+        "disease": "acute_myocardial_infarction",
+        "probability": 0.03,
+        "reasoning": "Prior MI and risk factors, but troponin 0.02 is not significantly elevated; gradual 6-week onset argues against acute coronary event"
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.02,
+        "reasoning": "Creatinine 1.5 with BUN 28 suggests some renal impairment, likely cardiorenal syndrome type 2 from heart failure rather than primary CKD"
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.02,
+        "reasoning": "Edema, hypoalbuminemia, and mildly elevated transaminases could suggest liver disease, but S3 gallop, JVP elevation, orthopnea, BNP 850 and cardiomegaly clearly indicate cardiac origin"
+      },
+      {
+        "disease": "pulmonary_embolism",
+        "probability": 0.01,
+        "reasoning": "Dyspnea and tachycardia present, but gradual onset over 6 weeks with classic volume overload signs rules out PE"
+      },
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.01,
+        "reasoning": "Edema and hypoalbuminemia overlap, but albumin 3.4 is only mildly low and the cardiac physical findings are definitive"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hellp_syndrome_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hellp_syndrome",
+        "probability": 0.88,
+        "reasoning": "32F at 34 weeks gestation with known preeclampsia, RUQ pain, nausea/vomiting, headache, HTN 165/105. Labs show the HELLP triad: Hemolysis (LDH 890, haptoglobin 12, indirect bilirubin elevated 2.8-0.4=2.4, schistocytes on smear), Elevated Liver enzymes (AST 245, ALT 195), Low Platelets (62). Normal coagulation (INR 1.0, fibrinogen 280) distinguishes from DIC. Elevated uric acid 7.8 consistent with preeclampsia/HELLP"
+      },
+      {
+        "disease": "ttp_hus",
+        "probability": 0.04,
+        "reasoning": "Microangiopathic hemolysis (schistocytes, low haptoglobin, elevated LDH) with thrombocytopenia overlaps with TTP; however pregnancy context with preeclampsia history, elevated liver enzymes fitting HELLP criteria, and hypertension strongly favor HELLP. ADAMTS13 activity would differentiate"
+      },
+      {
+        "disease": "acute_fatty_liver_of_pregnancy",
+        "probability": 0.03,
+        "reasoning": "AFLP presents similarly in third trimester with liver dysfunction, but typically has hypoglycemia, more severe coagulopathy, and higher bilirubin; glucose 82 normal and coagulation normal here"
+      },
+      {
+        "disease": "hemolytic_anemia",
+        "probability": 0.02,
+        "reasoning": "Hemolysis markers clearly present but the microangiopathic hemolysis is secondary to HELLP syndrome, not a primary hemolytic disorder"
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.01,
+        "reasoning": "Thrombocytopenia and hemolysis overlap but normal PT/INR and normal fibrinogen argue strongly against DIC; these are typically abnormal in DIC"
+      },
+      {
+        "disease": "preeclampsia",
+        "probability": 0.02,
+        "reasoning": "HELLP is a severe complication of preeclampsia; the patient has known preeclampsia, but the lab triad (hemolysis + elevated liver enzymes + low platelets) specifically defines HELLP syndrome"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hemolytic_anemia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hemolytic_anemia",
+        "probability": 0.88,
+        "reasoning": "45F with fatigue, jaundice, dark urine (hemoglobinuria), scleral icterus, pallor, splenomegaly. Labs: Hgb 7.8 (severe anemia), reticulocyte count 8.5% (elevated - appropriate marrow response to hemolysis), haptoglobin 5 (nearly undetectable - consumed by free hemoglobin), LDH 580 (elevated from RBC lysis), indirect bilirubin 4.3 (total 4.8 - direct 0.5 = indirect dominant, classic for hemolysis), MCV 102 (reticulocytosis causes macrocytosis). SLE history suggests autoimmune hemolytic anemia (warm AIHA) as mechanism. DAT/Coombs would confirm"
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.05,
+        "reasoning": "Known SLE - AIHA is a recognized hematologic complication of SLE. The hemolytic anemia may represent an SLE flare. However, the hemolytic anemia is the active clinical diagnosis"
+      },
+      {
+        "disease": "ttp_hus",
+        "probability": 0.03,
+        "reasoning": "MAHA with thrombocytopenia occurs in TTP, but platelets are 195 (normal) and no schistocytes mentioned; this is likely warm AIHA from SLE, not TTP"
+      },
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.01,
+        "reasoning": "Macrocytic anemia with elevated LDH can mimic, but reticulocyte 8.5% (elevated) rules out B12 deficiency (which has low reticulocytes), and undetectable haptoglobin confirms hemolysis"
+      },
+      {
+        "disease": "iron_deficiency_anemia",
+        "probability": 0.01,
+        "reasoning": "Severe anemia present but MCV 102 (macrocytic not microcytic), elevated reticulocytes, and hemolysis markers all argue against iron deficiency"
+      },
+      {
+        "disease": "myelodysplastic_syndrome",
+        "probability": 0.01,
+        "reasoning": "Can cause macrocytic anemia with elevated LDH but reticulocyte count 8.5% shows appropriate marrow response; MDS would show hypoproliferative (low reticulocyte) anemia"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hypercalcemia_of_malignancy_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hypercalcemia_of_malignancy",
+        "probability": 0.9,
+        "reasoning": "65M with squamous cell carcinoma of lung (classic cause of PTHrP-mediated hypercalcemia), calcium 14.2 (severely elevated), PTH 8 (appropriately suppressed - rules out primary hyperparathyroidism), low phosphorus 2.2 (PTHrP effect), elevated ALP 210 (bone involvement), confusion/nausea/constipation/polyuria (classic hypercalcemia symptoms 'bones, stones, groans, moans'). Elevated Cr 1.6 and BUN 28 (hypercalcemia-induced nephrogenic DI and dehydration). Large hilar mass with lymphadenopathy on CT. Low albumin 3.0 means corrected calcium even higher (~14.8)"
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.03,
+        "reasoning": "Hypercalcemia with low phosphorus, but PTH 8 is suppressed (would be elevated in primary hyperparathyroidism). The suppressed PTH definitively excludes this diagnosis"
+      },
+      {
+        "disease": "multiple_myeloma",
+        "probability": 0.03,
+        "reasoning": "Hypercalcemia with bone pain and renal impairment overlap, but squamous cell lung cancer is established, PTH is suppressed (consistent with humoral hypercalcemia of malignancy), and there is no mention of M-protein or skeletal lytic lesions"
+      },
+      {
+        "disease": "sarcoidosis",
+        "probability": 0.01,
+        "reasoning": "Can cause hypercalcemia via 1,25-dihydroxyvitamin D overproduction, but known lung cancer with hilar mass explains both the calcium and the imaging findings"
+      },
+      {
+        "disease": "vitamin_d_toxicity",
+        "probability": 0.01,
+        "reasoning": "Can cause hypercalcemia with suppressed PTH, but no vitamin D supplementation mentioned and lung cancer provides clear etiology"
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.01,
+        "reasoning": "Cr 1.6 shows renal impairment but CKD typically causes HYPOcalcemia not hypercalcemia; the renal impairment here is secondary to hypercalcemia-induced nephropathy"
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hyperosmolar_hyperglycemic_state_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hyperosmolar_hyperglycemic_state",
+        "probability": 0.82,
+        "reasoning": "Glucose 845 mg/dL (markedly elevated), serum osmolality 348 mOsm/kg (>320 threshold), HbA1c 12.5% confirming poorly controlled diabetes, bicarbonate 22 (preserved \u2014 no significant ketoacidosis), hypernatremia 148. Classic HHS: elderly T2DM patient with precipitating UTI, confusion, polyuria/polydipsia, progressive dehydration."
+      },
+      {
+        "disease": "diabetic_ketoacidosis",
+        "probability": 0.08,
+        "reasoning": "Marked hyperglycemia could overlap with DKA, but bicarbonate 22 is near-normal (DKA typically <18), no mention of ketones. The preserved bicarbonate and extreme hyperosmolality strongly favor HHS over DKA. Some overlap is possible (HHS/DKA continuum)."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.04,
+        "reasoning": "Creatinine 2.4, BUN 52 indicate renal impairment, but likely pre-renal from severe dehydration in setting of HHS rather than primary CKD. Cannot exclude underlying CKD in elderly diabetic."
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.03,
+        "reasoning": "UTI could be progressing to urosepsis. WBC 12.0, tachycardia, lactate 2.5 (mildly elevated). However, the dominant picture is metabolic/endocrine decompensation."
+      },
+      {
+        "disease": "acute_kidney_injury",
+        "probability": 0.02,
+        "reasoning": "Elevated creatinine and BUN in setting of severe dehydration \u2014 pre-renal AKI secondary to HHS."
+      },
+      {
+        "disease": "cerebrovascular_accident",
+        "probability": 0.01,
+        "reasoning": "Confusion in elderly patient warrants consideration, but metabolic encephalopathy from HHS is far more likely given extreme hyperglycemia and hyperosmolality."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hyperthyroidism_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hyperthyroidism",
+        "probability": 0.9,
+        "reasoning": "TSH 0.01 (suppressed), free T4 4.2 (elevated ~3x upper limit), free T3 11.8 (elevated ~2x), with classic Graves disease presentation: 32F, lid lag, exophthalmos (pathognomonic for Graves), diffuse goiter, fine tremor, warm moist skin, weight loss, palpitations, heat intolerance. Family history of Hashimoto (autoimmune thyroid disease). ALP 185 elevated from thyroid-driven bone turnover. Tachycardia 112, widened pulse pressure."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.03,
+        "reasoning": "Calcium 10.8 is mildly elevated but this is a known effect of hyperthyroidism (increased bone resorption). ALP elevation also explained by hyperthyroid state."
+      },
+      {
+        "disease": "pheochromocytoma",
+        "probability": 0.03,
+        "reasoning": "Palpitations, tremor, anxiety, tachycardia, and hypertension could suggest pheochromocytoma, but suppressed TSH and elevated thyroid hormones with eye findings clearly point to thyrotoxicosis."
+      },
+      {
+        "disease": "anxiety_disorder",
+        "probability": 0.02,
+        "reasoning": "Anxiety, palpitations, insomnia could suggest generalized anxiety, but objective findings (TSH, T4, exophthalmos) confirm organic thyroid disease."
+      },
+      {
+        "disease": "thyroid_storm",
+        "probability": 0.02,
+        "reasoning": "Severely elevated thyroid hormones with tachycardia, but patient lacks fever, altered mental status, or cardiovascular collapse typical of true storm."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_hypothyroidism_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.9,
+        "reasoning": "TSH 42.0 (markedly elevated >10x ULN), free T4 0.4 (low), confirming primary hypothyroidism. Classic presentation: 52F with fatigue, weight gain, cold intolerance, constipation, dry skin, hair loss, periorbital edema, delayed ankle reflex, dry coarse skin, diffuse goiter, bradycardia, non-pitting edema. CK 480 elevated (myopathy of hypothyroidism), total cholesterol 275 and LDL 180 (hypothyroid dyslipidemia), mild macrocytic anemia (Hgb 11.5, MCV 102). Family history of Hashimoto. Textbook Hashimoto thyroiditis."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.03,
+        "reasoning": "Edema, fatigue, dyslipidemia could suggest heart failure, but non-pitting edema (myxedema), bradycardia, and markedly elevated TSH clearly point to hypothyroidism as the primary etiology."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.02,
+        "reasoning": "Edema, anemia, and fatigue could raise CKD consideration, but creatinine 0.9 is normal and the presentation is fully explained by severe hypothyroidism."
+      },
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.02,
+        "reasoning": "MCV 102 (macrocytic) with anemia could suggest B12 deficiency, but hypothyroidism itself causes mild macrocytosis. No neurologic findings specific to B12 deficiency."
+      },
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.01,
+        "reasoning": "Edema and hyperlipidemia overlap, but absence of proteinuria and presence of markedly elevated TSH make this very unlikely."
+      },
+      {
+        "disease": "depression",
+        "probability": 0.01,
+        "reasoning": "Fatigue, weight gain, and cognitive slowing overlap with depression, but thyroid labs confirm organic disease."
+      },
+      {
+        "disease": "celiac_disease",
+        "probability": 0.01,
+        "reasoning": "Anemia and fatigue overlap, but GI symptoms are constipation (not diarrhea/malabsorption), and thyroid labs confirm diagnosis."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_immune_thrombocytopenic_purpura_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "immune_thrombocytopenic_purpura",
+        "probability": 0.8,
+        "reasoning": "Isolated severe thrombocytopenia (platelets 12) in a 35F with petechiae, ecchymoses, mucosal bleeding (epistaxis, gingival bleeding, menorrhagia). Normal WBC, normal hemoglobin, normal coagulation (PT, PTT, INR), normal LDH, normal haptoglobin, normal bilirubin \u2014 ruling out TTP/HUS and DIC. No splenomegaly or lymphadenopathy ruling out infiltrative/consumptive processes. MPV 12.5 (elevated, indicating peripheral destruction with compensatory large platelet production). Preceded by URI 2 weeks ago \u2014 classic post-viral ITP trigger. This is a textbook ITP presentation."
+      },
+      {
+        "disease": "ttp_hus",
+        "probability": 0.05,
+        "reasoning": "Severe thrombocytopenia warrants consideration, but normal LDH (195), normal haptoglobin (120), normal bilirubin (0.8), and normal hemoglobin argue strongly against microangiopathic hemolytic anemia. No schistocytes mentioned, no renal or neurologic involvement."
+      },
+      {
+        "disease": "aplastic_anemia",
+        "probability": 0.04,
+        "reasoning": "Severe thrombocytopenia could represent aplastic anemia, but WBC 6.5 and hemoglobin 12.8 are normal \u2014 aplastic anemia presents with pancytopenia. Isolated thrombocytopenia favors ITP."
+      },
+      {
+        "disease": "myelodysplastic_syndrome",
+        "probability": 0.03,
+        "reasoning": "Cytopenias can occur in MDS, but patient is 35F (unusual age), isolated thrombocytopenia with normal other lineages, and post-viral timing favor ITP."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.03,
+        "reasoning": "Thrombocytopenia present, but normal PT/INR/PTT, normal fibrinogen is implied by normal coagulation, no underlying trigger (no sepsis, malignancy evident). Normal hemolysis markers."
+      },
+      {
+        "disease": "drug_induced_thrombocytopenia",
+        "probability": 0.03,
+        "reasoning": "No medications listed \u2014 makes this very unlikely."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "SLE can present with isolated thrombocytopenia in young women, but no other features of SLE (rash, arthritis, serositis, renal involvement) are present."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_infective_endocarditis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "infective_endocarditis",
+        "probability": 0.92,
+        "reasoning": "Fulfills modified Duke criteria: MAJOR \u2014 TEE showing 12mm vegetation on aortic valve with regurgitation (major imaging criterion). Clinical: persistent fever 38.8C for 3 weeks, new heart murmur (major). MINOR \u2014 predisposing bicuspid aortic valve, preceding dental extraction without prophylaxis (portal of entry), splinter hemorrhage, Janeway lesion (immunologic/vascular phenomena). Labs: elevated ESR 72, CRP 95 (inflammation), anemia of chronic disease (Hgb 10.2), leukocytosis 14.5, elevated RF 45 (immunologic activation common in IE), low complement C3 72 (immune complex deposition). Widened pulse pressure (125/55) consistent with aortic regurgitation from valve destruction."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "Low complement and positive RF could suggest SLE (Libman-Sacks endocarditis), but vegetation on TEE with septic embolic phenomena (Janeway), fever, and preceding dental procedure strongly favor infective etiology."
+      },
+      {
+        "disease": "rheumatoid_arthritis",
+        "probability": 0.02,
+        "reasoning": "Positive RF, but in context of endocarditis RF is commonly elevated as a nonspecific immunologic response. No joint symptoms."
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.02,
+        "reasoning": "Bacteremia is likely present (endocarditis is a form of endovascular infection), but the specific diagnosis is infective endocarditis rather than undifferentiated sepsis."
+      },
+      {
+        "disease": "lymphoma",
+        "probability": 0.01,
+        "reasoning": "Fever, night sweats, weight loss overlap with B-symptoms of lymphoma, but vegetation on echo, vascular phenomena, and preceding dental procedure clearly indicate IE."
+      },
+      {
+        "disease": "acute_rheumatic_fever",
+        "probability": 0.01,
+        "reasoning": "New murmur and fever overlap, but patient is 42M with vegetation on echo, which is not characteristic of rheumatic fever."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_iron_deficiency_anemia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "iron_deficiency_anemia",
+        "probability": 0.92,
+        "reasoning": "Classic iron deficiency: microcytic anemia (Hgb 9.2, MCV 68), markedly low ferritin 6 (<15 diagnostic), low iron 25, elevated TIBC 450, transferrin saturation 6% (<16% confirms iron deficiency), elevated RDW 18.2 (anisocytosis), reactive thrombocytosis (platelets 420), low reticulocyte count 0.5% (inadequate marrow response due to iron deficiency). Clinical: pica/pagophagia (highly specific for iron deficiency), koilonychia, glossitis. Underlying cause: menorrhagia. 34F \u2014 reproductive-age woman with heavy periods is the most common IDA scenario."
+      },
+      {
+        "disease": "thalassemia_trait",
+        "probability": 0.03,
+        "reasoning": "Microcytic anemia in reproductive-age woman could include thalassemia trait, but RDW is elevated (thalassemia typically has normal RDW), ferritin is markedly low (thalassemia has normal/elevated ferritin), and TIBC is elevated. All iron studies confirm iron deficiency, not thalassemia."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.01,
+        "reasoning": "Anemia present but creatinine 0.7 is normal. Anemia of CKD is normocytic, not microcytic."
+      },
+      {
+        "disease": "celiac_disease",
+        "probability": 0.02,
+        "reasoning": "Iron deficiency anemia can be caused by celiac malabsorption, but menorrhagia is the identified cause. No GI symptoms (diarrhea, bloating) mentioned."
+      },
+      {
+        "disease": "colon_cancer",
+        "probability": 0.01,
+        "reasoning": "Iron deficiency in older patients warrants GI malignancy workup, but 34F with menorrhagia has a clear etiology."
+      },
+      {
+        "disease": "anemia_of_chronic_disease",
+        "probability": 0.01,
+        "reasoning": "Low ferritin definitively excludes ACD (ferritin is normal/elevated in ACD). Iron studies are entirely consistent with true iron deficiency."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_macrophage_activation_syndrome_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "macrophage_activation_syndrome",
+        "probability": 0.82,
+        "reasoning": "Classic MAS/HLH presentation in a patient with sJIA (the prototypical MAS-associated rheumatic disease). Key findings: massively elevated ferritin 18,500 (hallmark \u2014 ferritin >10,000 is highly specific), low fibrinogen 95 (paradoxical in inflammation, pathognomonic for MAS due to consumptive coagulopathy), pancytopenia (WBC 2.8, Hgb 8.0, platelets 45), elevated triglycerides 420, elevated LDH 1250, elevated transaminases (AST 285, ALT 195), hepatosplenomegaly on CT. Notably, ESR 18 is paradoxically low despite CRP 85 \u2014 this ESR-CRP dissociation is characteristic of MAS (low fibrinogen reduces ESR despite active inflammation). Fever 39.5, tachycardia 115."
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.06,
+        "reasoning": "Fever, pancytopenia, organ dysfunction in immunosuppressed patient (methotrexate/prednisone) could represent sepsis. However, the massively elevated ferritin, low fibrinogen, and hypertriglyceridemia are far more specific for MAS than typical sepsis. Sepsis can trigger MAS."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.04,
+        "reasoning": "Low fibrinogen, thrombocytopenia, and elevated LDH overlap with DIC. However, MAS is the primary process; DIC can occur as a secondary phenomenon within MAS."
+      },
+      {
+        "disease": "aplastic_anemia",
+        "probability": 0.02,
+        "reasoning": "Pancytopenia with neutropenia could suggest aplastic anemia (especially on methotrexate), but ferritin 18,500 and the full MAS constellation make this far less likely."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "Pancytopenia, hepatitis, and serositis in a young woman could raise SLE, but sJIA history and massively elevated ferritin with low fibrinogen point to MAS flare."
+      },
+      {
+        "disease": "acute_hepatitis",
+        "probability": 0.02,
+        "reasoning": "Elevated transaminases and bilirubin indicate hepatic involvement, but this is a component of MAS multiorgan involvement rather than primary hepatitis."
+      },
+      {
+        "disease": "lymphoma",
+        "probability": 0.02,
+        "reasoning": "Hepatosplenomegaly, cytopenias, elevated LDH, and B-symptoms overlap with lymphoma, but the acute presentation with massively elevated ferritin in known sJIA patient strongly favors MAS."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_methanol_ethylene_glycol_poisoning_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "methanol_ethylene_glycol_poisoning",
+        "probability": 0.85,
+        "reasoning": "Classic toxic alcohol poisoning: history of drinking unknown alcohol with windshield washer fluid container (methanol source), 18-hour delay (time for metabolism to formic acid/glycolic acid), high anion gap metabolic acidosis (AG = 138 - 98 - 8 = 32, markedly elevated), elevated osmolal gap (measured osmolality 325, calculated ~290 = gap ~35), Kussmaul breathing (compensation for severe acidosis), visual disturbances (formic acid-mediated optic neuropathy \u2014 specific for methanol), lactate 5.5 (elevated, from metabolic disruption), hypocalcemia (calcium 8.0 \u2014 oxalate precipitation if ethylene glycol component). Confusion, vomiting, headache consistent with toxic metabolite accumulation."
+      },
+      {
+        "disease": "diabetic_ketoacidosis",
+        "probability": 0.04,
+        "reasoning": "High anion gap metabolic acidosis with Kussmaul breathing could suggest DKA, but glucose 95 is normal, no diabetes history, and the clinical scenario (windshield washer fluid) definitively points to toxic ingestion."
+      },
+      {
+        "disease": "lactic_acidosis",
+        "probability": 0.03,
+        "reasoning": "Lactate 5.5 is elevated, but the primary driver of the anion gap is toxic alcohol metabolites, not lactate alone. Lactate elevation is secondary."
+      },
+      {
+        "disease": "alcoholic_ketoacidosis",
+        "probability": 0.03,
+        "reasoning": "History of alcohol use disorder with HAGMA, but the specific toxic exposure (windshield washer fluid), osmolal gap, and visual changes point to methanol rather than starvation ketosis."
+      },
+      {
+        "disease": "sepsis",
+        "probability": 0.02,
+        "reasoning": "Confusion, tachycardia, lactic acidosis could suggest sepsis, but the clear toxic ingestion history and osmolal gap make this unlikely."
+      },
+      {
+        "disease": "uremia",
+        "probability": 0.02,
+        "reasoning": "Creatinine 1.3 mildly elevated \u2014 could represent early renal injury from toxic alcohol metabolites (especially ethylene glycol causing oxalate nephropathy), but is secondary to the poisoning."
+      },
+      {
+        "disease": "salicylate_poisoning",
+        "probability": 0.01,
+        "reasoning": "HAGMA with altered mental status overlaps, but no history of aspirin ingestion, and the toxic alcohol exposure is clearly identified."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_multiple_myeloma_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "multiple_myeloma",
+        "probability": 0.85,
+        "reasoning": "Classic CRAB criteria fulfilled: Calcium 12.1 (hypercalcemia from osteolysis), Renal insufficiency (creatinine 1.8, BUN 32), Anemia (Hgb 9.2 normocytic MCV 92), Bone disease (lytic lesions in lumbar spine and pelvis on skeletal survey, with progressive back pain). Additional: markedly elevated total protein 10.5 with low albumin 3.2 (elevated protein gap of 7.3 = paraprotein), ESR 115 (>100 highly suggestive of myeloma/Waldenstrom), elevated LDH 310, elevated uric acid 8.5 (increased cell turnover). 68M with recurrent infections (immunoparesis). Textbook presentation."
+      },
+      {
+        "disease": "hypercalcemia_of_malignancy",
+        "probability": 0.04,
+        "reasoning": "Hypercalcemia is present and could represent other malignancies (lung, breast, renal), but lytic bone lesions, elevated protein gap, and markedly elevated ESR are specific for myeloma rather than PTHrP-mediated hypercalcemia."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.03,
+        "reasoning": "Elevated creatinine and BUN present, but renal insufficiency is secondary to myeloma (light chain cast nephropathy, hypercalcemia) rather than primary CKD."
+      },
+      {
+        "disease": "lymphoma",
+        "probability": 0.03,
+        "reasoning": "Weight loss, fatigue, elevated LDH, and bony involvement overlap, but lytic (not blastic) lesions, protein gap, and markedly elevated ESR favor myeloma."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.02,
+        "reasoning": "Hypercalcemia and bone pain overlap, but lytic lesions, protein gap, extreme ESR, and anemia make myeloma far more likely."
+      },
+      {
+        "disease": "metastatic_bone_disease",
+        "probability": 0.02,
+        "reasoning": "Lytic bone lesions and back pain could represent metastatic carcinoma, but the protein gap (total protein 10.5 with albumin 3.2) is characteristic of a paraprotein."
+      },
+      {
+        "disease": "waldenstrom_macroglobulinemia",
+        "probability": 0.01,
+        "reasoning": "Elevated protein with high ESR could suggest Waldenstrom, but lytic bone lesions, renal failure, and hypercalcemia are much more characteristic of myeloma (Waldenstrom rarely causes bone disease or hypercalcemia)."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_myocarditis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "myocarditis",
+        "probability": 0.7,
+        "reasoning": "25M college athlete with preceding viral URI 10 days ago, now with pleuritic chest pain, dyspnea, palpitations. Troponin 3.2 (elevated indicating myocardial injury), CK 450, CK-MB 28 (elevated cardiac enzymes), BNP 580 (>500, indicating heart failure/ventricular dysfunction), CRP 42 and ESR 38 (systemic inflammation). Cardiac MRI shows late gadolinium enhancement in non-coronary distribution with myocardial edema (hallmark of myocarditis \u2014 LGE in non-coronary distribution distinguishes from MI). Echo EF 40% with global hypokinesis (myocardial dysfunction). Low-grade fever 37.8. The post-viral timing, young age, non-coronary LGE pattern, and global (not regional) wall motion abnormality all strongly favor myocarditis."
+      },
+      {
+        "disease": "acute_myocardial_infarction",
+        "probability": 0.1,
+        "reasoning": "Elevated troponin and CK-MB could represent MI, but 25M is extremely unlikely age, chest pain is pleuritic (not crushing), LGE is in non-coronary distribution, and wall motion is global (not territorial). Post-viral context favors inflammation over thrombosis."
+      },
+      {
+        "disease": "acute_pericarditis",
+        "probability": 0.08,
+        "reasoning": "Pleuritic chest pain post-viral illness with elevated inflammatory markers is classic for pericarditis. Often coexists with myocarditis (myopericarditis). However, troponin 3.2, EF 40%, and myocardial edema on MRI indicate significant myocardial involvement beyond isolated pericarditis."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.05,
+        "reasoning": "BNP 580 and EF 40% indicate heart failure, but this is secondary to myocarditis rather than a primary cardiomyopathy."
+      },
+      {
+        "disease": "pulmonary_embolism",
+        "probability": 0.03,
+        "reasoning": "Pleuritic chest pain, dyspnea, tachycardia, and elevated troponin/BNP could suggest PE, but cardiac MRI findings and post-viral presentation clearly indicate myocarditis."
+      },
+      {
+        "disease": "takotsubo_cardiomyopathy",
+        "probability": 0.02,
+        "reasoning": "Acute heart failure with troponin elevation, but patient is young male (Takotsubo predominantly affects postmenopausal women), and MRI shows myocardial edema/LGE inconsistent with Takotsubo."
+      },
+      {
+        "disease": "rhabdomyolysis",
+        "probability": 0.02,
+        "reasoning": "Elevated CK 450 could suggest muscle injury, but CK is only mildly elevated (not >5x ULN), CK-MB elevation and troponin indicate cardiac origin, and MRI confirms myocardial disease."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_nephrotic_syndrome_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.88,
+        "reasoning": "Classic nephrotic syndrome tetrad: (1) heavy proteinuria (urine microalbumin 850 mg/L \u2014 significantly elevated), (2) hypoalbuminemia (albumin 1.8, total protein 4.2), (3) hyperlipidemia (total cholesterol 380, LDL 240, triglycerides 310), (4) edema (periorbital edema, bilateral pitting edema to mid-thigh, ascites). Additional: foamy urine (from proteinuria), hypocalcemia (calcium 7.9 \u2014 corrected for low albumin and urinary losses of vitamin D binding protein), weight gain 20 lbs (edema). 45M with no prior history. Classic presentation."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.03,
+        "reasoning": "Creatinine 1.2 is borderline elevated; nephrotic syndrome can progress to CKD. However, creatinine is only mildly elevated, and the presentation is dominated by nephrotic-range proteinuria rather than GFR decline."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.03,
+        "reasoning": "Bilateral edema and ascites could suggest CHF, but albumin 1.8, massive proteinuria, and hyperlipidemia pattern is specific for nephrotic syndrome, not cardiac failure."
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.03,
+        "reasoning": "Ascites, edema, and hypoalbuminemia overlap with cirrhosis, but the proteinuria and hyperlipidemia are not features of cirrhosis. Albumin production in cirrhosis is impaired; in nephrotic syndrome albumin is lost in urine."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "Lupus nephritis can cause nephrotic syndrome, especially membranous nephropathy class V. No other lupus features (rash, arthritis, serositis) mentioned, but SLE is an important underlying cause to consider."
+      },
+      {
+        "disease": "diabetic_nephropathy",
+        "probability": 0.01,
+        "reasoning": "Diabetic nephropathy is the most common cause of nephrotic syndrome in adults, but no diabetes history mentioned."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_pheochromocytoma_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "pheochromocytoma",
+        "probability": 0.88,
+        "reasoning": "Classic triad of episodic headaches, palpitations, and diaphoresis. Plasma free metanephrine 450 pg/mL (markedly elevated, >3x ULN) and plasma free normetanephrine 680 pg/mL (markedly elevated) \u2014 the most sensitive and specific test for pheochromocytoma. 3.5 cm right adrenal mass on CT confirms adrenal tumor. Resistant hypertension despite 3 medications (210/120 during episode), episodic nature with pallor during episodes (catecholamine-driven vasoconstriction). Hyperglycemia (glucose 142) from catecholamine-mediated glycogenolysis. Father with thyroid cancer raises suspicion for MEN2A syndrome (medullary thyroid cancer + pheochromocytoma). Hematocrit 46% slightly elevated (catecholamine-induced hemoconcentration)."
+      },
+      {
+        "disease": "hyperthyroidism",
+        "probability": 0.04,
+        "reasoning": "Palpitations, tremor, weight loss, anxiety, and tachycardia overlap with thyrotoxicosis, but no thyroid labs were obtained. The episodic nature and hypertensive crises are more characteristic of pheochromocytoma, and markedly elevated metanephrines confirm the diagnosis."
+      },
+      {
+        "disease": "cushing_syndrome",
+        "probability": 0.02,
+        "reasoning": "Adrenal mass could represent cortisol-secreting adenoma. Hypertension and hyperglycemia overlap. However, weight loss (rather than gain) and episodic symptoms with elevated metanephrines strongly favor pheochromocytoma."
+      },
+      {
+        "disease": "adrenal_carcinoma",
+        "probability": 0.02,
+        "reasoning": "Right adrenal mass at 3.5 cm could be adrenal carcinoma, but markedly elevated functional metanephrines and classic paroxysmal symptoms indicate functional pheochromocytoma. Most adrenal carcinomas are >4 cm."
+      },
+      {
+        "disease": "essential_hypertension",
+        "probability": 0.02,
+        "reasoning": "Resistant hypertension is common, but episodic nature with classic triad and elevated metanephrines identify secondary cause."
+      },
+      {
+        "disease": "anxiety_disorder",
+        "probability": 0.01,
+        "reasoning": "Episodic anxiety, palpitations, and diaphoresis could mimic panic attacks, but objective findings (hypertensive crises, elevated metanephrines, adrenal mass) confirm organic disease."
+      },
+      {
+        "disease": "paraganglioma",
+        "probability": 0.01,
+        "reasoning": "Extra-adrenal pheochromocytoma (paraganglioma) presents similarly, but imaging shows adrenal mass, making intra-adrenal pheochromocytoma the diagnosis."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_polycythemia_vera_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "polycythemia_vera",
+        "probability": 0.88,
+        "reasoning": "58M with erythrocytosis (Hgb 19.2, Hct 57.5, RBC 6.8 \u2014 all markedly elevated meeting WHO major criteria), plus thrombocytosis (platelets 520) and leukocytosis (WBC 14.5) indicating trilineage myeloproliferation. Classic symptoms: aquagenic pruritus (itching after shower \u2014 highly specific for PV), headache, dizziness, visual disturbances (hyperviscosity), erythromelalgia (burning pain in extremities \u2014 pathognomonic for myeloproliferative neoplasms). Signs: plethora, ruddy complexion, splenomegaly. Low ferritin 18 (iron depletion from excessive erythropoiesis despite adequate iron 45). Elevated LDH 350 and uric acid 9.8 (increased cell turnover). History of gout (secondary to hyperuricemia from cell turnover). Hypertension 155/90."
+      },
+      {
+        "disease": "chronic_myeloid_leukemia",
+        "probability": 0.03,
+        "reasoning": "Leukocytosis and splenomegaly overlap, but CML typically has extreme leukocytosis (>50), basophilia, and does NOT present with erythrocytosis. Hgb 19.2 and Hct 57.5 are incompatible with CML."
+      },
+      {
+        "disease": "secondary_polycythemia",
+        "probability": 0.03,
+        "reasoning": "Erythrocytosis could be secondary (COPD, sleep apnea, high altitude, EPO-producing tumor), but trilineage proliferation (RBC + WBC + platelets all elevated), splenomegaly, aquagenic pruritus, and erythromelalgia are specific for PV, not secondary polycythemia."
+      },
+      {
+        "disease": "essential_thrombocythemia",
+        "probability": 0.02,
+        "reasoning": "Thrombocytosis 520 and myeloproliferative features overlap with ET, but the dominant erythrocytosis (Hgb 19.2) is the hallmark of PV, not ET."
+      },
+      {
+        "disease": "myelofibrosis",
+        "probability": 0.02,
+        "reasoning": "Splenomegaly and myeloproliferative features overlap. PV can progress to post-PV myelofibrosis, but current presentation with erythrocytosis indicates polycythemic phase."
+      },
+      {
+        "disease": "gout",
+        "probability": 0.02,
+        "reasoning": "History of gout and uric acid 9.8, but this is secondary to PV-driven hyperuricemia, not primary gout."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_pulmonary_embolism_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "pulmonary_embolism",
+        "probability": 0.9,
+        "reasoning": "Confirmed by CTPA showing bilateral segmental pulmonary emboli with RV strain. Multiple risk factors: recent surgery (knee arthroscopy 10 days ago), oral contraceptive use, family history of DVT (mother). D-dimer 4.8 (markedly elevated), troponin 0.18 (elevated from RV strain), BNP 320 (elevated from RV pressure overload), LDH 310 (elevated from pulmonary infarction). Sudden pleuritic chest pain, dyspnea, tachycardia 115, hypotension (105/68), tachypnea (RR 24). Submassive PE given troponin elevation and RV strain with hemodynamic compromise."
+      },
+      {
+        "disease": "acute_myocardial_infarction",
+        "probability": 0.03,
+        "reasoning": "Elevated troponin and BNP could suggest MI, but troponin is only mildly elevated (0.18), CTPA confirms PE, and risk factor profile (post-surgical, OCP) favors VTE. Pleuritic chest pain is atypical for MI."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.02,
+        "reasoning": "Elevated BNP and troponin could suggest acute heart failure, but this is right heart failure from PE (acute cor pulmonale), not primary CHF."
+      },
+      {
+        "disease": "pneumothorax",
+        "probability": 0.02,
+        "reasoning": "Sudden pleuritic chest pain and dyspnea overlap, but CTPA confirms PE and no pneumothorax mentioned."
+      },
+      {
+        "disease": "myocarditis",
+        "probability": 0.01,
+        "reasoning": "Troponin and BNP elevation overlap, but no viral prodrome, and CTPA findings confirm PE."
+      },
+      {
+        "disease": "aortic_dissection",
+        "probability": 0.01,
+        "reasoning": "Acute chest pain with hemodynamic compromise could raise concern, but pleuritic quality, D-dimer elevation, and CTPA findings confirm PE."
+      },
+      {
+        "disease": "pneumonia",
+        "probability": 0.01,
+        "reasoning": "Chest pain, dyspnea, and tachycardia overlap, but acute onset, D-dimer, CTPA findings, and risk factors clearly indicate PE."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_rhabdomyolysis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "rhabdomyolysis",
+        "probability": 0.92,
+        "reasoning": "Classic triad: muscle pain, weakness, dark urine (with positive dipstick blood but no RBCs \u2014 myoglobinuria). Massively elevated CK 45,000 (>200x ULN, >10x threshold), elevated myoglobin 2800, elevated LDH 850. Clear precipitant: marathon in extreme heat without training (exertional rhabdomyolysis). Complications already manifest: AKI (creatinine 2.5, BUN 35 from myoglobin-induced tubular injury), hyperkalemia (K 5.9 from muscle cell lysis), hypocalcemia (Ca 7.2 from calcium sequestration in injured muscle), hyperphosphatemia (P 6.8 from intracellular phosphorus release), hyperuricemia (uric acid 11.5 from purine release), metabolic acidosis (bicarb 18). Elevated AST 520 >> ALT 185 (muscle origin). Leukocytosis 13.5 (stress response)."
+      },
+      {
+        "disease": "tumor_lysis_syndrome",
+        "probability": 0.02,
+        "reasoning": "Hyperkalemia, hyperphosphatemia, hyperuricemia, hypocalcemia, and elevated LDH overlap with TLS, but no malignancy history, and massively elevated CK/myoglobin with exertional trigger confirm muscle breakdown, not tumor lysis."
+      },
+      {
+        "disease": "acute_kidney_injury",
+        "probability": 0.02,
+        "reasoning": "Creatinine 2.5 and BUN 35 indicate AKI, but this is secondary to rhabdomyolysis (myoglobin cast nephropathy) rather than a primary renal disease."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.01,
+        "reasoning": "Rhabdomyolysis can trigger DIC, but platelets 220 are normal and there are no coagulation abnormalities mentioned."
+      },
+      {
+        "disease": "heat_stroke",
+        "probability": 0.02,
+        "reasoning": "Marathon in extreme heat could cause heat stroke, which itself causes rhabdomyolysis. The distinction is clinical (core temperature, altered mental status); labs show rhabdomyolysis as the dominant pathology."
+      },
+      {
+        "disease": "compartment_syndrome",
+        "probability": 0.01,
+        "reasoning": "Could complicate severe rhabdomyolysis with muscle swelling, but no focal limb findings described."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_rheumatoid_arthritis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "rheumatoid_arthritis",
+        "probability": 0.9,
+        "reasoning": "Fulfills 2010 ACR/EULAR criteria with high score: symmetric polyarthritis of MCP and PIP joints (small joint involvement), prolonged morning stiffness (>1 hour implied by 'prolonged'), duration >6 weeks (4 months), rheumatoid nodule on olecranon (pathognomonic extra-articular manifestation). Labs: RF 85 (positive, >3x ULN), anti-CCP 165 (positive \u2014 high specificity for RA), elevated ESR 48 and CRP 22 (active inflammation), mild anemia of chronic disease (Hgb 11.2), reactive thrombocytosis (platelets 380), slightly low albumin 3.4 (chronic inflammation). 42F with family history of RA (mother). Classic seropositive RA presentation."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.03,
+        "reasoning": "Polyarthritis, positive RF, anemia, and elevated ESR could overlap with SLE. However, symmetric small-joint erosive pattern, positive anti-CCP (specific for RA, not SLE), rheumatoid nodules, and absence of SLE-specific features (malar rash, serositis, cytopenias) strongly favor RA."
+      },
+      {
+        "disease": "psoriatic_arthritis",
+        "probability": 0.02,
+        "reasoning": "Inflammatory polyarthritis could suggest PsA, but symmetric MCP/PIP involvement, positive RF and anti-CCP, rheumatoid nodules, and no psoriatic skin/nail findings favor RA."
+      },
+      {
+        "disease": "gout",
+        "probability": 0.01,
+        "reasoning": "Polyarticular gout is possible but rare in premenopausal women. Symmetric small-joint involvement with RF/anti-CCP positivity is not characteristic of gout."
+      },
+      {
+        "disease": "viral_arthritis",
+        "probability": 0.01,
+        "reasoning": "Acute polyarthritis from viral infection (parvovirus B19, hepatitis) can mimic early RA, but 4-month duration and positive anti-CCP make self-limited viral arthritis unlikely."
+      },
+      {
+        "disease": "adult_onset_stills_disease",
+        "probability": 0.01,
+        "reasoning": "Polyarthritis with fever and elevated inflammatory markers could suggest AOSD, but the symmetric MCP/PIP pattern, RF/anti-CCP positivity, and rheumatoid nodules are specific for RA."
+      },
+      {
+        "disease": "polymyalgia_rheumatica",
+        "probability": 0.01,
+        "reasoning": "Elevated ESR and stiffness overlap, but PMR affects proximal muscles/shoulders/hips, not small joints of hands. Patient is also younger than typical PMR (>50)."
+      },
+      {
+        "disease": "sjogren_syndrome",
+        "probability": 0.01,
+        "reasoning": "Can coexist with RA and cause positive RF, but no sicca symptoms (dry eyes, dry mouth) mentioned."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_sepsis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "sepsis",
+        "probability": 0.85,
+        "reasoning": "Meets Sepsis-3 criteria (suspected infection + SOFA >= 2): fever 39.2, tachycardia 112, hypotension (88/52 \u2014 MAP ~64, indicating septic shock). Organ dysfunction: AKI (creatinine 2.8 from baseline CKD3), thrombocytopenia (platelets 98), coagulopathy (INR 1.6), metabolic acidosis (bicarb 18), hyperlactatemia (lactate 5.2 \u2014 >4 indicates tissue hypoperfusion/septic shock). Key infection markers: procalcitonin 8.5 (>2 strongly suggests bacterial infection), CRP 185, leukocytosis 18.5 with neutrophilia (neutrophils 15.2). Likely source: urinary tract given BPH history and diabetic immunosuppression. 72M with confusion (sepsis-associated encephalopathy), rigors, decreased urine output."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.04,
+        "reasoning": "Thrombocytopenia 98, elevated INR 1.6 (prolonged PT 18.2), and sepsis trigger could represent DIC as a complication. Labs partially consistent but platelet count is only moderately low and no fibrinogen or D-dimer provided."
+      },
+      {
+        "disease": "acute_kidney_injury",
+        "probability": 0.04,
+        "reasoning": "Creatinine 2.8 with baseline CKD3 indicates acute-on-chronic kidney injury, but this is secondary to sepsis (pre-renal from hypotension + septic AKI) rather than a primary diagnosis."
+      },
+      {
+        "disease": "diabetic_ketoacidosis",
+        "probability": 0.03,
+        "reasoning": "T2DM with glucose 185, bicarb 18, and infection could trigger DKA. However, glucose is only mildly elevated, bicarb depression is modest, and the clinical picture with procalcitonin 8.5 and hypotension is dominated by sepsis."
+      },
+      {
+        "disease": "acute_myocardial_infarction",
+        "probability": 0.02,
+        "reasoning": "72M with tachycardia and hypotension could have type 2 MI from demand ischemia in sepsis. No troponin or ECG mentioned, and the presentation is infectious."
+      },
+      {
+        "disease": "urinary_tract_infection",
+        "probability": 0.01,
+        "reasoning": "UTI is the likely source of sepsis (BPH, diabetes), but the systemic response with organ dysfunction elevates this to sepsis/septic shock."
+      },
+      {
+        "disease": "meningitis",
+        "probability": 0.01,
+        "reasoning": "Fever, confusion, and rigors could suggest meningitis, but absence of neck stiffness, photophobia, and the urologic risk profile make urosepsis far more likely."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_siadh_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "siadh",
+        "probability": 0.75,
+        "reasoning": "Classic SIADH: severe hyponatremia (118), low serum osmolality (252), inappropriately concentrated urine (580), euvolemic, low uric acid (2.1), low BUN. Small cell lung cancer is the most common malignant cause of SIADH. Normal TSH rules out hypothyroidism."
+      },
+      {
+        "disease": "adrenal_insufficiency",
+        "probability": 0.07,
+        "reasoning": "Can cause euvolemic hyponatremia with similar lab picture; however, no cortisol level provided and patient lacks other features (hyperpigmentation, hyperkalemia). Must be excluded before diagnosing SIADH."
+      },
+      {
+        "disease": "cerebral_salt_wasting",
+        "probability": 0.04,
+        "reasoning": "Can cause hyponatremia with concentrated urine, but patient is euvolemic (not hypovolemic) making this less likely."
+      },
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.02,
+        "reasoning": "Can cause hyponatremia, but TSH is normal (2.1) ruling this out."
+      },
+      {
+        "disease": "psychogenic_polydipsia",
+        "probability": 0.02,
+        "reasoning": "Can cause hyponatremia but urine would be dilute, not concentrated (580). Ruled out by high urine osmolality."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.02,
+        "reasoning": "Hypervolemic hyponatremia; patient is euvolemic with no edema, making this unlikely."
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.02,
+        "reasoning": "Hypervolemic hyponatremia from cirrhosis; no signs of liver disease, no edema."
+      },
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.01,
+        "reasoning": "Can cause hyponatremia but would show edema and proteinuria."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_systemic_lupus_erythematosus_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.85,
+        "reasoning": "Meets >= 4 SLICC criteria: malar rash, oral ulcers, photosensitivity, non-erosive arthritis, leukopenia/lymphopenia, thrombocytopenia, positive ANA (titer 8), positive anti-dsDNA (120), low complement C3 (55) and C4 (8). Young female with family history of autoimmune disease (sister with Sjogren). Classic presentation."
+      },
+      {
+        "disease": "mixed_connective_tissue_disease",
+        "probability": 0.04,
+        "reasoning": "Overlapping features (arthritis, Raynaud), but the high anti-dsDNA and low complement strongly favor SLE over MCTD."
+      },
+      {
+        "disease": "rheumatoid_arthritis",
+        "probability": 0.02,
+        "reasoning": "Non-erosive synovitis of hands could suggest RA, but the multisystem involvement, malar rash, and serologies point overwhelmingly to SLE."
+      },
+      {
+        "disease": "drug_induced_lupus",
+        "probability": 0.02,
+        "reasoning": "No offending medications (no hydralazine, procainamide, isoniazid). Anti-dsDNA is typically negative in drug-induced lupus."
+      },
+      {
+        "disease": "sjogren_syndrome",
+        "probability": 0.02,
+        "reasoning": "Family history of Sjogren, but clinical features and serologies are specific for SLE. Could coexist."
+      },
+      {
+        "disease": "dermatomyositis",
+        "probability": 0.01,
+        "reasoning": "Skin manifestations are different (heliotrope, Gottron papules), no muscle weakness or elevated CK."
+      },
+      {
+        "disease": "antiphospholipid_syndrome",
+        "probability": 0.01,
+        "reasoning": "Can occur secondary to SLE, but no thrombotic events described."
+      },
+      {
+        "disease": "adult_onset_stills_disease",
+        "probability": 0.01,
+        "reasoning": "Can cause rash and cytopenias but rash is evanescent salmon-colored, not malar; and ANA/dsDNA would not be this high."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_ttp_hus_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "ttp_hus",
+        "probability": 0.8,
+        "reasoning": "Classic pentad features: microangiopathic hemolytic anemia (schistocytes, undetectable haptoglobin, elevated LDH 1450, indirect hyperbilirubinemia), severe thrombocytopenia (18), renal impairment (Cr 1.9), neurologic symptoms (confusion), fever (38.1). Normal PT/INR/fibrinogen distinguishes from DIC. Young woman with no significant PMH is typical demographic."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.06,
+        "reasoning": "MAHA with thrombocytopenia could suggest DIC, but normal PT, INR, and fibrinogen argue strongly against consumptive coagulopathy."
+      },
+      {
+        "disease": "hemolytic_uremic_syndrome",
+        "probability": 0.05,
+        "reasoning": "HUS is on the same spectrum as TTP; classic HUS is more renal-predominant and associated with E. coli O157:H7 in children. Adult TTP more likely here given neurologic predominance."
+      },
+      {
+        "disease": "evans_syndrome",
+        "probability": 0.02,
+        "reasoning": "Autoimmune hemolytic anemia with thrombocytopenia, but would not explain schistocytes or renal failure."
+      },
+      {
+        "disease": "hellp_syndrome",
+        "probability": 0.02,
+        "reasoning": "MAHA with thrombocytopenia and hemolysis, but no pregnancy mentioned."
+      },
+      {
+        "disease": "malignant_hypertension",
+        "probability": 0.02,
+        "reasoning": "Can cause MAHA, but BP 135/85 is not severely elevated."
+      },
+      {
+        "disease": "paroxysmal_nocturnal_hemoglobinuria",
+        "probability": 0.01,
+        "reasoning": "Hemolysis with dark urine, but would not typically show schistocytes or severe thrombocytopenia."
+      },
+      {
+        "disease": "aplastic_anemia",
+        "probability": 0.01,
+        "reasoning": "Pancytopenia, but does not explain hemolysis or schistocytes."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_tumor_lysis_syndrome_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "tumor_lysis_syndrome",
+        "probability": 0.9,
+        "reasoning": "Pathognomonic: hyperuricemia (14.2), hyperkalemia (6.8), hyperphosphatemia (8.5), hypocalcemia (6.8), elevated LDH (2200), AKI (Cr 3.2). Onset 24 hours after starting chemotherapy for Burkitt lymphoma (high tumor burden, high proliferative rate). Meets Cairo-Bishop laboratory TLS criteria (2 of 4 metabolic abnormalities within 3-7 days of treatment). Leukocytosis (42k) indicates high tumor burden."
+      },
+      {
+        "disease": "acute_kidney_injury",
+        "probability": 0.03,
+        "reasoning": "AKI is present (Cr 3.2) but is a consequence of TLS (uric acid nephropathy, calcium-phosphate deposition), not an independent diagnosis."
+      },
+      {
+        "disease": "rhabdomyolysis",
+        "probability": 0.02,
+        "reasoning": "Can cause hyperkalemia, hyperphosphatemia, hypocalcemia, and AKI, but would have markedly elevated CK and no hyperuricemia to this degree. Context of recent chemotherapy makes TLS far more likely."
+      },
+      {
+        "disease": "adrenal_insufficiency",
+        "probability": 0.01,
+        "reasoning": "Hyperkalemia and nausea could suggest adrenal crisis, but phosphorus/uric acid pattern and clinical context rule this out."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.01,
+        "reasoning": "Pre-existing CKD could contribute but does not explain the acute metabolic derangements in the context of chemotherapy."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.01,
+        "reasoning": "Would cause hypercalcemia, not hypocalcemia. Essentially excluded."
+      },
+      {
+        "disease": "hypoparathyroidism",
+        "probability": 0.01,
+        "reasoning": "Hypocalcemia and hyperphosphatemia fit, but hyperuricemia and clinical context clearly indicate TLS."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_vitamin_b12_deficiency_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.88,
+        "reasoning": "Definitive: B12 level 95 (severely low), markedly elevated MMA (1450) and homocysteine (32) confirm functional B12 deficiency. Macrocytic anemia (MCV 112, Hgb 10.1), hypersegmented neutrophils, elevated LDH (520) with indirect hyperbilirubinemia (ineffective erythropoiesis). Neurologic involvement: subacute combined degeneration (decreased vibration sense, positive Romberg, paresthesias). Strict vegan for 5 years without supplementation is a classic dietary cause. Normal folate (8.5) rules out folate deficiency as primary cause."
+      },
+      {
+        "disease": "pernicious_anemia",
+        "probability": 0.03,
+        "reasoning": "Autoimmune cause of B12 deficiency; cannot be distinguished from dietary B12 deficiency by these labs alone (would need anti-intrinsic factor antibodies). However, the clear dietary explanation (strict vegan) makes this less likely as the primary mechanism."
+      },
+      {
+        "disease": "folate_deficiency",
+        "probability": 0.02,
+        "reasoning": "Can cause macrocytic anemia with similar morphologic features, but folate is normal (8.5) and MMA would be normal in isolated folate deficiency (here MMA is markedly elevated, confirming B12)."
+      },
+      {
+        "disease": "myelodysplastic_syndrome",
+        "probability": 0.02,
+        "reasoning": "Macrocytic anemia with cytopenias in older adult; however, the clearly low B12, elevated MMA/homocysteine, and dietary history strongly favor B12 deficiency."
+      },
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.01,
+        "reasoning": "Can cause macrocytosis and fatigue, but would not explain the neurologic findings or the specific B12/MMA pattern."
+      },
+      {
+        "disease": "copper_deficiency",
+        "probability": 0.01,
+        "reasoning": "Can cause myelopathy resembling subacute combined degeneration with cytopenias, but B12 is definitively low here."
+      },
+      {
+        "disease": "aplastic_anemia",
+        "probability": 0.01,
+        "reasoning": "Pancytopenia, but macrocytosis with low B12 and elevated MMA clearly points to B12 deficiency."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_wilson_disease_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "wilson_disease",
+        "probability": 0.9,
+        "reasoning": "Pathognomonic: Kayser-Fleischer rings on slit lamp exam combined with low ceruloplasmin (8.0, normal >20). Young male (22) with hepatic and neuropsychiatric involvement (tremor, dysarthria, personality changes, jaundice, hepatomegaly). Wing-beating tremor is characteristic. Coombs-negative hemolytic anemia (low haptoglobin 15, elevated reticulocytes 4.5%). Disproportionately low ALP (35) relative to bilirubin (6.5) is a well-known Wilson disease pattern (ALP/bilirubin ratio). Family history (brother with liver disease at 19) suggests autosomal recessive inheritance."
+      },
+      {
+        "disease": "autoimmune_hepatitis",
+        "probability": 0.03,
+        "reasoning": "Young patient with hepatitis and elevated transaminases, but Kayser-Fleischer rings and low ceruloplasmin are essentially diagnostic of Wilson disease."
+      },
+      {
+        "disease": "drug_induced_liver_injury",
+        "probability": 0.01,
+        "reasoning": "No offending medications. Kayser-Fleischer rings rule this out as primary."
+      },
+      {
+        "disease": "viral_hepatitis",
+        "probability": 0.01,
+        "reasoning": "Elevated transaminases and jaundice, but neuropsychiatric symptoms, KF rings, and low ceruloplasmin point to Wilson disease."
+      },
+      {
+        "disease": "hemochromatosis",
+        "probability": 0.01,
+        "reasoning": "Genetic liver disease in young adult, but iron studies not provided and KF rings/low ceruloplasmin are specific for Wilson."
+      },
+      {
+        "disease": "alcoholic_hepatitis",
+        "probability": 0.01,
+        "reasoning": "Social history explicitly states no alcohol use. Age and presentation not consistent."
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.01,
+        "reasoning": "May be developing cirrhosis as a complication of Wilson disease (low albumin, thrombocytopenia, elevated INR), but Wilson disease is the underlying etiology."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_amyloidosis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "amyloidosis",
+        "probability": 0.7,
+        "reasoning": "Classic AL amyloidosis presentation: macroglossia (highly specific, LR+ >9), periorbital purpura (pathognomonic), nephrotic-range proteinuria (microalbumin 650), low albumin (2.2), elevated BNP (780) indicating cardiac involvement, hepatomegaly, peripheral neuropathy (numbness in hands), elevated ALP (195). Multi-organ involvement (renal, cardiac, hepatic, neurologic) in a 63-year-old male is classic."
+      },
+      {
+        "disease": "nephrotic_syndrome",
+        "probability": 0.07,
+        "reasoning": "Heavy proteinuria, low albumin, edema. But nephrotic syndrome is a syndrome, not a diagnosis; amyloidosis is the likely underlying cause given the systemic features."
+      },
+      {
+        "disease": "heart_failure",
+        "probability": 0.05,
+        "reasoning": "Elevated BNP (780), dyspnea, bilateral edema all consistent with heart failure, likely infiltrative cardiomyopathy from amyloid deposition. Heart failure here is a manifestation of amyloidosis."
+      },
+      {
+        "disease": "multiple_myeloma",
+        "probability": 0.05,
+        "reasoning": "Can present similarly with renal failure, anemia, and can cause AL amyloidosis as a complication. Low total protein (5.5) could fit but is less typical of myeloma (usually elevated)."
+      },
+      {
+        "disease": "cirrhosis",
+        "probability": 0.03,
+        "reasoning": "Low albumin, hepatomegaly, edema could suggest cirrhosis, but macroglossia and periorbital purpura are not features of cirrhosis."
+      },
+      {
+        "disease": "chronic_kidney_disease",
+        "probability": 0.03,
+        "reasoning": "Creatinine 1.8 indicates renal impairment with proteinuria, but systemic features point to amyloidosis as the cause."
+      },
+      {
+        "disease": "cardiac_sarcoidosis",
+        "probability": 0.02,
+        "reasoning": "Infiltrative cardiomyopathy with multi-organ involvement, but macroglossia and periorbital purpura are specific for amyloidosis."
+      },
+      {
+        "disease": "light_chain_deposition_disease",
+        "probability": 0.02,
+        "reasoning": "Related to amyloidosis; non-fibrillar light chain deposition causing similar organ damage but without macroglossia."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_chronic_hepatitis_b_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "chronic_hepatitis_b",
+        "probability": 0.55,
+        "reasoning": "42M born in Southeast Asia (high HBV endemic region), no vaccination, mother with liver disease (vertical transmission risk), elevated ALT (125) > AST (88) with hepatocellular pattern (normal ALP), mildly elevated AFP (8, concerning for chronic hepatitis with HCC risk). Chronic infection with immune-active phase. Classic epidemiologic and laboratory profile."
+      },
+      {
+        "disease": "chronic_hepatitis_c",
+        "probability": 0.12,
+        "reasoning": "Can present identically with elevated transaminases and risk factors from endemic region; however, HBV is more strongly associated with vertical transmission and Southeast Asian origin."
+      },
+      {
+        "disease": "nonalcoholic_fatty_liver_disease",
+        "probability": 0.08,
+        "reasoning": "Common cause of elevated liver enzymes in adults, ALT > AST pattern is consistent, but the epidemiologic risk factors and elevated AFP favor viral hepatitis."
+      },
+      {
+        "disease": "autoimmune_hepatitis",
+        "probability": 0.05,
+        "reasoning": "Elevated transaminases with hepatocellular pattern, but more common in women and typically has higher immunoglobulin levels."
+      },
+      {
+        "disease": "wilson_disease",
+        "probability": 0.03,
+        "reasoning": "Age is at the upper limit for Wilson presentation. Would expect low ceruloplasmin and neuropsychiatric features if present."
+      },
+      {
+        "disease": "hemochromatosis",
+        "probability": 0.03,
+        "reasoning": "Can cause hepatitis with elevated transaminases; no iron studies available. Less likely without elevated ferritin/transferrin saturation data."
+      },
+      {
+        "disease": "drug_induced_liver_injury",
+        "probability": 0.02,
+        "reasoning": "No medications reported. Less likely."
+      },
+      {
+        "disease": "hepatocellular_carcinoma",
+        "probability": 0.02,
+        "reasoning": "Mildly elevated AFP (8) in setting of chronic liver disease is a risk factor. AFP <20 makes HCC less likely but does not exclude it."
+      },
+      {
+        "disease": "alcoholic_hepatitis",
+        "probability": 0.02,
+        "reasoning": "AST/ALT ratio <2 argues against alcoholic hepatitis (typically AST > ALT with ratio >2). No alcohol history mentioned."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_hemophilia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "hemophilia_a",
+        "probability": 0.65,
+        "reasoning": "Classic presentation: isolated prolonged aPTT (68 sec) with normal PT/INR (12.5/1.0), normal platelets (245), normal fibrinogen (310). Lifelong bleeding diathesis (easy bruising since childhood), hemarthrosis (swollen knee), prolonged bleeding after dental procedure. X-linked inheritance pattern (maternal uncle with bleeding disorder). Ecchymoses without petechiae indicates coagulation factor deficiency, not platelet disorder. Hemophilia A (factor VIII deficiency) is ~4x more common than B."
+      },
+      {
+        "disease": "hemophilia_b",
+        "probability": 0.15,
+        "reasoning": "Identical clinical presentation to hemophilia A; factor IX deficiency also causes isolated prolonged aPTT, hemarthrosis, and X-linked inheritance. Cannot distinguish from hemophilia A without factor levels."
+      },
+      {
+        "disease": "von_willebrand_disease",
+        "probability": 0.08,
+        "reasoning": "Most common inherited bleeding disorder. Can prolong aPTT (due to low factor VIII carrier). However, severe hemarthrosis is unusual in vWD (more mucocutaneous bleeding), and the degree of aPTT prolongation (68) suggests factor deficiency rather than mild/moderate vWD."
+      },
+      {
+        "disease": "factor_xi_deficiency",
+        "probability": 0.03,
+        "reasoning": "Prolongs aPTT with normal PT. However, spontaneous hemarthrosis is rare in factor XI deficiency; bleeding is usually post-surgical/procedural."
+      },
+      {
+        "disease": "lupus_anticoagulant",
+        "probability": 0.03,
+        "reasoning": "Prolongs aPTT but typically causes thrombosis rather than bleeding. Does not explain the lifelong bleeding history or hemarthrosis."
+      },
+      {
+        "disease": "acquired_hemophilia",
+        "probability": 0.02,
+        "reasoning": "Acquired factor VIII inhibitor can cause prolonged aPTT and bleeding, but onset is typically in older adults, not childhood."
+      },
+      {
+        "disease": "disseminated_intravascular_coagulation",
+        "probability": 0.01,
+        "reasoning": "Normal PT, fibrinogen, platelets, and D-dimer essentially exclude DIC."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_multiple_sclerosis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "multiple_sclerosis",
+        "probability": 0.85,
+        "reasoning": "Classic relapsing-remitting MS: dissemination in time (optic neuritis 'resolved,' now new leg numbness) and space (optic nerve, periventricular white matter, corticospinal tract). Key signs: RAPD (optic neuritis), internuclear ophthalmoplegia (pathognomonic for MS in young woman), hyperreflexia, positive Babinski (upper motor neuron). MRI shows periventricular lesions with gadolinium enhancement (active and chronic). Young female, Uhthoff phenomenon (fatigue worsened by heat). Normal labs rule out mimics (normal B12, TSH, ESR, CRP, ANA negative)."
+      },
+      {
+        "disease": "neuromyelitis_optica",
+        "probability": 0.04,
+        "reasoning": "Optic neuritis and myelopathy could suggest NMO, but INO is atypical for NMO, and periventricular lesions favor MS. NMO typically shows longitudinally extensive transverse myelitis."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "CNS lupus can mimic MS with white matter lesions, but ANA is negative and no systemic features."
+      },
+      {
+        "disease": "sarcoidosis",
+        "probability": 0.02,
+        "reasoning": "Neurosarcoidosis can cause cranial nerve palsies and white matter lesions, but ESR/CRP normal and no systemic features."
+      },
+      {
+        "disease": "acute_disseminated_encephalomyelitis",
+        "probability": 0.02,
+        "reasoning": "ADEM can present with multifocal white matter lesions, but is typically monophasic and post-infectious. The relapsing course favors MS."
+      },
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.01,
+        "reasoning": "B12 is normal (450). Subacute combined degeneration excluded."
+      },
+      {
+        "disease": "lyme_disease",
+        "probability": 0.01,
+        "reasoning": "Can cause CNS white matter lesions, but clinical pattern with INO and relapsing-remitting course strongly favors MS."
+      },
+      {
+        "disease": "cns_lymphoma",
+        "probability": 0.01,
+        "reasoning": "CNS mass lesions can enhance with gadolinium, but clinical course of relapsing-remitting symptoms in a young woman is classic MS."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_myasthenia_gravis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "myasthenia_gravis",
+        "probability": 0.88,
+        "reasoning": "Textbook presentation: fatigable ptosis (worse in evening), diplopia, bulbar symptoms (difficulty chewing, nasal voice), proximal weakness, positive ice pack test (highly specific). Normal reflexes and no sensory deficits distinguish from neuropathy. CT showing anterior mediastinal mass (thymoma) is present in ~15% of MG patients and strongly supports the diagnosis. Young woman is classic demographic for early-onset MG. Normal CK rules out myopathy. Normal inflammatory markers make inflammatory myopathy unlikely."
+      },
+      {
+        "disease": "lambert_eaton_myasthenic_syndrome",
+        "probability": 0.03,
+        "reasoning": "Autoimmune neuromuscular junction disorder with proximal weakness, but LEMS causes hyporeflexia (not normal reflexes), and ptosis/bulbar symptoms are less prominent. LEMS is associated with SCLC, not thymoma."
+      },
+      {
+        "disease": "botulism",
+        "probability": 0.02,
+        "reasoning": "Descending weakness with bulbar symptoms, but onset is acute (hours to days) and would have pupillary involvement. Chronic 2-month course rules this out."
+      },
+      {
+        "disease": "thyroid_eye_disease",
+        "probability": 0.02,
+        "reasoning": "Can cause diplopia and lid retraction/ptosis, but TSH is normal, no proptosis, and proximal weakness would not be explained."
+      },
+      {
+        "disease": "mitochondrial_myopathy",
+        "probability": 0.01,
+        "reasoning": "Can cause ptosis and external ophthalmoplegia, but is progressive (not fatigable), typically without thymoma, and CK may be elevated."
+      },
+      {
+        "disease": "oculopharyngeal_muscular_dystrophy",
+        "probability": 0.01,
+        "reasoning": "Ptosis and dysphagia, but onset is typically >50 years and is progressive rather than fluctuating."
+      },
+      {
+        "disease": "thymoma",
+        "probability": 0.01,
+        "reasoning": "Thymoma is present on CT but is the associated condition, not the primary diagnosis causing the neurologic symptoms."
+      },
+      {
+        "disease": "polymyositis",
+        "probability": 0.01,
+        "reasoning": "Proximal weakness, but CK is normal (95), no myalgias, and ocular/bulbar pattern is not typical."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_paget_disease_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "paget_disease",
+        "probability": 0.85,
+        "reasoning": "Classic presentation: markedly elevated ALP (650) with normal GGT (28) and normal transaminases, confirming bone origin. Bone pain (hip/thigh), bowing of tibia, increased skull circumference (enlarging hat size), warmth over affected bone (hypervascularity), sensorineural hearing loss (temporal bone involvement). Mixed osteolytic/osteoblastic lesions on X-ray. Normal calcium, phosphorus, and PTH. Family history of Paget disease. Elderly male, polyostotic distribution."
+      },
+      {
+        "disease": "bone_metastases",
+        "probability": 0.04,
+        "reasoning": "Elevated ALP and mixed lytic/blastic bone lesions could suggest metastatic disease (prostate, breast, lung). However, normal calcium, characteristic clinical features (skull enlargement, tibial bowing, warmth), and family history strongly favor Paget disease."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.02,
+        "reasoning": "Can cause bone pain and elevated ALP, but PTH and calcium are normal. Brown tumors can cause lytic lesions but would show hypercalcemia."
+      },
+      {
+        "disease": "osteosarcoma",
+        "probability": 0.02,
+        "reasoning": "Paget disease predisposes to osteosarcoma (rare complication). Mixed lesions could raise concern, but the chronic progressive course, polyostotic disease, and typical features argue against sarcomatous transformation at this time."
+      },
+      {
+        "disease": "multiple_myeloma",
+        "probability": 0.02,
+        "reasoning": "Lytic bone lesions in elderly patient, but would not show osteoblastic component, and normal calcium argues against. ALP is typically normal in myeloma."
+      },
+      {
+        "disease": "fibrous_dysplasia",
+        "probability": 0.01,
+        "reasoning": "Can cause bone deformity and elevated ALP, but typically presents in childhood/young adulthood, not at age 72."
+      },
+      {
+        "disease": "osteomalacia",
+        "probability": 0.01,
+        "reasoning": "Can elevate ALP, but would show diffuse bone disease rather than the focal mixed lesions seen here."
+      },
+      {
+        "disease": "chronic_kidney_disease_mineral_bone_disorder",
+        "probability": 0.01,
+        "reasoning": "Renal osteodystrophy can elevate ALP, but creatinine (1.1) is only mildly elevated and PTH is normal."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_pernicious_anemia_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "pernicious_anemia",
+        "probability": 0.75,
+        "reasoning": "Severe B12 deficiency (72 pg/mL) with markedly elevated MMA (2800) and homocysteine (45) in a non-vegetarian patient. Autoimmune etiology strongly supported by: associated autoimmune diseases (vitiligo, autoimmune thyroid disease on levothyroxine), family history (sister with pernicious anemia), and no dietary explanation. Megaloblastic anemia (MCV 118, Hgb 8.5), ineffective erythropoiesis (elevated LDH 890, indirect hyperbilirubinemia, low reticulocytes 0.4%), pancytopenia. Neurologic: subacute combined degeneration (decreased proprioception, positive Romberg, absent ankle reflexes, paresthesias). Glossitis is classic."
+      },
+      {
+        "disease": "vitamin_b12_deficiency",
+        "probability": 0.12,
+        "reasoning": "B12 deficiency is confirmed; the question is etiology. Pernicious anemia is the most likely cause given the autoimmune associations, but other causes (malabsorption, H. pylori gastritis) should be considered."
+      },
+      {
+        "disease": "celiac_disease",
+        "probability": 0.02,
+        "reasoning": "Malabsorption can cause B12 deficiency, but autoimmune clustering (vitiligo, thyroid disease, family history of PA) strongly favors pernicious anemia."
+      },
+      {
+        "disease": "folate_deficiency",
+        "probability": 0.02,
+        "reasoning": "Folate is normal (12.0). Elevated MMA confirms B12 rather than folate as the cause."
+      },
+      {
+        "disease": "myelodysplastic_syndrome",
+        "probability": 0.02,
+        "reasoning": "Macrocytic anemia with pancytopenia in an older adult, but the clearly low B12, elevated MMA, and autoimmune context strongly favor pernicious anemia."
+      },
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.02,
+        "reasoning": "Patient is on levothyroxine for autoimmune thyroid disease; if undertreated could contribute to macrocytosis and fatigue, but the severe B12 deficiency is the primary driver."
+      },
+      {
+        "disease": "chronic_atrophic_gastritis",
+        "probability": 0.02,
+        "reasoning": "Underlying pathology of pernicious anemia; autoimmune destruction of parietal cells causing intrinsic factor deficiency."
+      },
+      {
+        "disease": "hemolytic_anemia",
+        "probability": 0.01,
+        "reasoning": "Low haptoglobin (22) and elevated LDH suggest hemolysis, but this represents intramedullary hemolysis (ineffective erythropoiesis) from B12 deficiency, not a primary hemolytic disorder."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_sarcoidosis_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "sarcoidosis",
+        "probability": 0.82,
+        "reasoning": "Classic Lofgren syndrome triad: bilateral hilar lymphadenopathy (BHL), erythema nodosum, and bilateral ankle arthritis. Additional features: anterior uveitis (ocular sarcoidosis), dry cough (pulmonary involvement), hypercalcemia (11.2, from excess 1,25-dihydroxyvitamin D production by granulomas), elevated inflammatory markers (ESR 65, CRP 18), lymphopenia (0.8), elevated ALP (195) and mildly elevated ALT (55, hepatic granulomas). Young woman is typical demographic."
+      },
+      {
+        "disease": "lymphoma",
+        "probability": 0.05,
+        "reasoning": "BHL with systemic symptoms, elevated ESR, and lymphopenia could suggest lymphoma. However, erythema nodosum, uveitis, and hypercalcemia together strongly favor sarcoidosis."
+      },
+      {
+        "disease": "tuberculosis",
+        "probability": 0.04,
+        "reasoning": "Hilar lymphadenopathy with systemic inflammation, but bilateral symmetric BHL, erythema nodosum, uveitis pattern, and hypercalcemia strongly favor sarcoidosis. TB typically causes unilateral hilar/mediastinal adenopathy."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.02,
+        "reasoning": "Hypercalcemia present, but PTH would be elevated. The multisystem features and normal PTH (expected in sarcoidosis) make this less likely."
+      },
+      {
+        "disease": "fungal_infection",
+        "probability": 0.02,
+        "reasoning": "Histoplasmosis/coccidioidomycosis can cause BHL, but the full clinical picture with erythema nodosum, uveitis, and hypercalcemia is classic sarcoidosis."
+      },
+      {
+        "disease": "systemic_lupus_erythematosus",
+        "probability": 0.02,
+        "reasoning": "Young woman with joint pain, lymphopenia, and elevated ESR, but no rash pattern consistent with SLE, and BHL/erythema nodosum/uveitis point to sarcoidosis."
+      },
+      {
+        "disease": "behcet_disease",
+        "probability": 0.01,
+        "reasoning": "Can cause uveitis and arthritis, but no oral/genital ulcers and BHL is not a feature."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_secondary_adrenal_insufficiency_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "secondary_adrenal_insufficiency",
+        "probability": 0.8,
+        "reasoning": "Classic iatrogenic secondary AI: chronic exogenous glucocorticoid use (prednisone 20mg daily for 2 years) suppressed the HPA axis. After taper and discontinuation 3 months ago, adrenals have not recovered. Low morning cortisol (2.1 mcg/dL, severely low) with LOW ACTH (4.5 pg/mL), confirming secondary (pituitary) rather than primary (adrenal) cause. No hyperpigmentation (distinguishes from primary AI, where ACTH is high). Mild hyponatremia (132) from impaired free water excretion (cortisol needed for aquaporin suppression). Hypoglycemia (glucose 62). Normal potassium (4.0) because aldosterone axis is intact in secondary AI (renin-angiotensin regulated, not ACTH-dependent). Orthostatic hypotension from cortisol deficiency."
+      },
+      {
+        "disease": "adrenal_insufficiency",
+        "probability": 0.08,
+        "reasoning": "Primary adrenal insufficiency (Addison disease) can present similarly with low cortisol, fatigue, weight loss, and orthostatic hypotension, but ACTH would be high (not 4.5). The absence of hyperpigmentation and normal potassium also argue against primary AI."
+      },
+      {
+        "disease": "hypothyroidism",
+        "probability": 0.02,
+        "reasoning": "Fatigue and weight loss could suggest thyroid dysfunction, but TSH is normal (2.5). Central hypothyroidism is possible in panhypopituitarism but no other pituitary hormone deficiencies are evident."
+      },
+      {
+        "disease": "siadh",
+        "probability": 0.02,
+        "reasoning": "Mild hyponatremia could suggest SIADH, but the clinical context of post-steroid withdrawal with low cortisol explains the hyponatremia through impaired free water excretion. Cortisol deficiency must be excluded before diagnosing SIADH."
+      },
+      {
+        "disease": "depression",
+        "probability": 0.02,
+        "reasoning": "Fatigue, weight loss, and nausea could suggest depression, but the objective lab findings (low cortisol, low ACTH) confirm an organic cause."
+      },
+      {
+        "disease": "chronic_fatigue_syndrome",
+        "probability": 0.01,
+        "reasoning": "Persistent fatigue, but objective biochemical abnormalities clearly identify adrenal insufficiency."
+      },
+      {
+        "disease": "panhypopituitarism",
+        "probability": 0.02,
+        "reasoning": "Low ACTH could indicate broader pituitary dysfunction, but the clear history of exogenous steroid suppression explains isolated ACTH/cortisol deficiency without needing to invoke pituitary pathology."
+      },
+      {
+        "disease": "diabetes_mellitus",
+        "probability": 0.01,
+        "reasoning": "Glucose is low (62), opposite of diabetes. Hypoglycemia from cortisol deficiency."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  },
+  {
+    "model": "claude-opus-4-6",
+    "vignette_id": "clinical_oov_thyroid_cancer_001",
+    "raw_response": "",
+    "diagnoses": [
+      {
+        "disease": "thyroid_cancer",
+        "probability": 0.65,
+        "reasoning": "High-risk thyroid nodule: firm, 2.5 cm solid hypoechoic nodule with microcalcifications on ultrasound (TI-RADS 5). Palpable ipsilateral cervical lymphadenopathy suggests metastatic spread. History of childhood head/neck radiation (strong risk factor for thyroid malignancy). Hoarseness suggests recurrent laryngeal nerve involvement. Dysphagia to solids from mass effect. Euthyroid (normal TSH 2.1, normal free T4 1.2). Mildly elevated calcium (10.8) could suggest medullary thyroid carcinoma (calcitonin-producing) though papillary is more common."
+      },
+      {
+        "disease": "papillary_thyroid_carcinoma",
+        "probability": 0.15,
+        "reasoning": "Most common thyroid malignancy (80%). Microcalcifications on ultrasound are characteristic (psammoma bodies). Prior radiation exposure is a strong risk factor specifically for papillary carcinoma. Cervical lymph node metastasis is common."
+      },
+      {
+        "disease": "medullary_thyroid_carcinoma",
+        "probability": 0.05,
+        "reasoning": "Mildly elevated calcium (10.8) could suggest calcitonin effect or associated MEN2 syndrome with hyperparathyroidism. Would need calcitonin level and family history of MEN."
+      },
+      {
+        "disease": "thyroid_adenoma",
+        "probability": 0.05,
+        "reasoning": "Benign nodule is possible, but the features (hypoechoic, microcalcifications, cervical lymphadenopathy, radiation history, hoarseness) are highly suspicious for malignancy."
+      },
+      {
+        "disease": "multinodular_goiter",
+        "probability": 0.02,
+        "reasoning": "Can present with nodules, but description is of a single dominant nodule with malignant features."
+      },
+      {
+        "disease": "thyroiditis",
+        "probability": 0.02,
+        "reasoning": "Can cause nodular appearance, but firm fixed nodule with microcalcifications and lymphadenopathy is not typical of thyroiditis."
+      },
+      {
+        "disease": "primary_hyperparathyroidism",
+        "probability": 0.02,
+        "reasoning": "Mildly elevated calcium (10.8) could suggest hyperparathyroidism, but the dominant clinical picture is the thyroid nodule. Could coexist in MEN2 syndrome."
+      },
+      {
+        "disease": "follicular_thyroid_carcinoma",
+        "probability": 0.02,
+        "reasoning": "Second most common thyroid malignancy, but microcalcifications and lymph node metastasis are more typical of papillary carcinoma."
+      }
+    ],
+    "parse_success": true,
+    "latency_ms": 0,
+    "error": null
+  }
+]
