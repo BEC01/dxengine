@@ -110,7 +110,7 @@
         "lr_negative": 0.4
       },
       "macrophage_activation_syndrome": {
-        "lr_positive": 8.0,
+        "lr_positive": 12.0,
         "lr_negative": 0.1
       }
     }
@@ -656,6 +656,10 @@
       "cholangitis": {
         "lr_positive": 2.0,
         "lr_negative": 0.4
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -727,6 +731,10 @@
       "hepatorenal_syndrome": {
         "lr_positive": 1.5,
         "lr_negative": 0.5
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.6
       }
     }
   },
@@ -859,7 +867,11 @@
         "lr_negative": 0.3
       },
       "hellp_syndrome": {
-        "lr_positive": 1.5,
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 2.5,
         "lr_negative": 0.5
       }
     }
@@ -998,7 +1010,7 @@
         "lr_negative": 0.55
       },
       "macrophage_activation_syndrome": {
-        "lr_positive": 3.0,
+        "lr_positive": 6.0,
         "lr_negative": 0.4
       }
     }
@@ -1608,6 +1620,10 @@
       "chronic_kidney_disease": {
         "lr_positive": 3.0,
         "lr_negative": 0.55
+      },
+      "chronic_myeloid_leukemia": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.6
       }
     }
   },
@@ -2820,6 +2836,10 @@
       "hyperosmolar_hyperglycemic_state": {
         "lr_positive": 2.0,
         "lr_negative": 0.8
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.7
       }
     }
   },
@@ -2857,6 +2877,10 @@
       "acromegaly": {
         "lr_positive": 1.5,
         "lr_negative": 0.8
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
       }
     }
   },
@@ -2936,6 +2960,10 @@
       "cholangitis": {
         "lr_positive": 2.0,
         "lr_negative": 0.3
+      },
+      "acute_pancreatitis": {
+        "lr_positive": 1.5,
+        "lr_negative": 0.5
       }
     }
   },
@@ -3119,6 +3147,10 @@
       "wilson_disease": {
         "lr_positive": 2.5,
         "lr_negative": 0.5
+      },
+      "hellp_syndrome": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3294,6 +3326,10 @@
         "lr_negative": 0.5
       },
       "disseminated_intravascular_coagulation": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "hellp_syndrome": {
         "lr_positive": 2.0,
         "lr_negative": 0.5
       }
@@ -3494,6 +3530,14 @@
       "nephritic_syndrome": {
         "lr_positive": 3.0,
         "lr_negative": 0.5
+      },
+      "hypercalcemia_of_malignancy": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
+      },
+      "alcoholic_hepatitis": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.3
       }
     }
   },
@@ -3530,6 +3574,14 @@
         "lr_negative": 0.25
       },
       "myelodysplastic_syndrome": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.5
+      },
+      "hellp_syndrome": {
+        "lr_positive": 4.0,
+        "lr_negative": 0.2
+      },
+      "alcoholic_hepatitis": {
         "lr_positive": 2.0,
         "lr_negative": 0.5
       }
@@ -3632,6 +3684,10 @@
       "hypoparathyroidism": {
         "lr_positive": 3.0,
         "lr_negative": 0.5
+      },
+      "hypercalcemia_of_malignancy": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.1
       }
     }
   },
@@ -3652,7 +3708,7 @@
         "lr_negative": 0.6
       },
       "macrophage_activation_syndrome": {
-        "lr_positive": 3.0,
+        "lr_positive": 5.0,
         "lr_negative": 0.4
       }
     }
@@ -3969,6 +4025,45 @@
       "vitamin_b12_deficiency": {
         "lr_positive": 5.0,
         "lr_negative": 0.1
+      }
+    }
+  },
+  "tophi": {
+    "description": "Tophaceous deposits on physical exam — firm, chalky subcutaneous nodules of monosodium urate crystals",
+    "diseases": {
+      "gout": {
+        "lr_positive": 15.0,
+        "lr_negative": 0.7
+      }
+    }
+  },
+  "first_mtp_inflammation": {
+    "description": "First metatarsophalangeal joint inflammation (podagra)",
+    "diseases": {
+      "gout": {
+        "lr_positive": 8.0,
+        "lr_negative": 0.5
+      }
+    }
+  },
+  "splenomegaly": {
+    "description": "Palpable spleen or enlarged spleen on imaging",
+    "diseases": {
+      "chronic_myeloid_leukemia": {
+        "lr_positive": 6.0,
+        "lr_negative": 0.3
+      },
+      "polycythemia_vera": {
+        "lr_positive": 3.0,
+        "lr_negative": 0.5
+      },
+      "cirrhosis": {
+        "lr_positive": 2.5,
+        "lr_negative": 0.6
+      },
+      "hemolytic_anemia": {
+        "lr_positive": 2.0,
+        "lr_negative": 0.7
       }
     }
   }

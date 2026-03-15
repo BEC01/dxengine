@@ -2286,6 +2286,41 @@
       "finding_type": "symptom",
       "importance": 4,
       "quality": "high"
+    },
+    {
+      "finding_key": "tophi",
+      "match_terms": [
+        "tophi",
+        "tophaceous",
+        "tophus"
+      ],
+      "finding_type": "sign",
+      "importance": 4,
+      "quality": "high"
+    },
+    {
+      "finding_key": "first_mtp_inflammation",
+      "match_terms": [
+        "first mtp",
+        "first metatarsophalangeal",
+        "podagra",
+        "great toe"
+      ],
+      "finding_type": "sign",
+      "importance": 4,
+      "quality": "high"
+    },
+    {
+      "finding_key": "splenomegaly",
+      "match_terms": [
+        "splenomegaly",
+        "splenic enlargement",
+        "palpable spleen",
+        "enlarged spleen"
+      ],
+      "finding_type": "sign",
+      "importance": 3,
+      "quality": "high"
     }
   ],
   "vitals_rules": []
