@@ -1,0 +1,625 @@
+[
+  {
+    "name": "white_blood_cells",
+    "loinc": "6690-2",
+    "unit": "x10^9/L",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 4.5, "high": 11.0},
+      "adult_male": {"low": 4.5, "high": 11.0},
+      "adult_female": {"low": 4.5, "high": 11.0}
+    },
+    "critical_low": 2.0,
+    "critical_high": 30.0,
+    "classification_examples": [
+      {"value": 7.5, "expected": "Normal"},
+      {"value": 15.0, "expected": "High"},
+      {"value": 3.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "red_blood_cells",
+    "loinc": "789-8",
+    "unit": "x10^12/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 4.2, "high": 6.1},
+      "adult_male": {"low": 4.5, "high": 5.9},
+      "adult_female": {"low": 4.0, "high": 5.2}
+    },
+    "critical_low": 2.5,
+    "critical_high": 8.0,
+    "classification_examples": [
+      {"value": 5.0, "expected": "Normal"},
+      {"value": 6.5, "expected": "High"},
+      {"value": 3.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "hemoglobin",
+    "loinc": "718-7",
+    "unit": "g/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 12.0, "high": 17.5},
+      "adult_male": {"low": 14.0, "high": 18.0},
+      "adult_female": {"low": 12.0, "high": 16.0}
+    },
+    "critical_low": 7.0,
+    "critical_high": 20.0,
+    "classification_examples": [
+      {"value": 15.0, "expected": "Normal"},
+      {"value": 19.0, "expected": "High"},
+      {"value": 9.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "hematocrit",
+    "loinc": "4544-3",
+    "unit": "%",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 36.0, "high": 48.0},
+      "adult_male": {"low": 40.0, "high": 54.0},
+      "adult_female": {"low": 36.0, "high": 48.0}
+    },
+    "critical_low": 20.0,
+    "critical_high": 60.0,
+    "classification_examples": [
+      {"value": 44.0, "expected": "Normal"},
+      {"value": 58.0, "expected": "High"},
+      {"value": 28.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "platelets",
+    "loinc": "777-3",
+    "unit": "x10^9/L",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 150, "high": 400},
+      "adult_male": {"low": 150, "high": 400},
+      "adult_female": {"low": 150, "high": 400}
+    },
+    "critical_low": 50,
+    "critical_high": 1000,
+    "classification_examples": [
+      {"value": 250, "expected": "Normal"},
+      {"value": 550, "expected": "High"},
+      {"value": 80, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "mean_corpuscular_volume",
+    "loinc": "787-2",
+    "unit": "fL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 80.0, "high": 96.0}
+    },
+    "classification_examples": [
+      {"value": 88.0, "expected": "Normal"},
+      {"value": 105.0, "expected": "High"},
+      {"value": 72.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "mean_corpuscular_hemoglobin",
+    "loinc": "785-6",
+    "unit": "pg",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 27.0, "high": 31.0}
+    },
+    "classification_examples": [
+      {"value": 29.0, "expected": "Normal"},
+      {"value": 35.0, "expected": "High"},
+      {"value": 24.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "mean_corpuscular_hemoglobin_concentration",
+    "loinc": "786-4",
+    "unit": "g/dL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 32.0, "high": 36.0}
+    },
+    "classification_examples": [
+      {"value": 34.0, "expected": "Normal"},
+      {"value": 37.5, "expected": "High"},
+      {"value": 30.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "sodium",
+    "loinc": "2951-2",
+    "unit": "mEq/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 135, "high": 145}
+    },
+    "critical_low": 120,
+    "critical_high": 160,
+    "classification_examples": [
+      {"value": 140, "expected": "Normal"},
+      {"value": 152, "expected": "High"},
+      {"value": 128, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "potassium",
+    "loinc": "2823-3",
+    "unit": "mEq/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 3.5, "high": 5.0}
+    },
+    "critical_low": 2.5,
+    "critical_high": 6.5,
+    "classification_examples": [
+      {"value": 4.2, "expected": "Normal"},
+      {"value": 5.8, "expected": "High"},
+      {"value": 2.9, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "chloride",
+    "loinc": "2075-0",
+    "unit": "mEq/L",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 96, "high": 106}
+    },
+    "critical_low": 80,
+    "critical_high": 120,
+    "classification_examples": [
+      {"value": 101, "expected": "Normal"},
+      {"value": 112, "expected": "High"},
+      {"value": 90, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "bicarbonate",
+    "loinc": "1963-8",
+    "unit": "mEq/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 23, "high": 29}
+    },
+    "critical_low": 10,
+    "critical_high": 40,
+    "classification_examples": [
+      {"value": 26, "expected": "Normal"},
+      {"value": 35, "expected": "High"},
+      {"value": 15, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "blood_urea_nitrogen",
+    "loinc": "3094-0",
+    "unit": "mg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 6, "high": 20}
+    },
+    "critical_high": 100,
+    "classification_examples": [
+      {"value": 14, "expected": "Normal"},
+      {"value": 35, "expected": "High"},
+      {"value": 4, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "creatinine",
+    "loinc": "2160-0",
+    "unit": "mg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0.60, "high": 1.30},
+      "adult_male": {"low": 0.70, "high": 1.30},
+      "adult_female": {"low": 0.50, "high": 1.10}
+    },
+    "critical_high": 10.0,
+    "classification_examples": [
+      {"value": 0.9, "expected": "Normal"},
+      {"value": 2.5, "expected": "High"},
+      {"value": 0.4, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "glucose",
+    "loinc": "2345-7",
+    "unit": "mg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 74, "high": 106}
+    },
+    "critical_low": 40,
+    "critical_high": 500,
+    "classification_examples": [
+      {"value": 90, "expected": "Normal"},
+      {"value": 180, "expected": "High"},
+      {"value": 55, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "calcium",
+    "loinc": "17861-6",
+    "unit": "mg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 8.6, "high": 10.2}
+    },
+    "critical_low": 6.5,
+    "critical_high": 13.0,
+    "classification_examples": [
+      {"value": 9.5, "expected": "Normal"},
+      {"value": 11.5, "expected": "High"},
+      {"value": 7.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "total_protein",
+    "loinc": "2885-2",
+    "unit": "g/dL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 6.3, "high": 7.9}
+    },
+    "classification_examples": [
+      {"value": 7.0, "expected": "Normal"},
+      {"value": 9.0, "expected": "High"},
+      {"value": 5.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "albumin",
+    "loinc": "1751-7",
+    "unit": "g/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 3.5, "high": 5.0}
+    },
+    "critical_low": 1.5,
+    "classification_examples": [
+      {"value": 4.2, "expected": "Normal"},
+      {"value": 5.8, "expected": "High"},
+      {"value": 2.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "bilirubin_total",
+    "loinc": "1975-2",
+    "unit": "mg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0.1, "high": 1.0}
+    },
+    "critical_high": 12.0,
+    "classification_examples": [
+      {"value": 0.6, "expected": "Normal"},
+      {"value": 3.5, "expected": "High"},
+      {"value": 0.05, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "alkaline_phosphatase",
+    "loinc": "6768-6",
+    "unit": "U/L",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 36, "high": 130},
+      "adult_male": {"low": 40, "high": 129},
+      "adult_female": {"low": 35, "high": 104}
+    },
+    "classification_examples": [
+      {"value": 80, "expected": "Normal"},
+      {"value": 250, "expected": "High"},
+      {"value": 25, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "alanine_aminotransferase",
+    "loinc": "1742-6",
+    "unit": "U/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 7, "high": 52},
+      "adult_male": {"low": 10, "high": 40},
+      "adult_female": {"low": 7, "high": 35}
+    },
+    "critical_high": 1000,
+    "classification_examples": [
+      {"value": 25, "expected": "Normal"},
+      {"value": 120, "expected": "High"},
+      {"value": 5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "aspartate_aminotransferase",
+    "loinc": "1920-8",
+    "unit": "U/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 8, "high": 33},
+      "adult_male": {"low": 10, "high": 40},
+      "adult_female": {"low": 8, "high": 33}
+    },
+    "critical_high": 1000,
+    "classification_examples": [
+      {"value": 22, "expected": "Normal"},
+      {"value": 95, "expected": "High"},
+      {"value": 6, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "gamma_glutamyl_transferase",
+    "loinc": "2324-2",
+    "unit": "U/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 5, "high": 55},
+      "adult_male": {"low": 9, "high": 48},
+      "adult_female": {"low": 5, "high": 32}
+    },
+    "classification_examples": [
+      {"value": 25, "expected": "Normal"},
+      {"value": 90, "expected": "High"},
+      {"value": 3, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "bilirubin_direct",
+    "loinc": "1968-7",
+    "unit": "mg/dL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 0.0, "high": 0.3}
+    },
+    "classification_examples": [
+      {"value": 0.15, "expected": "Normal"},
+      {"value": 1.2, "expected": "High"},
+      {"value": 0.0, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "lactate_dehydrogenase",
+    "loinc": "2532-0",
+    "unit": "U/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 120, "high": 246}
+    },
+    "classification_examples": [
+      {"value": 180, "expected": "Normal"},
+      {"value": 450, "expected": "High"},
+      {"value": 95, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "prothrombin_time",
+    "loinc": "5902-2",
+    "unit": "seconds",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 11.0, "high": 13.5}
+    },
+    "critical_high": 30.0,
+    "classification_examples": [
+      {"value": 12.0, "expected": "Normal"},
+      {"value": 18.0, "expected": "High"},
+      {"value": 9.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "international_normalized_ratio",
+    "loinc": "6301-6",
+    "unit": "ratio",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0.9, "high": 1.1}
+    },
+    "critical_high": 5.0,
+    "classification_examples": [
+      {"value": 1.0, "expected": "Normal"},
+      {"value": 2.5, "expected": "High"},
+      {"value": 0.8, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "partial_thromboplastin_time",
+    "loinc": "3173-2",
+    "unit": "seconds",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 25, "high": 35}
+    },
+    "critical_high": 100,
+    "classification_examples": [
+      {"value": 30, "expected": "Normal"},
+      {"value": 55, "expected": "High"},
+      {"value": 20, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "fibrinogen",
+    "loinc": "3255-7",
+    "unit": "mg/dL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 200, "high": 400}
+    },
+    "critical_low": 100,
+    "classification_examples": [
+      {"value": 300, "expected": "Normal"},
+      {"value": 550, "expected": "High"},
+      {"value": 80, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "thyroid_stimulating_hormone",
+    "loinc": "11580-8",
+    "unit": "mIU/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0.27, "high": 4.2}
+    },
+    "critical_low": 0.01,
+    "critical_high": 50.0,
+    "classification_examples": [
+      {"value": 2.5, "expected": "Normal"},
+      {"value": 12.0, "expected": "High"},
+      {"value": 0.1, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "free_thyroxine",
+    "loinc": "3024-7",
+    "unit": "ng/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0.9, "high": 1.7}
+    },
+    "classification_examples": [
+      {"value": 1.2, "expected": "Normal"},
+      {"value": 3.5, "expected": "High"},
+      {"value": 0.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "free_triiodothyronine",
+    "loinc": "3051-0",
+    "unit": "pg/mL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 2.0, "high": 4.4}
+    },
+    "classification_examples": [
+      {"value": 3.2, "expected": "Normal"},
+      {"value": 6.5, "expected": "High"},
+      {"value": 1.5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "iron",
+    "loinc": "2498-4",
+    "unit": "mcg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 60, "high": 170},
+      "adult_male": {"low": 65, "high": 175},
+      "adult_female": {"low": 50, "high": 170}
+    },
+    "classification_examples": [
+      {"value": 100, "expected": "Normal"},
+      {"value": 210, "expected": "High"},
+      {"value": 30, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "ferritin",
+    "loinc": "2276-4",
+    "unit": "ng/mL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 12, "high": 300},
+      "adult_male": {"low": 20, "high": 250},
+      "adult_female": {"low": 10, "high": 120}
+    },
+    "classification_examples": [
+      {"value": 80, "expected": "Normal"},
+      {"value": 800, "expected": "High"},
+      {"value": 5, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "total_iron_binding_capacity",
+    "loinc": "2500-7",
+    "unit": "mcg/dL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 250, "high": 400}
+    },
+    "classification_examples": [
+      {"value": 320, "expected": "Normal"},
+      {"value": 480, "expected": "High"},
+      {"value": 200, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "transferrin_saturation",
+    "loinc": "2502-3",
+    "unit": "%",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 20, "high": 50},
+      "adult_male": {"low": 20, "high": 50},
+      "adult_female": {"low": 15, "high": 50}
+    },
+    "classification_examples": [
+      {"value": 30, "expected": "Normal"},
+      {"value": 70, "expected": "High"},
+      {"value": 10, "expected": "Low"}
+    ]
+  },
+  {
+    "name": "troponin_i",
+    "loinc": "10839-9",
+    "unit": "ng/mL",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0, "high": 0.04}
+    },
+    "critical_high": 0.5,
+    "classification_examples": [
+      {"value": 0.01, "expected": "Normal"},
+      {"value": 0.50, "expected": "High"},
+      {"value": 0.0, "expected": "Normal"}
+    ]
+  },
+  {
+    "name": "b_type_natriuretic_peptide",
+    "loinc": "30934-4",
+    "unit": "pg/mL",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 0, "high": 100}
+    },
+    "classification_examples": [
+      {"value": 50, "expected": "Normal"},
+      {"value": 450, "expected": "High"},
+      {"value": 0, "expected": "Normal"}
+    ]
+  },
+  {
+    "name": "c_reactive_protein",
+    "loinc": "1988-5",
+    "unit": "mg/L",
+    "source": "Laposata Laboratory Medicine 3rd Ed",
+    "ranges": {
+      "default": {"low": 0, "high": 3.0}
+    },
+    "classification_examples": [
+      {"value": 1.0, "expected": "Normal"},
+      {"value": 25.0, "expected": "High"},
+      {"value": 0.2, "expected": "Normal"}
+    ]
+  },
+  {
+    "name": "erythrocyte_sedimentation_rate",
+    "loinc": "4537-7",
+    "unit": "mm/hr",
+    "source": "Fischbach's Manual of Laboratory and Diagnostic Tests 10th Ed",
+    "ranges": {
+      "default": {"low": 0, "high": 20},
+      "adult_male": {"low": 0, "high": 15},
+      "adult_female": {"low": 0, "high": 20}
+    },
+    "classification_examples": [
+      {"value": 8, "expected": "Normal"},
+      {"value": 55, "expected": "High"},
+      {"value": 0, "expected": "Normal"}
+    ]
+  }
+]
