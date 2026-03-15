@@ -32,11 +32,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "gamma_glutamyl_transferase",
-            "value": 51.5,
-            "unit": "U/L"
-          },
-          {
             "test_name": "alkaline_phosphatase",
             "value": 179.2,
             "unit": "U/L"
@@ -52,19 +47,14 @@
             "unit": "U/L"
           },
           {
-            "test_name": "albumin",
-            "value": 4.3,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "total_cholesterol",
-            "value": 175.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "aspartate_aminotransferase",
-            "value": 33.4,
+            "test_name": "gamma_glutamyl_transferase",
+            "value": 51.5,
             "unit": "U/L"
+          },
+          {
+            "test_name": "international_normalized_ratio",
+            "value": 1.0,
+            "unit": "ratio"
           },
           {
             "test_name": "bilirubin_total",
@@ -72,14 +62,24 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "total_cholesterol",
+            "value": 175.0,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.3,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "lactate_dehydrogenase",
             "value": 231.0,
             "unit": "U/L"
           },
           {
-            "test_name": "international_normalized_ratio",
-            "value": 1.0,
-            "unit": "ratio"
+            "test_name": "aspartate_aminotransferase",
+            "value": 33.4,
+            "unit": "U/L"
           }
         ]
       }

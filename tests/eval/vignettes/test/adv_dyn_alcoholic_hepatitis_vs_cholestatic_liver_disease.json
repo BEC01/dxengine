@@ -59,11 +59,6 @@
             "unit": "fL"
           },
           {
-            "test_name": "total_cholesterol",
-            "value": 100.0,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "alkaline_phosphatase",
             "value": 95.5,
             "unit": "U/L"
@@ -71,6 +66,11 @@
           {
             "test_name": "bilirubin_direct",
             "value": 0.1,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 100.0,
             "unit": "mg/dL"
           }
         ]

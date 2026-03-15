@@ -46,14 +46,14 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 100.0,
-            "unit": "fL"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 0.7,
             "unit": "%"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 100.0,
+            "unit": "fL"
           },
           {
             "test_name": "red_blood_cells",
@@ -61,14 +61,14 @@
             "unit": "x10^12/L"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.2,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "hematocrit",
             "value": 43.5,
             "unit": "%"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.2,
+            "unit": "mg/dL"
           }
         ]
       }

@@ -44,14 +44,14 @@
             "unit": "mg/L"
           },
           {
-            "test_name": "lactate_dehydrogenase",
-            "value": 210.0,
-            "unit": "U/L"
-          },
-          {
             "test_name": "d_dimer",
             "value": 0.2,
             "unit": "mcg/mL FEU"
+          },
+          {
+            "test_name": "lactate_dehydrogenase",
+            "value": 210.0,
+            "unit": "U/L"
           }
         ]
       }

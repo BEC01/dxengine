@@ -36,14 +36,14 @@
             "unit": "g/dL"
           },
           {
-            "test_name": "platelets",
-            "value": 143.8,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 0.7,
             "unit": "%"
+          },
+          {
+            "test_name": "platelets",
+            "value": 143.8,
+            "unit": "x10^9/L"
           },
           {
             "test_name": "white_blood_cells",

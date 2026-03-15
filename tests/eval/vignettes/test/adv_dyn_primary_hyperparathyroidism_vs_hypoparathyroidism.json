@@ -34,14 +34,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 40.0,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "phosphorus",
             "value": 3.7,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 40.0,
+            "unit": "pg/mL"
           },
           {
             "test_name": "alkaline_phosphatase",
@@ -54,11 +54,6 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "chloride",
-            "value": 104.4,
-            "unit": "mEq/L"
-          },
-          {
             "test_name": "vitamin_d_25_hydroxy",
             "value": 44.0,
             "unit": "ng/mL"
@@ -66,6 +61,11 @@
           {
             "test_name": "bicarbonate",
             "value": 24.1,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "chloride",
+            "value": 104.4,
             "unit": "mEq/L"
           },
           {

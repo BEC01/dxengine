@@ -36,14 +36,19 @@
             "unit": "g/dL"
           },
           {
+            "test_name": "reticulocyte_count",
+            "value": 0.9,
+            "unit": "%"
+          },
+          {
             "test_name": "mean_corpuscular_volume",
             "value": 98.8,
             "unit": "fL"
           },
           {
-            "test_name": "reticulocyte_count",
-            "value": 0.9,
-            "unit": "%"
+            "test_name": "methylmalonic_acid",
+            "value": 290.8,
+            "unit": "nmol/L"
           },
           {
             "test_name": "lactate_dehydrogenase",
@@ -59,11 +64,6 @@
             "test_name": "vitamin_b12",
             "value": 200.0,
             "unit": "pg/mL"
-          },
-          {
-            "test_name": "methylmalonic_acid",
-            "value": 290.8,
-            "unit": "nmol/L"
           },
           {
             "test_name": "platelets",

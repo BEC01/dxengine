@@ -32,14 +32,19 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "creatine_kinase",
-            "value": 209.3,
-            "unit": "U/L"
+            "test_name": "thyroid_stimulating_hormone",
+            "value": 4.1,
+            "unit": "mIU/L"
           },
           {
-            "test_name": "ferritin",
-            "value": 0.0,
-            "unit": "ng/mL"
+            "test_name": "hemoglobin",
+            "value": 12.4,
+            "unit": "g/dL"
+          },
+          {
+            "test_name": "total_iron_binding_capacity",
+            "value": 385.0,
+            "unit": "mcg/dL"
           },
           {
             "test_name": "transferrin_saturation",
@@ -47,19 +52,9 @@
             "unit": "%"
           },
           {
-            "test_name": "red_cell_distribution_width",
-            "value": 14.5,
+            "test_name": "reticulocyte_count",
+            "value": 0.8,
             "unit": "%"
-          },
-          {
-            "test_name": "ldl_cholesterol",
-            "value": 61.2,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "platelets",
-            "value": 350.0,
-            "unit": "x10^9/L"
           },
           {
             "test_name": "free_thyroxine",
@@ -67,23 +62,33 @@
             "unit": "ng/dL"
           },
           {
-            "test_name": "iron",
-            "value": 34.4,
-            "unit": "mcg/dL"
+            "test_name": "total_cholesterol",
+            "value": 122.5,
+            "unit": "mg/dL"
           },
           {
-            "test_name": "thyroid_stimulating_hormone",
-            "value": 4.1,
-            "unit": "mIU/L"
-          },
-          {
-            "test_name": "reticulocyte_count",
-            "value": 0.8,
+            "test_name": "red_cell_distribution_width",
+            "value": 14.5,
             "unit": "%"
           },
           {
-            "test_name": "total_cholesterol",
-            "value": 122.5,
+            "test_name": "creatine_kinase",
+            "value": 209.3,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 80.0,
+            "unit": "fL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 350.0,
+            "unit": "x10^9/L"
+          },
+          {
+            "test_name": "ldl_cholesterol",
+            "value": 61.2,
             "unit": "mg/dL"
           },
           {
@@ -92,19 +97,14 @@
             "unit": "mEq/L"
           },
           {
-            "test_name": "hemoglobin",
-            "value": 12.4,
-            "unit": "g/dL"
-          },
-          {
-            "test_name": "mean_corpuscular_volume",
-            "value": 80.0,
-            "unit": "fL"
-          },
-          {
-            "test_name": "total_iron_binding_capacity",
-            "value": 385.0,
+            "test_name": "iron",
+            "value": 34.4,
             "unit": "mcg/dL"
+          },
+          {
+            "test_name": "ferritin",
+            "value": 0.0,
+            "unit": "ng/mL"
           }
         ]
       }

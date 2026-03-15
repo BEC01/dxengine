@@ -32,11 +32,6 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "bilirubin_total",
-            "value": 1.1,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bilirubin_direct",
             "value": 0.1,
             "unit": "mg/dL"
@@ -47,19 +42,24 @@
             "unit": "mg/dL"
           },
           {
+            "test_name": "bilirubin_total",
+            "value": 1.1,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "hemoglobin",
             "value": 13.5,
             "unit": "g/dL"
           },
           {
-            "test_name": "mean_corpuscular_volume",
-            "value": 94.0,
-            "unit": "fL"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 2.7,
             "unit": "%"
+          },
+          {
+            "test_name": "mean_corpuscular_volume",
+            "value": 94.0,
+            "unit": "fL"
           },
           {
             "test_name": "lactate_dehydrogenase",

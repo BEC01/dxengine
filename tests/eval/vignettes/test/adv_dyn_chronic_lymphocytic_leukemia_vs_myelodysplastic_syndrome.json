@@ -46,11 +46,6 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "platelets",
-            "value": 275.0,
-            "unit": "x10^9/L"
-          },
-          {
             "test_name": "reticulocyte_count",
             "value": 1.5,
             "unit": "%"
@@ -59,6 +54,11 @@
             "test_name": "mean_corpuscular_volume",
             "value": 90.0,
             "unit": "fL"
+          },
+          {
+            "test_name": "platelets",
+            "value": 275.0,
+            "unit": "x10^9/L"
           }
         ]
       }

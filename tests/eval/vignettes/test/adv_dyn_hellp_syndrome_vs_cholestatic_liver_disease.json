@@ -32,6 +32,11 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "bilirubin_direct",
+            "value": 0.2,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "aspartate_aminotransferase",
             "value": 29.6,
             "unit": "U/L"
@@ -42,8 +47,8 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "bilirubin_direct",
-            "value": 0.2,
+            "test_name": "haptoglobin",
+            "value": 13.0,
             "unit": "mg/dL"
           },
           {
@@ -52,8 +57,13 @@
             "unit": "x10^9/L"
           },
           {
-            "test_name": "haptoglobin",
-            "value": 13.0,
+            "test_name": "alkaline_phosphatase",
+            "value": 95.5,
+            "unit": "U/L"
+          },
+          {
+            "test_name": "total_cholesterol",
+            "value": 100.0,
             "unit": "mg/dL"
           },
           {
@@ -64,16 +74,6 @@
           {
             "test_name": "alanine_aminotransferase",
             "value": 26.0,
-            "unit": "U/L"
-          },
-          {
-            "test_name": "total_cholesterol",
-            "value": 100.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "alkaline_phosphatase",
-            "value": 95.5,
             "unit": "U/L"
           }
         ]

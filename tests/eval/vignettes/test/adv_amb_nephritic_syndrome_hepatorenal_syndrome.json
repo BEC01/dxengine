@@ -31,14 +31,14 @@
         "panel_name": "Eval Panel",
         "values": [
           {
-            "test_name": "albumin",
-            "value": 3.8,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "creatinine",
             "value": 1.4,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "albumin",
+            "value": 3.8,
+            "unit": "g/dL"
           }
         ]
       }

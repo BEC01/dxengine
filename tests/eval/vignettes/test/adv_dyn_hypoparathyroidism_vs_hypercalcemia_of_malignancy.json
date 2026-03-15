@@ -37,14 +37,14 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "parathyroid_hormone",
-            "value": 13.8,
-            "unit": "pg/mL"
-          },
-          {
             "test_name": "phosphorus",
             "value": 3.7,
             "unit": "mg/dL"
+          },
+          {
+            "test_name": "parathyroid_hormone",
+            "value": 13.8,
+            "unit": "pg/mL"
           },
           {
             "test_name": "magnesium",

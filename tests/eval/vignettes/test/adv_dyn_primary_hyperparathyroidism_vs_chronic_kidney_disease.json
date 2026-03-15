@@ -29,6 +29,16 @@
         "panel_name": "Eval Panel",
         "values": [
           {
+            "test_name": "phosphorus",
+            "value": 3.6,
+            "unit": "mg/dL"
+          },
+          {
+            "test_name": "uric_acid",
+            "value": 5.0,
+            "unit": "mg/dL"
+          },
+          {
             "test_name": "calcium",
             "value": 9.6,
             "unit": "mg/dL"
@@ -39,28 +49,8 @@
             "unit": "pg/mL"
           },
           {
-            "test_name": "uric_acid",
-            "value": 5.0,
-            "unit": "mg/dL"
-          },
-          {
-            "test_name": "phosphorus",
-            "value": 3.6,
-            "unit": "mg/dL"
-          },
-          {
             "test_name": "bicarbonate",
             "value": 24.0,
-            "unit": "mEq/L"
-          },
-          {
-            "test_name": "vitamin_d_25_hydroxy",
-            "value": 44.0,
-            "unit": "ng/mL"
-          },
-          {
-            "test_name": "chloride",
-            "value": 104.4,
             "unit": "mEq/L"
           },
           {
@@ -69,9 +59,29 @@
             "unit": "U/L"
           },
           {
+            "test_name": "chloride",
+            "value": 104.4,
+            "unit": "mEq/L"
+          },
+          {
+            "test_name": "vitamin_d_25_hydroxy",
+            "value": 44.0,
+            "unit": "ng/mL"
+          },
+          {
+            "test_name": "hemoglobin",
+            "value": 14.0,
+            "unit": "g/dL"
+          },
+          {
             "test_name": "potassium",
             "value": 4.2,
             "unit": "mEq/L"
+          },
+          {
+            "test_name": "albumin",
+            "value": 4.5,
+            "unit": "g/dL"
           },
           {
             "test_name": "blood_urea_nitrogen",
@@ -84,19 +94,9 @@
             "unit": "mg/dL"
           },
           {
-            "test_name": "albumin",
-            "value": 4.5,
-            "unit": "g/dL"
-          },
-          {
             "test_name": "glomerular_filtration_rate",
             "value": 105.0,
             "unit": "mL/min/1.73m2"
-          },
-          {
-            "test_name": "hemoglobin",
-            "value": 14.0,
-            "unit": "g/dL"
           }
         ]
       }
