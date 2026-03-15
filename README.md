@@ -17,15 +17,15 @@ DxEngine is an experimental open-source project exploring how a diagnostic engin
 
 The system has three distinctive properties:
 
-1. **It grows itself.** An autonomous expansion loop (`/expand`) researches diseases from medical literature, validates against 21 quality checks, and integrates them with zero-regression gates. The engine grew from 18 to 54 disease patterns this way — no manual data entry.
+1. **It grows itself.** An autonomous expansion loop (`/expand`) researches diseases from medical literature, validates against 21 quality checks, and integrates them with zero-regression gates. The engine grew from 18 to 54 disease patterns this way -no manual data entry.
 
 2. **It improves itself.** A self-improvement loop (`/improve`) continuously identifies accuracy gaps, fixes them, evaluates, and auto-commits improvements. Hundreds of micro-improvements raised the diagnostic score from 0.62 to 0.83.
 
-3. **It calibrates against reality.** A calibration pipeline (`/calibrate`) optimizes disease detection patterns against real CDC population data (NHANES, 5,273+ adults), discovering collectively-abnormal lab signatures from real-world data — the lab equivalent of genome-wide association studies.
+3. **It calibrates against reality.** A calibration pipeline (`/calibrate`) optimizes disease detection patterns against real CDC population data (NHANES, 5,273+ adults), discovering collectively-abnormal lab signatures from real-world data -the lab equivalent of genome-wide association studies.
 
-**This project was built entirely by AI (Claude), directed by a non-medical-professional with no programming background.** All code, medical knowledge curation, and evaluation design was done by an LLM. The medical data was extracted from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) by AI-assisted research — not by a clinician or medical expert. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data.
+**This project was built entirely by AI (Claude), directed by a non-medical-professional with no programming background.** All code, medical knowledge curation, and evaluation design was done by an LLM. The medical data was extracted from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) by AI-assisted research -not by a clinician or medical expert. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data.
 
-One experimental feature is **collectively-abnormal detection** — identifying disease patterns where every individual lab value falls within the normal range, but the combination is statistically improbable. This has been validated on real NHANES population data: the CKD pattern shows 6.0x enrichment (p < 0.000001) with 99% specificity across two independent cohorts.
+One experimental feature is **collectively-abnormal detection** -identifying disease patterns where every individual lab value falls within the normal range, but the combination is statistically improbable. This has been validated on real NHANES population data: the CKD pattern shows 6.0x enrichment (p < 0.000001) with 99% specificity across two independent cohorts.
 
 ## Why Not Just Ask ChatGPT?
 
@@ -47,13 +47,13 @@ The LLM is a better general diagnostician. DxEngine is a better safety net. The 
 
 DxEngine has been tested through a three-layer evaluation. These results reflect performance on curated test cases, **not clinical validation on real patients**:
 
-**Layer 1 -- Lab Interpretation Accuracy**
+**Layer 1: Lab Interpretation Accuracy**
 1,227 test points across 103 analytes, multiple demographics, and value positions. 100% pass rate. Cross-validated against 40 textbook reference ranges (Laposata, Fischbach).
 
-**Layer 2 -- Clinical Teaching Cases**
+**Layer 2: Clinical Teaching Cases**
 50 handcrafted cases (40 in-vocabulary, 10 out-of-vocabulary): 92.5% top-3 accuracy, 94.1% sensitivity on importance-5 ("can't miss") diseases, 100% OOV safety rate. Cases use lab values from medical knowledge, not from the engine's own training data.
 
-**Layer 3 -- Blind LLM Comparison**
+**Layer 3: Blind LLM Comparison**
 Side-by-side against Claude diagnosing the same 50 cases with no access to gold standards. Engine wins on OOV safety and evidence transparency; LLM wins on raw accuracy for canonical presentations.
 
 **NHANES Population Validation**
@@ -142,7 +142,7 @@ See [CLAUDE.md](CLAUDE.md) for the full architecture specification.
 | Gastrointestinal | 2 | Pancreatitis, celiac disease |
 | Cardiovascular | 1 | Pulmonary embolism |
 
-10 of these diseases feature collectively-abnormal patterns -- detectable even when every individual lab value is within the normal range.
+10 of these diseases feature collectively-abnormal patterns, detectable even when every individual lab value is within the normal range.
 
 ## Knowledge Base
 
@@ -178,19 +178,19 @@ uv run python tests/eval/runner.py
 
 ## Self-Improving System
 
-DxEngine doesn't just diagnose --it autonomously improves itself through four feedback loops, each operating on real data with quality gates that prevent regressions.
+DxEngine doesn't just diagnose. It autonomously improves itself through four feedback loops, each operating on real data with quality gates that prevent regressions.
 
-**`/improve` --Perpetual accuracy improvement.** Runs indefinitely: evaluates against 464 synthetic vignettes, identifies the highest-impact data gap (missing likelihood ratio, weak pattern, false positive), fixes it, re-evaluates, and auto-commits if the score improves with zero regressions. Rejects and reverts if not. The engine grew from a 0.62 weighted score to 0.83 through hundreds of these micro-improvements --each one a single LR addition or weight adjustment, each validated before acceptance. Only data files are modified, never code.
+**`/improve`: Perpetual accuracy improvement.** Runs indefinitely: evaluates against 464 synthetic vignettes, identifies the highest-impact data gap (missing likelihood ratio, weak pattern, false positive), fixes it, re-evaluates, and auto-commits if the score improves with zero regressions. Rejects and reverts if not. The engine grew from a 0.62 weighted score to 0.83 through hundreds of these micro-improvements, each one a single LR addition or weight adjustment, each validated before acceptance. Only data files are modified, never code.
 
-**`/expand` --Autonomous disease expansion.** Grows the disease vocabulary without manual data entry. For each new disease: 3 parallel AI agents research medical literature, a 21-check validator gates integration, vignettes are auto-generated, and the full eval suite must pass with zero regressions before the disease is accepted. The engine grew from 18 to 54 disease patterns this way. After each expansion, a clinical eval check warns if real-case accuracy dropped.
+**`/expand`: Autonomous disease expansion.** Grows the disease vocabulary without manual data entry. For each new disease: 3 parallel AI agents research medical literature, a 21-check validator gates integration, vignettes are auto-generated, and the full eval suite must pass with zero regressions before the disease is accepted. The engine grew from 18 to 54 disease patterns this way. After each expansion, a clinical eval check warns if real-case accuracy dropped.
 
-**`/calibrate` --Population data calibration (Lab-GWAS).** Optimizes collectively-abnormal patterns against real CDC NHANES population data (5,273+ adults). Screens every analyte for per-disease discriminative power, then uses greedy selection and Nelder-Mead optimization to find the pattern that maximizes enrichment at 95%+ specificity. Discovery mode scans all conditions to find new collectively-abnormal signatures from population data --the lab equivalent of genome-wide association studies.
+**`/calibrate`: Population data calibration (Lab-GWAS).** Optimizes collectively-abnormal patterns against real CDC NHANES population data (5,273+ adults). Screens every analyte for per-disease discriminative power, then uses greedy selection and Nelder-Mead optimization to find the pattern that maximizes enrichment at 95%+ specificity. Discovery mode scans all conditions to find new collectively-abnormal signatures from population data, the lab equivalent of genome-wide association studies.
 
-**`/eval` --Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
+**`/eval`: Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
 
 ### Other Skills
 
-- `/diagnose <patient_data>` -- Full hybrid diagnostic reasoning loop (deterministic pipeline + LLM clinical reasoning)
+- `/diagnose <patient_data>` - Full hybrid diagnostic reasoning loop (deterministic pipeline + LLM clinical reasoning)
 
 ## Limitations
 
