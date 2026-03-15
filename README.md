@@ -170,15 +170,15 @@ uv run python tests/eval/runner.py
 
 ## Self-Improving System
 
-DxEngine doesn't just diagnose — it autonomously improves itself through four feedback loops, each operating on real data with quality gates that prevent regressions.
+DxEngine doesn't just diagnose --it autonomously improves itself through four feedback loops, each operating on real data with quality gates that prevent regressions.
 
-**`/improve` — Perpetual accuracy improvement.** Runs indefinitely: evaluates against 464 synthetic vignettes, identifies the highest-impact data gap (missing likelihood ratio, weak pattern, false positive), fixes it, re-evaluates, and auto-commits if the score improves with zero regressions. Rejects and reverts if not. The engine grew from a 0.62 weighted score to 0.83 through hundreds of these micro-improvements — each one a single LR addition or weight adjustment, each validated before acceptance. Only data files are modified, never code.
+**`/improve` --Perpetual accuracy improvement.** Runs indefinitely: evaluates against 464 synthetic vignettes, identifies the highest-impact data gap (missing likelihood ratio, weak pattern, false positive), fixes it, re-evaluates, and auto-commits if the score improves with zero regressions. Rejects and reverts if not. The engine grew from a 0.62 weighted score to 0.83 through hundreds of these micro-improvements --each one a single LR addition or weight adjustment, each validated before acceptance. Only data files are modified, never code.
 
-**`/expand` — Autonomous disease expansion.** Grows the disease vocabulary without manual data entry. For each new disease: 3 parallel AI agents research medical literature, a 21-check validator gates integration, vignettes are auto-generated, and the full eval suite must pass with zero regressions before the disease is accepted. The engine grew from 18 to 54 disease patterns this way. After each expansion, a clinical eval check warns if real-case accuracy dropped.
+**`/expand` --Autonomous disease expansion.** Grows the disease vocabulary without manual data entry. For each new disease: 3 parallel AI agents research medical literature, a 21-check validator gates integration, vignettes are auto-generated, and the full eval suite must pass with zero regressions before the disease is accepted. The engine grew from 18 to 54 disease patterns this way. After each expansion, a clinical eval check warns if real-case accuracy dropped.
 
-**`/calibrate` — Population data calibration (Lab-GWAS).** Optimizes collectively-abnormal patterns against real CDC NHANES population data (5,273+ adults). Screens every analyte for per-disease discriminative power, then uses greedy selection and Nelder-Mead optimization to find the pattern that maximizes enrichment at 95%+ specificity. Discovery mode scans all conditions to find new collectively-abnormal signatures from population data — the lab equivalent of genome-wide association studies.
+**`/calibrate` --Population data calibration (Lab-GWAS).** Optimizes collectively-abnormal patterns against real CDC NHANES population data (5,273+ adults). Screens every analyte for per-disease discriminative power, then uses greedy selection and Nelder-Mead optimization to find the pattern that maximizes enrichment at 95%+ specificity. Discovery mode scans all conditions to find new collectively-abnormal signatures from population data --the lab equivalent of genome-wide association studies.
 
-**`/eval` — Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
+**`/eval` --Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
 
 ### Other Skills
 
