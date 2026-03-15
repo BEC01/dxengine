@@ -323,7 +323,15 @@ cp state/expand/iter_N.json state/expand/baseline.json
 ```
 (Substitute literal values for `{disease}`, `X.XXXX`, `Y.YYYY`, and `N`.)
 Reset `consecutive_skips=0`. Increment `diseases_added`.
-Print: `ADDED {disease} (score X.XXXX → Y.YYYY)`
+
+**Clinical accuracy check** (after accepting): run the clinical eval to verify existing clinical cases didn't regress:
+```bash
+uv run python tests/eval/clinical/run_clinical_eval.py --quiet
+```
+Note the clinical top-3 in the output. If it dropped from the previous check, print a warning:
+`WARNING: clinical top-3 dropped (X% → Y%) after adding {disease}`. This is informational — do NOT revert, but note it for investigation.
+
+Print: `ADDED {disease} (score X.XXXX → Y.YYYY, clinical top-3: Z.Z%)`
 
 **REJECT** (score dropped OR regressions OR new false positives):
 Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `data/*.json` from Step 4 — edit those files directly.
