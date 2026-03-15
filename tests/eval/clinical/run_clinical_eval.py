@@ -317,7 +317,7 @@ def format_clinical_report(
         for disease in sorted(by_disease.keys()):
             data = by_disease[disease]
             lines.append(
-                f"  {disease}: top3={data.get('top_3_rate', 0.0):.0%}, "
+                f"  {disease}: top3={data.get('top_3', data.get('top_3_rate', 0.0)):.0%}, "
                 f"mean_p={data.get('mean_posterior', 0.0):.3f}"
             )
         lines.append("")

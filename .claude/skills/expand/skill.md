@@ -1,6 +1,6 @@
 ---
 name: expand
-description: Perpetual disease expansion — research, validate, integrate new diseases into DxEngine
+description: Perpetual disease expansion - research, validate, integrate new diseases into DxEngine
 user_invocable: true
 arguments:
   - name: focus
@@ -28,7 +28,7 @@ You are running a **perpetual** expansion loop that autonomously adds new diseas
 
 ### For each disease in the batch:
 
-**Research** — Launch 2 parallel foreground agents:
+**Research** - Launch 2 parallel foreground agents:
 
 **Agent A (Clinical Research):**
 Use a general-purpose Agent. In the prompt:
@@ -68,7 +68,7 @@ Use a general-purpose Agent. In the prompt:
 
 **After agents return:**
 1. Read Agent A's output script from `state/expand/packets/{disease_key}_script.json`
-2. Cross-check mimics against Agent B's findings — fix mimic names to match existing disease_keys
+2. Cross-check mimics against Agent B's findings - fix mimic names to match existing disease_keys
 3. Ensure importance and category match curated values (overwrite if different)
 4. Write corrected script back to `state/expand/packets/{disease_key}_script.json`
 5. Validate:
@@ -98,7 +98,7 @@ After discovery pause, rebuild queue and proceed to Phase 0:
 uv run python .claude/skills/expand/scripts/select_diseases.py --output state/expand/queue.json
 ```
 
-If queue is still < 3 candidates after discovery, print "Discovery exhausted — add more candidates to discovery_candidates.json" and stop.
+If queue is still < 3 candidates after discovery, print "Discovery exhausted - add more candidates to discovery_candidates.json" and stop.
 
 ---
 
@@ -161,7 +161,7 @@ for k,v in data.items():
         print(f'{k}: {v[\"diseases\"][\"{disease_key}\"]}')"
 ```
 
-**Launch 3 parallel foreground sub-agents using the Agent tool** (all in a single message for parallel execution). Do NOT use `run_in_background` — you need all results before proceeding to validation/integration:
+**Launch 3 parallel foreground sub-agents using the Agent tool** (all in a single message for parallel execution). Do NOT use `run_in_background` - you need all results before proceeding to validation/integration:
 
 **Sub-agent A (Literature Research):**
 Use `subagent_type="dx-researcher"`. In the prompt, include:
@@ -230,13 +230,13 @@ The research.json must have this structure:
 
 ### Critical: Pattern Trimming & LR Neutralization
 
-**This is the most important lesson from prior expansion sessions.** Adding a disease with many analytes (>7) causes mass absorption — the new disease matches many existing vignettes via cosine similarity, stealing probability mass from correct diagnoses. Every disease that failed initial integration had this problem.
+**This is the most important lesson from prior expansion sessions.** Adding a disease with many analytes (>7) causes mass absorption - the new disease matches many existing vignettes via cosine similarity, stealing probability mass from correct diagnoses. Every disease that failed initial integration had this problem.
 
 **Before proceeding to validation, apply these rules to the research packet:**
 
 1. **Trim pattern to 3-7 distinctive markers.** Remove non-specific analytes shared with many diseases (e.g., CRP, ESR, WBC, albumin, glucose) unless they are THE defining feature (e.g., glucose for DKA). Keep only analytes that discriminate THIS disease from others.
 
-2. **Neutralize non-specific LR entries.** For any LR entry where the finding is shared with 3+ existing diseases AND the LR+ for this disease is lower than competitors, set `lr_positive: 1.0, lr_negative: 1.0` in the packet. This prevents the new disease from absorbing mass via weak shared findings. Example: AMI had AST_elevated (LR+ 1.5) competing with hepatitis (LR+ 8.0) — neutralizing it fixed 62 regressions.
+2. **Neutralize non-specific LR entries.** For any LR entry where the finding is shared with 3+ existing diseases AND the LR+ for this disease is lower than competitors, set `lr_positive: 1.0, lr_negative: 1.0` in the packet. This prevents the new disease from absorbing mass via weak shared findings. Example: AMI had AST_elevated (LR+ 1.5) competing with hepatitis (LR+ 8.0) - neutralizing it fixed 62 regressions.
 
 3. **Add typical_value for extreme labs.** The vignette generator compresses z-scores, making extreme values unrealistically mild (TSH z=4 → 5.8 instead of clinical 25). Add `typical_value` to pattern entries where threshold rules exist (e.g., `tsh>10`, `lipase>3xULN`, `ck>10xULN`, `glucose>250`, `bnp>500`). Format: add `"typical_value": 25.0` to the pattern entry in disease_lab_patterns.json after integration.
 
@@ -253,7 +253,7 @@ The research.json must have this structure:
    e. The clinical rule fires because `classic_presentation` text flows into vignette symptoms/signs, which are matched by the finding mapper's Pass 7
    f. Mimic negatives strip symptoms → clinical rules don't fire → neg_pass safe
 
-   **DO NOT propose clinical rules for non-specific symptoms** (fatigue, pain, nausea, weakness — LR+ near 1.0). Only use for disease-specific clinical context (pregnancy, alcohol use, specific signs, Charcot's triad, etc.).
+   **DO NOT propose clinical rules for non-specific symptoms** (fatigue, pain, nausea, weakness - LR+ near 1.0). Only use for disease-specific clinical context (pregnancy, alcohol use, specific signs, Charcot's triad, etc.).
 
    **Proven examples:**
    - HELLP: `pregnancy_hypertensive_disorder` (match: "preeclampsia" in symptoms) → LR+ 15.0
@@ -262,12 +262,12 @@ The research.json must have this structure:
    **Evidence ceiling math:** A disease with 1 LR entry has ceiling 24%. Adding a clinical rule brings it to 2+ entries (ceiling 39%+). Combined with 4-5 conservative shared LR entries, the ceiling reaches 56-66%, competitive with established diseases.
 
 **Diseases that CANNOT be expanded (missing analytes in lab_ranges.json):**
-- autoimmune_hepatitis (needs anti-smooth muscle antibody — not in lab_ranges.json)
+- autoimmune_hepatitis (needs anti-smooth muscle antibody - not in lab_ranges.json)
 - These require adding new analytes to lab_ranges.json first (out of scope for /expand)
 
 **Diseases that require clinical rule discriminators (lab patterns overlap heavily):**
-- Hepatic diseases (alcoholic_hepatitis, cholangitis, DILI, hepatorenal_syndrome) — share AST/ALT/bilirubin/GGT
-- Hematologic subtypes (HELLP, warm_AIHA) — share hemolysis markers with hemolytic_anemia/TTP
+- Hepatic diseases (alcoholic_hepatitis, cholangitis, DILI, hepatorenal_syndrome) - share AST/ALT/bilirubin/GGT
+- Hematologic subtypes (HELLP, warm_AIHA) - share hemolysis markers with hemolytic_anemia/TTP
 - Use the clinical rule strategy above; do NOT skip these diseases without first trying a clinical rule
 
 ### Step 3: Validate
@@ -329,12 +329,12 @@ Reset `consecutive_skips=0`. Increment `diseases_added`.
 uv run python tests/eval/clinical/run_clinical_eval.py --quiet
 ```
 Note the clinical top-3 in the output. If it dropped from the previous check, print a warning:
-`WARNING: clinical top-3 dropped (X% → Y%) after adding {disease}`. This is informational — do NOT revert, but note it for investigation.
+`WARNING: clinical top-3 dropped (X% → Y%) after adding {disease}`. This is informational - do NOT revert, but note it for investigation.
 
 Print: `ADDED {disease} (score X.XXXX → Y.YYYY, clinical top-3: Z.Z%)`
 
 **REJECT** (score dropped OR regressions OR new false positives):
-Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `data/*.json` from Step 4 — edit those files directly.
+Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `data/*.json` from Step 4 - edit those files directly.
 
 **Effective tune strategy (in order of impact):**
 
@@ -355,7 +355,7 @@ Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `d
    c. Create clinical rule in `finding_rules.json` → `clinical_rules` array
    d. Add LR entry: LR+ 8.0-15.0 for the disease, LR- 0.05-0.1
    e. Simultaneously reduce ALL shared lab LR values to 1.2-2.5 (below all competitors)
-   f. Re-evaluate — the clinical rule breaks the evidence ceiling asymmetry
+   f. Re-evaluate - the clinical rule breaks the evidence ceiling asymmetry
 
    **Why this works:** Diseases fail because they have 1-2 informative LR entries (ceiling 24-39%) while competitors have 5-8 (ceiling 62-72%). A clinical rule adds a unique finding that no competitor claims, raising n_informative_lr to 5-7 and the ceiling to 62-69%. The key is that clinical rules fire from illness script text in vignette symptoms/signs but do NOT fire on other diseases' vignettes (verified unique terms) and do NOT fire on mimic negatives (symptoms stripped).
 
@@ -363,7 +363,7 @@ Enter mini-tune loop (up to 3 attempts). The new disease's data is already in `d
 
 2. **Neutralize shared LR entries.** In `likelihood_ratios.json`, find entries where the new disease shares a finding_key with the regressed disease. Set the new disease's entry to `lr_positive: 1.0, lr_negative: 1.0`. This makes the finding uninformative for the new disease without affecting the existing disease's LR.
 
-3. **Reduce LR+ only as last resort.** Multiplying by 0.7 is less effective than the above two — the issue is usually pattern overlap, not LR magnitude.
+3. **Reduce LR+ only as last resort.** Multiplying by 0.7 is less effective than the above two - the issue is usually pattern overlap, not LR magnitude.
 
 **Do NOT:** add LR- penalties (these create artificial findings). Do NOT remove LR entries entirely (breaks n_informative_lr count).
 

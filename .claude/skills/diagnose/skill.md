@@ -8,13 +8,13 @@ arguments:
     required: true
 ---
 
-# /diagnose — DxEngine v3 Hybrid Diagnostic Reasoning
+# /diagnose - DxEngine v3 Hybrid Diagnostic Reasoning
 
 **IMPORTANT: Before producing ANY output, always print this warning first:**
 
 ```
 ================================================================
-EXPERIMENTAL SOFTWARE — NOT FOR CLINICAL USE
+EXPERIMENTAL SOFTWARE - NOT FOR CLINICAL USE
 This is an unvalidated research experiment built by a non-medical
 professional. It has never been tested on real patients. Do not use
 this output for any medical decisions. Consult a healthcare provider.
@@ -48,14 +48,14 @@ You are the DxEngine diagnostic orchestrator. You run a hybrid diagnostic pipeli
 ### Step 0b: Triage
 Classify the case as **STANDARD** or **COMPLEX**:
 
-**STANDARD** (fast path — ~10 seconds): ALL of these must be true:
+**STANDARD** (fast path - ~10 seconds): ALL of these must be true:
 - Fewer than 3 symptoms
 - Fewer than 5 lab values
 - Single organ system involved
 - No critical lab values
 - After running the pipeline, the engine's top hypothesis has >60% probability
 
-**COMPLEX** (full path — ~30-60 seconds): ANY of these:
+**COMPLEX** (full path - ~30-60 seconds): ANY of these:
 - 3+ symptoms OR 5+ labs
 - Multiple organ systems
 - Critical lab values present
@@ -83,14 +83,14 @@ This single call performs ALL deterministic analysis:
 - Bayesian update with graduated probability floors
 - Entropy calculation + test recommendations
 
-Review the output summary — note:
+Review the output summary - note:
 - Number of abnormal/critical labs
 - Known pattern matches
 - Collectively abnormal patterns (THE KEY DIFFERENTIATOR)
 - Engine's top hypotheses and entropy
 - Preprocessing warnings
 
-The pipeline produces a **StructuredBriefing** stored in state.json — this is the foundation for LLM reasoning.
+The pipeline produces a **StructuredBriefing** stored in state.json - this is the foundation for LLM reasoning.
 
 After reviewing, finalize the triage decision: if engine top hypothesis >60% and case meets STANDARD criteria, use STANDARD path. Otherwise COMPLEX.
 
@@ -120,7 +120,7 @@ echo '{"lab_claims": [...]}' | uv run python .claude/skills/diagnose/scripts/ver
 The claims JSON should be a list of objects, each with:
 - `claim`: the text claim (e.g., "TSH is markedly elevated")
 - `test_name`: canonical lab name (e.g., "thyroid_stimulating_hormone")
-- `llm_interpretation`: direction — "elevated", "low", "normal", or "critical"
+- `llm_interpretation`: direction - "elevated", "low", "normal", or "critical"
 
 If inconsistencies are found, present them to the diagnostician for correction.
 
@@ -143,7 +143,7 @@ Invoke the **dx-literature** agent with:
 
 The literature agent returns **LiteratureFinding** objects with:
 - Finding descriptions and sources (PubMed IDs)
-- Reported LR+/LR- (only from published papers — never fabricated)
+- Reported LR+/LR- (only from published papers - never fabricated)
 - Supporting/opposing disease information
 
 #### Step 2c: Diagnostician (2nd pass)
@@ -191,7 +191,7 @@ Generate the final diagnostic report:
 ### Differential Diagnosis
 For each hypothesis (top 10 or all with >1% probability):
 ```
-[Rank]. [Disease Name] — [Posterior Probability]%
+[Rank]. [Disease Name] - [Posterior Probability]%
    Category: [MOST_LIKELY | CANT_MISS | ATYPICAL_COMMON | RARE_BUT_FITS]
 
    Evidence FOR:
@@ -232,7 +232,7 @@ VERIFICATION FLAGS:
 
 ### Recommended Next Tests
 ```
-1. [Test Name] — Expected Information Gain: [EIG]
+1. [Test Name] - Expected Information Gain: [EIG]
    Rationale: [why this test would help]
    Would differentiate: [hypothesis A] vs [hypothesis B]
    Invasiveness: [level] | Cost: [tier]
@@ -256,14 +256,14 @@ VERIFICATION FLAGS:
 
 ## Key Rules
 
-1. **Never diagnose with certainty** — always present a differential with probabilities
-2. **Engine lab analysis is ground truth** — LLM should not override z-scores or severity
-3. **Graduated probability floors** — importance 5: 8%, importance 4: 5%, importance 3: 2%
-4. **Flag collectively-abnormal patterns** — this is what makes DxEngine unique
-5. **Show your work** — every probability must have an evidence chain with LR source tracking
-6. **LR discipline** — uncurated LRs capped at 3.0, always note source
-7. **Track orphan findings** — unexplained findings should drive investigation
-8. **Clinical correlation required** — always note this is decision support
+1. **Never diagnose with certainty** - always present a differential with probabilities
+2. **Engine lab analysis is ground truth** - LLM should not override z-scores or severity
+3. **Graduated probability floors** - importance 5: 8%, importance 4: 5%, importance 3: 2%
+4. **Flag collectively-abnormal patterns** - this is what makes DxEngine unique
+5. **Show your work** - every probability must have an evidence chain with LR source tracking
+6. **LR discipline** - uncurated LRs capped at 3.0, always note source
+7. **Track orphan findings** - unexplained findings should drive investigation
+8. **Clinical correlation required** - always note this is decision support
 
 ## Error Handling
 

@@ -1,6 +1,6 @@
-# DxEngine — Medical Diagnostic Reasoning Engine
+# DxEngine - Medical Diagnostic Reasoning Engine
 
-A diagnostic AI that combines literature-based reasoning with data-driven lab pattern discovery. Features "collectively abnormal" detection — labs individually normal but collectively pointing to disease.
+A diagnostic AI that combines literature-based reasoning with data-driven lab pattern discovery. Features "collectively abnormal" detection - labs individually normal but collectively pointing to disease.
 
 ## Quick Start
 
@@ -17,14 +17,14 @@ uv run pytest tests/ -v
 
 ## Project Structure
 
-- `src/dxengine/` — Core analysis engine (models, preprocessor, lab analyzer, finding mapper, pattern detector, Bayesian updater with **evidence-based confidence ceiling**, info gain, convergence, **pipeline**, **verifier**)
-- `data/` — Reference data (lab ranges, disease patterns, illness scripts, likelihood ratios, LOINC mappings, finding rules with importance)
-- `.claude/skills/diagnose/` — /diagnose skill with v3 hybrid orchestrator and CLI scripts
-- `.claude/agents/` — Specialized diagnostic agents (intake, **diagnostician**, literature, adversarial)
-- `mcp_servers/` — Custom MCP servers for lab references and medical knowledge base (PubMed replaced by external MCPs)
-- `tests/` — Unit tests, clinical test fixtures, pipeline equivalence tests, verifier tests
-- `.claude/skills/expand/` — /expand skill with priority queue, validation, and integration scripts
-- `tests/eval/` — Evaluation harness: vignette generator, runner, scorer, reporter
+- `src/dxengine/` - Core analysis engine (models, preprocessor, lab analyzer, finding mapper, pattern detector, Bayesian updater with **evidence-based confidence ceiling**, info gain, convergence, **pipeline**, **verifier**)
+- `data/` - Reference data (lab ranges, disease patterns, illness scripts, likelihood ratios, LOINC mappings, finding rules with importance)
+- `.claude/skills/diagnose/` - /diagnose skill with v3 hybrid orchestrator and CLI scripts
+- `.claude/agents/` - Specialized diagnostic agents (intake, **diagnostician**, literature, adversarial)
+- `mcp_servers/` - Custom MCP servers for lab references and medical knowledge base (PubMed replaced by external MCPs)
+- `tests/` - Unit tests, clinical test fixtures, pipeline equivalence tests, verifier tests
+- `.claude/skills/expand/` - /expand skill with priority queue, validation, and integration scripts
+- `tests/eval/` - Evaluation harness: vignette generator, runner, scorer, reporter
 
 ## Commands
 
@@ -36,19 +36,19 @@ uv run pytest tests/ -k "test_lab"   # Run specific test
 
 ## Skills
 
-- `/diagnose <patient_data>` — Run full diagnostic reasoning loop
-- `/eval [layer] [category]` — Run multi-layer clinical evaluation (lab accuracy, clinical cases, LLM comparison, pytest gates)
-- `/improve [iterations=5] [focus=area]` — Run self-improvement loop on data files
-- `/expand [focus=category]` — Perpetual disease expansion loop — autonomously researches, validates, and integrates new diseases
+- `/diagnose <patient_data>` - Run full diagnostic reasoning loop
+- `/eval [layer] [category]` - Run multi-layer clinical evaluation (lab accuracy, clinical cases, LLM comparison, pytest gates)
+- `/improve [iterations=5] [focus=area]` - Run self-improvement loop on data files
+- `/expand [focus=category]` - Perpetual disease expansion loop - autonomously researches, validates, and integrates new diseases
 
 ## Agents
 
-- `dx-intake` — Structures raw patient data into PatientProfile
-- `dx-diagnostician` — Primary LLM diagnostic reasoning (replaces dx-hypothesis; reasons from full clinical picture + engine briefing)
-- `dx-literature` — Searches medical literature for evidence (returns LiteratureFinding objects)
-- `dx-adversarial` — Challenges hypotheses with cognitive bias checklist + self-reflection
-- `dx-researcher` — Researches medical literature to produce structured disease data (lab patterns, LRs, finding rules) for expansion
-- `dx-research-validator` — Validates research findings for clinical plausibility, source verification, and cross-disease conflicts
+- `dx-intake` - Structures raw patient data into PatientProfile
+- `dx-diagnostician` - Primary LLM diagnostic reasoning (replaces dx-hypothesis; reasons from full clinical picture + engine briefing)
+- `dx-literature` - Searches medical literature for evidence (returns LiteratureFinding objects)
+- `dx-adversarial` - Challenges hypotheses with cognitive bias checklist + self-reflection
+- `dx-researcher` - Researches medical literature to produce structured disease data (lab patterns, LRs, finding rules) for expansion
+- `dx-research-validator` - Validates research findings for clinical plausibility, source verification, and cross-disease conflicts
 
 ## Key Conventions
 
@@ -98,7 +98,7 @@ PHASE 3: OUTPUT
 STANDARD path: Phase 0 → 1 → Diagnostician → Verify → Output
 COMPLEX path: Phase 0 → 1 → Diagnostician → Literature → Diagnostician(2) → Verify → Adversarial → Output
 
-## V3 — Hybrid Architecture (CURRENT)
+## V3 - Hybrid Architecture (CURRENT)
 
 v3 inverts control: Claude is the primary diagnostician, deterministic engine is verification/safety layer.
 - Consolidated pipeline module (`pipeline.py`) replaces 5+ sequential script calls
@@ -114,9 +114,9 @@ v3 inverts control: Claude is the primary diagnostician, deterministic engine is
 - Vignette generation supports `typical_value` field in disease_lab_patterns.json to override z-score compression for clinically realistic lab values (29 entries across 13 diseases)
 - 423 tests passing (unit + eval gates), 54 disease patterns, 25 discovery candidates
 
-## /expand — Disease Expansion System
+## /expand - Disease Expansion System
 
-The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driven literature research. Currently at **54 disease patterns** (from original 18). Features **clinical rule discovery** — automatically finds unique clinical discriminators from illness scripts to break evidence ceiling asymmetry for diseases with shared lab patterns.
+The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driven literature research. Currently at **54 disease patterns** (from original 18). Features **clinical rule discovery** - automatically finds unique clinical discriminators from illness scripts to break evidence ceiling asymmetry for diseases with shared lab patterns.
 
 ### Architecture
 ```
@@ -142,11 +142,11 @@ The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driv
 ```
 
 ### Scripts
-- `select_diseases.py` — Priority queue: scores by `(importance × 3) + (lr_count / 3) + lab_coverage`; floor budget warning at 55+ diseases
-- `validate_expansion.py` — 21 validation checks, outputs pass/warn/fail with `ready_for_integration` gate
-- `integrate_disease.py` — Atomic integrator with idempotency checks, .bak rollback, clinical rules integration, and `typical_value` preservation
-- `validate_illness_script.py` — 10-check validator for auto-generated illness scripts (schema, curated match, cross-ref)
-- `generate_illness_script.py` — Writes validated illness script to illness_scripts.json; overwrites importance/category from curated list
+- `select_diseases.py` - Priority queue: scores by `(importance × 3) + (lr_count / 3) + lab_coverage`; floor budget warning at 55+ diseases
+- `validate_expansion.py` - 21 validation checks, outputs pass/warn/fail with `ready_for_integration` gate
+- `integrate_disease.py` - Atomic integrator with idempotency checks, .bak rollback, clinical rules integration, and `typical_value` preservation
+- `validate_illness_script.py` - 10-check validator for auto-generated illness scripts (schema, curated match, cross-ref)
+- `generate_illness_script.py` - Writes validated illness script to illness_scripts.json; overwrites importance/category from curated list
 
 ### Expansion State (54 patterns, 2026-03-14)
 
@@ -170,22 +170,22 @@ The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driv
 231 vignettes + 5 fixtures = 236 total (189 positive, 42 negative, 18% negative ratio). All scale automatically with /expand:
 
 **Vignette types (per disease, auto-generated):**
-- **classic** (24) — full disease pattern at canonical z-scores (uses `typical_value` when available)
-- **moderate** (24) — 0.55x z-scores, tests sensitivity to milder presentations
-- **partial_screen** (24) — only standard panel labs (CBC+CMP+TSH+iron)
-- **partial_nokey** (24) — highest-weight analyte removed, tests graceful degradation
-- **demog_flip** (24) — age/sex flipped to atypical demographics
-- **comorbidity** (18) — blended with medically plausible comorbidity overlay (18 curated pairs)
-- **borderline** (10) — key analyte at finding rule threshold + 1%, handles all operator types
-- **subtle** (10) — collectively-abnormal diseases only, z-scores that are individually normal
+- **classic** (24) - full disease pattern at canonical z-scores (uses `typical_value` when available)
+- **moderate** (24) - 0.55x z-scores, tests sensitivity to milder presentations
+- **partial_screen** (24) - only standard panel labs (CBC+CMP+TSH+iron)
+- **partial_nokey** (24) - highest-weight analyte removed, tests graceful degradation
+- **demog_flip** (24) - age/sex flipped to atypical demographics
+- **comorbidity** (18) - blended with medically plausible comorbidity overlay (18 curated pairs)
+- **borderline** (10) - key analyte at finding rule threshold + 1%, handles all operator types
+- **subtle** (10) - collectively-abnormal diseases only, z-scores that are individually normal
 
 **Adversarial & negative cases (auto-generated):**
-- **Dynamic discriminators** (29) — auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
-- **Dynamic ambiguous** (3) — shared labs only, both diseases plausible, gold = `__none__`
-- **Mimic negatives** (23) — mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; stripped symptoms prevent clinical rule leakage
-- **Healthy negatives** (10) — normal labs with random physiological variation
-- **Unknown disease negatives** (5) — genuinely abnormal labs for diseases not in engine vocabulary; **flips_when** auto-converts to positive when disease is added
-- **Handcrafted adversarial** (3) — medication effect, age adjustment, partial panel
+- **Dynamic discriminators** (29) - auto-generated from disease overlap graph (Jaccard >= 0.3); gold = disease_a, labs favor a over b
+- **Dynamic ambiguous** (3) - shared labs only, both diseases plausible, gold = `__none__`
+- **Mimic negatives** (23) - mid-weight nonspecific analytes moderately abnormal, top diagnostic analytes normal; stripped symptoms prevent clinical rule leakage
+- **Healthy negatives** (10) - normal labs with random physiological variation
+- **Unknown disease negatives** (5) - genuinely abnormal labs for diseases not in engine vocabulary; **flips_when** auto-converts to positive when disease is added
+- **Handcrafted adversarial** (3) - medication effect, age adjustment, partial panel
 
 **Scoring formula v2:**
 - Weights: top_3 (0.25), top_1 (0.15), MRR (0.10), 1-Brier (0.15), neg_pass (0.15), mean_gold_posterior (0.10), pattern_recall (0.10)
@@ -197,9 +197,9 @@ The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driv
 - Soft (warns only): rank degradation within top-3, mean posterior drop >0.03, per-disease top-3 rate drop from 100% to <80%
 
 **Other features:**
-- **`--expand-mode`** — compare_scores.py flag for /expand; computes existing-only score on common vignettes (prevents new below-average vignettes from diluting score), separate new vignette health check (top3 >= 50%, neg_pass 100%, classic MUST be top-3)
-- **Categories from illness_scripts.json** — dynamic lookup replaces hardcoded dict; zero mismatches
-- **BY DISEASE reporting** — per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
+- **`--expand-mode`** - compare_scores.py flag for /expand; computes existing-only score on common vignettes (prevents new below-average vignettes from diluting score), separate new vignette health check (top3 >= 50%, neg_pass 100%, classic MUST be top-3)
+- **Categories from illness_scripts.json** - dynamic lookup replaces hardcoded dict; zero mismatches
+- **BY DISEASE reporting** - per-disease top-3 rate and mean posterior, flags diseases with mean_p < 0.20 or top-3 < 80%
 
 **Current baseline (2026-03-14):** score=0.8012, top3=98.5%, top1=78.6%, neg_pass=100.0%, n=464 (54 disease patterns, 25 discovery candidates)
 
@@ -208,9 +208,9 @@ The `/expand` skill autonomously grows DxEngine's disease coverage using AI-driv
 Produced by 11-agent deep analysis on 2026-03-11. Six verification agents stress-tested proposals; two were rejected as harmful. See auto-memory `scaling_roadmap.md` for full analysis context, rejected proposals, reference systems, and quantitative findings.
 
 **REJECTED proposals (do NOT re-propose):**
-- **Category-based hypothesis filtering** — 83% of diseases cross 3+ organ-system panels; filtering misses multi-system diseases (SLE, myeloma, rhabdomyolysis, sepsis). INTERNIST-1's filtering failure is the canonical cautionary tale. DXplain scores 2,600 diseases with no filtering. No computational need at 100 diseases (<10ms per case).
-- **LR sparsity formulas (specificity discount, transitive LR inference)** — specificity discount destroys valid information; transitive inference is epidemiologically invalid (sensitivity/specificity are disease-specific population parameters). Inferred LRs would also defeat the evidence cap safety mechanism.
-- **Category-budget floors** — Originally proposed as Fix 5. Deep analysis at 54 diseases showed: (a) floors change rankings in only 2% of cases, (b) evidence caps are the actual binding constraint, (c) no reference system uses category-budget floors (QMR-DT handles 570 diseases without floors; DXplain handles 2,600 without them), (d) it "kicks the can" from ~50 to ~80 diseases without solving the fundamental O(n) budget problem. See floor scaling roadmap below for the correct phased approach.
+- **Category-based hypothesis filtering** - 83% of diseases cross 3+ organ-system panels; filtering misses multi-system diseases (SLE, myeloma, rhabdomyolysis, sepsis). INTERNIST-1's filtering failure is the canonical cautionary tale. DXplain scores 2,600 diseases with no filtering. No computational need at 100 diseases (<10ms per case).
+- **LR sparsity formulas (specificity discount, transitive LR inference)** - specificity discount destroys valid information; transitive inference is epidemiologically invalid (sensitivity/specificity are disease-specific population parameters). Inferred LRs would also defeat the evidence cap safety mechanism.
+- **Category-budget floors** - Originally proposed as Fix 5. Deep analysis at 54 diseases showed: (a) floors change rankings in only 2% of cases, (b) evidence caps are the actual binding constraint, (c) no reference system uses category-budget floors (QMR-DT handles 570 diseases without floors; DXplain handles 2,600 without them), (d) it "kicks the can" from ~50 to ~80 diseases without solving the fundamental O(n) budget problem. See floor scaling roadmap below for the correct phased approach.
 
 ### Priority 1: Smooth the Evidence Cap Curve (DONE)
 Replaced discrete staircase `{0→20%, 1→38%, 2→60%, 3→80%, 4+→uncapped}` with smooth curve `ceiling(n) = 1 - 1/(1 + k*n)`, k=0.32. Eliminates the n=1→2 cliff (0.38→0.60) that crossed the 0.40 negative pass threshold. Tuned k from 0.15→0.32 to maximize weighted score while keeping neg_pass=100%. Results: neg_pass 89.5%→100%, top_1 91.7%→93.0%, score 0.8338→0.8344. Now safe for Priorities 2-4 to add evidence sources. See `_evidence_ceiling()` in `bayesian_updater.py`.
@@ -229,12 +229,12 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 **Safety mechanisms:**
 - `_ABSENT_SUBSUMES` dict (19 entries) prevents multi-threshold double-counting (reverse of `_SUBSUMES`)
 - `covered_tests` suppression: if ANY positive finding fired for a test, ALL absent findings for that test are suppressed (handles d_dimer_normal + d_dimer_elevated, mid-threshold CK, etc.)
-- Z-score proximity check: skip absent if value trending toward threshold (z > 1.0 for upward rules, z < -1.0 for downward rules) — prevents borderline values from generating false rule-outs
+- Z-score proximity check: skip absent if value trending toward threshold (z > 1.0 for upward rules, z < -1.0 for downward rules) - prevents borderline values from generating false rule-outs
 - `between` operator rules excluded (ambiguous absence semantics)
 - Only `single_rules` processed (composite/computed have complex multi-test dependencies)
-- Absent evidence excluded from `n_informative_lr` in `bayesian_updater.py` — absent findings push posteriors DOWN and cannot cause overconfidence, so they must not inflate the evidence ceiling
+- Absent evidence excluded from `n_informative_lr` in `bayesian_updater.py` - absent findings push posteriors DOWN and cannot cause overconfidence, so they must not inflate the evidence ceiling
 
-**Threshold tuning:** Swept 0.05–0.20. LR- < 0.1 optimal: 13 qualifying finding keys, 1 new regression (medically defensible — normal calcium correctly argues against primary hyperparathyroidism). LR- < 0.2 caused normalization artifacts in narrow-panel adversarial cases.
+**Threshold tuning:** Swept 0.05–0.20. LR- < 0.1 optimal: 13 qualifying finding keys, 1 new regression (medically defensible - normal calcium correctly argues against primary hyperparathyroidism). LR- < 0.2 caused normalization artifacts in narrow-panel adversarial cases.
 
 **Files changed:** `finding_mapper.py` (+144 lines), `bayesian_updater.py` (+6 lines), `models.py` (+1 line), `pipeline.py` (+4 lines), `test_finding_mapper.py` (+121 lines), `test_pipeline.py` (+1 line)
 
@@ -242,19 +242,19 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 
 ---
 
-### Priority 4: Clinical Feature Integration — Tier A Only (DONE)
+### Priority 4: Clinical Feature Integration - Tier A Only (DONE)
 
 **Problem:** `likelihood_ratios.json` contained **90 non-lab finding keys** (43% of total 208) representing physical exam signs, symptoms, microscopy findings, imaging results, and provocative test results. These had curated LR+/LR- data but **no code path** from patient data to the Bayesian updater. The finding mapper exclusively processed `LabValue` objects.
 
 **Data quality verified:** All 69 clinical entries have both LR+ and LR- (100%). 45 of 50+ match illness_scripts.json terminology via substring matching. LR values match published literature (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis).
 
 **Split into two tiers (only implement Tier A):**
-- **Tier A (clinician-documented findings):** Physical exam signs observed by a clinician — lid_lag (LR+ 17.6), exophthalmos (LR+ 31.5), malar_rash (LR+ 12.0), S3_gallop (LR+ 11.0), Janeway_lesions (LR+ 25.0), Kayser-Fleischer_rings (LR+ 60.0), etc. These are objective, reliable, and have well-established LRs. Apply full LR via the Bayesian updater.
-- **Tier B (patient-reported symptoms):** Fatigue, pain, nausea — subjective, unreliable, with LR+ barely above 1.0 for most diseases. Leave these in the LLM diagnostician domain. Do NOT add them to the deterministic pipeline.
+- **Tier A (clinician-documented findings):** Physical exam signs observed by a clinician - lid_lag (LR+ 17.6), exophthalmos (LR+ 31.5), malar_rash (LR+ 12.0), S3_gallop (LR+ 11.0), Janeway_lesions (LR+ 25.0), Kayser-Fleischer_rings (LR+ 60.0), etc. These are objective, reliable, and have well-established LRs. Apply full LR via the Bayesian updater.
+- **Tier B (patient-reported symptoms):** Fatigue, pain, nausea - subjective, unreliable, with LR+ barely above 1.0 for most diseases. Leave these in the LLM diagnostician domain. Do NOT add them to the deterministic pipeline.
 
 **Implementation:**
 
-1. **Extend `finding_rules.json`** with two new top-level arrays (backward-compatible — existing code reads specific keys):
+1. **Extend `finding_rules.json`** with two new top-level arrays (backward-compatible - existing code reads specific keys):
 
 ```json
 {
@@ -313,8 +313,8 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 
 **What NOT to do:**
 - Do NOT use NLP/semantic matching. Substring matching on normalized terms is sufficient and deterministic.
-- Do NOT create LRs for vague symptoms (fatigue, nausea, weakness). These have LR+ ~1.2 for most diseases — noise, not signal.
-- Do NOT generate absent clinical findings (if a patient doesn't report a symptom, that is NOT evidence of absence — they may not have been asked).
+- Do NOT create LRs for vague symptoms (fatigue, nausea, weakness). These have LR+ ~1.2 for most diseases - noise, not signal.
+- Do NOT generate absent clinical findings (if a patient doesn't report a symptom, that is NOT evidence of absence - they may not have been asked).
 - Do NOT merge vitals into `lab_ranges.json`. Different structures, no LOINC codes.
 
 **Diseases that gain the most discriminating evidence:**
@@ -336,7 +336,7 @@ Added Pass 6 to `finding_mapper.py`: when a lab is ordered and normal (no positi
 - Updated `dx-diagnostician.md` to mention clinical findings in engine analysis review
 - 3 findings intentionally excluded: `antinuclear_antibody_titer_elevated`, `anti_dsdna_antibody_elevated`, `erythrocytosis`
 
-**Results:** score=0.8504 (baseline 0.8344, **+0.016**), top1=94.3% (+1.3%), top3=98.7%, neg_pass=100%, 380 tests. 57 cases improved gold posteriors (iron_deficiency +0.48, B12_deficiency +0.38, hyperthyroidism +0.37). 1 pre-existing top-3 regression (fires zero clinical rules — from vignette regen, not P4). Mean gold posterior 0.3155→0.3672 (+0.05).
+**Results:** score=0.8504 (baseline 0.8344, **+0.016**), top1=94.3% (+1.3%), top3=98.7%, neg_pass=100%, 380 tests. 57 cases improved gold posteriors (iron_deficiency +0.48, B12_deficiency +0.38, hyperthyroidism +0.37). 1 pre-existing top-3 regression (fires zero clinical rules - from vignette regen, not P4). Mean gold posterior 0.3155→0.3672 (+0.05).
 
 **Files changed:** `finding_rules.json` (+90 clinical rules), `finding_mapper.py` (+80 lines), `models.py` (+1 line), `pipeline.py` (+15 lines), `runner.py` (+6 lines), `test_finding_mapper.py` (+21 tests), `test_pipeline.py` (+2 tests), `generate_vignettes.py` (+10 lines), `dx-diagnostician.md` (+2 lines)
 
@@ -379,11 +379,11 @@ Mimic negatives now have empty symptoms/chief_complaint. Prevents pathognomonic 
 **Combined Results (Fixes 1-4):** score 0.8504 → 0.8619, top3 98.7% → 100%, top1 94.3% → 95.9%, neg_pass 100%, 398 tests
 
 **Fix 5: Floor Scaling Roadmap (REPLACES category-budget proposal)**
-Deep analysis at 54 diseases revealed floors are NOT the binding constraint — evidence caps (Fix 1) are. Floors change rankings in only 2% of cases. The correct approach is a phased deprecation, not category budgets:
+Deep analysis at 54 diseases revealed floors are NOT the binding constraint - evidence caps (Fix 1) are. Floors change rankings in only 2% of cases. The correct approach is a phased deprecation, not category budgets:
 
-- **Phase A (at 70+ diseases): Evidence-Gated Floors** — Only apply floors to diseases with `n_informative_lr >= 1`. Speculative pattern matches (n_informative=0) get no floor. Cuts floor budget ~40-60%. Implementation: 5 lines in `normalize_posteriors()`. Conceptually clean: only diseases with curated evidence deserve floor protection.
-- **Phase B (at 100+ diseases): Importance-5-Only Floors** — Drop floors for importance 3-4 entirely. Keep only for importance-5 "can't miss" diseases (PE, AMI, sepsis, DKA, TTP/HUS). At 25 imp-5 diseases × 0.04 = 1.0 total budget, each gets a meaningful 4% floor.
-- **Phase C (at 150+ diseases): Remove Floors Entirely** — Rely solely on evidence caps + prevalence priors, matching QMR-DT (570 diseases, no floors) and DXplain (2,600 diseases, no floors). By this point, LR coverage should be comprehensive enough that floors are genuinely unnecessary.
+- **Phase A (at 70+ diseases): Evidence-Gated Floors** - Only apply floors to diseases with `n_informative_lr >= 1`. Speculative pattern matches (n_informative=0) get no floor. Cuts floor budget ~40-60%. Implementation: 5 lines in `normalize_posteriors()`. Conceptually clean: only diseases with curated evidence deserve floor protection.
+- **Phase B (at 100+ diseases): Importance-5-Only Floors** - Drop floors for importance 3-4 entirely. Keep only for importance-5 "can't miss" diseases (PE, AMI, sepsis, DKA, TTP/HUS). At 25 imp-5 diseases × 0.04 = 1.0 total budget, each gets a meaningful 4% floor.
+- **Phase C (at 150+ diseases): Remove Floors Entirely** - Rely solely on evidence caps + prevalence priors, matching QMR-DT (570 diseases, no floors) and DXplain (2,600 diseases, no floors). By this point, LR coverage should be comprehensive enough that floors are genuinely unnecessary.
 
 **Why floors don't matter now:** At 54 patterns, typical hypothesis pools are 2-14 diseases (median ~6). The per-disease evidence ceiling (n=0→1%, n=1→24%, n=2→39%) is always the binding constraint, not the 2-8% floor. Zero diseases currently depend on floors for top-3 placement.
 
@@ -401,7 +401,7 @@ Currently 26 analytes have only 1 threshold rule, creating binary cliff effects.
 Diseases sharing lab patterns with existing diseases (hepatic, hematologic subtypes) need **clinical rules as unique discriminators** to break evidence ceiling asymmetry. The process: find unique terms in the illness script's `classic_presentation`, create a clinical rule matching those terms, add LR+ 8-15 for the new finding. Proven on 4 previously-impossible diseases: HELLP (pregnancy LR+ 15), alcoholic_hepatitis (alcohol LR+ 10), cholangitis (Charcot triad LR+ 12), hepatorenal_syndrome (cirrhosis+ascites context LR+ 12). Codified in `/expand` skill as Strategy 0 in tune loop and Phase 4b in dx-researcher agent.
 
 **Counterfactual inference (Richens/Babylon Health 2020):**
-Replace associative query "P(disease|findings)" with counterfactual "would findings be present if disease were absent?" Same knowledge base, different inference method. Babylon Health moved from top-48% to top-25% of doctors. Implementation: twin network on the existing noisy-OR-like model. Research-phase — requires significant architectural work. Source: github.com/babylonhealth/counterfactual-diagnosis.
+Replace associative query "P(disease|findings)" with counterfactual "would findings be present if disease were absent?" Same knowledge base, different inference method. Babylon Health moved from top-48% to top-25% of doctors. Implementation: twin network on the existing noisy-OR-like model. Research-phase - requires significant architectural work. Source: github.com/babylonhealth/counterfactual-diagnosis.
 
 **Dynamic sparse network generation (MidasMed approach):**
 For each patient, generate a tailored 30-50 disease sub-network instead of reasoning over all diseases. Validated by MidasMed (93% top-1 with 200 disease families). Needed at 200+ diseases. Different from rejected "category filtering" because it uses finding-based relevance, not organ-system categories.
@@ -416,7 +416,7 @@ Three-layer evaluation built and operational. Clinical accuracy validated on 50 
 - **Layer 1 (Lab Accuracy):** 100% pass rate on 1,227 test points, 97.5% classification agreement with textbook ranges
 - **Layer 2 (Clinical Cases):** 92.5% top-3 on 50 teaching cases, 94.1% importance-5 sensitivity, 100% OOV safety
 - **Layer 3 (vs Claude blind):** Engine top-3 82.5% → 92.5% (after fixes), Claude blind top-3 97.5%. Engine wins on OOV safety (100% vs 0%).
-- **Synthetic-clinical gap:** -7.2% (synthetic overestimates by 7 points — confirms clinical eval was needed)
+- **Synthetic-clinical gap:** -7.2% (synthetic overestimates by 7 points - confirms clinical eval was needed)
 
 ### Evaluation Architecture
 
@@ -434,12 +434,12 @@ Layer 2: CLINICAL TEACHING CASES (DONE)
 
 Layer 3: LLM COMPARISON (DONE)
   Blind Claude diagnoses (subagents with no access to gold standard)
-  Cached at state/comparison/claude_results.json — no API keys needed
+  Cached at state/comparison/claude_results.json - no API keys needed
   Location: tests/eval/comparison/
 
-Synthetic Regression (EXISTS — unchanged)
+Synthetic Regression (EXISTS - unchanged)
   464 vignettes, 8 types per disease, adversarial cases
-  /improve and /expand optimize against this — clinical eval is held-out
+  /improve and /expand optimize against this - clinical eval is held-out
 ```
 
 **Critical rule:** `/improve` and `/expand` NEVER optimize against clinical cases. They optimize against synthetic eval only. Clinical eval is the held-out ground truth. `/expand` runs clinical eval as a secondary check after accepting a disease (warn-only, not blocking).
@@ -462,8 +462,8 @@ uv run pytest tests/eval/lab_accuracy/ tests/eval/clinical/ tests/eval/compariso
 
 ### Remaining Clinical Failures (2 of 50)
 
-- **alcoholic_hepatitis** (rank 4, p=0.059): competing with sepsis/IE/DIC — shared nonspecific findings (low Na, low K, elevated WBC). Needs stronger unique discriminators.
-- **macrophage_activation_syndrome** (rank 7, p=0.054): competing with TTP/TLS/sepsis — shared hematologic/inflammatory findings. 25 hypotheses dilute the posterior despite ferritin >1000 firing.
+- **alcoholic_hepatitis** (rank 4, p=0.059): competing with sepsis/IE/DIC - shared nonspecific findings (low Na, low K, elevated WBC). Needs stronger unique discriminators.
+- **macrophage_activation_syndrome** (rank 7, p=0.054): competing with TTP/TLS/sepsis - shared hematologic/inflammatory findings. 25 hypotheses dilute the posterior despite ferritin >1000 firing.
 
 ### Eval File Structure
 
@@ -497,7 +497,7 @@ state/comparison/claude_results.json  # Cached blind Claude diagnoses
 
 ---
 
-## Path to Helping People — Revised Roadmap (2026-03-15)
+## Path to Helping People - Revised Roadmap (2026-03-15)
 
 ### Strategic Context
 
@@ -505,7 +505,7 @@ DxEngine is a doctor-facing clinical decision support tool. It provides three th
 
 **The bottleneck is no longer the engine. It's that nobody can use it.**
 
-### Phase A: Equity Audit + Safety Argument (NEXT — 1 week)
+### Phase A: Equity Audit + Safety Argument (NEXT - 1 week)
 **Must do BEFORE public release. Responsible open-sourcing of medical AI.**
 
 - Reference range audit: document source populations for 98 analytes, flag ethnicity-dependent ranges
@@ -528,7 +528,7 @@ DxEngine is a doctor-facing clinical decision support tool. It provides three th
 **Make it usable beyond Claude Code.**
 
 - FastAPI endpoint: POST /api/diagnose with lab values → ranked differential
-- Pipeline runs in ~5ms — wrapping in HTTP is trivial
+- Pipeline runs in ~5ms - wrapping in HTTP is trivial
 - Enables integration into EHR plugins, teaching tools, lab result viewers
 - Include disclaimers in API responses
 
@@ -545,14 +545,14 @@ DxEngine is a doctor-facing clinical decision support tool. It provides three th
 - NHANES population-representative validation
 - Scale clinical cases to 200+ via extraction pipeline
 - Clinical utility pilot with residents (proves tool helps doctors)
-- Collectively-abnormal benchmark (first of its kind — publishable)
+- Collectively-abnormal benchmark (first of its kind - publishable)
 - Journal paper (JAMIA/JBI) with all evidence
 
 ### What NOT to Do Before Release
-- Don't wait for 200+ clinical cases — 50 is credible enough
-- Don't wait for NHANES — it strengthens but doesn't block
-- Don't build a web UI — API first, interface later
-- Don't wait for the paper — open-source first, publish after
+- Don't wait for 200+ clinical cases - 50 is credible enough
+- Don't wait for NHANES - it strengthens but doesn't block
+- Don't build a web UI - API first, interface later
+- Don't wait for the paper - open-source first, publish after
 
 ### Publishability Path (after release)
 
@@ -566,7 +566,7 @@ DxEngine is a doctor-facing clinical decision support tool. It provides three th
 5. Transparency: equity audit, safety argument, all code/data open
 6. Unique: collectively-abnormal detection benchmark, autonomous knowledge expansion
 
-**Regulatory:** FDA CDS exemption pathway — system meets all 4 criteria (no images, displays medical info, supports HCP, clinician can verify)
+**Regulatory:** FDA CDS exemption pathway - system meets all 4 criteria (no images, displays medical info, supports HCP, clinician can verify)
 
 ### Data Sources Reference
 
@@ -617,8 +617,8 @@ See auto-memory `scaling_roadmap.md` for the full 11-agent scaling analysis (202
 
 ### Optional env vars
 
-- `NCBI_API_KEY` — Increases PubMed rate limit from 3/s to 10/s (free from NCBI)
-- `OPENFDA_API_KEY` — Increases OpenFDA rate limit (free)
+- `NCBI_API_KEY` - Increases PubMed rate limit from 3/s to 10/s (free from NCBI)
+- `OPENFDA_API_KEY` - Increases OpenFDA rate limit (free)
 
 ### Windows note
 

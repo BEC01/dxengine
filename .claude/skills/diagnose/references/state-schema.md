@@ -39,7 +39,7 @@ state/sessions/{session_id}/
 
 ## State Lifecycle
 
-1. **Created** by intake (Phase 1) — contains patient data and initial lab analysis
-2. **Updated** each iteration — new evidence, updated posteriors, pattern matches
-3. **Finalized** at convergence or max iterations — final differential
-4. **Preserved** for review — session directory persists until manually cleaned
+1. **Created** by intake (Phase 1) - contains patient data and initial lab analysis
+2. **Updated** each iteration - new evidence, updated posteriors, pattern matches
+3. **Finalized** at convergence or max iterations - final differential
+4. **Preserved** for review - session directory persists until manually cleaned

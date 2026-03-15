@@ -1,4 +1,4 @@
-# DxEngine Scaling Fixes — Implementation Plan
+# DxEngine Scaling Fixes - Implementation Plan
 
 ## Context
 
@@ -16,7 +16,7 @@ safety properties. Each fix is designed to be independently implementable and te
 
 ---
 
-## Fix 1: Per-Disease Evidence Ceiling (CRITICAL — Highest Leverage)
+## Fix 1: Per-Disease Evidence Ceiling (CRITICAL - Highest Leverage)
 
 ### Problem
 
@@ -111,10 +111,10 @@ def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
 
 ### Tests to update
 
-1. `tests/test_bayesian_updater.py` — Any test that asserts a global ceiling behavior must
+1. `tests/test_bayesian_updater.py` - Any test that asserts a global ceiling behavior must
    be updated to expect per-disease ceilings. Search for `apply_evidence_caps` and
    `n_informative_lr` in tests.
-2. `tests/test_pipeline.py` — The manual pipeline tests that call `apply_evidence_caps`
+2. `tests/test_pipeline.py` - The manual pipeline tests that call `apply_evidence_caps`
    should verify that a disease with 1 informative LR is capped at 0.24 while a disease
    with 5 is capped at 0.62 in the same pool.
 
@@ -125,7 +125,7 @@ def apply_evidence_caps(hypotheses: list[Hypothesis]) -> list[Hypothesis]:
   than before (their own n, not the global max). This should IMPROVE mean_gold_posterior.
 - **Normalization interaction**: after per-disease capping, `normalize_posteriors()` will
   redistribute mass. A disease capped at 0.24 could be normalized upward. The cap should be
-  applied AFTER normalization (current order in `pipeline.py`) — verify this is preserved.
+  applied AFTER normalization (current order in `pipeline.py`) - verify this is preserved.
 
 ### Risk
 
@@ -161,14 +161,14 @@ needs investigation.
 ### Problem
 
 The `compare_scores.py` expand-mode docstring says "compare only on vignettes common to both"
-but the actual code does NOT filter — it uses the full suite scores from both runs. Adding
+but the actual code does NOT filter - it uses the full suite scores from both runs. Adding
 ~8 new vignettes with below-average performance drags the score down even if zero existing
 vignettes regress.
 
 **Quantitative analysis:** Adding 8 new positive vignettes to 160 existing ones changes the
 denominator from 160 to 168. If the new vignettes have 50% top-3 rate (vs 99% existing):
 - top_3_accuracy drops from 0.987 to ~0.963
-- Weighted score impact: `-0.024 * 0.25 = -0.006` — already 6x the -0.001 threshold
+- Weighted score impact: `-0.024 * 0.25 = -0.006` - already 6x the -0.001 threshold
 
 This means ANY expansion that adds vignettes with imperfect performance is likely to be
 rejected from score dilution alone, even with zero regressions on existing cases.
@@ -239,8 +239,8 @@ if expand_mode:
 
 4. Print additional info for expand-mode:
 ```
-Existing-only: 0.8553 → 0.8551 (delta -0.0002) — OK
-New vignettes (8): top3=87.5%, neg_pass=100% — OK
+Existing-only: 0.8553 → 0.8551 (delta -0.0002) - OK
+New vignettes (8): top3=87.5%, neg_pass=100% - OK
 ```
 
 ### File: `tests/eval/scorer.py`
@@ -248,7 +248,7 @@ New vignettes (8): top3=87.5%, neg_pass=100% — OK
 May need to expose a `compute_metrics_from_cases(cases: list[CaseResult]) -> dict` function
 that extracts the metric computation logic from `compute_suite_metrics` for reuse. Currently
 `compute_suite_metrics` takes a `SuiteResult` and accesses `.cases` internally. The extraction
-should be straightforward — just move the loop body to a new function that takes a case list.
+should be straightforward - just move the loop body to a new function that takes a case list.
 
 ### Tests
 
@@ -256,7 +256,7 @@ Add test cases to verify:
 - expand-mode with 0 new vignettes behaves identically to current
 - expand-mode with new vignettes correctly isolates existing-only score
 - new vignettes with 0% top-3 still allow ACCEPT if existing score is stable
-  (wait — no, that should REJECT due to new_health_ok check)
+  (wait - no, that should REJECT due to new_health_ok check)
 - new vignettes with 100% top-3 and slight existing drop still ACCEPTs
 
 ### Expected impact
@@ -360,7 +360,7 @@ def _build_labs_from_pattern(
 normal, `typical_value` should be ignored (already sets to midpoint). For bait analytes,
 use the same scaling: `mid + 0.6 * (typical_value - mid)`.
 
-**Also modify `_z_to_value()` callers in borderline generation** — borderline vignettes set
+**Also modify `_z_to_value()` callers in borderline generation** - borderline vignettes set
 values at the finding rule threshold + 1%, so they don't use z_to_value for the key analyte.
 These should continue to work as-is.
 
@@ -425,10 +425,10 @@ and causing neg_pass failures.
   with combined LR+ of 80x (4.0 * 20.0), pushing cirrhosis to 0.49 posterior despite
   completely normal labs.
 
-### Solution (Option A — Simplest, Recommended)
+### Solution (Option A - Simplest, Recommended)
 
 Strip ALL symptoms and chief_complaint from mimic negatives. Mimic negatives test
-lab-only overconfidence — clinical features are irrelevant to this test.
+lab-only overconfidence - clinical features are irrelevant to this test.
 
 ### File: `tests/eval/generate_vignettes.py`
 
@@ -444,7 +444,7 @@ lab-only overconfidence — clinical features are irrelevant to this test.
 "symptoms": [],
 ```
 
-### Solution (Option B — More Nuanced)
+### Solution (Option B - More Nuanced)
 
 Filter symptoms against clinical rules before including them. Only include symptoms that
 do NOT have LR entries with LR+ > 2.0 for any disease.
@@ -472,7 +472,7 @@ safe_symptoms = [s for s in demo.get("symptoms", [])
 
 This is more complex but preserves mild non-diagnostic symptoms in mimics.
 
-### Solution (Option C — Expand Sign Indicators)
+### Solution (Option C - Expand Sign Indicators)
 
 Add more indicators to `_SIGN_INDICATORS` in `_demographics_from_script()`:
 
@@ -495,7 +495,7 @@ This correctly classifies more items as signs, keeping them out of mimic negativ
 ### Recommendation
 
 Use Option A. It's the simplest, most robust, and the mimic negative design intent is
-about lab-only overconfidence — clinical features are noise in this context.
+about lab-only overconfidence - clinical features are noise in this context.
 
 ### Tests
 
@@ -517,7 +517,7 @@ The current floor mechanism in `normalize_posteriors()` assigns per-disease floo
 
 With 24 patterns, total floor mass = 1.11, exceeding the 0.95 available mass. Floors are
 scaled down by `0.95 / 1.11 = 0.856`. At 50 diseases, scale factor drops to 0.41.
-At 100 diseases, scale factor is 0.21 — importance-5 floors become 1.6%, indistinguishable
+At 100 diseases, scale factor is 0.21 - importance-5 floors become 1.6%, indistinguishable
 from noise.
 
 ### Current behavior (`bayesian_updater.py` lines 175-209)
@@ -612,14 +612,14 @@ An importance-5 disease that's the only one in its category gets the full budget
 
 ### Tests to update
 
-- `tests/test_bayesian_updater.py` — tests that assert specific floor values will need
+- `tests/test_bayesian_updater.py` - tests that assert specific floor values will need
   updating. Search for `FLOOR_MAP`, `0.08`, `0.05`, `0.02` in test assertions.
-- `tests/test_pipeline.py` — any test checking that posteriors don't go below a specific
+- `tests/test_pipeline.py` - any test checking that posteriors don't go below a specific
   floor value.
 
 ### When to implement
 
-This fix is NOT urgent at 25 diseases — the current linear scaling still works acceptably.
+This fix is NOT urgent at 25 diseases - the current linear scaling still works acceptably.
 Implement when disease count approaches 40-50 or when floor compression causes cant-miss
 diseases to be pruned from differentials.
 

@@ -1,8 +1,8 @@
-# DxEngine — Technical Reference
+# DxEngine - Technical Reference
 
 ## What This Is
 
-Medical diagnostic reasoning engine that combines literature-based reasoning with statistical lab pattern discovery. The key feature is **collectively-abnormal detection** — labs individually within normal range but collectively pointing to disease (e.g., pre-clinical SLE). Runs inside Claude Code as a project with a `/diagnose` skill, `/improve` skill, 4 specialized agents, and 4 MCP servers.
+Medical diagnostic reasoning engine that combines literature-based reasoning with statistical lab pattern discovery. The key feature is **collectively-abnormal detection** -  labs individually within normal range but collectively pointing to disease (e.g., pre-clinical SLE). Runs inside Claude Code as a project with a `/diagnose` skill, `/improve` skill, 4 specialized agents, and 4 MCP servers.
 
 ## Architecture (v3 Hybrid)
 
@@ -49,7 +49,7 @@ v3 inverts control: Claude is the primary diagnostician, the deterministic engin
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `preprocess_patient_labs` | `(patient: PatientProfile)` | `PatientProfile` — name-normalized, unit-converted, CBC %-validated |
+| `preprocess_patient_labs` | `(patient: PatientProfile)` | `PatientProfile` - name-normalized, unit-converted, CBC %-validated |
 
 Key behaviors:
 - 39 name aliases (e.g., "WBC" → "white_blood_cells")
@@ -61,25 +61,25 @@ Key behaviors:
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `normalize_test_name` | `(test_name: str)` | `str` — canonical snake_case name |
-| `lookup_reference_range` | `(test_name, age=None, sex=None)` | `tuple[float, float]` — (low, high). Raises `KeyError` if unknown. |
-| `compute_z_score` | `(value, ref_low, ref_high)` | `float` — Z-score. Formula: `(value - midpoint) / SD` where `SD = (high-low)/4`. |
-| `classify_severity` | `(z_score)` | `Severity` enum — NORMAL/BORDERLINE/MILD/MODERATE/SEVERE/CRITICAL |
-| `is_critical` | `(test_name, value)` | `bool` — True if outside critical_low/critical_high |
-| `analyze_single_lab` | `(test_name, value, unit, age=None, sex=None)` | `LabValue` — full analysis with Z-score, severity, refs |
-| `analyze_panel` | `(labs: list[dict], age=None, sex=None)` | `list[LabValue]` — batch analysis. Each dict: `{test_name, value, unit}` |
-| `compute_rate_of_change` | `(values, timestamps)` | `tuple[float, float]` — (slope in units/hour, p_value) |
-| `analyze_trends` | `(lab_history: list[LabPanel])` | `list[LabTrend]` — per-test trends across panels |
+| `normalize_test_name` | `(test_name: str)` | `str` - canonical snake_case name |
+| `lookup_reference_range` | `(test_name, age=None, sex=None)` | `tuple[float, float]` - (low, high). Raises `KeyError` if unknown. |
+| `compute_z_score` | `(value, ref_low, ref_high)` | `float` - Z-score. Formula: `(value - midpoint) / SD` where `SD = (high-low)/4`. |
+| `classify_severity` | `(z_score)` | `Severity` enum - NORMAL/BORDERLINE/MILD/MODERATE/SEVERE/CRITICAL |
+| `is_critical` | `(test_name, value)` | `bool` - True if outside critical_low/critical_high |
+| `analyze_single_lab` | `(test_name, value, unit, age=None, sex=None)` | `LabValue` - full analysis with Z-score, severity, refs |
+| `analyze_panel` | `(labs: list[dict], age=None, sex=None)` | `list[LabValue]` - batch analysis. Each dict: `{test_name, value, unit}` |
+| `compute_rate_of_change` | `(values, timestamps)` | `tuple[float, float]` - (slope in units/hour, p_value) |
+| `analyze_trends` | `(lab_history: list[LabPanel])` | `list[LabTrend]` - per-test trends across panels |
 
 ### pattern_detector.py
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `match_known_patterns` | `(lab_values: list[LabValue])` | `list[LabPatternMatch]` — weighted cosine sim > 0.5, sorted desc. Needs ≥2 shared analytes. Weights applied as √weight to both patient and disease vectors. |
-| `detect_collectively_abnormal` | `(lab_values, threshold=0.05)` | `list[LabPatternMatch]` — individually normal (\|z\|<2) but collectively significant via weighted directional projection. Uses chi²(df=1) test. |
-| `detect_change_points` | `(trend: LabTrend)` | `list[int]` — change point indices via ruptures PELT. Empty if <4 points. |
-| `detect_trend` | `(trend: LabTrend)` | `str` — "increasing", "decreasing", or "stable" via pymannkendall. |
-| `compute_ratios` | `(lab_values)` | `list[dict]` — `{name, value, normal_range, interpretation}` |
+| `match_known_patterns` | `(lab_values: list[LabValue])` | `list[LabPatternMatch]` - weighted cosine sim > 0.5, sorted desc. Needs ≥2 shared analytes. Weights applied as √weight to both patient and disease vectors. |
+| `detect_collectively_abnormal` | `(lab_values, threshold=0.05)` | `list[LabPatternMatch]` - individually normal (\|z\|<2) but collectively significant via weighted directional projection. Uses chi²(df=1) test. |
+| `detect_change_points` | `(trend: LabTrend)` | `list[int]` - change point indices via ruptures PELT. Empty if <4 points. |
+| `detect_trend` | `(trend: LabTrend)` | `str` -"increasing", "decreasing", or "stable" via pymannkendall. |
+| `compute_ratios` | `(lab_values)` | `list[dict]` -`{name, value, normal_range, interpretation}` |
 | `run_full_pattern_analysis` | `(lab_values, lab_trends=None)` | `dict` with keys: `known_patterns`, `collectively_abnormal`, `diagnostic_ratios`, `trend_analyses` |
 
 **Built-in diagnostic ratios**: BUN/Creatinine (10-20), AST/ALT (0.7-1.3), Albumin/Globulin (1.2-2.2), Calcium/Phosphorus (1.8-3.5), Transferrin Saturation (0.20-0.50).
@@ -91,8 +91,8 @@ Key behaviors:
 | Function | Signature | Returns |
 |----------|-----------|---------|
 | `FindingMapper.__init__` | `(rules_path=None, lr_path=None)` | Instance with loaded rules and LR data |
-| `FindingMapper.map_labs` | `(lab_values: list[LabValue])` | `list[Evidence]` — three-pass mapping with subsumption |
-| `map_labs_to_findings` | `(lab_values: list[LabValue])` | `list[Evidence]` — convenience wrapper |
+| `FindingMapper.map_labs` | `(lab_values: list[LabValue])` | `list[Evidence]` - three-pass mapping with subsumption |
+| `map_labs_to_findings` | `(lab_values: list[LabValue])` | `list[Evidence]` - convenience wrapper |
 
 Three-pass mapping: single rules → composite rules → computed rules. Subsumption prevents double-counting (e.g., `ferritin_less_than_15` suppresses `ferritin_low`).
 
@@ -100,12 +100,12 @@ Three-pass mapping: single rules → composite rules → computed rules. Subsump
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `lookup_lr` | `(finding, disease)` | `tuple[float, float]` — (LR+, LR-). Default (1.0, 1.0). |
-| `update_single` | `(hypothesis, evidence)` | `Hypothesis` — Bayes update in log-odds, clamped to [-20, 20]. Respects `relevant_diseases` filtering. |
-| `update_all` | `(hypotheses, new_evidence)` | `list[Hypothesis]` — apply all evidence, normalize posteriors. |
-| `normalize_posteriors` | `(hypotheses)` | `list[Hypothesis]` — sum to 0.95 (5% reserved for "other"). Applies graduated probability floors. |
-| `rank_hypotheses` | `(hypotheses)` | `list[Hypothesis]` — sorted by posterior desc. Top = MOST_LIKELY. |
-| `generate_initial_hypotheses` | `(patient, pattern_matches)` | `list[Hypothesis]` — from patterns + symptom overlap with illness scripts. |
+| `lookup_lr` | `(finding, disease)` | `tuple[float, float]` - (LR+, LR-). Default (1.0, 1.0). |
+| `update_single` | `(hypothesis, evidence)` | `Hypothesis` - Bayes update in log-odds, clamped to [-20, 20]. Respects `relevant_diseases` filtering. |
+| `update_all` | `(hypotheses, new_evidence)` | `list[Hypothesis]` - apply all evidence, normalize posteriors. |
+| `normalize_posteriors` | `(hypotheses)` | `list[Hypothesis]` - sum to 0.95 (5% reserved for "other"). Applies graduated probability floors. |
+| `rank_hypotheses` | `(hypotheses)` | `list[Hypothesis]` - sorted by posterior desc. Top = MOST_LIKELY. |
+| `generate_initial_hypotheses` | `(patient, pattern_matches)` | `list[Hypothesis]` - from patterns + symptom overlap with illness scripts. |
 
 **Evidence filtering**: When `evidence.relevant_diseases` is populated, the explicit LR only applies to matching hypotheses. When empty (legacy behavior), LR applies to all via lookup.
 
@@ -119,27 +119,27 @@ Three-pass mapping: single rules → composite rules → computed rules. Subsump
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `current_entropy` | `(hypotheses)` | `float` — Shannon entropy of posterior distribution. |
-| `expected_info_gain` | `(hypotheses, test_name)` | `float` — EIG = H_current - E[H_after_test]. Always ≥ 0. |
-| `rank_tests` | `(hypotheses, candidate_tests, invasiveness=None)` | `list[RecommendedTest]` — score = EIG / invasiveness. |
-| `suggest_tests` | `(hypotheses, max_tests=5)` | `list[RecommendedTest]` — auto-picks from LR data + illness scripts. |
+| `current_entropy` | `(hypotheses)` | `float` - Shannon entropy of posterior distribution. |
+| `expected_info_gain` | `(hypotheses, test_name)` | `float` - EIG = H_current - E[H_after_test]. Always ≥ 0. |
+| `rank_tests` | `(hypotheses, candidate_tests, invasiveness=None)` | `list[RecommendedTest]` - score = EIG / invasiveness. |
+| `suggest_tests` | `(hypotheses, max_tests=5)` | `list[RecommendedTest]` - auto-picks from LR data + illness scripts. |
 
 ### convergence.py
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `check_hypothesis_stability` | `(iterations, required_stable=2)` | `bool` — top unchanged for N consecutive iterations. |
-| `check_probability_concentration` | `(hypotheses, threshold=0.85)` | `bool` — top posterior > threshold. |
-| `check_diminishing_returns` | `(iterations, min_delta=0.01)` | `bool` — entropy delta < min_delta. |
-| `compute_convergence_metrics` | `(hypotheses, iterations)` | `dict` — `{entropy, gini, hhi, top_prob, stable_count, entropy_delta}` |
-| `should_converge` | `(hypotheses, iterations)` | `tuple[bool, str]` — converges if (stability AND concentration) OR (diminishing AND concentration). |
-| `should_widen_search` | `(hypotheses, iterations)` | `bool` — True if entropy increasing, top prob decreasing, or no hypothesis > 0.3 after 2+ iterations. |
+| `check_hypothesis_stability` | `(iterations, required_stable=2)` | `bool` - top unchanged for N consecutive iterations. |
+| `check_probability_concentration` | `(hypotheses, threshold=0.85)` | `bool` - top posterior > threshold. |
+| `check_diminishing_returns` | `(iterations, min_delta=0.01)` | `bool` - entropy delta < min_delta. |
+| `compute_convergence_metrics` | `(hypotheses, iterations)` | `dict` - `{entropy, gini, hhi, top_prob, stable_count, entropy_delta}` |
+| `should_converge` | `(hypotheses, iterations)` | `tuple[bool, str]` - converges if (stability AND concentration) OR (diminishing AND concentration). |
+| `should_widen_search` | `(hypotheses, iterations)` | `bool` - True if entropy increasing, top prob decreasing, or no hypothesis > 0.3 after 2+ iterations. |
 
 ### pipeline.py
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `run_phase1_pipeline` | `(patient: PatientProfile)` | `StructuredBriefing` — runs all deterministic steps in one call |
+| `run_phase1_pipeline` | `(patient: PatientProfile)` | `StructuredBriefing` - runs all deterministic steps in one call |
 
 Calls: preprocessor → lab_analyzer → pattern_detector → finding_mapper → bayesian_updater → info_gain. Returns a single StructuredBriefing with all results formatted for LLM consumption.
 
@@ -147,9 +147,9 @@ Calls: preprocessor → lab_analyzer → pattern_detector → finding_mapper →
 
 | Function | Signature | Returns |
 |----------|-----------|---------|
-| `verify_lab_claims` | `(claims: list[dict], lab_analyses: list[LabValue])` | `list[LabClaimCheck]` — checks LLM lab interpretations against engine z-scores |
-| `verify_lr_sources` | `(evidence: list[Evidence])` | `list[LRSourceCheck]` — checks LR provenance, caps uncurated LRs at 3.0 |
-| `run_verification` | `(claims, evidence, lab_analyses)` | `VerificationResult` — full verification |
+| `verify_lab_claims` | `(claims: list[dict], lab_analyses: list[LabValue])` | `list[LabClaimCheck]` - checks LLM lab interpretations against engine z-scores |
+| `verify_lr_sources` | `(evidence: list[Evidence])` | `list[LRSourceCheck]` - checks LR provenance, caps uncurated LRs at 3.0 |
+| `run_verification` | `(claims, evidence, lab_analyses)` | `VerificationResult` - full verification |
 
 ### utils.py
 
@@ -178,27 +178,27 @@ Calls: preprocessor → lab_analyzer → pattern_detector → finding_mapper →
 
 ### Key Models
 
-**DiagnosticState** — Master state object. Contains: `session_id`, `patient: PatientProfile`, `problem_representation`, `hypotheses`, `all_evidence`, `lab_analyses`, `pattern_matches`, `recommended_tests`, `iterations`, `current_iteration`, `max_iterations=5`, `converged`, `convergence_reason`, `should_widen_search`, `reasoning_trace`, `errors`, `complexity: ComplexityLevel`, `structured_briefing`, `literature_findings`, `verification_result`, `knowledge_gaps`, `unexplained_findings`.
+**DiagnosticState** - Master state object. Contains: `session_id`, `patient: PatientProfile`, `problem_representation`, `hypotheses`, `all_evidence`, `lab_analyses`, `pattern_matches`, `recommended_tests`, `iterations`, `current_iteration`, `max_iterations=5`, `converged`, `convergence_reason`, `should_widen_search`, `reasoning_trace`, `errors`, `complexity: ComplexityLevel`, `structured_briefing`, `literature_findings`, `verification_result`, `knowledge_gaps`, `unexplained_findings`.
 
-**PatientProfile** — `age`, `sex`, `chief_complaint`, `symptoms`, `signs`, `medical_history`, `medications`, `family_history`, `social_history`, `lab_panels`, `imaging`, `vitals`.
+**PatientProfile** - `age`, `sex`, `chief_complaint`, `symptoms`, `signs`, `medical_history`, `medications`, `family_history`, `social_history`, `lab_panels`, `imaging`, `vitals`.
 
-**LabValue** — `test_name`, `value`, `unit`, `reference_low/high`, `loinc_code`, `collected_at`, `z_score`, `severity`, `is_critical`.
+**LabValue** - `test_name`, `value`, `unit`, `reference_low/high`, `loinc_code`, `collected_at`, `z_score`, `severity`, `is_critical`.
 
-**Hypothesis** — `disease`, `category`, `prior_probability`, `posterior_probability`, `log_odds`, `evidence_for/against`, `pattern_matches`, `key_findings`, `orphan_findings`, `confidence_note`, `iteration_added`, `iterations_stable`.
+**Hypothesis** - `disease`, `category`, `prior_probability`, `posterior_probability`, `log_odds`, `evidence_for/against`, `pattern_matches`, `key_findings`, `orphan_findings`, `confidence_note`, `iteration_added`, `iterations_stable`.
 
-**Evidence** — `finding`, `finding_type`, `supports`, `strength (0-1)`, `likelihood_ratio`, `source`, `quality`, `reasoning`, `relevant_diseases`, `iteration_added`.
+**Evidence** - `finding`, `finding_type`, `supports`, `strength (0-1)`, `likelihood_ratio`, `source`, `quality`, `reasoning`, `relevant_diseases`, `iteration_added`.
 
-**LabPatternMatch** — `pattern_name`, `disease`, `similarity_score`, `matched_analytes`, `missing_analytes`, `unexpected_findings`, `is_collectively_abnormal`, `mahalanobis_distance` (legacy, unused), `joint_probability` (legacy, unused).
+**LabPatternMatch** - `pattern_name`, `disease`, `similarity_score`, `matched_analytes`, `missing_analytes`, `unexpected_findings`, `is_collectively_abnormal`, `mahalanobis_distance` (legacy, unused), `joint_probability` (legacy, unused).
 
-**StructuredBriefing** — `patient`, `problem_representation`, `analyzed_labs`, `abnormal_labs`, `critical_labs`, `known_patterns`, `collectively_abnormal`, `diagnostic_ratios`, `mapped_findings`, `fallback_findings`, `engine_hypotheses`, `engine_entropy`, `engine_recommended_tests`, `preprocessing_warnings`.
+**StructuredBriefing** - `patient`, `problem_representation`, `analyzed_labs`, `abnormal_labs`, `critical_labs`, `known_patterns`, `collectively_abnormal`, `diagnostic_ratios`, `mapped_findings`, `fallback_findings`, `engine_hypotheses`, `engine_entropy`, `engine_recommended_tests`, `preprocessing_warnings`.
 
-**LiteratureFinding** — `finding_description`, `finding_type`, `source`, `quality`, `reported_lr_positive`, `reported_lr_negative`, `relevant_diseases`, `supports_disease`, `opposes_disease`, `raw_text`.
+**LiteratureFinding** - `finding_description`, `finding_type`, `source`, `quality`, `reported_lr_positive`, `reported_lr_negative`, `relevant_diseases`, `supports_disease`, `opposes_disease`, `raw_text`.
 
-**VerificationResult** — `lab_claim_checks`, `lr_source_checks`, `inconsistencies_found`, `warnings`, `overall_consistent`.
+**VerificationResult** - `lab_claim_checks`, `lr_source_checks`, `inconsistencies_found`, `warnings`, `overall_consistent`.
 
-**LabClaimCheck** — `claim`, `test_name`, `llm_interpretation`, `engine_z_score`, `engine_severity`, `consistent`, `discrepancy`.
+**LabClaimCheck** - `claim`, `test_name`, `llm_interpretation`, `engine_z_score`, `engine_severity`, `consistent`, `discrepancy`.
 
-**LRSourceCheck** — `finding`, `disease`, `lr_value`, `source`, `capped`.
+**LRSourceCheck** - `finding`, `disease`, `lr_value`, `source`, `capped`.
 
 Other: `LabPanel`, `LabTrend`, `RecommendedTest`, `ProblemRepresentation`, `SemanticQualifier`, `LabSummary`, `FindingSummary`, `RatioResult`, `LoopIteration`.
 
@@ -206,7 +206,7 @@ Other: `LabPanel`, `LabTrend`, `RecommendedTest`, `ProblemRepresentation`, `Sema
 
 ## Data Files
 
-### lab_ranges.json — 91 analytes
+### lab_ranges.json - 91 analytes
 
 ```json
 { "test_name": {
@@ -224,7 +224,7 @@ Other: `LabPanel`, `LabTrend`, `RecommendedTest`, `ProblemRepresentation`, `Sema
 }}
 ```
 
-### disease_lab_patterns.json — 18 patterns
+### disease_lab_patterns.json - 18 patterns
 
 ```json
 { "disease_key": {
@@ -242,7 +242,7 @@ Diseases: iron_deficiency_anemia, vitamin_b12_deficiency, hemochromatosis, hypot
 
 `collectively_abnormal: true` enabled on 10/18: vitamin_b12_deficiency, hemochromatosis, hypothyroidism, cushing_syndrome, addison_disease, chronic_kidney_disease, multiple_myeloma, primary_hyperparathyroidism, hemolytic_anemia, preclinical_sle.
 
-### illness_scripts.json — 51 diseases
+### illness_scripts.json - 51 diseases
 
 ```json
 { "disease_key": {
@@ -259,7 +259,7 @@ Diseases: iron_deficiency_anemia, vitamin_b12_deficiency, hemochromatosis, hypot
 }}
 ```
 
-### likelihood_ratios.json — 186 findings, 379 LR pairs
+### likelihood_ratios.json - 186 findings, 379 LR pairs
 
 ```json
 { "finding_id": {
@@ -272,7 +272,7 @@ Diseases: iron_deficiency_anemia, vitamin_b12_deficiency, hemochromatosis, hypot
 
 Finding IDs use patterns like `ferritin_less_than_15`, `tsh_elevated`, `koilonychia`, `kussmaul_breathing`.
 
-### finding_rules.json — 81 rules (66 single + 8 composite + 7 computed) + 39 name aliases
+### finding_rules.json - 81 rules (66 single + 8 composite + 7 computed) + 39 name aliases
 
 ```json
 {
@@ -283,7 +283,7 @@ Finding IDs use patterns like `ferritin_less_than_15`, `tsh_elevated`, `koilonyc
 }
 ```
 
-### loinc_mappings.json — 91 codes, 283 aliases
+### loinc_mappings.json - 91 codes, 283 aliases
 
 Two sections: `loinc_to_info` (LOINC → `{common_names, canonical_name, category, specimen}`) and `name_to_loinc` (alias → LOINC code, e.g., `"WBC" → "6690-2"`, `"K" → "2951-2"`).
 
@@ -358,33 +358,33 @@ All in `.claude/agents/`. Each has YAML frontmatter with `name`, `description`, 
 
 | Threshold | Value | Where Used |
 |-----------|-------|------------|
-| Z-score SD derivation | `SD = (high - low) / 4` | lab_analyzer — assumes ref range = mean ± 2 SD |
+| Z-score SD derivation | `SD = (high - low) / 4` | lab_analyzer - assumes ref range = mean ± 2 SD |
 | Severity: NORMAL | `\|z\| < 2.0` | lab_analyzer |
 | Severity: BORDERLINE | `2.0 ≤ \|z\| < 2.5` | lab_analyzer |
 | Severity: MILD | `2.5 ≤ \|z\| < 3.0` | lab_analyzer |
 | Severity: MODERATE | `3.0 ≤ \|z\| < 4.0` | lab_analyzer |
 | Severity: SEVERE | `4.0 ≤ \|z\| < 5.0` | lab_analyzer |
 | Severity: CRITICAL | `\|z\| ≥ 5.0` | lab_analyzer |
-| Cosine similarity cutoff | `> 0.5` | pattern_detector — minimum for pattern match |
-| Min shared analytes (cosine) | `≥ 2` | pattern_detector — avoids degenerate 1D matches |
-| Collectively-abnormal threshold | `0.05` (default) | pattern_detector — chi²(df=1) p-value below this flags pattern |
-| Individually-normal bound | `\|z\| < 2.0` | pattern_detector — only "normal" labs for collectively-abnormal |
-| Log-odds clamp | `[-20, 20]` | bayesian_updater — prevents extreme probabilities |
-| OTHER_RESERVE mass | `5%` | bayesian_updater — reserved for undiscovered diagnoses |
-| Graduated floor (DI=5) | `8%` | bayesian_updater — life-threatening if missed |
-| Graduated floor (DI=4) | `5%` | bayesian_updater — serious if missed |
-| Graduated floor (DI=3) | `2%` | bayesian_updater — important, delayed harm |
-| Uncurated LR cap | `3.0` | verifier — LLM-estimated LRs capped here |
-| Convergence: stability required | `2` consecutive iterations | convergence — top hypothesis unchanged |
-| Convergence: concentration | `> 0.85` | convergence — top posterior must exceed 85% |
+| Cosine similarity cutoff | `> 0.5` | pattern_detector - minimum for pattern match |
+| Min shared analytes (cosine) | `≥ 2` | pattern_detector - avoids degenerate 1D matches |
+| Collectively-abnormal threshold | `0.05` (default) | pattern_detector - chi²(df=1) p-value below this flags pattern |
+| Individually-normal bound | `\|z\| < 2.0` | pattern_detector - only "normal" labs for collectively-abnormal |
+| Log-odds clamp | `[-20, 20]` | bayesian_updater - prevents extreme probabilities |
+| OTHER_RESERVE mass | `5%` | bayesian_updater - reserved for undiscovered diagnoses |
+| Graduated floor (DI=5) | `8%` | bayesian_updater - life-threatening if missed |
+| Graduated floor (DI=4) | `5%` | bayesian_updater - serious if missed |
+| Graduated floor (DI=3) | `2%` | bayesian_updater - important, delayed harm |
+| Uncurated LR cap | `3.0` | verifier - LLM-estimated LRs capped here |
+| Convergence: stability required | `2` consecutive iterations | convergence - top hypothesis unchanged |
+| Convergence: concentration | `> 0.85` | convergence - top posterior must exceed 85% |
 | Convergence: diminishing returns | `< 0.01` entropy delta | convergence |
 | Widen search: low confidence | `< 0.3` after 2+ iterations | convergence |
 | Max iterations | `5` | models.py DiagnosticState default |
 | Change-point min data | `4` points | pattern_detector (PELT) |
 | Trend min data | `3` points | pattern_detector (Mann-Kendall) |
-| Probability clamp | `(0.0001, 0.9999)` | utils — for odds conversion |
+| Probability clamp | `(0.0001, 0.9999)` | utils - for odds conversion |
 | Symptom overlap for hypothesis | `≥ 2` matching symptoms | bayesian_updater |
-| Prior boost cap | `0.5` max | bayesian_updater — pattern match prior cap |
+| Prior boost cap | `0.5` max | bayesian_updater - pattern match prior cap |
 | EIG p_positive bounds | `[0.05, 0.95]` | info_gain |
 
 ---

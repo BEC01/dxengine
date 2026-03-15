@@ -1,6 +1,6 @@
 ---
 name: eval
-description: Run DxEngine's multi-layer clinical evaluation — lab accuracy, clinical cases, LLM comparison
+description: Run DxEngine's multi-layer clinical evaluation - lab accuracy, clinical cases, LLM comparison
 user_invocable: true
 arguments:
   - name: layer
@@ -11,7 +11,7 @@ arguments:
     required: false
 ---
 
-# /eval — DxEngine Clinical Evaluation Suite
+# /eval - DxEngine Clinical Evaluation Suite
 
 Run the multi-layer evaluation that validates DxEngine from foundation to clinical accuracy. Each layer tests a different aspect of the system's correctness.
 
@@ -60,10 +60,10 @@ uv run python tests/eval/lab_accuracy/run_lab_accuracy.py
 ```
 
 **What to check in the output:**
-- "Passed: X/Y (Z%)" — should be 100% or near-100%
-- "ZERO-LOW ANALYTES" section — documents known behavior, not failures
-- "RANGE DISCREPANCIES" — informational, shows where DxEngine ranges differ from textbook sources
-- "OVERALL GRADE" — PASS, WARN, or FAIL
+- "Passed: X/Y (Z%)" - should be 100% or near-100%
+- "ZERO-LOW ANALYTES" section - documents known behavior, not failures
+- "RANGE DISCREPANCIES" - informational, shows where DxEngine ranges differ from textbook sources
+- "OVERALL GRADE" - PASS, WARN, or FAIL
 
 **If FAIL:** A fundamental lab interpretation bug exists. Stop and investigate before running other layers. Check the FAILURES section for which analytes/demographics are broken.
 
@@ -81,12 +81,12 @@ uv run python tests/eval/clinical/run_clinical_eval.py --category $ARGUMENTS.cat
 ```
 
 **What to check in the output:**
-- **Top-3 accuracy** — primary metric. Current baseline: ~82.5%
-- **Importance-5 sensitivity** — can't-miss diseases. Current baseline: ~82.4%
-- **OOV handling** — out-of-vocabulary pass rate. Should be 100%
-- **Discriminator recall** — how many expected findings fired. Current baseline: ~85.9%
-- **FAILURES** section — specific cases the engine misses (identifies improvement targets)
-- **BY IMPORTANCE** breakdown — safety-critical diseases should score highest
+- **Top-3 accuracy** - primary metric. Current baseline: ~82.5%
+- **Importance-5 sensitivity** - can't-miss diseases. Current baseline: ~82.4%
+- **OOV handling** - out-of-vocabulary pass rate. Should be 100%
+- **Discriminator recall** - how many expected findings fired. Current baseline: ~85.9%
+- **FAILURES** section - specific cases the engine misses (identifies improvement targets)
+- **BY IMPORTANCE** breakdown - safety-critical diseases should score highest
 
 **Key thresholds:**
 - Top-3 >= 65% (gate)
@@ -104,10 +104,10 @@ uv run python tests/eval/comparison/run_comparison.py --reuse-cache --models cla
 This uses pre-generated blind Claude diagnoses (stored in `state/comparison/claude_results.json`). No API keys needed.
 
 **What to check in the output:**
-- **OVERALL ACCURACY** table — DxEngine vs Claude side-by-side
-- **DXENGINE vs CLAUDE** section — which cases each system wins
-- **Engine wins** — cases where DxEngine beats raw Claude (these are the value demonstrations)
-- **CLAUDE wins** — cases where the engine needs improvement
+- **OVERALL ACCURACY** table - DxEngine vs Claude side-by-side
+- **DXENGINE vs CLAUDE** section - which cases each system wins
+- **Engine wins** - cases where DxEngine beats raw Claude (these are the value demonstrations)
+- **CLAUDE wins** - cases where the engine needs improvement
 
 **How to interpret:**
 - Claude will typically have higher top-1 accuracy (LLMs are good at canonical presentations)
@@ -142,17 +142,17 @@ After running all layers (or the requested layer), print a unified summary:
 ║                DxEngine Evaluation Summary                      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  Layer 1 — Lab Accuracy                                          ║
+║  Layer 1 - Lab Accuracy                                          ║
 ║    Internal:  1227/1227 (100.0%)                                ║
 ║    External:  117/120 classification agreement (97.5%)           ║
 ║    Grade:     PASS                                               ║
 ║                                                                  ║
-║  Layer 2 — Clinical Cases (50 cases)                            ║
+║  Layer 2 - Clinical Cases (50 cases)                            ║
 ║    Top-1:     75.0%   Top-3: 82.5%   Top-5: 92.5%              ║
 ║    Imp-5:     82.4%   OOV: 100%      Disc recall: 85.9%        ║
 ║    Score:     0.7063                                             ║
 ║                                                                  ║
-║  Layer 3 — vs Claude (blind)                                     ║
+║  Layer 3 - vs Claude (blind)                                     ║
 ║    Engine:    top-3 82.5%   |   Claude: top-3 97.5%             ║
 ║    Engine:    OOV 100%      |   Claude: OOV 0%                  ║
 ║    Engine:    score 0.706   |   Claude: score 0.728             ║

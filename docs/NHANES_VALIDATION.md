@@ -6,7 +6,7 @@ DxEngine's collectively-abnormal detection was validated on **5,273 real adults*
 
 **Key findings:**
 - **CKD pattern: validated.** 98.0% specificity, 3.6x enrichment in kidney disease (p < 0.0001)
-- **SLE pattern: weak signal.** 1.4x enrichment in arthritis/autoimmune (p = 0.0001), but 9.3% false-positive rate — pattern too broad
+- **SLE pattern: weak signal.** 1.4x enrichment in arthritis/autoimmune (p = 0.0001), but 9.3% false-positive rate - pattern too broad
 - **Hypothyroidism pattern: not validated.** Fires less in thyroid patients than healthy (0.7x, p = 0.14)
 - **Myeloma pattern: not validated.** No enrichment in cancer patients (0.7x, p = 0.64)
 - Detection rate increases with age (15% in 20s to 22% in 60s), consistent with subclinical disease prevalence
@@ -142,7 +142,7 @@ Four CA patterns were tested against the closest available NHANES self-reported 
 
 **Hypothyroidism: not validated.** The pattern fires LESS in self-reported thyroid patients (3.3%) than in healthy participants (4.7%). This likely means the pattern definition does not match how hypothyroidism actually presents in population-level data, or that most thyroid patients are treated (normalized labs).
 
-**Multiple myeloma: not validated.** No enrichment in cancer patients. Expected — "cancer" is too broad a proxy for myeloma specifically, and myeloma is rare (~0.007% prevalence).
+**Multiple myeloma: not validated.** No enrichment in cancer patients. Expected - "cancer" is too broad a proxy for myeloma specifically, and myeloma is rare (~0.007% prevalence).
 
 ### Diabetes Validation
 
@@ -169,11 +169,11 @@ Detection rate increases with age through the 60s, consistent with increasing pr
 
 ### Pre-clinical SLE Pattern: Over-Sensitive (Confirmed)
 
-The preclinical_sle pattern fires on 9.3% of the general population. SLE prevalence is approximately 0.1%. Chi-squared testing against arthritis patients (autoimmune proxy) shows a statistically significant enrichment (1.4x, p = 0.0001), indicating the pattern captures *something* autoimmune-related — but with a 8.2% false-positive rate, it is far too broad for clinical use. **This pattern requires recalibration: tighter weight thresholds or fewer analytes.**
+The preclinical_sle pattern fires on 9.3% of the general population. SLE prevalence is approximately 0.1%. Chi-squared testing against arthritis patients (autoimmune proxy) shows a statistically significant enrichment (1.4x, p = 0.0001), indicating the pattern captures *something* autoimmune-related - but with a 8.2% false-positive rate, it is far too broad for clinical use. **This pattern requires recalibration: tighter weight thresholds or fewer analytes.**
 
 ### Hypothyroidism Pattern: Not Validated
 
-The hypothyroidism pattern fires on 4.5% overall, but fires LESS in self-reported thyroid patients (3.3%) than healthy participants (4.7%). This was initially interpreted as "plausible given subclinical hypothyroidism prevalence" — but the chi-squared test (p = 0.14, not significant) and the inverted enrichment (0.7x) show this pattern does not discriminate thyroid disease from healthy. **Likely explanation:** most thyroid patients are on treatment (levothyroxine), normalizing their lab patterns. The CA detector may be catching untreated subclinical hypothyroidism in the "healthy" group, which would actually be a correct detection — but we cannot confirm this without TSH data.
+The hypothyroidism pattern fires on 4.5% overall, but fires LESS in self-reported thyroid patients (3.3%) than healthy participants (4.7%). This was initially interpreted as "plausible given subclinical hypothyroidism prevalence" - but the chi-squared test (p = 0.14, not significant) and the inverted enrichment (0.7x) show this pattern does not discriminate thyroid disease from healthy. **Likely explanation:** most thyroid patients are on treatment (levothyroxine), normalizing their lab patterns. The CA detector may be catching untreated subclinical hypothyroidism in the "healthy" group, which would actually be a correct detection - but we cannot confirm this without TSH data.
 
 ### Cushing Syndrome Pattern: Needs Investigation
 
@@ -181,7 +181,7 @@ The cushing_syndrome pattern fires on 3.8%. No direct NHANES validation possible
 
 ### Multiple Myeloma Pattern: Not Validated
 
-Fires on 1.1% overall with no enrichment in cancer patients (0.7x, p = 0.64). "Cancer" is too broad a proxy — myeloma is a specific hematologic malignancy representing a small fraction of all cancers. Not a meaningful test.
+Fires on 1.1% overall with no enrichment in cancer patients (0.7x, p = 0.64). "Cancer" is too broad a proxy - myeloma is a specific hematologic malignancy representing a small fraction of all cancers. Not a meaningful test.
 
 ## Limitations
 
@@ -220,4 +220,4 @@ These results are preliminary and require independent verification by medical ex
 *Validation performed: 2026-03-15*
 *NHANES cycle: 2017-2018*
 *DxEngine version: 54 disease patterns, 10 collectively-abnormal*
-*Analysis performed entirely by AI (Claude) — not reviewed by medical experts*
+*Analysis performed entirely by AI (Claude) - not reviewed by medical experts*

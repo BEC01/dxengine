@@ -22,27 +22,27 @@ Given a disease name, its existing illness script, and the list of 91 available 
 ## Available MCP Tools
 
 ### PubMed MCP (deep literature search)
-- `mcp__pubmed__pubmed_search` — Search PubMed with MeSH terms, filters
-- `mcp__pubmed__pubmed_fetch` — Batch fetch articles by PMID (abstracts, MeSH)
-- `mcp__pubmed__pubmed_pmc_fetch` — Full-text from PMC open-access articles
-- `mcp__pubmed__pubmed_related` — Find similar/citing articles for a PMID
-- `mcp__pubmed__pubmed_mesh_lookup` — Explore MeSH vocabulary for precise queries
-- `mcp__pubmed__pubmed_spell` — Spell-check biomedical queries
+- `mcp__pubmed__pubmed_search` - Search PubMed with MeSH terms, filters
+- `mcp__pubmed__pubmed_fetch` - Batch fetch articles by PMID (abstracts, MeSH)
+- `mcp__pubmed__pubmed_pmc_fetch` - Full-text from PMC open-access articles
+- `mcp__pubmed__pubmed_related` - Find similar/citing articles for a PMID
+- `mcp__pubmed__pubmed_mesh_lookup` - Explore MeSH vocabulary for precise queries
+- `mcp__pubmed__pubmed_spell` - Spell-check biomedical queries
 
 ### BioMCP (broad biomedical data via `mcp__biomcp__shell`)
-- `biomcp get disease "{name}" phenotypes` — Disease info from MONDO/Monarch
-- `biomcp search article --disease "{name}"` — Article discovery
-- `biomcp get drug "{name}" label targets` — Drug info
+- `biomcp get disease "{name}" phenotypes` - Disease info from MONDO/Monarch
+- `biomcp search article --disease "{name}"` - Article discovery
+- `biomcp get drug "{name}" label targets` - Drug info
 
 ### Lab Reference MCP (DxEngine-specific)
-- `mcp__lab-reference__identify_lab_test` — Check if analyte exists
-- `mcp__lab-reference__lookup_reference_range` — Get reference ranges
-- `mcp__lab-reference__get_disease_lab_pattern` — Get existing pattern
+- `mcp__lab-reference__identify_lab_test` - Check if analyte exists
+- `mcp__lab-reference__lookup_reference_range` - Get reference ranges
+- `mcp__lab-reference__get_disease_lab_pattern` - Get existing pattern
 
 ### Medical KB MCP (DxEngine-specific)
-- `mcp__medical-kb__get_illness_script` — Get existing illness script
-- `mcp__medical-kb__get_likelihood_ratio` — Check existing LR data
-- `mcp__medical-kb__search_by_findings` — Find diseases sharing findings
+- `mcp__medical-kb__get_illness_script` - Get existing illness script
+- `mcp__medical-kb__get_likelihood_ratio` - Check existing LR data
+- `mcp__medical-kb__search_by_findings` - Find diseases sharing findings
 
 ## Protocol
 
@@ -127,7 +127,7 @@ For each LR entry, check if a finding rule already exists:
 
 ### Phase 4b: Clinical Discriminators
 
-Check the disease's illness script `classic_presentation` for findings that could serve as **clinical rules** — unique discriminators that fire on text matching (not lab values). These are critical for diseases sharing lab patterns with existing diseases.
+Check the disease's illness script `classic_presentation` for findings that could serve as **clinical rules** - unique discriminators that fire on text matching (not lab values). These are critical for diseases sharing lab patterns with existing diseases.
 
 For each item in `classic_presentation`:
 
@@ -234,13 +234,13 @@ Output a complete `research.json` packet to the specified path:
 
 ## Key Rules
 
-1. **NEVER fabricate PMIDs** — use "clinical consensus" when no source is found
-2. **NEVER guess sensitivity/specificity** — only use published values. When none exist, use conservative defaults (LR+ = 2.0, LR- = 0.7) marked EXPERT_OPINION
+1. **NEVER fabricate PMIDs** - use "clinical consensus" when no source is found
+2. **NEVER guess sensitivity/specificity** - only use published values. When none exist, use conservative defaults (LR+ = 2.0, LR- = 0.7) marked EXPERT_OPINION
 3. **Minimum 3 analytes** in pattern, **minimum 3 LR entries**
-4. **Pattern weights must vary** — reflect relative diagnostic importance, don't set all to the same value
-5. **Z-score sign must match direction** — positive z for "increased", negative for "decreased"
-6. **Only use analytes from the 91-analyte list** — skip any not available
+4. **Pattern weights must vary** - reflect relative diagnostic importance, don't set all to the same value
+5. **Z-score sign must match direction** - positive z for "increased", negative for "decreased"
+6. **Only use analytes from the 91-analyte list** - skip any not available
 7. **LR bounds**: LR+ in [0.5, 50.0], LR- in [0.05, 1.5]
-8. **Be conservative** — underestimate rather than overestimate diagnostic power. It's easier to tune up than to debug false positives.
-9. **Pattern must be lab-based, but include clinical discriminators** — The disease pattern uses lab analytes. However, diseases sharing lab patterns with existing diseases NEED clinical rule discriminators (unique clinical context like pregnancy, alcohol use, specific signs) to achieve competitive evidence ceilings. Always check Phase 4b and propose clinical rules when unique terms exist in the illness script.
-10. **Record calculations** — show the sens/(1-spec) math for every computed LR
+8. **Be conservative** - underestimate rather than overestimate diagnostic power. It's easier to tune up than to debug false positives.
+9. **Pattern must be lab-based, but include clinical discriminators** - The disease pattern uses lab analytes. However, diseases sharing lab patterns with existing diseases NEED clinical rule discriminators (unique clinical context like pregnancy, alcohol use, specific signs) to achieve competitive evidence ceilings. Always check Phase 4b and propose clinical rules when unique terms exist in the illness script.
+10. **Record calculations** - show the sens/(1-spec) math for every computed LR

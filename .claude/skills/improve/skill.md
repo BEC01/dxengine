@@ -1,6 +1,6 @@
 ---
 name: improve
-description: Run perpetual DxEngine self-improvement loop — evaluate, fix, auto-merge, repeat until interrupted
+description: Run perpetual DxEngine self-improvement loop - evaluate, fix, auto-merge, repeat until interrupted
 user_invocable: true
 arguments:
   - name: focus
@@ -64,9 +64,9 @@ Pick the fix that would affect the most failing vignettes. **Never repeat a fix 
 
 ### Step 3: Apply the fix
 Edit the appropriate data file directly on `master`:
-- `data/likelihood_ratios.json` — for LR additions/modifications
-- `data/disease_lab_patterns.json` — for pattern additions
-- `data/finding_rules.json` — for finding rule additions
+- `data/likelihood_ratios.json` - for LR additions/modifications
+- `data/disease_lab_patterns.json` - for pattern additions
+- `data/finding_rules.json` - for finding rule additions
 
 **LR Safety Bounds**:
 - LR+ must be in [0.5, 50.0]
@@ -105,13 +105,13 @@ Reset `rejections=0`. Print a one-line status: `✓ Iteration N: [description] (
 ```bash
 git checkout -- data/
 ```
-Increment `rejections`. Print: `✗ Iteration N: [description] — REJECTED ([reason])`.
+Increment `rejections`. Print: `✗ Iteration N: [description] - REJECTED ([reason])`.
 
 ### Step 8: Continue or pause
 
 **Pause conditions** (print status and pause for next `/improve` invocation):
-- `rejections >= 5` consecutive — print "Paused: 5 consecutive rejections, diminishing returns. Re-run /improve to continue with fresh analysis."
-- No more distinct fixes to try — print "Paused: exhausted all identified fixes. Add more vignettes or data and re-run /improve."
+- `rejections >= 5` consecutive - print "Paused: 5 consecutive rejections, diminishing returns. Re-run /improve to continue with fresh analysis."
+- No more distinct fixes to try - print "Paused: exhausted all identified fixes. Add more vignettes or data and re-run /improve."
 
 **Otherwise: go back to Step 1 immediately.** Do not stop. Do not summarize. Do not ask the user. Just keep improving.
 

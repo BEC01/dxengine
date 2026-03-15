@@ -4,10 +4,10 @@
 
 DxEngine uses a hybrid reasoning approach combining:
 
-1. **Pattern Recognition** — Match lab patterns to known disease signatures
-2. **Hypothetico-Deductive** — Generate, test, and refine hypotheses
-3. **Bayesian Updating** — Quantitative probability updates with likelihood ratios
-4. **Adversarial Review** — Systematic bias checking
+1. **Pattern Recognition** - Match lab patterns to known disease signatures
+2. **Hypothetico-Deductive** - Generate, test, and refine hypotheses
+3. **Bayesian Updating** - Quantitative probability updates with likelihood ratios
+4. **Adversarial Review** - Systematic bias checking
 
 ## Cognitive Bias Checklist
 
@@ -42,4 +42,4 @@ Converge when ALL of:
 3. No unexplained critical findings
 4. Adversarial agent has not blocked convergence
 
-OR when max iterations (5) reached — output with low confidence flag.
+OR when max iterations (5) reached - output with low confidence flag.
