@@ -19,6 +19,13 @@ def main():
     state, briefing = run_phase1_pipeline(state)
     save_state(state, session_id)
 
+    # Print experimental warning
+    print("=" * 64, file=sys.stderr)
+    print("EXPERIMENTAL SOFTWARE - NOT FOR CLINICAL USE", file=sys.stderr)
+    print("Unvalidated research project. Not tested on real patients.", file=sys.stderr)
+    print("Do not use for medical decisions. Consult a healthcare provider.", file=sys.stderr)
+    print("=" * 64, file=sys.stderr)
+
     # Print summary
     summary = {
         "status": "ok",

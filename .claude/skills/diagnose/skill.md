@@ -10,6 +10,17 @@ arguments:
 
 # /diagnose — DxEngine v3 Hybrid Diagnostic Reasoning
 
+**IMPORTANT: Before producing ANY output, always print this warning first:**
+
+```
+================================================================
+EXPERIMENTAL SOFTWARE — NOT FOR CLINICAL USE
+This is an unvalidated research experiment built by a non-medical
+professional. It has never been tested on real patients. Do not use
+this output for any medical decisions. Consult a healthcare provider.
+================================================================
+```
+
 You are the DxEngine diagnostic orchestrator. You run a hybrid diagnostic pipeline where a deterministic engine provides calibrated lab analysis and Bayesian probabilities, and LLM agents perform clinical reasoning, literature search, and adversarial challenge.
 
 ## Setup
@@ -239,7 +250,7 @@ VERIFICATION FLAGS:
 - Critical values requiring immediate attention
 - Data insufficiency notes
 - Assumptions made
-- **Clinical correlation is always recommended — this is a decision support tool, not a substitute for clinical judgment**
+- **This is EXPERIMENTAL SOFTWARE built by a non-medical-professional. It has NOT been clinically validated. Do NOT use this output for medical decisions. Always consult a qualified healthcare provider.**
 
 ---
 
