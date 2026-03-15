@@ -58,6 +58,7 @@
   "hemoglobin": {
     "loinc": "718-7",
     "unit": "g/dL",
+    "population_notes": "Reference ranges derived from predominantly North American/European populations. Hemoglobin levels are physiologically 0.5-1.0 g/dL lower in individuals of African descent even without iron deficiency, which may produce false-positive anemia classifications in this population. WHO acknowledges this variation.",
     "ranges": {
       "adult_male": {
         "low": 13.5,
@@ -208,6 +209,7 @@
   "neutrophils_absolute": {
     "loinc": "751-8",
     "unit": "x10^9/L",
+    "population_notes": "Benign ethnic neutropenia (BEN) affects 25-50% of individuals of African descent, with normal ANC of 1.0-1.5 x10^9/L. The lower reference limit of 1.8 x10^9/L may incorrectly flag physiologically normal neutrophil counts as low in this population, potentially inflating aplastic anemia or sepsis scores.",
     "ranges": {
       "default": {
         "low": 1.8,
@@ -1026,6 +1028,7 @@
   "creatine_kinase": {
     "loinc": "2157-6",
     "unit": "U/L",
+    "population_notes": "Baseline CK levels are 1.5-2x higher in individuals of African descent (normal male CK up to 500+ U/L vs 308 U/L upper limit used here). This may produce false-positive elevations suggesting rhabdomyolysis or myocardial injury in Black patients.",
     "ranges": {
       "adult_male": {
         "low": 39,
@@ -1106,6 +1109,7 @@
   "hemoglobin_a1c": {
     "loinc": "4548-4",
     "unit": "%",
+    "population_notes": "HbA1c is 0.3-0.4% higher in individuals of African descent at the same average glucose level, due to differences in red blood cell lifespan and glycation rates. This may lead to overestimation of glycemic severity in Black patients.",
     "ranges": {
       "default": {
         "low": 4.0,
