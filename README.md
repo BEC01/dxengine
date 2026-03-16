@@ -15,13 +15,15 @@
 
 DxEngine is an experimental open-source project exploring how a diagnostic engine can **build, evaluate, and improve itself** using AI. It takes laboratory values, physical exam findings, and symptoms as input and produces a ranked differential diagnosis with probability estimates backed by curated likelihood ratios from published medical literature.
 
-The system has three distinctive properties:
+The system has four distinctive properties:
 
-1. **It grows itself.** An autonomous expansion loop (`/expand`) researches diseases from medical literature, validates against 21 quality checks, and integrates them with zero-regression gates. The engine grew from 18 to 54 disease patterns this way -no manual data entry.
+1. **It verifies against real patient data.** When the LLM suggests a disease the engine doesn't know, the system queries MIMIC-IV (364,000 real hospital patients) to check whether this patient's labs match what real patients with that disease look like. Three parallel agent teams investigate each hypothesis: one searches medical literature, one runs 6 competing algorithms on hospital data, one builds a discriminator against the nearest competitor. Hypotheses that don't match real data are discarded.
 
-2. **It improves itself.** A self-improvement loop (`/improve`) continuously identifies accuracy gaps, fixes them, evaluates, and auto-commits improvements. Hundreds of micro-improvements raised the diagnostic score from 0.62 to 0.83.
+2. **It learns from every diagnosis.** Each verified disease pattern is cached. After 3 verified cases across different patients, the disease is permanently integrated into the engine. The system grows its vocabulary through clinical use, not manual curation.
 
-3. **It calibrates against reality.** A calibration pipeline (`/calibrate`) optimizes disease detection patterns against real CDC population data (NHANES, 5,273+ adults), discovering collectively-abnormal lab signatures from real-world data -the lab equivalent of genome-wide association studies.
+3. **It grows and improves itself.** Autonomous loops expand disease coverage from literature (`/expand`), optimize likelihood ratios (`/improve`), calibrate detection patterns against real CDC population data (`/calibrate`), and compete algorithmic approaches in a tournament to find the best detection method per disease.
+
+4. **It discovers new patterns from population data.** A Lab-GWAS pipeline scans entire lab panels across thousands of real people to find collectively-abnormal signatures — disease patterns where every individual lab value is normal but the combination is statistically improbable. The CKD pattern was validated at 6.0x enrichment (p < 0.000001) across two independent NHANES cohorts.
 
 **This project was built entirely by AI (Claude), directed by a non-medical-professional with no programming background.** All code, medical knowledge curation, and evaluation design was done by an LLM. The medical data was extracted from published sources (JAMA Rational Clinical Examination, McGee's Evidence-Based Physical Diagnosis, Laposata's Laboratory Medicine) by AI-assisted research -not by a clinician or medical expert. It has been tested against synthetic and teaching-case evaluations but has never been validated on real patient data.
 
@@ -115,12 +117,29 @@ PHASE 2: LLM DIAGNOSTIC REASONING
     --> Deterministic verification of LLM claims against engine z-scores
     |
     v
+PHASE 2.5: HYPOTHESIS VERIFICATION (tiered, data-driven)
+    For each LLM hypothesis:
+    Tier 1 (<5ms): known disease? --> verified by engine
+    Tier 2 (5-10s): query MIMIC-IV --> quick classifier screen
+    Tier 3 (5-10m): 3 parallel agent teams --> literature + tournament + discriminator
+    Incompatible hypotheses discarded. Verified hypotheses annotated.
+    |
+    v
 PHASE 3: OUTPUT
-    Ranked differential + evidence chains + collectively-abnormal findings
-    + information-gain test recommendations + verification annotations
+    Verified differential + evidence chains + collectively-abnormal findings
+    + discarded hypotheses + verification annotations
+    |
+    v
+PHASE 4: LEARN
+    Verified diseases NOT in engine vocabulary --> cached for reuse
+    After 3 verified cases --> permanently integrated into the engine
 ```
 
-The deterministic pipeline handles: lab normalization, age/sex-adjusted z-scores, finding rule evaluation (153 lab rules + 100 clinical sign/symptom rules), subsumption to prevent double-counting, Bayesian updating with log-odds, evidence-based confidence ceilings, absent-finding rule-out evidence, collectively-abnormal pattern detection (weighted directional projection with chi-squared testing), and information gain calculation for test recommendations.
+**Phase 1** handles: lab normalization, age/sex-adjusted z-scores, 153 lab rules + 100 clinical rules, subsumption, Bayesian updating, evidence ceilings, absent-finding rule-outs, collectively-abnormal detection, and information gain.
+
+**Phase 2.5** is the key innovation: when the LLM suggests a disease outside the engine's 54-pattern vocabulary, the system queries real hospital data (MIMIC-IV, 364K patients) to verify whether this patient's labs match what real patients with that disease look like. For the top 3 unverified hypotheses, it launches parallel agent teams: one researches medical literature, one runs 6 competing algorithms on the hospital data, one builds a discriminator against the nearest competitor diagnosis. Hypotheses that fail verification are discarded from the differential.
+
+**Phase 4** means the engine learns from every diagnosis. The first time it encounters sarcoidosis, it takes 5-10 minutes to verify. The second time, it's cached. After 3 verified cases, the disease is permanently integrated. The engine grows through clinical use.
 
 See [CLAUDE.md](CLAUDE.md) for the full architecture specification.
 
@@ -176,23 +195,47 @@ uv run pytest tests/ -v
 uv run python tests/eval/runner.py
 ```
 
-## Self-Improving System
+## Core Capabilities
 
-DxEngine doesn't just diagnose. It autonomously improves itself through four feedback loops, each operating on real data with quality gates that prevent regressions.
+### `/diagnose` — Hybrid Diagnostic Reasoning with Data Verification
 
-**`/improve`: Perpetual accuracy improvement.** Runs indefinitely: evaluates against 464 synthetic vignettes, identifies the highest-impact data gap (missing likelihood ratio, weak pattern, false positive), fixes it, re-evaluates, and auto-commits if the score improves with zero regressions. Rejects and reverts if not. The engine grew from a 0.62 weighted score to 0.83 through hundreds of these micro-improvements, each one a single LR addition or weight adjustment, each validated before acceptance. Only data files are modified, never code.
+The primary skill. Takes patient data (labs, symptoms, signs, history) and produces a verified ranked differential diagnosis.
 
-**`/expand`: Autonomous disease expansion.** Grows the disease vocabulary without manual data entry. For each new disease: 3 parallel AI agents research medical literature, a 21-check validator gates integration, vignettes are auto-generated, and the full eval suite must pass with zero regressions before the disease is accepted. The engine grew from 18 to 54 disease patterns this way. After each expansion, a clinical eval check warns if real-case accuracy dropped.
+1. **Deterministic pipeline** (~5ms): z-scores, pattern matching, Bayesian updating, evidence chains
+2. **LLM diagnostician**: clinical reasoning over the full picture, literature search for complex cases
+3. **Hypothesis verification** (new): each LLM hypothesis is verified against real hospital data (MIMIC-IV, 364K patients). Three parallel agent teams investigate unverified diseases via literature, competing algorithms, and differential discriminators. Incompatible hypotheses are discarded.
+4. **Permanent learning**: verified disease patterns are cached and, after 3 successful verifications, permanently integrated into the engine.
 
-**`/calibrate`: Population data calibration (Lab-GWAS).** Optimizes collectively-abnormal patterns against real CDC NHANES population data (5,273+ adults). Screens every analyte for per-disease discriminative power, then uses greedy selection and Nelder-Mead optimization to find the pattern that maximizes enrichment at 95%+ specificity. Discovery mode scans all conditions to find new collectively-abnormal signatures from population data, the lab equivalent of genome-wide association studies.
+### Algorithm Tournament
 
-**`/eval`: Multi-layer validation.** Runs all three evaluation layers: lab interpretation accuracy (1,227 test points), clinical teaching cases (50 independent cases), and blind LLM comparison. Produces a unified report showing where the engine stands.
+Six algorithmic approaches compete on the same real population data to find the best detection method for each disease:
 
-**`\evolve`: Autonomous research system.** A perpetual meta-orchestrator that coordinates all skills above in a continuous loop. Assesses system state, picks the highest-impact research direction (improve, expand, calibrate, tournament, or novel algorithm generation), launches parallel agent teams, evaluates results, and loops indefinitely. Agents can design entirely new detection algorithms that compete in the tournament. A research journal provides continuity across conversations.
+| Approach | Type | Strength |
+|---|---|---|
+| Chi-squared projection | Statistical | Interpretable, no training needed |
+| Multivariate Gaussian LR | Density estimation | Captures correlations |
+| PCA + LDA | Dimensionality reduction | Finds geometric structure |
+| One-Class SVM | Anomaly detection | No disease labels needed |
+| Gradient Boosting | Tree ensemble | Nonlinear interactions (AUC 0.94 on CKD) |
+| Logistic Regression | Linear model | Simple, interpretable baseline |
 
-### Other Skills
+New approaches can be added by implementing the `ApproachBase` interface — including agent-generated algorithms that are designed, coded, and tested autonomously.
 
-- `/diagnose <patient_data>` - Full hybrid diagnostic reasoning loop (deterministic pipeline + LLM clinical reasoning)
+```bash
+uv run python sandbox/tournament/run_tournament.py    # run full tournament
+```
+
+### Self-Improving System
+
+**`/improve`**: Perpetual accuracy loop — identifies data gaps, fixes them, evaluates, auto-commits. Grew the score from 0.62 to 0.83.
+
+**`/expand`**: Autonomous disease expansion — 3 parallel agents research each disease from literature, 21-check validation, zero-regression gates. Grew from 18 to 54 patterns.
+
+**`/calibrate`**: Population data calibration (Lab-GWAS) — optimizes collectively-abnormal patterns against real NHANES data. Discovery mode finds new signatures from population data.
+
+**`/eval`**: Multi-layer validation — lab accuracy (1,227 points), clinical cases (50), blind LLM comparison, all in one command.
+
+**`/evolve`**: Autonomous research system — perpetual meta-orchestrator that coordinates all skills above. Assesses system state, picks the highest-impact research direction, launches parallel agent teams, evaluates, and loops indefinitely. Agents can design entirely new detection algorithms. A research journal provides continuity across conversations.
 
 ## Limitations
 
@@ -205,7 +248,8 @@ DxEngine doesn't just diagnose. It autonomously improves itself through four fee
 - **Not suitable for imaging, pathology, or culture-dependent diagnoses** (e.g., DVT, lymphoma, tuberculosis).
 - **Not validated for pediatric patients.**
 - **Likelihood ratios may be incorrect.** LRs were curated from published literature using AI-assisted research and have not been independently verified by medical experts.
-- **The collectively-abnormal detection is unvalidated.** This is a novel approach with no published validation on real clinical data.
+- **Collectively-abnormal detection is partially validated.** The CKD pattern shows 6.0x enrichment on real NHANES data (p < 0.000001), but other patterns (hypothyroidism, SLE) did not validate. See [NHANES Validation](docs/NHANES_VALIDATION.md).
+- **MIMIC-IV data required for full hypothesis verification.** The tiered verification system requires MIMIC-IV hospital data for Tier 2/3 verification. Without it, unknown diseases are marked inconclusive. See [MIMIC Setup](docs/MIMIC_SETUP.md).
 
 For the complete safety argument with known failure modes, see [Safety Argument](docs/SAFETY_ARGUMENT.md). For the full medical disclaimer, see [MEDICAL_DISCLAIMER.md](MEDICAL_DISCLAIMER.md).
 
