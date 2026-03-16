@@ -124,6 +124,47 @@ The claims JSON should be a list of objects, each with:
 
 If inconsistencies are found, present them to the diagnostician for correction.
 
+#### Step 2.5: Data-Driven Hypothesis Verification
+
+Run tiered verification against real patient data:
+
+```bash
+echo '{"hypotheses": DIAGNOSTICIAN_HYPOTHESES_JSON, "patient_z_map": Z_MAP_FROM_PIPELINE, "age": AGE, "sex": "SEX"}' | uv run python .claude/skills/diagnose/scripts/verify_hypotheses.py {session_id}
+```
+
+(Substitute the actual JSON from the diagnostician's output for DIAGNOSTICIAN_HYPOTHESES_JSON, and the z_map from the pipeline state for Z_MAP_FROM_PIPELINE.)
+
+Read the verification report. For each hypothesis:
+
+- **VERIFIED_ENGINE**: Already confirmed by the deterministic pipeline. No action needed.
+- **VERIFIED_CACHE**: Confirmed against a previously verified pattern. High confidence.
+- **TIER3_CANDIDATE**: Passed quick screen, needs thorough investigation. For the top 3 candidates:
+
+  Launch 3 parallel verification agents:
+
+  **Agent A (Literature):** Invoke the **dx-researcher** agent:
+  "Research {disease_name}. Find lab patterns with z-scores and weights, likelihood ratios from published studies, and clinical discriminators unique to this disease. Output a research packet at state/sessions/{session_id}/research_{disease}.json"
+
+  **Agent B (MIMIC Tournament):** Run the on-demand tournament:
+  ```bash
+  uv run python .claude/skills/diagnose/scripts/run_disease_tournament.py --disease {disease_name} --icd {icd_code} --patient-z '{z_map_json}' --session {session_id}
+  ```
+
+  **Agent C (Discriminator):** Compare this disease against the next-most-likely hypothesis:
+  "Build a classifier from MIMIC data that separates {disease_1} from {disease_2}. Which does this patient's lab profile favor? Report the discriminator score."
+
+  After all agents report, determine the verdict:
+  - Literature confirms + MIMIC AUC > 0.65 + patient classified positive → **VERIFIED_DATA**
+  - Literature contradicts OR MIMIC AUC < 0.55 OR patient classified negative → **INCOMPATIBLE**
+  - Otherwise → **INCONCLUSIVE**
+
+- **INCOMPATIBLE**: Remove from the differential. Note in output as discarded.
+- **INCONCLUSIVE**: Keep in differential but flag as unverified.
+
+Update the differential based on verification results. If any top-3 diseases were discarded, re-rank the remaining hypotheses.
+
+**If MIMIC-IV data is not available**: All non-engine diseases are marked INCONCLUSIVE. The verification phase still provides Tier 1 confirmation for known diseases and flags which hypotheses WOULD be verified with MIMIC data.
+
 #### Step 2c: Output
 Proceed to Phase 3 (Output).
 
@@ -156,6 +197,47 @@ The diagnostician integrates literature evidence and produces an updated differe
 
 #### Step 2d: Verification
 Run verification as in STANDARD Step 2b.
+
+#### Step 2.5: Data-Driven Hypothesis Verification
+
+Run tiered verification against real patient data:
+
+```bash
+echo '{"hypotheses": DIAGNOSTICIAN_HYPOTHESES_JSON, "patient_z_map": Z_MAP_FROM_PIPELINE, "age": AGE, "sex": "SEX"}' | uv run python .claude/skills/diagnose/scripts/verify_hypotheses.py {session_id}
+```
+
+(Substitute the actual JSON from the diagnostician's output for DIAGNOSTICIAN_HYPOTHESES_JSON, and the z_map from the pipeline state for Z_MAP_FROM_PIPELINE.)
+
+Read the verification report. For each hypothesis:
+
+- **VERIFIED_ENGINE**: Already confirmed by the deterministic pipeline. No action needed.
+- **VERIFIED_CACHE**: Confirmed against a previously verified pattern. High confidence.
+- **TIER3_CANDIDATE**: Passed quick screen, needs thorough investigation. For the top 3 candidates:
+
+  Launch 3 parallel verification agents:
+
+  **Agent A (Literature):** Invoke the **dx-researcher** agent:
+  "Research {disease_name}. Find lab patterns with z-scores and weights, likelihood ratios from published studies, and clinical discriminators unique to this disease. Output a research packet at state/sessions/{session_id}/research_{disease}.json"
+
+  **Agent B (MIMIC Tournament):** Run the on-demand tournament:
+  ```bash
+  uv run python .claude/skills/diagnose/scripts/run_disease_tournament.py --disease {disease_name} --icd {icd_code} --patient-z '{z_map_json}' --session {session_id}
+  ```
+
+  **Agent C (Discriminator):** Compare this disease against the next-most-likely hypothesis:
+  "Build a classifier from MIMIC data that separates {disease_1} from {disease_2}. Which does this patient's lab profile favor? Report the discriminator score."
+
+  After all agents report, determine the verdict:
+  - Literature confirms + MIMIC AUC > 0.65 + patient classified positive → **VERIFIED_DATA**
+  - Literature contradicts OR MIMIC AUC < 0.55 OR patient classified negative → **INCOMPATIBLE**
+  - Otherwise → **INCONCLUSIVE**
+
+- **INCOMPATIBLE**: Remove from the differential. Note in output as discarded.
+- **INCONCLUSIVE**: Keep in differential but flag as unverified.
+
+Update the differential based on verification results. If any top-3 diseases were discarded, re-rank the remaining hypotheses.
+
+**If MIMIC-IV data is not available**: All non-engine diseases are marked INCONCLUSIVE. The verification phase still provides Tier 1 confirmation for known diseases and flags which hypotheses WOULD be verified with MIMIC data.
 
 #### Step 2e: Adversarial Challenge + Self-Reflection
 Invoke the **dx-adversarial** agent with:
@@ -230,6 +312,20 @@ VERIFICATION FLAGS:
 - [finding]: LR [value] capped from [original] (source: llm_estimated → max 3.0)
 ```
 
+### Data Verification
+For each hypothesis in the final differential, show its verification status:
+```
+[Rank]. [Disease Name] -- [Posterior]% -- [VERIFIED_ENGINE | VERIFIED_DATA | INCONCLUSIVE]
+   Verification: [tier] -- [evidence_summary]
+   MIMIC: [N] patients, AUC=[X.XX] ([best_algorithm])
+```
+
+If any hypotheses were discarded:
+```
+DISCARDED HYPOTHESES (incompatible with patient data):
+- [disease]: [reason] (MIMIC AUC=[X.XX], [N] patients)
+```
+
 ### Recommended Next Tests
 ```
 1. [Test Name] - Expected Information Gain: [EIG]
@@ -251,6 +347,27 @@ VERIFICATION FLAGS:
 - Data insufficiency notes
 - Assumptions made
 - **This is EXPERIMENTAL SOFTWARE built by a non-medical-professional. It has NOT been clinically validated. Do NOT use this output for medical decisions. Always consult a qualified healthcare provider.**
+
+---
+
+## PHASE 4: LEARN (Optional, after output)
+
+For diseases that were VERIFIED_DATA at Tier 3 and NOT already in the engine vocabulary:
+
+1. Save the verified pattern to the cache:
+   ```bash
+   uv run python .claude/skills/diagnose/scripts/cache_pattern.py --disease {disease_name} --session {session_id}
+   ```
+
+2. Check if this disease has been verified 3+ times (the script will report this).
+   If ready for promotion:
+   - Run the standard /expand validation: `uv run python .claude/skills/expand/scripts/validate_expansion.py state/sessions/{session_id}/research_{disease}.json`
+   - If valid: integrate with `uv run python .claude/skills/expand/scripts/integrate_disease.py state/sessions/{session_id}/research_{disease}.json`
+   - Run eval to check for regressions
+   - If accepted: the engine has permanently learned a new disease from clinical use
+
+3. Print: "Pattern cached for {disease_name} (verification count: {N}/3 for permanent integration)"
+   Or: "ENGINE LEARNED: {disease_name} -- permanently integrated from {N} verified diagnoses"
 
 ---
 
